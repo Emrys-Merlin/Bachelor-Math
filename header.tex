@@ -1,0 +1,89 @@
+\documentclass[ngerman,fleqn]{scrartcl}
+
+\usepackage{amssymb}
+\usepackage[]{babel}
+\usepackage{fontspec}
+\usepackage[]{amsmath}
+\usepackage{xparse}
+\usepackage[colorlinks=true,linkcolor=blue,pdfborder={0 0 0}]{hyperref}
+\usepackage{microtype}
+\usepackage{luacode}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{siunitx}
+\usepackage{makeidx}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+\setmainfont{Linux Libertine}
+\setsansfont{Linux Biolinum}
+
+%Abkürzungen für Standardzahlmengen
+\NewDocumentCommand\R{}{\mathbb{R}}
+\NewDocumentCommand\Q{}{\mathbb{Q}}
+\NewDocumentCommand\N{}{\mathbb{N}}
+\NewDocumentCommand\C{}{\mathbb{C}}
+\NewDocumentCommand\Z{}{\mathbb{Z}}
+\NewDocumentCommand\A{}{\mathcal{A}}
+\NewDocumentCommand\K{}{\mathbb{K}}
+\NewDocumentCommand\p{}{\mathbb{P}}
+\NewDocumentCommand\h{}{\mathbb{H}}
+\NewDocumentCommand\F{}{\mathcal{F}}
+\NewDocumentCommand\D{}{\mathcal{D}}
+\NewDocumentCommand\lie{}{\mathcal{L}}
+\NewDocumentCommand\jo{}{\mathfrak{J}}
+
+
+
+%Pfeile und Stuff
+\NewDocumentCommand\Ra{}{\Rightarrow}
+\NewDocumentCommand\La{}{\Leftarrow}
+\NewDocumentCommand\LRa{}{\Leftrightarrow}
+\NewDocumentCommand\ra{}{\rightarrow}
+\NewDocumentCommand\la{}{\leftarrow}
+
+\NewDocumentCommand\tang{ O{p} O{M}}{T_{#1}#2}
+\NewDocumentCommand\cotang{ O{p} O{M}}{T^\ast_{#1}#2}
+\NewDocumentCommand\del{ O{i} O{x} O{} }{\frac{\partial {#3}}{\partial {#2}^{#1}}}
+\NewDocumentCommand\delat{ O{p} O{i} O{x} O{} }{\left . \del[#2][#3][#4] \right |_{#1}}
+\NewDocumentCommand\christ{O{i} O{j} O{k} }{ \Gamma_{#1 #2}^{#3} }
+
+\NewDocumentCommand\quot{m m}{\left.\raisebox{.2em}{#1}\mid/\raisebox{-.2em}{#2}\right}
+
+%richtiges epsilon
+\let\epsilon\relax
+\NewDocumentCommand\epsilon{}{\varepsilon}
+\let\phi\relax
+\NewDocumentCommand\phi{}{\varphi}
+
+\let\d\relax
+\NewDocumentCommand\d{ O{} }{\operatorname{d}#1}
+\NewDocumentCommand\arsinh{}{\operatorname{arsinh}}
+\NewDocumentCommand\id{}{\operatorname{id}}
+\NewDocumentCommand\supp{}{\operatorname{supp}}
+\NewDocumentCommand\rank{}{\operatorname{rank}}
+\NewDocumentCommand\tr{}{\operatorname{tr}}
+\NewDocumentCommand\diam{}{\operatorname{diam}}
+\NewDocumentCommand\ric{}{\operatorname{ric}}
+\NewDocumentCommand\scal{}{\operatorname{scal}}
+\NewDocumentCommand\g{m m}{\langle #1, #2 \rangle}
+
+%siunitx
+\sisetup{separate-uncertainty,exponent-product=\cdot}
+
+%tikz
+\usetikzlibrary{shadows}
+
+%amsthm
+\theoremstyle{plain}
+\newtheorem{thm}{Satz}[section]
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Korollar}
+\theoremstyle{definition}
+\newtheorem{defin}[thm]{Definition}
+\newtheorem{bsp}[thm]{Beispiele}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Bemerkung}
+
+\makeindex

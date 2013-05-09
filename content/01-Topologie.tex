@@ -1,0 +1,254 @@
+\section{Topologische Klassifikation von kompakten Flächen}
+
+Das Ziel dieses Abschnitts ist alle orientierbaren, triangulierbaren, kompakten Flächen zu klassifizieren. Dabei wird sich herausstellen, dass das Geschlecht $g$ einer Fläche (ab jetzt wird immer kompakt und orientierbar angenommen) ausreichend ist, um sie topologisch zu charakterisieren. Interessanterweise wird sich später auch herausstellen, dass das Geschlecht kompakte, riemannsche Flächen komplett charakterisiert. \\
+Um nun aber zur topologischen Charakterisierung zu gelangen ist einiges an Vorarbeit nötig. Die Klassifikation wird hier nicht in aller Allgemeinheit durchgeführt. Wir beschränken uns auf differenzierbare Flächen, da wir hier immer eine riemannsche Metrik erhalten, die uns die Existenz einer Triangulation sichert, d.h. wir können unsere Fläche überschneidungsfrei durch Dreiecke überdecken. Diese Triangulation liefert uns dann die Klassifizierung. \\
+Zunächst werden also topologische und geometrische Grundbegriffe definiert, bevor wir uns dann den beiden zentralen Beweisen in diesem Abschnitt zuwenden.
+
+\subsection{Topologische und geometrische Grundbegriffe}
+
+\begin{defin}[Mannigfaltigkeit]
+  Ein topologischer Raum $M$ heißt \emph{(topologische) Mannigfaltigkeit}\index{Mannigfaltigkeit} der Dimension $n$, falls folgende Eigenschaften erfüllt sind:
+  \begin{enumerate}
+    \item $X$ ist hausdorff'sch,
+    \item $X$ besitzt eine zweitabzählbare Basis der Topologie und
+    \item zu jedem Punkt $x \in M$ existiert eine offene Umgebung $U\subseteq M$, eine offene Menge $V\subseteq \R^n$ und einen Homöomorphismus $\phi$ mit
+      \[
+      \phi: U \ra V
+      \]
+  \end{enumerate}
+  Das Paar $(\phi, U)$ wird als \emph{Karte}\index{Karte} bezeichnet. $\phi$ heißt \emph{Kartenabbildung} und $U$ \emph{Kartenumgebung}.
+\end{defin}
+
+\begin{rem}
+  In dieser Arbeit werden wir uns nur mit zusammenhängenden Mannigfaltigkeiten befassen, so dass ab nun wann immer von einer Mannigfaltigkeit gesprochen wird, eine zusammenhängende Mannigfaltigkeit gemeint ist.
+\end{rem}
+
+\begin{defin}[Atlas]
+  Ein \emph{Atlas}\index{Atlas} $\A$ zu einer Mannigfaltigkeit $M$ ist eine $\{ (x_\alpha, U_\alhpa) | \alpha \in A\}$ von Karten von $M$, so dass $M = \bigcup_{\alpha \in A} U_\alpha$.\\
+  Ein Atlas heißt \emph{differenzierbar}, falls für jedes $\alpha, \beta \in A$
+  \[
+  x_\alpha \circ x_\beta^{-1} : x_\beta(U_\alpha \cap U_\beta) \ra x_\alpha(U_\alpha \cap U_\beta)
+  \]
+  glatt (und damit ein Diffeomorphismus) ist. \\
+  Eine Karte $(x,U)$ heißt \emph{verträglich}\index{verträglich} mit $\A$, falls
+  \[
+  x_\alpha \circ x^{-1} : x(U_\alpha \cap U) \ra x_\alpha (U_\alpha \cap U)
+  \]
+  für jedes $\alpha \in A$ ein Diffeomorphismus ist. \\
+  Ein \emph{maximaler Atlas}\index{Atlas, maximal} $\tilde \A$ ist ein Atlas, so dass für jede verträgliche Karte $(x,U)$ gilt, dass $(x,U)$ bereits in $\tilde \A$ enthalten ist.
+\end{defin}
+
+\begin{defin}[differenzierbare Mannigfaltigkeit]
+  Eine Mannigfaltigkeit $M$ zusammen mit einem maximalen Atlas $\tilde \A$ heißt \emph{differenzierbare Mannigfaltigkeit}\index{Mannigfaltigkeit, differenzierbar}. \\
+  $\tilde \A$ heißt auch \emph{differenzierbare Struktur}\index{differenzierbare Struktur} auf $M$.
+\end{defin}
+
+\begin{prop}
+  Jeder Atlas $\A$ induziert einen eindeutigen, maximalen Atlas $\tilde A$.
+\end{prop}
+
+\begin{proof}
+  Setze $S := \{ \B \text{ differenzierbarer Atlas } | \A \subseteq \B \text{ verträglich }\}$. Dann ist $S$ nicht leer, denn $\A \in S$. Außerdem wird $S$ durch "$\subseteq$" zu einer halbgeordneten Menge. \\
+  Sei nun $K\subseteq S$ eine Kette. Dann besitzt $K$ eine obere Schranke gegeben durch $\bigcup_{\B \in K} \B=: \tilde B$. Damit liegt klarerweise $\tilde \B$ in $S$. \\
+  Das Lemma von Zorn liefert uns nun die Existenz eines maximalen Elements $\tilde A$ von $S$. Dieses ist der gesuchte maximale Atlas. Die Eindeutigkeit folgt direkt, da zwei maximale Elemente sich notwendigerweise gegenseitig entahlten, also identisch sind.
+\end{proof}
+
+\begin{defin}[Tangentialraum]
+  Sei $M$ eine differnzierbare Mannigfaltigkeit und $p \in M$. Ein \emph{Tangentialvektor}\index{Tangentialvektor} an $M$ in $p$ ist eine Äquivalenzklasse von differenzierbaren Kurven $c: ]- \epsilin, \epsilon[ \ra M$ mie $\epsilon > 0$ und $c(0) = p$, wobei zwei solche Kurven $c_1 : ]- \epsilon_1, \epsilon_1[ \ra M$ und $c_2 : ]- \epsilon_2, \epsilon [ \ra M$ äquivalent heißen, falls für eine Karte $x: U \ra V$ mie $p \in U$ gilt:
+  \[
+  \left . \frac{\d}{\d[t]} \right |_{t=0} (x \circ c_1) = \left . \frac{\d}{\d[t]} \right |_{t=0} (x \circ c_2) 
+  \]
+  Für die Äquivalenzklasse von $c$ schreiben wir $\dot c(0)$ oder $[c]$. \\
+  Die Menge $\tang := \{ \dot c(0) | c:]- \epsilon, \epsilon [ \ra M \text{ differenzierbar mit } c(0) = p\}$ heißt \emph{Tangentialraum}\index{Tangentialraum} von $M$ im Punkt $p$.
+\end{defin}
+
+\begin{rem}
+  Die Definition der Tangentialvektoren hängt nicht von der Wahl der Karte ab, denn die Kartenwechselabbildungen sind Diffeomorphismen und damit ist ihre Jacobi-Matrix invertierbar.
+\end{rem}
+
+\begin{lemma}
+  Sei $M$ eine $n$-dimensionale Mannigfaltigkeit, $p \in M$ und $x: U \ra V$ eine Karte von $M$ um $p$. Dann ist die Abbildung
+  \[
+  \d[x|_p] : \tang \ra \R^n, \quad \dot c(0) \mapsto \left . \frac{\d}{\d[t]} \right |_{t=0} (x \circ c) 
+  \]
+  wohldefiniert und bijektiv.
+  \label{lemma:tangentialraum}
+\end{lemma}
+
+\begin{proof}
+  \begin{itemize}
+    \item Wohldefiniertheit: Folgt direkt aus der Definition, denn 2 Kurven sind genau dann äquivalent, wenn der Ausdruck der rechten Seite übereinstimmt.
+    \item Injektivität: Fologt ebenso direkt aus der Definition.
+    \item Surjektivität: Sei $v \in \R^n$ beliebig. Wähle $\epsilon > 0$, so dass $x(p) + tv \in V$ so lange $|t| < \epsilon$. \\
+      Definiere nun $c: ]-\epsilon, \epsilon[ \ra M, \quad t \maptso x^{-1}(x(p) + tv)$. Dann ist $c$ glatt und es gilt:
+      \[
+      \d[x|_p] \dot c(0) = \left . \frac{\d}{\d[t]} \right |_{t=0} (x \circ c) = \left . \frac{\d}{\d[t]} \right |_{t=0} (x \circ x^{-1}( x(p) + t v)) = \left . \frac{\d}{\d[t]} \right |_{t=0} (x(p) + tv) = v
+      \]
+  \end{itemize}
+\end{proof}
+
+Nun versehen wir $\tang$ mit einer Vektorraumstruktur:
+
+\begin{defin}
+  Seien $\lambda, \mu \in \R$ und $c_1, c_2$ glatte Kurven mit $c_1(0) = c_2(0) = p$. Dann wird die Vektorraumstruktur dadurch gegeben, dass $\d[x|_p]$ ein Isomorphismus wird, d.h.
+  \[
+  \lambda \dot c_1(0) + \mu \dot c_2(0) := \d[x|_p]^{-1} ( \lambda \d[x|_p] \dot c_1(0) + \mu \d[x|_p] \dot c_2(0))
+  \]
+\end{defin}
+
+\begin{lemma}
+  Die Vektorraumstruktur hängt nicht von der Wahl der Karte ab.
+  \label{lemma:tangvektorraum}
+\end{lemma}
+
+\begin{proof}
+  Sei $y : \tilde U \ra \tilde V$ eine weitere Karte, die $p$ enthält. Zu zeigen ist nun, dass $\d[y|_p]$ auch linear bzgl. der von $\d[x|_p]$ induzierten Vektorraumstruktur ist. Dies gilt aber, denn:
+  \[
+  \d[y|_p] = \underbrace{D(y \circ x^{-1})}_{\text{linear}} \underbrace{\d[x|_p]}_{\text{linear}}
+  \]
+\end{proof}
+
+\begin{prop}
+  $\left ( \delat \right )_i$ bildet eine Basis von $\tang$, wobei
+  \[
+  \delat := [ x^{-1} (x(p) + te_i)]
+  \]
+  und $(e_i)_i$ die Standardbasis des $\R^n$ ist.
+\end{prop}
+
+\begin{proof}
+  Der Beweis ist nach dem Beweis der Bijektivität von $\d[x|_p]$ klar.
+\end{proof}
+
+\begin{rem}
+  Die Bezeichnung der Basis-Elemente wird klarer, wenn man die Tangentialvektoren in Verbindung mit Derivationen auf der Mannigfaltigkeit bringt. Leider werden wir diesen Schritt überspringen.\\
+  Allerdings bringt diese Basis für uns auch ein paar nette eigenschaften mit sich. Wir bezeichnen mit $\d[x^i|_p]: \tang \ra \R$ die $i$-te Komponente von $\d[x|_p]$. Dann sind alle $\d[x^i|_p]$ Elemente des Dualraums von $\tang$ (auch Kotangentialraum genannt), genauer gilt sogar:
+  \[
+  \d[x^j|_p] \delat = \delta_{ij}
+  \]
+  Das heißt die $\d[x^i|_p]$ stellt die duale Basis zur obigen Basis dar. Dieser Zusammenhang wird nützlich, sobald wir den Begriff einer Metrik einführen.
+\end{rem}
+
+\begin{defin}[Riemannsche Metrik]
+  Sei $M$ eine glatte Mannigfaltigkeit und $p \in M$. \\
+  Eine \emph{riemannsche Metrik}\index{Riemannsche Metrik}\index{Metrik, riemannsche} $g$ ist eine Familie von Skalarprodukten
+  \[
+  g_p : \tang \times \tang \ra \R$,
+  \]
+  die glatt von $p$ abhängt. \\
+  $(M,g)$ heißt dann \emph{riemannsche Mannigfaltigkeit}\index{Mannigfaltigkeit, riemannsche}. \\
+  Ist $(x,U)$ eine Karte von $M$, so lässt sich mit den obigen Definitionen $g$ in dieser Basis wie folgt ausdrücken:
+  \[
+  g_p = \sum_{i,j=1}^n g_{ij}(p) \d[x^i|_p] \otimes \d[x^j|_p]
+  \]
+  Dabei wird $(g_{ij})_{ij}$ als \emph{Fundamentalmatrix}\index{Fundamentalmatrix} bezeichnet. Die Glattheitsbedinung vereinfacht sich dann dazu, dass alle $g_{ij} \circ x^{-1}$ glatte Funktionen sein müssen. Dass dies dann für jede Karte gilt, folgt aus den glatten Kartenwechselabbildungen.\\
+  $g_{ij}$ ist dann in jedem Punkt symmetrische und positiv definit. $\otimes$ bezeichnet das Tensorprodukt für $\R$-Vektorräume.
+\end{defin}
+
+\begin{rem}
+  Ab nun verwenden wir die Einsteinsche Summenkonvention und ersparen uns die Summenzeichen, so lange keine Gefahr für Verwirrung besteht. Weiterhin verwenden wir folgende Konvention:
+  \[
+  \d[x^i]\d[x^j] := \d[x^i] \otimes \d[x^j]
+  \]
+\end{rem}
+
+\subsection{Länge, Energie und Geodätische}
+
+Unser eigentliches Ziel ist immer noch die Triangulation von kompakten Flächen. Um nun Dreiecke auf Flächen definieren zu können, suchen wir zunächst ein Analogon zur Gerade oder Strecke im euklidischen Raum. Die Eigenschaft von Geraden, die uns dabei zunächst interessiert, ist die Längenminimierung. \\
+Das ist die Motivation für unsere nächsten Definitionen:
+
+\begin{defin}
+  Sei $c:[a,b] \ra M$ glatt.
+  \[
+  l(c) := \int_a^b \sqrt{g_{c(t)}(\dot c(t), \dot c(t))} \d[t]
+  \]
+  heißt \emph{Länge}\index{Länge} von $c$. \\
+  \[
+  E(c) := \frac12 \int_a^b g_{c(t)} (\dot c(t), \dot c(t)) \d[t]
+  \]
+  heißt \emph{Energi}\index{Energie} von $c$.
+  Dabei ist $\dot c(t) := \dot c_t(0)$ mit $c_t(s) = c(s+t)$.
+\end{defin}
+
+\begin{lemma}
+  Für einen glatten Weg $c$ gilt:
+  \[
+  \frac12 l^2(c) \leq (b-a)E(c)
+  \]
+  Es gilt Gleichheit genau dann wennn $\sqrt{g_c(\dot c, \dot c)} \cong $const.
+  \label{lemma:hölder}
+\end{lemma}
+
+\begin{proof}
+  \begin{align*}
+    \frac12 l^2(c) & = \frac12 \left ( \int_a^b \sqrt{g_c(\dot c, \dot c)} \cdot 1\d[t] \right )^2  \\
+    & \stackrel{\tag{\ast}\label{eq:ungl}}{\leq} \frac12 \left ( \left (\int_a^b g_c(\dot d, \dot c) \d[t] \right )^{1/2} \left ( \int_a^b 1 \d[t] \right )^{1/2} \right )^2 \\
+    & = E(c) \cdot (b-a)
+  \end{align*}
+  \eqref{eq:ungl} gilt dabei aufgrund der Hölderungleichung.
+  Die Aussage über die Gleichheit folgt auch direkt aus dem Beweis der Hölderungleichung.
+\end{proof}
+
+Damit haben wir zunächst gezeigt, dass wir die Länge immer durch die Energie nach oben abschätzen können. Unsere nächste Hoffnung ist nun, dass wir die Energie minimieren (oder zumindest extremalisieren) können und diese Kurven dann auch die Länge extremalisieren. \\
+Wir wechseln dazu zunächst über in lokale Koordinaten, gehen also davon aus, dass unsere Strecke in eine Kartenumgebung passt. Dies ist keine wirkliche Einschränkung, denn eine Kurve kann durch Kartenumgebungen überdeckt werden und die Metrik verträgt sich gut mit den Kartenwechseln, so dass die die Kurve einfach in Teile, die in einem Kartengebiet liegen eingeschränkt wird und die Länge und Energie hinterher addiert wird. \\
+Nehmen wir nun an, dass $c:[a,b] \ra M$ die Energie extremalisiert. Wir identifizieren nun im weiteren $c$ und $x \circ c$ für die Karte $(x,U)$. Sei nun $\eta$ eine glatte Funktion, so dass $c(a) + s \eta(a)= c(a)$ und $c(b) + s \eta(b) = c(b)$ gilt, falls $|s| < \delta$ klein genug. Dann gilt:
+
+\begin{align*}
+  0 & = \left . \frac{\d}{\d[s]} \right |_{s=0} E(c + s \eta) \\
+  & = \frac12 \int_a^b \left . \frac{\d}{\d[s]} \right |_{s=0} ( g_{ij}(c + s \eta) \cdot (\dot c + s \dot \eta)^i \cdot (\dot c + s \dot \eta)^j) \d[t] \\
+  & = \dots
+  & = \frac12 \int_a^b - \eta^l ( 2 g_{lj} \ddot c^j + ( \partial_i g_{lj} + \partial_j g_{il} - \partial_l g_{ij}) \dot c^i \dot c^j) \d[t]
+\end{align*}
+
+Da $\eta$ nun beliebig gewählt war muss gelten:
+
+\[
+2 g_{lj} \ddot c^j + ( \partial_i g_{lj} + \partial_j g_{il} - \partial_l g_{ij}) \dot c^i \dot c^j = 0 \qquad \forall l \in \{1, \dots, n\}
+\]
+Das ist äquivalent zu
+\[
+\ddot c^k + \christ \dot c^i \dot c^j = 0 \qquad \forall k \in \{1, \dots, n\} \label{eq:geod} \tag
+\]
+wobei $\christ = \frac12 g^{kl} (\partial_i g_{jl} + \partial_j g_{il} - \partial_l g_{ij})$ die \emph{Christoffel-Symbole}\index{Christoffel-Symbole} sind. $(g^{kl})_{kl}$ ist die Inverse zu $(g_{ij})_{ij}$. \\
+
+Die Rechnung zeigt nun, dass alle Kurven, die die Energie extremalisieren das gewöhnliche Differentialgleichungssystem 2. Ordnung \eqref{eq:geod} erfüllen müssen.\\
+Der Satz von Picard-Lindelöf besagt uns dann, dass es zu gegebenen Anfangswerten $c(0) = p$ und $\dot c(0) = v$ eine lokal eindeutige Lösung gibt und dass diese glatt von den Anfangswerten abhängt.
+
+\begin{defin}[Geodätische]
+  Eine glatte Kurve $c$, die der Differentialgleichung \eqref{eq:geod} genügt, heißt \emph{Geodätische}\index{Geodätische}. \\
+  Bezeichne mit $c_{p,v}$ die Geodätische zu den Anfangsbedingungen $c_{p,v} (0) = p$ und $\dot c_{p,v} (0) = v$.
+\end{defin}
+
+Wählen wir nun $p \in M$ fest und betrachten das Kompaktum $K := \{ v \in \R^n | g_p(v,v) = 1\}$. Da nun die Lösungen von \eqref{eq:geod} glatt und damit stetig von $v$ abhängen, gibt es ein $\epsilon_0 > 0$, so dass $c_{p,v}$ auf ganz $[0, \epsilon_0]$ definiert sind für jedes $v \in K$. \\
+Benutzt man nun noch, dass mit $c(t)$ auch $c(\lambda t)$ mite $\lambda > 0$ eine Geodätische ist und dass $c_{p,v}(t) = c_{p,\lambda v}(\frac{t}{\lambda})$. So ergibt sich, dass $c_{p,v}(\epsilon_0) = \c_{p, \epsilon_0 v}(1)$. \\
+Dies lässt folgende Definition zu:
+
+\begin{defin}
+  Sei $V_p :={ v \in \R^n | \g_p(v,v) \leq \epsilon}$. Dann heißt
+  \[
+  \exp_p : V_p \ra M, v \mapsto c_{p,v}(1)
+  \]
+  die \emph{Exponentialabbildung}\index{Exponentialabbildung} im Punkt $p$.
+\end{defin}
+
+\begin{prop}
+  Die Exponentialabbildung ist in einer Umgebung um $0$ diffeomorph und bildet $0$ auf $p$ ab.
+\end{prop}
+
+\begin{proof}
+  Der zweite Teil der Aussage ist klar. Um den ersten Teil der Aussage zu beweisen verwenden wir den Satz über die Existenz einer Inversen. Dieser überträgt sich leicht durch Karten aus dem $\R^n$ auf Mannigfaltigkeiten. \\
+  Wir müssen also nur zeigen, dass "Ableitung" von $\exp_p$ im Ursprung nicht verschwindet. Sei dazu $v \in \R^n$.
+  \begin{align*}
+    D \exp_p (0) (v) = \left . \frac{\d}{\d[t]} \right |_{t=0} c_{p, tv}(1) \\
+    & = \left . \frac{\d}{\d[t]} \right |_{t=0} c_{p,v}(t) \\
+    & = \dot c_{p,v}(0)
+    & = v
+  \end{align*}
+  Also ist $D \exp_p (0) = \id \neq 0$ und damit folgt die Behauptung.
+\end{proof}
+
+Die Inverse der Exponentialabbildung kann nun verwendet werden, um "schöne" (d.h. an die Geometrie angepasste) Koordinaten zu erhalten. Die Exponentialabbildung wird so eines der wichtigsten Hilfsmittel zur Konstruktion der Triangulation. Dieser wenden wir uns nun endgültig zu.
+
+\subsection{Triangulation kompakter, glatter Flächen}
+Ab nun verabschieden wir uns von der Allgemeinheit der vorherigen Abschnitte und betrachten nur noch riemannsche Mannigfaltigkeiten der Dimension 2. Diese bezeichnen wir im Folgenden als Flächen. Allerdings schränken wir uns noch weiter ein. Wir betrachten sogar nur kompakte Flächen. \\
+Eigentlich gibt es auch für nicht-kompakte höherdimensionale Mannigfaltigkeiten Triangulationen und dies lässt sich auch rein topologisch beweisen, d.h. wir könnten sogar auf die Metrik und die differenzierbarkeit verzichten, allerdings machen sie einem das Leben deutlich einfacher und da wir sowieso nur am Fall der riemannschen Flächen interessiert sind, ist dies auch keine Einschränkung.

@@ -1,0 +1,95 @@
+
+\begin{thm}
+  Sei $\Sigma_1$ eine kompakte Riemannsche Fläche mit Geschlecht $p \geq 2$. Dann existiert eine biholomorphe Abbildung $f: \Sigma_1 \ra \Sigma_2$, wobei $\Sigma_2 = \quot{H}{\Gamma}$ eine kompakte Riemannsche Fläche mit gleichem Geschlecht ist und $\Gamma \leq \operatorname{PSL}(2,\R)$ "properly discontinuous" auf $H$ operiert.
+\end{thm}
+
+\begin{proof}
+  Der Beweis der Aussage lässt sich in mehrere Schritte unterteilen. Zunächst wird ein Homöomorphismus zwischen den beiden Flächen konstruiert, anschließend wird dieser deformiert und in eine harmonische Abbildung überführt. Wie sich jedoch zeigen wird, ist diese bereits ein Diffeomorphismus und erlaubt uns ein holomorphes quadratisches Differential auf $\Sigma_1$ zu definieren. Nun deformieren wir unseren harmonischen Diffeomorphismus ein letztes Mall, so dass das quadratische Differential verschwindet und er in eine biholomorphe Abbildung überführt wird.
+
+  Wir beginnen nun mit dem Homöomorphismus: \\
+  Nach Theorem 2.4.2 existiert eine Riemannsche Fläche der gewünschten Form $S = \quot{H}{\Gamma}$. % Geschlecht -> RF surjektiv warum?
+  Nun existiert zwischen kompakten, orientierbaren Flächen gleichen Geschlechts immer ein Homöomorphismus. % Aufschreiben oder nennen. 
+  Als letztes statten wir nun $S$ noch mit der ererbten hyperbolischen Metrik der oberen Halbebene $H$ aus. In lokalen Koordinaten soll diese durch $\rho^2 \d[z] \d[\bar z]$ beschrieben werden. \\
+  Unser Homöomorphismus muss nun Abbildungsgrad $\pm 1$ haben, da es sich um eine bijektive Abbildung handelt. Wir können aber zu jedem S einen Homöomorphismus $i_0 : S \ra S$ mit Abbildungsgrad $-1$ finden, so dass wir ohne Einschränkung davon ausgehen können, dass unser Homöomorphismus Abbildungsgrad $1$ hat. 
+
+  Satz 3.7.1 liefert uns nun, dass dieser Homöomorphismus homotop zu einer harmonischen Abbildung $u: \Sigma_1 \ra S$ ist. Da weiterhin der Abbildungsgrad invariant unter Homotopien ist, besitzt auch $u$ den Abbildungsgrad 1, was bereits genügt, um zu zeigen, dass $u$ sogar ein harmonischer Diffeomorphismus ist (vgl. Thm 3.10.2). \\
+  Damit induziert $u$ nun ein quadratisches Differential der Form
+  \[
+  \psi \d[z^2] = \rho^2(u(z)) u_z(z) \bar u_z(z) \d[z^2]
+  \]
+  auf $\Sigma_1$.
+
+  Nun beginnt die eigentliche Arbeit. Wir setzen $S_1 := S$ und $u^1 := u$ und suchen nun eien Familie von harmonischen Diffeomorphismen
+  \[
+  u^t : \Sigma_1 \ra S_t
+  \]
+  wobei $S_t$ eine hyperbolische Riemannsche Fläche darstellt, die mit $u^t$ jeweils das quadratische Differential $t \psi \d[z^2]$ erzeugt und dies für alle $t \in [0,1]$. \\
+  Können wir dies zeigen, so wissen wir nach Lemma 4.2.2, dass $u^0 : \Sigma_1 \ra S_0$ eine biholomorphe Abbildung ist und sind fertig.
+
+  Wir zeigen also: $t_0 := \inf \underbrace{\{t \in [0,1] : u^{t'}, S_{t'} \text{ existiert } \forall t' \geq t \}}_{ =: M} \stackrel{!}{=} 0$. \\
+  Die Aussage folgt darüber, dass [0,1] zusammenhängend ist. Zunächst ist klar, dass $M \neq \varnothing$, denn $1 \in M$.
+  \begin{itemize}
+    \item $M$ ist abgeschlossen: \\
+      Wir statten $\Sigma_1$ mit einer beliebigen konformen Metrik $\lambda^2 \d[z]\d[\bar z]$ aus und definieren uns
+      \begin{align*}
+	H(t)(z) & := \frac{\rho^2(u^t(z))}{\lambda^2(z)} u^t_z(z) \bar u^t_{\bar z}(z) \geq 0 \\
+	L(t)(z) & := \frac{\rho^2(u^t(z))}{\lambda^2(z)} \bar u^t_z \u^t_{\bar z} \geq 0
+      \end{align*}
+      %TODO Wie genau funktioniert das?!?!?!
+      Wir zeigen nun eigentlich, dass $H(t)$ und $L(t)$ für alle $t \in [0,1]$ existieren und folgern dann die Existenz von $u^0$ und $S_0$. \\
+      Wir fixieren ein $t \in M$:
+      Ein paar Eigenschaften, die sich aus der Definition von $H$ und $L$ ergeben sind:
+      \begin{align*}
+	H(t) \cdot L(t) & = \frac{1}{\lambda^4} \rho^2 u^t_z \bar u^t_z \rho^2 \bar U^t_{bar z} u^t_{\bar z} \\
+	& = t^2 \frac{1}{\lambda^4} \psi \bar \psi \tag{1} \label{eq:HL}
+      \end{align*}
+      Ableiten nach $t$ ergibt:
+      \begin{align*}
+	\dot H(t) L(t) + H(t) \dot L(t) & = 2t \frac{1}{\lambda^4} \psi \bar \psi \\
+	& = \frac2t H(t) L(t) \tag{2} \label{eq:difft}
+      \end{align*}
+      Aus Lemma 3.10.1 erhalten wir:
+      \[
+      \laplace \log H(t) = 2K_1 + 2(H(t) - L(t)) \qquad \text{falls } H(t) \neq 0 \tag{3} \label{eq:logH}
+      \]
+      wobei $K_1$ die Krümmung von $\Sigma_1$ bzgl. $\lambda^2\d[z] \d[\bar z]$ darstellt. Hier erhalten wir durch ableiten nach $t$ und einsetzen von \eqref{eq:difft}:
+      \begin{align*}
+	\laplace \frac{\dot H(t)}{H(t)} & = 2(\dot H(t) - \dot L(t)) \\
+	& = 2( \dot H(t) - \left (\frac2t - \frac{\dot H(t)}{H(t)} \right) L(t)) \\
+	& = 2 \frac{\dot H(t)}{H(t)}(H(t) + L(t)) - \frac4t L(t)
+      \end{align*}
+      Betrachten wir nun den Spezialfall, dass $\frac{\dot H(t)(z_1)}{H(t)(z_1)}$ ein Minimum einnimmt, dann folgt aus der Differenzierbarkeit, dass die Hesse-Matrix nicht negativ-definit sein darf. Also ergibt sich:
+      \begin{align*}
+	0 & \leq \laplace \frac{\dot H(t)(z_1)}{H(t)(z_1)} \\
+	& =  2 \frac{\dot H(t)(z_1)}{H(t)(z_1)} \underbrace{(H(t)(z_1) + L(t)(z_1))}_{ \geq 0} - \frac4t \underbrace{L(t)(z_1)}_{\geq 0}
+      \end{align*}
+      Die Folge davon ist, dass
+      \begin{align*}
+	0 \leq \frac{\dot H(t)(z_1)}{H(t)(z_1)} \leq \frac{\dot H(t)(z)}{H(t)(z)} \quad \forall z
+      \end{align*}
+      und da $H(t) \geq 0$ ergibt sich damit: $\dot H(t) \geq 0$. Dies lässt Rückschlüsse auf die Monotonie von $H$ zu, nämlich:
+      \[
+      H(t) \leq H(1) \qquad \forall 0 < t < 1
+      \]
+      natürlich unter der Vorraussetzung, dass $H$ für dieses $t$ überhaupt existiert. \\
+      Eine weitere Abschätzung, die wir benötigen erhalten wir aus:
+      \[
+      H(t) - L(t) = \frac{\rho^2(u^t)}{\lambda^2} \cdot ( u^t_z \bar u^t_{\bar z} - \bar u^t_z u^t_{\bar z} ) = \underbrace{\frac{\rho^2(u^t)}{\lambda^2}}_{> 0} \cdot \underbrace{ \det Ju^t }_{> 0} > 0
+      \]
+      Also erhalten wir die Abschätzung:
+      \[
+      0 \leq L(t) < H(t) \leq H(1)
+      \]
+      D.h. wir bekommen $H$ und $L$ gleichmäßig beschränkt, insbesondere gilt: $\sup_{z \in U} \| \underbrace{2K_1(z) + 2(H(t)(z) - L(t)(z))}_{=:f(t)(z)} \| < \infty$. \\
+      Darauf können wir Regularitätstheorie anwenden und erhalten mit Satz 3.5.2, dass $\log H(t) \in C^{1,\alpha}(U)$ und damit $H(t) \in C^{1,\alpha}(U)$. Aus \eqref{eq:HL} folgt dann: $L(t) \in C^{1, \alpha}(U)$. \\
+      Damit erhalten wir $f(t) \in C^{1,\alpha}(U)$ und Kor. 3.5.1 impliziert: $H(t),L(t) \in C^{3,\alpha}(U)$. Induktiv ergibt sich dann: $H(t), L(t) \in C^\infty(U)$. Insbesondere erhalten wir:
+      \[
+      \|H(t)\|_{2, \alpha}, \|L(t)\|_{2, \alpha} \leq c ( \|H(1)\|_{0, \alpha} + \|H(1)\|_{L^2})
+      \]
+      Also sind die Normen gleichmäßig beschränkt bzgl. $t$ und die $H(t)$ und $L(t)$ sind gleichgradig stetig. \\
+      \\
+      Betrachten wir jetzt eine Folge $(t_n)_n \subseteq M$ mit $t_n \ra t_0 \in [0,1]$, dann sagt uns der Satz von Arzela-Ascoli, dass eine Teilfolge existiert, so dass $H(t_{n_k})$ gleichmäßig gegen eine Lösung von \eqref{eq:logH} konvergiert. Also ist $t \in M$ und $M$ damit abgeschlossen.
+
+
+  \end{itemize}<++>
+\end{proof}<++>
