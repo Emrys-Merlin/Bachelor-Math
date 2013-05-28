@@ -26,6 +26,59 @@
   wobei $S_t$ eine hyperbolische Riemannsche Fläche darstellt, die mit $u^t$ jeweils das quadratische Differential $t \psi \d[z^2]$ erzeugt und dies für alle $t \in [0,1]$. \\
   Können wir dies zeigen, so wissen wir nach Lemma 4.2.2, dass $u^0 : \Sigma_1 \ra S_0$ eine biholomorphe Abbildung ist und sind fertig.
 
+  Unter der Annahme für $t \in [0,1]$ sei dies möglich, definieren wir:
+  \begin{align*}
+    H(t)(z) & := \frac{\rho^2(u^t(z))}{\lambda^2(z)} u^t_z(z) \bar u^t_{\bar z}(z) \geq 0 \tag{\text{H}} \label{eq:H} \\
+    L(t)(z) & := \frac{\rho^2(u^t(z))}{\lambda^2(z)} \bar u^t_z u^t_{\bar z} \geq 0       \tag{\text{L}} \label{eq:L}
+  \end{align*}
+  wobei wir $\Sigma_1$ mit einer beliebigen konformen Metrik $\lambda^2(z)\d[z]\d[\bar z]$ ausstatten. \\
+  Betrachten wir nun die Metrik $\rho^2(u)\d[u]\d[\bar u]$ auf $S$ nicht bezüglich des konformen Atlas, sondern bezüglich der Karte $z\circ u^{-1}$, so nimmt die Metrik folgende Form an:
+  \begin{align*}  
+    \rho^2(u^t(z)) \d[u^t(z)]\d[\bar u^t(z)] & = \rho^2(u^t(z)) [u^t_z \bar u^t_z \d[z^2] + (u^t_{\bar z} \bar u^t_z + u^t_z \bar u^t_{\bar z}) \d[z]\d[\bar z] + u^t_{\bar z} \bar u^t_{\bar z} \d[\bar z^2]] \\
+    & = t \psi \d[z^2] + \lambda^2(H(t) + L(t))\d[z]\d[\bar z] + t \bar \psi \d[\bar z^2] \label{eq:metrik} \tag{\ast}
+  \end{align*}
+  Da $z \circ u^{-1}$ nicht verträglich mit der bisherigen konformen Struktur ist, ist auch die Metrik nicht mehr in ihrer konformen Darstellung. \\
+  Weiterhin folgen aus der Definition von $H$ und $L$ folgende Gleichungen:
+  \begin{align*}
+    H(t) \cdot L(t) & = \frac{t^2 \psi \bar \psi}{\lambda^4} \tag{1} \label{eq:1} \\
+    \Delta \log H & = 2K_1 + 2(H - L) \tag{2} \label{eq:2}
+  \end{align*}
+  Wobei $K_1$ die Krümmung von $\Sigma_1$ bzgl. $\lambda^2$ darstellt und die Gleichung aus (3.10.1) folgt. \\
+  Im weiteren Vergessen wir nun komplett die Definition von $H$ und $L$ und betrachten sie als durch die beiden Differentialgleichungen definiert. Unten wird gezeigt, dass dies tatsächlich der Fall ist. Dies hat nun den Vorteil, dass wir die Metrik \eqref{eq:metrik} unabhängig von $u^t$ formuliert haben und nun die Gleichung verwenden können um $u^t$ zu definieren.
+  \\
+  Gehen wir also davon aus, dass \eqref{eq:metrik} für ein $t\in [0,1]$ existiert. Dann können wir versuchen einen komplexen Atlas zu finden, in dem die Metrik eine konforme Gestalt annimmt. Dies ist genau dann möglich, wenn wir sie auf die Form $\sigma(z) | \d[z] + \mu \d[\bar z] |^2$ bringen und $|\mu| < 1$. In unserem Fall ergibt sich:
+  \begin{align*}
+    \sigma(z) & = \lambda^2 H(t) \\
+    \mu & = \frac{t\bar \psi}{\lambda^2 H(t)}\\
+    |\mu|^2 & = \frac{L(t)}{H(t)} < 1
+  \end{align*}
+  Die letzte Ungleichung wird im Verlauf des Existenzbeweises für $H$ und $L$ noch gezeigt. Einsetzen unter Zuhilfenahme der obigen Differentialgleichungen zeigt dabei, dass $\sigma(z)$ und $\mu$ tatsächlich richtig bestimmt sind. Damit existieren nun neue konforme Koordinaten von $S$, die durch folgende Differentialgleichung gegeben sind:
+  \[
+  u^t_{\bar z} = \mu u^t_z
+  \]
+  Und die Metrik nimmt die Form
+  \begin{align*}
+    \rho^2(u^t)\d[u^t]\d[\bar u^t] & := \frac{\sigma(z)}{u^t_z \bar u^t_{\bar z}} \d[u^t]\d[\bar u^t] \\
+    & = t \psi \d[z^2] + \lambda^2(H(t) + L(t))\d[z]\d[\bar z] + t \bar \psi \d[\bar z^2]
+  \end{align*}
+  an. Aus diesen Gleichungen erhalten wir nun, dass $\rho^2(u^t)u_z \bar u_z = t \psi$, also unser $u^t$ wirklich das richtige holomorphe quadratische Differntial erzeugt. Weiterhin erhalten wir daraus, da $\psi$ holomorph ist:
+  \begin{align*}
+    0 & = t \phi_{\bar z}\\
+    & = \rho^2(u^t) \left ( \bar u^t_z ( u^t_{z\bar z}  + \frac{2 \rho_u}{\rho} u^t_z u^t_{\bar z}) + u_z ( \bar u_{z\bar z} + \frac{2 \rho_{\bar u}}{\rho} \bar u_z \bar u_{\bar z} ) \right )
+  \end{align*}
+  %TODO Warum gilt das:
+  Da die Jacobi-Determinante von $u^t$ nun strikt größer als 0 ist, folgt daraus, dass $u^t$ harmonisch ist. \\
+  Zu guter letzt erhalten wir dann noch über den Zusammenhang 
+  \[
+  \Delta \log H = 2 K_1 + 2(H-L)
+  \]
+  und
+  \[
+  H(t) = \frac{\rho^2(u^t)}{\lambda^2} u_z \bar u_{\bar z}
+  \]
+  dass die Krümmung von $S$ wirklich $-1$ und $S$ hyperbolisch ist. \\
+  Können wir nun zeigen, dass $H(t)$ und $L(t)$ für alle $t \in [0,1]$ definiert sind, so ist $u^0 : \Sigma_1 \ra S$ unser gesuchter konformer Diffeomorphismus.
+
   Wir zeigen also: $t_0 := \inf \underbrace{\{t \in [0,1] : u^{t'}, S_{t'} \text{ existiert } \forall t' \geq t \}}_{ =: M} \stackrel{!}{=} 0$. \\
   Die Aussage folgt darüber, dass [0,1] zusammenhängend ist. Zunächst ist klar, dass $M \neq \varnothing$, denn $1 \in M$.
   \begin{itemize}
@@ -33,7 +86,7 @@
       Wir statten $\Sigma_1$ mit einer beliebigen konformen Metrik $\lambda^2 \d[z]\d[\bar z]$ aus und definieren uns
       \begin{align*}
 	H(t)(z) & := \frac{\rho^2(u^t(z))}{\lambda^2(z)} u^t_z(z) \bar u^t_{\bar z}(z) \geq 0 \\
-	L(t)(z) & := \frac{\rho^2(u^t(z))}{\lambda^2(z)} \bar u^t_z \u^t_{\bar z} \geq 0
+	L(t)(z) & := \frac{\rho^2(u^t(z))}{\lambda^2(z)} \bar u^t_z u^t_{\bar z} \geq 0
       \end{align*}
       %TODO Wie genau funktioniert das?!?!?!
       Wir zeigen nun eigentlich, dass $H(t)$ und $L(t)$ für alle $t \in [0,1]$ existieren und folgern dann die Existenz von $u^0$ und $S_0$. \\
@@ -50,17 +103,17 @@
       \end{align*}
       Aus Lemma 3.10.1 erhalten wir:
       \[
-      \laplace \log H(t) = 2K_1 + 2(H(t) - L(t)) \qquad \text{falls } H(t) \neq 0 \tag{3} \label{eq:logH}
+      \Delta \log H(t) = 2K_1 + 2(H(t) - L(t)) \qquad \text{falls } H(t) \neq 0 \tag{3} \label{eq:logH}
       \]
       wobei $K_1$ die Krümmung von $\Sigma_1$ bzgl. $\lambda^2\d[z] \d[\bar z]$ darstellt. Hier erhalten wir durch ableiten nach $t$ und einsetzen von \eqref{eq:difft}:
       \begin{align*}
-	\laplace \frac{\dot H(t)}{H(t)} & = 2(\dot H(t) - \dot L(t)) \\
+	\Delta \frac{\dot H(t)}{H(t)} & = 2(\dot H(t) - \dot L(t)) \\
 	& = 2( \dot H(t) - \left (\frac2t - \frac{\dot H(t)}{H(t)} \right) L(t)) \\
 	& = 2 \frac{\dot H(t)}{H(t)}(H(t) + L(t)) - \frac4t L(t)
       \end{align*}
       Betrachten wir nun den Spezialfall, dass $\frac{\dot H(t)(z_1)}{H(t)(z_1)}$ ein Minimum einnimmt, dann folgt aus der Differenzierbarkeit, dass die Hesse-Matrix nicht negativ-definit sein darf. Also ergibt sich:
       \begin{align*}
-	0 & \leq \laplace \frac{\dot H(t)(z_1)}{H(t)(z_1)} \\
+	0 & \leq \Delta \frac{\dot H(t)(z_1)}{H(t)(z_1)} \\
 	& =  2 \frac{\dot H(t)(z_1)}{H(t)(z_1)} \underbrace{(H(t)(z_1) + L(t)(z_1))}_{ \geq 0} - \frac4t \underbrace{L(t)(z_1)}_{\geq 0}
       \end{align*}
       Die Folge davon ist, dass
@@ -88,7 +141,7 @@
       \]
       Also sind die Normen gleichmäßig beschränkt bzgl. $t$ und die $H(t)$ und $L(t)$ sind gleichgradig stetig. \\
       \\
-      Betrachten wir jetzt eine Folge $(t_n)_n \subseteq M$ mit $t_n \ra t_0 \in [0,1]$, dann sagt uns der Satz von Arzela-Ascoli, dass eine Teilfolge existiert, so dass $H(t_{n_k})$ gleichmäßig gegen eine Lösung von \eqref{eq:logH} konvergiert. Also ist $t \in M$ und $M$ damit abgeschlossen.
+      Betrachten wir jetzt eine Folge $(t_n)_n \subseteq M$ mit $t_n \ra t_0 \in [0,1]$, dann sagt uns der Satz von Arzela-Ascoli, dass eine Teilfolge existiert, so dass $H(t_{n_k})$ und $L(t_{n_k})$ gleichmäßig gegen eine Lösung von \eqref{eq:HL} und \eqref{eq:logH} konvergiert. Also ist $t_0 \in M$ und $M$ damit abgeschlossen.
 
 
   \end{itemize}
