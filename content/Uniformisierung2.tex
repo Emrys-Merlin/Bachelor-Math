@@ -79,7 +79,7 @@
   dass die Krümmung von $S$ wirklich $-1$ und $S$ hyperbolisch ist. \\
   Können wir nun zeigen, dass $H(t)$ und $L(t)$ für alle $t \in [0,1]$ definiert sind, so ist $u^0 : \Sigma_1 \ra S$ unser gesuchter konformer Diffeomorphismus.
 
-  Wir zeigen also: $t_0 := \inf \underbrace{\{t \in [0,1] : u^{t'}, S_{t'} \text{ existiert } \forall t' \geq t \}}_{ =: M} \stackrel{!}{=} 0$. \\
+  Wir zeigen also: $t_0 := \inf \underbrace{\{t \in [0,1] : H(t') \text{ und } L(t') \text{ existieren } \forall t' \geq t \}}_{ =: M} \stackrel{!}{=} 0$. \\
   Die Aussage folgt darüber, dass [0,1] zusammenhängend ist. Zunächst ist klar, dass $M \neq \varnothing$, denn $1 \in M$.
   \begin{itemize}
     \item $M$ ist abgeschlossen: \\
@@ -133,7 +133,8 @@
       \[
       0 \leq L(t) < H(t) \leq H(1)
       \]
-      D.h. wir bekommen $H$ und $L$ gleichmäßig beschränkt, insbesondere gilt: $\sup_{z \in U} \| \underbrace{2K_1(z) + 2(H(t)(z) - L(t)(z))}_{=:f(t)(z)} \| < \infty$. \\
+      D.h. wir bekommen $H$ und $L$ gleichmäßig beschränkt, insbesondere gilt: \\
+      $\sup_{z \in U} \| \underbrace{2K_1(z) + 2(H(t)(z) - L(t)(z))}_{=:f(t)(z)} \| < \infty$. \\
       Darauf können wir Regularitätstheorie anwenden und erhalten mit Satz 3.5.2, dass $\log H(t) \in C^{1,\alpha}(U)$ und damit $H(t) \in C^{1,\alpha}(U)$. Aus \eqref{eq:HL} folgt dann: $L(t) \in C^{1, \alpha}(U)$. \\
       Damit erhalten wir $f(t) \in C^{1,\alpha}(U)$ und Kor. 3.5.1 impliziert: $H(t),L(t) \in C^{3,\alpha}(U)$. Induktiv ergibt sich dann: $H(t), L(t) \in C^\infty(U)$. Insbesondere erhalten wir:
       \[
@@ -142,6 +143,9 @@
       Also sind die Normen gleichmäßig beschränkt bzgl. $t$ und die $H(t)$ und $L(t)$ sind gleichgradig stetig. \\
       \\
       Betrachten wir jetzt eine Folge $(t_n)_n \subseteq M$ mit $t_n \ra t_0 \in [0,1]$, dann sagt uns der Satz von Arzela-Ascoli, dass eine Teilfolge existiert, so dass $H(t_{n_k})$ und $L(t_{n_k})$ gleichmäßig gegen eine Lösung von \eqref{eq:HL} und \eqref{eq:logH} konvergiert. Also ist $t_0 \in M$ und $M$ damit abgeschlossen.
+
+    \item $M$ ist offen: \\
+
 
 
   \end{itemize}
