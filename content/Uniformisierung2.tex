@@ -145,9 +145,33 @@
       Betrachten wir jetzt eine Folge $(t_n)_n \subseteq M$ mit $t_n \ra t_0 \in [0,1]$, dann sagt uns der Satz von Arzela-Ascoli, dass eine Teilfolge existiert, so dass $H(t_{n_k})$ und $L(t_{n_k})$ gleichmäßig gegen eine Lösung von \eqref{eq:HL} und \eqref{eq:logH} konvergiert. Also ist $t_0 \in M$ und $M$ damit abgeschlossen.
 
     \item $M$ ist offen: \\
-
-
-
+      Der Beweis der Offenheit läuft über den Satz über die implizite Funktion. Dazu betrachten wir folgende Funktion
+      %TODO Schau mal ob die Definitions- und Wertebereiche hinhauen.
+      \begin{align*}
+	G : H^{1,2}(U) \times H^{1,2}(U) \times [0,1] & \ra L^2(U) \times L^2(U), \\
+	(H, L, t) & \mapsto \left ( \Delta \log H -2 K_1 + 2(H - L), H \cdot L - \frac{t^2}{\lambda^4} \psi \bar \psi \right )
+      \end{align*}
+      Wenn wir nun ein $t \in M$ wählen, dann erfüllt $G(t, H(t), L(t)) = 0$. Betrachten wir weiterhin die Frechet-Ableitung von $G$:
+      \[
+      \d[G](H, L, t) = \begin{pmatrix} -2 + \Delta \frac1H & 2 & 0 \\ L & H & -2 + \frac{\psi \bar \psi}{\lambda^4} \end{pmatrix}
+      \]
+      Um nun den Satz über die implizite Funktion anwenden zu können muss nun $\d[G](H(t), L(t), t) \begin{pmatrix}h\\l\\0 \end{pmatrix}$ ein Isomorphismus sein, deswegen zeigen wir, dass das Gleichungssystem
+	\[
+	\d[G](H(t), L(t), t) \begin{pmatrix}h\\l\\0 \end{pmatrix} = \begin{pmatrix} \bar f\\ \tilde f\end{pmatrix}
+	\]
+	für bliebe $\bar f, \tilde f \in L^2(U)$ eindeutig lösbar ist. Setzen wir die beiden Gleichungen ineinander ein und eliminieren dabei $l$, so ergibt sich:
+	\[
+	\Delta \frac{h}{H(t)} -2 \frac{h}{H(t)} H(t) + 2 \frac{\tilde f}{H(t)} - 2L \frac{h}{H(t)} = \bar f
+	\]
+	Setzen wir $u := \frac{h}{H(t)}$ folgt die Gleichung:
+	\begin{align*}
+	  \Delta h & = 2(L(t) + H(t)) u + \left ( \bar f - 2 \frac{\tilde f}{H(t)} \right ) \\
+	  & := g \cdot u + f \tag{\ast} \label{eq:implf}
+	\end{align*}
+	Nun gilt, dass $g = 2 (H(t) + L(t)) \geq 2$, also nach unten beschränkt ist, deswegen ist die Gleichung \eqref{eq:implf} eindeutig in $H^{1,2}(U)$ lösbar. Und damit existiert auch ein eindeutiges $l \in H^{1,2}(U)$. \\
+	Also ist die Gleichung $G$ in einer Umgebung von $t$ auflösbar, d.h. es existiert eine offene Umgebung $V$ von $t$, so dass $\forall s \in V$ gilt, es existieren $H(t), L(t) \in H^{1,2}(U)$, die $G(t, H(t), L(t))$ erfüllen. Die Regularitätstheorie, die bereits oben zum Einsatz kam, zeigt dann, dass die $H(t)$ und $L(t)$ sogar in $C^\infty(U)$ liegen.\\
+	Damit haben wir gezeigt, dass $M$ offen ist.
   \end{itemize}
+  Insgesamt erhalten wir also, dass $M\subset [0,1]$ offen und abgeschlossen und somit das gesamte Intervall ist. Dies schließt den Beweis.
 \end{proof}
 

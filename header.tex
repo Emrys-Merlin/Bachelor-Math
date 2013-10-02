@@ -2,23 +2,26 @@
 
 \usepackage{amssymb}
 \usepackage[]{babel}
-\usepackage{fontspec}
 \usepackage[]{amsmath}
 \usepackage{xparse}
 \usepackage[colorlinks=true,linkcolor=blue,pdfborder={0 0 0}]{hyperref}
 \usepackage{microtype}
-\usepackage{luacode}
+%\usepackage{luacode}
 \usepackage{tikz}
-\usepackage{listings}
-\usepackage{siunitx}
+%\usepackage{listings}
+%\usepackage{siunitx}
 \usepackage{makeidx}
 \usepackage{amsthm}
 \usepackage{mathtools}
+%\usepackage{unicode-math}
 
+\usepackage{fontspec}
 \setmainfont{Linux Libertine}
 \setsansfont{Linux Biolinum}
+%\fontspec[ItalicFont={Linux Libertine Italic}, BoldSlantedFont={Linux Libertine}]{Linux Libertine}
 
 %Abkürzungen für Standardzahlmengen
+\let\C\relax
 \NewDocumentCommand\R{}{\mathbb{R}}
 \NewDocumentCommand\Q{}{\mathbb{Q}}
 \NewDocumentCommand\N{}{\mathbb{N}}
@@ -32,6 +35,23 @@
 \NewDocumentCommand\D{}{\mathcal{D}}
 \NewDocumentCommand\lie{}{\mathcal{L}}
 \NewDocumentCommand\jo{}{\mathfrak{J}}
+\NewDocumentCommand\hol{}{\mathcal{O}}
+\NewDocumentCommand\mer{}{\mathcal{M}}
+\NewDocumentCommand\diff{}{\mathcal{E}}
+\NewDocumentCommand\runge{}{\mathfrak{h}}
+\NewDocumentCommand\fu{}{\mathfrak{U}}
+\NewDocumentCommand\dist{}{\mathcal{D}}
+\NewDocumentCommand\Supp{}{\operatorname{Supp}}
+\NewDocumentCommand\im{}{\operatorname{im}}
+\NewDocumentCommand\sm{}{\operatorname{sm}}
+\NewDocumentCommand\Reg{}{\operatorname{Reg}}
+\NewDocumentCommand\be{}{\mathfrak{B}}
+\NewDocumentCommand\pe{}{\mathfrak{P}}
+\NewDocumentCommand\res{}{\operatorname{res}}
+\let\S\relax
+\NewDocumentCommand\S{}{\mathcal{S}}
+\let\P\relax
+\NewDocumentCommand\P{}{\mathbb{P}}
 
 
 
@@ -67,9 +87,12 @@
 \NewDocumentCommand\ric{}{\operatorname{ric}}
 \NewDocumentCommand\scal{}{\operatorname{scal}}
 \NewDocumentCommand\g{m m}{\langle #1, #2 \rangle}
+\NewDocumentCommand\ord{}{\operatorname{ord}}
+
+\NewDocumentCommand\init{m}{\emph{#1}\index{#1}}
 
 %siunitx
-\sisetup{separate-uncertainty,exponent-product=\cdot}
+%\sisetup{separate-uncertainty,exponent-product=\cdot}
 
 %tikz
 \usetikzlibrary{shadows}
@@ -87,3 +110,8 @@
 \newtheorem{rem}[thm]{Bemerkung}
 
 \makeindex
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "Bachelor"
+%%% End: 

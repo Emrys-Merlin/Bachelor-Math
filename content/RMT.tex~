@@ -1,0 +1,496 @@
+\section{Der Riemannsche Abbildungssatz}
+\label{sec:RMT}
+
+\begin{defin}
+  Sei $X$ eine Riemannsche Fläche, dann heißt
+  \[
+  Rh_\hol^1(X) := \Omega(X)/\d[\hol(X)]
+  \]
+  \init{holomorphe deRham Gruppe}.
+\end{defin}
+
+\begin{lemma}
+  \label{lemma:ex-log}
+  Sei $X$ eine Riemannsche Fläche mit $Rh^1_\hol(X) = 0$. Dann gilt:
+  \begin{enumerate}
+  \item Zu jeder holomorphen Funktionen $f: X \ra C^\ast$ existieren
+    $g, h \in \hol(X)$ mit $e^g = f$ und $h^2 = f$.
+  \item Zu jeder harmonischen Funktion $u: X \ra \R$ existiert ein $f
+    \in \hol(x)$ mit $u = \Re(f)$.
+  \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+  \begin{enumerate}
+  \item Es gilt $f^{-1}\d[f] \in \Omega(X)$ und da $Rh^1_\hol(X) = 0$
+    finden wir ein $g \in \hol(X)$ mit $\d[g] = f^{-1} \d[f]$.\\
+    Wir können annehmen, dass ein $a \in X$ existiert mit $ e^{g(a)} =
+    f(a)$, ansonsten betrachten wir $g +$ const. Weiterhin erhalten wir:
+    \begin{align*}
+      \d[(f e^{-g})] & = \d[(f)] e^{-g} + f e^{-g} (-1) f^{-1}\d[f] \\
+      & = 0
+    \end{align*}
+    Also ist $fe^{-g} \cong $const und aus $f(a) e^{-g(a)} = 1$
+    erhalten wir:
+    \[
+    f = e^g
+    \]
+    Damit ist der erste Teil der Aussage gezeigt. Für den zweiten
+    setzen wir nun einfach
+    \[
+    h := e^{\frac{g}{2}}
+    \]
+    und sind auch hier fertig.
+  \item Nach (19.4) (Jede harm 1-Form ist Realteil von genau einer hol
+    1-Form) existiert genau ein $\omega \in \Omega(X)$, so dass $\d[u]
+    = \Re(\omega)$ gilt. Da nun wieder $\Omega(X) = \d[\hol(X)]$ ist
+    erhalten wir zunächst $\d[g] = \omega$ für ein $g \in \hol(X)$ und
+    daraus weiterhin: $\d[u] = \Re(\d[g])$. Insgesamt erhalten wir:
+    \[
+    u = \Re(g) + \text{const.}
+    \]
+  \end{enumerate}
+\end{proof}
+
+\begin{thm}
+  \label{thm:Gebiet-Kreis}
+  Sei $X$ eine nicht kompakte Riemannsche Fläche und $Y \Subset X$ ein
+  Gebiet mit $Rh^1_{\hol}(Y) = 0$. Gelte weiterhin, dass $\partial Y$
+  regulär bzgl. des Dirichlet Randwertproblems ist. \\
+  Dann existiert eine biholomorphe Abbildung auf den Einheitskreis $D$.
+\end{thm}
+
+\begin{proof}
+  Sei $a \in Y$. Nach Weierstrass (26.5) existiert ein $g \in
+  \hol(X)$, das eine Nullstelle erster Ordnung bei $a$ besitzt und
+  ansonsten $g(x) \neq 0$ für alle $x \neq a$ gilt. \\
+  Nach (22.17) existiert ein stetiges $u: \bar Y \ra \R$, s.d. $u|_Y$
+  harmonisch ist und
+  \[
+  u(y) = \log(g(y)) \qquad \forall y \in \partial Y
+  \]
+  erfüllt. \\
+  Nach Lemma \ref{lemma:ex-log} existiert ein $h \in \hol(Y)$ mit $u =
+  \Re(h)$. \\
+  Wir setzen nun $f := e^{-h} g \in \hol(y)$ und behaupten $f: Y \ra
+  D$ ist biholomorph.
+  \begin{itemize}
+  \item $f(Y) \subset D$: Sei $y \in Y$ beliebig. Dann gilt:
+    \begin{align*}
+      |f(y)| & = | e^{-h(y)} | \cdot | g(y)| \\
+      & = e^{-u(y)} e^{\log(|g(y)|)} \\
+      & = \exp(\log|g(y)| - u(y))
+    \end{align*}
+    Daran erkennen wir, dass $|f|$ auf $\bar Y$ fortgesetzt werden
+    kann und dort nach Konstruktion konstant den Wert 1 annimmt. Da
+    $f$ eine holomorphe Funktion ist werden Extrema auf dem Rand
+    angenommen und da $f$ weiterhin nicht konstant ist ($f(a) = 0$)
+    erhalten wir aus dem Maximum-Prinzip:
+    \[
+    |f(y)| < 1 \qquad \forall y \in Y
+    \]
+    und damit $f(Y) \subset D$.
+  \item $f$ ist "`proper"': Sei $0 < r < 1$ und $Y_r :=
+    f^{-1}(\overline{D_r(0)})$. \\
+    Dann ist $Y_r$ kompakt als abgeschlossene Teilmenge von $\bar Y$.
+  \item $f$ ist biholomorph: $f$ nimmt jeden Wert gleich häufig an, da
+    es sich um eine "`proper"' Abbildung handelt. Weiterhin wird $0$
+    genau einmal angenommen. Also ist $f: Y \ra D$ bijektiv und
+    holomorph. Das genügt bereits, um zu zeigen, dass $f$ biholomorph
+    ist. 
+
+  \end{itemize}
+
+\end{proof}
+
+\begin{defin}
+  \begin{align*}
+    D(r) & := \{z \in \C | |z| < r \} \\
+    D(\infty) & := \C
+  \end{align*}
+\end{defin}
+
+\begin{prop}
+  \label{prop:kreis}
+  $f: D(r) \ra D(r')$, $f$ holomorph. Dann gilt: $|f'(0)| \leq \frac{r'}{r}$
+\end{prop}
+
+\begin{proof}
+  Unter Ausnutzung der Cauchyschen Integralformel erhalten wir:
+  \begin{align*}
+    |f'(0)| & = \left | \frac{1}{2\pi i} \int_{|z| = r} \frac{f(z)}{z^2}
+      \d[z] \right | \\
+    & = \left | \frac{1}{2 \pi i} \int_0^1 \frac{f(r e^{2\pi it})}{r^2
+        e^{4\pi i t}} r 2\pi i e^{2\pi i t} \d[t] \right | \\
+    & \leq \int_0^1 \frac{|f(r e^{2\pi it})|}{r} \d[t] \\
+    & \leq \frac{r'}{r} \int_0^1 \d[t] \\
+    & = \frac{r'}{r}
+  \end{align*}
+\end{proof}
+
+\begin{lemma}
+  \label{lemma:funktion-kompakt}
+  Sei $G \subset \C$ ein Gebiet, so dass $\C\setminus G$ einen inneren
+  Punkt besitzt. Sei $\omega_0 \in G$. Dann ist
+  \[
+  \{f \in \hol(D): f(D) \subset G \text{ und } f(0) = \omega_0 \}
+  \]
+  eine kompakte Teilmenge von $\hol(D)$ bzgl. der Konvergenz auf
+  kompakten Teilmengen.
+\end{lemma}
+
+\begin{proof}
+  Sei $a  \in ^\circ(\C \setminus G)$. Beh.: $z \mapsto \frac{1}{z-a}$
+  bildet $G$ biholomorph auf ein Teilgebiet eines $D(r), \quad r <
+  \infty$.\\
+  $d:= \operatorname{dist}(\{a\},g)> 0$ existiert, da $a \notin \bar
+  G$, denn $a$ ist ein innerer Punkt von $\C \setminus G$. Deshalb
+  folgt:
+  \[
+  \left | \frac{1}{z-a} \right |< \frac1d \qquad \forall z \in G
+  \]
+  Also sind die $f \in M$ gleichmäßig beschränkt und aus dem Satz von
+  Montel folgt $M$ ist kompakt.
+  %TODO Satz von Montel aufschreiben oder so.
+\end{proof}
+
+\begin{defin}
+  Sei $\S$\index{$\S$} die Menge aller injektiven holomorphen Funktionen $f: D \ra
+  \C$ mit $f(0) = 0$ und $f'(0)= 1$.
+\end{defin}
+
+\begin{lemma}
+  \label{lemma:schlicht-max-rad}
+  Sei $f \in \S$. \\
+  Dann existiert ein maximales $r \geq 0$, so dass $D(r) \subseteq
+  f(D)$.
+\end{lemma}
+
+\begin{proof}
+  Sei $M:= \{ r\geq 0| D(r) \subseteq f(D) \}$ und $r \in M$. Da $f$ injektiv und
+  holomorph ist, existiert eine holomorphe Funktion $\phi: D(r) \ra
+  D$ mit $f \circ \phi = \id_{D(r)}$ und $\phi'(0) = 1$. Damit wissen
+  wir aber
+  \[
+  1 = \phi'(0) \leq \frac{1}{r}
+  \]
+  Also ist $r \leq 1$ und somit $M$ beschränkt. Setzen wir nun $\tilde
+  r := \sup M$, so müssen wir noch zeigen, dass $D(\tilde r) \subseteq
+  f(D)$.\\
+  Sei $(r_n)_{n \in \N}\subseteq M$ mit $r_n \xrightarrow{n \ra
+    \infty} r$ und $z \in D(\tilde r)$. Dann existiert ein $n \in \N$,
+  so dass $z \in D(r_n)\subseteq f(D)$ und erhalten somit direkt
+  $D(\tilde r) \subseteq f(D)$.
+\end{proof}
+
+\begin{thm}
+  \label{thm:schlicht-kompakt}
+  Sei $\S$ die Menge aller injektiven holomorphen Funktionen $f: D\ra
+  \C$ mit $f(0) = 0$ und $f'(0) = 1$. \\
+  Dann ist $\S$ kompakt in $\hol(D)$.
+\end{thm}
+
+\begin{proof}
+  Sei $(f_N) \subset \S$. \\
+  Nach Lemma \ref{lemma:schlicht-max-rad}  finden wir zu jedem $n \in \N$
+  ein maximales $r_n \geq 0$ mit $D(r_n) \subseteq f_n(D)$. Setzen wir
+  wieder $\phi_n:=f_n^{-1} : D(r_n) \ra D$ so erhalten wir $1 =
+  |\phi'(0)| \leq \frac{1}{r_n}$ und damit $r_n \leq 1$. \\
+  Sei $a_n \in \partial D(r_n)$, so dass $a_n \notin f_n(D)$. Dies ist
+  aufgrund der Maximalität von $r_n$ immer möglich. Damit definieren
+  wir nun $g_n := \frac{f_n}{a_n}$. Wir erhalten $D \subseteq g_n(D)$
+  und $1 \notin g_n(D) \label{nicht-1}\label{ast}$. \\
+  Nun ist $g_n(D)$ über $g_n$ homöomorph zu $D$, also einfach
+  zusammenhängend. Dies hat zur Folge dass $Rh_\hol^1(g_n(D))$
+  verschwindet.\\
+  Nach Lemma \ref{lemma:ex-log} existiert ein $\psi: g_n(D) \ra \C^\ast$ mit
+  $\psi(0) = i$ und $\psi^2(z) = z - 1 \quad \forall z \in g_n(D)$. \\
+  Definiere $h_n := \psi \circ g_n$, also $h_n^2 = g_n - 1$. \\
+  Beh.: $w \in h_n(D) \Ra -w \notin h_n(D)$. \\
+  Ang.: es existierten $z_1,z_2 \in D$ mit $h_n(z_1) = w$ und
+  $h_n(z_2) = -w$, dann hätten wir
+  \begin{align*}
+    g_n(z_1) & = h_n^2(z_1) +1 \\
+    & = w^2 +1 \\
+    & = (-w)^2 +1 \\
+    & = h_n^2(z_2) +1 \\
+    & = g(z_2)
+  \end{align*}
+  Da nun $g$ aber injektiv ist folgt $z_1 = z_2$ und damit $w =
+  0$. Wir erhalten $g(z_1) = 1$ ein Widerspruch zu Gleichung \eqref{nicht-1}. \\
+  Desweiteren führt $D \subseteq g_n(D)$ zu $U:= \psi(D) \subseteq
+  \psi(g_n(D)) = h_n(D)$. Also $(-U) \cap h_n(D) = \varnothing$. \\
+  Wir definieren $G = \bigcup_{n \in \N} h_n(D)$ und behaupten
+  zunächst: $G$ ist ein Gebiet. \\
+  Nach dem Satz über die Gebietstreue sind alle $h_n(D)$ offen und
+  somit auch $G$. Es bleibt also zu zeigen, dass $G$ zusammenhängend
+  ist. Da wir uns in $\C$ befinden fallen die Begriffe des
+  Zusammenhangs und des Wegzusammenhangs zusammen und wir zeigen, dass
+  $G$ wegzusammenhängend ist.\\
+  Seien dazu $z, w \in G$. Dann existieren $n, \tilde n \in \N$, so
+  dass $z \in h_n(D)$ und $w \in h_{\tilde n} (D)$. Weiterhin ist
+  $h_n(0) = i \quad \forall n \in \N$, d.h. $i \in h_n(D) \quad
+  \forall n \in \N$. Nun sind die $h_n(D)$ Gebiete nach dem Satz über
+  die Gebietstreue, also finden wir zwei stetige Kurven $c_1: I \ra
+  h_n(D)$ und $c_2: I \ra h_{\tilde n}(D)$ mit $c_1(0) = z$, $c_1(1) =
+  i$, $c_2(0) = i$ und $c_2(1) = w$. Definieren wir nun:
+  \[
+  c: I \ra G, \quad c(t) :=
+  \begin{cases}
+    c_1(2t) & \text{für } 0 \leq t < \frac12\\
+    c_2(2t-1) & \text{für } \frac12 \leq t \leq 1
+  \end{cases}
+  \]
+  so finden wir eine Kurve in $G$ mit $c(0) = z$ und $c(1) = w$. Damit
+  ist $G$ wegzusammenhängend, also ein Gebiet. \\
+  Weiterhin gilt $G \cap -U = \varnothing$, da $h_n(D) \cap -U =
+  \varnothing$. Also besitzt das Komplement von $G$ innere Punkte.
+  Schlußendlich verwenden wir noch, dass $h_n(0) = i$ ist und
+  erhalten, dass Lemma \ref{lemma:funktion-kompakt} anwendbar ist. $(h_n)_{n
+    \in \N}$ besitzt demnach
+  eine konvergente Teilfolge. Aufgelöst nach $f_n =
+  a_n(1 + h_n^2)$ mit $|a_n| \leq 1$ erhalten wir also eine
+  konvergente Teilfolge
+  \[
+  f_{n_k} \xrightarrow{k \ra \infty} f: D \ra \C
+  \]
+  Dann ist $f$ klarerweise holomorph und es gilt $f(0) = 0$ und $f'(0)
+  = 1$, also ist $f$ insbesondere nicht konstant.\\
+  Zu zeigen bleibt nun nur noch die Injektivität von $f$. \\
+  Angenommen $f$ wäre nicht injektiv. Dann existiert ein $a \in \C$,
+  so dass $f-a$ mindestens zwei Nullstellen besitzt. Nun können wir
+  einen Radius $r < 1$ finden, so dass $f-a$ mindestens $k\geq 2$
+  Nullstellen besitzt und auf $\partial D(r)$ nicht
+  verschwindet. (Könnten wir kein solches $r$ finden, wäre $f-a$
+  bereits konstant Null nach dem Identitätssatz). Unter Verwendung des
+  Null- und Polstellenzählenden Integrals erhalten wir:
+  \[
+  k = \frac1{2\pi i} \int_{z = |r|} \frac{f'(z)}{f(z) - a} \d[z]
+  \]
+  Aber das Integral ist stetig bzgl. gleichmäßiger Konvergenz,
+  d.h. insbesondere, dass für jedes $f_{n_l}$ nahe genug an $f$ das
+  Integral auch $k$ ergeben müsste. Dies ist ein Widerspruch zur
+  Injektivität der $f_{n_l}$, also ist $f$ auch injektiv. \\
+  Dies vervollständigt den Beweis.
+\end{proof}
+
+\begin{lemma}
+  \label{lemma:bihol-kreis}
+  Sei $R \in ]0, \infty]$, $Y \subsetneq D(R)$ ein Gebiet, $0 \in Y$
+  und $Rh_\hol^1(Y) = 0$. \\
+  Dann existiert ein $0< r <R$ und eine holomorphe Funktion $f: Y \ra D(r)$ mit $f(0) =
+  0$ und $f'(0) = 1$.
+\end{lemma}
+
+\begin{proof}
+  \begin{description}
+  \item[Fall 1: $R < \infty$:] Wir können ohne Einschränkung annehmen,
+    dass $Y \subsetneq D$, ansonsten betrachten wir $\tilde Y =
+    \frac{Y}{R}$. \\
+    Nach Voraussetzung existiert ein $a \in D \setminus Y$. Wir
+    betrachten
+    \[
+    \phi: D \ra D, \quad \phi(z) := \frac{z-a}{1-\bar a z}
+    \]
+    % TODO: Wohldefiniertheit von phi?
+    Es folgt $0 \notin \phi(Y)$. Nach Lemma \ref{lemma:ex-log} existiert ein
+    $g \in \hol(Y)$ mit $g^2 = \phi|_Y$. Also ist $g(Y) \subseteq
+    D$. \\
+    Wir definieren nun eine weitere Hilfsfunktion
+    \[
+    \psi(z) := \frac{z-b}{1 - \bar b z}, \qquad b:= g(0)
+    \]
+    Zusammen mit $g$ ergibt dies unsere letzte Hilfsfunktion $h :=
+    \psi \circ g: Y \ra D$ mit $h(0) = 0$.
+    \begin{align*}
+      \gamma := h'(0) & = \psi'(b) g'(0) \\
+      & = \psi'(b) \cdot \frac{\phi'(0)}{2 g(0)} \\
+      & = \frac{1}{1-|b|^2} \frac{1-|a|^2}{2b} \\
+      & = \frac{1 + |b|^2}{2b}
+    \end{align*}
+    Damit erhalten wir $|\gamma| > 1$ (denn die Funktion $x \mapsto
+    \frac12 \left ( \frac1x + x \right )$ nimmt bei $x = 1$ ihr
+    striktes Minimum an und ist für $x< 1$ echt größer als 1). Setzen
+    wir nun $r := \frac{1}{\gamma} < 1 = R$ und $f :=
+    \frac{h}{\gamma}$ haben wir die gewünschte Funktion gefunden.
+  \item[Fall 2: $R = \infty$:] Nach Voraussetzung existiert ein $a \in
+    \C \setminus Y$. Wir betrachten
+    \[
+    \phi: \C \ra \C, \quad \phi(z) = z -a
+    \]
+    Nun gilt aber $0 \notin \phi(Y)$. Nach Lemma \ref{lemma:ex-log}
+    existiert ein $g \in \hol(Y)$ mit $g^2 = \phi|_Y$. Völlig analog
+    zum Beweis von Satz \ref{thm:schlicht-kompakt} erhalten wir für $w
+    \in g(Y)$ gilt $-w \notin g(Y)$. \\
+    Nun ist $g$ nicht konstant und damit eine offene Abbbildung. Sei
+    nun $b \in g(Y)$. Dann existiert ein $\epsilon > 0$,
+    s.d. $B_{epsilon}(b) \subseteq g(Y)$. Da nun für $w \in g(Y)$ $-w
+    \notin g(Y)$, gilt insbesondere $g \notin B_\epsilon(b)$. Also
+    gilt:
+    \[
+    |-w - b| = |w + b| \geq r
+    \]
+    D.h. wir können
+    \[
+    \psi: g(Y) \ra \C, \quad \psi(w) = \frac{1}{w+b}
+    \]
+    definieren. Dann ist $\psi$ holomorph und es gilt $|\psi(w)| \leq
+    \frac{1}{\epsilon}$ für jedes $w \in g(Y)$. \\
+    Damit können wir eine holomorphe Abbildung $\tilde \psi: Y \ra D$
+    finden. Setzen wir nun noch $c:= \tilde \psi(0)$ und betrachten
+    \[
+    \eta: D \ra D, \quad \eta(z) = \frac{z-c}{1-\bar c z}
+    \]
+    so können wir $\tilde f := \eta \circ \tilde psi: Y \ra D$
+    definieren mit den Eigenschaften: $\tilde f(0) = 0$ und
+    \begin{align*}
+      \tilde f'(0) & = \eta'(c) \cdot \tilde \psi'(0) \\
+      & = \frac{1}{1- |c|^2} \cdot r \cdot \psi'(g(0)) \cdot g'(0) \\
+      & = \frac{r}{1 - |c|^2} \cdot \frac{-1}{(g(0) + b)^2} \cdot
+      \frac{\phi'(0)}{2 g(0)} \\
+      & = \frac{r}{1- |c|^2} \cdot \frac{-1}{(g(0) + b)^2} \cdot
+      \frac{1}{2 g(0)} \\
+      & \neq 0
+    \end{align*}
+    Das heißt nach dem gleichen Skalierungsargument, wie im ersten
+    Fall erhalten wir eine holomorphe Abbildung $f: Y \ra D(r)$, wobei
+    $r < R = \infty$.
+  \end{description}
+\end{proof}
+
+\begin{lemma}
+  \label{lemma:runge-keine-kohomo}
+  Sei $X$ eine nicht kompakte Riemannsche Fläche, $Rh_\hol^1(X) = 0$,
+  $Y \subseteq X$ ein Runge-Gebiet.\\
+  Dann gilt $Rh_\hol^1(Y) = 0$.
+\end{lemma}
+
+\begin{proof}
+  Sei $\omega \in \Omega(Y)$ nach 26.6 (Auf jeder nicht kompakten
+  Riemannschen Fläche existiert eine niemals verschwindende holomorphe
+  1-Form) existiert ein $w_0 \in \Omega(X)$ ohne Nullstellen. Daher
+  existiert ein $f \in \hol(Y)$ mit $\omega = f \omega_0$. \\
+  Der Runge Approximationssatz besagt nun, dass eine Folge $(f_n)_{n
+    \in \N} \subseteq \hol(X)$ existiert, so dass $f_n \ra f$ normal
+  auf $Y$ konvergiert. \\
+  Sei nun $\alpha$ eine beliebige geschlossene Kurve in $Y$. 
+  % TODO: Kurven immer stetig.
+  Dann gilt:
+  \[
+  0 = \int_\alpha f_n \omega_0 \xrightarrow{n \ra \infty} \int_\alpha
+  \omega
+  \]
+  Also verschwindet $\int_\alpha \omega$ für jede geschlossene
+  Kurve. Also besitzt $\omega$ nach (10.15) eine Stammfunktion und
+  damit verschwindet $Rh_\hol^1(Y)$.
+\end{proof}
+
+
+\begin{thm}[Der Riemannsche Abbildungssatz]
+  Sei $X$ eine Riemannsche Fläche mit $Rh_\hol^1(X) = 0$.\\
+  Dann ist $X$ entweder konform äquivalent
+  \begin{enumerate}
+  \item zur Riemannschen Zahlenkugel $\P^1$,
+  \item zur Komplexen Ebene $\C$ oder
+  \item zum Einheitskreis $D$.
+  \end{enumerate}
+\end{thm}
+
+\begin{proof}
+  \begin{description}
+  \item[Fall 1: $X$ ist kompakt:] Dann wissen wir zunächst, dass $\d
+    \hol(X) = 0$ und damit auch $\Omega(X) = 0$. Nun liefert uns der
+    Serre'sche Dualitätssatz, dass $H^0(X, \Omega) \cong H^1(X,
+    \hol)^\ast$. Da nun immer $\Omega(x) \cong H^0(X, \Omega)$ gilt
+    und im kompakten Fall $H^1(X, \hol)$ ein endlich dimensionaler
+    Vektorraum ist, erhalten wir
+    \[
+    H^1(X, \hol) \cong H^1(X, \hol)^\ast = 0
+    \]
+    Also ist das Geschlecht unserer kompakten Riemanschen Fläche 0 und
+    aus dem Satz von Riemann-Roch erhalten wir, dass $X$ konform
+    äquivalent zu $\P^1$ ist.
+  \item[Fall 2: $X$ ist nicht kompakt:] Nach (23.9) existiert dann
+    eine Ausschöpfung $Y_0 \Subset Y_1 \Subset Y_2 \Subset \dots $ von
+    $X$, wobei die $Y_i$ Rungegebiete mit regulärem Rand bzgl. des
+    Dirichlet-Problems sind. \\
+    Nach Lemma \ref{lemma:runge-keine-kohomo} gilt für jedes $i \in \N$
+    $Rh_\hol^1(Y_i) = 0$.
+    Aus Satz \ref{thm:Gebiet-Kreis} erhalten wir, dass die $Y_i$
+    konform äquivalent sind zu $D$. \\
+    Sei $a \in Y_0$ und $(U,z)$ eine Koordinatenumgebung von $a$. Dann
+    existieren $r_n <0$ und eine biholomorphe Abbildung $f_n: Y_n \ra
+    D(r_n)$ mit $f_n(a) = 0$ und $\frac{\d[f_n]}{\d[z]}(a) = 1$, denn
+    betrachten wir die Abbildung $\tilde f_n : Y_n \ra D$ die nach
+    Satz \ref{thm:Gebiet-Kreis} existiert und die Abbildung
+    \[
+    \phi: D \ra D, \quad\phi_n(z) := \frac{z- \tilde f_n(a)}{1 - z \overline{\tilde
+        f_n(a)}}
+    \]
+    , so erhalten wir zunächts $\bar f_n := \phi_n \circ \tilde
+    f_n$. Diese erfüllt $\bar f_n : Y_n \ra D$ und $\bar f_n(a) =
+    0$. Setzen wir nun $r_n^{-1} := \left | \frac{\d[\bar f(a)]}{\d[z]}
+    \right |$ und $f_n := r_n \cdot \bar f_n : Y_n \ra D(r_n)$, so
+    haben wir die gewünschte Abbildung gefunden. \\
+    Weiterhin gilt $r_n \leq r_{n+1}$ für jedes $n \in \N$, denn $h:
+    f_{n+1} \circ f_n^{-1} : D(r_n) \ra D(r_{n+1})$ erfüllt $h(0)=0$
+    und $h'(0) = 1$, also $1 = |h'(0)| \leq \frac{r_{n+1}}{r_n}$. \\
+    Wir setzen nun
+    \[
+    R := \lim_{n \ra \infty} r_n \in ]0, \infty]
+    \]
+    Behauptung: $X$ wird biholomorph auf $D(R)$ abgebildet. Dazu
+    betrachten wir die Funktionenfolge $(f_n)_{n \in \N}$. Wir
+    behaupten, dass eine Teilfolge $(f_{n_k})_{k \in \N}$ existiert,
+    so dass für beliebige $m \in \N$ $(f_{n_k}|_{Y_m})_{k \geq m}$
+    kompakt auf $Y_m$ konvergiert. \\
+    Dazu definieren wir $g_n(z) := \frac{1}{r_0} f_n(f_0^{-1}(r_0 z))$
+    für alle $n \geq 0$. Damit sind die $g_n : D \ra \C$ injektive
+    holomorphe Funktionen mit $g_n(0) = 0$ und $g_n'(0) = 1$. Damit
+    sind die $g_n \in \S$ und aus Satz \ref{thm:schlicht-kompakt}
+    erhalten wir eine konvergente Teilfolge $(g_{n_k})_{k \in
+      \N}$. Diese Teilfolge gibt uns direkt eine konvergente Teilfolge
+    $(f_{n_{0k}})_{k\in\N}$
+    Wenden wir die gleiche Konstruktion nun auf
+    $\frac{1}{r_1}f_{n_{1k}}(f_1^{-1}(r_1z))$ erahlten wir eine
+    Teilfolge $f_{n_{1k}}$. Induktiv erhalten wir so zu jedem $Y_m$
+    eine konvergente Teilfolge $(f_{n_{mk}})$. \\
+    Setzen wir $f_{n_k} := f_{n_{kk}}$, so erhalten wir die gewünschte
+    Teilfolge.
+    Sei $f \in \hol(X)$ der Grenzwert von $(f_{n_k})_{k \in \N}$. Dann
+    können wir analog zum Beweis von Satz \ref{thm:schlicht-kompakt}
+    zeigen, dass $f$ injektiv ist und $f(a) = 0$ und
+    $\frac{\d[f(a)]}{\d[z]} = 1$ genügt.\\
+    Behauptung: $f$ bildet $X$ biholomorph auf $D(R)$ ab. Da $f$
+    holomorph und damit eine offene Abbildung ist erhalten wir direkt,
+    dass $f(x) \subset D(R)$. Es bleibt also nur noch die
+    Surjektivität zu zeigen. \\
+    Angenommen $f$ wäre nicht surjektiv. Dann existiert nach Lemma
+    \ref{lemma:bihol-kreis} ein $0 < r < R$ und eine holomorphe
+    Abbildung $g: f(X) \ra D(r$ mit $g(0) = 0$ und $g'(0) = 1$. \\
+    Sei nun $n$ so groß gewählt, dass $r_n > r$. Dann gilt für
+    \[
+    h:= g \circ f \circ f^{-1}_n : D(r_n) \ra D(r)
+    \]
+    $h(0)=0$, $h'(0) = 1$, aber $r < r_n$. Dies ist ein Widerspruch zu
+    Proposition \ref{prop:kreis}. \\
+    Also ist $X$ konform äquivalent zu $D(R)$. Für $R = \infty$ also
+    zu $\C$ und für $R < \infty$ damit zu $D$.
+  \end{description}
+\end{proof}
+
+\begin{rem}
+  Wir wissen bereits, dass jede einfachzusammenhängende Riemannsche
+  Fläche eine verschwindende deRham-Gruppe hat und dementsprechend
+  konform äquivalent zu $\P^1$, $\C$ oder $D$ ist, andererseits zeigt
+  der Riemannsche Abbildungssatz, dass jede Riemannsche Fläche mit
+  verschwindender deRham-Gruppe einfach zusammenhängend ist. Also
+  haben wir unser eigentliche Resultat bewiesen, nämlich, dass jede
+  einfachzusammenhängende Riemansche Fläche konform äquivalent zu
+  einer der obigen drei ist.
+\end{rem}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../Bachelor"
+%%% End: 

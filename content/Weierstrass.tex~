@@ -1,0 +1,161 @@
+
+\section{Der Weierstrasssche Produktsatz}
+\label{sec:Weierstrass}
+
+\begin{defin}{Divisor}
+  Sei $X$ eine Riemannsche Fläche. Ein \init{Divisor} ist eine
+  Abbildung $D: X \ra \Z$, so dass für jede kompakte Teilmenge $K
+  \subset X$ gilt: $D(x) = 0$ für fast alle $x \in K$. \\
+  Wir bezeichnen mit $Div(X)$ die Menge aller Divisoren. \\
+  Für eine Funktion $f \in \mer(X)^\ast$ definieren wir den zu $f$
+  gehörigen Divisor $(f): X \ra \Z, \quad x \mapsto \ord_x(f)$. Da die
+  Null- und Polstellen eine diskrete Teilmenge von $X$ bilden, ist
+  dies tatsächlich ein Divisor.
+\end{defin}
+
+\begin{defin}
+  Sei $X$ eine Riemannsche Fläche und $D \in Div(X)$. Dann heißt $f
+  \in \mer(X)$ eine \emph{Lösung} von $D$, falls $(f) = D$. \\
+  Setzen wir $X_D := \{x \in X: D(x) \geq 0 \}$, so heißt $f \in
+  \diff(X_D)$ \emph{schwache Lösung} von $D$, falls für alle $a \in X$
+  eine Koordinatenumgebung $(U,z)$ mit $z(a) = 0$ und ein $\psi \in
+  \diff(U)$ mit $\psi(a) \neq 0$ existieren, so dass $f = \psi z^k$
+  auf $ U \cap X_D$ gilt, wobei $k = D(a)$.
+\end{defin}
+
+\begin{lemma}
+  \label{lemma:schwache-Lösung-Divisor}
+  Jeder Divisor $D$ auf einer nicht kompakten Riemannschen Fläche $X$ hat eine
+  schwache Lösung.
+\end{lemma}
+
+\begin{proof}
+  Wir wählen $K_1, K_2, \dots$ kompakte Runge-Teilmengen von $X$ mit
+  \begin{enumerate}
+  \item $K_j \subset \mathring{K}_{j+1}$ $\forall j \geq 1$ und
+  \item $\bigcup_{j \in \N} K_j = X$
+  \end{enumerate}
+  % TODO: Referenz
+  Dies ist nach (23.6) möglich.
+  \begin{itemize}
+  \item Behauptung: Sei $a_0 \in X \setminus K_j$ und $A_0 \in Div(X)$
+    mit $A_0(a_0) = 1$ und $A_0(x) = 0$, falls $x \neq a_0$. Dann
+    existiert eine schwache Lösung $\phi$ von $A_0$ mit $\phi |_{K_j}
+    = 1$. \\
+    \\
+    $K_j$ ist eine Runge-Teilmenge, d.h. $K_j = \runge{K_j}$. Also
+    liegt $a_0$ in einer nicht relativ kompakten
+    Zusammenhangskomponente $U \subset X \setminus K_j$ \\
+    Nun existiert ein $a_1 \in U \setminus K_{j+1}$ (ansonsten wäre
+    $K_{j+1}$ nicht kompakt} und eine Kurve $c_0: I \ra U$ mit $c_0(0)
+  =a_1$ und $c_0(1) = a_0$. \\
+  % TODO: Referenz
+  Nach (20.5) existiert eine schwache Lösung $\phi_0$ des Divisors
+  $\partial c_0$ mit $\phi_0|_{K_j} = 1$. \\
+  Induktiv sind wir nun in der Lage eine Folge von Punkten $a_\nu \in
+  X \setminus K_{j+ \nu}$, $\nu \in \N$, und Kurven in $X \setminus
+  K_{j+\nu}$ von $a_{\nu+1}$ nach $a_\nu$ konstruieren. Analog zum
+  obigen erfahren erhalten wir dann wieder schwache Lösungen
+  $\phi_\nu$ des Divisors $\partial c_\nu$ mit $\phi_\nu |_{K_{j+\nu}}
+  = 1$. \\
+  Nach Konstruktion gilt $\partial c_\nu = A_\nu - A_{\nu+1}$, wobei
+  $A_\nu(a_\nu) = 1$ und sonst verschwindet $A_\nu$. \\
+  Weiterhin folgt, dass $\phi_0 \cdot \phi_1 \dots \phi_n$ eine
+  schwache Lösung von $A_0 - A_{n+1}$ ist.
+  % TODO: Warum ist das eine schwache Lösun?
+  Lassen wir $n$ gegen unendlich gehen, so erhalten wir $\phi :=
+  \prod_{\nu = 0}^\infty \phi_\nu$. Dieses Produkt konvergiert, da
+  auf jeder kompakten Teilmenge nur endlich viele Faktoren von 1
+  verschieden sind.
+  % TODO: Warum ist K in einem der K_n enthalten
+  Damit ist $\phi$ eine schwache Lösung von $A_0$.
+\item Sei nun $D$ ein beliebiger Divisor auf $X$. Für $\nu \in \N$
+  setzen wir
+  \[
+  D_\nu(x) := \begin{cases} D(x) & x \in K_{\nu+1}\setminus K_\nu\\ 0
+    & \text{sonst}\end{cases}
+  \]
+  wobei $K_0$ als leere Menge definiert wird. Wir erhalten dann $D =
+  \sum_{\nu = 0}^\infty D_\nu$. \\
+  Nun ist $D_\nu$ nur an endlich vielen stellen von 0 verschieden und
+  kann deshalb als endliche Summe von Divisoren der Form $A_\nu$
+  dargestellt werden. Für diese wurde oben eine schwache Lösung
+  konstruiert und das (endliche) Produkt dieser Lösungen liefert uns
+  eine Lösung $\psi_\nu$ von $D_\nu$ und wir erhalten sogar $\psi_\nu
+  |_{K_\nu} = 1$. \\
+  Setzen wir nun $\psi := \prod_{\nu=0}^\infty \psi_\nu$, so
+  konvergiert das Produkt nach den gleichen Argumenten, wie oben und
+  ist eine schwache Lösung von $D$.
+  \end{itemize}
+\end{proof}
+
+
+\begin{thm}
+  \label{thm:Lösung-Divisor}
+  Sei $X$ eine nicht kompakte Riemannsche Fläche und $D \in
+  Div(X)$. Dann existiert ein $f \in \mer(X)^\ast$ mit $(f) = D$.
+\end{thm}
+
+\begin{proof}
+  Wir können $X$ mit relativ kompakten, einfach zusammenhängenden
+  Koordinatenumgebungen $(U_i)_{i \in I}$ überdecken. Auf diesen
+  finden wir $f_i \in \mer(U_i)^\ast$, so dass $(f_i) =
+  D|_{U_i}$. Dies ist möglich, da $D$ auf dem relativ kompakten $U_i$
+  fast überall verschwindet und $f_i$ deshalb in lokalen Koordinaten
+  einfach als rationale Funktion darstellen.\\
+  Mit dieser Konstruktion haben $f_i$ und $f_j$ dies selben Pol- und
+  Nullstellen auf $U_i \cap U_j$, also ist
+  \[
+  \frac{f_i}{f_j} \in hol(U_i \cap U_j)^\ast \qquad \đorall i,j \in I
+  \]
+  Nach Lemma \ref{lemma:schwache-Lösung-Divisor} existiert eine
+  schwache Lösung $\psi$ von $D$ und auf den $U_i$ finden wir $\psi_i
+  \in \diff(U_i)$, so dass $\psi = \psi_i \cdot f_i$ und $\psi_i(x)
+  \neq 0$ für alle $x \in U_i$. (Wir setzend abei $\psi$ auf ganz $X$
+  fort, in dem wir es an den nicht definierten Stellen $\infty$
+  setzen). \\
+  Da $U_i$ einfach zusammenhängend ist und $\psi_i$ nicht
+  verschwindet, existiert ein $\phi_i \in \diff(U_i)$ mit $\psi_i =
+  e^{\phi_i}$. \\
+  Somit erhalten wir
+  \[
+  \psi = e^{\phi_i} f_i \qquad \text{auf } U_i
+  \]
+  und
+  \[
+  e^{\phi_j - \phi_i} = \frac{f_i}{f_j} \in \hol(U_i \cap U_j)^\ast
+  \qquad \text{auf } U_i \cap U_j
+  \]
+  Damit ist $\phi_{ij} := \phi_i - \phi_j \in \hol(U_i \cap U_j)$, da
+  die $\exp$-Funktion lokal biholomorph ist. Aus der Definition folgt
+  auch direkt $\phi_{ij} + \phi_{jk} = \phi_{ik}$ auf $U_i \cap U_j
+  \cap U_k$ und damit ist $(\phi_{ij}) \in Z^1(\fu, \hol)$. \\
+  Nun ist $H^1(X, \hol) = 0$, also existieren $g_i \in \hol(U_i)$ mit
+  $\phi_{ij} = \phi_j - \phi_i = g_j - g_i$ auf $U_i \cap U_j$. \\
+  Eingesetzt folgt
+  \[
+  e^{g_j} f_j = e^{g_i} f_i \qquad \text{auf } U_i \cap U_j
+  \]
+  also finden wir ein $f \in \mer(X)^\ast$ mit $f = e^{f_j} f_j$ auf
+  $U_j$. \\
+  Damit ist $f$ die gesuchte Lösung von $D$.
+\end{proof}
+
+\begin{cor}
+  \label{cor:nicht-verschwindende-1-form}
+  Sei $X$ eine nicht kompakte Riemannsche Fläche. \\
+  Dann existiert ein nicht-verschwindendes $\omega \in \Omega(X)$.
+\end{cor}
+
+\begin{proof}
+  Sei $g$ eine nicht-konstante meromorphe Funktion auf $X$ und $f \in
+  \mer(X)^\ast$ mit $(f) = -(\d[g])$. Diese existiert nach Satz
+  \ref{thm:Lösung-Divisor}.\\
+  Dann ist $\omega := f \d[g]$ die gesuchte 1-Form.
+\end{proof}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../Bachelor"
+%%% End: 
