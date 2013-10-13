@@ -2,6 +2,8 @@
  (lambda ()
     (LaTeX-add-index-entries
      "#1")
+    (LaTeX-add-bibliographies
+     "biblio")
     (LaTeX-add-environments
      "thm"
      "lemma"
@@ -16,9 +18,12 @@
      "P"
      "epsilon"
      "phi"
-     "d")
+     "d"
+     "Re"
+     "Im")
     (TeX-run-style-hooks
      "fontspec"
+     "todonotes"
      "mathtools"
      "amsthm"
      "makeidx"
@@ -29,9 +34,13 @@
      "amsmath"
      "babel"
      "amssymb"
+     "biblatex"
+     "scrpage2"
      "latex2e"
      "scrartcl10"
      "scrartcl"
      "ngerman"
-     "fleqn")))
+     "fleqn"
+     "twoside"
+     "headsepline")))
 

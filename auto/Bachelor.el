@@ -2,5 +2,13 @@
  (lambda ()
     (TeX-run-style-hooks
      "header"
-     "content/RMT")))
+     "content/Serre"
+     "content/Dirichlet"
+     "content/Topologie"
+     "content/Weyl"
+     "content/Runge"
+     "content/Weierstrass"
+     "content/RMT"
+     "content/Uniformisierung"
+     "appendix")))
 

@@ -7,7 +7,6 @@ einfach zusammenhängenden Riemannschen Flächen und besagt,
 dass es bis auf Biholomorphie nur drei verschiedene gibt: die
 Riemannsche Zahlenkugel $\P^1$, die komplexe Ebene $\C$
 und die Einheitskreisscheibe $B$.
-
 Später werden wir dieses Resultat im Zusammenhang mit der
 Überlagerungstheorie verwenden, denn hier besagt das Resultat nichts
 anderes, als dass es nur drei mögliche Universelle Überlagerungen zu
@@ -15,18 +14,18 @@ jeder beliebigen Riemannschen Fläche gibt. Das erleichtert deren
 Untersuchung natürlich ungemein.
 
 Zu Beginn des Kapitels werden einige Hilfssätze bewiesen, bevor wir am
-Ende dann die Früchte unserer Arbeit ernten können.
-
-Zunächst einmal beweisen wir den Riemannschen Abbildungssatz nicht
+Ende dann die Früchte unserer Arbeit ernten können. Zunächst einmal
+beweisen wir den Riemannschen Abbildungssatz nicht
 direkt für einfach zusammenhängende Riemannsche Flächen, sondern für
-Riemannschle Flächen mit verschwindender holomorpher deRham Gruppe
-(vgl. \ref{def:hol-deRham}). Wie wir aber am Ende sehen werden ist dies
+Riemannsche Flächen mit verschwindender holomorpher deRham Gruppe
+(vgl. \ref{def:hol-deRham}). Wie wir am Ende sehen werden, ist dies
 keine Einschränkung, allerdings müssen wir erst ein paar Eigenschaften
-für diese Riemannschen Flächen zusammentragen.
+für diese Riemannschen Flächen zusammentragen. Der restliche Teil
+dieses Kapitels besteht dann darin spezielle Funktionenfolgen
+zu konstruieren. Diese liefern uns schlussendlich bilholomorphe
+Abbildungen zwischen unserer Riemannschen Fläche $X$ und $\P^1$, $\C$
+oder $B$, was den Riemannschen Abbildungssatz beweist.
 
-Der restliche Teil dieses Kapitels besteht dann darin Funktionenfolgen
-zu konstruieren, die schlussendlich gegen unsere gesuchte biholomorphe
-Funktion konvergieren.
 
 \begin{defin}
   \begin{align*}
@@ -48,7 +47,7 @@ Funktion konvergieren.
   \label{lemma:ex-log}
   Sei $X$ eine Riemannsche Fläche mit $Rh^1_\hol(X) = 0$. Dann gilt:
   \begin{enumerate}
-  \item Zu jeder holomorphen Funktionen $f: X \ra C^\ast$ existieren
+  \item Zu jeder holomorphen Funktionen $f: X \ra \C^\times$ existieren
     $g, h \in \hol(X)$ mit $e^g = f$ und $h^2 = f$.
   \item Zu jeder harmonischen Funktion $u: X \ra \R$ existiert ein $f
     \in \hol(X)$ mit $u = \Re(f)$.
@@ -57,29 +56,28 @@ Funktion konvergieren.
 
 \begin{proof}
   \begin{enumerate}
-  \item Es gilt $f^{-1}\d[f] \in \Omega(X)$ und da $Rh^1_\hol(X) = 0$
+  \item Es gilt $f^{-1}\d[f] \in \Omega(X)$, und wegen $Rh^1_\hol(X) = 0$
     finden wir ein $g \in \hol(X)$ mit $\d[g] = f^{-1} \d[f]$.\\
-    Wir können annehmen, dass ein $a \in X$ existiert mit $ e^{g(a)} =
-    f(a)$, ansonsten betrachten wir $g +$ const. Weiterhin erhalten wir:
+    Wir können ohne Einschränkung annehmen, dass ein $a \in X$ existiert mit $ e^{g(a)} =
+    f(a)$, ansonsten betrachten wir $g + c$ für ein $c \in \C$. Weiterhin erhalten wir:
     \begin{align*}
-      \d[(f e^{-g})] & = \d[(f)] e^{-g} + f e^{-g} (-1) f^{-1}\d[f] \\
-      & = 0
+      \d[(f e^{-g})] & = \d[(f)] e^{-g} + f e^{-g} (-1) f^{-1}\d[f] = 0
     \end{align*}
-    Also ist $fe^{-g} \equiv $const und aus $f(a) e^{-g(a)} = 1$
-    erhalten wir:
+    Also ist $fe^{-g} \equiv $ const und aus $f(a) e^{-g(a)} = 1$
+    erhalten wir
     \[
-    f = e^g
+    f = e^g.
     \]
     Damit ist der erste Teil der Aussage gezeigt. Für den zweiten
     setzen wir nun einfach
     \[
-    h := e^{\frac{g}{2}}
+    h := e^{\frac{g}{2}}.
     \]
   \item Nach (19.4) \footnote{Jede harmonische 1-Form ist Realteil von genau einer holomorphen
     1-Form} existiert genau ein $\omega \in \Omega(X)$, so dass $\d[u]
-    = \Re(\omega)$ gilt. Da nun wieder $\Omega(X) = \d[\hol(X)]$ ist
+    = \Re(\omega)$ gilt. Wieder wegen $\Omega(X) = \d[\hol(X)]$,
     erhalten wir zunächst $\d[g] = \omega$ für ein $g \in \hol(X)$ und
-    daraus weiterhin: $\d[u] = \Re(\d[g])$. Insgesamt erhalten wir:
+    daraus weiterhin $\d[u] = \Re(\d[g])= \d[\Re(g)]$. Insgesamt erhalten wir
     \[
     u = \Re(g) + \text{const.}
     \]
@@ -89,7 +87,7 @@ Funktion konvergieren.
 \begin{thm}
   \label{thm:Gebiet-Kreis}
   Sei $X$ eine nicht kompakte Riemannsche Fläche und $Y \Subset X$ ein
-  Gebiet mit $Rh^1_{\hol}(Y) = 0$ und regulärem Rand. \\
+  Gebiet mit $Rh^1_{\hol}(Y) = 0$ und regulärem Rand.
   Dann existiert eine biholomorphe Abbildung auf den Einheitskreis $B$.
 \end{thm}
 
@@ -105,8 +103,8 @@ Funktion konvergieren.
   erfüllt. \\
   Nach Lemma \ref{lemma:ex-log} existiert ein $h \in \hol(Y)$ mit $u =
   \Re(h)$. \\
-  Wir setzen nun $f := e^{-h} g \in \hol(Y)$ und behaupten $f: Y \ra
-  B$ ist biholomorph.
+  Wir setzen nun $f := e^{-h} g \in \hol(Y)$ und behaupten, $f: Y \ra
+  B$ sei biholomorph.
   \begin{itemize}
   \item $f(Y) \subset B$: Sei $y \in Y$ beliebig. Dann gilt:
     \begin{align*}
@@ -124,9 +122,9 @@ Funktion konvergieren.
     \]
     und damit $f(Y) \subset B$.
   \item $f$ ist eigentlich: Sei $0 < r < 1$ und $Y_r :=
-    f^{-1}(\overline{B_r(0)})$. \\
+    f^{-1}(\overline{B_r(0)})$. 
     Dann ist $Y_r$ kompakt als abgeschlossene Teilmenge von $\bar Y$.
-  \item $f$ ist biholomorph: $f$ nimmt jeden Wert gleich häufig an, da
+  \item $f$ ist biholomorph: $f$ nimmt jeden Wert gleichhäufig an, da
     es sich um eine eigentlich Abbildung handelt. Weiterhin wird $0$
     genau einmal angenommen. Also ist $f: Y \ra B$ bijektiv und
     holomorph. Das genügt bereits, um zu zeigen, dass $f$ biholomorph
@@ -158,29 +156,27 @@ Funktion konvergieren.
   \label{lemma:funktion-kompakt}
   Sei $G \subset \C$ ein Gebiet, so dass $\C\setminus G$ einen inneren
   Punkt besitzt. Sei $\omega_0 \in G$. Dann ist
-  \[
+  \begin{align}
   \{f \in \hol(B): f(B) \subset G \text{ und } f(0) = \omega_0
-  \} \label{eq:menge} \tag{$\ast$}
-  \]
+  \} \label{eq:menge} 
+  \end{align}
   eine kompakte Teilmenge von $\hol(B)$ bzgl. der Konvergenz auf
   kompakten Teilmengen.
 \end{lemma}
 
 \begin{proof}
-  Sei $a  \in \mathring{(\C \setminus G)}$ und wir bezeichnen die
-  Menge in  \eqref{eq:menge} mit $M$.\\
-  Behauptung: $z \mapsto \frac{1}{z-a}$
-  bildet $G$ biholomorph auf ein Teilgebiet eines $B_r(0), \quad r <
-  \infty$ ab.\\
-  $d:= \operatorname{dist}(\{a\},G)> 0$ existiert, da $a \notin \bar
+  Sei $a  \in \mathring{(\C \setminus G)}$. Wir bezeichnen die
+  Menge in  \eqref{eq:menge} mit $M$ und behaupten, dass $z \mapsto
+  \frac{1}{z-a}$ $G$ biholomorph auf ein Teilgebiet eines
+  $B_r(0)$ für ein $r < \infty$ abbildet. 
+  Der Abstand $d:= \operatorname{dist}(\{a\},G)> 0$ existiert, da $a \notin \bar
   G$, denn $a$ ist ein innerer Punkt von $\C \setminus G$. Deshalb
   folgt:
   \[
   \left | \frac{1}{z-a} \right |< \frac1d \qquad \forall z \in G
   \]
   Also sind die $f \in M$ gleichmäßig beschränkt und aus dem Satz von
-  Montel folgt $M$ ist kompakt.
-  %TODO Satz von Montel aufschreiben oder so.
+  Montel (vgl. \cite[Satz 4.9]{Frei}) erahlten wir die Kompakthreit von $M$.
 \end{proof}
 
 \begin{defin}
@@ -190,13 +186,12 @@ Funktion konvergieren.
 
 \begin{lemma}
   \label{lemma:schlicht-max-rad}
-  Sei $f \in \S$. \\
-  Dann existiert ein maximales $r \geq 0$, so dass $B_r(0) \subseteq
+  Sei $f \in \S$. Dann existiert ein maximales $r \geq 0$ mit $B_r(0) \subseteq
   f(B)$.
 \end{lemma}
 
 \begin{proof}
-  Sei $M:= \{ r\geq 0| B_r(0) \subseteq f(B) \}$ und $r \in M$. Da $f$ injektiv und
+  Sei $M:= \{ r\geq 0\mid B_r(0) \subseteq f(B) \}$ und $r \in M$. Da $f$ injektiv und
   holomorph ist, existiert eine holomorphe Funktion $\phi: B_r(0) \ra
   B$ mit $f \circ \phi = \id_{B_r(0)}$ und $\phi'(0) = 1$. Damit wissen
   wir aber
@@ -218,26 +213,27 @@ Funktion konvergieren.
 \end{thm}
 
 \begin{proof}
-  Sei $(f_n)_{n \in \N} \subset \S$. \\
+  Sei $(f_n)_{n \in \N} \subset \S$.
   Nach Lemma \ref{lemma:schlicht-max-rad}  finden wir zu jedem $n \in \N$
   ein maximales $r_n \geq 0$ mit $B_{r_n}(0) \subseteq f_n(B)$. Setzen wir
-  wieder $\phi_n:=f_n^{-1} : B_{r_n}(0) \ra B$ so erhalten wir $1 =
-  |\phi'(0)| \leq \frac{1}{r_n}$ und damit $r_n \leq 1$. \\
+  wieder $\phi_n:=f_n^{-1} : B_{r_n}(0) \ra B$, so erhalten wir $1 =
+  |\phi_n'(0)| \leq \frac{1}{r_n}$ und damit $r_n \leq 1$. \\
   Sei $a_n \in \partial B_{r_n}(0)$, so dass $a_n \notin f_n(B)$. Dies ist
   aufgrund der Maximalität von $r_n$ immer möglich. Damit definieren
   wir nun $g_n := \frac{f_n}{a_n}$. Wir erhalten $B \subseteq g_n(B)$
   und
-  \[
-  1 \notin g_n(B) \label{nicht-1}\tag{$\ast$}
-  \]
+  \begin{align}
+  1 \notin g_n(B) \label{nicht-1}
+  \end{align}
   Nun ist $g_n(B)$ über $g_n$ homöomorph zu $B$, also einfach
-  zusammenhängend. Dies hat zur Folge dass $Rh_\hol^1(g_n(B))$
-  verschwindet.\\
+  zusammenhängend. Dies hat zur Folge, dass $Rh_\hol^1(g_n(B))$
+  verschwindet. 
   Nach Lemma \ref{lemma:ex-log} existiert ein $\psi: g_n(B) \ra \C^\ast$ mit
-  $\psi(0) = i$ und $\psi^2(z) = z - 1 \quad \forall z \in g_n(B)$. \\
-  Definiere $h_n := \psi \circ g_n$, also $h_n^2 = g_n - 1$. \\
-  Behauptung: $w \in h_n(B) \Ra -w \notin h_n(B)$. \\
-  Angenommen: es existierten $z_1,z_2 \in B$ mit $h_n(z_1) = w$ und
+  $\psi(0) = i$ und $\psi^2(z) = z - 1 \quad \forall z \in g_n(B)$.
+  Definiere wir $h_n := \psi \circ g_n$, so erhalten wir zunächst
+  $h_n^2 = g_n - 1$ und behaupten, dass $w \in h_n(B)$ impliziert,
+  dass $-w \notin h_n(B)$ gilt.
+  Angenommen es existierten $z_1,z_2 \in B$ mit $h_n(z_1) = w$ und
   $h_n(z_2) = -w$, dann hätten wir
   \begin{align*}
     g_n(z_1) & = h_n^2(z_1) +1 \\
@@ -246,24 +242,26 @@ Funktion konvergieren.
     & = h_n^2(z_2) +1 \\
     & = g(z_2)
   \end{align*}
-  Da nun $g$ aber injektiv ist folgt $z_1 = z_2$ und damit $w =
-  0$. Wir erhalten $g(z_1) = 1$ ein Widerspruch zu Gleichung \eqref{nicht-1}. \\
+  Da nun $g$ aber injektiv ist, folgte $z_1 = z_2$ und damit $w =
+  0$. Wir erhielten $g(z_1) = 1$, was einen Widerspruch zu Gleichung
+  \eqref{nicht-1} darstellt. 
+
   Desweiteren führt $B \subseteq g_n(B)$ zu $U:= \psi(B) \subseteq
-  \psi(g_n(B)) = h_n(B)$. Also $(-U) \cap h_n(B) = \varnothing$. \\
+  \psi(g_n(B)) = h_n(B)$. Also ist $(-U) \cap h_n(B) = \varnothing$.
   Wir definieren $G := \bigcup_{n \in \N} h_n(B)$ und behaupten
-  zunächst: $G$ ist ein Gebiet. \\
+  zunächst, dass $G$ ein Gebiet ist.
   Nach dem Satz über die Gebietstreue sind alle $h_n(B)$ offen und
   somit auch $G$. Es bleibt also zu zeigen, dass $G$ zusammenhängend
   ist. Da wir uns in $\C$ befinden fallen die Begriffe des
   Zusammenhangs und des Wegzusammenhangs zusammen und wir zeigen, dass
-  $G$ wegzusammenhängend ist.\\
+  $G$ wegzusammenhängend ist.
   Seien dazu $z, w \in G$. Dann existieren $n, \tilde n \in \N$, so
   dass $z \in h_n(B)$ und $w \in h_{\tilde n} (B)$. Weiterhin ist
-  $h_l(0) = i \quad \forall l \in \N$, d.h. $i \in h_l(B) \quad
-  \forall l \in \N$. Nun sind die $h_l(B)$ Gebiete nach dem Satz über
+  $h_l(0) = i$ für beliebige $l \in \N$, d.h. $i \in h_l(B)$ für alle
+  $l \in \N$. Nun sind die $h_l(B)$ Gebiete nach dem Satz über
   die Gebietstreue, also finden wir zwei stetige Kurven $c_1: I \ra
   h_n(B)$ und $c_2: I \ra h_{\tilde n}(B)$ mit $c_1(0) = z$, $c_1(1) =
-  i$, $c_2(0) = i$ und $c_2(1) = w$. Definieren wir nun:
+  i$, $c_2(0) = i$ und $c_2(1) = w$. Definieren wir nun
   \[
   c: I \ra G, \quad c(t) :=
   \begin{cases}
@@ -272,12 +270,13 @@ Funktion konvergieren.
   \end{cases}
   \]
   so finden wir eine Kurve in $G$ mit $c(0) = z$ und $c(1) = w$. Damit
-  ist $G$ wegzusammenhängend, also ein Gebiet. \\
+  ist $G$ wegzusammenhängend, also ein Gebiet.
+
   Weiterhin gilt $G \cap -U = \varnothing$, da $h_n(B) \cap -U =
   \varnothing$. Also besitzt das Komplement von $G$ innere Punkte.
   Schlußendlich verwenden wir noch, dass $h_n(0) = i$ ist und
-  erhalten, dass Lemma \ref{lemma:funktion-kompakt} anwendbar ist. $(h_n)_{n
-    \in \N}$ besitzt demnach
+  erhalten, dass Lemma \ref{lemma:funktion-kompakt} anwendbar ist.
+  $(h_n)_{n \in \N}$ besitzt demnach
   eine konvergente Teilfolge. Aufgelöst nach $f_n =
   a_n(1 + h_n^2)$ mit $|a_n| \leq 1$ erhalten wir also eine
   konvergente Teilfolge
@@ -285,15 +284,16 @@ Funktion konvergieren.
   f_{n_k} \xrightarrow{k \ra \infty} f: B \ra \C
   \]
   Dann ist $f$ klarerweise holomorph und es gilt $f(0) = 0$ und $f'(0)
-  = 1$, also ist $f$ insbesondere nicht konstant.\\
-  Zu zeigen bleibt nun nur noch die Injektivität von $f$. \\
-  Nehmen wir  also an $f$ ist nicht injektiv. Dann existiert ein $a \in \C$,
-  so dass $f-a$ mindestens zwei Nullstellen besitzt. Nun können wir
+  = 1$, also ist $f$ insbesondere nicht konstant.
+
+  Zu zeigen bleibt nun nur noch die Injektivität von $f$.
+  Nehmen wir also an $f$ wäre nicht injektiv. Dann existierte ein $a \in \C$,
+  so dass $f-a$ mindestens zwei Nullstellen besäße. Nun könnten wir
   einen Radius $r < 1$ finden, so dass $f-a$ mindestens $k\geq 2$
-  Nullstellen besitzt und auf $\partial B_r(0)$ nicht
-  verschwindet. \footnote{Könnten wir kein solches $r$ finden, wäre $f-a$
+  Nullstellen besäße und auf $\partial B_r(0)$ nicht
+  verschwände. \footnote{Könnten wir kein solches $r$ finden, wäre $f-a$
   bereits konstant Null nach dem Identitätssatz.} Unter Verwendung des
-  Null- und Polstellenzählenden Integrals erhalten wir:
+  Null- und Polstellenzählenden Integrals erhielten wir:
   \[
   k = \frac1{2\pi i} \int_{z = |r|} \frac{f'(z)}{f(z) - a} \d[z]
   \]
@@ -313,98 +313,94 @@ Funktion konvergieren.
 \end{lemma}
 
 \begin{proof}
-  \begin{description}
-  \item[Fall 1: $R < \infty$:] Wir können ohne Einschränkung annehmen,
-    dass $Y \subsetneq B$, ansonsten betrachten wir $\tilde Y =
-    \frac{Y}{R}$. \\
-    Nach Voraussetzung existiert ein $a \in B \setminus Y$. Wir
-    betrachten
-    \[
-    \phi: B \ra B, \quad \phi(z) := \frac{z-a}{1-\bar a z}
-    \]
-    % TODO: Wohldefiniertheit von phi?
-    Es folgt $0 \notin \phi(Y)$. Nach Lemma \ref{lemma:ex-log} existiert ein
-    $g \in \hol(Y)$ mit $g^2 = \phi|_Y$. Also ist $g(Y) \subseteq
-    B$. \\
-    Wir definieren nun eine weitere Hilfsfunktion
-    \[
-    \psi(z) := \frac{z-b}{1 - \bar b z}, \qquad b:= g(0)
-    \]
-    Zusammen mit $g$ ergibt dies unsere letzte Hilfsfunktion $h :=
-    \psi \circ g: Y \ra B$ mit $h(0) = 0$.
-    \begin{align*}
-      \gamma := h'(0) & = \psi'(b) g'(0) \\
-      & = \psi'(b) \cdot \frac{\phi'(0)}{2 g(0)} \\
-      & = \frac{1}{1-|b|^2} \frac{1-|a|^2}{2b} \\
-      & = \frac{1 + |b|^2}{2b}
-    \end{align*}
-    Damit erhalten wir $|\gamma| > 1$.\footnote{Die Funktion $x \mapsto
+  Sei zunächst $R < \infty$. Wir können ohne Einschränkung annehmen,
+  dass $Y \subsetneq B$, ansonsten betrachten wir $\tilde Y =
+  \frac{Y}{R}$. Nach Voraussetzung existiert ein $a \in B \setminus
+  Y$. Wir betrachten
+  \[
+  \phi: B \ra B, \quad \phi(z) := \frac{z-a}{1-\bar a z}
+  \]
+  \todo{Wohldefiniertheit von phi?}
+  Es folgt $0 \notin \phi(Y)$. Nach Lemma \ref{lemma:ex-log} existiert ein
+  $g \in \hol(Y)$ mit $g^2 = \phi|_Y$. Also ist $g(Y) \subseteq
+  B$. Wir definieren nun eine weitere Hilfsfunktion
+  \[
+  \psi(z) := \frac{z-b}{1 - \bar b z}, \qquad b:= g(0)
+  \]
+  Zusammen mit $g$ ergibt dies unsere letzte Hilfsfunktion $h :=
+  \psi \circ g: Y \ra B$ mit $h(0) = 0$.
+  \begin{align*}
+    \gamma := h'(0) & = \psi'(b) g'(0) \\
+    & = \psi'(b) \cdot \frac{\phi'(0)}{2 g(0)} \\
+    & = \frac{1}{1-|b|^2} \frac{1-|a|^2}{2b} \\
+    & = \frac{1 + |b|^2}{2b}
+  \end{align*}
+  Damit erhalten wir $|\gamma| > 1$.\footnote{Die Funktion $x \mapsto
     \frac12 \left ( \frac1x + x \right )$ nimmt bei $x = 1$ ihr
     striktes Minimum an und ist für $x< 1$ echt größer als 1.} Setzen
-    wir nun $r := \frac{1}{\gamma} < 1 = R$ und $f :=
-    \frac{h}{\gamma}$ haben wir die gewünschte Funktion gefunden.
-  \item[Fall 2: $R = \infty$:] Nach Voraussetzung existiert ein $a \in
-    \C \setminus Y$. Wir betrachten
-    \[
-    \phi: \C \ra \C, \quad \phi(z) = z -a
-    \]
-    Nun gilt aber $0 \notin \phi(Y)$. Nach Lemma \ref{lemma:ex-log}
-    existiert ein $g \in \hol(Y)$ mit $g^2 = \phi|_Y$. Völlig analog
-    zum Beweis von Satz \ref{thm:schlicht-kompakt} erhalten wir für $w
-    \in g(Y)$, dass $-w \notin g(Y)$. \\
-    $g$ ist nicht konstant und damit eine offene Abbbildung. Sei
-    $b \in g(Y)$. Dann existiert ein $\epsilon > 0$,
-    s.d. $B_{\epsilon}(b) \subseteq g(Y)$. Da nun für $w \in g(Y)$ $-w
-    \notin g(Y)$, gilt insbesondere $g \notin B_\epsilon(b)$. Also
-    gilt:
-    \[
-    |-w - b| = |w + b| \geq r
-    \]
-    D.h. wir können
-    \[
-    \psi: g(Y) \ra \C, \quad \psi(w) = \frac{1}{w+b}
-    \]
-    definieren. Dann ist $\psi$ holomorph und es gilt $|\psi(w)| \leq
-    \frac{1}{\epsilon}$ für jedes $w \in g(Y)$. \\
-    Damit können wir eine holomorphe Abbildung $\tilde \psi: Y \ra B$
-    finden. Setzen wir nun noch $c:= \tilde \psi(0)$ und betrachten
-    \[
-    \eta: B \ra B, \quad \eta(z) = \frac{z-c}{1-\bar c z}
-    \]
-    so können wir $\tilde f := \eta \circ \tilde \psi: Y \ra D$
-    definieren mit den Eigenschaften: $\tilde f(0) = 0$ und
-    \begin{align*}
-      \tilde f'(0) & = \eta'(c) \cdot \tilde \psi'(0) \\
-      & = \frac{1}{1- |c|^2} \cdot r \cdot \psi'(g(0)) \cdot g'(0) \\
-      & = \frac{r}{1 - |c|^2} \cdot \frac{-1}{(g(0) + b)^2} \cdot
-      \frac{\phi'(0)}{2 g(0)} \\
-      & = \frac{r}{1- |c|^2} \cdot \frac{-1}{(g(0) + b)^2} \cdot
-      \frac{1}{2 g(0)} \\
-      & \neq 0
-    \end{align*}
-    Das heißt nach dem gleichen Skalierungsargument, wie im ersten
-    Fall erhalten wir eine holomorphe Abbildung $f: Y \ra B_r(0)$, wobei
-    $r < R = \infty$.
-  \end{description}
+  wir nun $r := \frac{1}{\gamma} < 1 = R$ und $f :=
+  \frac{h}{\gamma}$ haben wir die gewünschte Funktion gefunden.
+
+  Wenden wir uns nun dem Fall $R = \infty$ zu. Nach Voraussetzung
+  existiert ein $a \in \C \setminus Y$. Wir betrachten
+  \[
+  \phi: \C \ra \C, \quad \phi(z) = z -a
+  \]
+  Nun gilt aber $0 \notin \phi(Y)$. Nach Lemma \ref{lemma:ex-log}
+  existiert ein $g \in \hol(Y)$ mit $g^2 = \phi|_Y$. Völlig analog
+  zum Beweis von Satz \ref{thm:schlicht-kompakt} erhalten wir für $w
+  \in g(Y)$, dass $-w \notin g(Y)$. $g$ ist nicht konstant und damit
+  eine offene Abbbildung. Sei $b \in g(Y)$. Dann existiert ein
+  $\epsilon > 0$, s.d. $B_{\epsilon}(b) \subseteq g(Y)$. Da nun für $w
+  \in g(Y)$ $-w \notin g(Y)$, gilt insbesondere $g \notin
+  B_\epsilon(b)$. Also gilt:
+  \[
+  |-w - b| = |w + b| \geq r
+  \]
+  D.h. wir können
+  \[
+  \psi: g(Y) \ra \C, \quad \psi(w) = \frac{1}{w+b}
+  \]
+  definieren. Dann ist $\psi$ holomorph und es gilt $|\psi(w)| \leq
+  \frac{1}{\epsilon}$ für jedes $w \in g(Y)$. 
+  Damit können wir eine holomorphe Abbildung $\tilde \psi: Y \ra B$
+  finden. Setzen wir nun noch $c:= \tilde \psi(0)$ und betrachten
+  \[
+  \eta: B \ra B, \quad \eta(z) = \frac{z-c}{1-\bar c z}
+  \]
+  so können wir $\tilde f := \eta \circ \tilde \psi: Y \ra D$
+  definieren. $\tilde f$ erfüllt dabei die Eigenschaften $\tilde f(0)
+  = 0$ und
+  \begin{align*}
+    \tilde f'(0) & = \eta'(c) \cdot \tilde \psi'(0) \\
+    & = \frac{1}{1- |c|^2} \cdot r \cdot \psi'(g(0)) \cdot g'(0) \\
+    & = \frac{r}{1 - |c|^2} \cdot \frac{-1}{(g(0) + b)^2} \cdot
+    \frac{\phi'(0)}{2 g(0)} \\
+    & = \frac{r}{1- |c|^2} \cdot \frac{-1}{(g(0) + b)^2} \cdot
+    \frac{1}{2 g(0)} \\
+    & \neq 0.
+  \end{align*}
+  Das heißt nach dem gleichen Skalierungsargument, wie im ersten
+  Fall erhalten wir eine holomorphe Abbildung $f: Y \ra B_r(0)$, wobei
+  $r < R = \infty$.
 \end{proof}
 
 \begin{lemma}
   \label{lemma:runge-keine-kohomo}
   Sei $X$ eine nicht kompakte Riemannsche Fläche, $Rh_\hol^1(X) = 0$,
-  $Y \subseteq X$ ein Runge-Gebiet.\\
-  Dann gilt $Rh_\hol^1(Y) = 0$.
+  $Y \subseteq X$ ein Runge-Gebiet. Dann gilt $Rh_\hol^1(Y) = 0$.
 \end{lemma}
 
 \begin{proof}
   Sei $\omega \in \Omega(Y)$ nach Korollar
   \ref{cor:nicht-verschwindende-1-form} existiert ein $w_0 \in
   \Omega(X)$ ohne Nullstellen. Daher
-  existiert ein $f \in \hol(Y)$ mit $\omega = f \omega_0$. \\
-  Der Runge Approximationssatz besagt nun, dass eine Folge $(f_n)_{n
+  existiert ein $f \in \hol(Y)$ mit $\omega = f \omega_0$. 
+  Der Rungesche Approximationssatz besagt nun, dass eine Folge $(f_n)_{n
     \in \N} \subseteq \hol(X)$ existiert, so dass $f_n \ra f$ kompakt
-  auf $Y$ konvergiert. \\
+  auf $Y$ konvergiert.
   Sei nun $\alpha$ eine beliebige geschlossene Kurve in $Y$. 
-  % TODO: Kurven immer stetig.
+  \todo{Kurven immer stetig.}
   Dann gilt:
   \[
   0 = \int_\alpha f_n \omega_0 \xrightarrow{n \ra \infty} \int_\alpha
@@ -417,8 +413,9 @@ Funktion konvergieren.
 
 
 \begin{thm}[Der Riemannsche Abbildungssatz]
-  Sei $X$ eine Riemannsche Fläche mit $Rh_\hol^1(X) = 0$.\\
-  Dann ist $X$ entweder konform äquivalent
+  \label{thm:rmt}
+  Sei $X$ eine Riemannsche Fläche mit $Rh_\hol^1(X) = 0$. Dann ist $X$
+  entweder konform äquivalent
   \begin{enumerate}
   \item zur Riemannschen Zahlenkugel $\P^1$,
   \item zur Komplexen Ebene $\C$ oder
@@ -427,94 +424,96 @@ Funktion konvergieren.
 \end{thm}
 
 \begin{proof}
-  \begin{description}
-  \item[Fall 1: $X$ ist kompakt:] Dann wissen wir zunächst, dass $\d
-    \hol(X) = 0$ und damit auch $\Omega(X) = 0$. Nun liefert uns der
-    Serresche Dualitätssatz, dass $H^0(X, \Omega) \cong H^1(X,
-    \hol)^\ast$. Da nun immer $\Omega(x) \cong H^0(X, \Omega)$ gilt
-    und im kompakten Fall $H^1(X, \hol)$ ein endlich dimensionaler
-    Vektorraum ist, erhalten wir
-    \[
-    H^1(X, \hol) \cong H^1(X, \hol)^\ast = 0
-    \]
-    Also ist das Geschlecht unserer kompakten Riemanschen Fläche 0 und
-    aus dem Satz von Riemann-Roch erhalten wir, dass $X$ konform
-    äquivalent zu $\P^1$ ist.
-  \item[Fall 2: $X$ ist nicht kompakt:] Nach (23.9) existiert dann
-    eine Ausschöpfung $Y_0 \Subset Y_1 \Subset Y_2 \Subset \dots $ von
-    $X$, wobei die $Y_i$ Rungegebiete mit regulärem Rand.\\
-    Nach Lemma \ref{lemma:runge-keine-kohomo} gilt für jedes $i \in \N$
-    $Rh_\hol^1(Y_i) = 0$.
-    Aus Satz \ref{thm:Gebiet-Kreis} erhalten wir, dass die $Y_i$
-    konform äquivalent zu $B$ sind. \\
-    Sei $a \in Y_0$ und $(U,z)$ eine Koordinatenumgebung von $a$. Dann
-    existieren $r_n <0$ und eine biholomorphe Abbildung $f_n: Y_n \ra
-    B_{r_n}(0)$ mit $f_n(a) = 0$ und $\frac{\d[f_n]}{\d[z]}(a) = 1$, denn
-    betrachten wir die Abbildung $\tilde f_n : Y_n \ra B$ die nach
-    Satz \ref{thm:Gebiet-Kreis} existiert und die Abbildung
-    \[
-    \phi: B \ra B, \quad\phi_n(z) := \frac{z- \tilde f_n(a)}{1 - z \overline{\tilde
-        f_n(a)}},
-    \]
-    so erhalten wir zunächts $\bar f_n := \phi_n \circ \tilde
-    f_n$. Diese erfüllt $\bar f_n : Y_n \ra B$ und $\bar f_n(a) =
-    0$. Setzen wir nun $r_n^{-1} := \left | \frac{\d[\bar f(a)]}{\d[z]}
-    \right |$ und $f_n := r_n \cdot \bar f_n : Y_n \ra B_{r_n}(0)$, so
-    haben wir die gewünschte Abbildung gefunden. \\
-    Weiterhin gilt $r_n \leq r_{n+1}$ für jedes $n \in \N$, denn $h:
-    f_{n+1} \circ f_n^{-1} : B_{r_n}(0) \ra B_{r_{n+1}}(0)$ erfüllt $h(0)=0$
-    und $h'(0) = 1$, also $1 = |h'(0)| \leq \frac{r_{n+1}}{r_n}$ nach
-    Proposition \ref{prop:kreis}. \\
-    Wir setzen nun
-    \[
-    R := \lim_{n \ra \infty} r_n \in ]0, \infty]
-    \]
-    Behauptung: $X$ wird biholomorph auf $B_R(0)$ abgebildet. Dazu
-    betrachten wir die Funktionenfolge $(f_n)_{n \in \N}$. Wir
-    behaupten, dass eine Teilfolge $(f_{n_k})_{k \in \N}$ existiert,
-    so dass für beliebige $m \in \N$ $(f_{n_k}|_{Y_m})_{k \geq m}$
-    kompakt auf $Y_m$ konvergiert. \\
-    Dazu definieren wir $g_n(z) := \frac{1}{r_0} f_n(f_0^{-1}(r_0 z))$
-    für alle $n \geq 0$. Damit sind die $g_n : B \ra \C$ injektive
-    holomorphe Funktionen mit $g_n(0) = 0$ und $g_n'(0) = 1$, also
-    $g_n \in \S$ und aus Satz \ref{thm:schlicht-kompakt}
-    erhalten wir eine konvergente Teilfolge $(g_{n_k})_{k \in\N}$.
-    Diese Teilfolge gibt uns direkt eine konvergente Teilfolge
-    $(f_{n_{0k}})_{k\in\N}$.
-    Wenden wir die gleiche Konstruktion nun auf
-    $\frac{1}{r_1}f_{n_{0k}}(f_1^{-1}(r_1z))$ erahlten wir eine
-    Teilfolge $f_{n_{1k}}$. Induktiv erhalten wir so zu jedem $Y_m$
-    eine konvergente Teilfolge $(f_{n_{mk}})$. \\
-    Setzen wir $f_{n_k} := f_{n_{kk}}$, so erhalten wir die gewünschte
-    Teilfolge.
-    Sei $f \in \hol(X)$ der Grenzwert von $(f_{n_k})_{k \in \N}$. Dann
-    können wir analog zum Beweis von Satz \ref{thm:schlicht-kompakt}
-    zeigen, dass $f$ injektiv ist und $f(a) = 0$ und
-    $\frac{\d[f(a)]}{\d[z]} = 1$ genügt.\\
-    Behauptung: $f$ bildet $X$ biholomorph auf $B_R(0)$ ab.  \\
-    Zunächst folgt aus $|f_{n_k}(x)| < r_{n_k}$ für beliebige $x \in X$
-    und $k \in \N$ groß genug, dass $|f(x)| \leq R$. Da $f$
-    holomorph und nicht-konstant, also eine offene Abbildung ist erhalten wir direkt,
-    dass $f(x) \subset B_R(0)$. Ansonsten gäbe es ein $z \in f(x)$ mit
-    $z \in \partial B_R(0)$. Dieses $z$ kann aber kein innerer Punkt von
-    $f(B)$ sein. Ein Widerspruch. \\
-    Es bleibt also nur noch die Surjektivität zu zeigen. \\
-    Angenommen $f$ wäre nicht surjektiv. Dann existiert nach Lemma
-    \ref{lemma:bihol-kreis} ein $0 < r < R$ und eine holomorphe
-    Abbildung $g: f(X) \ra B_r(0)$ mit $g(0) = 0$ und $g'(0) = 1$. \\
-    Sei nun $n$ so groß gewählt, dass $r_n > r$. Dann gilt für
-    \[
-    h:= g \circ f \circ f^{-1}_n : B_{r_n}(0) \ra B_r(0)
-    \]
-    $h(0)=0$, $h'(0) = 1$, aber $r < r_n$. Dies ist ein Widerspruch zu
-    Proposition \ref{prop:kreis}. \\
-    Also ist $X$ konform äquivalent zu $D_R(0)$. Für $R = \infty$ also
-    zu $\C$ und für $R < \infty$ zu $B$.
-  \end{description}
+  Wir betrachten zunächst den Fall,
+  dass $X$ kompakt ist. Dann wissen wir, dass $\d
+  \hol(X) = 0$ und damit auch $\Omega(X) = 0$. Nun liefert uns der
+  Serresche Dualitätssatz, dass $H^0(X, \Omega) \cong H^1(X,
+  \hol)^\ast$. Da immer $\Omega(X) \cong H^0(X, \Omega)$ gilt
+  und im kompakten Fall $H^1(X, \hol)$ ein endlich dimensionaler
+  Vektorraum ist, erhalten wir
+  \[
+  H^1(X, \hol) \cong H^1(X, \hol)^\ast = 0
+  \]
+  Also ist das Geschlecht unserer kompakten Riemanschen Fläche 0 und
+  aus dem Satz von Riemann-Roch erhalten wir, dass $X$ konform
+  äquivalent zu $\P^1$ ist.
+
+  Ist nun $X$ nicht kompakt, so existiert nach Satz \ref{thm:Ausschöpfung-Runge}
+  eine Ausschöpfung $Y_0 \Subset Y_1 \Subset Y_2 \Subset \dots $ von
+  $X$, wobei die $Y_i$ Rungegebiete mit regulärem Rand. 
+  Nach Lemma \ref{lemma:runge-keine-kohomo} gilt für jedes $i \in \N$
+  $Rh_\hol^1(Y_i) = 0$.
+  Aus Satz \ref{thm:Gebiet-Kreis} erhalten wir, dass die $Y_i$
+  konform äquivalent zu $B$ sind. 
+  Sei $a \in Y_0$ und $(U,z)$ eine Koordinatenumgebung von $a$. Dann
+  existieren $r_n <0$ und eine biholomorphe Abbildung $f_n: Y_n \ra
+  B_{r_n}(0)$ mit $f_n(a) = 0$ und $\frac{\d[f_n]}{\d[z]}(a) = 1$, denn
+  betrachten wir die Abbildung $\tilde f_n : Y_n \ra B$ die nach
+  Satz \ref{thm:Gebiet-Kreis} existiert und die Abbildung
+  \[
+  \phi: B \ra B, \quad\phi_n(z) := \frac{z- \tilde f_n(a)}{1 - z \overline{\tilde
+      f_n(a)}},
+  \]
+  so erhalten wir zunächts $\bar f_n := \phi_n \circ \tilde
+  f_n$. Diese erfüllt $\bar f_n : Y_n \ra B$ und $\bar f_n(a) =
+  0$. Setzen wir nun $r_n^{-1} := \left | \frac{\d[\bar f(a)]}{\d[z]}
+  \right |$ und $f_n := r_n \cdot \bar f_n : Y_n \ra B_{r_n}(0)$, so
+  haben wir die gewünschte Abbildung gefunden. 
+  Weiterhin gilt $r_n \leq r_{n+1}$ für jedes $n \in \N$, denn $h:
+  f_{n+1} \circ f_n^{-1} : B_{r_n}(0) \ra B_{r_{n+1}}(0)$ erfüllt $h(0)=0$
+  und $h'(0) = 1$, also $1 = |h'(0)| \leq \frac{r_{n+1}}{r_n}$ nach
+  Proposition \ref{prop:kreis}. 
+  Wir setzen nun
+  \[
+  R := \lim_{n \ra \infty} r_n \in ]0, \infty]
+  \]
+  Behauptung: $X$ wird biholomorph auf $B_R(0)$ abgebildet. Dazu
+  betrachten wir die Funktionenfolge $(f_n)_{n \in \N}$. Wir
+  behaupten, dass eine Teilfolge $(f_{n_k})_{k \in \N}$ existiert,
+  so dass für beliebige $m \in \N$ $(f_{n_k}|_{Y_m})_{k \geq m}$
+  kompakt auf $Y_m$ konvergiert. 
+  Dazu definieren wir $g_n(z) := \frac{1}{r_0} f_n(f_0^{-1}(r_0 z))$
+  für alle $n \geq 0$. Damit sind die $g_n : B \ra \C$ injektive
+  holomorphe Funktionen mit $g_n(0) = 0$ und $g_n'(0) = 1$, also
+  $g_n \in \S$ und aus Satz \ref{thm:schlicht-kompakt}
+  erhalten wir eine konvergente Teilfolge $(g_{n_k})_{k \in\N}$.
+  Diese Teilfolge gibt uns direkt eine konvergente Teilfolge
+  $(f_{n_{0k}})_{k\in\N}$.
+  Wenden wir die gleiche Konstruktion nun auf
+  $\frac{1}{r_1}f_{n_{0k}}(f_1^{-1}(r_1z))$ erahlten wir eine
+  Teilfolge $f_{n_{1k}}$. Induktiv erhalten wir so zu jedem $Y_m$
+  eine konvergente Teilfolge $(f_{n_{mk}})$. 
+  Setzen wir $f_{n_k} := f_{n_{kk}}$, so erhalten wir die gewünschte
+  Teilfolge.
+  Sei $f \in \hol(X)$ der Grenzwert von $(f_{n_k})_{k \in \N}$. Dann
+  können wir analog zum Beweis von Satz \ref{thm:schlicht-kompakt}
+  zeigen, dass $f$ injektiv ist und $f(a) = 0$ und
+  $\frac{\d[f(a)]}{\d[z]} = 1$ genügt. 
+
+  Wir zeigen nun, dass $f$ $X$ biholomorph auf $B_R(0)$ abbildet.
+  Zunächst folgt aus $|f_{n_k}(x)| < r_{n_k}$ für beliebige $x \in X$
+  und $k \in \N$ groß genug, dass $|f(x)| \leq R$. Da $f$
+  holomorph und nicht-konstant, also eine offene Abbildung ist erhalten wir direkt,
+  dass $f(x) \subset B_R(0)$. Ansonsten gäbe es ein $z \in f(x)$ mit
+  $z \in \partial B_R(0)$. Dieses $z$ kann aber kein innerer Punkt von
+  $f(B)$ sein. Ein Widerspruch. 
+
+  Es bleibt also nur noch die Surjektivität zu zeigen. 
+  Angenommen $f$ wäre nicht surjektiv. Dann existierte nach Lemma
+  \ref{lemma:bihol-kreis} ein $0 < r < R$ und eine holomorphe
+  Abbildung $g: f(X) \ra B_r(0)$ mit $g(0) = 0$ und $g'(0) = 1$. 
+  Sei nun $n$ so groß gewählt, dass $r_n > r$. Dann gälte für
+  \[
+  h:= g \circ f \circ f^{-1}_n : B_{r_n}(0) \ra B_r(0)
+  \]
+  $h(0)=0$, $h'(0) = 1$, aber $r < r_n$. Dies ist ein Widerspruch zu
+  Proposition \ref{prop:kreis}. 
+  Also ist $X$ konform äquivalent zu $D_R(0)$. Für $R = \infty$ also
+  zu $\C$ und für $R < \infty$ zu $B$.
 \end{proof}
 
 \begin{rem}
-  Wir wissen bereits, dass jede einfachzusammenhängende Riemannsche
+  Wir wissen bereits, dass jede einfach zusammenhängende Riemannsche
   Fläche eine verschwindende deRham-Gruppe hat und dementsprechend
   konform äquivalent zu $\P^1$, $\C$ oder $B$ ist, andererseits zeigt
   der Riemannsche Abbildungssatz, dass jede Riemannsche Fläche mit

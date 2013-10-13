@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012/Debian) (format=xelatex 2013.3.23)  21 SEP 2013 19:12
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012/Debian) (format=xelatex 2013.3.23)  13 OCT 2013 20:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -829,272 +829,563 @@ Normal \dimen register pool exhausted, switching to extended pool.
 \l_MT_above_shortintertext_dim=\dimen258
 \l_MT_below_shortintertext_dim=\dimen259
 )
+(/usr/share/texlive/texmf-dist/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2011/10/22 .dtx Todonotes source and documentation.
+Package: todonotes 2011/10/22
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks36
+\XKV@tempa@toks=\toks37
+\XKV@depth=\count286
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryposit
+ioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
+)
+\c@@todonotes@numberoftodonotes=\count287
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2012/05/06 v2.2b Advanced font selection for XeLaTeX/LuaLaTeX
+
+\l_fontspec_script_int=\count288
+\l_fontspec_language_int=\count289
+\l_fontspec_strnum_int=\count290
+\l_fontspec_tmpa_dim=\dimen260
+\l_fontspec_tmpb_dim=\dimen261
+\l_fontspec_tmpc_dim=\dimen262
+Variant \tl_gset:cV already defined; not changing it on line 66
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-patches.sty
+Package: fontspec-patches 2012/05/06 v2.2b Advanced font selection for XeLaTeX/
+LuaLaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
+LaTeX Info: Redefining \em on input line 420.
+LaTeX Info: Redefining \textsubscript on input line 424.
+LaTeX Info: The control sequence `\[' is already robust on input line 471.
+LaTeX Info: The control sequence `\]' is already robust on input line 472.
+)
+LaTeX Info: Redefining \em on input line 22.
+LaTeX Info: Redefining \emph on input line 29.
+LaTeX Info: Redefining \- on input line 32.
+
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \oldstylenums with arg. spec. 'm' on line 107.
+*************************************************
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \R with arg. spec. '' on line 23.
+. Defining document command \liningnums with arg. spec. 'm' on line 111.
 .................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \Q with arg. spec. '' on line 24.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \N with arg. spec. '' on line 25.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \C with arg. spec. '' on line 26.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \Z with arg. spec. '' on line 27.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \A with arg. spec. '' on line 28.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \K with arg. spec. '' on line 29.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \p with arg. spec. '' on line 30.
-.................................................
+) (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2012/05/06 v2.2b Advanced font selection for XeLaTeX/Lu
+aLaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1enc.def
+File: eu1enc.def 2010/05/27 v0.1h Experimental Unicode font encodings
+)
+LaTeX Font Info:    Try loading font information for EU1+lmr on input line 100.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmr.fd
+File: eu1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(/usr/share/texlive/texmf-dist/tex/xelatex/xunicode/xunicode.sty
+File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many 
+other characters in Unicode lower plane
+
+(/usr/share/texmf/tex/latex/tipa/t3enc.def
+File: t3enc.def 2001/12/31 T3 encoding
+LaTeX Font Info:    Try loading font information for EU1+lmss on input line 357
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmss.fd
+File: eu1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+\tipaTiiicode=\count291
+\tipasavetokens=\toks38
+\tipachecktokens=\toks39
+)
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \h with arg. spec. '' on line 31.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \F with arg. spec. '' on line 32.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \D with arg. spec. '' on line 33.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \lie with arg. spec. '' on line 34.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \jo with arg. spec. '' on line 35.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \hol with arg. spec. '' on line 36.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \mer with arg. spec. '' on line 37.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \diff with arg. spec. '' on line 38.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \runge with arg. spec. '' on line 39.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \fu with arg. spec. '' on line 40.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \dist with arg. spec. '' on line 41.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \Supp with arg. spec. '' on line 42.
+. Defining document command \fontspec with arg. spec. 'O{}m' on line 39.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \im with arg. spec. '' on line 43.
+. Defining document command \setmainfont with arg. spec. 'O{}m' on line 43.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \sm with arg. spec. '' on line 44.
+. Defining document command \setsansfont with arg. spec. 'O{}m' on line 47.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \Reg with arg. spec. '' on line 45.
+. Defining document command \setmonofont with arg. spec. 'O{}m' on line 51.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \be with arg. spec. '' on line 46.
+. Defining document command \setmathrm with arg. spec. 'O{}m' on line 59.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \pe with arg. spec. '' on line 47.
+. Defining document command \setboldmathrm with arg. spec. 'O{}m' on line 62.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \res with arg. spec. '' on line 48.
+. Defining document command \setmathsf with arg. spec. 'O{}m' on line 65.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \S with arg. spec. '' on line 50.
+. Defining document command \setmathtt with arg. spec. 'O{}m' on line 68.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \P with arg. spec. '' on line 52.
+. Defining document command \newfontfamily with arg. spec. 'mO{}m' on line 84.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \Ra with arg. spec. '' on line 57.
+. Defining document command \newfontface with arg. spec. 'mO{}m' on line 87.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \La with arg. spec. '' on line 58.
+. Defining document command \defaultfontfeatures with arg. spec. 'm' on line
+. 91.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \LRa with arg. spec. '' on line 59.
+. Defining document command \addfontfeatures with arg. spec. 'm' on line 107.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \ra with arg. spec. '' on line 60.
+. Defining document command \newfontfeature with arg. spec. 'mm' on line 118.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \la with arg. spec. '' on line 61.
+. Defining document command \newAATfeature with arg. spec. 'mmmm' on line 125.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \tang with arg. spec. ' O{p} O{M}' on line 63.
+. Defining document command \newICUfeature with arg. spec. 'mmm' on line 132.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \cotang with arg. spec. ' O{p} O{M}' on line 64.
+. Defining document command \aliasfontfeature with arg. spec. 'mm' on line
+. 159.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \del with arg. spec. ' O{i} O{x} O{} ' on line 65.
+. Defining document command \aliasfontfeatureoption with arg. spec. 'mmm' on
+. line 164.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontscript with arg. spec. 'mm' on line 169.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontlanguage with arg. spec. 'mm' on line 192.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \DeclareFontsExtensions with arg. spec. 'm' on
+. line 211.
+.................................................
+Variant \prop_gput:cnV already defined; not changing it on line 485
+Variant \prop_gput:cnx already defined; not changing it on line 486
+\l_fontspec_tmp_int=\count292
+LaTeX Info: Redefining \itshape on input line 1893.
+LaTeX Info: Redefining \slshape on input line 1897.
+LaTeX Info: Redefining \scshape on input line 1901.
+LaTeX Info: Redefining \upshape on input line 1905.
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+\g_fontspec_family_Linux Libertine_int=\count293
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'LinuxLibertine(0)' created for font 'Linux Libertine' with
+. options [].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"Linux Libertine/ICU:script=latn;language=DFLT;"
+. 
+. * 'small caps' with NFSS spec.:
+. <->"Linux Libertine/ICU:script=latn;language=DFLT;+smcp;"
+. 
+. * 'bold' with NFSS spec.:
+. <->"Linux Libertine/B/ICU:script=latn;language=DFLT;"
+. 
+. * 'bold small caps' with NFSS spec.:
+. <->"Linux Libertine/B/ICU:script=latn;language=DFLT;+smcp;"
+. 
+. * 'italic' with NFSS spec.:
+. <->"Linux Libertine/I/ICU:script=latn;language=DFLT;"
+. 
+. * 'italic small caps' with NFSS spec.:
+. <->"Linux Libertine/I/ICU:script=latn;language=DFLT;+smcp;"
+. 
+. * 'bold italic' with NFSS spec.:
+. <->"Linux Libertine/BI/ICU:script=latn;language=DFLT;"
+.................................................
+\g_fontspec_family_Linux Biolinum_int=\count294
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'LinuxBiolinum(0)' created for font 'Linux Biolinum' with
+. options [].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"Linux Biolinum/ICU:script=latn;language=DFLT;"
+. 
+. * 'small caps' with NFSS spec.:
+. <->"Linux Biolinum/ICU:script=latn;language=DFLT;+smcp;"
+. 
+. * 'bold' with NFSS spec.:
+. <->"Linux Biolinum/B/ICU:script=latn;language=DFLT;"
+. 
+. * 'bold small caps' with NFSS spec.:
+. <->"Linux Biolinum/B/ICU:script=latn;language=DFLT;+smcp;"
+. 
+. * 'italic' with NFSS spec.:
+. <->"Linux Biolinum/I/ICU:script=latn;language=DFLT;"
+. 
+. * 'italic small caps' with NFSS spec.:
+. <->"Linux Biolinum/I/ICU:script=latn;language=DFLT;+smcp;"
+. 
+. * 'bold italic' with NFSS spec.:
+. <->"Linux Biolinum/BI/ICU:script=latn;language=DFLT;"
+. 
+. * 'bold italic small caps' with NFSS spec.:
+. <->"Linux Biolinum/BI/ICU:script=latn;language=DFLT;+smcp;"
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \R with arg. spec. '' on line 30.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \Q with arg. spec. '' on line 31.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \N with arg. spec. '' on line 32.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \C with arg. spec. '' on line 33.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \Z with arg. spec. '' on line 34.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \A with arg. spec. '' on line 35.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \K with arg. spec. '' on line 36.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \p with arg. spec. '' on line 37.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \h with arg. spec. '' on line 38.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \F with arg. spec. '' on line 39.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \D with arg. spec. '' on line 40.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \lie with arg. spec. '' on line 41.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \jo with arg. spec. '' on line 42.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \hol with arg. spec. '' on line 43.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \mer with arg. spec. '' on line 44.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \diff with arg. spec. '' on line 45.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \runge with arg. spec. '' on line 46.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \fu with arg. spec. '' on line 47.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \dist with arg. spec. '' on line 48.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \Supp with arg. spec. '' on line 49.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \im with arg. spec. '' on line 50.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \sm with arg. spec. '' on line 51.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \Reg with arg. spec. '' on line 52.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \be with arg. spec. '' on line 53.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \pe with arg. spec. '' on line 54.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \res with arg. spec. '' on line 55.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \S with arg. spec. '' on line 57.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \P with arg. spec. '' on line 59.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \Ra with arg. spec. '' on line 64.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \La with arg. spec. '' on line 65.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \LRa with arg. spec. '' on line 66.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \ra with arg. spec. '' on line 67.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \la with arg. spec. '' on line 68.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \tang with arg. spec. ' O{p} O{M}' on line 70.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \cotang with arg. spec. ' O{p} O{M}' on line 71.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \del with arg. spec. ' O{i} O{x} O{} ' on line 72.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \delat with arg. spec. ' O{p} O{i} O{x} O{} ' on
-. line 66.
+. line 73.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \christ with arg. spec. 'O{i} O{j} O{k} ' on line
-. 67.
+. 74.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \quot with arg. spec. 'm m' on line 69.
+. Defining document command \quot with arg. spec. 'm m' on line 76.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \epsilon with arg. spec. '' on line 73.
+. Defining document command \epsilon with arg. spec. '' on line 80.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \phi with arg. spec. '' on line 75.
+. Defining document command \phi with arg. spec. '' on line 82.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \d with arg. spec. ' O{} ' on line 78.
+. Defining document command \d with arg. spec. ' O{} ' on line 85.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \arsinh with arg. spec. '' on line 79.
+. Defining document command \arsinh with arg. spec. '' on line 86.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \id with arg. spec. '' on line 80.
+. Defining document command \id with arg. spec. '' on line 87.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \supp with arg. spec. '' on line 81.
+. Defining document command \supp with arg. spec. '' on line 88.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \rank with arg. spec. '' on line 82.
+. Defining document command \rank with arg. spec. '' on line 89.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \tr with arg. spec. '' on line 83.
+. Defining document command \tr with arg. spec. '' on line 90.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \diam with arg. spec. '' on line 84.
+. Defining document command \diam with arg. spec. '' on line 91.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \ric with arg. spec. '' on line 85.
+. Defining document command \ric with arg. spec. '' on line 92.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \scal with arg. spec. '' on line 86.
+. Defining document command \scal with arg. spec. '' on line 93.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \g with arg. spec. 'm m' on line 87.
+. Defining document command \g with arg. spec. 'm m' on line 94.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \ord with arg. spec. '' on line 88.
+. Defining document command \ord with arg. spec. '' on line 95.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \init with arg. spec. 'm' on line 90.
+. Defining document command \Re with arg. spec. '' on line 97.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \Im with arg. spec. '' on line 99.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \Div with arg. spec. '' on line 100.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \Aut with arg. spec. '' on line 101.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \Deck with arg. spec. '' on line 102.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \init with arg. spec. 'm' on line 105.
 .................................................
 
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshado
@@ -1113,7 +1404,7 @@ Package pgf Warning: Your graphic driver pgfsys-xetex.def does not support fadi
 ngs. This warning is given only once on input line 31.
 
 )))
-\c@thm=\count286
+\c@thm=\count295
 )
 No file _region_.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -1132,23 +1423,32 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 7.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 7.
+(/usr/share/texmf/tex/latex/tipa/t3cmr.fd
+File: t3cmr.fd 2001/12/31 TIPA font definitions
+)
+LaTeX Font Info:    ... okay on input line 7.
+
 (/usr/share/texmf/tex/latex/preview/preview.sty
 Package: preview 2010/02/14 11.86 (AUCTeX/preview-latex)
 
 (/usr/share/texmf/tex/latex/preview/prtightpage.def
-\PreviewBorder=\dimen260
+\PreviewBorder=\dimen263
 )
 (/usr/share/texmf/tex/latex/preview/prauctex.def
 No auxiliary output files.
 
 
-\hbadness=\count287
-\hfuzz=\dimen261
+\hbadness=\count296
+\hfuzz=\dimen264
 (/usr/share/texmf/tex/latex/preview/prauctex.cfg))
 (/usr/share/texmf/tex/latex/preview/prfootnotes.def)
-\pr@snippet=\count288
+\pr@snippet=\count297
 \pr@box=\box48
-\pr@output=\toks36
+\pr@output=\toks40
 
 Preview: Fontsize 10.95pt
 Preview: PDFoutput 1
@@ -1161,7 +1461,7 @@ Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count289
+\c@section@level=\count298
 )
 LaTeX Info: Redefining \ref on input line 7.
 LaTeX Info: Redefining \pageref on input line 7.
@@ -1170,12 +1470,86 @@ LaTeX Info: Redefining \nameref on input line 7.
 
 Package hyperref Warning: Rerun to get /PageLabels entry.
 
-ABD: EveryShipout initializing macros  !name(content/Runge.tex) !offset(-9) 
+ABD: EveryShipout initializing macros
+.................................................
+. fontspec info: "setup-math"
+. 
+. Adjusting the maths setup (use [no-math] to avoid this).
+.................................................
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 7.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 7.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 7.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 7.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 7.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 7.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 7.
+LaTeX Font Info:    Redeclaring math accent \check on input line 7.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 7.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 7.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 7.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 7.
+LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
+(Font)              `operators' in the math version `normal' on input line 7.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> EU1/LinuxLibertine(0)/m/n on input line
+ 7.
+LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 7.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> EU1/LinuxLibertine(0)/m/n on input lin
+e 7.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  EU1/LinuxLibertine(0)/m/n --> EU1/LinuxLibertine(0)/m/n
+ on input line 7.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  EU1/LinuxLibertine(0)/m/n --> EU1/LinuxLibertine(0)/m/n
+ on input line 7.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> EU1/LinuxLibertine(0)/m/it on input li
+ne 7.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> EU1/LinuxLibertine(0)/bx/n on input li
+ne 7.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> EU1/LinuxBiolinum(0)/m/n on input line
+ 7.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 7.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  EU1/LinuxLibertine(0)/m/n --> EU1/LinuxLibertine(0)/bx/
+n on input line 7.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  EU1/LinuxLibertine(0)/m/n --> EU1/LinuxLibertine(0)/bx/
+n on input line 7.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> EU1/LinuxLibertine(0)/bx/it on input 
+line 7.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> EU1/LinuxBiolinum(0)/bx/n on input li
+ne 7.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 7.
+
+ !name(content/Weierstrass.tex) !offset(-9) 
 ! Preview: Snippet 1 started.
 <-><->
       
 l.11 \section
-             {Der Rungesche Approximationssatz}
+             {Der Weierstrasssche Produktsatz}
 Not a real error.
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
@@ -1183,11 +1557,11 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
 )
 Preview: Tightpage -32891 -32891 32891 32891
-! Preview: Snippet 1 ended.(655359+183500x27410796).
+! Preview: Snippet 1 ended.(658944+9215x27410796).
 <-><->
       
-l.11 \section{Der Rungesche Approximationssatz}
-                                               
+l.11 \section{Der Weierstrasssche Produktsatz}
+                                              
 Not a real error.
 
 [1
@@ -1196,15 +1570,15 @@ Not a real error.
 ! Preview: Snippet 2 started.
 <-><->
       
-l.17   Sei $
-            X$ eine Riemannsche Fläche, $Y \subset X$ offen. \\
+l.15   Sei $
+            X$ eine Riemannsche Fläche. Ein \init{Divisor} ist eine
 Not a real error.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+LaTeX Font Info:    Try loading font information for U+msa on input line 15.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -1212,3199 +1586,2276 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ! Preview: Snippet 2 ended.(490372+0x650840).
 <-><->
       
-l.17   Sei $X$
-               eine Riemannsche Fläche, $Y \subset X$ offen. \\
+l.15   Sei $X$
+               eine Riemannsche Fläche. Ein \init{Divisor} ist eine
 Not a real error.
 
 [2]
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 3 started.
 <-><->
       
-l.17   Sei $X$ eine Riemannsche Fläche, $
-                                          Y \subset X$ offen. \\
+l.16   Abbildung $
+                  D: X \ra \Z$, so dass für jede kompakte Teilmenge $K
 Not a real error.
 
-! Preview: Snippet 3 ended.(490372+28057x2183749).
+! Preview: Snippet 3 ended.(494359+0x3457617).
 <-><->
       
-l.17 ...X$ eine Riemannsche Fläche, $Y \subset X$
-                                                   offen. \\
+l.16   Abbildung $D: X \ra \Z$
+                              , so dass für jede kompakte Teilmenge $K
 Not a real error.
 
 [3]
 ! Preview: Snippet 4 started.
 <-><->
       
-l.18   Dann besitzen $
-                      \diff(Y)$ und $\diff^{0,1}(Y)$ Struktur eines Fr´eche...
-
+l.16 ...Z$, so dass für jede kompakte Teilmenge $
+                                                  K
 Not a real error.
 
-! Preview: Snippet 4 ended.(538214+179404x1577169).
+! Preview: Snippet 4 ended.(490372+28057x2268467).
 <-><->
       
-l.18   Dann besitzen $\diff(Y)$
-                                und $\diff^{0,1}(Y)$ Struktur eines Fr´eche...
-
+l.17   \subset X$
+                  gilt: $D(x) = 0$ für fast alle $x \in K$. \\
 Not a real error.
 
 [4]
 ! Preview: Snippet 5 started.
 <-><->
       
-l.18   Dann besitzen $\diff(Y)$ und $
-                                     \diff^{0,1}(Y)$ Struktur eines Fr´eche...
-
+l.17   \subset X$ gilt: $
+                         D(x) = 0$ für fast alle $x \in K$. \\
 Not a real error.
 
-! Preview: Snippet 5 ended.(598293+179404x2321741).
+! Preview: Snippet 5 ended.(538214+179404x2897982).
 <-><->
       
-l.18 ...n besitzen $\diff(Y)$ und $\diff^{0,1}(Y)$
-                                                   Struktur eines Fr´echet-...
-
+l.17   \subset X$ gilt: $D(x) = 0$
+                                   für fast alle $x \in K$. \\
 Not a real error.
 
 [5]
-Missing character: There is no ´ in font cmti10!
-
 ! Preview: Snippet 6 started.
 <-><->
       
-l.24   Sei dazu $
-                 K_j \subset Y$ kompakt, $j \in \N$, $\bigcup_{j \in \N}
+l.17 ...ubset X$ gilt: $D(x) = 0$ für fast alle $
+                                                  x \in K$. \\
 Not a real error.
 
-! Preview: Snippet 6 ended.(490372+209587x2430653).
+! Preview: Snippet 6 ended.(490372+28057x1948030).
 <-><->
       
-l.24   Sei dazu $K_j \subset Y$
-                                kompakt, $j \in \N$, $\bigcup_{j \in \N}
+l.17 ... gilt: $D(x) = 0$ für fast alle $x \in K$
+                                                  . \\
 Not a real error.
 
 [6]
 ! Preview: Snippet 7 started.
 <-><->
       
-l.24   Sei dazu $K_j \subset Y$ kompakt, $
-                                          j \in \N$, $\bigcup_{j \in \N}
+l.18   Wir bezeichnen mit $
+                           Div(X)$ die Menge aller Divisoren. \\
 Not a real error.
 
-! Preview: Snippet 7 ended.(494359+139537x1731963).
+! Preview: Snippet 7 ended.(538214+179404x2443876).
 <-><->
       
-l.24 ...i dazu $K_j \subset Y$ kompakt, $j \in \N$
-                                                  , $\bigcup_{j \in \N}
+l.18   Wir bezeichnen mit $Div(X)$
+                                   die Menge aller Divisoren. \\
 Not a real error.
 
 [7]
 ! Preview: Snippet 8 started.
 <-><->
       
-l.24 ...azu $K_j \subset Y$ kompakt, $j \in \N$, $
-                                                  \bigcup_{j \in \N}
+l.19   Für eine Funktion $
+                           f \in \mer(X)^\ast$ definieren wir den zu $f$
 Not a real error.
 
-! Preview: Snippet 8 ended.(679744+314123x4186566).
+! Preview: Snippet 8 ended.(538214+179404x3687742).
 <-><->
       
-l.25   \mathring{K_j} = Y$
-                           und $K_j \subset U_j$, wobei $(U_j, z_j)$ Karten
+l.19   Für eine Funktion $f \in \mer(X)^\ast$
+                                               definieren wir den zu $f$
 Not a real error.
 
 [8]
 ! Preview: Snippet 9 started.
 <-><->
       
-l.25   \mathring{K_j} = Y$ und $
-                                K_j \subset U_j$, wobei $(U_j, z_j)$ Karten
+l.19 ... \in \mer(X)^\ast$ definieren wir den zu $
+                                                  f$
 Not a real error.
 
-! Preview: Snippet 9 ended.(490372+209587x2632804).
+! Preview: Snippet 9 ended.(498346+139537x428580).
 <-><->
       
-l.25   \mathring{K_j} = Y$ und $K_j \subset U_j$
-                                                , wobei $(U_j, z_j)$ Karten
+l.19 ...in \mer(X)^\ast$ definieren wir den zu $f$
+                                                  
 Not a real error.
 
 [9]
 ! Preview: Snippet 10 started.
 <-><->
       
-l.25 ...g{K_j} = Y$ und $K_j \subset U_j$, wobei $
-                                                  (U_j, z_j)$ Karten
+l.20   gehörigen Divisor $
+                           (f): X \ra \Z, \quad x \mapsto \ord_x(f)$. Da die
 Not a real error.
 
-! Preview: Snippet 10 ended.(538214+209587x2277324).
+! Preview: Snippet 10 ended.(538214+179404x8717627).
 <-><->
       
-l.25 ... und $K_j \subset U_j$, wobei $(U_j, z_j)$
-                                                   Karten
+l.20 ...$(f): X \ra \Z, \quad x \mapsto \ord_x(f)$
+                                                  . Da die
 Not a real error.
 
 [10]
-Missing character: There is no ü in font cmti10!
-
 ! Preview: Snippet 11 started.
 <-><->
       
-l.27   Für jedes $
-                   \nu = (\nu_1, \nu_2)^T \in \N^2$ eine Halbnorm
+l.21 ...d Polstellen eine diskrete Teilmenge von $
+                                                  X$ bilden, ist
 Not a real error.
 
-! Preview: Snippet 11 ended.(618681+179404x5706785).
+! Preview: Snippet 11 ended.(490372+0x650840).
 <-><->
       
-l.27 ...�r jedes $\nu = (\nu_1, \nu_2)^T \in \N^2$
-                                                   eine Halbnorm
+l.21 ...Polstellen eine diskrete Teilmenge von $X$
+                                                   bilden, ist
 Not a real error.
 
 [11]
 ! Preview: Snippet 12 started.
 <-><->
       
-l.28   \[
-         
+l.26   Sei $
+            X$ eine Riemannsche Fläche und $D \in Div(X)$. Dann heißt $f
 Not a real error.
 
-! Preview: Snippet 12 ended.(817566+0x27410796).
+! Preview: Snippet 12 ended.(490372+0x650840).
 <-><->
       
-l.30   \]
-         
+l.26   Sei $X$
+               eine Riemannsche Fläche und $D \in Div(X)$. Dann heißt $f
 Not a real error.
 
 [12]
 ! Preview: Snippet 13 started.
 <-><->
       
-l.31   wobei $
-              D^\nu_j := \left ( \frac{\partial}{\partial x_j} \right
+l.26   Sei $X$ eine Riemannsche Fläche und $
+                                             D \in Div(X)$. Dann heißt $f
 Not a real error.
 
-! Preview: Snippet 13 ended.(843471+466460x7170110).
+! Preview: Snippet 13 ended.(538214+179404x3935023).
 <-><->
       
-l.32 ...{\partial}{\partial y_j} \right )^{\nu_2}$
-                                                  
+l.26 ...ine Riemannsche Fläche und $D \in Div(X)$
+                                                  . Dann heißt $f
 Not a real error.
 
 [13]
 ! Preview: Snippet 14 started.
 <-><->
       
-l.33   mit $
-            z_j = x_j + iy_j$. \\
+l.26 ... Fläche und $D \in Div(X)$. Dann heißt $
+                                                  f
 Not a real error.
 
-! Preview: Snippet 14 ended.(473287+209587x4041635).
+! Preview: Snippet 14 ended.(538214+179404x3376442).
 <-><->
       
-l.33   mit $z_j = x_j + iy_j$
-                             . \\
+l.27   \in \mer(X)$
+                    eine \emph{Lösung} von $D$, falls $(f) = D$. \\
 Not a real error.
 
 [14]
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 15 started.
 <-><->
       
-l.35 ...�hlbare Familie von Halbnormen. Da falls $
-                                                  0 \neq f
+l.27   \in \mer(X)$ eine \emph{Lösung} von $
+                                             D$, falls $(f) = D$. \\
 Not a real error.
 
-! Preview: Snippet 15 ended.(538214+179404x4198463).
+! Preview: Snippet 15 ended.(490372+0x614063).
 <-><->
       
-l.36   \in \diff(Y)$
-                     gilt, immer eine der Halbnormen von 0 verschieden ist,
+l.27   \in \mer(X)$ eine \emph{Lösung} von $D$
+                                               , falls $(f) = D$. \\
 Not a real error.
 
 [15]
-Missing character: There is no ´ in font cmti10!
-
 ! Preview: Snippet 16 started.
 <-><->
       
-l.38   $
-        \diff(Y)$. \\
+l.27 ...r(X)$ eine \emph{Lösung} von $D$, falls $
+                                                  (f) = D$. \\
 Not a real error.
 
-! Preview: Snippet 16 ended.(538214+179404x1577169).
+! Preview: Snippet 16 ended.(538214+179404x2557613).
 <-><->
       
-l.38   $\diff(Y)$
-                 . \\
+l.27 ...ne \emph{Lösung} von $D$, falls $(f) = D$
+                                                  . \\
 Not a real error.
 
 [16]
 ! Preview: Snippet 17 started.
 <-><->
       
-l.40   Mengen der Form $
-                        U(p_{j\nu}, \epsilon) := \{f \in \diff(Y) |
+l.28   Setzen wir $
+                   X_D := \{x \in X: D(x) \geq 0 \}$, so heißt $f \in
 Not a real error.
 
-! Preview: Snippet 17 ended.(538214+209587x13631714).
+! Preview: Snippet 17 ended.(538214+179404x8407613).
 <-><->
       
-l.41 ...\nu}(f) < \epsilon \}, \quad \epsilon > 0$
-                                                  . \\
+l.28 ...zen wir $X_D := \{x \in X: D(x) \geq 0 \}$
+                                                  , so heißt $f \in
 Not a real error.
 
 [17]
 ! Preview: Snippet 18 started.
 <-><->
       
-l.43   $
-        C^\infty$-Konvergenz auf jedem der $K_j$. \\
+l.28 ...:= \{x \in X: D(x) \geq 0 \}$, so heißt $
+                                                  f \in
 Not a real error.
 
-! Preview: Snippet 18 ended.(490372+0x1154058).
+! Preview: Snippet 18 ended.(538214+179404x3406524).
 <-><->
       
-l.43   $C^\infty$
-                 -Konvergenz auf jedem der $K_j$. \\
+l.29   \diff(X_D)$
+                   \emph{schwache Lösung} von $D$, falls für alle $a \in X$
 Not a real error.
 
 [18]
 ! Preview: Snippet 19 started.
 <-><->
       
-l.43   $C^\infty$-Konvergenz auf jedem der $
-                                            K_j$. \\
+l.29   \diff(X_D)$ \emph{schwache Lösung} von $
+                                                D$, falls für alle $a \in X$
 Not a real error.
 
-! Preview: Snippet 19 ended.(490372+209587x897744).
+! Preview: Snippet 19 ended.(490372+0x614063).
 <-><->
       
-l.43   $C^\infty$-Konvergenz auf jedem der $K_j$
-                                                . \\
+l.29   \diff(X_D)$ \emph{schwache Lösung} von $D$
+                                                  , falls für alle $a \in X$
 Not a real error.
 
 [19]
-Missing character: There is no ä in font cmti10!
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 20 started.
 <-><->
       
-l.45 ...logie ist unabhängig von den gewählten $
-                                                  K_j$.\\
+l.29 ...hwache Lösung} von $D$, falls für alle $
+                                                  a \in X$
 Not a real error.
 
-! Preview: Snippet 20 ended.(490372+209587x897744).
+! Preview: Snippet 20 ended.(490372+28057x1907250).
 <-><->
       
-l.45 ...e ist unabhängig von den gewählten $K_j$
-                                                  .\\
-Not a real error.
-
-[20]
-Missing character: There is no ö in font cmti10!
-Missing character: There is no ü in font cmti10!
-
-! Preview: Snippet 21 started.
-<-><->
-      
-l.47 ...og kann die obige Konstruktion auch für $
-                                                  \diff^{0,1}(Y)$
-Not a real error.
-
-! Preview: Snippet 21 ended.(598293+179404x2321741).
-<-><->
-      
-l.47 ...ge Konstruktion auch für $\diff^{0,1}(Y)$
+l.29 ...ösung} von $D$, falls für alle $a \in X$
                                                   
 Not a real error.
 
-[21]
-Missing character: There is no ü in font cmti10!
+[20]
+! Preview: Snippet 21 started.
+<-><->
+      
+l.30   eine Koordinatenumgebung $
+                                 (U,z)$ mit $z(a) = 0$ und ein $\psi \in
+Not a real error.
 
+! Preview: Snippet 21 ended.(538214+179404x1730856).
+<-><->
+      
+l.30   eine Koordinatenumgebung $(U,z)$
+                                        mit $z(a) = 0$ und ein $\psi \in
+Not a real error.
+
+[21]
 ! Preview: Snippet 22 started.
 <-><->
       
-l.53   Mit der obigen Topologie ist $
-                                     \hol(Y) \subset \diff(Y)$ ein
+l.30   eine Koordinatenumgebung $(U,z)$ mit $
+                                             z(a) = 0$ und ein $\psi \in
 Not a real error.
 
-! Preview: Snippet 22 ended.(538214+179404x4259468).
+! Preview: Snippet 22 ended.(538214+179404x2618395).
 <-><->
       
-l.53 ...n Topologie ist $\hol(Y) \subset \diff(Y)$
-                                                   ein
+l.30 ...Koordinatenumgebung $(U,z)$ mit $z(a) = 0$
+                                                   und ein $\psi \in
 Not a real error.
 
 [22]
-Missing character: There is no ü in font cmti10!
-
 ! Preview: Snippet 23 started.
 <-><->
       
-l.60   Sei $
-            Y \subset X$ offen, $X$ eine Riemannsche Fläche. Sei $T \in
+l.30 ...numgebung $(U,z)$ mit $z(a) = 0$ und ein $
+                                                  \psi \in
 Not a real error.
 
-! Preview: Snippet 23 ended.(490372+28057x2183749).
+! Preview: Snippet 23 ended.(538214+179404x2939575).
 <-><->
       
-l.60   Sei $Y \subset X$
-                         offen, $X$ eine Riemannsche Fläche. Sei $T \in
+l.31   \diff(U)$
+                 mit $\psi(a) \neq 0$ existieren, so dass $f = \psi z^k$
 Not a real error.
 
 [23]
 ! Preview: Snippet 24 started.
 <-><->
       
-l.60   Sei $Y \subset X$ offen, $
-                                 X$ eine Riemannsche Fläche. Sei $T \in
+l.31   \diff(U)$ mit $
+                      \psi(a) \neq 0$ existieren, so dass $f = \psi z^k$
 Not a real error.
 
-! Preview: Snippet 24 ended.(490372+0x650840).
+! Preview: Snippet 24 ended.(538214+179404x2746304).
 <-><->
       
-l.60   Sei $Y \subset X$ offen, $X$
-                                    eine Riemannsche Fläche. Sei $T \in
+l.31   \diff(U)$ mit $\psi(a) \neq 0$
+                                      existieren, so dass $f = \psi z^k$
 Not a real error.
 
 [24]
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 25 started.
 <-><->
       
-l.60 ...offen, $X$ eine Riemannsche Fläche. Sei $
-                                                  T \in
+l.31 ...mit $\psi(a) \neq 0$ existieren, so dass $
+                                                  f = \psi z^k$
 Not a real error.
 
-! Preview: Snippet 25 ended.(551690+179404x3157147).
+! Preview: Snippet 25 ended.(624507+139537x2580673).
 <-><->
       
-l.61   \diff(Y)'$
-                 . \\
+l.31 ...\neq 0$ existieren, so dass $f = \psi z^k$
+                                                  
 Not a real error.
 
 [25]
 ! Preview: Snippet 26 started.
 <-><->
       
-l.62   Dann hat $
-                 T$ kompakten Träger, d.h. es existiert ein $K \subset Y$
+l.32   auf $
+             U \cap X_D$ gilt, wobei $k = D(a)$.
 Not a real error.
 
-! Preview: Snippet 26 ended.(490372+0x519029).
+! Preview: Snippet 26 ended.(490372+111084x2465343).
 <-><->
       
-l.62   Dann hat $T$
-                    kompakten Träger, d.h. es existiert ein $K \subset Y$
+l.32   auf $ U \cap X_D$
+                         gilt, wobei $k = D(a)$.
 Not a real error.
 
 [26]
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 27 started.
 <-><->
       
-l.62 ...kompakten Träger, d.h. es existiert ein $
-                                                  K \subset Y$
+l.32   auf $ U \cap X_D$ gilt, wobei $
+                                      k = D(a)$.
 Not a real error.
 
-! Preview: Snippet 27 ended.(490372+28057x2193716).
+! Preview: Snippet 27 ended.(538214+179404x2904545).
 <-><->
       
-l.62 ...äger, d.h. es existiert ein $K \subset Y$
-                                                  
+l.32   auf $ U \cap X_D$ gilt, wobei $k = D(a)$
+                                               .
 Not a real error.
 
 [27]
 ! Preview: Snippet 28 started.
 <-><->
       
-l.64   \[
-         
+l.37   Jeder Divisor $
+                      D$ auf einer nicht kompakten Riemannschen Fläche $X$ ...
+
 Not a real error.
 
-! Preview: Snippet 28 ended.(717618+0x27410796).
+! Preview: Snippet 28 ended.(490372+0x614063).
 <-><->
       
-l.67   \]
-         
+l.37   Jeder Divisor $D$
+                         auf einer nicht kompakten Riemannschen Fläche $X$ ...
+
 Not a real error.
 
 [28]
-Missing character: There is no ü in font cmti10!
-
 ! Preview: Snippet 29 started.
 <-><->
       
-l.68   Das gleiche Resultat gilt für $
-                                       \diff^{0,1}(Y)$.
+l.37 ...ner nicht kompakten Riemannschen Fläche $
+                                                  X$ hat eine
 Not a real error.
 
-! Preview: Snippet 29 ended.(598293+179404x2321741).
+! Preview: Snippet 29 ended.(490372+0x650840).
 <-><->
       
-l.68 ...leiche Resultat gilt für $\diff^{0,1}(Y)$
-                                                  .
+l.37 ...r nicht kompakten Riemannschen Fläche $X$
+                                                   hat eine
 Not a real error.
 
 [29]
 ! Preview: Snippet 30 started.
 <-><->
       
-l.72   Aus der Stetigkeit von $
-                               T$ folgt die Existenz einer offenen
+l.42   Wir wählen $
+                    K_1, K_2, \dots$ kompakte Runge-Teilmengen von $X$ mit
 Not a real error.
 
-! Preview: Snippet 30 ended.(490372+0x519029).
+! Preview: Snippet 30 ended.(490372+139537x3436256).
 <-><->
       
-l.72   Aus der Stetigkeit von $T$
-                                  folgt die Existenz einer offenen
+l.42   Wir wählen $K_1, K_2, \dots$
+                                     kompakte Runge-Teilmengen von $X$ mit
 Not a real error.
 
 [30]
 ! Preview: Snippet 31 started.
 <-><->
       
-l.73   Nullumgebung $
-                     U \subset \diff(Y)$, so dass
+l.42 ..._2, \dots$ kompakte Runge-Teilmengen von $
+                                                  X$ mit
 Not a real error.
 
-! Preview: Snippet 31 ended.(538214+179404x3102202).
+! Preview: Snippet 31 ended.(490372+0x650840).
 <-><->
       
-l.73   Nullumgebung $U \subset \diff(Y)$
-                                        , so dass
+l.42 ..., \dots$ kompakte Runge-Teilmengen von $X$
+                                                   mit
 Not a real error.
 
 [31]
 ! Preview: Snippet 32 started.
 <-><->
       
-l.74   \[
-         
+l.44   \item $
+              K_j \subset \mathring{K}_{j+1}$ $\forall j \geq 1$ und
 Not a real error.
 
-! Preview: Snippet 32 ended.(717618+0x27410796).
+! Preview: Snippet 32 ended.(679744+209587x3464112).
 <-><->
       
-l.76   \]
-         
+l.44   \item $K_j \subset \mathring{K}_{j+1}$
+                                              $\forall j \geq 1$ und
 Not a real error.
 
 [32]
 ! Preview: Snippet 33 started.
 <-><->
       
-l.77 ...tion der obigen Topologie finden wir ein $
-                                                  \epsilon > 0$
+l.44   \item $K_j \subset \mathring{K}_{j+1}$ $
+                                               \forall j \geq 1$ und
 Not a real error.
 
-! Preview: Snippet 33 ended.(462465+28057x1650268).
+! Preview: Snippet 33 ended.(498346+139537x2050906).
 <-><->
       
-l.77 ...en Topologie finden wir ein $\epsilon > 0$
-                                                  
+l.44 ...set \mathring{K}_{j+1}$ $\forall j \geq 1$
+                                                   und
 Not a real error.
 
 [33]
 ! Preview: Snippet 34 started.
 <-><->
       
-l.78   und endlich viele $
-                          j_1, \dots, j_n \in \N$ und $\nu_1, \dots \nu_n
+l.45   \item $
+              \bigcup_{j \in \N} K_j = X$
 Not a real error.
 
-! Preview: Snippet 34 ended.(494359+139537x4263173).
+! Preview: Snippet 34 ended.(538218+314123x4261317).
 <-><->
       
-l.78   und endlich viele $j_1, \dots, j_n \in \N$
-                                                  und $\nu_1, \dots \nu_n
+l.45   \item $\bigcup_{j \in \N} K_j = X$
+                                         
 Not a real error.
 
 [34]
+
+LaTeX Warning: Reference `cor:ausschöpfung-kompakt' on page 1 undefined on inp
+ut line 47.
+
 ! Preview: Snippet 35 started.
 <-><->
       
-l.78 ...dlich viele $j_1, \dots, j_n \in \N$ und $
-                                                  \nu_1, \dots \nu_n
+l.49   \item Behauptung: Sei $
+                              a_0 \in X \setminus K_j$ und $A_0 \in Div(X)$
 Not a real error.
 
-! Preview: Snippet 35 ended.(598293+139537x4373475).
+! Preview: Snippet 35 ended.(538214+209587x3794040).
 <-><->
       
-l.79   \in \N^2$
-                , so dass $U(p_{j_1\nu_1}, \epsilon) \cap \dots \cap
+l.49 ... Behauptung: Sei $a_0 \in X \setminus K_j$
+                                                   und $A_0 \in Div(X)$
 Not a real error.
 
 [35]
 ! Preview: Snippet 36 started.
 <-><->
       
-l.79   \in \N^2$, so dass $
-                           U(p_{j_1\nu_1}, \epsilon) \cap \dots \cap
+l.49 ...ptung: Sei $a_0 \in X \setminus K_j$ und $
+                                                  A_0 \in Div(X)$
 Not a real error.
 
-! Preview: Snippet 36 ended.(538214+209587x10519652).
+! Preview: Snippet 36 ended.(538214+179404x4170475).
 <-><->
       
-l.80   U(p_{j_n\nu_n}, \epsilon) \subset U$
-                                           . \\
+l.49 ... \in X \setminus K_j$ und $A_0 \in Div(X)$
+                                                  
 Not a real error.
 
 [36]
 ! Preview: Snippet 37 started.
 <-><->
       
-l.81   Sei nun  $
-                 K := K_{j_1} \cup \dots \cup K_{j_n}$. Wir behaupten, dass
+l.50     mit $
+              A_0(a_0) = 1$ und $A_0(x) = 0$, falls $x \neq a_0$. Dann
 Not a real error.
 
-! Preview: Snippet 37 ended.(490372+209587x6592419).
+! Preview: Snippet 37 ended.(538214+179404x3413921).
 <-><->
       
-l.81 ...un  $K := K_{j_1} \cup \dots \cup K_{j_n}$
-                                                  . Wir behaupten, dass
+l.50     mit $A_0(a_0) = 1$
+                            und $A_0(x) = 0$, falls $x \neq a_0$. Dann
 Not a real error.
 
 [37]
 ! Preview: Snippet 38 started.
 <-><->
       
-l.82   dies das gesuchte $
-                          K$ ist. \\
+l.50     mit $A_0(a_0) = 1$ und $
+                                 A_0(x) = 0$, falls $x \neq a_0$. Dann
 Not a real error.
 
-! Preview: Snippet 38 ended.(490372+0x660807).
+! Preview: Snippet 38 ended.(538214+179404x3133434).
 <-><->
       
-l.82   dies das gesuchte $K$
-                             ist. \\
+l.50     mit $A_0(a_0) = 1$ und $A_0(x) = 0$
+                                            , falls $x \neq a_0$. Dann
 Not a real error.
 
 [38]
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 39 started.
 <-><->
       
-l.83   Dazu wählen wir $
-                         f \in \diff(Y)$ mit $\Supp(f) \subset Y \setminus
+l.50 ...t $A_0(a_0) = 1$ und $A_0(x) = 0$, falls $
+                                                  x \neq a_0$. Dann
 Not a real error.
 
-! Preview: Snippet 39 ended.(538214+179404x2882833).
+! Preview: Snippet 39 ended.(498346+139535x2057585).
 <-><->
       
-l.83   Dazu wählen wir $f \in \diff(Y)$
-                                         mit $\Supp(f) \subset Y \setminus
+l.50 ... = 1$ und $A_0(x) = 0$, falls $x \neq a_0$
+                                                  . Dann
 Not a real error.
 
 [39]
 ! Preview: Snippet 40 started.
 <-><->
       
-l.83   Dazu wählen wir $f \in \diff(Y)$ mit $
-                                              \Supp(f) \subset Y \setminus
+l.51     existiert eine schwache Lösung $
+                                          \phi$ von $A_0$ mit $\phi |_{K_j}
 Not a real error.
 
-! Preview: Snippet 40 ended.(538214+179404x5452904).
+! Preview: Snippet 40 ended.(308974+139537x469442).
 <-><->
       
-l.84   K$
-         . Dann gilt für beliebige
+l.51     existiert eine schwache Lösung $\phi$
+                                                von $A_0$ mit $\phi |_{K_j}
 Not a real error.
 
 [40]
-Missing character: There is no ü in font cmti10!
-
 ! Preview: Snippet 41 started.
 <-><->
       
-l.85   $
-        \lambda > 0$:
+l.51 ...istiert eine schwache Lösung $\phi$ von $
+                                                  A_0$ mit $\phi |_{K_j}
 Not a real error.
 
-! Preview: Snippet 41 ended.(498346+28057x1734242).
+! Preview: Snippet 41 ended.(490372+107642x849515).
 <-><->
       
-l.85   $\lambda > 0$
-                    :
+l.51 ...ert eine schwache Lösung $\phi$ von $A_0$
+                                                   mit $\phi |_{K_j}
 Not a real error.
 
 [41]
 ! Preview: Snippet 42 started.
 <-><->
       
-l.86   \[
-         
+l.51 ...ne schwache Lösung $\phi$ von $A_0$ mit $
+                                                  \phi |_{K_j}
 Not a real error.
 
-! Preview: Snippet 42 ended.(747801+0x27410796).
+! Preview: Snippet 42 ended.(538214+267473x2743682).
 <-><->
       
-l.88   \]
-         
+l.52     = 1$
+             . \\
 Not a real error.
 
 [42]
 ! Preview: Snippet 43 started.
 <-><->
       
-l.89   Damit liegt $
-                    \lambda f \in U$ und es folgt:
+l.54     $
+          K_j$ ist eine Runge-Teilmenge, d.h. $K_j = \runge{K_j}$. Also
 Not a real error.
 
-! Preview: Snippet 43 ended.(498346+139537x2292489).
+! Preview: Snippet 43 ended.(490372+209587x897744).
 <-><->
       
-l.89   Damit liegt $\lambda f \in U$
-                                     und es folgt:
+l.54     $K_j$
+               ist eine Runge-Teilmenge, d.h. $K_j = \runge{K_j}$. Also
 Not a real error.
 
 [43]
 ! Preview: Snippet 44 started.
 <-><->
       
-l.90   \[
-         
+l.54     $K_j$ ist eine Runge-Teilmenge, d.h. $
+                                               K_j = \runge{K_j}$. Also
 Not a real error.
 
-! Preview: Snippet 44 ended.(1440190+0x27410796).
+LaTeX Font Info:    Try loading font information for U+euf on input line 54.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2009/06/22 v3.00 Euler Fraktur
+)
+! Preview: Snippet 44 ended.(496166+209587x3126370).
 <-><->
       
-l.92   \]
-         
+l.54 ... Runge-Teilmenge, d.h. $K_j = \runge{K_j}$
+                                                  . Also
 Not a real error.
 
 [44]
 ! Preview: Snippet 45 started.
 <-><->
       
-l.93   und damit $
-                  T[f] = 0$.
+l.55     liegt $
+                a_0$ in einer nicht relativ kompakten
 Not a real error.
 
-! Preview: Snippet 45 ended.(538214+179404x2661917).
+! Preview: Snippet 45 ended.(308974+107642x690626).
 <-><->
       
-l.93   und damit $T[f] = 0$
-                           .
+l.55     liegt $a_0$
+                     in einer nicht relativ kompakten
 Not a real error.
 
 [45]
 ! Preview: Snippet 46 started.
 <-><->
       
-l.98   Sei $
-            Z \subset X$ offen und $X$ eine Riemannsche Fläche. Sei $S \in
+l.56     Zusammenhangskomponente $
+                                  U \subset X \setminus K_j$ \\
 Not a real error.
 
-! Preview: Snippet 46 ended.(490372+28057x2148864).
+! Preview: Snippet 46 ended.(538214+209587x3751363).
 <-><->
       
-l.98   Sei $Z \subset X$
-                         offen und $X$ eine Riemannsche Fläche. Sei $S \in
+l.56 ...angskomponente $U \subset X \setminus K_j$
+                                                   \\
 Not a real error.
 
 [46]
 ! Preview: Snippet 47 started.
 <-><->
       
-l.98   Sei $Z \subset X$ offen und $
-                                    X$ eine Riemannsche Fläche. Sei $S \in
+l.57     Nun existiert ein $
+                            a_1 \in U \setminus K_{j+1}$ (ansonsten wäre
 Not a real error.
 
-! Preview: Snippet 47 ended.(490372+0x650840).
+! Preview: Snippet 47 ended.(538214+209587x4423217).
 <-><->
       
-l.98   Sei $Z \subset X$ offen und $X$
-                                       eine Riemannsche Fläche. Sei $S \in
+l.57 ...xistiert ein $a_1 \in U \setminus K_{j+1}$
+                                                   (ansonsten wäre
 Not a real error.
 
 [47]
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 48 started.
 <-><->
       
-l.98 ...en und $X$ eine Riemannsche Fläche. Sei $
-                                                  S \in
+l.58     $
+          K_{j+1}$ nicht kompakt) und eine Kurve $c_0: I \ra U$ mit $c_0(0)
 Not a real error.
 
-! Preview: Snippet 48 ended.(598293+179404x3938843).
+! Preview: Snippet 48 ended.(490372+209587x1609548).
 <-><->
       
-l.99   \diff^{0,1}(X)'$
-                        mit $S[\d[''g]] = 0$ für beliebige $g \in \diff(X)$
+l.58     $K_{j+1}$
+                   nicht kompakt) und eine Kurve $c_0: I \ra U$ mit $c_0(0)
 Not a real error.
 
 [48]
 ! Preview: Snippet 49 started.
 <-><->
       
-l.99   \diff^{0,1}(X)'$ mit $
-                             S[\d[''g]] = 0$ für beliebige $g \in \diff(X)$
+l.58     $K_{j+1}$ nicht kompakt) und eine Kurve $
+                                                  c_0: I \ra U$ mit $c_0(0)
 Not a real error.
 
-! Preview: Snippet 49 ended.(582087+179404x3416979).
+! Preview: Snippet 49 ended.(490372+107642x3276133).
 <-><->
       
-l.99   \diff^{0,1}(X)'$ mit $S[\d[''g]] = 0$
-                                             für beliebige $g \in \diff(X)$
+l.58 ...cht kompakt) und eine Kurve $c_0: I \ra U$
+                                                   mit $c_0(0)
 Not a real error.
 
 [49]
-Missing character: There is no ü in font cmti10!
-
 ! Preview: Snippet 50 started.
 <-><->
       
-l.99 ...X)'$ mit $S[\d[''g]] = 0$ für beliebige $
-                                                  g \in \diff(X)$
+l.58 ...mpakt) und eine Kurve $c_0: I \ra U$ mit $
+                                                  c_0(0)
 Not a real error.
 
-! Preview: Snippet 50 ended.(538214+179404x2897032).
+! Preview: Snippet 50 ended.(538214+179404x3186260).
 <-><->
       
-l.99 ...''g]] = 0$ für beliebige $g \in \diff(X)$
-                                                  
+l.59   =a_1$
+             und $c_0(1) = a_0$. \\
 Not a real error.
 
 [50]
 ! Preview: Snippet 51 started.
 <-><->
       
-l.100   mit $
-             \Supp(g) \Subset Z$. \\
+l.59   =a_1$ und $
+                  c_0(1) = a_0$. \\
 Not a real error.
 
-! Preview: Snippet 51 ended.(538214+179404x4018914).
+! Preview: Snippet 51 ended.(538214+179404x3186260).
 <-><->
       
-l.100   mit $\Supp(g) \Subset Z$
-                                . \\
+l.59   =a_1$ und $c_0(1) = a_0$
+                               . \\
 Not a real error.
 
 [51]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 60.
+
 ! Preview: Snippet 52 started.
 <-><->
       
-l.101   Dann existiert ein $
-                            \sigma \in \Omega(X)$ mit $S[\omega] = \iint_Z
+l.61 ...h (20.5) existiert eine schwache Lösung $
+                                                  \phi_0$ des Divisors
 Not a real error.
 
-! Preview: Snippet 52 ended.(538214+179404x3040159).
+! Preview: Snippet 52 ended.(308974+139537x780742).
 <-><->
       
-l.101   Dann existiert ein $\sigma \in \Omega(X)$
-                                                  mit $S[\omega] = \iint_Z
+l.61 ...) existiert eine schwache Lösung $\phi_0$
+                                                   des Divisors
 Not a real error.
 
 [52]
 ! Preview: Snippet 53 started.
 <-><->
       
-l.101 ...xistiert ein $\sigma \in \Omega(X)$ mit $
-                                                  S[\omega] = \iint_Z
+l.62   $
+        \partial c_0$ mit $\phi_0|_{K_j} = 1$. \\
 Not a real error.
 
-! Preview: Snippet 53 ended.(578085+252045x5279495).
+! Preview: Snippet 53 ended.(498346+107642x1042707).
 <-><->
       
-l.102   \sigma \wedge \omega$
-                              für jedes $\omega \in \diff^{0,1}(X)$ mit
+l.62   $\partial c_0$
+                      mit $\phi_0|_{K_j} = 1$. \\
 Not a real error.
 
 [53]
-Missing character: There is no ü in font cmti10!
-
 ! Preview: Snippet 54 started.
 <-><->
       
-l.102   \sigma \wedge \omega$ für jedes $
-                                          \omega \in \diff^{0,1}(X)$ mit
+l.62   $\partial c_0$ mit $
+                           \phi_0|_{K_j} = 1$. \\
 Not a real error.
 
-! Preview: Snippet 54 ended.(598293+179404x3746008).
+! Preview: Snippet 54 ended.(538214+267473x3054982).
 <-><->
       
-l.102 ...a$ für jedes $\omega \in \diff^{0,1}(X)$
-                                                   mit
+l.62   $\partial c_0$ mit $\phi_0|_{K_j} = 1$
+                                             . \\
 Not a real error.
 
 [54]
 ! Preview: Snippet 55 started.
 <-><->
       
-l.103   $
-         \Supp(\omega) \Subset Z$.
+l.63 ...r nun in der Lage eine Folge von Punkten $
+                                                  a_\nu \in
 Not a real error.
 
-! Preview: Snippet 55 ended.(538214+179404x4123318).
+! Preview: Snippet 55 ended.(538214+209587x4565008).
 <-><->
       
-l.103   $\Supp(\omega) \Subset Z$
-                                 .
+l.64   X \setminus K_{j+ \nu}$
+                              , $\nu \in \N$, und Kurven in $X \setminus
 Not a real error.
 
 [55]
 ! Preview: Snippet 56 started.
 <-><->
       
-l.107   Sei $
-             z: U \ra V \subset \C$ eine Karte von $X$ mit $U \subset
+l.64   X \setminus K_{j+ \nu}$, $
+                                 \nu \in \N$, und Kurven in $X \setminus
 Not a real error.
 
-! Preview: Snippet 56 ended.(494359+28057x4700985).
+! Preview: Snippet 56 ended.(494359+28057x1795538).
 <-><->
       
-l.107   Sei $z: U \ra V \subset \C$
-                                    eine Karte von $X$ mit $U \subset
+l.64   X \setminus K_{j+ \nu}$, $\nu \in \N$
+                                            , und Kurven in $X \setminus
 Not a real error.
 
 [56]
 ! Preview: Snippet 57 started.
 <-><->
       
-l.107 ... $z: U \ra V \subset \C$ eine Karte von $
-                                                  X$ mit $U \subset
+l.64 ...K_{j+ \nu}$, $\nu \in \N$, und Kurven in $
+                                                  X \setminus
 Not a real error.
 
-! Preview: Snippet 57 ended.(490372+0x650840).
+! Preview: Snippet 57 ended.(538214+209587x2967716).
 <-><->
       
-l.107 ...z: U \ra V \subset \C$ eine Karte von $X$
-                                                   mit $U \subset
+l.65   K_{j+\nu}$
+                  von $a_{\nu+1}$ nach $a_\nu$ konstruieren. Analog zum
 Not a real error.
 
 [57]
 ! Preview: Snippet 58 started.
 <-><->
       
-l.107 ...ra V \subset \C$ eine Karte von $X$ mit $
-                                                  U \subset
+l.65   K_{j+\nu}$ von $
+                       a_{\nu+1}$ nach $a_\nu$ konstruieren. Analog zum
 Not a real error.
 
-! Preview: Snippet 58 ended.(490372+28057x2066237).
+! Preview: Snippet 58 ended.(308974+162258x1432012).
 <-><->
       
-l.108   Z$
-          . Wir identifizieren $U$ mit $V$ und können deshalb vom Raum der
+l.65   K_{j+\nu}$ von $a_{\nu+1}$
+                                  nach $a_\nu$ konstruieren. Analog zum
 Not a real error.
 
 [58]
 ! Preview: Snippet 59 started.
 <-><->
       
-l.108   Z$. Wir identifizieren $
-                                U$ mit $V$ und können deshalb vom Raum der
+l.65   K_{j+\nu}$ von $a_{\nu+1}$ nach $
+                                        a_\nu$ konstruieren. Analog zum
 Not a real error.
 
-! Preview: Snippet 59 ended.(490372+0x568213).
+! Preview: Snippet 59 ended.(308974+107642x720208).
 <-><->
       
-l.108   Z$. Wir identifizieren $U$
-                                   mit $V$ und können deshalb vom Raum der
+l.65   K_{j+\nu}$ von $a_{\nu+1}$ nach $a_\nu$
+                                               konstruieren. Analog zum
 Not a real error.
 
 [59]
 ! Preview: Snippet 60 started.
 <-><->
       
-l.108   Z$. Wir identifizieren $U$ mit $
-                                        V$ und können deshalb vom Raum der
+l.67   $
+        \phi_\nu$ des Divisors $\partial c_\nu$ mit $\phi_\nu |_{K_{j+\nu}}
 Not a real error.
 
-! Preview: Snippet 60 ended.(490372+0x578082).
+! Preview: Snippet 60 ended.(308974+139537x810324).
 <-><->
       
-l.108   Z$. Wir identifizieren $U$ mit $V$
-                                           und können deshalb vom Raum der
+l.67   $\phi_\nu$
+                  des Divisors $\partial c_\nu$ mit $\phi_\nu |_{K_{j+\nu}}
 Not a real error.
 
 [60]
-Missing character: There is no ö in font cmti10!
-
 ! Preview: Snippet 61 started.
 <-><->
       
-l.109   Testfunktionen $
-                        \dist(U)$ auf $U$ sprechen. Sei also $\phi \in
+l.67   $\phi_\nu$ des Divisors $
+                                \partial c_\nu$ mit $\phi_\nu |_{K_{j+\nu}}
 Not a real error.
 
-! Preview: Snippet 61 ended.(538214+179404x1699863).
+! Preview: Snippet 61 ended.(498346+107642x1072289).
 <-><->
       
-l.109   Testfunktionen $\dist(U)$
-                                  auf $U$ sprechen. Sei also $\phi \in
+l.67   $\phi_\nu$ des Divisors $\partial c_\nu$
+                                                mit $\phi_\nu |_{K_{j+\nu}}
 Not a real error.
 
 [61]
 ! Preview: Snippet 62 started.
 <-><->
       
-l.109   Testfunktionen $\dist(U)$ auf $
-                                       U$ sprechen. Sei also $\phi \in
+l.67 ...i_\nu$ des Divisors $\partial c_\nu$ mit $
+                                                  \phi_\nu |_{K_{j+\nu}}
 Not a real error.
 
-! Preview: Snippet 62 ended.(490372+0x568213).
+! Preview: Snippet 62 ended.(538214+267473x3723534).
 <-><->
       
-l.109   Testfunktionen $\dist(U)$ auf $U$
-                                          sprechen. Sei also $\phi \in
+l.68   = 1$
+           . \\
 Not a real error.
 
 [62]
 ! Preview: Snippet 63 started.
 <-><->
       
-l.109 ...n $\dist(U)$ auf $U$ sprechen. Sei also $
-                                                  \phi \in
+l.69   Nach Konstruktion gilt $
+                               \partial c_\nu = A_\nu - A_{\nu+1}$, wobei
 Not a real error.
 
-! Preview: Snippet 63 ended.(538214+179404x3046389).
+! Preview: Snippet 63 ended.(498346+162258x5376193).
 <-><->
       
-l.110   \dist(U)$
-                 . Wir bezeichnen mit $\tilde \phi$ jede 1-Form in
+l.69 ... gilt $\partial c_\nu = A_\nu - A_{\nu+1}$
+                                                  , wobei
 Not a real error.
 
 [63]
 ! Preview: Snippet 64 started.
 <-><->
       
-l.110   \dist(U)$. Wir bezeichnen mit $
-                                       \tilde \phi$ jede 1-Form in
+l.70   $
+        A_\nu(a_\nu) = 1$ und sonst verschwindet $A_\nu$. \\
 Not a real error.
 
-! Preview: Snippet 64 ended.(479268+139537x469442).
+! Preview: Snippet 64 ended.(538214+179404x3473085).
 <-><->
       
-l.110 ...ist(U)$. Wir bezeichnen mit $\tilde \phi$
-                                                   jede 1-Form in
+l.70   $A_\nu(a_\nu) = 1$
+                          und sonst verschwindet $A_\nu$. \\
 Not a real error.
 
 [64]
 ! Preview: Snippet 65 started.
 <-><->
       
-l.111   $
-         \dist^{0,1}(X)$, für die $\tilde \phi|_U \cong \phi \d[\bar z]$ und
+l.70   $A_\nu(a_\nu) = 1$ und sonst verschwindet $
+                                                  A_\nu$. \\
 Not a real error.
 
-! Preview: Snippet 65 ended.(598293+179404x2527062).
+! Preview: Snippet 65 ended.(490372+107642x879097).
 <-><->
       
-l.111   $\dist^{0,1}(X)$
-                        , für die $\tilde \phi|_U \cong \phi \d[\bar z]$ und
+l.70 ...a_\nu) = 1$ und sonst verschwindet $A_\nu$
+                                                  . \\
 Not a real error.
 
 [65]
-Missing character: There is no ü in font cmti10!
-
 ! Preview: Snippet 66 started.
 <-><->
       
-l.111   $\dist^{0,1}(X)$, für die $
-                                    \tilde \phi|_U \cong \phi \d[\bar z]$ und
+l.71   Weiterhin folgt, dass $
+                              \phi_0 \cdot \phi_1 \dots \phi_n$ eine
 Not a real error.
 
-! Preview: Snippet 66 ended.(538214+179404x3563686).
+! Preview: Snippet 66 ended.(318942+139537x3996390).
 <-><->
       
-l.111 ...ie $\tilde \phi|_U \cong \phi \d[\bar z]$
-                                                   und
+l.71 ...t, dass $\phi_0 \cdot \phi_1 \dots \phi_n$
+                                                   eine
 Not a real error.
 
 [66]
 ! Preview: Snippet 67 started.
 <-><->
       
-l.112   $
-         \tilde \phi |_{U \setminus U} \cong 0$ gilt. \\
+l.72   schwache Lösung von $
+                             A_0 - A_{n+1}$ ist.
 Not a real error.
 
-! Preview: Snippet 67 ended.(538214+277109x3161123).
+! Preview: Snippet 67 ended.(490372+162258x3347388).
 <-><->
       
-l.112   $\tilde \phi |_{U \setminus U} \cong 0$
-                                                gilt. \\
+l.72   schwache Lösung von $A_0 - A_{n+1}$
+                                            ist.
 Not a real error.
 
 [67]
-Missing character: There is no ö in font cmti10!
-
 ! Preview: Snippet 68 started.
 <-><->
       
-l.113   Damit können wir ein $
-                               S_U \in \dist(U)'$ definieren:
+l.74   Lassen wir $
+                   n$ gegen unendlich gehen, so erhalten wir $\phi :=
 Not a real error.
 
-! Preview: Snippet 68 ended.(551690+179404x3666326).
+! Preview: Snippet 68 ended.(308974+0x430740).
 <-><->
       
-l.113   Damit können wir ein $S_U \in \dist(U)'$
-                                                  definieren:
+l.74   Lassen wir $n$
+                      gegen unendlich gehen, so erhalten wir $\phi :=
 Not a real error.
 
 [68]
 ! Preview: Snippet 69 started.
 <-><->
       
-l.114   \[
-          
+l.74 ...$ gegen unendlich gehen, so erhalten wir $
+                                                  \phi :=
 Not a real error.
 
-! Preview: Snippet 69 ended.(717618+0x27410796).
+! Preview: Snippet 69 ended.(556422+212178x4285965).
 <-><->
       
-l.116   \]
-          
+l.75   \prod_{\nu = 0}^\infty \phi_\nu$
+                                       . Dieses Produkt konvergiert, da
 Not a real error.
 
 [69]
+
+LaTeX Warning: Reference `lemma:kompakt-in-ausschöpfung' on page 1 undefined o
+n input line 78.
+
 ! Preview: Snippet 70 started.
 <-><->
       
-l.117   Diese verschwindet auf allen Funktionen $
-                                                 \phi = \frac{\partial
+l.79   $
+        K$ existiert ein $n \in \N$, so dass $K \subset K_n$. Dann gilt
 Not a real error.
 
-! Preview: Snippet 70 ended.(688494+247464x2191857).
+! Preview: Snippet 70 ended.(490372+0x660807).
 <-><->
       
-l.118     g}{\partial \bar z}$
-                              , $g \in \dist(U)$, denn $S_U[\phi] = S[\tilde
+l.79   $K$
+           existiert ein $n \in \N$, so dass $K \subset K_n$. Dann gilt
 Not a real error.
 
 [70]
 ! Preview: Snippet 71 started.
 <-><->
       
-l.118     g}{\partial \bar z}$, $
-                                 g \in \dist(U)$, denn $S_U[\phi] = S[\tilde
+l.79   $K$ existiert ein $
+                          n \in \N$, so dass $K \subset K_n$. Dann gilt
 Not a real error.
 
-! Preview: Snippet 71 ended.(538214+179404x2944975).
+! Preview: Snippet 71 ended.(494359+28057x1826105).
 <-><->
       
-l.118     g}{\partial \bar z}$, $g \in \dist(U)$
-                                                , denn $S_U[\phi] = S[\tilde
+l.79   $K$ existiert ein $n \in \N$
+                                   , so dass $K \subset K_n$. Dann gilt
 Not a real error.
 
 [71]
 ! Preview: Snippet 72 started.
 <-><->
       
-l.118 ...artial \bar z}$, $g \in \dist(U)$, denn $
-                                                  S_U[\phi] = S[\tilde
+l.79   $K$ existiert ein $n \in \N$, so dass $
+                                              K \subset K_n$. Dann gilt
 Not a real error.
 
-! Preview: Snippet 72 ended.(688494+247464x12059439).
+! Preview: Snippet 72 ended.(490372+107642x2597873).
 <-><->
       
-l.120   S[\d[''g]] = 0$
-                        nach Voraussetzung. Das bedeutet aber, dass
+l.79 ...rt ein $n \in \N$, so dass $K \subset K_n$
+                                                  . Dann gilt
 Not a real error.
 
 [72]
 ! Preview: Snippet 73 started.
 <-><->
       
-l.122   $
-         \frac{\partial S_U}{\partial \bar z} = 0$ und aus (24.10) erhalten
+l.80   aber $
+             \phi_j |_K \equiv 1$ für alle $j > n$.
 Not a real error.
 
-! Preview: Snippet 73 ended.(674659+247464x2540850).
+! Preview: Snippet 73 ended.(538214+209587x2812263).
 <-><->
       
-l.122   $\frac{\partial S_U}{\partial \bar z} = 0$
-                                                   und aus (24.10) erhalten
+l.80   aber $\phi_j |_K \equiv 1$
+                                  für alle $j > n$.
 Not a real error.
 
 [73]
 ! Preview: Snippet 74 started.
 <-><->
       
-l.123   wir ein $
-                 h \in \hol(U)$:
+l.80   aber $\phi_j |_K \equiv 1$ für alle $
+                                             j > n$.
 Not a real error.
 
-! Preview: Snippet 74 ended.(538214+179404x3008149).
+! Preview: Snippet 74 ended.(473287+139537x1724158).
 <-><->
       
-l.123   wir ein $h \in \hol(U)$
-                               :
+l.80 ...er $\phi_j |_K \equiv 1$ für alle $j > n$
+                                                  .
 Not a real error.
 
 [74]
 ! Preview: Snippet 75 started.
 <-><->
       
-l.124   \[
-          
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
-! Preview: Snippet 75 ended.(1627494+0x27410796).
+! Preview: Snippet 75 ended.(490372+0x660807).
 <-><->
       
-l.127   \]
-          
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
 [75]
 ! Preview: Snippet 76 started.
 <-><->
       
-l.128   Setzen wir nun $
-                        \sigma_U := h \d[z]$, so folgt
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
-! Preview: Snippet 76 ended.(498346+111084x3448321).
+! Preview: Snippet 76 ended.(490372+107642x980246).
 <-><->
       
-l.128   Setzen wir nun $\sigma_U := h \d[z]$
-                                            , so folgt
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
 [76]
 ! Preview: Snippet 77 started.
 <-><->
       
-l.129   \[
-          
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
-! Preview: Snippet 77 ended.(1627494+0x27410796).
+! Preview: Snippet 77 ended.(490372+0x660807).
 <-><->
       
-l.132   \]
-          
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
 [77]
-Missing character: There is no ü in font cmti10!
-Missing character: There is no ß in font cmti10!
-
 ! Preview: Snippet 78 started.
 <-><->
       
-l.134   aus und gilt außerdem noch, dass $
-                                           \Supp(\omega) \Subset U')$, so
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
-! Preview: Snippet 78 ended.(551690+179404x4613267).
+! Preview: Snippet 78 ended.(490372+107642x980246).
 <-><->
       
-l.134 ...em noch, dass $\Supp(\omega) \Subset U')$
-                                                  , so
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
 [78]
 ! Preview: Snippet 79 started.
 <-><->
       
-l.136   \[
-          
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
-! Preview: Snippet 79 ended.(1627494+0x27410796).
+! Preview: Snippet 79 ended.(490372+0x660807).
 <-><->
       
-l.140   \]
-          
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
 [79]
 ! Preview: Snippet 80 started.
 <-><->
       
-l.141   und damit $
-                   \sigma_U|_{U \cap U'} \equiv \sigma_{U'}|_{U \cap
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
-! Preview: Snippet 80 ended.(538214+179404x6175421).
+! Preview: Snippet 80 ended.(490372+107642x980246).
 <-><->
       
-l.142     U'}$
-              . Also können wir alle $\sigma_U$ zu einer globalen 1-Form
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
 [80]
-Missing character: There is no ö in font cmti10!
-
 ! Preview: Snippet 81 started.
 <-><->
       
-l.142     U'}$. Also können wir alle $
-                                       \sigma_U$ zu einer globalen 1-Form
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
-! Preview: Snippet 81 ended.(308974+111084x875531).
+! Preview: Snippet 81 ended.(490372+0x660807).
 <-><->
       
-l.142     U'}$. Also können wir alle $\sigma_U$
-                                                 zu einer globalen 1-Form
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
 [81]
 ! Preview: Snippet 82 started.
 <-><->
       
-l.143   $
-         \sigma \in \Omega(Z)$ verkleben und es folgt
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
-! Preview: Snippet 82 ended.(538214+179404x2930523).
+! Preview: Snippet 82 ended.(490372+107642x980246).
 <-><->
       
-l.143   $\sigma \in \Omega(Z)$
-                               verkleben und es folgt
+l.81 ...arum ist $K$ in einem der $K_n$ enthalten}
+                                                  
 Not a real error.
 
 [82]
 ! Preview: Snippet 83 started.
 <-><->
       
-l.144   \[
-          
+l.82   Damit ist $
+                  \phi$ eine schwache Lösung von $A_0$.
 Not a real error.
 
-! Preview: Snippet 83 ended.(1627494+0x27410796).
+! Preview: Snippet 83 ended.(308974+139537x469442).
 <-><->
       
-l.147   \]
-          
+l.82   Damit ist $\phi$
+                        eine schwache Lösung von $A_0$.
 Not a real error.
 
 [83]
 ! Preview: Snippet 84 started.
 <-><->
       
-l.148   wobei $
-               U$ eine Koordinatenumgebung darstellt. \\
+l.82 ...mit ist $\phi$ eine schwache Lösung von $
+                                                  A_0$.
 Not a real error.
 
-! Preview: Snippet 84 ended.(490372+0x568213).
+! Preview: Snippet 84 ended.(490372+107642x849515).
 <-><->
       
-l.148   wobei $U$
-                  eine Koordinatenumgebung darstellt. \\
+l.82 ...ist $\phi$ eine schwache Lösung von $A_0$
+                                                  .
 Not a real error.
 
 [84]
-Missing character: There is no ä in font cmti10!
+
+LaTeX Warning: Marginpar on page 1 moved.
 
 ! Preview: Snippet 85 started.
 <-><->
       
-l.149   Wählen wir nun ein beliebiges $
-                                        \omega \in \diff^{0,1}(X)$ mit
+l.83 \item Sei nun $
+                    D$ ein beliebiger Divisor auf $X$. Für $\nu \in \N$
 Not a real error.
 
-! Preview: Snippet 85 ended.(598293+179404x3746008).
+! Preview: Snippet 85 ended.(490372+0x614063).
 <-><->
       
-l.149 ...in beliebiges $\omega \in \diff^{0,1}(X)$
-                                                   mit
+l.83 \item Sei nun $D$
+                       ein beliebiger Divisor auf $X$. Für $\nu \in \N$
 Not a real error.
 
 [85]
 ! Preview: Snippet 86 started.
 <-><->
       
-l.150   $
-         \Supp(\omega) \Subset Z$, so können wir eine Partition der 1
+l.83 ...m Sei nun $D$ ein beliebiger Divisor auf $
+                                                  X$. Für $\nu \in \N$
 Not a real error.
 
-! Preview: Snippet 86 ended.(538214+179404x4123318).
+! Preview: Snippet 86 ended.(490372+0x650840).
 <-><->
       
-l.150   $\Supp(\omega) \Subset Z$
-                                 , so können wir eine Partition der 1
+l.83 ...Sei nun $D$ ein beliebiger Divisor auf $X$
+                                                  . Für $\nu \in \N$
 Not a real error.
 
 [86]
-Missing character: There is no ö in font cmti10!
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 87 started.
 <-><->
       
-l.151   wählen, so dass $
-                          \omega = \sum_{j=1}^n \omega_J$ mit
+l.83 ...$D$ ein beliebiger Divisor auf $X$. Für $
+                                                  \nu \in \N$
 Not a real error.
 
-! Preview: Snippet 87 ended.(556422+314123x4139399).
+! Preview: Snippet 87 ended.(494359+28057x1795538).
 <-><->
       
-l.151 ... so dass $\omega = \sum_{j=1}^n \omega_J$
-                                                   mit
+l.83 ...iebiger Divisor auf $X$. Für $\nu \in \N$
+                                                  
 Not a real error.
 
 [87]
 ! Preview: Snippet 88 started.
 <-><->
       
-l.152   $
-         \Supp(\omega_j) \Subset U_j$. Dabei sind die $U_j$
+l.85   \[
+         
 Not a real error.
 
-! Preview: Snippet 88 ended.(538214+209587x4622873).
+! Preview: Snippet 88 ended.(2152878+0x27410796).
 <-><->
       
-l.152   $\Supp(\omega_j) \Subset U_j$
-                                     . Dabei sind die $U_j$
+l.88   \]
+         
 Not a real error.
 
 [88]
 ! Preview: Snippet 89 started.
 <-><->
       
-l.152 ...(\omega_j) \Subset U_j$. Dabei sind die $
-                                                  U_j$
+l.89   wobei $
+              K_0$ als leere Menge definiert wird. Wir erhalten dann $D =
 Not a real error.
 
-! Preview: Snippet 89 ended.(490372+209587x778240).
+! Preview: Snippet 89 ended.(490372+107642x920778).
 <-><->
       
-l.152 ...ega_j) \Subset U_j$. Dabei sind die $U_j$
-                                                  
+l.89   wobei $K_0$
+                   als leere Menge definiert wird. Wir erhalten dann $D =
 Not a real error.
 
 [89]
 ! Preview: Snippet 90 started.
 <-><->
       
-l.155   \[
-          
+l.89 ... Menge definiert wird. Wir erhalten dann $
+                                                  D =
 Not a real error.
 
-! Preview: Snippet 90 ended.(2229129+0x27410796).
+! Preview: Snippet 90 ended.(556422+212178x4435670).
 <-><->
       
-l.158   \]
-          
+l.90   \sum_{\nu = 0}^\infty D_\nu$
+                                   . \\
 Not a real error.
 
 [90]
 ! Preview: Snippet 91 started.
 <-><->
       
-l.163   Sei $
-             Y \Subset X$ eine offene Runge-Teilmenge und $X$ eine nicht
+l.91   Nun ist $
+                D_\nu$ nur an endlich vielen stellen von 0 verschieden und
 Not a real error.
 
-! Preview: Snippet 91 ended.(490372+25241x2183749).
+! Preview: Snippet 91 ended.(490372+107642x935011).
 <-><->
       
-l.163   Sei $Y \Subset X$
-                          eine offene Runge-Teilmenge und $X$ eine nicht
+l.91   Nun ist $D_\nu$
+                       nur an endlich vielen stellen von 0 verschieden und
 Not a real error.
 
 [91]
 ! Preview: Snippet 92 started.
 <-><->
       
-l.163 ...bset X$ eine offene Runge-Teilmenge und $
-                                                  X$ eine nicht
+l.92 ...ls endliche Summe von Divisoren der Form $
+                                                  A_\nu$
 Not a real error.
 
-! Preview: Snippet 92 ended.(490372+0x650840).
+! Preview: Snippet 92 ended.(490372+107642x879097).
 <-><->
       
-l.163 ...et X$ eine offene Runge-Teilmenge und $X$
-                                                   eine nicht
+l.92 ...liche Summe von Divisoren der Form $A_\nu$
+                                                  
 Not a real error.
 
 [92]
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 93 started.
 <-><->
       
-l.165   Dann liegt $
-                    \im( \hol(Y') \ra \hol(Y))$ für beliebige $Y' \Subset X$
+l.95   eine Lösung $
+                     \psi_\nu$ von $D_\nu$ und wir erhalten sogar $\psi_\nu
 Not a real error.
 
-! Preview: Snippet 93 ended.(551690+179404x6106620).
+! Preview: Snippet 93 ended.(498346+139537x808333).
 <-><->
       
-l.165   Dann liegt $\im( \hol(Y') \ra \hol(Y))$
-                                                für beliebige $Y' \Subset X$
+l.95   eine Lösung $\psi_\nu$
+                               von $D_\nu$ und wir erhalten sogar $\psi_\nu
 Not a real error.
 
 [93]
-Missing character: There is no ü in font cmti10!
-
 ! Preview: Snippet 94 started.
 <-><->
       
-l.165 ...( \hol(Y') \ra \hol(Y))$ für beliebige $
-                                                  Y' \Subset X$
+l.95   eine Lösung $\psi_\nu$ von $
+                                    D_\nu$ und wir erhalten sogar $\psi_\nu
 Not a real error.
 
-! Preview: Snippet 94 ended.(551690+25241x2367614).
+! Preview: Snippet 94 ended.(490372+107642x935011).
 <-><->
       
-l.165 ...a \hol(Y))$ für beliebige $Y' \Subset X$
-                                                  
+l.95   eine Lösung $\psi_\nu$ von $D_\nu$
+                                           und wir erhalten sogar $\psi_\nu
 Not a real error.
 
 [94]
 ! Preview: Snippet 95 started.
 <-><->
       
-l.166   offen und $
-                   Y \subset Y'$ bzgl. kompakter Konvergenz dicht in $\hol(Y)$.
-
+l.95 ..._\nu$ von $D_\nu$ und wir erhalten sogar $
+                                                  \psi_\nu
 Not a real error.
 
-! Preview: Snippet 95 ended.(551690+28057x2292863).
+! Preview: Snippet 95 ended.(538214+179404x3129854).
 <-><->
       
-l.166   offen und $Y \subset Y'$
-                                 bzgl. kompakter Konvergenz dicht in $\hol(Y)$.
-
+l.96   |_{K_\nu} = 1$
+                     . \\
 Not a real error.
 
 [95]
 ! Preview: Snippet 96 started.
 <-><->
       
-l.166 ...Y'$ bzgl. kompakter Konvergenz dicht in $
-                                                  \hol(Y)$.
+l.97   Setzen wir nun $
+                       \psi := \prod_{\nu=0}^\infty \psi_\nu$, so
 Not a real error.
 
-! Preview: Snippet 96 ended.(538214+179404x1725479).
+! Preview: Snippet 96 ended.(556422+212178x4307730).
 <-><->
       
-l.166 .... kompakter Konvergenz dicht in $\hol(Y)$
-                                                  .
+l.97 ...un $\psi := \prod_{\nu=0}^\infty \psi_\nu$
+                                                  , so
 Not a real error.
 
 [96]
 ! Preview: Snippet 97 started.
 <-><->
       
-l.170   Sei $
-             \beta: \diff(Y') \ra \diff(Y)$ die Einschränkungsabbildung. Wir
+l.99   ist eine schwache Lösung von $
+                                      D$.
 Not a real error.
 
-! Preview: Snippet 97 ended.(551690+179404x5496281).
+! Preview: Snippet 97 ended.(490372+0x614063).
 <-><->
       
-l.170   Sei $\beta: \diff(Y') \ra \diff(Y)$
-                                            die Einschränkungsabbildung. Wir
+l.99   ist eine schwache Lösung von $D$
+                                        .
 Not a real error.
 
 [97]
-Missing character: There is no ä in font cmti10!
-Missing character: There is no ü in font cmti10!
-
 ! Preview: Snippet 98 started.
 <-><->
       
-l.172 ...10. Dazu müssen wir zeigen, dass falls $
-                                                  T \in
+l.106   Sei $
+             X$ eine nicht kompakte Riemannsche Fläche und $D \in
 Not a real error.
 
-! Preview: Snippet 98 ended.(551690+179404x3157147).
+! Preview: Snippet 98 ended.(490372+0x650840).
 <-><->
       
-l.173   \diff(Y)'$
-                   mit $T_{\beta(\hol(Y'))} \equiv 0$ auch $T|_{\hol(Y)}
+l.106   Sei $X$
+                eine nicht kompakte Riemannsche Fläche und $D \in
 Not a real error.
 
 [98]
 ! Preview: Snippet 99 started.
 <-><->
       
-l.173   \diff(Y)'$ mit $
-                        T_{\beta(\hol(Y'))} \equiv 0$ auch $T|_{\hol(Y)}
+l.106 ... nicht kompakte Riemannsche Fläche und $
+                                                  D \in
 Not a real error.
 
-! Preview: Snippet 99 ended.(490372+277109x4053772).
+! Preview: Snippet 99 ended.(538214+179404x3935023).
 <-><->
       
-l.173 ...f(Y)'$ mit $T_{\beta(\hol(Y'))} \equiv 0$
-                                                   auch $T|_{\hol(Y)}
+l.107   Div(X)$
+               . Dann existiert ein $f \in \mer(X)^\ast$ mit $(f) = D$.
 Not a real error.
 
 [99]
 ! Preview: Snippet 100 started.
 <-><->
       
-l.173 ...mit $T_{\beta(\hol(Y'))} \equiv 0$ auch $
-                                                  T|_{\hol(Y)}
+l.107   Div(X)$. Dann existiert ein $
+                                     f \in \mer(X)^\ast$ mit $(f) = D$.
 Not a real error.
 
-! Preview: Snippet 100 ended.(538214+277109x3403410).
+! Preview: Snippet 100 ended.(538214+179404x3687742).
 <-><->
       
-l.174   \equiv 0$
-                  gilt. \\
+l.107 .... Dann existiert ein $f \in \mer(X)^\ast$
+                                                   mit $(f) = D$.
 Not a real error.
 
 [100]
 ! Preview: Snippet 101 started.
 <-><->
       
-l.176   Nach 14.16 existiert zu jedem $
-                                       \omega \in \diff^{0,1}(X)$ ein $f \in
+l.107 ... existiert ein $f \in \mer(X)^\ast$ mit $
+                                                  (f) = D$.
 Not a real error.
 
-! Preview: Snippet 101 ended.(598293+179404x3746008).
+! Preview: Snippet 101 ended.(538214+179404x2557613).
 <-><->
       
-l.176 ...iert zu jedem $\omega \in \diff^{0,1}(X)$
-                                                   ein $f \in
+l.107 ...rt ein $f \in \mer(X)^\ast$ mit $(f) = D$
+                                                  .
 Not a real error.
 
 [101]
 ! Preview: Snippet 102 started.
 <-><->
       
-l.176 ...u jedem $\omega \in \diff^{0,1}(X)$ ein $
-                                                  f \in
+l.111   Wir können $
+                     X$ mit relativ kompakten, einfach zusammenhängenden
 Not a real error.
 
-! Preview: Snippet 102 ended.(551690+179404x3066698).
+! Preview: Snippet 102 ended.(490372+0x650840).
 <-><->
       
-l.177   \diff(Y')$
-                   mit $\d[''f] = \omega|_{Y'}$. \\
+l.111   Wir können $X$
+                        mit relativ kompakten, einfach zusammenhängenden
 Not a real error.
 
 [102]
 ! Preview: Snippet 103 started.
 <-><->
       
-l.177   \diff(Y')$ mit $
-                        \d[''f] = \omega|_{Y'}$. \\
+l.112   Koordinatenumgebungen $
+                               (U_i)_{i \in I}$ überdecken. Auf diesen
 Not a real error.
 
-! Preview: Snippet 103 ended.(582087+179404x3566416).
+! Preview: Snippet 103 ended.(538214+179404x2146797).
 <-><->
       
-l.177   \diff(Y')$ mit $\d[''f] = \omega|_{Y'}$
-                                               . \\
+l.112   Koordinatenumgebungen $(U_i)_{i \in I}$
+                                                überdecken. Auf diesen
 Not a real error.
 
 [103]
 ! Preview: Snippet 104 started.
 <-><->
       
-l.178   Dies erlaubt uns die Definition von $
-                                             S: \diff^{0,1}(X) \ra \C, \quad
+l.113   finden wir $
+                    f_i \in \mer(U_i)^\ast$, so dass $(f_i) =
 Not a real error.
 
-! Preview: Snippet 104 ended.(598293+179404x10757329).
+! Preview: Snippet 104 ended.(538214+179404x3894484).
 <-><->
       
-l.179   S[w] := T[f|_Y]$
-                        . Diese Definition ist unabhängig von $f$, denn für
+l.113   finden wir $f_i \in \mer(U_i)^\ast$
+                                           , so dass $(f_i) =
 Not a real error.
 
 [104]
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 105 started.
 <-><->
       
-l.179 ...$. Diese Definition ist unabhängig von $
-                                                  f$, denn für
+l.113 ...n wir $f_i \in \mer(U_i)^\ast$, so dass $
+                                                  (f_i) =
 Not a real error.
 
-! Preview: Snippet 105 ended.(498346+139537x428580).
+! Preview: Snippet 105 ended.(538214+191014x3519752).
 <-><->
       
-l.179 ... Diese Definition ist unabhängig von $f$
-                                                  , denn für
+l.114   D|_{U_i}$
+                 . Dies ist möglich, da $D$ auf dem relativ kompakten $U_i$
 Not a real error.
 
 [105]
-Missing character: There is no ü in font cmti10!
-
 ! Preview: Snippet 106 started.
 <-><->
       
-l.180   ein $
-             g \in \diff(Y')$ mit $\d[''g] = \omega|_{Y'}$, dann ist $f-g
+l.114   D|_{U_i}$. Dies ist möglich, da $
+                                          D$ auf dem relativ kompakten $U_i$
 Not a real error.
 
-! Preview: Snippet 106 ended.(551690+179404x3006146).
+! Preview: Snippet 106 ended.(490372+0x614063).
 <-><->
       
-l.180   ein $g \in \diff(Y')$
-                              mit $\d[''g] = \omega|_{Y'}$, dann ist $f-g
+l.114   D|_{U_i}$. Dies ist möglich, da $D$
+                                             auf dem relativ kompakten $U_i$
 Not a real error.
 
 [106]
 ! Preview: Snippet 107 started.
 <-><->
       
-l.180   ein $g \in \diff(Y')$ mit $
-                                   \d[''g] = \omega|_{Y'}$, dann ist $f-g
+l.114 ...glich, da $D$ auf dem relativ kompakten $
+                                                  U_i$
 Not a real error.
 
-! Preview: Snippet 107 ended.(582087+179404x3505864).
+! Preview: Snippet 107 ended.(490372+107642x712400).
 <-><->
       
-l.180 ...n \diff(Y')$ mit $\d[''g] = \omega|_{Y'}$
-                                                  , dann ist $f-g
+l.114 ...h, da $D$ auf dem relativ kompakten $U_i$
+                                                  
 Not a real error.
 
 [107]
 ! Preview: Snippet 108 started.
 <-><->
       
-l.180 ... mit $\d[''g] = \omega|_{Y'}$, dann ist $
-                                                  f-g
+l.115   fast überall verschwindet und $
+                                        f_i$ deshalb in lokalen Koordinaten
 Not a real error.
 
-! Preview: Snippet 108 ended.(551690+179404x4460122).
+! Preview: Snippet 108 ended.(498346+139537x573762).
 <-><->
       
-l.181   \in \hol(Y')$
-                      und deshalt $T[(f-g)|_Y] = 0$ nach der Voraussetzung,
+l.115   fast überall verschwindet und $f_i$
+                                             deshalb in lokalen Koordinaten
 Not a real error.
 
 [108]
 ! Preview: Snippet 109 started.
 <-><->
       
-l.181   \in \hol(Y')$ und deshalt $
-                                   T[(f-g)|_Y] = 0$ nach der Voraussetzung,
+l.117   Mit dieser Konstruktion haben $
+                                       f_i$ und $f_j$ dies selben Pol- und
 Not a real error.
 
-! Preview: Snippet 109 ended.(538214+179404x5143941).
+! Preview: Snippet 109 ended.(498346+139537x573762).
 <-><->
       
-l.181 ...n \hol(Y')$ und deshalt $T[(f-g)|_Y] = 0$
-                                                   nach der Voraussetzung,
+l.117   Mit dieser Konstruktion haben $f_i$
+                                            und $f_j$ dies selben Pol- und
 Not a real error.
 
 [109]
 ! Preview: Snippet 110 started.
 <-><->
       
-l.182   dass $
-              T|_{\beta(\hol(Y'))} \equiv 0$. \\
+l.117   Mit dieser Konstruktion haben $f_i$ und $
+                                                 f_j$ dies selben Pol- und
 Not a real error.
 
-! Preview: Snippet 110 ended.(538214+277109x4352781).
+! Preview: Snippet 110 ended.(498346+209587x639602).
 <-><->
       
-l.182   dass $T|_{\beta(\hol(Y'))} \equiv 0$
-                                            . \\
+l.117 ...dieser Konstruktion haben $f_i$ und $f_j$
+                                                   dies selben Pol- und
 Not a real error.
 
 [110]
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 111 started.
 <-><->
       
-l.183   Als nächstes wollen wir zeigen, dass $
-                                               S$ stetig ist. \\
+l.118   Nullstellen auf $
+                         U_i \cap U_j$, also ist
 Not a real error.
 
-! Preview: Snippet 111 ended.(490372+0x481402).
+! Preview: Snippet 111 ended.(490372+209587x2287990).
 <-><->
       
-l.183   Als nächstes wollen wir zeigen, dass $S$
-                                                  stetig ist. \\
+l.118   Nullstellen auf $U_i \cap U_j$
+                                      , also ist
 Not a real error.
 
 [111]
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 112 started.
 <-><->
       
-l.184   Dazu betrachten wir zunächst $
-                                       V := \{ (\omega, f) \in \diff^{0,1}(X)
+l.119   \[
+          
 Not a real error.
 
-! Preview: Snippet 112 ended.(598293+179404x15039646).
+! Preview: Snippet 112 ended.(1685658+0x27410796).
 <-><->
       
-l.185 ...iff(Y'): \quad \d[''f] = \omega|_{Y'} \}$
-                                                  . Aus der
+l.121   \]
+          
 Not a real error.
 
 [112]
+
+LaTeX Warning: Reference `lemma:schwache-Lösung-Divisor' on page 1 undefined o
+n input line 122.
+
 ! Preview: Snippet 113 started.
 <-><->
       
-l.187   Stetigkeit von $
-                        \d['']: \diff(Y') \ra \diff^{0,1}(Y')$ folgt, dass $V
+l.123   schwache Lösung $
+                          \psi$ von $D$ und auf den $U_i$ finden wir $\psi_i
 Not a real error.
 
-! Preview: Snippet 113 ended.(598293+179404x6714580).
+! Preview: Snippet 113 ended.(498346+139537x493198).
 <-><->
       
-l.187 ...n $\d['']: \diff(Y') \ra \diff^{0,1}(Y')$
-                                                   folgt, dass $V
+l.123   schwache Lösung $\psi$
+                                von $D$ und auf den $U_i$ finden wir $\psi_i
 Not a real error.
 
 [113]
 ! Preview: Snippet 114 started.
 <-><->
       
-l.187 ...ff(Y') \ra \diff^{0,1}(Y')$ folgt, dass $
-                                                  V
+l.123   schwache Lösung $\psi$ von $
+                                     D$ und auf den $U_i$ finden wir $\psi_i
 Not a real error.
 
-! Preview: Snippet 114 ended.(598293+179404x6569514).
+! Preview: Snippet 114 ended.(490372+0x614063).
 <-><->
       
-l.188   \subset \diff^{0,1}(X) \times \diff(Y')$
-                                                 abgeschlossen und somit ein
+l.123   schwache Lösung $\psi$ von $D$
+                                        und auf den $U_i$ finden wir $\psi_i
 Not a real error.
 
 [114]
-Missing character: There is no ´ in font cmti10!
-
 ! Preview: Snippet 115 started.
 <-><->
       
-l.191   Nach 14.16 ist $
-                        \pi_1: V \ra \diff^{0,1}(X)$ surjektiv und damit
+l.123 ...ache Lösung $\psi$ von $D$ und auf den $
+                                                  U_i$ finden wir $\psi_i
 Not a real error.
 
-! Preview: Snippet 115 ended.(598293+179404x5409236).
+! Preview: Snippet 115 ended.(490372+107642x712400).
 <-><->
       
-l.191 ...h 14.16 ist $\pi_1: V \ra \diff^{0,1}(X)$
-                                                   surjektiv und damit
+l.123 ... Lösung $\psi$ von $D$ und auf den $U_i$
+                                                   finden wir $\psi_i
 Not a real error.
 
 [115]
 ! Preview: Snippet 116 started.
 <-><->
       
-l.193   Weiterhin ist $
-                       \beta \circ \pi_2 : V \ra \diff(Y)$ stetig. Da nun
+l.123 ...i$ von $D$ und auf den $U_i$ finden wir $
+                                                  \psi_i
 Not a real error.
 
-! Preview: Snippet 116 ended.(538214+179404x5711437).
+! Preview: Snippet 116 ended.(538214+179404x3280441).
 <-><->
       
-l.193 ... ist $\beta \circ \pi_2 : V \ra \diff(Y)$
-                                                   stetig. Da nun
+l.124   \in \diff(U_i)$
+                       , so dass $\psi = \psi_i \cdot f_i$ und $\psi_i(x)
 Not a real error.
 
 [116]
 ! Preview: Snippet 117 started.
 <-><->
       
-l.196   folgt die Stetigkeit von $
-                                  S$. \\
+l.124   \in \diff(U_i)$, so dass $
+                                  \psi = \psi_i \cdot f_i$ und $\psi_i(x)
 Not a real error.
 
-! Preview: Snippet 117 ended.(490372+0x481402).
+! Preview: Snippet 117 ended.(498346+139537x3231932).
 <-><->
       
-l.196   folgt die Stetigkeit von $S$
-                                    . \\
+l.124 ...(U_i)$, so dass $\psi = \psi_i \cdot f_i$
+                                                   und $\psi_i(x)
 Not a real error.
 
 [117]
-
-LaTeX Warning: Reference `lemma:kompakter-träger-funktional' on page 1 undefin
-ed on input line 198.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 200.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 200.
-
 ! Preview: Snippet 118 started.
 <-><->
       
-l.200   \item ein kompaktes $
-                             K \subset Y$ mit $T[f] = 0$ für jedes $f \in
+l.124 ..., so dass $\psi = \psi_i \cdot f_i$ und $
+                                                  \psi_i(x)
 Not a real error.
 
-! Preview: Snippet 118 ended.(490372+28057x2193716).
+! Preview: Snippet 118 ended.(538214+179404x2973796).
 <-><->
       
-l.200   \item ein kompaktes $K \subset Y$
-                                          mit $T[f] = 0$ für jedes $f \in
+l.125   \neq 0$
+                für alle $x \in U_i$. (Wir setzend abei $\psi$ auf ganz $X$
 Not a real error.
 
 [118]
 ! Preview: Snippet 119 started.
 <-><->
       
-l.200   \item ein kompaktes $K \subset Y$ mit $
-                                               T[f] = 0$ für jedes $f \in
+l.125   \neq 0$ für alle $
+                           x \in U_i$. (Wir setzend abei $\psi$ auf ganz $X$
 Not a real error.
 
-! Preview: Snippet 119 ended.(538214+179404x2661917).
+! Preview: Snippet 119 ended.(490372+107642x1999623).
 <-><->
       
-l.200 ...in kompaktes $K \subset Y$ mit $T[f] = 0$
-                                                   für jedes $f \in
+l.125   \neq 0$ für alle $x \in U_i$
+                                     . (Wir setzend abei $\psi$ auf ganz $X$
 Not a real error.
 
 [119]
-Missing character: There is no ü in font cmti10!
-
 ! Preview: Snippet 120 started.
 <-><->
       
-l.200 ...$K \subset Y$ mit $T[f] = 0$ für jedes $
-                                                  f \in
+l.125 ...ür alle $x \in U_i$. (Wir setzend abei $
+                                                  \psi$ auf ganz $X$
 Not a real error.
 
-! Preview: Snippet 120 ended.(538214+179404x2882833).
+! Preview: Snippet 120 ended.(498346+139537x493198).
 <-><->
       
-l.201     \diff(Y)$
-                    mit $\Supp(f9 \subset Y \setminus K$ und
+l.125 ...lle $x \in U_i$. (Wir setzend abei $\psi$
+                                                   auf ganz $X$
 Not a real error.
 
 [120]
 ! Preview: Snippet 121 started.
 <-><->
       
-l.201     \diff(Y)$ mit $
-                         \Supp(f9 \subset Y \setminus K$ und
+l.125 ...U_i$. (Wir setzend abei $\psi$ auf ganz $
+                                                  X$
 Not a real error.
 
-! Preview: Snippet 121 ended.(538214+179404x5532639).
+! Preview: Snippet 121 ended.(490372+0x650840).
 <-><->
       
-l.201 ...(Y)$ mit $\Supp(f9 \subset Y \setminus K$
-                                                   und
+l.125 ...i$. (Wir setzend abei $\psi$ auf ganz $X$
+                                                  
 Not a real error.
 
 [121]
 ! Preview: Snippet 122 started.
 <-><->
       
-l.202   \item ein kompaktes $
-                             L \subset X$ mit $S[\omega] = 0$ für jedes
+l.126 ...wir es an den nicht definierten Stellen $
+                                                  \infty$
 Not a real error.
 
-! Preview: Snippet 122 ended.(490372+28057x2096040).
+! Preview: Snippet 122 ended.(308974+0x717621).
 <-><->
       
-l.202   \item ein kompaktes $L \subset X$
-                                          mit $S[\omega] = 0$ für jedes
+l.126 ...an den nicht definierten Stellen $\infty$
+                                                  
 Not a real error.
 
 [122]
 ! Preview: Snippet 123 started.
 <-><->
       
-l.202   \item ein kompaktes $L \subset X$ mit $
-                                               S[\omega] = 0$ für jedes
+l.128   Da $
+            U_i$ einfach zusammenhängend ist und $\psi_i$ nicht
 Not a real error.
 
-! Preview: Snippet 123 ended.(538214+179404x2668142).
+! Preview: Snippet 123 ended.(490372+107642x712400).
 <-><->
       
-l.202 ...mpaktes $L \subset X$ mit $S[\omega] = 0$
-                                                   für jedes
+l.128   Da $U_i$
+                 einfach zusammenhängend ist und $\psi_i$ nicht
 Not a real error.
 
 [123]
-Missing character: There is no ü in font cmti10!
-
 ! Preview: Snippet 124 started.
 <-><->
       
-l.203     $
-           \omega \in \diff^{0,1}(X)$ mit $\Supp(\omega) \subset X\setminus L$
+l.128 ... $U_i$ einfach zusammenhängend ist und $
+                                                  \psi_i$ nicht
 Not a real error.
 
-! Preview: Snippet 124 ended.(598293+179404x3746008).
+! Preview: Snippet 124 ended.(498346+139537x689877).
 <-><->
       
-l.203     $\omega \in \diff^{0,1}(X)$
-                                      mit $\Supp(\omega) \subset X\setminus L$
+l.128 ...einfach zusammenhängend ist und $\psi_i$
+                                                   nicht
 Not a real error.
 
 [124]
 ! Preview: Snippet 125 started.
 <-><->
       
-l.203     $\omega \in \diff^{0,1}(X)$ mit $
-                                           \Supp(\omega) \subset X\setminus L$
+l.129   verschwindet, existiert ein $
+                                     \phi_i \in \diff(U_i)$ mit $\psi_i =
 Not a real error.
 
-! Preview: Snippet 125 ended.(538214+179404x5399080).
+! Preview: Snippet 125 ended.(538214+179404x3282432).
 <-><->
       
-l.203 ... mit $\Supp(\omega) \subset X\setminus L$
-                                                  
+l.129 ...et, existiert ein $\phi_i \in \diff(U_i)$
+                                                   mit $\psi_i =
 Not a real error.
 
 [125]
 ! Preview: Snippet 126 started.
 <-><->
       
-l.205    Sei $
-              g \in \diff(X)$ mit $\Supp(g) \Subset X \setminus K$. Dann ist
+l.129 ...istiert ein $\phi_i \in \diff(U_i)$ mit $
+                                                  \psi_i =
 Not a real error.
 
-! Preview: Snippet 126 ended.(538214+179404x2897032).
+! Preview: Snippet 126 ended.(498346+139537x2584595).
 <-><->
       
-l.205    Sei $g \in \diff(X)$
-                              mit $\Supp(g) \Subset X \setminus K$. Dann ist
+l.130   e^{\phi_i}$
+                   . \\
 Not a real error.
 
 [126]
 ! Preview: Snippet 127 started.
 <-><->
       
-l.205    Sei $g \in \diff(X)$ mit $
-                                   \Supp(g) \Subset X \setminus K$. Dann ist
+l.132   \[
+          
 Not a real error.
 
-! Preview: Snippet 127 ended.(538214+179404x5467103).
+! Preview: Snippet 127 ended.(692678+0x27410796).
 <-><->
       
-l.205 ...(X)$ mit $\Supp(g) \Subset X \setminus K$
-                                                  . Dann ist
+l.134   \]
+          
 Not a real error.
 
 [127]
 ! Preview: Snippet 128 started.
 <-><->
       
-l.206    $
-          S[\d[''g]] = T[g|_Y]  = 0$. Lemma \ref{lemma:funktional-explizit}
+l.136   \[
+          
 Not a real error.
 
-! Preview: Snippet 128 ended.(582087+179404x6338294).
+! Preview: Snippet 128 ended.(1685658+0x27410796).
 <-><->
       
-l.206    $S[\d[''g]] = T[g|_Y]  = 0$
-                                    . Lemma \ref{lemma:funktional-explizit}
+l.139   \]
+          
 Not a real error.
 
 [128]
-
-LaTeX Warning: Reference `lemma:funktional-explizit' on page 2 undefined on inp
-ut line 206.
-
 ! Preview: Snippet 129 started.
 <-><->
       
-l.207    gibt uns dann ein $
-                            \sigma \in \Omega(X\setminus K)$ mit
+l.140   Damit ist $
+                   \phi_{ij} := \phi_i - \phi_j \in \hol(U_i \cap U_j)$, da
 Not a real error.
 
-! Preview: Snippet 129 ended.(538214+179404x4378712).
+! Preview: Snippet 129 ended.(538214+209587x8744651).
 <-><->
       
-l.207 ...ann ein $\sigma \in \Omega(X\setminus K)$
-                                                   mit
+l.140 ...= \phi_i - \phi_j \in \hol(U_i \cap U_j)$
+                                                  , da
 Not a real error.
 
 [129]
 ! Preview: Snippet 130 started.
 <-><->
       
-l.208    \[
-           
+l.141   die $
+             \exp$-Funktion lokal biholomorph ist. Aus der Definition folgt
 Not a real error.
 
-! Preview: Snippet 130 ended.(1758566+0x27410796).
+! Preview: Snippet 130 ended.(317112+167842x1044192).
 <-><->
       
-l.212    \]
-           
+l.141   die $\exp$
+                  -Funktion lokal biholomorph ist. Aus der Definition folgt
 Not a real error.
 
 [130]
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 131 started.
 <-><->
       
-l.213    Aufgrund des kompakten Trägers von $
-                                              S$ muss $\sigma|_{X \setminus
+l.142   auch direkt $
+                     \phi_{ij} + \phi_{jk} = \phi_{ik}$ auf $U_i \cap U_j
 Not a real error.
 
-! Preview: Snippet 131 ended.(490372+0x481402).
+! Preview: Snippet 131 ended.(418611+218855x4838884).
 <-><->
       
-l.213    Aufgrund des kompakten Trägers von $S$
-                                                 muss $\sigma|_{X \setminus
+l.142 ...irekt $\phi_{ij} + \phi_{jk} = \phi_{ik}$
+                                                   auf $U_i \cap U_j
 Not a real error.
 
 [131]
 ! Preview: Snippet 132 started.
 <-><->
       
-l.213 ...und des kompakten Trägers von $S$ muss $
-                                                  \sigma|_{X \setminus
+l.142 ...$\phi_{ij} + \phi_{jk} = \phi_{ik}$ auf $
+                                                  U_i \cap U_j
 Not a real error.
 
-! Preview: Snippet 132 ended.(538214+277109x4451460).
+! Preview: Snippet 132 ended.(490372+209587x3912100).
 <-><->
       
-l.214      (K \cup L)} \equiv 0$
-                                 gelten. \\
+l.143   \cap U_k$
+                  und damit ist $(\phi_{ij}) \in Z^1(\fu, \hol)$. \\
 Not a real error.
 
 [132]
 ! Preview: Snippet 133 started.
 <-><->
       
-l.215 ...un ist jede Zusammenhangskomponente von $
-                                                  X \setminus \runge(K)$
+l.143   \cap U_k$ und damit ist $
+                                 (\phi_{ij}) \in Z^1(\fu, \hol)$. \\
 Not a real error.
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 215.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2009/06/22 v3.00 Euler Fraktur
-)
-! Preview: Snippet 133 ended.(538214+179404x2921605).
+! Preview: Snippet 133 ended.(598293+209587x5166845).
 <-><->
       
-l.215 ...ngskomponente von $X \setminus \runge(K)$
-                                                  
+l.143 ...amit ist $(\phi_{ij}) \in Z^1(\fu, \hol)$
+                                                  . \\
 Not a real error.
 
 [133]
 ! Preview: Snippet 134 started.
 <-><->
       
-l.217 ...ptung: Jede Zusammenhangskomponente von $
-                                                  X \setminus
+l.144   Nun ist $
+                 H^1(X, \hol) = 0$, also existieren $g_i \in \hol(U_i)$ mit
 Not a real error.
 
-! Preview: Snippet 134 ended.(538214+179404x2921605).
+! Preview: Snippet 134 ended.(598293+179404x4361058).
 <-><->
       
-l.218    \runge(K)$
-                    schneidet $X \setminus (K \cup L)$. \\
+l.144   Nun ist $H^1(X, \hol) = 0$
+                                  , also existieren $g_i \in \hol(U_i)$ mit
 Not a real error.
 
 [134]
 ! Preview: Snippet 135 started.
 <-><->
       
-l.218    \runge(K)$ schneidet $
-                               X \setminus (K \cup L)$. \\
+l.144 ...ist $H^1(X, \hol) = 0$, also existieren $
+                                                  g_i \in \hol(U_i)$ mit
 Not a real error.
 
-! Preview: Snippet 135 ended.(538214+179404x3833273).
+! Preview: Snippet 135 ended.(538214+179404x3303581).
 <-><->
       
-l.218 ...ge(K)$ schneidet $X \setminus (K \cup L)$
-                                                  . \\
+l.144 ...= 0$, also existieren $g_i \in \hol(U_i)$
+                                                   mit
 Not a real error.
 
 [135]
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 136 started.
 <-><->
       
-l.219 ...n es gäbe eine Zusammenhangskomponente $
-                                                  U \subset X
+l.145   $
+         \phi_{ij} = \phi_j - \phi_i = g_j - g_i$ auf $U_i \cap U_j$. \\
 Not a real error.
 
-! Preview: Snippet 136 ended.(538214+179404x4446638).
+! Preview: Snippet 136 ended.(418611+209587x7260008).
 <-><->
       
-l.220    \setminus \runge(K)$
-                              mit $U \cap X \setminus ( K \cup L) =
+l.145   $\phi_{ij} = \phi_j - \phi_i = g_j - g_i$
+                                                  auf $U_i \cap U_j$. \\
 Not a real error.
 
 [136]
 ! Preview: Snippet 137 started.
 <-><->
       
-l.220    \setminus \runge(K)$ mit $
-                                   U \cap X \setminus ( K \cup L) =
+l.145 ...{ij} = \phi_j - \phi_i = g_j - g_i$ auf $
+                                                  U_i \cap U_j$. \\
 Not a real error.
 
-! Preview: Snippet 137 ended.(538214+179404x6713806).
+! Preview: Snippet 137 ended.(490372+209587x2287990).
 <-><->
       
-l.221    \varnothing$
-                     . Dann gilt $U \subset K \cup L$, also ist $U$ relativ
+l.145 ... - \phi_i = g_j - g_i$ auf $U_i \cap U_j$
+                                                  . \\
 Not a real error.
 
 [137]
 ! Preview: Snippet 138 started.
 <-><->
       
-l.221    \varnothing$. Dann gilt $
-                                  U \subset K \cup L$, also ist $U$ relativ
+l.147   \[
+          
 Not a real error.
 
-! Preview: Snippet 138 ended.(490372+28057x3471570).
+! Preview: Snippet 138 ended.(731621+0x27410796).
 <-><->
       
-l.221 ...rnothing$. Dann gilt $U \subset K \cup L$
-                                                  , also ist $U$ relativ
+l.149   \]
+          
 Not a real error.
 
 [138]
 ! Preview: Snippet 139 started.
 <-><->
       
-l.221 ...ann gilt $U \subset K \cup L$, also ist $
-                                                  U$ relativ
+l.150   also finden wir ein $
+                             f \in \mer(X)^\ast$ mit $f = e^{f_j} f_j$ auf
 Not a real error.
 
-! Preview: Snippet 139 ended.(490372+0x568213).
+! Preview: Snippet 139 ended.(538214+179404x3687742).
 <-><->
       
-l.221 ...n gilt $U \subset K \cup L$, also ist $U$
-                                                   relativ
+l.150   also finden wir ein $f \in \mer(X)^\ast$
+                                                 mit $f = e^{f_j} f_j$ auf
 Not a real error.
 
 [139]
 ! Preview: Snippet 140 started.
 <-><->
       
-l.223 ...schneiden alle Zusammenhangskomponenten $
-                                                  X \setminus (K \cup
+l.150 ...finden wir ein $f \in \mer(X)^\ast$ mit $
+                                                  f = e^{f_j} f_j$ auf
 Not a real error.
 
-! Preview: Snippet 140 ended.(538214+179404x3833273).
+! Preview: Snippet 140 ended.(624507+209587x2916251).
 <-><->
       
-l.224    L)$
-             und aus de Identitätssatz folgt:
+l.150 ...f \in \mer(X)^\ast$ mit $f = e^{f_j} f_j$
+                                                   auf
 Not a real error.
 
 [140]
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 141 started.
 <-><->
       
-l.225    \[
-           
+l.151   $
+         U_j$. \\
 Not a real error.
 
-! Preview: Snippet 141 ended.(815323+0x27410796).
+! Preview: Snippet 141 ended.(490372+209587x778240).
 <-><->
       
-l.227    \]
-           
+l.151   $U_j$
+             . \\
 Not a real error.
 
-[141
-
-]
+[141]
 ! Preview: Snippet 142 started.
 <-><->
       
-l.228    Das bedeutet, dass $
-                             S[\omega] = 0$ für jedes $\omega \in
+l.152   Damit ist $
+                   f$ die gesuchte Lösung von $D$.
 Not a real error.
 
-! Preview: Snippet 142 ended.(538214+179404x2668142).
+! Preview: Snippet 142 ended.(498346+139537x428580).
 <-><->
       
-l.228    Das bedeutet, dass $S[\omega] = 0$
-                                            für jedes $\omega \in
+l.152   Damit ist $f$
+                      die gesuchte Lösung von $D$.
 Not a real error.
 
 [142]
-Missing character: There is no ü in font cmti10!
-
 ! Preview: Snippet 143 started.
 <-><->
       
-l.228 ...deutet, dass $S[\omega] = 0$ für jedes $
-                                                  \omega \in
+l.152   Damit ist $f$ die gesuchte Lösung von $
+                                                D$.
 Not a real error.
 
-! Preview: Snippet 143 ended.(598293+179404x3746008).
+! Preview: Snippet 143 ended.(490372+0x614063).
 <-><->
       
-l.229    \diff^{0,1}(X)$
-                         mit $\Supp(\omega) \Subset X \setminus
+l.152   Damit ist $f$ die gesuchte Lösung von $D$
+                                                  .
 Not a real error.
 
 [143]
 ! Preview: Snippet 144 started.
 <-><->
       
-l.229    \diff^{0,1}(X)$ mit $
-                              \Supp(\omega) \Subset X \setminus
+l.157   Sei $
+             X$ eine nicht kompakte Riemannsche Fläche. \\
 Not a real error.
 
-! Preview: Snippet 144 ended.(538214+179404x6503719).
+! Preview: Snippet 144 ended.(490372+0x650840).
 <-><->
       
-l.230    \runge(K)$
-                   .\\
+l.157   Sei $X$
+                eine nicht kompakte Riemannsche Fläche. \\
 Not a real error.
 
 [144]
 ! Preview: Snippet 145 started.
 <-><->
       
-l.232    Sei nun $
-                  f \in \hol(Y)$. Wir wollen zeigen, dass $T[f] = 0$. \\
+l.158   Dann existiert ein nicht-verschwindendes $
+                                                  \omega \in \Omega(X)$.
 Not a real error.
 
-! Preview: Snippet 145 ended.(538214+179404x3031143).
+! Preview: Snippet 145 ended.(538214+179404x3076787).
 <-><->
       
-l.232    Sei nun $f \in \hol(Y)$
-                                . Wir wollen zeigen, dass $T[f] = 0$. \\
+l.158 ...ht-verschwindendes $\omega \in \Omega(X)$
+                                                  .
 Not a real error.
 
 [145]
 ! Preview: Snippet 146 started.
 <-><->
       
-l.232 ...f \in \hol(Y)$. Wir wollen zeigen, dass $
-                                                  T[f] = 0$. \\
+l.162   Sei $
+             g$ eine nicht-konstante meromorphe Funktion auf $X$ und $f \in
 Not a real error.
 
-! Preview: Snippet 146 ended.(538214+179404x2661917).
+! Preview: Snippet 146 ended.(308974+139537x368028).
 <-><->
       
-l.232 ...l(Y)$. Wir wollen zeigen, dass $T[f] = 0$
-                                                  . \\
+l.162   Sei $g$
+                eine nicht-konstante meromorphe Funktion auf $X$ und $f \in
 Not a real error.
 
 [146]
-Missing character: There is no ä in font cmti10!
-
 ! Preview: Snippet 147 started.
 <-><->
       
-l.233    Zunächst gilt $
-                         \runge(K) \subset \runge(Y) = Y$. Durch Glättung
+l.162 ...nicht-konstante meromorphe Funktion auf $
+                                                  X$ und $f \in
 Not a real error.
 
-! Preview: Snippet 147 ended.(538214+179404x5591049).
+! Preview: Snippet 147 ended.(490372+0x650840).
 <-><->
       
-l.233 ...st gilt $\runge(K) \subset \runge(Y) = Y$
-                                                  . Durch Glättung
+l.162 ...cht-konstante meromorphe Funktion auf $X$
+                                                   und $f \in
 Not a real error.
 
 [147]
-Missing character: There is no ä in font cmti10!
-Missing character: There is no ö in font cmti10!
-
 ! Preview: Snippet 148 started.
 <-><->
       
-l.235    können wir ein $
-                          g \in \diff(X)$ mit $f \equiv g$ in einer Umgebung
+l.162 ...nstante meromorphe Funktion auf $X$ und $
+                                                  f \in
 Not a real error.
 
-! Preview: Snippet 148 ended.(538214+179404x2897032).
+! Preview: Snippet 148 ended.(538214+179404x3687742).
 <-><->
       
-l.235    können wir ein $g \in \diff(X)$
-                                          mit $f \equiv g$ in einer Umgebung
+l.163   \mer(X)^\ast$
+                      mit $(f) = -(\d[g])$. Diese existiert nach Satz
 Not a real error.
 
 [148]
 ! Preview: Snippet 149 started.
 <-><->
       
-l.235    können wir ein $g \in \diff(X)$ mit $
-                                               f \equiv g$ in einer Umgebung
+l.163   \mer(X)^\ast$ mit $
+                           (f) = -(\d[g])$. Diese existiert nach Satz
 Not a real error.
 
-! Preview: Snippet 149 ended.(498346+139537x1753428).
+! Preview: Snippet 149 ended.(538214+179404x3838727).
 <-><->
       
-l.235 ...wir ein $g \in \diff(X)$ mit $f \equiv g$
-                                                   in einer Umgebung
+l.163   \mer(X)^\ast$ mit $(f) = -(\d[g])$
+                                          . Diese existiert nach Satz
 Not a real error.
 
 [149]
+
+LaTeX Warning: Reference `thm:Lösung-Divisor' on page 2 undefined on input lin
+e 164.
+
 ! Preview: Snippet 150 started.
 <-><->
       
-l.236    von $
-              \runge(K)$ und $\Supp(g) \Subset Y$ finden. \\
+l.165   Dann ist $
+                  \omega := f \d[g]$ die gesuchte 1-Form.
 Not a real error.
 
-! Preview: Snippet 150 ended.(538214+179404x1593019).
+! Preview: Snippet 150 ended.(501072+139537x2955649).
 <-><->
       
-l.236    von $\runge(K)$
-                         und $\Supp(g) \Subset Y$ finden. \\
+l.165   Dann ist $\omega := f \d[g]$
+                                     die gesuchte 1-Form.
 Not a real error.
 
-[150]
-! Preview: Snippet 151 started.
-<-><->
-      
-l.236    von $\runge(K)$ und $
-                              \Supp(g) \Subset Y$ finden. \\
-Not a real error.
-
-! Preview: Snippet 151 ended.(538214+179404x4053799).
-<-><->
-      
-l.236    von $\runge(K)$ und $\Supp(g) \Subset Y$
-                                                  finden. \\
-Not a real error.
-
-[151]
-! Preview: Snippet 152 started.
-<-><->
-      
-l.237    Also liegt $
-                     \Supp(f - g|_Y) \subset Y \ K$, somit $T[f- g|_Y] = 0$
-Not a real error.
-
-! Preview: Snippet 152 ended.(538214+179404x6955778).
-<-><->
-      
-l.237 ...lso liegt $\Supp(f - g|_Y) \subset Y \ K$
-                                                  , somit $T[f- g|_Y] = 0$
-Not a real error.
-
-[152]
-! Preview: Snippet 153 started.
-<-><->
-      
-l.237 ... $\Supp(f - g|_Y) \subset Y \ K$, somit $
-                                                  T[f- g|_Y] = 0$
-Not a real error.
-
-! Preview: Snippet 153 ended.(538214+179404x4585791).
-<-><->
-      
-l.237 ...Y) \subset Y \ K$, somit $T[f- g|_Y] = 0$
-                                                  
-Not a real error.
-
-[153]
-! Preview: Snippet 154 started.
-<-><->
-      
-l.238    und schlussendlich $
-                             T[f] = T[g|_Y] = S[\d[''g]]$. \\
-Not a real error.
-
-! Preview: Snippet 154 ended.(582087+179404x7325771).
-<-><->
-      
-l.238 ...lussendlich $T[f] = T[g|_Y] = S[\d[''g]]$
-                                                  . \\
-Not a real error.
-
-[154]
-! Preview: Snippet 155 started.
-<-><->
-      
-l.239    Nun ist aber $
-                       g$ in einer Umgebung von $\runge(K)$ holomorph, was
-Not a real error.
-
-! Preview: Snippet 155 ended.(308974+139537x368028).
-<-><->
-      
-l.239    Nun ist aber $g$
-                          in einer Umgebung von $\runge(K)$ holomorph, was
-Not a real error.
-
-[155]
-! Preview: Snippet 156 started.
-<-><->
-      
-l.239    Nun ist aber $g$ in einer Umgebung von $
-                                                 \runge(K)$ holomorph, was
-Not a real error.
-
-! Preview: Snippet 156 ended.(538214+179404x1593019).
-<-><->
-      
-l.239 ...ber $g$ in einer Umgebung von $\runge(K)$
-                                                   holomorph, was
-Not a real error.
-
-[156]
-! Preview: Snippet 157 started.
-<-><->
-      
-l.240    nichts anderes bedeutet als $
-                                      \Supp(\d[''g]) \Subset X \setminus
-Not a real error.
-
-! Preview: Snippet 157 ended.(582087+179404x7252556).
-<-><->
-      
-l.241    \runge(K)$
-                   . \\
-Not a real error.
-
-[157]
-
-LaTeX Warning: Reference `eq:runge' on page 2 undefined on input line 242.
-
-! Preview: Snippet 158 started.
-<-><->
-      
-l.243    \[
-           
-Not a real error.
-
-! Preview: Snippet 158 ended.(806426+0x27410796).
-<-><->
-      
-l.245    \]
-           
-Not a real error.
-
-[158]
-! Preview: Snippet 159 started.
-<-><->
-      
-l.249   Sei $
-             X$ eine nicht kompakte Riemannsche Fläche, $Y \subset X$ eine
-Not a real error.
-
-! Preview: Snippet 159 ended.(490372+0x650840).
-<-><->
-      
-l.249   Sei $X$
-                eine nicht kompakte Riemannsche Fläche, $Y \subset X$ eine
-Not a real error.
-
-[159]
-Missing character: There is no ä in font cmti10!
-
-! Preview: Snippet 160 started.
-<-><->
-      
-l.249 ...ine nicht kompakte Riemannsche Fläche, $
-                                                  Y \subset X$ eine
-Not a real error.
-
-! Preview: Snippet 160 ended.(490372+28057x2183749).
-<-><->
-      
-l.249 ...mpakte Riemannsche Fläche, $Y \subset X$
-                                                   eine
-Not a real error.
-
-[160]
-! Preview: Snippet 161 started.
-<-><->
-      
-l.251   Dann kann jede holomorphe Funktion auf $
-                                                Y$ auf beliebigen Kompakta
-Not a real error.
-
-! Preview: Snippet 161 ended.(490372+0x576089).
-<-><->
-      
-l.251   Dann kann jede holomorphe Funktion auf $Y$
-                                                   auf beliebigen Kompakta
-Not a real error.
-
-[161]
-Missing character: There is no ä in font cmti10!
-Missing character: There is no ß in font cmti10!
-
-! Preview: Snippet 162 started.
-<-><->
-      
-l.252 ...ig durch holomorphe Funktionen auf ganz $
-                                                  X$ approximiert werden.
-Not a real error.
-
-! Preview: Snippet 162 ended.(490372+0x650840).
-<-><->
-      
-l.252 ... durch holomorphe Funktionen auf ganz $X$
-                                                   approximiert werden.
-Not a real error.
-
-[162]
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 257.
-
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 257.
-
-! Preview: Snippet 163 started.
-<-><->
-      
-l.257   \item[Fall $
-                    Y \Subset X$:] Seien $f \in \hol(Y)$, $K \subset Y$
-Not a real error.
-
-! Preview: Snippet 163 ended.(490372+25241x2183749).
-<-><->
-      
-l.257   \item[Fall $Y \Subset X$
-                                :] Seien $f \in \hol(Y)$, $K \subset Y$
-Not a real error.
-
-[163]
-! Preview: Snippet 164 started.
-<-><->
-      
-l.257   \item[Fall $Y \Subset X$:] Seien $
-                                          f \in \hol(Y)$, $K \subset Y$
-Not a real error.
-
-! Preview: Snippet 164 ended.(538214+179404x3031143).
-<-><->
-      
-l.257 ...all $Y \Subset X$:] Seien $f \in \hol(Y)$
-                                                  , $K \subset Y$
-Not a real error.
-
-[164]
-! Preview: Snippet 165 started.
-<-><->
-      
-l.257 ... $Y \Subset X$:] Seien $f \in \hol(Y)$, $
-                                                  K \subset Y$
-Not a real error.
-
-! Preview: Snippet 165 ended.(490372+28057x2193716).
-<-><->
-      
-l.257 ...X$:] Seien $f \in \hol(Y)$, $K \subset Y$
-                                                  
-Not a real error.
-
-[165]
-! Preview: Snippet 166 started.
-<-><->
-      
-l.258     kompakt und $
-                       \epsilon > 0$ gegeben. \\
-Not a real error.
-
-! Preview: Snippet 166 ended.(462465+28057x1650268).
-<-><->
-      
-l.258     kompakt und $\epsilon > 0$
-                                     gegeben. \\
-Not a real error.
-
-[166]
-Missing character: There is no ö in font cmti10!
-
-! Preview: Snippet 167 started.
-<-><->
-      
-l.260 ... (23.9) erhalten wir eine Ausschöpfung $
-                                                  Y_1
-Not a real error.
-
-! Preview: Snippet 167 ended.(490372+107642x4326296).
-<-><->
-      
-l.261     \Subset Y_2 \Subset \dots$
-                                     von $X$ mit $Y_0 := Y \Subset Y_1$. \\
-Not a real error.
-
-[167]
-! Preview: Snippet 168 started.
-<-><->
-      
-l.261     \Subset Y_2 \Subset \dots$ von $
-                                          X$ mit $Y_0 := Y \Subset Y_1$. \\
-Not a real error.
-
-! Preview: Snippet 168 ended.(490372+0x650840).
-<-><->
-      
-l.261     \Subset Y_2 \Subset \dots$ von $X$
-                                             mit $Y_0 := Y \Subset Y_1$. \\
-Not a real error.
-
-[168]
-! Preview: Snippet 169 started.
-<-><->
-      
-l.261     \Subset Y_2 \Subset \dots$ von $X$ mit $
-                                                  Y_0 := Y \Subset Y_1$. \\
-Not a real error.
-
-! Preview: Snippet 169 ended.(490372+107642x4144904).
-<-><->
-      
-l.261 ...\dots$ von $X$ mit $Y_0 := Y \Subset Y_1$
-                                                  . \\
-Not a real error.
-
-[169]
-
-LaTeX Warning: Reference `thm:runge-dicht' on page 2 undefined on input line 26
-2.
-
-! Preview: Snippet 170 started.
-<-><->
-      
-l.262 ...atz \ref{thm:runge-dicht} existiert ein $
-                                                  f \in \hol(Y_1)$
-Not a real error.
-
-! Preview: Snippet 170 ended.(538214+179404x3182972).
-<-><->
-      
-l.262 ...ge-dicht} existiert ein $f \in \hol(Y_1)$
-                                                  
-Not a real error.
-
-[170]
-! Preview: Snippet 171 started.
-<-><->
-      
-l.264     \[
-            
-Not a real error.
-
-! Preview: Snippet 171 ended.(813578+0x27410796).
-<-><->
-      
-l.266     \]
-            
-Not a real error.
-
-[171]
-
-LaTeX Warning: Reference `thm:runge-dicht' on page 2 undefined on input line 26
-7.
-
-! Preview: Snippet 172 started.
-<-><->
-      
-l.268     von Funktionen $
-                          f_n \in \hol(Y_n)$ mit
-Not a real error.
-
-! Preview: Snippet 172 ended.(538214+179404x3535964).
-<-><->
-      
-l.268     von Funktionen $f_n \in \hol(Y_n)$
-                                             mit
-Not a real error.
-
-[172]
-! Preview: Snippet 173 started.
-<-><->
-      
-l.269     \[
-            
-Not a real error.
-
-! Preview: Snippet 173 ended.(926574+0x27410796).
-<-><->
-      
-l.272     \]
-            
-Not a real error.
-
-[173]
-Missing character: There is no ü in font cmti10!
-
-! Preview: Snippet 174 started.
-<-><->
-      
-l.273     Nun gilt für beliebige $
-                                   n \in \N$:
-Not a real error.
-
-! Preview: Snippet 174 ended.(494359+28057x1826105).
-<-><->
-      
-l.273     Nun gilt für beliebige $n \in \N$
-                                            :
-Not a real error.
-
-[174]
-! Preview: Snippet 175 started.
-<-><->
-      
-l.274     \[
-            
-Not a real error.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.277       \infty} 0 \qquad \forall $\nu
-                                          q n$
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-! LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.278     \]
-            
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra }, or forgotten $.
-\endmathdisplay@fleqn ...kip \@mathmargin \egroup 
-                                                  \ifnum \badness <\inf@bad ...
-l.278     \]
-            
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.278     \]
-            
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.278     \]
-            
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.278     \]
-            
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.278     \]
-            
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-! Preview: Snippet 175 ended.(0+0x13705398).
-<-><->
-      
-l.278     \]
-            
-Not a real error.
-
-[175]
-! Preview: Snippet 176 started.
-<-><->
-      
-l.279     Also konvergiert $
-                            (f_\nu)_{\nu > n}$ gleichmäßig auf $Y_n$ für
-Not a real error.
-
-! Preview: Snippet 176 ended.(538214+179404x2362522).
-<-><->
-      
-l.279     Also konvergiert $(f_\nu)_{\nu > n}$
-                                               gleichmäßig auf $Y_n$ für
-Not a real error.
-
-[176]
-Missing character: There is no ä in font cmti10!
-Missing character: There is no ß in font cmti10!
-
-! Preview: Snippet 177 started.
-<-><->
-      
-l.279 ...t $(f_\nu)_{\nu > n}$ gleichmäßig auf $
-                                                  Y_n$ für
-Not a real error.
-
-! Preview: Snippet 177 ended.(490372+107642x787386).
-<-><->
-      
-l.279 ...f_\nu)_{\nu > n}$ gleichmäßig auf $Y_n$
-                                                   für
-Not a real error.
-
-[177]
-Missing character: There is no ü in font cmti10!
-
-! Preview: Snippet 178 started.
-<-><->
-      
-l.280     jedes $
-                 n \in \N$ und damit existiert ein $F \in \hol(X)$, so dass
-Not a real error.
-
-! Preview: Snippet 178 ended.(494359+28057x1826105).
-<-><->
-      
-l.280     jedes $n \in \N$
-                           und damit existiert ein $F \in \hol(X)$, so dass
-Not a real error.
-
-[178]
-! Preview: Snippet 179 started.
-<-><->
-      
-l.280 ...edes $n \in \N$ und damit existiert ein $
-                                                  F \in \hol(X)$, so dass
-Not a real error.
-
-! Preview: Snippet 179 ended.(538214+179404x3238453).
-<-><->
-      
-l.280 ...$ und damit existiert ein $F \in \hol(X)$
-                                                  , so dass
-Not a real error.
-
-[179]
-! Preview: Snippet 180 started.
-<-><->
-      
-l.281     $
-           f_\nu \rightrightarrow F$ auf jedem $Y_n$. \\
-Not a real error.
-
-! Undefined control sequence.
-l.281     $f_\nu \rightrightarrow
-                                  F$ auf jedem $Y_n$. \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Preview: Snippet 180 ended.(498346+139537x1253357).
-<-><->
-      
-l.281     $f_\nu \rightrightarrow F$
-                                     auf jedem $Y_n$. \\
-Not a real error.
-
-[180]
-! Preview: Snippet 181 started.
-<-><->
-      
-l.281     $f_\nu \rightrightarrow F$ auf jedem $
-                                                Y_n$. \\
-Not a real error.
-
-! Preview: Snippet 181 ended.(490372+107642x787386).
-<-><->
-      
-l.281 ...f_\nu \rightrightarrow F$ auf jedem $Y_n$
-                                                  . \\
-Not a real error.
-
-[181]
-! Preview: Snippet 182 started.
-<-><->
-      
-l.283     \begin{align*}
-                        
-Not a real error.
-
-! Double subscript.
-<argument> ...-1}\|_{\bar Y_{k-2}} \\ & < \|F _ f_
-                                                  n \|_{Y_n} + \epsilon \sum...
-l.288     \end{align*}
-                      
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-<argument> ...-1}\|_{\bar Y_{k-2}} \\ & < \|F _ f_
-                                                  n \|_{Y_n} + \epsilon \sum...
-l.288     \end{align*}
-                      
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Preview: Snippet 182 ended.(5785319+0x16435279).
-<-><->
-      
-l.288     \end{align*}
-                      
-Not a real error.
-
-[182]
-! Preview: Snippet 183 started.
-<-><->
-      
-l.289   \item[Fall $
-                    Y \subset X$ nicht relativ kompakt:] Auch hier wählen
-Not a real error.
-
-! Preview: Snippet 183 ended.(490372+28057x2183749).
-<-><->
-      
-l.289   \item[Fall $Y \subset X$
-                                 nicht relativ kompakt:] Auch hier wählen
-Not a real error.
-
-[183]
-Missing character: There is no ä in font cmti10!
-
-! Preview: Snippet 184 started.
-<-><->
-      
-l.290     wir $
-               f \in \hol(Y)$, $K \subset Y$ kompakt und $\epsilon > 0$. \\
-Not a real error.
-
-! Preview: Snippet 184 ended.(538214+179404x3031143).
-<-><->
-      
-l.290     wir $f \in \hol(Y)$
-                             , $K \subset Y$ kompakt und $\epsilon > 0$. \\
-Not a real error.
-
-[184]
-! Preview: Snippet 185 started.
-<-><->
-      
-l.290     wir $f \in \hol(Y)$, $
-                                K \subset Y$ kompakt und $\epsilon > 0$. \\
-Not a real error.
-
-! Preview: Snippet 185 ended.(490372+28057x2193716).
-<-><->
-      
-l.290     wir $f \in \hol(Y)$, $K \subset Y$
-                                             kompakt und $\epsilon > 0$. \\
-Not a real error.
-
-[185]
-! Preview: Snippet 186 started.
-<-><->
-      
-l.290 ...\in \hol(Y)$, $K \subset Y$ kompakt und $
-                                                  \epsilon > 0$. \\
-Not a real error.
-
-! Preview: Snippet 186 ended.(462465+28057x1650268).
-<-><->
-      
-l.290 ... $K \subset Y$ kompakt und $\epsilon > 0$
-                                                  . \\
-Not a real error.
-
-[186]
-Missing character: There is no ö in font cmti10!
-
-! Preview: Snippet 187 started.
-<-><->
-      
-l.291     In diesem Fall können wir $
-                                      L \subset Y$ kompakt finden mit $K \su...
-
-Not a real error.
-
-! Preview: Snippet 187 ended.(490372+28057x2021289).
-<-><->
-      
-l.291     In diesem Fall können wir $L \subset Y$
-                                                   kompakt finden mit $K \su...
-
-Not a real error.
-
-[187]
-! Preview: Snippet 188 started.
-<-><->
-      
-l.291 ...en wir $L \subset Y$ kompakt finden mit $
-                                                  K \subset
-Not a real error.
-
-! Preview: Snippet 188 ended.(679744+28057x2106007).
-<-><->
-      
-l.292     \mathring L$
-                      . Dies ist möglich in dem wir $K$ durch endlich viele...
-
-Not a real error.
-
-[188]
-Missing character: There is no ö in font cmti10!
-
-! Preview: Snippet 189 started.
-<-><->
-      
-l.292 ...thring L$. Dies ist möglich in dem wir $
-                                                  K$ durch endlich viele rel...
-
-Not a real error.
-
-! Preview: Snippet 189 ended.(490372+0x660807).
-<-><->
-      
-l.292 ...ring L$. Dies ist möglich in dem wir $K$
-                                                   durch endlich viele relativ
-Not a real error.
-
-[189]
-Missing character: There is no ü in font cmti10!
-
-! Preview: Snippet 190 started.
-<-><->
-      
-l.297     $
-           \tilde Y \subset X$ mit $K \subset \tilde Y \subset L$. \\
-Not a real error.
-
-! Preview: Snippet 190 ended.(660666+28057x2183749).
-<-><->
-      
-l.297     $\tilde Y \subset X$
-                               mit $K \subset \tilde Y \subset L$. \\
-Not a real error.
-
-[190]
-! Preview: Snippet 191 started.
-<-><->
-      
-l.297     $\tilde Y \subset X$ mit $
-                                    K \subset \tilde Y \subset L$. \\
-Not a real error.
-
-! Preview: Snippet 191 ended.(660666+28057x3638916).
-<-><->
-      
-l.297 ...set X$ mit $K \subset \tilde Y \subset L$
-                                                  . \\
-Not a real error.
-
-[191]
-! Preview: Snippet 192 started.
-<-><->
-      
-l.298     Damit ist $
-                     \tilde Y \Subset X$ und $f$ kann als Funktion von
-Not a real error.
-
-! Preview: Snippet 192 ended.(660666+25241x2183749).
-<-><->
-      
-l.298     Damit ist $\tilde Y \Subset X$
-                                         und $f$ kann als Funktion von
-Not a real error.
-
-[192]
-! Preview: Snippet 193 started.
-<-><->
-      
-l.298     Damit ist $\tilde Y \Subset X$ und $
-                                              f$ kann als Funktion von
-Not a real error.
-
-! Preview: Snippet 193 ended.(498346+139537x428580).
-<-><->
-      
-l.298     Damit ist $\tilde Y \Subset X$ und $f$
-                                                 kann als Funktion von
-Not a real error.
-
-[193]
-! Preview: Snippet 194 started.
-<-><->
-      
-l.299     $
-           \hol(\tilde Y)$ aufgefasst werden und schlussendlich können wir
-Not a real error.
-
-! Preview: Snippet 194 ended.(660666+179404x1725479).
-<-><->
-      
-l.299     $\hol(\tilde Y)$
-                           aufgefasst werden und schlussendlich können wir
-Not a real error.
-
-[194]
-Missing character: There is no ö in font cmti10!
-
-! Preview: Snippet 195 started.
-<-><->
-      
-l.300 ...n obigen Fall anwenden und erhalten ein $
-                                                  F \in \hol(X)$ mit
-Not a real error.
-
-! Preview: Snippet 195 ended.(538214+179404x3238453).
-<-><->
-      
-l.300 ...anwenden und erhalten ein $F \in \hol(X)$
-                                                   mit
-Not a real error.
-
-[195]
-! Preview: Snippet 196 started.
-<-><->
-      
-l.301     $
-           \|f|_{\tilde Y} - F\|_K = \|f - F\|_K < \epsilon$.
-Not a real error.
-
-! Preview: Snippet 196 ended.(538214+236955x9175060).
-<-><->
-      
-l.301 ...ilde Y} - F\|_K = \|f - F\|_K < \epsilon$
-                                                  .
-Not a real error.
-
-[196]  !name(../Bachelor.tex) !offset(-289) 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 312.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 312.
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 312.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 312.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+[150]  !name(../Bachelor.tex) !offset(-145) 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 176.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 176.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 176.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 176.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 312.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 176.
  ) 
 Here is how much of TeX's memory you used:
- 22462 strings out of 495716
- 388490 string characters out of 3188883
- 464102 words of memory out of 3000000
- 25210 multiletter control sequences out of 15000+200000
- 11600 words of font info for 43 fonts, out of 3000000 for 9000
+ 30529 strings out of 495716
+ 595209 string characters out of 3188883
+ 652226 words of memory out of 3000000
+ 33183 multiletter control sequences out of 15000+200000
+ 9196 words of font info for 60 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 67i,20n,71p,687b,483s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 67i,13n,74p,858b,956s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on _region_.pdf (196 pages).
+Output written on _region_.pdf (150 pages).

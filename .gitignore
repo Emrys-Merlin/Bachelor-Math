@@ -1,0 +1,6 @@
+*.aux
+*.log
+*.bbl
+*.xml
+_region_.prv/
+auto/

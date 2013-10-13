@@ -17,5 +17,6 @@
      "eq:v-absch"
      "eq:dirichlet-rand"
      "lemma:regulär-trennen"
-     "thm:dirichlet")))
+     "thm:dirichlet"
+     "thm:reg-rand")))
 

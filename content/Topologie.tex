@@ -76,14 +76,20 @@
     $\be_n$ besteht asu allen $V \in \be$, so dass $V_0, \dots, V_n
     \in \be$ existieren mit $V_0 = V^\ast$, $V_n = V$ und $V_{k-1}
     \cap V_k \neq \varnothing$ für $k = 1, \dots, n$. \\
-    % TODO: eventuell genauer erklären: Durch Wege verbinden und überdecken
     Da $X$ zusammenhängend ist folgt $\bigcup_{n \in \N} \be_n =
-    \be$. \\
-    Also reduziert sich unser Problem darauf zu zeigen, dass $\be_n$
+    \be$, denn für ein $V \in \be$ wählen wir ein $y \in V$ und ein $x
+    \in V^\ast$. Dann existiert eine Kurve $c: [0,1] \ra X$ mit $c(0)
+    = x$ und $c(1) = y$. Weiterhin ist $c([0,1])$ kompakt und damit
+    finden wir eine endliche offene Überdeckung $V_0, \dots, V_n$ von
+    $c([0,1])$, wobei $V_o = V^\ast$ und $V_n = V$ ist. Weiterhin
+    können wir nach einer Umsortierung ohne Einschränkung annehmen,
+    dass $V_{i-1} \cap V_{i} \neq \varnothing$ für alle $i= 1, \dots,
+    n$ gilt. Also liegt $V \in \be_n$.
+    Damit reduziert sich unser Problem darauf zu zeigen, dass $\be_n$
     für jedes $n \in \N$ abzählbar ist; dies tun wir induktiv. \\
     Klarerweise ist $\be_0 = \{V^\ast\}$ abzählbar. Angenommen $\be_n$
-    ist abzählbar. $\be_{n+1}$ besteht dann aus allen $V \in be$, so
-    dass ein $\tilde V \in be_n$ existiert mit $V \cap \tilde V \neq
+    ist abzählbar. $\be_{n+1}$ besteht dann aus allen $V \in \be$, so
+    dass ein $\tilde V \in \be_n$ existiert mit $V \cap \tilde V \neq
     \varnothing$. Nach 2. existieren zu jedem $\tilde V \in be_n$ nur
     abzählbar viele $V$, die nicht-leeren Schnitt damit besitzen. \\
     Da $\be_n$ nun abzählbar ist und pro $\tilde V$ nur abzählbar
@@ -92,9 +98,10 @@
   Damit besitzt $X$ eine abzählbare Basis der Topologie.
 \end{proof}
 
-\begin{thm}[Rad´o]
-  \label[thm:rado]
-  Jede Riemannsche Fläche $X$ besitzt eine abzählbare Basis der Topologie.
+\begin{thm}[Rado]
+  Jede Riemannsche Fläche $X$ besitzt eine abzählbare Basis der
+  Topologie.
+  \label{thm:rado}
 \end{thm}
 
 \begin{proof}
@@ -102,21 +109,21 @@
   U$, so dass $z(K_0)$ und $z(K_1)$ disjunkte, kompakte Kreisscheiben
   sind und setze $Y := X \setminus (K_0 \cup K_1)$. \\
   Nun genügt $\partial Y = \partial K_0 \cap \partial K_1$ dem
-  % TODO: Referenz
-  Regulariätskriterium von (22.18). Also existiert eine stetige
+  Regulariätskriterium von Satz \ref{thm:reg-rand}. Also existiert
+  nacht Satz \ref{thm:dirichlet} eine stetige
   Funktion $u: \bar Y \ra \R$, die harmonisch auf $Y$ ist und
   $u|_{\partial K_0} \equiv 0$ und $u|_{\partial K_1} \equiv 1$
   genügt. \\
   Da $u$ aufgrund der Randwerte nicht konstant sein kan erahlten wir
   eine nicht-triviale holomorphe 1-Form $\omega := d' U$ auf $Y$. \\
-  % TODO: Referenz? Wo genau...
-  Sei $f$ eine holomorphe Stammfunktion von $p^\ast\omega$ auf der
-  universellen Überlagerung $p: \tilde Y \ra Y$. \\
+  Nach \cite[Kor. 10.6]{For} existiert eine holomorphe Stammfunktion
+  $f$ von $p^\ast\omega$ auf der universellen Überlagerung $p: \tilde
+  Y \ra Y$.\\
   Da $f$ nicht konstant ist, genügt $f$ den Voraussetzungen von
-  Lemma \label{lemma:poincare-volterra} (denn $\C$ ist hausdorffsch
+  Lemma \ref{lemma:poincare-volterra} (denn $\C$ ist hausdorffsch
   und besitzt eine abzählbare Basis der Topologie). Also besitzt auch
   $\tilde y$ eine abzählbare Basis der Topologie und aus
-  Lemma \label{lemma:surj-offen-top} folgt, dass $Y$ eine abzählbare
+  Lemma \ref{lemma:surj-offen-top} folgt, dass $Y$ eine abzählbare
   Basis der Topologie. \\
   Nun ist $X = Y \cup U$ und $U$ ist homöomorph zu einer offenen
   Teilmenge in $\C$, besitzt also auch eine abzählbare Basis der
@@ -132,8 +139,7 @@
   $Y \subset X$ heißt \init{Runge-Teilmenge} falls $Y = \runge(Y)$. \\
   Es gilt:
   \begin{enumerate}
-  \item $\runge(\runge(Y)) = \runge(Y) \quad \forall Y \subset X$
-    %TODO: Referenz!
+  \item $\runge(\runge(Y)) = \runge(Y) \quad \forall Y \subset X$ \todo{ausrechnen}
   \item $Y_1 \subset Y_2$ impliziert $\runge(Y_1) \subset \runge(Y_2)$
   \end{enumerate}
 \end{defin}
@@ -159,10 +165,11 @@
     und ist damit offen, als Vereinigung offener Mengen und folglich
     ist $\runge(Y)$ abgeschlossen.
   \item Wir können ohne Einschränkung $Y \neq \varnothing$
-    % TODO: evtl. genauer rel komp Umgebung U. Überdeckung durch
-    % rel. komp KoordUmg
-    annehmen. Sei $U$ eine offene, relativ kompakte Umgebung von $Y$
-    und $C_j, j\in J$ wie oben.
+    annehmen. Sei $U$ eine offene, relativ kompakte Umgebung von
+    $Y$. Diese existiert, denn wir können $Y$ durch endlich viele
+    relativ kompakte Koordinatenumgebungen überdecken. Die Vereinigung
+    dieser Koordinatenumgebungen ergibt dann unser $U$. Sei weiterhin
+    $C_j, j\in J$ wie oben.
     \begin{enumerate}
     \item Behauptung: Jedes $C_j$ trifft $\bar U$. \\
       Ansonsten wäre $C_j \subset X \setminus \bar U$, also $\bar C_j
@@ -176,8 +183,7 @@
     \end{enumerate}
     Seien nun wieder $C_j, j \in J_0$ die relativ kompakten
     Zusammenhangskomponente von $X \setminus Y$ und $C_{j_1}, \dots,
-    % TODO: Referenz
-    C_{j_n}$ diejenigen, die $\partial U$ schneiden. Nach AKSDF(a)
+    C_{j_n}$ diejenigen, die $\partial U$ schneiden. Nach a)
     liegen alle anderen relativ kompakten Zusammenhangskomponenten in
     $U$. Also ist
     \[
@@ -186,6 +192,89 @@
     und damit relativ kompakt. Da $\runge(Y)$ nach 1. aber auch
     abgeschlossen ist, ist es tatsächlich kompakt
   \end{enumerate}
+\end{proof}
+
+
+\begin{thm}
+  \label{thm:kompakte-ausschöpfung}
+  Sei $X$ eine Riemannsche Fläche. Dann existiert eine Folge kompakter Mengen
+  $(K_n)_{n \in \N}$, die folgende Eigenschaften erfüllt:
+  \begin{enumerate}
+  \item Es gilt $K_n \subset \mathring K_{n+1}$ für jedes $n \in \N$ und
+  \item $X = \bigcup_{n \in \N}$.
+  \end{enumerate}
+\end{thm}
+
+\begin{proof}
+  Nach Satz \ref{thm:rado} besitzt $X$ eine abzählbare Basis der
+  Topologie. Wir bezeichnen Diese mit $\be$. Dann definieren wir
+  \[
+  \fu := \{ B \in \be \mid \bar B \text{ ist kompakt}\}.
+  \]
+  Wir behaupten nun, dass bereits $\fu$ eine Basis der Topologie von
+  $X$ ist. Sei dazu $\varnothing \neq U \subset X$ und $x \in U$. Dann
+  können wir eine relativ kompakte Koordinatenumgebung $V \subset U$
+  von $x$ finden. Da $\be$ eine Basis der Topologie ist, finden wir
+  ein $B \in \be$, so dass $x \in B \subset V$. Also ist $\bar B
+  \subset \bar V$ kompakt und damit liegt $B \in \fu$ und es gilt $x
+  \in B \subset U$. Also ist $\fu$ eine weiter abzählbare Basis der
+  Topologie von $X$.
+
+  Wir wählen nun eine Aufzählung für $\fu = \{B_i \mid i \in \N\}$ und
+  setzen $K_1 := \bar B_1$. Wir konstruieren nun induktiv die
+  gewünschte Folge von kompakten Teilmengen. $K_1$ wurde bereits
+  konstruiert und wir setzen $k_1 = 1$. Gehen wir davon aus, dass auch
+  $K_n$ und $k_n$ bereits
+  konstruiert wurden, so gilt $K_n \subset \bigcup_{i=1}^\infty
+  B_i$. Da $K_n$ kompakt ist, existiert ein $k_{n+1} \in \N$, so dass $K_n
+  \subset \bigcup_{i=1}^{k_{n+1}} B_i$. Setzen wir $K_{n+1} :=
+  \bigcup_{i=1}^{k_{n+1}}\bar B_i$, so gilt $K_n \subset \mathring
+  K_{n+1}$ und weiterhin ist $K_{n+1}$ kompakt. Weiterhin gilt
+  $k_{n+1} > k_n$.
+
+  Es bleibt nun nur noch zu zeigen, dass $X = \bigcup_{n \in \N} K_n$
+  gilt. Sei dazu $x \in X$ beliebig gewählt. Dann existiert ein $B_j \in
+  \fu$, so dass $x \in B_j$. Da $(k_n)_{n \in\N}$ streng monoton
+  wachsend ist, existiert ein $N \in \N$, so dass $x \in K_N =
+  \bigcup_{i=1}^{k_N} \bar B_i$ gilt.
+\end{proof}
+
+\begin{lemma}
+  \label{lemma:kompakt-in-ausschöpfung}
+  Sei $X$ eine Riemannsche Fläche und $(K_n)_{n \in \N}$ eine kompakte
+  Ausschöpfung von $X$ mit $K_n \subset \mathring K_{n+1}$ für alle $n
+  \in \N$. Sei weiterhin $K \subset X$ kompakt. Dann existiert ein $n
+  \in \N$, so dass $K \subset K_n$.
+\end{lemma}
+
+\begin{proof}
+  Angenommen es gälte $K \not \subset K_n$ für jedes $n \in \N$. Dann
+  fänden wir zu jedem $n \in \N$ ein $x_n \in K\setminus K_n$. Da $K$
+  kompakt ist, existierte eine konvergente Teilfolge $(x_{n_k})_{k\in
+    \N}$ mit Grenzwert $x \in K$. Nun existiert aber ein $n \in \N$,
+  so dass $x \in \mathring K_n$ gilt. Damit wäre $\mathring K_n$ eine offene
+  Umgebung von $x$ und wir fänden ein $K \in \N$, so dass $x_{n_k} \in
+  K_n$ für jedes $k\geq K$ gälte. Das aber bedeutete, dass eine
+  zweites $\tilde K \in \N$ existieren müsste, so dass $x_{n_k} \in K_{n_k}$
+  für alle $k \geq \tilde K$ gälte. Dies ist aber ein Widerspruch dazu,
+  dass $x_n \in K \setminus K_n$ gilt.
+\end{proof}
+
+
+\begin{lemma}
+  \label{lemma:komp-enthalten}
+  Sei $X$ eine Riemannsche Fläche und $K \subset X$ kompakt. Dann
+  existiert ein offenes $M \Subset X$ mit $K \subset M$.
+\end{lemma}
+
+\begin{proof}
+  Zu jedem $z \in K$ finden wir eine relativ kompakte
+  Koordinatenumgebung $U_z$. Dann ist aber $K \subset \bigcup_{z \in
+    K}U_z$ und aus der Kompaktheit von $K$ folgt, dass endlich viele
+  $z_1, \dots, z_n \in K$ existieren, so dass $K \subset
+  \bigcup_{i=1}^n U_{z_i}$. Setzen wir $M := \bigcup_{i=1}^n U_{z_i}$,
+  so ist $M$ offen und relativ kompakt, weiterhin gilt $K \subset M$,
+  was die Behauptung zeigt.
 \end{proof}
 
 \begin{cor}
@@ -199,7 +288,7 @@
 \end{cor}
 
 \begin{proof}
-  Da $X$ eine abzählbare Basis der Topologie besitzt existiert, eine
+  Nach Sat \ref{thm:kompakte-ausschöpfung} existiert eine 
   Ausschöpfung
   \[
   K_0' \subset K_1' \subset \dots
@@ -207,9 +296,11 @@
   durch Kompakta von $X$. \\
   Setze nun $K_0 := \runge(K_0')$ \\
   Seien $K_0, \dots, K_n$ bereits konstruiert. Dann existiert ein
-  % TODO: Konstruktion von M. Wieder durch Koordumgebungen überdecken.
-  kompaktes $M \subset X$ mit $K_n' \cup K_n \subset \subset \mathring
-  M$. Setze dann $K_{n+1} := \runge(M)$.
+  kompaktes $M \subset X$ mit $K_n' \cup K_n \subset \mathring
+  M$. Dieses $M$ erhalten wir, in dem wir $K_n'$ und $K_n$ durch
+  endlich viele, relativ kompakte Koordinatenumgebungen
+  überdecken. $M$ ist dann deren Vereinigung. Anschließend setzen wir
+  $K_{n+1} := \runge(M)$.
 \end{proof}
 
 \begin{lemma}
@@ -249,7 +340,7 @@
 \begin{proof}
   \begin{enumerate}
   \item Seien $Y_i, i \in I$, die Zusammenhangskomponenten von
-    % TODO: Warum offen? evtl. infinty viele ZshKomp. Dann gibt es GegBsp
+    \todo{Warum offen? evtl. infinty viele ZshKomp. Dann gibt es GegBsp}
     $Y$. $Y$ ist offen und $X$ ist eine Mannigfaltigkeit, also sind
     alle $Y_i$ offen. \\
     Setze nun $A := X \setminus Y$ und $A_k, k\in \N$ die
@@ -264,7 +355,7 @@
     Zusammenhangskomponente von $X \setminus Y_i$. \\
     Ansonsten gäbe es ein $j \neq i$, so dass $C \cap Y_j \neq
     \varnothing$. \\
-    % TODO: Warum?? Irgendwas weil beides zsh ist.
+    \todo{Warum?? Irgendwas weil beides zsh ist.}
     Nun ist aber $C$ abgeschlossen und $Y_j$ zusammenhängend, also
     $\bar Y_j \subset C$ und damit ist $C \cap Y_j \neq \varnothing$.
   \item Sei nun $C$ eine Zusammenhangskomponente von $X \setminus
@@ -283,17 +374,23 @@
 \end{thm}
 
 \begin{proof}
-  % TODO: zusammenhängende kompakte Mengen: Endliche viele ZshKomp +
-  % Verbinden durch Kurve
-  Sei $K \subset X$ kompakt. Dann existiert ein zusammenhängendes und
-  kompaktes $K_1 \supset K$ und ein kompaktes $K_2 \subset X$ mit $K_1
-  \subset \mathring{K_2}$. Nach Lemma \ref{lemma:zwischen-runge}
+  Sei $K \subset X$ kompakt. Da $K$ kompakt ist, kann es nur endlich
+  viele Zusammenhangskomponenten besitzen, ansonsten könnten wir eine
+  Folge ohne konvergente Teilfolgen konstruieren. Wählen wir nun aus
+  jeder dieser endlich vielen Zusammenhangskomponenten einen Punkt
+  aus, so können wir diese durch endlich viele Kurven
+  verbinden. Vereinigen wir nun $K$ mit den Bildern der Kurven, die
+  auch kompakt sind, so ist dies eine endliche Vereinigung und das
+  Resultat ist wieder kompakt und nach Konstruktion
+  zusammenhängend. Wir bezeichnen es mit $K_1$. Es folgt $K \subset
+  K_1$. Nach \ref{lemma:komp-enthalten} finden wir ein kompaktes $K_2
+  \subset X$ mit $K_1 \subset \mathring{K_2}$. Nach Lemma
+  \ref{lemma:zwischen-runge}
   existiert eine offene Runge-Teilmenge $\tilde Y_1 \subset X$ mit
   $K_1 \subset \tilde Y_1 \subset \runge(K_2)$. mit regulärem Rand. \\
   Wählen wir nun die Zusammenhangskomponente $Y_1$, die $K_1$ enthält,
   so ist $Y_1$ nach Satz \label{thm:runge-zshkomp} ein Runge-Gebiet
-  % TODO: Referenz
-  und hat nach Bem nach 22.18 auch regulären Rand. \\
+  und hat nach Bem nach Satz \ref{thm:reg-rand} auch regulären Rand. \\
   Nun finden wir eine Ausschöpfung von $X$ durch Kompakta $K_1 \subset
   K_2 \subset \dots$. \\
   Durch das obige vorgehen erhalten wir ein $Y_1$, das $K_1$

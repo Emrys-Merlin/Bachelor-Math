@@ -35,8 +35,7 @@
   \item $K_j \subset \mathring{K}_{j+1}$ $\forall j \geq 1$ und
   \item $\bigcup_{j \in \N} K_j = X$
   \end{enumerate}
-  % TODO: Referenz
-  Dies ist nach (23.6) möglich.
+  Dies ist nach Korollar \ref{cor:ausschöpfung-kompakt} möglich.
   \begin{itemize}
   \item Behauptung: Sei $a_0 \in X \setminus K_j$ und $A_0 \in Div(X)$
     mit $A_0(a_0) = 1$ und $A_0(x) = 0$, falls $x \neq a_0$. Dann
@@ -47,45 +46,46 @@
     liegt $a_0$ in einer nicht relativ kompakten
     Zusammenhangskomponente $U \subset X \setminus K_j$ \\
     Nun existiert ein $a_1 \in U \setminus K_{j+1}$ (ansonsten wäre
-    $K_{j+1}$ nicht kompakt) und eine Kurve $c_0: I \ra U$ mit $c_0(0)
-  =a_1$ und $c_0(1) = a_0$. \\
-  % TODO: Referenz
-  Nach (20.5) existiert eine schwache Lösung $\phi_0$ des Divisors
-  $\partial c_0$ mit $\phi_0|_{K_j} = 1$. \\
-  Induktiv sind wir nun in der Lage eine Folge von Punkten $a_\nu \in
-  X \setminus K_{j+ \nu}$, $\nu \in \N$, und Kurven in $X \setminus
-  K_{j+\nu}$ von $a_{\nu+1}$ nach $a_\nu$ konstruieren. Analog zum
-  obigen erfahren erhalten wir dann wieder schwache Lösungen
-  $\phi_\nu$ des Divisors $\partial c_\nu$ mit $\phi_\nu |_{K_{j+\nu}}
-  = 1$. \\
-  Nach Konstruktion gilt $\partial c_\nu = A_\nu - A_{\nu+1}$, wobei
-  $A_\nu(a_\nu) = 1$ und sonst verschwindet $A_\nu$. \\
-  Weiterhin folgt, dass $\phi_0 \cdot \phi_1 \dots \phi_n$ eine
-  schwache Lösung von $A_0 - A_{n+1}$ ist.
-  % TODO: Warum ist das eine schwache Lösun?
-  Lassen wir $n$ gegen unendlich gehen, so erhalten wir $\phi :=
-  \prod_{\nu = 0}^\infty \phi_\nu$. Dieses Produkt konvergiert, da
-  auf jeder kompakten Teilmenge nur endlich viele Faktoren von 1
-  verschieden sind.
-  % TODO: Warum ist K in einem der K_n enthalten
-  Damit ist $\phi$ eine schwache Lösung von $A_0$.
-\item Sei nun $D$ ein beliebiger Divisor auf $X$. Für $\nu \in \N$
-  setzen wir
-  \[
-  D_\nu(x) := \begin{cases} D(x) & x \in K_{\nu+1}\setminus K_\nu\\ 0
-    & \text{sonst}\end{cases}
-  \]
-  wobei $K_0$ als leere Menge definiert wird. Wir erhalten dann $D =
-  \sum_{\nu = 0}^\infty D_\nu$. \\
-  Nun ist $D_\nu$ nur an endlich vielen stellen von 0 verschieden und
-  kann deshalb als endliche Summe von Divisoren der Form $A_\nu$
-  dargestellt werden. Für diese wurde oben eine schwache Lösung
-  konstruiert und das (endliche) Produkt dieser Lösungen liefert uns
-  eine Lösung $\psi_\nu$ von $D_\nu$ und wir erhalten sogar $\psi_\nu
-  |_{K_\nu} = 1$. \\
-  Setzen wir nun $\psi := \prod_{\nu=0}^\infty \psi_\nu$, so
-  konvergiert das Produkt nach den gleichen Argumenten, wie oben und
-  ist eine schwache Lösung von $D$.
+    $K_{j+1}$ nicht kompakt) und eine Kurve $c_0: I \ra U$ mit
+    $c_0(0)=a_1$ und $c_0(1) = a_0$. \\
+    Nach \cite[Lemma 20.5]{For} existiert eine schwache Lösung $\phi_0$ des Divisors
+    $\partial c_0$ mit $\phi_0|_{K_j} = 1$. \\
+    Induktiv sind wir nun in der Lage eine Folge von Punkten $a_\nu \in
+    X \setminus K_{j+ \nu}$, $\nu \in \N$, und Kurven in $X \setminus
+    K_{j+\nu}$ von $a_{\nu+1}$ nach $a_\nu$ konstruieren. Analog zum
+    obigen erfahren erhalten wir dann wieder schwache Lösungen
+    $\phi_\nu$ des Divisors $\partial c_\nu$ mit $\phi_\nu |_{K_{j+\nu}}
+    = 1$. \\
+    Nach Konstruktion gilt $\partial c_\nu = A_\nu - A_{\nu+1}$, wobei
+    $A_\nu(a_\nu) = 1$ und sonst verschwindet $A_\nu$. \\
+    Weiterhin folgt, dass $\phi_0 \cdot \phi_1 \dots \phi_n$ eine
+    schwache Lösung von $A_0 - A_{n+1}$ ist.
+    \todo{Warum ist das eine schwache Lösun?}
+    Lassen wir $n$ gegen unendlich gehen, so erhalten wir $\phi :=
+    \prod_{\nu = 0}^\infty \phi_\nu$. Dieses Produkt konvergiert, da
+    auf jeder kompakten Teilmenge nur endlich viele Faktoren von 1
+    verschieden sind. Dies folgt aus Lemma
+    \ref{lemma:kompakt-in-ausschöpfung}, denn zu jeder kompakten Menge
+    $K$ existiert ein $n \in \N$, so dass $K \subset K_n$. Dann gilt
+    aber $\phi_j |_K \equiv 1$ für alle $j > n$.
+    Damit ist $\phi$ eine schwache Lösung von $A_0$.
+  \item Sei nun $D$ ein beliebiger Divisor auf $X$. Für $\nu \in \N$
+    setzen wir
+    \[
+    D_\nu(x) := \begin{cases} D(x) & x \in K_{\nu+1}\setminus K_\nu\\ 0
+      & \text{sonst}\end{cases}
+    \]
+    wobei $K_0$ als leere Menge definiert wird. Wir erhalten dann $D =
+    \sum_{\nu = 0}^\infty D_\nu$. \\
+    Nun ist $D_\nu$ nur an endlich vielen stellen von 0 verschieden und
+    kann deshalb als endliche Summe von Divisoren der Form $A_\nu$
+    dargestellt werden. Für diese wurde oben eine schwache Lösung
+    konstruiert und das (endliche) Produkt dieser Lösungen liefert uns
+    eine Lösung $\psi_\nu$ von $D_\nu$ und wir erhalten sogar $\psi_\nu
+    |_{K_\nu} = 1$. \\
+    Setzen wir nun $\psi := \prod_{\nu=0}^\infty \psi_\nu$, so
+    konvergiert das Produkt nach den gleichen Argumenten, wie oben und
+    ist eine schwache Lösung von $D$.
   \end{itemize}
 \end{proof}
 

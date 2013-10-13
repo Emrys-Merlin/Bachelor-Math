@@ -61,16 +61,19 @@
     \end{align*}
     und damit die Stetigkeit von $T_h$.
     Weiterhin ist die Abbildung $C(X) \ra \dist(X)', \quad h \mapsto
-    T_h$ sogar injektiv. Dies ist eine direkte Folge des
-    % TODO: eventuell genauer
-    Fundamentallemmas der Variationsrechnung. Deshalb werden häufig
+    T_h$ sogar injektiv. Dies ist eine direkte Folge des 
+    Fundamentallemmas der Variationsrechnung Deshalb werden häufig
     Distributionen direkt mit der erzeugenden Funktion
     identifiziert. Wir werden diese Notation hier nicht verwenden.
-  \item Eine weitere Distribution stellt die \init{Dirac Delta
-      Distribution} dar. Sie ist durch $\delta_a[f] := f(a)$ für $f
-    \in \dist(X)$ und $a \in X$ definiert. \\
-    % TODO: Genauer oder weglassen?
-    Sie ist ein Beispiel für eine nicht durch eine Funktion erzeugte Distribution.
+  \item Nicht alle Distributionen sind von der obigen Form. Ein
+    Gegenbeispiel stellt die Diracsche Delta Distribution dar. Für ein
+    $a \in X$ ist sie durch
+    \[
+    \delta_a[f] := f(a) \qquad \forall f \in \dist(X)
+    \]
+    definiert. Wir werden im weiteren Verlauf ausschließlich versuchen
+    zu zeigen, dass alle für uns interessanten Distributionen von der
+    ersten Form sind.
   \end{enumerate}
 \end{bsp}
 
@@ -156,13 +159,35 @@
   \[
   G_n(w) := \frac{F}{n^2} \sum_{\nu=1}^{n^2} g(w, z_{n\nu})
   \]
-  gegen $\iint_Y g(w,z) \d[x]\d[y]$. \\
-  % TODO: WARUM?
-  Da $\Supp(G_n) \subset K$ für jedes $n \in \N$ gilt
+  gegen $\iint_Y g(w,z) \d[x]\d[y]$. Nun ist $g$ gleichmäßig stetig,
+  d.h. zu jedem $\epsilon > 0$ finden wir ein $\delta >0$, so dass
+  \[
+  | g(w,z) - g(\tilde w, \tilde z) | < \frac{\epsilon}{F}
+  \]
+  für beliebige $\| (w,z) - (\tilde w, \tilde z) \| < \delta$. Wir
+  finden also ein $N \in \N$, so dass $|z_{n_\nu} - z| < \delta$ für
+  alle $z \in R_{n_\nu}$ und für alle $n \geq N$. Insgesamt erhalten
+  wir
+  \begin{align*}
+    |G_n(w) - \iint_R g(w,z) \d[x]\d[y]| & = | \sum_{\nu = 1}^{n^2}
+    \left ( \frac{F}{n^2} g(w, z_{n_\nu}) - \iint_{R_{n_\nu}} g(w,z)
+      \d[x]\d[y] \right ) \\
+    & \leq \sum_{\nu=1}^{n^2} \left | \iint_{R_{n_\nu}}
+      (g(w,z_{n_\nu}) - g(w,z)) \d[x]\d[y] \right | \\
+    & \leq \sum_{\nu=1}^{n^2} \iint_{R_{n_\nu}} |g(w, z_{n_\nu}) -
+    g(w,z)| \d[x]\d[y] \\
+    & \leq \sum_{\nu=1}^{n^2} \iint_{R_{n_\nu}} \frac{\epsilon}{F}
+    \d[x] \d[y] \\
+    & = \epsilon
+  \end{align*}
+  Also konvergiert $G_n$ gleichmäßig gegen $\iint_R g(\cdot, z)
+  \d[x]\d[y]$. Die gleiche Argumentation kann für beliebiege
+  Ableitungen $D^\alpha G_n$ durchgeführt werden und wir erhalten,
+  dass
   \[
   G_n \xrightarrow{\dist} \iint_Y g(\cdot, z) \d[x]\d[y]
   \]
-  Also folgt aus der Stetigkeit von $T$
+  gilt. Also folgt aus der Stetigkeit von $T$
   \[
   T_w \left [ \iint_Y g(w, z) \d[x]\d[y] \right ] = \lim_{n \ra
     \infty} T[G_n] = \iint_Y T_w[g(w,z)] \d[x]\d[y]
@@ -217,8 +242,6 @@
   vertauscht, also ist $\sm_\epsilon f \in \diff(U^{(\epsilon)})$, was
   auch den Namen "`Glättung"' erklärt.
 \end{defin}
-
-% TODO: Vielleicht auf Konvergenzeigenschaften der Glättung eingehen?
 
 \begin{lemma}
   \label{lemma:glättung-eigenschaften}
@@ -300,7 +323,6 @@
 \end{thm}
 
 \begin{proof}
-  % TODO: eventuell klein genug?
   Sei $\epsilon > 0$. Für $z \in U^{(\epsilon)}$ hat $w \mapsto
   \rho_\epsilon(w - z)$ kompakten Träger in $U$. Damit ist
   \[
@@ -310,9 +332,20 @@
   wohldefiniert. Nach Lemma \ref{lemma:dist-glatt} ist $h_\epsilon \in
   \diff(U^{(\epsilon)})$. \\
   \\
-  Sei nun $f \in \dist(U$ mit $\Supp(f) \subset U^{(\epsilon)}$. Dann
-  % TODO: Warum?
-  hat $\sm_\epsilon f$ kompakten Träger in $U$ und wir können folgende
+  Sei nun $f \in \dist(U)$ mit $\Supp(f) \subset U^{(\epsilon)}$. Dann
+  hat $\sm_\epsilon f$ kompakten Träger in $U$, denn für $w \in U$ mit
+  $B_\epsilon(w) \cap U = \varnothing$ ist $f|_{B_\epsilon(w) \cap U}
+  \cong 0$ und es folgt $\sm_\epsilon f(w) = 0$. Also gilt $\Supp
+  \sm_\epsilon f \subset \{ z \in U | B_\epsilon(w) \cap U \neq
+  \varnothing\} =: M$. Nun ist $\Supp(f)$ kompakt und damit
+  beschränkt. Sei $S$ das zugehörige Supremum. Für ein beliebiges $w
+  \in M$, finden wir nun ein $z \in B_\epsilon(w) \cap U$ und wir
+  erhalten
+  \[
+  |w| \leq |w-z| + |z| < S + \epsilon
+  \]
+  Also ist $M$ und damit $\Supp \sm_\epsilon f$ beschränkt. Da $\Supp
+  \sm_\epsilon f$ auch abgeschlossen ist, ist es sogar kompakt und wir können folgende
   Rechnung durchführen:
   \begin{align*}
     T[\sm_\epsilon f] & = T_w \left [ \iint_U \rho_\epsilon(w - z)
@@ -321,11 +354,10 @@
     \d[x]\d[y] \label{eq:weyl} \tag{$\ast$} \\
     & = \iint_U h_\epsilon(z) f(z) \d[x]\d[y]
   \end{align*}
-  % TODO: Referenz
   Als nächstes wollen wir zeigen, dass $T[f] = T[\sm_\epsilon f]$
   gilt. Nun können $f$ auch als Funktion auf $\C$ auffassen, in dem
-  wir es durch 0 fortsetzen. Dann liefert uns 13.3 die Existenz von
-  $\psi \in \diff(\C)$ mit $\Delta \psi = f$. \\
+  wir es durch 0 fortsetzen. Dann liefert uns \cite[Kor. 13.3]{For} die
+  Existenz von $\psi \in \diff(\C)$ mit $\Delta \psi = f$. \\
   Dann ist $\psi$ harmonisch auf $V:= \C \setminus \Supp(f)$. Also
   liefert uns Lemma \ref{lemma:glättung-eigenschaften} $\psi|_{V^{(\epsilon)}}
   \equiv \sm_\epsilon \psi|_{V^{(\epsilon)}}$. Setze $\phi := \psi -
@@ -357,6 +389,7 @@
 \end{proof}
 
 \begin{cor}
+  \label{cor:hol-dist}
   Sei $U \subset \C$ und $T \in \dist(U)'$ mit $\frac{\partial
     T}{\partial \bar z} = 0$. \\
   Dann existiert ein $h \in \hol(U)$, so dass

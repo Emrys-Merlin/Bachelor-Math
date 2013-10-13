@@ -6,308 +6,172 @@
 
 \begin{document}
 
-\message{ !name(content/Runge.tex) !offset(-9) }
+\message{ !name(content/Weierstrass.tex) !offset(-9) }
 
-\section{Der Rungesche Approximationssatz}
-\label{sec:Runge}
+\section{Der Weierstrasssche Produktsatz}
+\label{sec:Weierstrass}
 
-% TODO: Frechet-Raum und Konsequenzen aufschreiben
+\begin{defin}{Divisor}
+  Sei $X$ eine Riemannsche Fläche. Ein \init{Divisor} ist eine
+  Abbildung $D: X \ra \Z$, so dass für jede kompakte Teilmenge $K
+  \subset X$ gilt: $D(x) = 0$ für fast alle $x \in K$. \\
+  Wir bezeichnen mit $Div(X)$ die Menge aller Divisoren. \\
+  Für eine Funktion $f \in \mer(X)^\ast$ definieren wir den zu $f$
+  gehörigen Divisor $(f): X \ra \Z, \quad x \mapsto \ord_x(f)$. Da die
+  Null- und Polstellen eine diskrete Teilmenge von $X$ bilden, ist
+  dies tatsächlich ein Divisor.
+\end{defin}
 
-\begin{prop}
-  Sei $X$ eine Riemannsche Fläche, $Y \subset X$ offen. \\
-  Dann besitzen $\diff(Y)$ und $\diff^{0,1}(Y)$ Struktur eines Fr´echet-Raums.
-\end{prop}
-
-\begin{proof}
-  % TODO: Warum genau geht das? Wieso reichen abzählbarviele Karten?
-  % (Rest folgt dann)
-  Sei dazu $K_j \subset Y$ kompakt, $j \in \N$, $\bigcup_{j \in \N}
-  \mathring{K_j} = Y$ und $K_j \subset U_j$, wobei $(U_j, z_j)$ Karten
-  sind. \\
-  Für jedes $\nu = (\nu_1, \nu_2)^T \in \N^2$ eine Halbnorm
-  \[
-  p_{j\nu}: \diff(Y) \ra \R, \quad p_{j\nu}(f) := \|D_j^\nu f\|_{K_j},
-  \]
-  wobei $D^\nu_j := \left ( \frac{\partial}{\partial x_j} \right
-  )^{\nu_1} \left ( \frac{\partial}{\partial y_j} \right )^{\nu_2}$
-  mit $z_j = x_j + iy_j$. \\
-  % TODO: Genauer
-  Dies ist eine abzählbare Familie von Halbnormen. Da falls $0 \neq f
-  \in \diff(Y)$ gilt, immer eine der Halbnormen von 0 verschieden ist,
-  definiert diese Familie die Struktur eines Fr´echet-Raums auf
-  $\diff(Y)$. \\
-  Wir erhalten eine Umgebungsbasis der 0 durch endliche Schnitte von
-  Mengen der Form $U(p_{j\nu}, \epsilon) := \{f \in \diff(Y) |
-  p_{j\nu}(f) < \epsilon \}, \quad \epsilon > 0$. \\
-  Konvergenz in dieser Topologie ist dann gleichbedeutend mit
-  $C^\infty$-Konvergenz auf jedem der $K_j$. \\
-  % TODO: Warum genau?
-  Behauptung: Die Topologie ist unabhängig von den gewählten $K_j$.\\
-  \\
-  Völlig analog kann die obige Konstruktion auch für $\diff^{0,1}(Y)$
-  durchgeführt werden.
-\end{proof}
-
-
-\begin{cor}
-  Mit der obigen Topologie ist $\hol(Y) \subset \diff(Y)$ ein
-  abgeschlossener Teilraum und die Konvergenz bzgl. dieser Topologie
-  stimmt mit der kompakten Konvergenz überein.
-\end{cor}
+\begin{defin}
+  Sei $X$ eine Riemannsche Fläche und $D \in Div(X)$. Dann heißt $f
+  \in \mer(X)$ eine \emph{Lösung} von $D$, falls $(f) = D$. \\
+  Setzen wir $X_D := \{x \in X: D(x) \geq 0 \}$, so heißt $f \in
+  \diff(X_D)$ \emph{schwache Lösung} von $D$, falls für alle $a \in X$
+  eine Koordinatenumgebung $(U,z)$ mit $z(a) = 0$ und ein $\psi \in
+  \diff(U)$ mit $\psi(a) \neq 0$ existieren, so dass $f = \psi z^k$
+  auf $ U \cap X_D$ gilt, wobei $k = D(a)$.
+\end{defin}
 
 \begin{lemma}
-  \label{lemma:kompakter-träger-funktional}
-  Sei $Y \subset X$ offen, $X$ eine Riemannsche Fläche. Sei $T \in
-  \diff(Y)'$. \\
-  Dann hat $T$ kompakten Träger, d.h. es existiert ein $K \subset Y$
-  kompakt, so dass
-  \[
-  T[f] = 0 \qquad \forall f \in \diff(Y) \text{ mit } \Supp(f) \subset
-  Y \setminus K
-  \]
-  Das gleiche Resultat gilt für $\diff^{0,1}(Y)$.
+  \label{lemma:schwache-Lösung-Divisor}
+  Jeder Divisor $D$ auf einer nicht kompakten Riemannschen Fläche $X$ hat eine
+  schwache Lösung.
 \end{lemma}
 
 \begin{proof}
-  Aus der Stetigkeit von $T$ folgt die Existenz einer offenen
-  Nullumgebung $U \subset \diff(Y)$, so dass
+  Wir wählen $K_1, K_2, \dots$ kompakte Runge-Teilmengen von $X$ mit
+  \begin{enumerate}
+  \item $K_j \subset \mathring{K}_{j+1}$ $\forall j \geq 1$ und
+  \item $\bigcup_{j \in \N} K_j = X$
+  \end{enumerate}
+  Dies ist nach Korollar \ref{cor:ausschöpfung-kompakt} möglich.
+  \begin{itemize}
+  \item Behauptung: Sei $a_0 \in X \setminus K_j$ und $A_0 \in Div(X)$
+    mit $A_0(a_0) = 1$ und $A_0(x) = 0$, falls $x \neq a_0$. Dann
+    existiert eine schwache Lösung $\phi$ von $A_0$ mit $\phi |_{K_j}
+    = 1$. \\
+    \\
+    $K_j$ ist eine Runge-Teilmenge, d.h. $K_j = \runge{K_j}$. Also
+    liegt $a_0$ in einer nicht relativ kompakten
+    Zusammenhangskomponente $U \subset X \setminus K_j$ \\
+    Nun existiert ein $a_1 \in U \setminus K_{j+1}$ (ansonsten wäre
+    $K_{j+1}$ nicht kompakt) und eine Kurve $c_0: I \ra U$ mit $c_0(0)
+  =a_1$ und $c_0(1) = a_0$. \\
+  \todo{Referenz}
+  Nach (20.5) existiert eine schwache Lösung $\phi_0$ des Divisors
+  $\partial c_0$ mit $\phi_0|_{K_j} = 1$. \\
+  Induktiv sind wir nun in der Lage eine Folge von Punkten $a_\nu \in
+  X \setminus K_{j+ \nu}$, $\nu \in \N$, und Kurven in $X \setminus
+  K_{j+\nu}$ von $a_{\nu+1}$ nach $a_\nu$ konstruieren. Analog zum
+  obigen erfahren erhalten wir dann wieder schwache Lösungen
+  $\phi_\nu$ des Divisors $\partial c_\nu$ mit $\phi_\nu |_{K_{j+\nu}}
+  = 1$. \\
+  Nach Konstruktion gilt $\partial c_\nu = A_\nu - A_{\nu+1}$, wobei
+  $A_\nu(a_\nu) = 1$ und sonst verschwindet $A_\nu$. \\
+  Weiterhin folgt, dass $\phi_0 \cdot \phi_1 \dots \phi_n$ eine
+  schwache Lösung von $A_0 - A_{n+1}$ ist.
+  \todo{Warum ist das eine schwache Lösun?}
+  Lassen wir $n$ gegen unendlich gehen, so erhalten wir $\phi :=
+  \prod_{\nu = 0}^\infty \phi_\nu$. Dieses Produkt konvergiert, da
+  auf jeder kompakten Teilmenge nur endlich viele Faktoren von 1
+  verschieden sind. Dies folgt aus Lemma
+  \ref{lemma:kompakt-in-ausschöpfung}, denn zu jeder kompakten Menge
+  $K$ existiert ein $n \in \N$, so dass $K \subset K_n$. Dann gilt
+  aber $\phi_j |_K \equiv 1$ für alle $j > n$.
+  \todo{Warum ist $K$ in einem der $K_n$ enthalten}
+  Damit ist $\phi$ eine schwache Lösung von $A_0$.
+\item Sei nun $D$ ein beliebiger Divisor auf $X$. Für $\nu \in \N$
+  setzen wir
   \[
-  |T[f]| < 1 \qquad \forall f \in U
+  D_\nu(x) := \begin{cases} D(x) & x \in K_{\nu+1}\setminus K_\nu\\ 0
+    & \text{sonst}\end{cases}
   \]
-  Nach Konstruktion der obigen Topologie finden wir ein $\epsilon > 0$
-  und endlich viele $j_1, \dots, j_n \in \N$ und $\nu_1, \dots \nu_n
-  \in \N^2$, so dass $U(p_{j_1\nu_1}, \epsilon) \cap \dots \cap
-  U(p_{j_n\nu_n}, \epsilon) \subset U$. \\
-  Sei nun  $K := K_{j_1} \cup \dots \cup K_{j_n}$. Wir behaupten, dass
-  dies das gesuchte $K$ ist. \\
-  Dazu wählen wir $f \in \diff(Y)$ mit $\Supp(f) \subset Y \setminus
-  K$. Dann gilt für beliebige
-  $\lambda > 0$:
-  \[
-  p_{j_1\nu_1}(\lambda f) = \dots = p_{j_n\nu_n}(\lambda f) = 0
-  \]
-  Damit liegt $\lambda f \in U$ und es folgt:
-  \[
-  |T[f]| < \frac1\lambda \qquad \forall \lambda >0
-  \]
-  und damit $T[f] = 0$.
+  wobei $K_0$ als leere Menge definiert wird. Wir erhalten dann $D =
+  \sum_{\nu = 0}^\infty D_\nu$. \\
+  Nun ist $D_\nu$ nur an endlich vielen stellen von 0 verschieden und
+  kann deshalb als endliche Summe von Divisoren der Form $A_\nu$
+  dargestellt werden. Für diese wurde oben eine schwache Lösung
+  konstruiert und das (endliche) Produkt dieser Lösungen liefert uns
+  eine Lösung $\psi_\nu$ von $D_\nu$ und wir erhalten sogar $\psi_\nu
+  |_{K_\nu} = 1$. \\
+  Setzen wir nun $\psi := \prod_{\nu=0}^\infty \psi_\nu$, so
+  konvergiert das Produkt nach den gleichen Argumenten, wie oben und
+  ist eine schwache Lösung von $D$.
+  \end{itemize}
 \end{proof}
 
-\begin{lemma}
-  \label{lemma:Funktional-explizit}
-  Sei $Z \subset X$ offen und $X$ eine Riemannsche Fläche. Sei $S \in
-  \diff^{0,1}(X)'$ mit $S[\d[''g]] = 0$ für beliebige $g \in \diff(X)$
-  mit $\Supp(g) \Subset Z$. \\
-  Dann existiert ein $\sigma \in \Omega(X)$ mit $S[\omega] = \iint_Z
-  \sigma \wedge \omega$ für jedes $\omega \in \diff^{0,1}(X)$ mit
-  $\Supp(\omega) \Subset Z$.
-\end{lemma}
-
-\begin{proof}
-  Sei $z: U \ra V \subset \C$ eine Karte von $X$ mit $U \subset
-  Z$. Wir identifizieren $U$ mit $V$ und können deshalb vom Raum der
-  Testfunktionen $\dist(U)$ auf $U$ sprechen. Sei also $\phi \in
-  \dist(U)$. Wir bezeichnen mit $\tilde \phi$ jede 1-Form in
-  $\dist^{0,1}(X)$, für die $\tilde \phi|_U \cong \phi \d[\bar z]$ und
-  $\tilde \phi |_{U \setminus U} \cong 0$ gilt. \\
-  Damit können wir ein $S_U \in \dist(U)'$ definieren:
-  \[
-  S_U: \dist(U) \ra \C, \phi \mapsto S[\tilde \phi]
-  \]
-  Diese verschwindet auf allen Funktionen $\phi = \frac{\partial
-    g}{\partial \bar z}$, $g \in \dist(U)$, denn $S_U[\phi] = S[\tilde
-  \phi] = S[ \frac{\partial g}{\partial \bar z} \d[\bar z]] =
-  S[\d[''g]] = 0$ nach Voraussetzung. Das bedeutet aber, dass
-  % TODO: richtige Referenz
-  $\frac{\partial S_U}{\partial \bar z} = 0$ und aus (24.10) erhalten
-  wir ein $h \in \hol(U)$:
-  \[
-  S[\tilde \phi] = \iint_U h(z) \phi(z) \d[z] \wedge \d[\bar z] \qquad
-  \forall \phi \in \dist(U)
-  \]
-  Setzen wir nun $\sigma_U := h \d[z]$, so folgt
-  \[
-  S[\omega] = \iint_U \sigma_u \wedge \omega \qquad \omega \in
-  \dist^{0,1}(U) \text{ und } \Supp(\omega) \Subset U
-  \]
-  Führen wir die gleiche Konstruktion auf einer zweiten Karte (z', U')
-  aus und gilt außerdem noch, dass $\Supp(\omega) \Subset U')$, so
-  erhalten wir
-  \[
-  \iint_U \sigma_U \wedge \omega = S[\omega] = \iint_{U'} \sigma_{U'}
-  \wedge \omega \qquad \forall \omega \in \diff^{0,1}(X) \text{ und }
-  \Supp(\omega) \Subset U \cap U'
-  \]
-  und damit $\sigma_U|_{U \cap U'} \equiv \sigma_{U'}|_{U \cap
-    U'}$. Also können wir alle $\sigma_U$ zu einer globalen 1-Form
-  $\sigma \in \Omega(Z)$ verkleben und es folgt
-  \[
-  S[\omega] = \iint_Z \sigma \wedge \omega \qquad \forall \omega \in
-  \diff^{0,1}(X) \text{ mit } \Supp(\omega) \Subset U,
-  \]
-  wobei $U$ eine Koordinatenumgebung darstellt. \\
-  Wählen wir nun ein beliebiges $\omega \in \diff^{0,1}(X)$ mit
-  $\Supp(\omega) \Subset Z$, so können wir eine Partition der 1
-  wählen, so dass $\omega = \sum_{j=1}^n \omega_J$ mit
-  $\Supp(\omega_j) \Subset U_j$. Dabei sind die $U_j$
-  Koordinatenumgebungen. \\
-  Zu guter Letzt erhalten wir damit:
-  \[
-  S[\omega] = \sum_{j=1}^n S[\omega_j] = \sum_{j=1}^n \iint_Z \sigma
-  \wedge \omega_j = \iint_Z \sigma \wedge \omega
-  \]
-\end{proof}
 
 \begin{thm}
-  \label{thm:runge-dicht}
-  Sei $Y \Subset X$ eine offene Runge-Teilmenge und $X$ eine nicht
-  kompakte Riemannsche Fläche. \\
-  Dann liegt $\im( \hol(Y') \ra \hol(Y))$ für beliebige $Y' \Subset X$
-  offen und $Y \subset Y'$ bzgl. kompakter Konvergenz dicht in $\hol(Y)$.
+  \label{thm:Lösung-Divisor}
+  Sei $X$ eine nicht kompakte Riemannsche Fläche und $D \in
+  Div(X)$. Dann existiert ein $f \in \mer(X)^\ast$ mit $(f) = D$.
 \end{thm}
 
 \begin{proof}
-  Sei $\beta: \diff(Y') \ra \diff(Y)$ die Einschränkungsabbildung. Wir
-  % TODO: Referenz
-  verwenden Kor B.10. Dazu müssen wir zeigen, dass falls $T \in
-  \diff(Y)'$ mit $T_{\beta(\hol(Y'))} \equiv 0$ auch $T|_{\hol(Y)}
-  \equiv 0$ gilt. \\
-  % TODO: Referenz
-  Nach 14.16 existiert zu jedem $\omega \in \diff^{0,1}(X)$ ein $f \in
-  \diff(Y')$ mit $\d[''f] = \omega|_{Y'}$. \\
-  Dies erlaubt uns die Definition von $S: \diff^{0,1}(X) \ra \C, \quad
-  S[w] := T[f|_Y]$. Diese Definition ist unabhängig von $f$, denn für
-  ein $g \in \diff(Y')$ mit $\d[''g] = \omega|_{Y'}$, dann ist $f-g
-  \in \hol(Y')$ und deshalt $T[(f-g)|_Y] = 0$ nach der Voraussetzung,
-  dass $T|_{\beta(\hol(Y'))} \equiv 0$. \\
-  Als nächstes wollen wir zeigen, dass $S$ stetig ist. \\
-  Dazu betrachten wir zunächst $V := \{ (\omega, f) \in \diff^{0,1}(X)
-  \times \diff(Y'): \quad \d[''f] = \omega|_{Y'} \}$. Aus der
-  % TODO: Woher Stetigkeit d''?
-  Stetigkeit von $\d['']: \diff(Y') \ra \diff^{0,1}(Y')$ folgt, dass $V
-  \subset \diff^{0,1}(X) \times \diff(Y')$ abgeschlossen und somit ein
-  Fr´echet-Raum ist. \\
-  % TODO: Referenz
-  Nach 14.16 ist $\pi_1: V \ra \diff^{0,1}(X)$ surjektiv und damit
-  offen. \\
-  Weiterhin ist $\beta \circ \pi_2 : V \ra \diff(Y)$ stetig. Da nun
-  auch noch das folgende Diagramm kommutiert:
-  % TODO: Diagramm T*(beta*pi2) = S*pi1
-  folgt die Stetigkeit von $S$. \\
-  \\
-  Das Lemma \ref{lemma:kompakter-träger-funktional} liefert
-  \begin{itemize}
-  \item ein kompaktes $K \subset Y$ mit $T[f] = 0$ für jedes $f \in
-    \diff(Y)$ mit $\Supp(f9 \subset Y \setminus K$ und
-  \item ein kompaktes $L \subset X$ mit $S[\omega] = 0$ für jedes
-    $\omega \in \diff^{0,1}(X)$ mit $\Supp(\omega) \subset X\setminus L$
-  \end{itemize}
-   Sei $g \in \diff(X)$ mit $\Supp(g) \Subset X \setminus K$. Dann ist
-   $S[\d[''g]] = T[g|_Y]  = 0$. Lemma \ref{lemma:funktional-explizit}
-   gibt uns dann ein $\sigma \in \Omega(X\setminus K)$ mit
-   \[
-   S[\omega] = \iint_{X \setminus K}\sigma \wedge \omega \qquad
-   \forall \omega \in \diff^{0,1}(X) \text{ mit } \Supp(\omega)
-   \Subset X\setminus K
-   \]
-   Aufgrund des kompakten Trägers von $S$ muss $\sigma|_{X \setminus
-     (K \cup L)} \equiv 0$ gelten. \\
-   Nun ist jede Zusammenhangskomponente von $X \setminus \runge(K)$
-   nicht relativ kompakt. \\
-   Behauptung: Jede Zusammenhangskomponente von $X \setminus
-   \runge(K)$ schneidet $X \setminus (K \cup L)$. \\
-   Angenommen es gäbe eine Zusammenhangskomponente $U \subset X
-   \setminus \runge(K)$ mit $U \cap X \setminus ( K \cup L) =
-   \varnothing$. Dann gilt $U \subset K \cup L$, also ist $U$ relativ
-   kompakt. Ein Widerspruch. \\
-   Also schneiden alle Zusammenhangskomponenten $X \setminus (K \cup
-   L)$ und aus de Identitätssatz folgt:
-   \[
-   \sigma|_{X \setminus \runge(K)} \equiv 0 \label{eq:runge}\tag{$\ast$}
-   \]
-   Das bedeutet, dass $S[\omega] = 0$ für jedes $\omega \in
-   \diff^{0,1}(X)$ mit $\Supp(\omega) \Subset X \setminus
-   \runge(K)$.\\
-   \\
-   Sei nun $f \in \hol(Y)$. Wir wollen zeigen, dass $T[f] = 0$. \\
-   Zunächst gilt $\runge(K) \subset \runge(Y) = Y$. Durch Glättung
-   % TODO: genauer
-   können wir ein $g \in \diff(X)$ mit $f \equiv g$ in einer Umgebung
-   von $\runge(K)$ und $\Supp(g) \Subset Y$ finden. \\
-   Also liegt $\Supp(f - g|_Y) \subset Y \ K$, somit $T[f- g|_Y] = 0$
-   und schlussendlich $T[f] = T[g|_Y] = S[\d[''g]]$. \\
-   Nun ist aber $g$ in einer Umgebung von $\runge(K)$ holomorph, was
-   nichts anderes bedeutet als $\Supp(\d[''g]) \Subset X \setminus
-   \runge(K)$. \\
-   Mit \eqref{eq:runge} folgt
-   \[
-   T[f] = T[g|_f] = S[\d[''g]] = 0
-   \]
+  Wir können $X$ mit relativ kompakten, einfach zusammenhängenden
+  Koordinatenumgebungen $(U_i)_{i \in I}$ überdecken. Auf diesen
+  finden wir $f_i \in \mer(U_i)^\ast$, so dass $(f_i) =
+  D|_{U_i}$. Dies ist möglich, da $D$ auf dem relativ kompakten $U_i$
+  fast überall verschwindet und $f_i$ deshalb in lokalen Koordinaten
+  einfach als rationale Funktion darstellen.\\
+  Mit dieser Konstruktion haben $f_i$ und $f_j$ dies selben Pol- und
+  Nullstellen auf $U_i \cap U_j$, also ist
+  \[
+  \frac{f_i}{f_j} \in hol(U_i \cap U_j)^\ast \qquad \forall i,j \in I
+  \]
+  Nach Lemma \ref{lemma:schwache-Lösung-Divisor} existiert eine
+  schwache Lösung $\psi$ von $D$ und auf den $U_i$ finden wir $\psi_i
+  \in \diff(U_i)$, so dass $\psi = \psi_i \cdot f_i$ und $\psi_i(x)
+  \neq 0$ für alle $x \in U_i$. (Wir setzend abei $\psi$ auf ganz $X$
+  fort, in dem wir es an den nicht definierten Stellen $\infty$
+  setzen). \\
+  Da $U_i$ einfach zusammenhängend ist und $\psi_i$ nicht
+  verschwindet, existiert ein $\phi_i \in \diff(U_i)$ mit $\psi_i =
+  e^{\phi_i}$. \\
+  Somit erhalten wir
+  \[
+  \psi = e^{\phi_i} f_i \qquad \text{auf } U_i
+  \]
+  und
+  \[
+  e^{\phi_j - \phi_i} = \frac{f_i}{f_j} \in \hol(U_i \cap U_j)^\ast
+  \qquad \text{auf } U_i \cap U_j
+  \]
+  Damit ist $\phi_{ij} := \phi_i - \phi_j \in \hol(U_i \cap U_j)$, da
+  die $\exp$-Funktion lokal biholomorph ist. Aus der Definition folgt
+  auch direkt $\phi_{ij} + \phi_{jk} = \phi_{ik}$ auf $U_i \cap U_j
+  \cap U_k$ und damit ist $(\phi_{ij}) \in Z^1(\fu, \hol)$. \\
+  Nun ist $H^1(X, \hol) = 0$, also existieren $g_i \in \hol(U_i)$ mit
+  $\phi_{ij} = \phi_j - \phi_i = g_j - g_i$ auf $U_i \cap U_j$. \\
+  Eingesetzt folgt
+  \[
+  e^{g_j} f_j = e^{g_i} f_i \qquad \text{auf } U_i \cap U_j
+  \]
+  also finden wir ein $f \in \mer(X)^\ast$ mit $f = e^{f_j} f_j$ auf
+  $U_j$. \\
+  Damit ist $f$ die gesuchte Lösung von $D$.
 \end{proof}
 
-\begin{thm}[Rungescher Approximationssatz]
-  Sei $X$ eine nicht kompakte Riemannsche Fläche, $Y \subset X$ eine
-  offene Runge-Teilmenge. \\
-  Dann kann jede holomorphe Funktion auf $Y$ auf beliebigen Kompakta
-  gleichmäßig durch holomorphe Funktionen auf ganz $X$ approximiert werden.
-\end{thm}
+\begin{cor}
+  \label{cor:nicht-verschwindende-1-form}
+  Sei $X$ eine nicht kompakte Riemannsche Fläche. \\
+  Dann existiert ein nicht-verschwindendes $\omega \in \Omega(X)$.
+\end{cor}
 
 \begin{proof}
-  \begin{description}
-  \item[Fall $Y \Subset X$:] Seien $f \in \hol(Y)$, $K \subset Y$
-    kompakt und $\epsilon > 0$ gegeben. \\
-    % TODO: Referenz
-    Aus dem Beweis von (23.9) erhalten wir eine Ausschöpfung $Y_1
-    \Subset Y_2 \Subset \dots$ von $X$ mit $Y_0 := Y \Subset Y_1$. \\
-    Nach Satz \ref{thm:runge-dicht} existiert ein $f \in \hol(Y_1)$
-    mit
-    \[
-    \|f_1 - f\|_K < 2^{-1} \epsilon
-    \]
-    Induktiv erhalten wir aus Satz \ref{thm:runge-dicht} eine Folge
-    von Funktionen $f_n \in \hol(Y_n)$ mit
-    \[
-    \|f_n - f_{n-1}\|_{\bar Y_{n-2}} < 2^{-n} \epsilon \qquad \forall
-    n \geq 2
-    \]
-    Nun gilt für beliebige $n \in \N$:
-    \[
-    \|f_{\nu + k} - f_{\nu} \|_{Y_n} \leq \epsilon 2^{-\nu} \sum_{\mu
-      = 0}^k 2^{-\mu} \leq 2 \epsilon 2^{-\nu} \xrightarrow{\nu \ra
-      \infty} 0 \qquad \forall $\nu q n$
-    \]
-    Also konvergiert $(f_\nu)_{\nu > n}$ gleichmäßig auf $Y_n$ für
-    jedes $n \in \N$ und damit existiert ein $F \in \hol(X)$, so dass
-    $f_\nu \rightrightarrow F$ auf jedem $Y_n$. \\
-    Eingesetzt folgt
-    \begin{align*}
-      \|F - f\|_K & \leq \|F - f_n\|_{Y_n} + \sum_{k=1}^n \|f_k -
-      f_{k-1}\|_{\bar Y_{k-2}} \\
-      & < \|F _ f_n \|_{Y_n} + \epsilon \sum_{k=1}^n 2^{-k} \\
-      & \xrightarrow{n \ra \infty} \epsilon
-    \end{align*}
-  \item[Fall $Y \subset X$ nicht relativ kompakt:] Auch hier wählen
-    wir $f \in \hol(Y)$, $K \subset Y$ kompakt und $\epsilon > 0$. \\
-    In diesem Fall können wir $L \subset Y$ kompakt finden mit $K \subset
-    \mathring L$. Dies ist möglich in dem wir $K$ durch endlich viele relativ
-    Kompakte Koordinatenumgebungen überdecken und L als deren
-    Abschluss definieren. \\
-    % TODO: Referenz
-    Dann folgt aus 23.7 die Existenz einer offenen Runge-Teilmenge
-    $\tilde Y \subset X$ mit $K \subset \tilde Y \subset L$. \\
-    Damit ist $\tilde Y \Subset X$ und $f$ kann als Funktion von
-    $\hol(\tilde Y)$ aufgefasst werden und schlussendlich können wir
-    den obigen Fall anwenden und erhalten ein $F \in \hol(X)$ mit
-    $\|f|_{\tilde Y} - F\|_K = \|f - F\|_K < \epsilon$.
-  \end{description}
+  Sei $g$ eine nicht-konstante meromorphe Funktion auf $X$ und $f \in
+  \mer(X)^\ast$ mit $(f) = -(\d[g])$. Diese existiert nach Satz
+  \ref{thm:Lösung-Divisor}.\\
+  Dann ist $\omega := f \d[g]$ die gesuchte 1-Form.
 \end{proof}
+
 
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "../Bachelor"
 %%% End: 
 
-\message{ !name(../Bachelor.tex) !offset(-289) }
+\message{ !name(../Bachelor.tex) !offset(-145) }
 
 \end{document}
 

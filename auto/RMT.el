@@ -14,5 +14,6 @@
      "thm:schlicht-kompakt"
      "nicht-1"
      "lemma:bihol-kreis"
-     "lemma:runge-keine-kohomo")))
+     "lemma:runge-keine-kohomo"
+     "thm:rmt")))
 

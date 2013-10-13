@@ -2,7 +2,7 @@
 \section{Der Rungesche Approximationssatz}
 \label{sec:Runge}
 
-% TODO: Frechet-Raum und Konsequenzen aufschreiben
+\todo{Frechet-Raum und Konsequenzen aufschreiben}
 
 \begin{prop}
   Sei $X$ eine Riemannsche Fläche, $Y \subset X$ offen. \\
@@ -10,8 +10,8 @@
 \end{prop}
 
 \begin{proof}
-  % TODO: Warum genau geht das? Wieso reichen abzählbarviele Karten?
-  % (Rest folgt dann)
+  \todo{Warum genau geht das? Wieso reichen abzählbarviele Karten?
+    (Rest folgt dann)}
   Sei dazu $K_j \subset Y$ kompakt, $j \in \N$, $\bigcup_{j \in \N}
   \mathring{K_j} = Y$ und $K_j \subset U_j$, wobei $(U_j, z_j)$ Karten
   sind. \\
@@ -22,7 +22,7 @@
   wobei $D^\nu_j := \left ( \frac{\partial}{\partial x_j} \right
   )^{\nu_1} \left ( \frac{\partial}{\partial y_j} \right )^{\nu_2}$
   mit $z_j = x_j + iy_j$. \\
-  % TODO: Genauer
+  \todo{Genauer}
   Dies ist eine abzählbare Familie von Halbnormen. Da falls $0 \neq f
   \in \diff(Y)$ gilt, immer eine der Halbnormen von 0 verschieden ist,
   definiert diese Familie die Struktur eines Fr´echet-Raums auf
@@ -32,7 +32,7 @@
   p_{j\nu}(f) < \epsilon \}, \quad \epsilon > 0$. \\
   Konvergenz in dieser Topologie ist dann gleichbedeutend mit
   $C^\infty$-Konvergenz auf jedem der $K_j$. \\
-  % TODO: Warum genau?
+  \todo{Warum genau?}
   Behauptung: Die Topologie ist unabhängig von den gewählten $K_j$.\\
   \\
   Völlig analog kann die obige Konstruktion auch für $\diff^{0,1}(Y)$
@@ -109,9 +109,8 @@
     g}{\partial \bar z}$, $g \in \dist(U)$, denn $S_U[\phi] = S[\tilde
   \phi] = S[ \frac{\partial g}{\partial \bar z} \d[\bar z]] =
   S[\d[''g]] = 0$ nach Voraussetzung. Das bedeutet aber, dass
-  % TODO: richtige Referenz
-  $\frac{\partial S_U}{\partial \bar z} = 0$ und aus (24.10) erhalten
-  wir ein $h \in \hol(U)$:
+  $\frac{\partial S_U}{\partial \bar z} = 0$ und aus Korollar
+  \ref{cor:hol-dist} erhalten wir ein $h \in \hol(U)$:
   \[
   S[\tilde \phi] = \iint_U h(z) \phi(z) \d[z] \wedge \d[\bar z] \qquad
   \forall \phi \in \dist(U)
@@ -159,12 +158,10 @@
 
 \begin{proof}
   Sei $\beta: \diff(Y') \ra \diff(Y)$ die Einschränkungsabbildung. Wir
-  % TODO: Referenz
-  verwenden Kor B.10. Dazu müssen wir zeigen, dass falls $T \in
+  verwenden \cite[Kor B.10]{For}. Dazu müssen wir zeigen, dass falls $T \in
   \diff(Y)'$ mit $T_{\beta(\hol(Y'))} \equiv 0$ auch $T|_{\hol(Y)}
   \equiv 0$ gilt. \\
-  % TODO: Referenz
-  Nach 14.16 existiert zu jedem $\omega \in \diff^{0,1}(X)$ ein $f \in
+  Nach \cite[Kor. 14.16]{For} existiert zu jedem $\omega \in \diff^{0,1}(X)$ ein $f \in
   \diff(Y')$ mit $\d[''f] = \omega|_{Y'}$. \\
   Dies erlaubt uns die Definition von $S: \diff^{0,1}(X) \ra \C, \quad
   S[w] := T[f|_Y]$. Diese Definition ist unabhängig von $f$, denn für
@@ -174,16 +171,26 @@
   Als nächstes wollen wir zeigen, dass $S$ stetig ist. \\
   Dazu betrachten wir zunächst $V := \{ (\omega, f) \in \diff^{0,1}(X)
   \times \diff(Y'): \quad \d[''f] = \omega|_{Y'} \}$. Aus der
-  % TODO: Woher Stetigkeit d''?
+  \todo{Woher Stetigkeit d''?}
   Stetigkeit von $\d['']: \diff(Y') \ra \diff^{0,1}(Y')$ folgt, dass $V
   \subset \diff^{0,1}(X) \times \diff(Y')$ abgeschlossen und somit ein
   Fr´echet-Raum ist. \\
-  % TODO: Referenz
-  Nach 14.16 ist $\pi_1: V \ra \diff^{0,1}(X)$ surjektiv und damit
+  Nach \cite[Kor. 14.16]{For} ist $\pi_1: V \ra \diff^{0,1}(X)$ surjektiv und damit
   offen. \\
   Weiterhin ist $\beta \circ \pi_2 : V \ra \diff(Y)$ stetig. Da nun
-  auch noch das folgende Diagramm kommutiert:
-  % TODO: Diagramm T*(beta*pi2) = S*pi1
+  auch noch das folgende Diagramm kommutiert,
+  \begin{center}
+    \begin{tikzpicture}
+      \node (V) {$V$};
+      \node (ey) [right of=V] {$\diff(Y)$};
+      \node (ex) [below of=V] {$\diff^{0,1}(X)$};
+      \node (C) [right of =ex] {$\C$};
+      \draw[->] (V) to node{$\beta \circ \pi_2$} (ey);
+      \draw[->] (V) to node{$\pi_1$} (ex);
+      \draw[->] (ey) to node{$T$} (C);
+      \draw[->] (ex) to node{$S$} (C);
+    \end{tikzpicture}
+  \end{center}
   folgt die Stetigkeit von $S$. \\
   \\
   Das Lemma \ref{lemma:kompakter-träger-funktional} liefert
@@ -222,7 +229,7 @@
    \\
    Sei nun $f \in \hol(Y)$. Wir wollen zeigen, dass $T[f] = 0$. \\
    Zunächst gilt $\runge(K) \subset \runge(Y) = Y$. Durch Glättung
-   % TODO: genauer
+   \todo{genauer}
    können wir ein $g \in \diff(X)$ mit $f \equiv g$ in einer Umgebung
    von $\runge(K)$ und $\Supp(g) \Subset Y$ finden. \\
    Also liegt $\Supp(f - g|_Y) \subset Y \ K$, somit $T[f- g|_Y] = 0$
@@ -247,8 +254,8 @@
   \begin{description}
   \item[Fall $Y \Subset X$:] Seien $f \in \hol(Y)$, $K \subset Y$
     kompakt und $\epsilon > 0$ gegeben. \\
-    % TODO: Referenz
-    Aus dem Beweis von (23.9) erhalten wir eine Ausschöpfung $Y_1
+    Aus dem Beweis von Satz \ref{thm:Ausschöpfung-Runge} erhalten wir
+    eine Ausschöpfung$Y_1
     \Subset Y_2 \Subset \dots$ von $X$ mit $Y_0 := Y \Subset Y_1$. \\
     Nach Satz \ref{thm:runge-dicht} existiert ein $f \in \hol(Y_1)$
     mit
@@ -283,8 +290,8 @@
     \mathring L$. Dies ist möglich in dem wir $K$ durch endlich viele relativ
     Kompakte Koordinatenumgebungen überdecken und L als deren
     Abschluss definieren. \\
-    % TODO: Referenz
-    Dann folgt aus 23.7 die Existenz einer offenen Runge-Teilmenge
+    Dann folgt aus Lemma \ref{lemma:zwischen-runge} die Existenz einer
+    offenen Runge-Teilmenge
     $\tilde Y \subset X$ mit $K \subset \tilde Y \subset L$. \\
     Damit ist $\tilde Y \Subset X$ und $f$ kann als Funktion von
     $\hol(\tilde Y)$ aufgefasst werden und schlussendlich können wir

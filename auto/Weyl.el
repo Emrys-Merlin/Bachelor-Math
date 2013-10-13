@@ -14,5 +14,6 @@
      "eq:glättung-partiell"
      "eq:glättung-norm"
      "thm:weyl"
-     "eq:weyl")))
+     "eq:weyl"
+     "cor:hol-dist")))
 
