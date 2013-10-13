@@ -1,4 +1,16 @@
-\documentclass[ngerman,fleqn]{scrartcl}
+\documentclass[ngerman,fleqn,twoside,headsepline]{scrartcl}
+
+\usepackage{scrpage2}
+
+\pagestyle{scrheadings}
+\ofoot{\pagemark}
+\lehead{Uniformisierung kompakter Riemannscher Flächen}
+\rohead{\headmark}
+\automark[section]{section}
+
+
+\usepackage[backend=biber, style=alphabetic]{biblatex}
+\bibliography{biblio}
 
 \usepackage{amssymb}
 \usepackage[]{babel}
@@ -13,7 +25,9 @@
 \usepackage{makeidx}
 \usepackage{amsthm}
 \usepackage{mathtools}
-%\usepackage{unicode-math}
+% \usepackage{unicode-math}
+\usepackage{todonotes}
+
 
 \usepackage{fontspec}
 \setmainfont{Linux Libertine}
@@ -68,7 +82,7 @@
 \NewDocumentCommand\delat{ O{p} O{i} O{x} O{} }{\left . \del[#2][#3][#4] \right |_{#1}}
 \NewDocumentCommand\christ{O{i} O{j} O{k} }{ \Gamma_{#1 #2}^{#3} }
 
-\NewDocumentCommand\quot{m m}{\left .\raisebox{.2em}{#1}\middle/\raisebox{-.2em}{#2}\right .}
+\NewDocumentCommand\quot{m m}{\left .\raisebox{.2em}{$#1$}\middle/\raisebox{-.2em}{$#2$}\right .}
 
 %richtiges epsilon
 \let\epsilon\relax
@@ -77,7 +91,7 @@
 \NewDocumentCommand\phi{}{\varphi}
 
 \let\d\relax
-\NewDocumentCommand\d{ O{} }{\operatorname{d}#1}
+\NewDocumentCommand\d{ O{} }{\operatorname{d}\hspace{-0.1em}#1}
 \NewDocumentCommand\arsinh{}{\operatorname{arsinh}}
 \NewDocumentCommand\id{}{\operatorname{id}}
 \NewDocumentCommand\supp{}{\operatorname{supp}}
@@ -88,6 +102,14 @@
 \NewDocumentCommand\scal{}{\operatorname{scal}}
 \NewDocumentCommand\g{m m}{\langle #1, #2 \rangle}
 \NewDocumentCommand\ord{}{\operatorname{ord}}
+\let\Re\relax
+\NewDocumentCommand\Re{}{\operatorname{Re}}
+\let\Im\relax
+\NewDocumentCommand\Im{}{\operatorname{Im}}
+\NewDocumentCommand\Div{}{\operatorname{Div}}
+\NewDocumentCommand\Aut{}{\operatorname{Aut}}
+\NewDocumentCommand\Deck{}{\operatorname{Deck}}
+
 
 \NewDocumentCommand\init{m}{\emph{#1}\index{#1}}
 
@@ -108,6 +130,8 @@
 \newtheorem{bsp}[thm]{Beispiele}
 \theoremstyle{remark}
 \newtheorem{rem}[thm]{Bemerkung}
+
+\tikzset{node distance=3cm, auto}
 
 \makeindex
 
