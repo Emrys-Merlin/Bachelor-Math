@@ -14,6 +14,7 @@
 \end{defin}
 
 \begin{defin}
+  \label{def:divisor-lsg}
   Sei $X$ eine Riemannsche Fläche und $D \in Div(X)$. Dann heißt $f
   \in \mer(X)$ eine \emph{Lösung} von $D$, falls $(f) = D$. \\
   Setzen wir $X_D := \{x \in X: D(x) \geq 0 \}$, so heißt $f \in
@@ -22,6 +23,68 @@
   \diff(U)$ mit $\psi(a) \neq 0$ existieren, so dass $f = \psi z^k$
   auf $ U \cap X_D$ gilt, wobei $k = D(a)$.
 \end{defin}
+
+\begin{lemma}
+  Sei $X$ eine Riemannsche Fläche und $D \in Div(X)$. Seien weiterhin
+  $f,g \in \diff(X_D)$ schwache Lösungen von $D$. Dann existiert ein
+  $h \in \diff(X)$ mit $h(x) \neq 0$ für alle $x \in X$ und $ f
+  = h\cdot g$.
+\end{lemma}
+
+\begin{proof}
+  Sie $a \in X$ und $(U_a, z_a)$ eine Karte um $a$ mit $z(a) = 0$, so
+  dass $f|_{U_a} \equiv \psi_a z^{k_a}$ und $g|_{U_a} \equiv \phi_a
+  z^{k_a}$ auf $X_D \cap U_a$ gilt, wobei $k_a := D(a)$. Weiterhin sei
+  $U_a$ so klein gewählt, dass $\psi_a(x) \neq 0 \neq \phi_a(x)$ für
+  alle $x \in U_a$. Dann ist klarerweise $(U_a)_{a \in X}$ eine
+  Überdeckung von $X$. Nun definieren wir auf $U_a$ die Funktion
+  \[
+  h_a := \frac{\psi_a}{\phi_a} \in \diff(U)
+  \]
+  und es gilt $f|_{U_a} = h_a g|_{U_a}$. Setzen wir $S := \{ a \in X
+  \mid D(a) \neq 0\}$, so ist $S$ diskret und setzen wir weiterhin
+  $\tilde X = X \setminus S$, so ist $\tilde X$ offen und es gilt auf $U_a \cap U_b \cap
+  \tilde X$
+  \[
+  h_a|_{U_a \cap U_b \cap \tilde X} = \frac{f|_{U_a \cap U_b \cap
+      \tilde X}}{g|_{U_a \cap U_b \cap \tilde X}} = h_b|_{U_a \cap U_b
+    \cap \tilde X}.
+  \]
+  Also finden wir ein $h \in \diff(\tilde X)$ mit $h|_{U_a \cap \tilde
+    X} = h_a|_{\tilde X}$. Nun ist aber $h_a$ glatt fortsetzbar auf
+  ganz $U_a$ und wir erhalten, dass $h$ glatt auf ganz $X$ fortgesetzt
+  werden kann. Weiterhin folgt aus $h_a(x) \neq 0$ für alle $x \in
+  U_a$ und $a \in X$, dass auch $h(x) \neq 0$ für alle $x \in X$. Und
+  als letztes erahlten wir auch $f = h \cdot g$.
+\end{proof}
+
+\begin{lemma}
+  \label{lemma:lsg-produkt}
+  Sei $X$ eine Riemannsche Fläche. Seien weiterhin $f_1$ bzw. $f_2$
+  je eine schwache Lösung der Divisoren $D_1$ bzw. $D_2$. Dann ist
+  $f_1 \cdot f_2$ eine schwache Lösung von $D_1 + D_2$.
+\end{lemma}
+
+\begin{proof}
+  Auf $X_{D_1} \cap X_{D_2}$ ist klar, dass $f_1 \cdot f_2$ die
+  gewünschten Eigenschaften erfüllt. Allerdings ist falls ein $a \in
+  X$ mit $D(a) := D_1(a) +
+  D_2(a) > 0$, aber $D_1(a) < 0$ oder $D_2(a) < 0$ gilt, entweder $f_1(a)$ oder
+  $f_2(a)$ nicht definiert. Nehmen wir ohne Einschränkung an, dass
+  $D_1(a) < 0$ gilt, so können wir eine Karte $(z,U)$ um $a$ finden,
+  so dass $\psi, \phi \in \diff(U)$ existieren, die der Definition
+  \ref{def:divisor-lsg} für $f_1$ bzw. $f_2$ genügen. Dann gilt also
+  auf $U \cap X_{D_1} \cap X_{D_2}$
+  \[
+  f_1 \cdot f_2 = \psi z^{k_1} \phi z^{k_1} = (\psi \phi) \cdot
+  z^{k_1+k_2}.
+  \]
+  Nun ist $k_1 + k_2 = D_1(a) + D_2(a) > 0$, also steht auf der
+  rechten Seite eine glatte Funktion, die sogar auf ganz $U$,
+  insbesondere in $a$, definiert ist. Also kann das Produkt $f_1 \cdot
+  f_2$ auf $a$ fortgesetzt werden und $f_1 \cdot f_2$ stellt
+  tatsächlich eine schwache Lösung von $D_1 + D_2$ dar.
+\end{proof}
 
 \begin{lemma}
   \label{lemma:schwache-Lösung-Divisor}
@@ -58,9 +121,8 @@
     = 1$. \\
     Nach Konstruktion gilt $\partial c_\nu = A_\nu - A_{\nu+1}$, wobei
     $A_\nu(a_\nu) = 1$ und sonst verschwindet $A_\nu$. \\
-    Weiterhin folgt, dass $\phi_0 \cdot \phi_1 \dots \phi_n$ eine
+    Weiterhin folgt aus Lemma \ref{lemma:lsg-produkt}, dass $\phi_0 \cdot \phi_1 \dots \phi_n$ eine
     schwache Lösung von $A_0 - A_{n+1}$ ist.
-    \todo{Warum ist das eine schwache Lösun?}
     Lassen wir $n$ gegen unendlich gehen, so erhalten wir $\phi :=
     \prod_{\nu = 0}^\infty \phi_\nu$. Dieses Produkt konvergiert, da
     auf jeder kompakten Teilmenge nur endlich viele Faktoren von 1

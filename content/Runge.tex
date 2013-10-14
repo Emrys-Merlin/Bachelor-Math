@@ -2,43 +2,66 @@
 \section{Der Rungesche Approximationssatz}
 \label{sec:Runge}
 
-\todo{Frechet-Raum und Konsequenzen aufschreiben}
-
 \begin{prop}
+  \label{prop:diff-frechet}
   Sei $X$ eine Riemannsche Fläche, $Y \subset X$ offen. \\
-  Dann besitzen $\diff(Y)$ und $\diff^{0,1}(Y)$ Struktur eines Fr´echet-Raums.
+  Dann besitzen $\diff(Y)$ und $\diff^{0,1}(Y)$ Struktur eines Fr\'echet-Raums.
 \end{prop}
 
 \begin{proof}
-  \todo{Warum genau geht das? Wieso reichen abzählbarviele Karten?
-    (Rest folgt dann)}
-  Sei dazu $K_j \subset Y$ kompakt, $j \in \N$, $\bigcup_{j \in \N}
+  Sei für jedes $j \in \N$ die Menge $K_j \subset Y$ kompakt mit $\bigcup_{j \in \N}
   \mathring{K_j} = Y$ und $K_j \subset U_j$, wobei $(U_j, z_j)$ Karten
-  sind. \\
+  sind. Solche $K_j$ können konstruiert werden, da wir im Beweis zu
+  Korollar\ref{cor:ausschöpfung-kompakt} eine abzählbare Basis der
+  Topologie mit relativ kompakten Teilmengen gefunden haben.
   Für jedes $\nu = (\nu_1, \nu_2)^T \in \N^2$ eine Halbnorm
   \[
   p_{j\nu}: \diff(Y) \ra \R, \quad p_{j\nu}(f) := \|D_j^\nu f\|_{K_j},
   \]
   wobei $D^\nu_j := \left ( \frac{\partial}{\partial x_j} \right
   )^{\nu_1} \left ( \frac{\partial}{\partial y_j} \right )^{\nu_2}$
-  mit $z_j = x_j + iy_j$. \\
-  \todo{Genauer}
-  Dies ist eine abzählbare Familie von Halbnormen. Da falls $0 \neq f
-  \in \diff(Y)$ gilt, immer eine der Halbnormen von 0 verschieden ist,
-  definiert diese Familie die Struktur eines Fr´echet-Raums auf
-  $\diff(Y)$. \\
-  Wir erhalten eine Umgebungsbasis der 0 durch endliche Schnitte von
-  Mengen der Form $U(p_{j\nu}, \epsilon) := \{f \in \diff(Y) |
-  p_{j\nu}(f) < \epsilon \}, \quad \epsilon > 0$. \\
-  Konvergenz in dieser Topologie ist dann gleichbedeutend mit
-  $C^\infty$-Konvergenz auf jedem der $K_j$. \\
-  \todo{Warum genau?}
-  Behauptung: Die Topologie ist unabhängig von den gewählten $K_j$.\\
-  \\
+  mit $z_j = x_j + iy_j$. Dies ist eine abzählbare Familie von
+  Halbnormen. Diese können wir verwenden, um eine Topologie auf
+  $\diff(Y)$ zu definieren, in dem wir als Basis der Topologie
+  endliche Schnitte der Mengen $U(p_{j\nu}, \epsilon, y)$ für
+  beliebige $\epsilon > 0$ und $y \in Y$ verwenden (vgl. Definition
+  \ref{def:frechet} und Bemerkung \ref{rem:frechet}). Diese Topologie
+  ist hausdorffsch, denn falls $0 \neq f \in \diff(Y)$, finden wir
+  eine Halbnorm, so dass $\epsilon := p_{j\nu}(f) > 0$. Dann können wir $f$ und 0
+  durch die beiden offenen Mengen $U(p_{j\nu}, \frac{\epsilon}{3}, 0)$
+  und $U(p_{j\nu}, \frac{\epsilon}{3}, f)$ trennen. Weiterhin ist
+  $\diff(Y)$ vollständig bezüglich Konvergenz in allen Halbnormen, da
+  alle Ableitung lokal gleichmäßig konvergieren. Damit erfüllt
+  $\diff(Y)$ alle Voraussetzungen von Definition \ref{def:frechet}.
+  
+  Zu guter Letzt behaupten wir nun noch, dass die oben gewählte
+  Topologie unabhängig von der gewählten Überdeckung ist. Seien dazu
+  $(K_j)$ und $(\tilde K_m)$ zwei Überdeckungen, die den obigen
+  Voraussetzungen genügen. Wir bezeichnen mit $(p_{j\nu})$
+  bzw. $(\tilde p_{m\nu})$ die zugehörigen Halbnormen. Wir zeigen nun,
+  dass $U(p_{j\nu}, \epsilon, f)$ für beliebige $j, \nu \in\N,\
+  \epsilon > 0$ und $f \in \diff(Y)$ offen bzgl. der Topologie von
+  $(\tilde p_{m\nu})$ ist. Dies genügt bereits, da die Basis der
+  Topologie von $(p_{j\nu})$ aus endlichen Schnitten dieser Mengen
+  besteht. Wir wissen nun, dass $K_j \subset \bigcup_{m=1}^M
+  \mathring{\tilde K_m} \subset \bigcup_{m=1}^M \tilde K_m$ gilt, da
+  $K_j$ kompakt ist. Wir behaupten nun, dass
+  \[
+  \tilde U := \bigcap_{m=1}^M U(\tilde p_{m\nu}, \epsilon, f) \subset
+  U(p_{j\nu}, \epsilon, f)
+  \]
+  gilt. Sei dazu $g \in \tilde U$. Dann erhalten wir
+  \[
+  \|D^\nu(g-f)\|_{K_j} \leq \max_{m=1, \dots, M} \|D^\nu(g-f)\|_{\tilde
+    K_m} < \epsilon,
+  \]
+  was die Behauptung zeigt. Für die Rückrichtung vertauschen wir in
+  der Argumentation einfach $K_j$ und $\tilde K_j$ und erhalten, dass
+  die Topologie unabhängig, von der gewählten Überdeckung ist.
+  
   Völlig analog kann die obige Konstruktion auch für $\diff^{0,1}(Y)$
   durchgeführt werden.
 \end{proof}
-
 
 \begin{cor}
   Mit der obigen Topologie ist $\hol(Y) \subset \diff(Y)$ ein
@@ -67,8 +90,8 @@
   \]
   Nach Konstruktion der obigen Topologie finden wir ein $\epsilon > 0$
   und endlich viele $j_1, \dots, j_n \in \N$ und $\nu_1, \dots \nu_n
-  \in \N^2$, so dass $U(p_{j_1\nu_1}, \epsilon) \cap \dots \cap
-  U(p_{j_n\nu_n}, \epsilon) \subset U$. \\
+  \in \N^2$, so dass $U(p_{j_1\nu_1}, \epsilon, 0) \cap \dots \cap
+  U(p_{j_n\nu_n}, \epsilon, 0) \subset U$. \\
   Sei nun  $K := K_{j_1} \cup \dots \cup K_{j_n}$. Wir behaupten, dass
   dies das gesuchte $K$ ist. \\
   Dazu wählen wir $f \in \diff(Y)$ mit $\Supp(f) \subset Y \setminus
@@ -158,7 +181,7 @@
 
 \begin{proof}
   Sei $\beta: \diff(Y') \ra \diff(Y)$ die Einschränkungsabbildung. Wir
-  verwenden \cite[Kor B.10]{For}. Dazu müssen wir zeigen, dass falls $T \in
+  verwenden Korollar \ref{cor:frechet-dicht}. Dazu müssen wir zeigen, dass falls $T \in
   \diff(Y)'$ mit $T_{\beta(\hol(Y'))} \equiv 0$ auch $T|_{\hol(Y)}
   \equiv 0$ gilt. \\
   Nach \cite[Kor. 14.16]{For} existiert zu jedem $\omega \in \diff^{0,1}(X)$ ein $f \in
@@ -170,13 +193,26 @@
   dass $T|_{\beta(\hol(Y'))} \equiv 0$. \\
   Als nächstes wollen wir zeigen, dass $S$ stetig ist. \\
   Dazu betrachten wir zunächst $V := \{ (\omega, f) \in \diff^{0,1}(X)
-  \times \diff(Y'): \quad \d[''f] = \omega|_{Y'} \}$. Aus der
-  \todo{Woher Stetigkeit d''?}
-  Stetigkeit von $\d['']: \diff(Y') \ra \diff^{0,1}(Y')$ folgt, dass $V
-  \subset \diff^{0,1}(X) \times \diff(Y')$ abgeschlossen und somit ein
-  Fr´echet-Raum ist. \\
-  Nach \cite[Kor. 14.16]{For} ist $\pi_1: V \ra \diff^{0,1}(X)$ surjektiv und damit
-  offen. \\
+  \times \diff(Y'): \quad \d[''f] = \omega|_{Y'} \}$. Nun haben wir
+  sowohl $\diff(Y')$, als auch $\diff^{0,1}(Y')$ mit der Topologie
+  eines Fr\'echet-Raums ausgestattet. Wählen wir ine Überdeckung von
+  $Y'$ durch Kompakta wie im Beweis von Proposition
+  \ref{prop:diff-frechet} und eine Folge $(f_n)_{n\in \N} \subset
+  \diff(Y')$, die bzgl. der Fr\'echet-Topologie gegen $f \in \diff(Y')$
+  konvergiert, so gilt auf den Kompakta, dass $(f_n)_{n\in \N}$ glatt
+  gegen $f$ konvergiert, d.h. heißt aber, dass bezüglich den Karten
+  auch die Folge $\left(\frac{\partial f_n}{\partial \bar z} \right
+  )_{n \in\N}$ glatt gegen $\frac{\partial f}{\partial \bar
+      z}$ konvergiert. In anderen Worten konvergiert
+    $(\d[''f_n])_{n\in \N}$ gegen $\d[''f]$. Also ist 
+  $\d['']: \diff(Y') \ra \diff^{0,1}(Y')$ stetig und es folgt, dass $V
+  \subset \diff^{0,1}(X) \times \diff(Y')$ abgeschlossen und somit
+  nach Satz \ref{thm:frechet-abgeschlossen} unf \ref{thm:frechet-summe} ein
+  Fr\'echet-Raum ist.
+  
+  Nach \cite[Kor. 14.16]{For} ist $\pi_1: V \ra \diff^{0,1}(X)$
+  surjektiv und stetig. Es folgt aus dem Satz über die offene
+  Abbildung, dass $\pi_1$ offen ist.
   Weiterhin ist $\beta \circ \pi_2 : V \ra \diff(Y)$ stetig. Da nun
   auch noch das folgende Diagramm kommutiert,
   \begin{center}
@@ -191,8 +227,8 @@
       \draw[->] (ex) to node{$S$} (C);
     \end{tikzpicture}
   \end{center}
-  folgt die Stetigkeit von $S$. \\
-  \\
+  folgt die Stetigkeit von $S$.
+
   Das Lemma \ref{lemma:kompakter-träger-funktional} liefert
   \begin{itemize}
   \item ein kompaktes $K \subset Y$ mit $T[f] = 0$ für jedes $f \in

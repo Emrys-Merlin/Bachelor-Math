@@ -27,7 +27,7 @@
   geforderten Eigenschaften.
 \end{proof}
 
-\begin{lemma}[Poincar´e-Volterra]
+\begin{lemma}[Poincar\'e-Volterra]
   \label{lemma:poincare-volterra}
   Sei $X$ eine zusammenhängende Mannigfaltigkeit und $Y$ ein
   Hausdorff-Raum mit abzählbarer Basis der Topologie. Sei weiterhin
@@ -98,7 +98,7 @@
   Damit besitzt $X$ eine abzählbare Basis der Topologie.
 \end{proof}
 
-\begin{thm}[Rado]
+\begin{thm}[Rad\'o]
   Jede Riemannsche Fläche $X$ besitzt eine abzählbare Basis der
   Topologie.
   \label{thm:rado}
@@ -330,6 +330,20 @@
   Weiterhin sind nach (22.18) alle Randpunkte von $Y$ regulär.
 \end{proof}
 
+\begin{lemma}
+  \label{lemma:zsh-komp}
+  Sei $X$ eine Riemannsche Fläche, $Y \subset X$ eine offene Menge und
+  $Z \subset Y$ eine Zusammenhangskomponente von $Y$. Dann ist $Z$ offen.
+\end{lemma}
+
+\begin{proof}
+  Sei $x \in Z$. Dann finden wir eine offene, zusammenhängende
+  Koordinatenumgebung $U \subset Y$ mit mit $x \in U$. Nun ist aber
+  $Z$ die maximale zusammenhängende Teilmenge, die $x$ enthält und da
+  $U$ auch zusammenhängend gewählt wurde, muss $U \subset Z$
+  gelten. Also ist $x$ ein innerer Punkt und damit $Z$ offen.
+\end{proof}
+
 \begin{thm}
   \label{thm:runge-zshkomp}
   Sei $Y \subset X$ eine offene Runge-Teilmenge und $X$ eine
@@ -340,9 +354,7 @@
 \begin{proof}
   \begin{enumerate}
   \item Seien $Y_i, i \in I$, die Zusammenhangskomponenten von
-    \todo{Warum offen? evtl. infinty viele ZshKomp. Dann gibt es GegBsp}
-    $Y$. $Y$ ist offen und $X$ ist eine Mannigfaltigkeit, also sind
-    alle $Y_i$ offen. \\
+    $Y$. Nach Lemma \ref{lemma:zsh-komp} sind alle $Y_i$ offen.
     Setze nun $A := X \setminus Y$ und $A_k, k\in \N$ die
     Zusammenhangskomponenten von $A$. Dann sind alle $A_k$
     abgeschlossen, aber nicht kompakt.
@@ -352,12 +364,15 @@
       \neq i} Y_j = \varnothing$. Also ist $Y_i = \bar Y_i$. Dies
     ist ein Widerspruch dazu, dass $X$ zusammenhängend ist.
   \item Behauptung: $C \cap A \neq \varnothing$ für jede
-    Zusammenhangskomponente von $X \setminus Y_i$. \\
+    Zusammenhangskomponente $C$ von $X \setminus Y_i$. \\
     Ansonsten gäbe es ein $j \neq i$, so dass $C \cap Y_j \neq
     \varnothing$. \\
-    \todo{Warum?? Irgendwas weil beides zsh ist.}
-    Nun ist aber $C$ abgeschlossen und $Y_j$ zusammenhängend, also
-    $\bar Y_j \subset C$ und damit ist $C \cap Y_j \neq \varnothing$.
+    Nun ist aber $Y_j \subset X \setminus Y_i$ zusammenhängend und aus
+    dem nicht leeren Schnitt folgte $Y_j \subset C$, da $C$ maximal
+    zusammenhängend ist. Weiterhin folgt dann auch $\bar Y_j \subset
+    \bar C = C$, da $C$ bereits abgeschlossen ist. Nach 2. würde dies
+    bedeuten, dass $A \cap C \neq \varnothing$ gelten müsste. Also
+    genau, was wir zeigen wollten.
   \item Sei nun $C$ eine Zusammenhangskomponente von $X \setminus
     Y_i$. Dann trifft $C$ nach 3. mindestens ein $A_k$. Also ist $A_k
     \subset C$ und da $A_k$ nicht kompakt ist, ist $C$ auch nicht kompakt.

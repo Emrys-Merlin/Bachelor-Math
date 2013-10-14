@@ -1,0 +1,257 @@
+
+\section{Fr\'echet Räume}
+\label{sec:frechet}
+
+\begin{defin}
+  \label{def:frechet}
+  Sei $E$ ein topologischer Vektorraum. $E$ heißt
+  \init{Fr\'echet-Raum}, falls die folgenden Bedingungen erfüllt sind:
+  \begin{enumerate}
+  \item Es existiert eine abzählbare Familie von Seminormen $(p_n)_{n
+      \in \N}$, die die Topologie von $E$ erzeugen.
+  \item $E$ ist Hausdorffsch.
+  \item $E$ ist vollständig.
+  \end{enumerate}
+  Weiterhin definieren wir für $\epsilon > 0$ und $x \in E$ die Menge
+  \[
+  U(p_k, \epsilon, x) := \{ y \in E \mid p_k(x-y) < \epsilon\}
+  \]
+\end{defin}
+
+
+\begin{rem}
+  \label{rem:frechet}
+  \begin{enumerate}
+  \item Konvergenz bezüglich der Topologie von $E$ bedeutet dann
+    nichts anderes, als Konvergenz bezüglich aller Halbnormen $p_k$.
+  \item Die erste Bedingung bedeutet, dass $U\subset X$ genau dann
+    offen ist, falls zu jedem $x \in U$ ein $K \in \N$ und ein
+    $\epsilon > 0$ existiert, so dass
+    \[
+    \cap_{k=1}^K U(p_k, \epsilon, x) \subset U
+    \]
+    gilt.
+  \item Aus der Bedingung, dass $E$ Hausdorffsch ist, folgt, dass $x =
+    y$ dann und nur dann gilt, wenn $p_k(x-y) = 0$ für jedes $k \in
+    \N$ gilt. Dies folgt leicht aus der Tatsache, dass ansonsten $x
+    \in U(p_k, \epsilon, y)$ liegen müsste und damit $x$ in jeder
+    offenen Umgebung von $y$ enthalten wäre. Umgekehrt natürlich genau so.
+  \end{enumerate}
+\end{rem}
+
+\begin{prop}
+  \label{prop:frechet-metrik}
+  Sei $E$ ein Fr\'echet-Raum mit Halbnormen $(p_k)_{k \in \N}$. Dann
+  ist
+  \[
+  d: E \times E \ra \R, \quad d(x,y) := \sum_{k=1}^\infty 2^{-k}
+  \frac{p_k(x-y)}{1 + p_k(x-y)}
+  \]
+  eine Metrik und die von $d$ induzierte Topologie stimmt mit der
+  Topologie von $E$ überein. Also ist $E$ insbesondere
+  metrisierbar. $d$ wird auch als \init{Fr\'echet-Metrik} bezeichnet.
+\end{prop}
+
+\begin{proof}
+  Zunächst ist die Abbildung $d$ wohldefiniert, denn die Abbildung,
+  die durch $x \mapsto \frac{x}{1+x}$ gegeben ist, bildet das
+  Intervall $[0, \infty[$ auf das Intervall $[0,1[$ ab. Der Rest folgt
+  aus der Konvergenz der geometrischen Reihe. Wir bezeichnen
+  diese zweite Abbildung mit $f$.
+
+  Die Symmetrie der Metrik ist klar und für die Definitheit wählen wir
+  $x\neq y \in E$. Dann existiert nach der dritten Bemerkung ein $k \in
+  \N$, so dass $p_k(x-y) >0$ ist. Dann ist aber $d(x,y) \geq
+  2^{-k}p_k(x-y) > 0$. Da für $x =y$ klarerweise $d(x,y) =0$ gilt,
+  folgt die Definitheit von $d$. Es bleibt also nur noch die die
+  Dreiecksungleichung zu zeigen. Dazu stellen wir zunächst fest, dass
+  $f$ streng monoton wachsend ist, denn die Ableitung $f'(x) =
+  \frac{1}{(1+x)^2}$ ist positiv auf dem gesamten Intervall $[0,
+  \infty[$. Nun folgt aus der Dreicksungleichung für die Halbnormen,
+  dass $p_k(x+y) \leq p_k(x) + p_k(y)$ für alle $k \in \N$ gilt. Aus
+  der Monotonie von $f$ erhalten wir dann:
+  \begin{align*}
+    f(p_k(x+y)) & \leq f(p_k(x) + p_k(y)) \\
+    & = \frac{ p_k(x) + p_k(y)}{1 + p_k(x) + p_k(y)}\\
+    & = \frac{p_k(x)}{1+ p_k(x)+p_k(y)} + \frac{p_k(y)}{1+p_k(x) +
+      p_k(y)} \\
+    & \leq \frac{p_k(x)}{1+p_k(x)} + \frac{p_k(y)}{1+ p_k(y)} \\
+    & = f(p_k(x)) + f(p_k(y))
+  \end{align*}
+  Aus dieser Dreiecksungleichung für $f \circ p_k$ folgt direkt die
+  Dreieckungleichung für $d$, da die Gleichung $d(x,y) = \sum_{k=1}^\infty
+  2^{-k}f(p_k(x-z))$ gilt.
+  
+  Nun wenden wir uns der Topologie zu. Wir wissen, dass die Bälle
+  \[
+  B_\epsilon(x) := \{ y \in E \mid d(x,y) < \epsilon \} \qquad \forall
+  x \in E, \quad \epsilon > 0
+  \]
+  die Topologie der Metrik $d$ erzeugen. Um nun zu zeigen, dass die
+  Topologie von $E$ mindestens genau so fein ist, wie die von $d$
+  erzeugte, müssen wir zeigen, dass die metrischen Bälle bezüglich der
+  Topologie von $E$ offen sind. Genauer reicht es uns sogar
+  zu zeigen, dass $x$ ein innerer Punkt von $B_\epsilon(x)$ bezüglich
+  der eigentlichen Topologie von $E$ ist, denn
+  für jeden andern Punkt $y \in B_\epsilon(x)$ finden wir ein
+  $\delta >0$, so dass $B_\delta(y) \subset B_\epsilon(x)$ und dann
+  brauchen wir nur eine (bzgl. $E$) offene Umgebung $U$ von $y$ mit $U
+  \subset B_\delta(y)$ zu finden. Also zeigen wir auch hier, dass $y$
+  ein innerer Punkt von $B_\delta(y)$ ist. Sei nun also
+  $B_\epsilon(x)$ gegeben. Dann existiert ein $K \in \N$, so dass
+  $\sum_{k=K+1}^\infty 2^{-k} < \frac{\epsilon}{2}$ gilt. Wählen wir
+  nun ein $\tilde \epsilon := \frac{\epsilon}{2K}$, so  existiert ein
+  $\delta > 0$, so dass für $0 \leq x < \delta$ $0 \leq f(x) < \tilde \epsilon$
+  gilt. Dies folgt aus der Stetigkeit von $f$. Wir behaupten nun, dass
+  $U := \bigcap_{k=1}^{K-1} U(p_k, \delta, x) \subset B_\epsilon(x)$
+  gilt. Dieses $U$ ist dann nach der zweiten Bemerkung offen und wir
+  haben die Behauptung gezeigt. Sei nun also $y \in U$, dann gilt
+  $p_k(x-y) < \delta$ für alle $k \leq K-1$ und damit
+  \begin{align*}
+    d(x,y) & = \sum_{k=1}^\infty 2^{-k} f(p_k(x-y)) \\
+    & \leq \sum_{k=1}^{K-1}2^{-k} f(p_k(x-y)) + \sum_{k=K}^\infty 2^{-k} \\
+    & < \sum_{k=1}^{K-1} f(p_k(x-y)) + \frac{\epsilon}{2} \\
+    & < \sum_{k=1}^{K-1} \tilde \epsilon + \frac{\epsilon}{2} \\
+    & = (K-1) \tilde \epsilon + \frac{\epsilon}{2}\\
+    & < \epsilon.
+  \end{align*}
+  Nun müssen wir noch zeigen, dass die von $d$ induzierte Topologie
+  mindestens so fein ist, wie die Topologie von $E$. Sei dazu $U \subset
+  E$ offen. Wählen wir $x \in U$, so existiert ein $K \in \N$ und ein
+  $\epsilon > 0$, so dass $\bigcap_{k=1}^K U(p_k, \epsilon, x) \subset
+  U$. Weiterhin können wir zu $f$ explizit eine Umkehrfunktion
+  angeben. Für diese gilt
+  \[
+  f^{-1} := [0, 1[\ra [0, \infty[, \quad f^{-1}(x) := \frac{x}{1-x}
+  \]
+  und damit ist $f^{-1}$ auch stetig und wir finden ein $\delta > 0$,
+  so dass $0 \leq f^{-1}(x) < \epsilon$ für alle $0 \leq x <
+  \delta$. Setzen wir $\tilde \delta := 2^{-K} \delta$, so behaupten
+  wir, dass $B_{\tilde \delta}(x) \subset \cap_{j=1}^K U(p_j,
+    \epsilon, x) \subset U$ gilt. Sei dazu $y \in B_{\tilde
+      \delta}(x)$. Aus $d(x,y) < \tilde \delta$ folgt dann, dass
+    $2^{-k} f(p_k(x-y)) < 2^{-K} \delta$ gilt. Insbesonder erhalten
+    wir für alle $k \leq K$, dass $f(p_k(x-y)) < 2^{-(K-k)} \delta
+    \leq \delta$ gilt. Und aus der Stetigkeit von $f^{-1}$ folgt, dass
+    $p_k(x-y) < \epsilon$ ist für alle $k \leq K$. Also ist $y \in
+    \bigcap_{k=1}^K U(p_k, \epsilon, x) \subset U$. Damit ist $U$ auch
+    bezüglich der von $d$ induzierten Topologie offen. Insgesamt haben
+    wir die Äquivalenz der Topologien gezeigt.
+\end{proof}
+  
+\begin{thm}
+  \label{thm:frechet-abgeschlossen}
+  Sei $F \subset E$ ein abgeschlossener Untervektorraum. Dann ist $F$
+  ein Fr\'echet-Raum.
+\end{thm}
+
+\begin{proof}
+  Wir können $F$ mit der Teilraumtopologie ausstatten. Dann ist $F$
+  als abgeschlossener Teilraum automatisch vollständig. Weiterhin wird
+  die Topologie wieder durch eine abzählbare Familie von Halbnormen
+  erzeugt, denn wir können die Familie von $E$ auf $F$
+  einschränken. Dass $F$ Hausdorffsch ist, ergibt sich daraus, dass
+  wir die Topolgie von $F$ auch dadurch erhalten, dass wir dei Metrik
+  von $E$ auf $F$ einschränken. Dann ist $F$ aber auch ein metrischer
+  Raum und damit insbesondere Hausdorffsch. Insgesamt ist $F$ also ein
+  Fr\'echet-Raum.
+\end{proof}
+
+\begin{thm}
+  \label{thm:frechet-summe}
+  Seien $E, F$ Fr\'echet-Räume. Dann ist $E \times F$ mit der
+  Produkttopologie auch ein Fr\'echet-Raum.
+\end{thm}
+
+\begin{proof}
+  Da $E$ und $F$ jeweils eine Metrik besitzen, wird die
+  Produkttopologie von $d(x,y) = d_E(x_1, y_1) + d_Y(x_2, y_2)$, wobei
+  $x = (x_1,x_2)$ und $y = (y_1, y_2)$ gilt, induziert. Dann ist $E
+  \times F$ aber direkt vollständig und hausdorffsch. Weiterhin
+  erhalten wir die gesuchte abzählbare Familie von Halbnormen, in dem
+  wir die beiden Familien von $E$ und $F$ verwenden. Diese erzeugen
+  die gleiche Topologie, wie die Produkttopologie. Dies lässt sich auf
+  analoge Art und Weise wie im Beweis von Proposition
+  \ref{prop:frechet-metrik} zeigen.
+\end{proof}
+
+\begin{thm}[von Hahn-Banach]
+  \label{thm:hahn-banach}
+  Sei $E$ ein Fr\'echet-Raum, $E_0 \subset E$ ein Untervektorraum und
+  $\phi_0 \in E_0'$. Dann existiert ein $\phi \in E'$ mit $\phi|_{E_0}
+  \equiv \phi_0$
+\end{thm}
+
+\begin{proof}
+  Wir verweisen auf \cite[Satz3.6]{Rud}.
+\end{proof}
+
+\begin{cor}
+  \label{cor:frechet-dicht}
+  Sei $E$ ein Fr\'echet-Raum. Seien weiterhin $A \subset B \subset E$
+  Untervektorräume. Falls für jedes $\phi \in E'$ mit $\phi|_A \cong
+  0$ auch $\phi|_B \cong 0$ ist, so liegt $A$ dicht in $B$.
+\end{cor}
+
+\begin{proof}
+  Sei $A$ nicht dicht in $B$. Wir versuchen nun eine stetige lineares
+  Funktionalf auf $E$ zu konstruieren, dass zwar auf $A$ verschwindet,
+  jedoch nicht auf $B$. Wir finden nun ein $b_0 \in B \setminus
+  \bar A$. Setzen wir $E_0 := \bar A \oplus \C b_0$ und
+  \[
+  \phi_0: E_0 \ra \C, \quad a + \lambda b_0 \mapsto \lambda,
+  \]
+  so ist $\phi_0$ stetig. Angenommen $\phi_0$ wäre nicht stetig, dann
+  wäre es aufgrund der Linearität insbesondere nicht in $0$
+  stetig. Also fänden wir eine Folge $(a_n + \lambda_n b_0)_{n \in
+    \N} \subset E_0$ mit Grenzwert $0$, wobei aber $(\lambda_n)_{n \in
+    \N}$ nicht gegeon 0 konvergiert. Wir können nun ohne Einschränkung
+  annehmen, dass $\lambda_n \geq 0$, denn wir finden auf jeden Fall
+  eine Teilfolge mit $\lambda_n \geq 0$ oder eine Teilfolge mit
+  $\lambda_n \leq 0$. Im zweiten Fall betrachten wir $(-\lambda_n)_{n
+    \in \N}$ und $(-(a_n + \lambda_n b_0))_{n \in \N}$, wobei dann auch
+  diese Folge gegen $0$ konvergiert. Dies folgt sofort durch die
+  Halbnormen. Unter der Voraussetzung, dass $(\lambda_n)_{n\in\N}$ nicht gegen $0$
+  konvergiert, fänden wir eine Teilfolge $(\lambda_{n_l})_{l\in \N}$
+  und ein $C > 0$, so dass $\lambda_{n_l} > C$ für beliebige $l \in
+  \N$ gelten würde. Dann setzten wir $\lambda := \liminf_{l \ra \infty}
+  \lambda_{n_l} \in [C, \infty]$.
+
+  Wäre nun $\lambda = \infty$. Dann müsste bereits
+  $\lambda_{n_l} \ra \infty$ für $\l \ra \infty$ gelten. Nun
+  konvergierte die Folge $(a_n + \lambda_n b_0)_{n \in \N}$ bezüglich
+  jeder Halbnorm $p_k$ gegen 0, also fänden wir $K_k > 0$, so dass
+  \[
+  p_k(a_{n_l} + \lambda_{n_l}b_0) < K_k \qquad \forall k \in \N
+  \]
+  gelten würde. Wir erhielten dann, dass weiterhin
+  \[
+  p_k(\lambda_{n_l}^{-1}a_{n_l} + b_0) < \lambda_{n_l}^{-1} K_k
+  \xrightarrow{l \ra \infty} 0
+  \]
+  für jedes $k \in \N$ wäre. Damit wäre aber $b_0$ in $\bar A$ enthalten. Ein
+  Widerspruch.
+
+  Für denn Fall, dass $\lambda < \infty$ wäre, fänden wir eine weitere
+  Teilfolge, die gegen $\lambda$ konvergierte. Wir gehen ohne
+  Einschränkung davon aus, dass bereits $(\lambda_{n_l})_{l \in \N}$
+  gegen $\lambda$ konvergierte. Dann erhielten wir aber aus der
+  Dreiecksungleichung
+  \[
+  p_k(a_{n_l} + \lambda b_0) \leq p_k(a_{n_l} + \lambda_{n_l}) +
+  |\lambda - \lambda_{n_l}| p_k(b_0) \ra 0
+  \]
+  für $l \ra \infty$ und alle $k \in \N$. Damit würde aber $\lim_{l
+    \ra \infty}(-a_{n_l}) = \lambda b_0$ gelten und es wäre wieder
+  $b_0 \in \bar A$. Also ist $\phi_0$ stetig.
+  
+  $\phi_0$ lässt sich nun nach Satz \ref{thm:hahn-banach}
+  auf ganz $E$ fortsetzen. Also existiert ein $\phi \in E'$ mit
+  $\phi|_{E_0} \cong \phi$. Dann ist aber $\phi|_A$ konstant 0, aber
+  dies gilt nicht für $\phi|_B$.
+\end{proof}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../Bachelor"
+%%% End: 
