@@ -2,7 +2,93 @@
 \section{Das Dirichlet Randwertproblem}
 \label{sec:Dirichlet}
 
-% TODO: eventuell Harmonische Differentialformen einfügen
+\begin{defin}
+  Für jedes $\omega \in \diff^{(1)}(X)$ existiert genau ein $\omega_1
+  \in \diff^{1,0}(X)$ und genau ein $\omega_2 \in \diff^{0,1}(X)$, so
+  dass $\omega = \omega_1 + \omega_2$ gilt. Dies ermöglicht die
+  Definition der Abbildung
+  \[
+  \ast : \diff^{(1)}(X) \ra \diff^{(1)}(X), \quad \omega_1 + \omega_2
+  \mapsto i(\bar \omega_1 + \bar \omega_2).
+  \]
+\end{defin}
+
+\begin{prop}
+  Die Abbildung $\ast$ ist ein $\R$-linearer Isomorphismus. Weiterhin
+  bildet er $\diff^{1,0}(X)$ auf $\diff^{0,1}(X)$ ab und umgekehrt.
+\end{prop}
+
+\begin{proof}
+  Die $\R$-Linearität von $\ast$ ist klar. Die Bijektivität folgt aus
+  der Tatsache, dass $\ast^{-1} = - \ast$ gilt. Sei nun weiterhin
+  $\omega \in \diff^{1,0}(X)$. Auf einer Karte $(z,U)$ nimmt $\omega$
+  dann die Form $\omega = f \d[z]$ für ein $f \in \diff(U)$. Dann gilt
+  aber $\ast \omega = i \bar \omega = i \bar f \d[\bar z] \in
+  \diff^{0,1}(X)$ auf der Karte. Also wird tatsächlich
+  $\diff^{1,0}(X)$ auf $\diff^{0,1}(X)$ abgebildet. Die Bijektivität
+  folgt auch einfach wieder aus der Tatsache, dass $\ast^{-1} = -
+  \ast$ gilt.
+\end{proof}
+
+\begin{defin}
+  Eine 1-Form $\omega \in \diff^1(X)$ heißt \init{harmonisch}, falls
+  \[
+  \d[\omega] = 0 = \d[\ast \omega]
+  \]
+  gilt.
+\end{defin}
+
+\begin{thm}
+  \label{thm:harm-form}
+  Jede reelle 1-Form $\sigma \in \diff^1(X)$ ist Realteil genau einer
+  holomorphen 1-Form $\omega \in \Omega(X)$.
+\end{thm}
+
+\begin{proof}
+  Wie können $\sigma = \omega_1 + \omega_2$ mit $\omega_1 \in
+  \diff^{1,0}(X)$ und $\omega_2 \in \diff^{0,1}(X)$ schreiben. Nun
+  folgt aber aus $\d[\omega] = 0$, dass $\d[''\omega_1] +
+  \d['\omega_2] = 0$ gilt und aus $\d[\ast \omega] = 0$, dass
+  $i(\d['\bar \omega_1] - \d[''\bar \omega_2]) = 0$. Durch eine einfache
+  Rechnung auf Karten lässt sich die zweite Gleichung zu
+  \[
+  0 = \overline{\d[''\omega_1]} - \overline{\d['\omega_2]}
+  \]
+  umformen. Dies liefert uns zunächst zusammen mit der ersten
+  Gleichung, dass $\d[''\omega_1] = 0$ und $\d['\omega_2] = 0$
+  gelten. Daraus folgt aber direkt, dass $\omega_1 \in \Omega(X)$
+  gilt. Und unter Ausnutzung, von $\overline{\d['\omega_2]} = \d[''
+  \bar \omega_2]$ erhalten wir, dass $\bar \omega_2 \in \Omega(X)$
+  gilt. Nun wissen wir aber, dass $\sigma$ reell ist und wir erhalten
+  die Gleichung
+  \[
+  \omega_1 + \omega_2 = \sigma = \bar \sigma = \bar \omega_1 + \bar
+  \omega_2.
+  \]
+  Da die Darstellung von $\sigma$ eindeutig ist, muss $\omega_1 =
+  \bar \omega_2$ gelten. Setzen wir $\omega = 2\omega_1 \in
+  \Omega(X)$, so gilt
+  \begin{align*}
+    \Re(\omega) & = \Re(2\omega_1) \\
+    & = \frac{1}{2}( 2 \omega_1 + 2 \bar \omega_1) \\
+    & = \omega_1 + \omega_2 \\
+    & = \sigma.
+  \end{align*}
+  Um nun die Eindeutigkeit von $\omega$ zu beweisen, zeigen wir diese
+  in der $0$, da $\Re(x) = \Re(y)$ genau dann gilt, wenn $\Re(x-y) =
+  0$ ist. Dies folgt aus der $\R$-Linearität von $\Re$ (wobei $\Re$
+  natürlich nicht $\C$ linear ist). Sei also $\omega \in \Omega(X)$
+  mit $\Re(\omega) = 0$. Nun existiert aber lokal immer eine
+  Stammfunktion für $\omega$, d.h. lokal existiert ein holomorphes
+  $f$, so dass $\omega = \d[f]$ gilt. Dann folgt aber, dass
+  $\d[\Re(f)] = 0$ sein muss, also ist $\Re(f)$ konstant. Das wiederum
+  hat aber zur Folge, dass die holomorphe Funktion $e^f$ ihr
+  Betragsmaximum annimmt, denn $|e^f| = e^{\Re(f)}$ gilt. Dann ist
+  aber $|e^f|$ nach dem Maximumsprinzip für holomorphe Funktionen
+  konstant. Also ist auch $f$ konstant und es gilt $\omega = \d[f] =
+  0$. Da dies lokal um jeden Punkt gilt, ist somit $\omega = 0$ und
+  damit ist unser $\omega$ eindeutig bestimmt.
+\end{proof}
 
 \begin{defin}
   Sei $Y \subset X$ offen und $X$ eine Riemannsche Fläche. Dann heißt
@@ -27,8 +113,7 @@
 \end{prop}
 
 \begin{proof}
-  % TODO: Referenz
-  Nach (19.4) gilt
+  Nach Satz \ref{thm:harm-form} gilt
   \begin{align*}
     \d[\d[u]] & = 0 && \text{und}\\
     \d[\ast\d[u]] & = 0
@@ -137,7 +222,6 @@
   P(z, \rho) := \frac{|\rho|^2 - |z|^2}{|\rho - z|^2}, \qquad
   F(z,\rho) := \frac{\rho +z }{\rho - z}
   \]
-  % TODO: Eventuell nachrechnen
   Dann gilt $\P(z, \rho) = \Re(F(z, \rho))$ und für $u$ ergibt sich:
   \begin{align*}
     u(z) & = \frac{1}{2\pi} \int_0^{2\pi} P(z, Re^{i\phi})
@@ -362,8 +446,22 @@
 
 \begin{proof}
   $u+v$ und $\lambda u$ folgen direkt aus Korollar
-  \ref{cor:pd-rechenregeln}.
-  %TODO: Beweis für sup
+  \ref{cor:pd-rechenregeln}. Um die Aussage für $\sup(u,v)$ zu zeigen,
+  betrachten wir zunächst eine beliebige Funktion $f \in C(\partial D,
+  \R)$. Dann gilt klarerweise $f \leq |f|$. Seien nun $\tilde u$ und
+  $\tilde v$ Lösungen des Randwertproblem zu $f$ bzw. $|f|$. Dann
+  folgt aus dem Maximumprinzip, dass $\tilde u \leq \tilde v$ gelten
+  muss. Andererseits gilt auch $-f \leq |f|$ und aus der Eindeutigkeit
+  der harmonischen Funktionen und dem Maximumprinzip erhalten wird $-
+  \tilde u \leq \tilde v$. Insgesamt gilt also $|\tilde u| \leq \tilde
+  v$. Diese Aussage verwenden wir, um die folgende Abschätzung abzuleiten
+  \begin{align*}
+    P_D \sup(u,v) & = \frac{1}{2} ( P_D u + P_D v + P_D|u - v|) \\
+    & \geq \frac12 (P_D u + P_D v |P_D u - P_D v|) \\
+    & = \sup(P_D u, P_D v) \\
+    & \geq \sup(u,v).
+  \end{align*}
+  Also ist auch $\sup(u,v)$ subharmonisch.
 \end{proof}
 
 \begin{thm}[Maximumprinzip für lokal subharmonische Funktionen]
@@ -458,7 +556,6 @@
   Behauptung: $v \equiv u^\ast|_D$. \\
   Sei dazu $x \in D$ beliebig und $(w_n)_{n\in \N}\subset M$ mit
   $\lim_{n \ra \infty}w_n(x) = u^\ast(x)$. \\
-  % TODO: genauer
   Aufgrund von 1. und 2. können wir $v_n \leq w_n = P_D w_n$ und $w_N
   \leq w_{n+1}$ annehmen. Also konvergiert $(w_n)_{n \in \N}$ gauf $D$
   gleichmäßig gegen $w. D \ra \R$ mit $v \leq w \leq u^\ast$. \\
@@ -522,8 +619,6 @@
   Zusammenhangskomponente von $Y$ regulären Rand.
 \end{cor}
 
-% TODO: eventuell Beweis
-
 \begin{lemma}
   \label{lemma:regulär-trennen}
   Sei $x \in \partial Y$ ein regulärer Randpunkt und $V$ eine offene
@@ -554,7 +649,6 @@
     m & \text{auf } \bar Y \setminus V
   \end{cases}
   \]
-  %TODO: genauer
   Damit ist $v$ stetig und genügt den Bedingungen 1 bis 3.
 \end{proof}
 
@@ -638,13 +732,43 @@
 \end{thm}
 
 \begin{proof}
-  % TODO: Genauer + nachrechnen!
   Setzen wir $c := \frac{a+m}{2}$, dann stellt $\beta(z) := \log
-  \frac{r}{2} - \log|z-c|$ eine Barriere von $a$ dar
+  \frac{r}{2} - \log|z-c|$ eine Barriere von $a$ dar. Denn $|a - c| =
+  \frac{r}{2}$ und damit gilt $\beta(a) = 0$. Weiterhin gilt für $z
+  \in Y$, dass $|z-m| > r$ ist. Aus der Dreiecksungleichung erhalten
+  wir $|z-c| > r - |c-m| = \frac{r}{2}$. Also ist $\beta(y) < 0$ für
+  beliebige $y \in Y$. Es bleibt also noch zu zeigen, dass $\beta|_Y$
+  harmonisch ist. Für diese Berechnung nehmen wir ohne Einschränkung
+  $c = 0$ an und betrachten $\beta$ als Funktion von $x$ und $y$,
+  wobei $z = x + iy$ gilt. Wir werden in den folgenden Gleichungen
+  aber dennoch (inkonsistenter Weise) $z$ verwenden und fassen dieses
+  dann auch als "`Funktion"' von $x$ und $y$ auf. Wir erhalten für die
+  Ableitungen, wobei wir für $y$ direkt die zweite angeben, da $\beta$
+  symmetrisch in $x$ und $y$ ist, die Gleichungen 
+  \begin{align*}
+    \frac{\partial \beta(x,y)}{\partial x} & = - \frac{x}{|z|^2} \\
+    \frac{\partial^2 \beta(x,y)}{\partial x^2} & = \frac{2x^2 -
+      |z|^2}{|z|^4} \\
+    \frac{\partial^2 \beta(x,y)}{\partial y^2} & = \frac{2y^2 -
+      |z|^2}{|z|^4} \\
+    \Delta \beta(x,y) & = \frac{2 x^2 - |z|^2 + 2y^2 -|z|^2}{|z|^4} \\
+    & = \frac{2 |z|^2 - 2|z|^2}{|z|^4} \\
+    & = 0.
+  \end{align*}
+  Also ist $\beta$ auch harmonisch auf $Y$. Wir erhalten, dass $\beta$
+  eine Barriere in $a$ ist.
 \end{proof}
 
-% TODO: Beschreibung der Barriere in \C reicht, da lokale Eigenschaft,
-% die invariant unter bihol Trafo usw.
+\begin{rem}
+  Satz \ref{thm:reg-rand} gibt uns nur eine Beschreibung für reguläre
+  Randpunkte für Gebiete in $\C$. Dies ist jedoch ausreichend, da die
+  Eigenschaft ein regulärer Randpunkt zu sein lokal ist und deshalb
+  auf Karten nachgerechnet werden kann. Weiterhin ist die Eigenschaft
+  harmonisch zu sein invariant unter biholomorphen Transformationen,
+  so dass wir das obige $\beta$ einfach auf einer Karte angeben
+  können. Somit überträgt sich Satz \ref{thm:reg-rand} direkt auf
+  Gebiete beliebiger Riemannscher Flächen.
+\end{rem}
 
 
 %%% Local Variables: 

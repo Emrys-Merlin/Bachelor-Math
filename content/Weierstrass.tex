@@ -69,21 +69,103 @@
   Auf $X_{D_1} \cap X_{D_2}$ ist klar, dass $f_1 \cdot f_2$ die
   gewünschten Eigenschaften erfüllt. Allerdings ist falls ein $a \in
   X$ mit $D(a) := D_1(a) +
-  D_2(a) > 0$, aber $D_1(a) < 0$ oder $D_2(a) < 0$ gilt, entweder $f_1(a)$ oder
+  D_2(a) \geq 0$, aber $D_1(a) < 0$ oder $D_2(a) < 0$ gilt, entweder $f_1(a)$ oder
   $f_2(a)$ nicht definiert. Nehmen wir ohne Einschränkung an, dass
   $D_1(a) < 0$ gilt, so können wir eine Karte $(z,U)$ um $a$ finden,
   so dass $\psi, \phi \in \diff(U)$ existieren, die der Definition
-  \ref{def:divisor-lsg} für $f_1$ bzw. $f_2$ genügen. Dann gilt also
-  auf $U \cap X_{D_1} \cap X_{D_2}$
+  \ref{def:divisor-lsg} genügen. Dann gilt zunächst auf $U \cap
+  X_{D_1} \cap X_{D_2}$ die Gleichung $f_1 \cdot f_2 = \psi \cdot \phi
+  z^{D_1(a) + D_2(a)}$. Da nun aber $D_1(a) + D_2(a) \geq 0$ gilt,
+  lässt sich die rechte Seite der Gleichung glatt auf ganz $U$
+  fortsetzen. Also besitzt $f_1 \cdot f_2$ an dieser stelle eine
+  hebbare Singularität und wir können das Produkt einfach fortsetzen.
+\end{proof}
+
+\begin{defin}
+  Sei $c: [0,1] \ra X$ eine glatte, nicht geschlossene Kurve und $X$
+  eine Riemannsche Fläche. Dann
+  bezeichnet $\partial c$ den Divisor, der durch
   \[
-  f_1 \cdot f_2 = \psi z^{k_1} \phi z^{k_1} = (\psi \phi) \cdot
-  z^{k_1+k_2}.
+  \partial c(x) :=
+  \begin{cases}
+    1 & \text{für } x = c(1) \\
+    -1 & \text{für } x = c(0) \\
+    0 & \text{sonst}
+  \end{cases}
   \]
-  Nun ist $k_1 + k_2 = D_1(a) + D_2(a) > 0$, also steht auf der
-  rechten Seite eine glatte Funktion, die sogar auf ganz $U$,
-  insbesondere in $a$, definiert ist. Also kann das Produkt $f_1 \cdot
-  f_2$ auf $a$ fortgesetzt werden und $f_1 \cdot f_2$ stellt
-  tatsächlich eine schwache Lösung von $D_1 + D_2$ dar.
+  gegeben ist.
+\end{defin}
+
+\begin{lemma}
+  Sei $X$ eine Riemannsche Fläche und $c: [0,1] \ra X$ eine glatte,
+  nicht geschlossene
+  Kurve. Sei weiterhin $U \subset X$ eine relativ kompakte, offene
+  Umgebung von $c([0,1])$, so existiert eine schwache Lösung $f$ von
+  $\partial c$ mit $|_{X \setminus U} \equiv 1$.
+\end{lemma}
+
+\begin{proof}
+  Wir gehen zunächst davon aus, dass $U$ eine Kartenumgebung ist und
+  bezeichnen mit $z$ die zugehöriger Kartenabbildung. Nun können wir
+  ohne Einschränkung annehmen, dass $z(U) = B_1(0)$ gilt. Weiterhin
+  identifizieren wir $U$ mit $B_1(0)$. Sei $a := c(0)$ und $b :=
+  c(1)$. Dann existiert ein $0 < r < 1$, so dass $a, b \in B_r(0)$
+  gilt. Wir definieren
+  \[
+  \phi: \P^1 \ra \P^1, \quad z \mapsto \frac{z-b}{z-a}
+  \]
+  Dann ist $\phi(a) = \infty$ und $\phi(b) = 0$. Wenn wir also $\phi$
+  auf $\P^1 \setminus \bar B_r(0)$ einschränken, so können wir $\phi$
+  als Abbildung nach $\C^\times$ auffassen. Weiterhin ist $\P^1
+  \setminus \bar B_r(0)$ einfach zusammenhängend. Dann können wir aber
+  nach \cite[Beispiel 4.18]{For} die Abbildung $\phi$ entlang der
+  Überlagerung $\exp: \C \ra \C^\times$ liften. In anderen Worten ist
+  die Abbildung
+  \begin{align}
+    \label{eq:log}
+  \P^1\setminus \bar B_r(0) \ra \C, z \mapsto \log \left (
+    \frac{z-b}{z-a} \right )
+  \end{align}
+  wohldefiniert und holomorph. Nun können wir die Abbildung aus
+  \eqref{eq:log} noch weiter auf $B_1(0) \setminus \bar B_r(0)$
+  einschränken.
+
+  Als nächsten Schritt benötigen wir nun noch ein $\psi \in
+  \diff(B_1(0))$, das $\psi|_{\bar B_r(0)} \equiv 1$ und $\psi|_{B_1(0)
+    \setminus \bar B_{\tilde r}(0)} \equiv 0$ erfüllt, wobei $r <
+  \tilde r <1$
+  gewählt wurde. Eine stetige Funktion mit diesen Eigenschaften
+  existiert auf jeden Fall. Glätten wir diese stetige Funktion, so
+  erhalten wir unser $\psi$. Nun können wir ein $f_0 \in \diff(U
+  \setminus \{a\})$ durch
+  \[
+  f_0 :=
+  \begin{cases}
+    \exp \left (\psi \log \middle ( \frac{z-b}{z-a} \middle ) \right
+    ) & r < |z| <1 \\
+    \frac{z-b}{z-a} & |z| \leq r
+  \end{cases}
+  \]
+  definieren. Dank $\psi$ wird $f_0$ zu einer glatten Abbildung, die
+  weiterhin $f_0|_{\partial U} \equiv 1$ erfüllt. Also können wir
+  $f_0$ auf ganz $X \setminus \{a\}$ durch 1 fortsetzen. Nach
+  Konstruktion ist $f_0$ aber auch eine schwache Lösung von
+  $\partial c$, so dass wir die Behauptung in diesem Fall gezeigt
+  haben.
+
+  Betrachten wir nun den Fall, dass $U$ keine Koordinatenumgebung
+  ist. Dann finden wir eine Unterteilung des Intervalls $0= t_0 <
+  t_1 \dots < t_n = 1$ und Karten $(z_j, U_j)$, wobei $j = 1, \dots,
+  n$, so dass $c([t_{j-1}, t_j]) \subset U_j \subset U$ und
+  $z_j(U_j) = B_1(0)$ gelten. Diese Überdeckung existiert aufgrund
+  der Kompaktheit von $c([0,1])$. Es folgt nun aber, dass wir den
+  ersten Teil des Beweises jeweils auf $\partial c|_{[t_{j-1},t_j]}$
+  anwenden und erhalten somit schwache Lösungen $f_j$ mit $f_j|_{X
+    \setminus U} \equiv 1$.
+  Setzen wir $f = f_1 \dots f_n$, so ist $f$ nach Lemma
+  \ref{lemma:lsg-produkt} eine schwache Lösung zu
+  $\sum_{j=1}^n \partial c|_{[t_{j-1},t_j]} = \partial c$ und sie
+  erfüllt $f|_{X \setminus U} \equiv 1$.
 \end{proof}
 
 \begin{lemma}
@@ -155,7 +237,7 @@
 \begin{thm}
   \label{thm:Lösung-Divisor}
   Sei $X$ eine nicht kompakte Riemannsche Fläche und $D \in
-  Div(X)$. Dann existiert ein $f \in \mer(X)^\ast$ mit $(f) = D$.
+  \Div(X)$. Dann existiert ein $f \in \mer(X)^\ast$ mit $(f) = D$.
 \end{thm}
 
 \begin{proof}
