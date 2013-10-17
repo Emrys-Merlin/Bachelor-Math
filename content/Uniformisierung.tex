@@ -2,304 +2,8 @@
 \section{Uniformisierung kompakter Riemannscher Flächen}
 \label{sec:uniformisierung}
 
-\begin{defin}
-  Sei $X$ eine Riemannsche Fläche. Unter der
-  \init{Automorphismengruppe} von $X$ verstehen wir
-  \[
-  \Aut(X) := \{ f: X \ra X \mid f,f^{-1} \text{ holomorph} \}.
-  \]
-  Diese ist mit der Verkettung von Abbildungen tatsächlich eine Gruppe.
-\end{defin}
 
-\begin{lemma}
-  \label{lemma:kreis-halbebene}
-  Die Abbildung
-  \[
-  \phi: \h \ra B, \quad \phi(z) := \frac{z-i}{z+i}
-  \]
-  ist biholomorph.
-\end{lemma}
-
-\begin{proof}
-  Zunächst ist $\phi$ wohldefiniert, denn für $z \in \h$ erhalten wir,
-  dass $\Im(z) > 0$ gilt und daher folgt
-  \begin{align*}
-    |\phi(z)|^2 & = \frac{z-i}{z+i} \cdot \frac{\bar z + i}{\bar z -
-      i} \\
-    & = \frac{|z|^2 - \bar z i + i z + 1}{|z|^2 +i \bar z - i z + 1}
-    \\
-    & = \frac{|z|^2 - 2 \Re(iz) + 1}{|z|^2 - 2 \Re(iz) + 1} \\
-    & = \frac{|z|^2 +1 - 2 \Im(z)}{|z|^2 + 1 + 2\Im(z)} \\
-    & < 1.
-  \end{align*}
-  Betrachten wir nun
-  \[
-  \psi: B \ra \h, \quad \psi(z) := \frac{ -iz - i}{z-1},
-  \]
-  so ist diese Abbildung auch wohldefiniert, denn für $z \in \C$ mit
-  $|z| < 1$ erhalten wir
-  \begin{align*}
-    \Im(\psi(z)) & = \frac{1}{2i} ( \psi(z) - \bar \psi(z)) \\
-    & = \frac{1}{2i} \left ( \frac{-iz - i}{z -1 } - \frac{ i \bar z +
-        i}{\bar z - 1} \right ) \\
-    & = \frac{1}{2i} \cdot \frac{2i ( 1- |z|^2 )}{|z -1|^2} \\
-    & = \frac{1- |z|^2}{|z-1|^2} \\
-    & > 0.
-  \end{align*}
-  Weiterhin zeigt eine einfache Rechnung, dass $\psi \circ \phi =
-  \id_\h$ und $\phi \circ \psi = \id_B$ gelten.
-\end{proof}
-
-\begin{rem}
-  Dass $\h$ und $B$ konform äquivalent sind, ist bereits eine
-  Konsequenz aus dem Riemannschen Abbildungssatz \ref{thm:rmt}, allerdings benötigen
-  wir für den nächsten Satz die Übergangsabbildung explizit.
-\end{rem}
-
-\begin{thm}
-  \label{thm:aut}
-  Es gelten
-  \begin{enumerate}
-  \item $\Aut(\C) = \{ f: \C \ra \C, \ z \mapsto az + b \mid a \in
-    \C^\times, \ b \in \C \}$
-  \item $\Aut(\P^1) = \{ f: \P^1 \ra \P^1,\ f(z) = M\langle z \rangle \mid
-    M \in Sl(2, \C) \}$
-  \item $\Aut(B) = \{ f: B \ra B,\ z \mapsto \frac{\alpha z +
-      \beta}{\bar \beta z + \bar \alpha} \mid \alpha, \beta \in \C, \
-    |\alpha |- |\beta| = 1\}$
-  \item $\Aut(\h) = \{f: \h \ra \h,\ f(z) = M\langle z \rangle 
-    \mid M \in Sl(2, \R) \}$
-  \end{enumerate}
-\end{thm}
-
-\begin{proof}
-  Wir zeigen jeweils nur $\subseteq$, denn die andere Inklusion ergibt
-  sich sofort, da alle Umkehrfunktionen explizit ausgedrückt werden
-  können.
-
-  Sei also $f \in \Aut(\C)$, dann ist $f$ eine ganze Funktion, also
-  existieren $a_k \in \C$, so dass
-  \[
-  f(z) = \sum_{k=0}^\infty a_k z^k
-  \]
-  gilt. Wir behaupten nun, dass $a_k = 0$ für fast alle $k \in \N_0$
-  gelten muss. Angenommen dies wäre nicht der Fall, dann hätte die
-  Funktion $g: \C^\ast \ra \C$ mit $g(z) := f(\frac{1}{z})$ eine
-  wesentliche Singularität bei $0$. Dann wäre aber der Satz von
-  Casorati-Weierstraß (vgl. \cite[Satz 6.11]{Kas}) anwendbar und wir
-  erhielten zu jedem $n \in \N$
-  ein $z_n \in \dot B_{\frac{1}{n}}(0)$, so dass $|g(z_n) - f(0)| <
-  \frac{1}{n}$ gilt. Setzen wir $w_n := \frac{1}{z_n}$, so konvergierte
-  $(w_n)_{n \in \N}$ gegen $\infty$ und $f(w_n) \ra f(0)$ für $n \ra
-  \infty$. Setzen wir nun weiterhin $\tilde z_n := f(w_n)$ und $\tilde
-  z = f(0)$, so erhielten wir also $\lim_{n \ra \infty} \tilde z_n =
-  \tilde z$, allerdings gälte $|f^{-1}(\tilde z_n)| = |w_n| \ra \infty
-  \neq |f^{-1}(\tilde z)| = 0$. Dies ist ein Widerspruch zur
-  Stetigkeit von $f^{-1}$. Also ist $f$ ein Polynom. Dies hat aber
-  direkt zur Folge, dass der Grad von $f$ eins sein muss, da wir
-  ansonsten nach dem Haupsatz der Algebra mehrere Nullstellen
-  hätten. Damit haben wir bereits die gewünschte Form gefunden.
-
-  Als nächstes wenden wir uns $\Aut(\P^1)$ zu. Sei dazu $f \in
-  \Aut(\P^1)$. Wir setzen $a:= f(\infty)$ und $b :=
-  f^{-1}(\infty)$. Zunächst betrachten wir den fall $a \neq
-  \infty$. Dann gilt auch $b \neq \infty$ und wir können
-  \[
-  \psi: \P^1 \ra \P^1, \quad \psi(z) = \frac{bz + c}{z - a}
-  \]
-  definieren, wobei $c \in \C$ mit $c \neq a$. Weiterhin gilt
-  \[
-  \psi^{-1}: \P^1 \ra \P^1, \quad \psi^{-1}(z) = \frac{az +c}{z -b}
-  \]
-  und damit ist $\psi \in \Aut(\P^1)$. Setzen wir nun $g := f \circ
-  \psi$, so erhalten wir
-  \begin{align*}
-    g(\infty) = f(\psi(\infty)) = f(b) = \infty.
-  \end{align*}
-  Also ist $g|_\C \in \Aut(\C)$ und wie wir oben gesehen haben,
-  existieren $d,e \in \C$ mit $d \neq 0$, so dass $g|_\C(z) = dz +
-  e$. Nun gilt $|dz + e| \ra \infty$ für $z \ra \infty$. Also können
-  wir die Notation $g(z) = dz+e$ auf ganz $\P^1$ fortsetzen. Insgesamt
-  erhalten wir
-  \begin{align*}
-    f(z) & = g(\psi^{-1}(z)) \\
-    & = d\psi^{-1}(z) + e \\
-    & = d \cdot \frac{az + c}{z - b} + e \\
-    & = \frac{(da + e) z + (dc - eb)}{z - b} \\
-    & =
-    \begin{pmatrix}
-      (da + e) & (dc - eb) \\
-      1 & -b
-    \end{pmatrix}\langle z \rangle \\
-    & =: M\langle z \rangle.
-  \end{align*}
-  Weiterhin ist $\det M = d( a-c) \neq 0$. Wählen wir als $\gamma$
-  eine Wurzel von $\det M$ und definieren $\tilde M := \gamma^{-1} M$,
-  so gilt $f(z) = M\langle z \rangle = \tilde M \langle z \rangle$ und
-  $\det \tilde M = \gamma^{-2} \det M = 1$. Also liegt $\tilde M \in
-  PSl(2, \C)$.
-
-  Für den Fall, dass $a = \infty = b$, so brauchen wir die
-  Hilfsfunktion $\psi$ nicht und wir können direkt unser Wissen über
-  $\Aut(\C)$ anwenden. Eine analoge Rechnung liefert dann das
-  Resultat.
-
-  Sei nun $f \in \Aut(B)$ und $w := f^{-1}(0)$. Dann definieren wir
-  \[
-  f_w : B \ra B, \quad f_w(z) = \frac{z -w}{\bar w z - 1}.
-  \]
-  Es zeigt sich, dass $f_w$ selbstinvers ist und damit in $\Aut(B)$
-  liegt. Setzen wir $g := f\circ f_w$, so erhalten wir
-  \begin{align*}
-    g(0) = f( f_w(0)) = f(w) = 0
-  \end{align*}
-  Damit ist das Lemma von Schwarz (vgl. \cite[Satz 5.10]{Kas})
-  anwendbar und wir erhalten sowohl für $g$, als auch für $g^{-1}$
-  \begin{align*}
-    |g(z)| & \leq |z| \\
-    |g^{-1}(z)| & \leq |z|
-  \end{align*}
-  Es ergibt sich, dass
-  \begin{align*}
-    |w| = |g^{-1}(g(w))| \leq |g(w)| \leq |w|
-  \end{align*}
-  gilt. Also ist $|g(w)| = |w|$ und als weitere Folgerung aus dem Lemma
-  von Schwarz erhalten wir die Existenz eines $c \in \C$ mit $|c| =
-  1$, so dass
-  \[
-  g(z) = cz
-  \]
-  gilt. Es folgt, dass
-  \begin{align*}
-    f(z) = c f_w(z) = \frac{i dz - i dw}{ - \overline{idw} z +
-      \overline{i d}}
-  \end{align*}
-  gilt, wobei $d^2 = c$. Setzen wir $\tilde \alpha = i d$ und $\tilde
-  \beta = - i d w$, so folgt $|\tilde \alpha| = 1$ und $|\tilde \beta|
-  = |w| < 1$. Wir definieren
-  \[
-  \lambda = |\tilde \alpha| - |\tilde \beta|
-  \]
-  und setzen $\alpha := \lambda^{-1} \tilde \alpha$ und $\beta :=
-  \lambda^{-1} \tilde \beta$. Es gilt $|\alpha| - |\beta| = 1$ und
-  \[
-  f(z) = \frac{\alpha z - \beta}{\bar \beta z  + \bar \alpha},
-  \]
-  was die Behauptung zeigt.
-
-  Als letztes interessieren wir uns nun für $\Aut(\h)$. Diesen Fall
-  können wir aber auf $\Aut(B)$ zurückführen, denn Lemma
-  \ref{lemma:kreis-halbebene} gibt uns eine Bijektion
-  \[
-  \Aut(\h) \ra \Aut(B), \quad f \mapsto \phi \circ f \circ \phi^{-1}.
-  \]
-  Sei also $f \in \Aut(\h)$, dann existieren $\alpha, \beta \in \C$
-  mit $|\alpha| - |\beta| = 1$, so dass
-  \[
-  \phi( f( \phi^{-1}(z))) = \frac{\alpha z + \beta}{\bar \beta z +
-    \bar \alpha}
-  \]
-  Es gilt also
-  \begin{align*}
-    f(z) & = \phi^{-1} \left ( \frac{\alpha \phi(z) + \beta}{\bar
-        \beta \phi(z) + \bar \alpha} \right ) \\
-    & = \frac{-i \alpha \phi(z) - i \beta - i \bar \beta \phi(z) - i
-      \bar \alpha}{\alpha \phi(z) + \beta - \bar \beta \phi(z) - \bar
-      \alpha} \\
-    & = \frac{-i (\alpha + \bar \beta)(z-i) -i (\beta + \bar
-      \alpha)(z+i)}{(\alpha - \bar \beta)(z -i) + (\beta - \bar
-      \alpha)(z+i)} \\
-    & = \frac{-i ( \alpha + \bar \beta + \beta + \bar \alpha) z + (
-      \bar \alpha - \bar \beta + \beta + \bar \alpha)}{(\alpha - \bar
-      \beta + \beta - \bar \alpha)z + i (- \alpha + \bar \beta + \beta
-      - \bar \alpha)} \\
-    & = \frac{ - ( \Re(\alpha) + \Re(\beta)) z +  (\Im(\beta) -
-      \Im(\alpha))}{(\Im(\alpha) + \Im(\beta))z + ( \Re(\beta) -
-      \Re(\alpha))} \\
-    & =: M\langle z \rangle.
-  \end{align*}
-  Betrachten wir nun $\det M$, so erhalten wir $\det M = |\alpha| -
-  |\beta| = 1$. Außerdem hat $M$ nur reelle Einträge, also liegt $M
-  \in Sl(2, \R)$.
-\end{proof}
-
-Als nächstes wenden wir uns Gittern zu. Diese benötigen wir, um die
-diskreten Untergruppen von $\C$ zu beschreiben. Später wird sich dann
-auch zeigen, dass wir diese diskreten Untergruppen benötigen, um die
-Riemannschen Flächen zu beschreiben, deren Universelle Überlagerung
-$\C$ ist.
-
-\begin{defin}
-  Sei $B$ ein $n-$dimensionaler, reeller Vektorraum. Eine additive
-  Untergruppe $\Gamma \subset V$ heißt \init{Gitter}, falls $n$ linear
-  unabhängige $\gamma_1, \dots, \gamma_n \in V$ existieren, so dass
-  \[
-  \Gamma = \Z \gamma_1 + \dots + \Z \gamma_2
-  \]
-\end{defin}
-
-\begin{lemma}
-  \label{lemma:gitter}
-  Sei $\Gamma \subset v$ eine additive Untergruppe. $\Gamma$ ist ein
-  Gitter genau dann, wenn
-  \begin{enumerate}
-  \item $\Gamma$ diskret ist und
-  \item $\Gamma$ nicht in einem echten Untervektorraum von $V$
-    enthalten ist.
-  \end{enumerate}
-\end{lemma}
-
-\begin{proof}
-  Falls $\Gamma$ ein Gitter ist, die Aussage aus der Definition
-  klar. Erfülle also $\Gamma$ die beiden Bedingungen. Wir gehen nun
-  per Induktion vor. Für $n = 0$ ist di eAussage klar. Gelte also die
-  Aussage für ein $n \in \N_0$. Da $\Gamma \subset V$ mit $\dim V =
-  n+1$ in keinem echten
-  Untervektorraum von $V$ enthalten ist, existieren linear unabhängige $x_1, \dots,
-  x_{n+1} \in \Gamma$. Sei $V_1 := \langle x_1, \dots, x_n \rangle$
-  und $\Gamma_1 := \Gamma \cap V_1$. Nun ist $\Gamma_1$ wieder diskret
-  und in keinem echten Untervektorraum von $V_1$ enthalten. Weiterhin
-  ist $\dim V_1 = n$, also können wir die Induktionsvoraussetzung
-  verwenden und erhalten linear unabhängige $\gamma_1, \dots, \gamma_n
-  \in \Gamma_1 \subset \Gamma$, so dass $\Gamma_1 = \Z \gamma_1 +
-  \dots + \Z \gamma_n$ gilt. Nun bildendie $\gamma_i$ bereits eine
-  Basis von $V_1$ und fügen wir $x_{n+}$ erhalten wir sogar eine Basis
-  von $V$, das bedeutet aber, dass wir zu jedem $x \in \Gamma \subset
-  V$, eindeutig bestimmte $c_i(x), c(x) \in \R$ finden, so dass
-  \[
-  x = c_1(x) \gamma_1 + \dots + c_n(x) \gamma_n + c(x) x_{n+1}
-  \]
-  Wir betrachten nun
-  \[
-  P := \{ \lambda_1 \gamma_1 + \dots + \lambda_n \gamma_n + \lambda
-  x_{n+1} \mid \lambda_i, \lambda \in [0,1] \}.
-  \]
-  Dieses $P$ ist kompakt und da $\Gamma$ diskret ist, folgt dass $P
-  \cap \Gamma$ endlich ist. Weiterhin ist $( \Gamma \cap P) \setminus
-  V_1$ nicht leer, da $x_{n+1}$ enthalten ist. Damit existiert ein
-  $\gamma_{nü1} \in ( \Gamma \cap P) \setminus V_1$ mit
-  \[
-  c(\gamma_n) = \min \{ c(x) \mid x \in ( \Gamma \cap P ) \setminus
-  V_1 \} \in ]0, 1].
-  \]
-  Wir behaupten nun, dass $\Gamma = \Gamma_1 + \Z \gamma_{n+1}$. Sei
-  dazu $x \in \Gamma$. Dann existieren $n_j \in \Z$, so dass
-  \[
-  x' := x - \sum_{j=1}^{n+1} n_j \gamma_j = \sum_{j=1}^n \lambda_j
-  \gamma_j + \lambda x_{n+1}
-  \]
-  mit $0 \leq \lambda_j < !$ und $0 \leq \lambda < c(\gamma_{n+1})$
-  gilt. Da $x' \in \Gamma \cap P$ liegt und $c(\gamma_{n+1})$ minimal
-  von 0 verschieden gewählt wurde, muss $\lambda = 0$ sein. Also liegt
-  $x' \in \Gamma \cap V_1 = \Gamma_1$. Also sind die $\lambda_i$
-  ganzzahlig und die einzige Möglichkeit, bleibt, dass $\lambda_i = 0$
-  gilt. Dann ist aber $x'$ bereits 0 und wir erhalten
-  \[
-  x = \sum_{j=1}^n n_j \gamma_j \in \Z \gamma_1 + \dots + \Z \gamma_n.
-  \]
-\end{proof}
-
-Nun benötigen wir noch einige Eigenschaften von Decktransformationen,
+Zunächst benötigen wir noch einige Eigenschaften von Decktransformationen,
 bevor wir unseren Uniformisierungssatz beweisen können.
 
 \begin{lemma}
@@ -384,6 +88,62 @@ bevor wir unseren Uniformisierungssatz beweisen können.
   \end{enumerate}
 \end{proof}
 
+Bevor wir uns unserem Hauptresultat widmen können, müssen wir noch
+einen Satz aus der Topolgie importieren.
+
+\begin{thm}
+  \label{thm:top-geschlecht}
+  Seien $X$ und $Y$ kompakte Riemannsche Flächen mit Geschlechtern $g$
+  und $h$. Dann sind $X$ und $Y$ genau dann homöomorph, wenn $g = h$ ist.
+\end{thm}
+
+\begin{proof}
+  Siehe zum Beispiel \cite[Korollar 2.4.A.2]{Jos}
+\end{proof}
+
+\begin{rem}
+  Dieser Satz gilt noch deutlich allgemeiner als hier aufgeführt,
+  allerdings muss man sich dann über die Definition des Geschlechts
+  Gedanken machen, da wir für unsere Definition deutlich auf die
+  komplexe Struktur zurückgegriffen haben. Allgemein kann das
+  Geschlecht aber bereits für beliebige kompakte topologische
+  Mannigfaltigkeiten definiert werden.
+\end{rem}
+
+\begin{cor}
+  \label{cor:torus-homöo}
+  Sei $\Gamma \subset \C$ ein Gitter und $X$ eine kompakte Riemannsche
+  Fläche mit Geschlecht 1. Dann sind $X$ und $\quot{\C}{\Gamma}$ homöomorph.
+\end{cor}
+
+\begin{proof}
+  Nach Korollar \ref{cor:torus-geschlecht} hat der Torus Geschlecht
+  1. Aus Satz \ref{thm:top-geschlecht} folgt dann die Behauptung.
+\end{proof}
+
+\begin{thm}
+  \label{thm:geschlecht-1-z}
+  Sei $X$ eine kompakte Riemannsche Fläche mit Geschlecht $g =
+  1$. Dann ist die Fundamentalgruppe von $X$ isomorph zu $\Z \oplus \Z$.
+\end{thm}
+
+\begin{proof}
+  Nach Korollar \ref{cor:torus-homöo} ist $X$ homöomorph zu
+  $\quot{\C}{\Gamma}$ für ein beliebiges Gitter $\Gamma \subset
+  \C$. Nun ist aber die Fundamentalgruppe eine topologische
+  Invariante, d.h. es gilt $\pi_1(X) \cong
+  \pi_1\left(\quot{\C}{\Gamma}\right)$. Weiterhin ist die Universelle
+  Überlagerung zu $\quot{\C}{\Gamma}$ durch $\C$ gegeben und es gilt $
+  \pi_1\left (\quot{\C}{\Gamma}\right) \cong \Deck \left (\C \setminus
+    \quot{\C}{\Gamma} \right )$. Die Decktransformationsgruppe ist
+  aber gerade durch Translationen um Elemente aus $\Gamma$ gegeben und
+  $\Gamma$ ist klarerweise isomorph zu $\Z \oplus \Z$. Insgesamt
+  erhlaten wir also, dass $\pi_1(X)$ isomorph zu $\Z \oplus \Z$ ist.
+\end{proof}
+
+Nun haben wir das Handwerkszeug zusammen, um unser zentrales Resultat
+zu beweisen.
+
 \begin{thm}
   Sei $X$ eine kompakte Riemannsche Fläche und bezeichne $g$ ihr
   Geschlecht. Dann gelten:
@@ -423,8 +183,28 @@ bevor wir unseren Uniformisierungssatz beweisen können.
   $X$ konform äquivalent zu $\quot{\h}{G}$ für eine Untergruppe $G
   \leq \Aut(\h)$.
 
-  \todo{Lösung finden.}
-  Nun fehlt noch der Fall $g = 1$.
+
+  Nun fehlt noch der Fall $g = 1$. Angenommen $\tilde X \cong \h$. Wir
+  wissen aus Satz \ref{thm:geschlecht-1-z}, dass
+  \begin{align}
+    \label{eq:g-z}
+  \Z \oplus \Z \cong G := \Deck \left( \C \setminus \quot{\C}{\Gamma}
+  \right ) \leq \Aut(\h)
+  \end{align}
+  gelten müsste. Insbesondere müssten wir eine abelsche Fuchssche
+  Gruppe finden, allerdings wissen wir nach Satz
+  \ref{thm:abelsch-zyklisch}, dass diese alle zyklisch sind. Damit ist
+  $G$ also isomorph zu $\Z$ oder zu $\quot{\Z}{n\Z}$ für ein $n \in
+  \N$. Dies ist ein Widerspruch dazu, dass Gleichung \eqref{eq:g-z}
+  gelten soll. Also ist die Universelle Überlagrung von $X$ konform
+  äquivalent zu $\C$. Die Gruppe der Decktransformation ist also eine
+  diskrete abelsche Untergruppe von $\C$ und muss isomorph zu $\Z
+  \oplus \Z$ sein. In Lemma \ref{lemma:deck-pc} möglichen diskreten
+  Untergruppen von $\Aut(\C)$ charakterisiert und die einzige Möglichkeit, die
+  isomorph zu $\Z \oplus \Z$ ist, ist die des Gitters. Also ist die
+  $\Deck(\tilde X \setminus X)$ isomorph zu einem Gitter $\Gamma
+  \subset \C$. Insgesamt erhalten wir, dass $X$ konform äquvialent zu
+  $\quot{\C}{\Gamma}$ ist.
 \end{proof}
 
 %%% Local Variables: 

@@ -1,0 +1,379 @@
+
+\section{Abelsche Fuchssche Gruppen}
+\label{sec:fuchs}
+
+\todo{Sl durch PSl geeignet ersetzen}
+\todo{$\id$ ausschließen}
+
+\begin{defin}
+  Die diskreten Untergruppen von $PSl(2,\R)$ werden als Fuchssche
+  Gruppen bezeichnet.
+\end{defin}
+
+\begin{rem}
+  Um über Diskretheit sprechen zu können, benötigt $Sl(2, \R)$
+    eine Topolgie. Hier verwenden wir einfach die Teilraumtopolgie,
+    die durch die Standardtopologie auf $\Mat_{4\times4}(\R) \cong
+    \R^4$ gegeben ist.
+\end{rem}
+
+\begin{thm}
+  \label{thm:fixpkt}
+  Sei $S \in Sl(w, \R)$. Dann gelten
+  \begin{itemize}
+  \item Für $|\tr S| < 2$ besitzt $S$ einen Fixpunkt in $\h$.
+  \item Für $|\tr S| = 2$ besitzt $S$ einen Fixpunkt auf $\R \cup \{\infty\}$.
+  \item Für $|\tr S| > 2$ besitzt $S$ zwei Fixpunkte auf $\R \cup \{\infty\}$.
+  \end{itemize}
+\end{thm}
+
+\begin{proof}
+  Gelte
+  \[
+  S =
+  \begin{pmatrix}
+    a & b\\
+    c & d
+  \end{pmatrix} \in Sl(2, \R)
+  \]
+  Für einen Fixpunkt $S \langle z \rangle = z$ muss die Gleichung
+  \begin{align}
+    \label{eq:fixpkt}
+    c z^2 + (d-a)z - b = 0
+  \end{align}
+  Falls $c \neq 0$ gilt erhalten wir unter Ausnutzung von $\det S = 0$
+  \begin{align*}
+    z_{1,2} & = \frac{a-d}{2c} \pm \sqrt{\frac{(d-a)^2}{4c^2} +
+      \frac{b}{c}} \\
+    & = \frac{a-d}{2c} \pm \frac{1}{2c} \sqrt{(\tr S)^2 - 4}
+  \end{align*}
+  Nun hängt die Anzahl und Art der Lösungen von der Diskriminante
+  ab. Wir erhalten also die folgenden Fälle:
+  \begin{itemize}
+  \item Für $|\tr S| < 2$ erhalten wir zwei Lösungen in $\C$, wobei
+    der Imaginärteil von Null verschieden ist. Aufgrund des
+    Vorzeichens liegt nur eine dieser Lösungen in $\h$. Also finden
+    wir einen Fixpunkt in $\h$.
+  \item Für $|\tr S| = 2$ erahlten wir eine Lösung in $\R$.
+  \item Für $|\tr S| > 2$ erhalten wir zwei Lösungen in $\R$.
+  \end{itemize}
+  Nun müssen wir noch den Fall $c = 0$ betrachten. Dann vereinfacht
+  sich die Gleichung \eqref{eq:fixpkt} unter Ausnutzung von $1 = \det
+  S = ad$ zu
+  \[
+  z = a^2 z - ba.
+  \]
+  Weiterhin wissen wir, dass $\tr S = a + \frac{1}{a}$ erfüllt. Damit
+  wissen wir aber bereits, dass $|\tr S| \geq 2$ gilt, denn die
+  Funktion, die durch $x \mapsto \frac{1}{x} + x$ gegeben ist, hat
+  zwei globale Betragsminima bei $\pm 1$, was eine einfache
+  Kurvendiskussion zeigt. Betrachten wir zunächst den Fall $|\tr S| =
+  2$, so muss $a = \pm 1$ gelten. Dann ist aber $\infty$ die einzige
+  Lösung der obigen Gleichung. Für $|\tr S| > 2$ ist $\infty$ auch
+  eine Lösung, allerdings erhalten wir als zweite Lösung $z =
+  \frac{ba}{1-a^2} \in \R$, da $a^2 \neq 1$ gelten muss. Dies zeigt
+  die verbleibenden Fälle.
+\end{proof}
+
+\begin{defin}
+  Die Elemente aus $Sl(2,\R)$ mit $|\tr S| < 2$ ($ = 2$ oder $ > 2$)
+  heißen elliptisch (parabolisch, hyperbolisch).
+\end{defin}
+
+\begin{lemma}
+  \label{lemma:psl-trafo}
+  Sei $S \in Sl(2, \R)$. Dann gelten
+  \begin{enumerate}
+  \item Ist $S$ elliptisch mit Fixpunkt $w \in \h$, so existiert ein $C \in Sl(2, \R)$, so
+    dass $C\langle w \rangle = i$ gilt. Weiterhin gilt dann für ein
+    $\phi \in \R$ die Gleichung
+    \[
+    C S C^{-1} =
+    \begin{pmatrix}
+      \cos(\phi) & \sin(\phi) \\
+      -\sin(\phi) & \cos(\phi)
+    \end{pmatrix}.
+    \]
+  \item Ist $S$ parabolisch mit Fixpunkt $w \in \R \cup \{\infty\}$,
+    so existiert ein $C \in Sl(2, \R)$, so dass $C\langle w\rangle =
+    \infty$ erfüllt. Weiterhin gilt dann für ein $b \in \R$ die Gleichung
+    \[
+    C S C^{-1} =
+    \begin{pmatrix}
+      1 & b\\
+      0 & 1
+    \end{pmatrix}.
+    \]
+  \item Ist $S$ hyperbolisch mit Fixpunkte $w_1 \neq w_2 \in \R \cup
+    \{\infty\}$, so existiert ein $C \in Sl(2, \R)$, so dass $C\langle
+    w_1 \rangle = 0$ und $C\langle w_2 \rangle = \infty$ erfüllt
+    sind. Weiterhin folgt dann, dass ein $\lambda > 0$ existiert, das
+    die folgende Gleichung erfüllt
+    \[
+    C S C^{-1} = 
+    \begin{pmatrix}
+      \lambda & 0\\
+      0 & \lambda^{-1}
+    \end{pmatrix}.
+    \]
+  \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+  \emph{Fall 1:} Sei $S \in Sl(2, \R)$ elliptisch und $w \in \h$ der
+  Fixpunkt von $S$. Nun gilt nach Satz \ref{thm:aut}, dass ein $C \in
+  Sl(2,\R)$ existiert, so dass $C \langle w \rangle = i$ ist. Setzen
+  wir
+  \[
+  \tilde S = CSC^{-1}
+  \begin{pmatrix}
+    a & b\\
+    c & d
+  \end{pmatrix},
+  \]
+  so gilt $\tilde S\langle i \rangle = i$ und wir erhalten die
+  Gleichung
+  \[
+  ai +b = -c + di
+  \]
+  Nun sind die $a,b,c,d \in \R$ und wir erhalten, dass $a = d$ und $b
+  = - c$ gelten muss. Dann erhalten wir aber, dass
+  \[
+  1 = \det S = ad - bc = a^2 + b^2
+  \]
+  gelten muss. Damit finden wir aber geeignete $\phi \in \R$, so dass
+  $a = \cos(\phi)$ und $b = \sin(\phi)$ erfüllen und damit hat $\tilde
+  S$ die gewünschte Form.
+
+  \emph{Fall 2:} Sei $S \in Sl(2, \R)$ parabolisch und sei $w \in \R
+  \cup \{\infty\}$ der Fixpunkt von $S$. Wir setzen
+  \[
+  S =
+  \begin{pmatrix}
+    a & b\\
+    c & d
+  \end{pmatrix}.
+  \]
+  Falls nun $w = \infty$ gilt, muss $c =0$ sein. Dann folgt aber aus
+  $|\tr 2 = 1\|$ und $\det S = 1$, dass $a = b = \pm 1$ gelten
+  muss. Da wir uns aber in $PSl(2,\R)$ befinden, können wir ohne
+  Einschränkung $a = b = 1$ annehmen. Also ist $S$ bereits in der
+  gewünschten Form. Falls $w \neq \infty$ gilt, so betrachten wir
+  \[
+  C =
+  \begin{pmatrix}
+    0 & 1 \\
+    -1 & w
+  \end{pmatrix}
+  \in PSl(2,\R)
+  \].
+  $C$ erfüllt die Gleichung $C \langle w \rangle > = \infty$. Also
+  erfüllt $\tilde S = C S C^{-1}$ die Gleichung $\tilde S\langle \infty
+  \rangle = \infty$. Nach dem Fall den wir bereits gezeigt haben, hat
+  dann $\tilde S$ die gewünschte Form.
+
+  \emph{Fall 3:} Sei $S \in PSl(2, \R)$ hyperbolisch und seien $w_1
+  \neq w_2 \in \R \cup \{\infty\}$ die Fixpunkte von $S$. Wir
+  betrachten zunächst den Fall $w_1 = 0$ und $w_2 = \infty$ und wählen
+  die obige Darstellung für $S$. Dann folgt aber aus $S\langle 0
+  \rangle = 0$ und $S\langle \infty \rangle = \infty$, dass $b = c = 0$
+  gelten muss. Aus $\det S = 1$ folgt dann, dass $a = \frac{1}{d}$
+  gilt. Da $S \in PSl(2,\R)$ liegt, können wir ohne Einschränkung
+  $\lambda a > 0$ annehmen, was die Behauptung in diesem Fall
+  zeigt. Als nächstes sei $w_1 = \infty$ oder $w_2 = \infty$. Wir
+  nehmen ohne Einschränkunt $w_2 = \infty$ an. Dann ist $w_1 \neq
+  \infty$ und wir setzen
+  \[
+  C =
+  \begin{pmatrix}
+    1 & - w_1\\
+    0 & 1
+  \end{pmatrix}
+  \in PSl(2, \R)
+  \]
+  Dann erfüllt $C\langle \infty \rangle = \infty$ und $C\langle w_1
+  \rangle = 0$ und wir erhalten für $\tilde S = C S C^{-1}$ die beiden
+  Gleichungen $\tilde S \langle \infty \rangle = \infty$ und $\tilde S
+  \langle 0 \rangle = 0$ und wir haben es auf den obigen Fall
+  zurückgeführt. Sind nun sowohl $w_1$ als auch $w_2$ von $\infty$
+  verschieden, so führen wir die gleiche Argumentation mit der Matrix
+  \[
+  C =
+  \begin{pmatrix}
+    (w_1 - w_2)^{-1} & - w_1(w_1-w_2)^{-1}\\
+    1 & -w_2
+  \end{pmatrix}
+  \in PSl(2, \R)
+  \]
+  durch und erhalten auch hier, dass $\tilde S = C S C^{-1}$ die
+  gewünschten Eigenschaften erfüllt.
+\end{proof}
+
+Nun wollen wir die abelschen Fuchsschen Gruppen charakterisieren. Wir
+beginnen mit der folgenden Proposition.
+
+\begin{prop}
+  \label{prop:komm-fix}
+  Seien $T, S \in Sl(2, \R)$ mit $TS = ST$. Dann bildet $S$ die
+  Fixpunktmenge von $T$ injektiv auf sich selbst ab.
+\end{prop}
+
+\begin{proof}
+  Sei $w$ ein Fixpunkt von $T$, dann gilt
+  \[
+  TS \langle p \rangle = ST\langle p \rangle = S\langle p \rangle.
+  \]
+  Also ist auch $S\langle p \rangle$ ein Fixpunkt von $T$. Da nun $S$
+  auch in $PSl(2, \C) = \Aut(\P^1)$ liegt, ist $S$ insbesondere auf
+  der gesamten Fixpunktmenge von $T$ injektiv. $S$ bildet also
+  Fixpunkte von $T$ injektiv auf Fixpunkte von $T$ ab.
+\end{proof}
+
+\begin{thm}
+  \label{thm:komm-fix}
+  Seien $T,S \in PSl(2, \R)\setminus \{\id\}$. Dann kommutieren $T$ und $S$ genau dann,
+  wenn die Fixpunktmengen übereinstimmen.
+\end{thm}
+
+\begin{proof}
+  Gelte zunächst $TS = ST$. Dann bildet nach Proposition
+  \ref{prop:komm-fix} die Abbildung $ST$ die Fixpunktmenge von $T$
+  injektiv auf die Fixpunktmenge von $T$ ab. Da diese nach Satz
+  \ref{thm:fixpkt} endlich ist, wirkt $ST$ auch surjektiv auf dieser
+  Menge. Analog wirkt $TS$ sowohl injektiv, als auch surjektiv auf der
+  Fixpunktmenge von $S$. Dann gilt aber direkt $\# \Fix(S) = \#
+  \Fix(T)$. Aus Satz \ref{thm:fixpkt} folgt nun auch, dass wir nur die
+  beiden Fälle ein bzw. zwei Fixpunkte überprüfen müssen. Gelte also
+  zunächst $\# \Fix(S) = 1$. Sei $p$ der Fixpunkt von $S$, dann ist
+  nach Proposition \ref{prop:komm-fix} $T\langle p \rangle$ auch ein
+  Fixpunkt von $S$ und da nur ein Fixpunkt existiert, gilt $ p = T
+  \langle p \rangle$. Also ist $p$ auch der einzige Fixpunkt von $T$
+  und die Fixpunktmengen stimmen überein. Dann ist aber $T$ (und auch
+  $S$) parabaolisch und nach Lemma \ref{lemma:psl-trafo} existiert ein
+  $C \in PSl(2,\R)$, so dass
+  \[
+  \tilde T = C T C^{-1} =
+  \begin{pmatrix}
+    \lambda & 0 \\
+    0 & \lambda^{-1}
+  \end{pmatrix}
+  \]
+  für ein $\lambda > 0$ gilt. Setzen wir
+  \[
+  \tilde S = C S C^{-1} =
+  \begin{pmatrix}
+    a & b \\
+    c & d
+  \end{pmatrix},
+  \]
+  so folgt aus $ST = TS$ auch $\tilde S \tilde T = \tilde T \tilde
+  S$. Diese Gleichung liefert uns $\lambda^{-1} c = \lambda c$ und
+  $\lambda^{-1} b = \lambda$. Da $T \neq \id$ ist $\lambda \neq 1$ und
+  wir erhalten $b = c = 0$ und es folgt $a = d^{-1}$. Also
+  erhalten wir
+  \[
+  \Fix(\tilde S) = \{0, \infty\} = \Fix(\tilde T).
+  \]
+  Nach Rücktransformation folgt die Aussage für $S$ und $T$.
+
+  Gelte nun $\Fix(S) = \Fix(T)$, so stimmen die Typen von $S$ und $T$
+  überein weiterhin finden wir nach Lemma \ref{lemma:psl-trafo} ein $C
+  \in PSl(2, \R)$, so dass $C S C^{-1}$ und $C T C^{-1}$ gemeinsam
+  eine der Formen aus dem obigen Lemma annehmen. Nun haben wir aber im
+  elliptischen Fall Rotationen und die Gruppe der Rotationen im $\R^2$
+  ist kommutativ. Im parabolischen Fall handelt es sich um
+  Translationen und diese bilden auch eine kommutative Gruppe. Der
+  hyperbolische Fall liefert Diagonalmatrizen, diese kommutieren immer
+  mit allen anderen Matrizen, kommutieren also insbesondere
+  untereinander. Aus der Kommutativität von $C S C^{-1}$ und $C T
+  C^{-1}$ folgt dann dirket die Kommutativität von $S$ und $T$.
+\end{proof}
+
+\begin{thm}
+  \label{thm:abelsch-zyklisch}
+  Sei $G \subset PSl(2, \R)$ eine Fuchssche Gruppe. Dann ist $G$ genau
+  dann abelsch, wenn $G$ zyklisch ist.
+\end{thm}
+
+\begin{proof}
+  Falls $G$ zyklisch ist, ist $G$ klarerweise kommutativ. Betrachten
+  wir also den Fall, dass $G$ kommutativ ist. Nach Satz
+  \ref{thm:komm-fix} sind die Fixpunktmengen aller Elemente aus $G$
+  identisch. Sie haben also alle den gleichen Typ.
+
+  Betrachten wir zunächst den elliptischen Fall. Dann können alle
+  Elemente von $G$ durch Konjugation mit einem festen $C \in PSl(2,\R)$ auf
+  die Form
+  \[
+  \begin{pmatrix}
+    \cos(\phi) & \sin(\phi) \\
+    -\sin(\phi) & \cos(\phi)
+  \end{pmatrix}
+  \]
+  gebracht werden. Betrachten wir nun die Abbildungen von $G$ als
+  lineare Abbildungen auf $\R^2$, so stellen wir nach Identifizierung
+  mit $\C$ fest, dass es sich bei den Rotationen einfach nur um
+  Multiplikation mit $e^{i\phi}$ handelt. Wir können also $G$ mit
+  einer diskreten Untergruppe von $S^1$ identifizieren. Angenommen
+  diese Untergruppe wäre nicht diskret. Dann gäbe es $\phi \neq \psi
+  \in \R$, so dass $e^{in\phi} \neq e^{im\phi}$ für beliebige $n, m
+  \in \Z$. Nun wissen wir aber nach Lemma \ref{lemma:gitter}, dass
+  eine nichttriviale additive Untergruppe von $\R$ ein Gitter sein
+  muss, d.h. die additive Untergruppe $L := \{ n \phi + m \psi \mid n,m \in
+  \Z\}$ kann nicht diskret sein. Weiterhin ist die Abbildung
+  \[
+  p: \R \ra S^1, \quad \phi \mapsto e^{i\phi}
+  \]
+  stetig, also kann auch $p(L) \cong G$ nicht diskret sein. Ein
+  Widerspruch. Also muss ein $\phi \in \R$ existieren, so dass
+  \[
+  G \cong \left \{ e^{in\phi} \mid n \in \Z \right \}
+  \]
+  gilt. Damit ist $G$ zyklisch.
+
+  Gehen wir nun zum parabolischen Fall über, so können wir alle
+  Elemente von $G$ durch Konjugation mit einem festen $C \in PSl(w,
+  \R)$ auf die Form
+  \begin{align}
+    \label{eq:parabolisch}
+  \begin{pmatrix}
+    1 & b\\
+    0 & 1
+  \end{pmatrix}
+  \end{align}
+  bringen, wobei $b \in \R$ gilt. Hier erhalten wir direkt einen
+  Homöomorphismus von der Menge der Matrizen der Form
+  \eqref{eq:parabolisch} nach $\R$, in dem wir einfach die Komponente
+  $b$ auswählen. Es ist also das Bild von $G$ unter diesem
+  Homöomorphismus eine diskrete, abelsche
+  Untergruppe von $\R$. Nun wissen wir aber nach Lemma \ref{lemma:gitter},
+  dass die nichttrivialen diskreten, abelschen Untergruppen von $\R$ Gitter und
+  damit (im eindimensionalen Fall) zyklisch sind. Also ist auch $G$
+  zyklisch.
+
+  Wenden wir uns dem letzten Fall zu. Seien also alle Elemente von $G$
+  hyperbolisch. Dann finden wir erneut ein feste $C \in PSl(2, \R)$,
+  da alle Element von $G$ auf die Form
+  \begin{align}
+    \label{eq:hyperbolisch}
+  \begin{pmatrix}
+    \lambda & 0 \\
+    0 & \lambda^{-1}
+  \end{pmatrix}
+  \end{align}
+  bringt. Auch hier finden wir einen Homöomorphismus von den Matrizen
+  der Form \eqref{eq:hyperbolisch} und in diesem Fall $\R_{> 0}$, in
+  dem wir die Matrizen auf $\lambda^2$ abbilden. Das es sich
+  tatsächlich um einen Homöomorphismus handelt, folgt aus der
+  Tatsache, dass wir das Vorzeichen von $\lambda$ nach Definition von
+  $PSl(2, \R)$ vernachlässigen können. Nun können wir aber $\R_{> 0}$
+  durch $\log$ homöomorph auf $\R$ abbilden. Also finden wir wieder
+  eine abelsche, diskrete Untergruppe von $\R$. Diese ist wieder
+  zyklisch und da wir nur mit Homöomorphismen gearbeitet haben, folgt
+  direkt auch, dass $G$ zyklisch sein muss.
+\end{proof}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../Bachelor"
+%%% End: 

@@ -312,10 +312,13 @@ erster Schritt ist der nächste Satz.
 \end{proof}
 
 \begin{lemma}
-  Seien $D, B \in \Div(X)$ und $X$ eine kompakte Riemannsche
-  Fläche. Sei $\psi \in H^0(X, \hol_B)$. Dann induziert der
-  Garbenhomomorphismus $\hol_{D-B} \xrightarrow{\psi} \hol_D$ gegeben
-  durch $f \mapsto \psi f$ eine lineare Abbildung
+  Seien $D,B \in \Div(X)$ und $X$ eine kompakte Riemannsche
+  Fläche. Sei $\psi \in H^0(X,\hol_B)$. Dann induziert der
+  Garbenhomomorphismus
+  \[
+  \hol_{D-B} \xrightarrow{\psi} \hol_D, \quad f \mapsto \psi f
+  \] 
+  eine lineare Abbildung
   \[
   H^1(X, \hol_{D-B}) \ra H^1(X, \hol_D)
   \]
@@ -383,6 +386,7 @@ erster Schritt ist der nächste Satz.
 \end{proof}
 
 \begin{thm}[Der Serresche Dualitätssatz]
+  \label{thm:serre}
   Sei $D \in \Div(X)$ und $X$ eine kompakte Riemannsche Fläche. Dann
   ist $\iota_D: H^0(X, \Omega_{-D}) \ra H^1(X, \hol_D)^\ast$ ein Isomorphismus.
 \end{thm}
@@ -449,6 +453,81 @@ erster Schritt ist der nächste Satz.
   \]
   wobei $g$ das Geschlecht von $X$ bezeichnet.
 \end{cor}
+
+\begin{thm}
+  \label{thm:serre-umgekehrt}
+  Sei $D \in \Div(X)$ und $X$ eine kompakte Riemannsche Fläche. Dann
+  gilt $H^0(X, \hol_{-D}) \cong H^1(X, \Omega_D)^\times$.
+\end{thm}
+
+\begin{proof}
+  Sei $0 \neq omega_0 \in \mer^{(1)}(X)$ und $K := (\omega_0)$. Wie
+  aus Definition \ref{def:garbe-div} bekannt gelten $\Omega_D \cong
+  \hol_{D+K}$ und $\hol_D \cong \Omega_{-D-K}$. Mit Satz
+  \ref{thm:serre} folgt
+  \[
+  H^0(X, \hol_{-D}) \cong H^0(X, \Omega_{-D-K}) \cong H^1(X,
+  \hol_{D+K})^\ast = H^1(X, \Omega_D)^\ast
+  \]
+\end{proof}
+
+\begin{cor}
+  \label{cor:hol-form}
+  Es gilt $\dim H^1(X, \Omega) = 1$.
+\end{cor}
+
+\begin{proof}
+  Satz \ref{thm:serre-umgekehrt} angewandt für den Fall $D = 0$
+  liefert uns
+  \[
+  \dim H^1(X, \Omega) = \dim H^0(X, \hol) = \dim \C = 1
+  \]
+\end{proof}
+
+\begin{thm}
+  \label{thm:deg-geschlecht}
+  $X$ eine kompakte Riemannsche Fläche mit Geschlecht $g$ und $\omega
+  \in \mer^{(1)}(X)$, wobei $\omega(x) \neq 0$ für jedes $x \in
+  X$. Dann gilt
+  \[
+  \deg(\omega) = 2g - 2
+  \]
+\end{thm}
+
+\begin{proof}
+  Sei $K := (\omega)$. Aus dem Satz von Riemann-Roch erhalten wir
+  \[
+  \dim H^0(X, \hol_K) - \dim H^1(X, \hol_K) = 1 - g + \deg K
+  \]
+  Wieder nach Definiton \ref{def:garbe-div} wissen wir $\Omega \cong
+  \hol_K$. Also erhalten wir weiter unter Ausnutzung von Satz
+  \ref{thm:serre} und Korollar \ref{cor:hol-form} die folgende Gleichung
+  \begin{align*}
+    1 - g+ \deg K = \dim H^0(X, \Omega) - \dim H^1(X, \Omega) \\
+    & = \dim H^1(X, \hol) - 1 \\
+    & = g - 1
+  \end{align*}
+  Aufgelöst nach $\deg K$ folgt die Behauptung.
+\end{proof}
+
+\begin{cor}
+  \label{cor:torus-geschlecht}
+  Sei $\Gamma \subset \C$ ein Gitter. Dann hat der Torus
+  $\quot{\C}{\Gamma}$ Geschlecht 1.
+\end{cor}
+
+\begin{proof}
+  Wir betrachten die meromorphe 1-Form $\d[z]$ auf $\C$. Da $\C$ die
+  Universelle Überlagerung von $\quot{\C}{\Gamma}$ darstellt und wir
+  deshlab die Projektion als Kartenabbildung von $\quot{\C}{\Gamma}$
+  verwenden können, finden wir eine 1-Form $\omega \in
+  \quot{\C}{\Gamma}$, die auf jeder dieser Karten mit $\d[z]$
+  übereinstimmt. Dies folgt direkt daraus, dass $\mer^{(1)}(X)$ eine
+  Garbe ist. Dann folgt aber sofort $\omega(x) \neq 0$ für jedes $x
+  \in \quot{\C}{\Gamma}$ und damit $\deg(\omega) = 0$. Aus Satz
+  \ref{thm:deg-geschlecht} folgt dann $g = 1$.
+\end{proof}
+
 
 %%% Local Variables: 
 %%% mode: latex
