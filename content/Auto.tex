@@ -1,6 +1,27 @@
 
-\section{Automorphismengruppen}
+\section{Automorphismengruppen \& Gitter}
 \label{sec:auto}
+
+Im letzten Kapitel haben wir alle einfach zusammenhängenden
+Riemannschen Flächen und damit alle möglichen universellen
+Überlagerungen kompakter Riemannscher Flächen bestimmt. In diesem
+Kapitel wollen wir nun die Automorphismengruppen von $\C, \P^1$ und $B$
+bzw. $\h$ bestimmen, denn die Überlagerungstheorie liefert uns, dass
+sich unsere kompakten Riemannschen Flächen jeweils aus $X \in \{ \C,
+\P^1, \h\}$ modulo der Wirkung einer Untergruppe der
+Automorphismengruppe ergeben. Das bedeutet, wenn wir die
+Untergruppen der Automorphismengruppen verstanden haben, haben wir
+auch die verschiedenen kompakten Riemannschen Flächen verstanden.
+
+Als ersten Schritt berechnen wir dazu in diesem Kapitel die
+Automorphismengruppen. Danach wenden wir uns der Charakterisierung von
+Gittern zu, da wir diese einmal benötigen, um den Torus zu beschreiben
+und diese andererseits zeigen, dass alle diskreten, abelschen
+Untergruppen von $\R$ gerade Gitter und damit zyklisch sind. Die
+Untergruppen der Automorphismengruppen werden dann in den
+nächsten zwei Abschnitten bestimmt.
+
+\subsection{Automorphismengruppen}
 
 \begin{defin}
   Sei $X$ eine Riemannsche Fläche. Unter der
@@ -63,12 +84,12 @@
   \item $\Aut(\C) = \{ f: \C \ra \C, \ z \mapsto az + b \mid a \in
     \C^\times, \ b \in \C \}$
   \item $\Aut(\P^1) = \{ f: \P^1 \ra \P^1,\ f(z) = M\langle z \rangle \mid
-    M \in Sl(2, \C) \}$
+    M \in \PSL(2, \C) \}$
   \item $\Aut(B) = \{ f: B \ra B,\ z \mapsto \frac{\alpha z +
       \beta}{\bar \beta z + \bar \alpha} \mid \alpha, \beta \in \C, \
     |\alpha |- |\beta| = 1\}$
   \item $\Aut(\h) = \{f: \h \ra \h,\ f(z) = M\langle z \rangle 
-    \mid M \in Sl(2, \R) \}$
+    \mid M \in \PSL(2, \R) \}$
   \end{enumerate}
 \end{thm}
 
@@ -84,7 +105,7 @@
   \]
   gilt. Wir behaupten nun, dass $a_k = 0$ für fast alle $k \in \N_0$
   gelten muss. Angenommen dies wäre nicht der Fall, dann hätte die
-  Funktion $g: \C^\ast \ra \C$ mit $g(z) := f(\frac{1}{z})$ eine
+  Funktion $g: \C^\times \ra \C$ mit $g(z) := f(\frac{1}{z})$ eine
   wesentliche Singularität bei $0$. Dann wäre aber der Satz von
   Casorati-Weierstraß (vgl. \cite[Satz 6.11]{Kas}) anwendbar und wir
   erhielten zu jedem $n \in \N$
@@ -94,7 +115,7 @@
   \infty$. Setzen wir nun weiterhin $\tilde z_n := f(w_n)$ und $\tilde
   z = f(0)$, so erhielten wir also $\lim_{n \ra \infty} \tilde z_n =
   \tilde z$, allerdings gälte $|f^{-1}(\tilde z_n)| = |w_n| \ra \infty
-  \neq |f^{-1}(\tilde z)| = 0$. Dies ist ein Widerspruch zur
+  \neq 0 = |f^{-1}(\tilde z)|$. Dies ist ein Widerspruch zur
   Stetigkeit von $f^{-1}$. Also ist $f$ ein Polynom. Dies hat aber
   direkt zur Folge, dass der Grad von $f$ eins sein muss, da wir
   ansonsten nach dem Haupsatz der Algebra mehrere Nullstellen
@@ -137,7 +158,7 @@
   eine Wurzel von $\det M$ und definieren $\tilde M := \gamma^{-1} M$,
   so gilt $f(z) = M\langle z \rangle = \tilde M \langle z \rangle$ und
   $\det \tilde M = \gamma^{-2} \det M = 1$. Also liegt $\tilde M \in
-  PSl(2, \C)$.
+  \PSL(2, \C)$.
 
   Für den Fall, dass $a = \infty = b$, so brauchen wir die
   Hilfsfunktion $\psi$ nicht und wir können direkt unser Wissen über
@@ -151,13 +172,13 @@
   Es zeigt sich, dass $f_w$ selbstinvers ist und damit in $\Aut(B)$
   liegt. Setzen wir $g := f\circ f_w$, so erhalten wir
   \begin{align*}
-    g(0) = f( f_w(0)) = f(w) = 0
+    g(0) = f( f_w(0)) = f(w) = 0.
   \end{align*}
   Damit ist das Lemma von Schwarz (vgl. \cite[Satz 5.10]{Kas})
   anwendbar und wir erhalten sowohl für $g$, als auch für $g^{-1}$
   \begin{align*}
-    |g(z)| & \leq |z| \\
-    |g^{-1}(z)| & \leq |z|
+    |g(z)| & \leq |z|, \\
+    |g^{-1}(z)| & \leq |z|.
   \end{align*}
   Es ergibt sich, dass
   \begin{align*}
@@ -220,8 +241,11 @@
   \end{align*}
   Betrachten wir nun $\det M$, so erhalten wir $\det M = |\alpha| -
   |\beta| = 1$. Außerdem hat $M$ nur reelle Einträge, also liegt $M
-  \in Sl(2, \R)$.
+  \in \PSL(2, \R)$.
 \end{proof}
+
+\subsection{Gitter}
+\label{sec:gitter}
 
 Als nächstes wenden wir uns Gittern zu. Diese benötigen wir, um die
 diskreten Untergruppen von $\C$ zu beschreiben. Später wird sich dann
@@ -230,7 +254,7 @@ Riemannschen Flächen zu beschreiben, deren Universelle Überlagerung
 $\C$ ist.
 
 \begin{defin}
-  Sei $B$ ein $n-$dimensionaler, reeller Vektorraum. Eine additive
+  Sei $B$ ein $n-$dimensionaler, reeller Vektorraum\todo{evtl. nach vorne}. Eine additive
   Untergruppe $\Gamma \subset V$ heißt \init{Gitter}, falls $n$ linear
   unabhängige $\gamma_1, \dots, \gamma_n \in V$ existieren, so dass
   \[
@@ -250,9 +274,9 @@ $\C$ ist.
 \end{lemma}
 
 \begin{proof}
-  Falls $\Gamma$ ein Gitter ist, die Aussage aus der Definition
+  Falls $\Gamma$ ein Gitter ist, ist die Aussage aus der Definition
   klar. Erfülle also $\Gamma$ die beiden Bedingungen. Wir gehen nun
-  per Induktion vor. Für $n = 0$ ist di eAussage klar. Gelte also die
+  per Induktion vor. Für $n = 0$ ist die Aussage klar. Gelte also die
   Aussage für ein $n \in \N_0$. Da $\Gamma \subset V$ mit $\dim V =
   n+1$ in keinem echten
   Untervektorraum von $V$ enthalten ist, existieren linear unabhängige $x_1, \dots,
@@ -262,14 +286,14 @@ $\C$ ist.
   ist $\dim V_1 = n$, also können wir die Induktionsvoraussetzung
   verwenden und erhalten linear unabhängige $\gamma_1, \dots, \gamma_n
   \in \Gamma_1 \subset \Gamma$, so dass $\Gamma_1 = \Z \gamma_1 +
-  \dots + \Z \gamma_n$ gilt. Nun bildendie $\gamma_i$ bereits eine
-  Basis von $V_1$ und fügen wir $x_{n+}$ erhalten wir sogar eine Basis
+  \dots + \Z \gamma_n$ gilt. Nun bilden die $\gamma_i$ bereits eine
+  Basis von $V_1$ und fügen wir $x_{n+1}$ erhalten wir sogar eine Basis
   von $V$, das bedeutet aber, dass wir zu jedem $x \in \Gamma \subset
   V$, eindeutig bestimmte $c_i(x), c(x) \in \R$ finden, so dass
   \[
   x = c_1(x) \gamma_1 + \dots + c_n(x) \gamma_n + c(x) x_{n+1}
   \]
-  Wir betrachten nun
+  gilt. Wir betrachten nun
   \[
   P := \{ \lambda_1 \gamma_1 + \dots + \lambda_n \gamma_n + \lambda
   x_{n+1} \mid \lambda_i, \lambda \in [0,1] \}.
@@ -277,9 +301,9 @@ $\C$ ist.
   Dieses $P$ ist kompakt und da $\Gamma$ diskret ist, folgt dass $P
   \cap \Gamma$ endlich ist. Weiterhin ist $( \Gamma \cap P) \setminus
   V_1$ nicht leer, da $x_{n+1}$ enthalten ist. Damit existiert ein
-  $\gamma_{nü1} \in ( \Gamma \cap P) \setminus V_1$ mit
+  $\gamma_{n+1} \in ( \Gamma \cap P) \setminus V_1$ mit
   \[
-  c(\gamma_n) = \min \{ c(x) \mid x \in ( \Gamma \cap P ) \setminus
+  c(\gamma_{n+1}) = \min \{ c(x) \mid x \in ( \Gamma \cap P ) \setminus
   V_1 \} \in ]0, 1].
   \]
   Wir behaupten nun, dass $\Gamma = \Gamma_1 + \Z \gamma_{n+1}$. Sei
@@ -288,12 +312,12 @@ $\C$ ist.
   x' := x - \sum_{j=1}^{n+1} n_j \gamma_j = \sum_{j=1}^n \lambda_j
   \gamma_j + \lambda x_{n+1}
   \]
-  mit $0 \leq \lambda_j < !$ und $0 \leq \lambda < c(\gamma_{n+1})$
+  mit $0 \leq \lambda_j < 1$ und $0 \leq \lambda < c(\gamma_{n+1})$
   gilt. Da $x' \in \Gamma \cap P$ liegt und $c(\gamma_{n+1})$ minimal
   von 0 verschieden gewählt wurde, muss $\lambda = 0$ sein. Also liegt
-  $x' \in \Gamma \cap V_1 = \Gamma_1$. Also sind die $\lambda_i$
-  ganzzahlig und die einzige Möglichkeit, bleibt, dass $\lambda_i = 0$
-  gilt. Dann ist aber $x'$ bereits 0 und wir erhalten
+  $x' \in \Gamma \cap V_1 = \Gamma_1$. Damit sind die $\lambda_i$
+  ganzzahlig und die einzig verbleibende Möglichkeit ist $\lambda_i =
+  0$. Dann ist aber $x'$ bereits 0 und wir erhalten 
   \[
   x = \sum_{j=1}^n n_j \gamma_j \in \Z \gamma_1 + \dots + \Z \gamma_n.
   \]

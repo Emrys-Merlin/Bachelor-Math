@@ -1,10 +1,21 @@
-
 \section{Uniformisierung kompakter Riemannscher Flächen}
 \label{sec:uniformisierung}
 
+Wir nähern uns dem eigentlichen Ziel dieser Arbeit. Am Ende dieses
+Kapitels wird der Uniformisierungssatz für kompakte Riemannsche
+Flächen stehen. Bevor es jedoch so weit ist, müssen wir noch einige
+Eigenschaften von Decktransformationen zusammentragen. Zum einen
+werden wir sehen, dass genau die Fuchsschen Gruppen die möglichen
+Decktransformationsgruppen der oberen Halbebene darstellen, weiterhin
+wird klar werden, dass $\P^1$ nur sich selbst überlagert. Zu guer
+letzt müssen wir auch noch die Fundamentalgruppe der Riemannschen
+Flächen mit Geschlecht 1 bestimmen, dazu müssen wir einen Satz zur
+Charakterisierung kompakter, orientierbarer topologischer Flächen
+importieren.
 
-Zunächst benötigen wir noch einige Eigenschaften von Decktransformationen,
-bevor wir unseren Uniformisierungssatz beweisen können.
+Nach diesen letzten technischen Spielereien sind wir dann endlich in
+der Lage aus dem Riemannschen Abbildungssatz unseren
+Uniformisierungssatz herzuleiten.
 
 \begin{lemma}
   \label{lemma:decktrafo-diskret}
@@ -36,7 +47,7 @@ bevor wir unseren Uniformisierungssatz beweisen können.
   \label{lemma:deck-pc}
   \begin{enumerate}
   \item Jeder Automorphismus von $\P^1$ hat einen Fixpunkt.
-  \item Sei $G \leq \Aut(\C)$ eine diskret opereierende Gruppe ohne
+  \item Sei $G \leq \Aut(\C)$ eine diskret operierende Gruppe ohne
     Fixpunkte. Dann ist $G$ eine der folgenden Gruppen
     \begin{enumerate}
     \item $G = \{\id\}$,
@@ -52,7 +63,7 @@ bevor wir unseren Uniformisierungssatz beweisen können.
 \begin{proof}
   \begin{enumerate}
   \item Sei $f \in \Aut(\P^1)$. Dann ist nach Satz \ref{thm:aut} $f(z) = M\langle z \rangle$ mit $M
-    \in Sl(2, \C)$. Sei
+    \in \PSL(2, \C)$. Sei
     \[
     M =
     \begin{pmatrix}
@@ -104,7 +115,7 @@ einen Satz aus der Topolgie importieren.
 \begin{rem}
   Dieser Satz gilt noch deutlich allgemeiner als hier aufgeführt,
   allerdings muss man sich dann über die Definition des Geschlechts
-  Gedanken machen, da wir für unsere Definition deutlich auf die
+  Gedanken machen, da wir für unsere Definition auf die
   komplexe Struktur zurückgegriffen haben. Allgemein kann das
   Geschlecht aber bereits für beliebige kompakte topologische
   Mannigfaltigkeiten definiert werden.
@@ -145,6 +156,7 @@ Nun haben wir das Handwerkszeug zusammen, um unser zentrales Resultat
 zu beweisen.
 
 \begin{thm}
+  \label{thm:uniformisierung}
   Sei $X$ eine kompakte Riemannsche Fläche und bezeichne $g$ ihr
   Geschlecht. Dann gelten:
   \begin{enumerate}
@@ -199,7 +211,7 @@ zu beweisen.
   gelten soll. Also ist die Universelle Überlagrung von $X$ konform
   äquivalent zu $\C$. Die Gruppe der Decktransformation ist also eine
   diskrete abelsche Untergruppe von $\C$ und muss isomorph zu $\Z
-  \oplus \Z$ sein. In Lemma \ref{lemma:deck-pc} möglichen diskreten
+  \oplus \Z$ sein. In Lemma \ref{lemma:deck-pc} sind die möglichen diskreten
   Untergruppen von $\Aut(\C)$ charakterisiert und die einzige Möglichkeit, die
   isomorph zu $\Z \oplus \Z$ ist, ist die des Gitters. Also ist die
   $\Deck(\tilde X \setminus X)$ isomorph zu einem Gitter $\Gamma

@@ -2,20 +2,32 @@
 \section{Weyls Lemma}
 \label{sec:Weyl}
 
+Wir sind in diesem Kapitel an der Aussage interessiert, dass jede
+harmonische Distribution bereits durch eine harmonische Funktion
+erzeugt wird. Das ist genau der Inhalt von Weyls Lemma
+\ref{thm:weyl}. Bis wir die Aussage jedoch überhaupt formulieren
+können, ist einiges an (technischer) Vorarbeit nötig. Zunächst muss
+der Begriff einer Distribution eingeführt und Glättungen behandelt
+werden, bevor wir zu unserem eigentlichen Hauptresultat gelangen
+können.
+
+Die technischen Methoden, die auf dem Weg zu Weyls Lemma entwickelt
+werden, spielen im weiteren Verlauf dieser Arbeit keine Rolle
+mehr. Wer befürchtet aufgrund der vielen sehr technischen Beweise den
+Überblick zu verlieren, kann deshalb getrost die Aussagen von Satz
+\ref{thm:weyl} und Korollar \ref{cor:hol-dist} als gegeben
+voraussetzen und zum nächsten Kapitel übergehen und später zu den
+notwendigen Beweisen zurückspringen.
+
 \begin{defin}
-  Sei $X \subset \C$ offen und $f \in \diff(X)$. \\
-  Dann ist der \init{Träger} von $f$ definiert als
+  Sei $X \subset \C$ offen und $f \in \diff(X)$.
+  Der Raum der \init{Testfunktionen} auf $X$ ist definiert als
   \[
-  \Supp(f) := \overline{\{x \in X | f(x) \neq 0 \}}
+  \dist(X) := \{ f \in \diff(X) \mid \Supp(f) \subset X \text{ kompakt} \}.
   \]
-  Dies ermöglicht es uns den Raum der \init{Testfunktionen} auf $X$ zu
-  definieren:
-  \[
-  \dist(X) := \{ f \in \diff(X) | \Supp(f) \subset X \text{ kompakt} \}
-  \] \\
   Eine Folge $(f_\nu)_{\nu \in \N} \subset \dist(X)$ heißt konvergent
   gegen $f \in \dist(X)$, schreibe $f_\nu \xrightarrow{\dist} f$,
-  falls ein kompaktes $K \subset X$ Mit $\Supp(f), \Supp(f_\nu)
+  falls ein kompaktes $K \subset X$ mit $\Supp(f), \Supp(f_\nu)
   \subset K$ für jedes $\nu \in \N$ und für alle $\alpha = (\alpha_1,
   \alpha_2)^T \in \N^2$ gilt:
   \[
@@ -33,11 +45,11 @@
 
 \begin{bsp}
   \begin{enumerate}
-  \item Jees $h \in C(X)$ definiert eine Distribution $T_h \in
+  \item Jedes $h \in C(X)$ definiert eine Distribution $T_h \in
     \dist(X)'$ durch
     \[
     T_h[f] := \iint_X h(z) f(z) \d[x]\d[y] \qquad z = x+iy \qquad f
-    \in \dist(X)
+    \in \dist(X).
     \]
     $T_h$ ist klarerweise linear und für die Stetigkeit wählen wir ein
     beliebiges $\epsilon > 0$ und eine Folge $(f_n)_{n \in\N} \subset
@@ -46,9 +58,9 @@
     \Supp(f) \subset K$ für jedes $n \in \N$ und ein $N \in \N$, so
     dass
     \[
-    \|f_n -f\|_K < \frac{\epsilon}{\|h\|_K |ĸ|} \qquad \forall n \geq N
+    \|f_n -f\|_K < \frac{\epsilon}{\|h\|_K |K|} \qquad \forall n \geq N
     \]
-    $|ĸ|$ bezeichnet dabei das Volumen von $K$. Dann erhalten wir für
+    $|K|$ bezeichnet dabei das Volumen von $K$. Dann erhalten wir für
     alle $n \geq N$
     \begin{align*}
       |T_h[f_n] - T_h[f]| & = | T_h[f_n -f]| \\
@@ -62,9 +74,7 @@
     und damit die Stetigkeit von $T_h$.
     Weiterhin ist die Abbildung $C(X) \ra \dist(X)', \quad h \mapsto
     T_h$ sogar injektiv. Dies ist eine direkte Folge des 
-    Fundamentallemmas der Variationsrechnung Deshalb werden häufig
-    Distributionen direkt mit der erzeugenden Funktion
-    identifiziert. Wir werden diese Notation hier nicht verwenden.
+    Fundamentallemmas der Variationsrechnung.
   \item Nicht alle Distributionen sind von der obigen Form. Ein
     Gegenbeispiel stellt die Diracsche Delta Distribution dar. Für ein
     $a \in X$ ist sie durch
@@ -82,7 +92,7 @@
   definieren wir für $\alpha \in \N^2$
   \[
   (D^\alpha T)[f] := (-1)^{|\alpha|} T[D^\alpha f] \qquad \forall f
-  \in \dist(X)
+  \in \dist(X).
   \]
   Nun bedeutet unsere spezielle Wahl der Konvergenz, dass die
   Konvergenz $f_\nu \xrightarrow{\dist} f$ auch die Konvergenz
@@ -94,33 +104,32 @@
   \label{lemma:dist-glatt}
   Sei $X \subset \C$ offen, $K \subset X$ kompakt und $I \subset \R$ ein
   offenes Intervall. Sei weiterhin $g: X \times I \ra \C$ glatt und
-  $\Supp(g) \subset K \times I$. \\
-  Wählen wir nun ein $T \in \dist(X)'$, so ist die Abbildung
+  $\Supp(g) \subset K \times I$. Wählen wir nun ein $T \in \dist(X)'$, so ist die Abbildung
   \[
   t \mapsto T_z[g(z,t)]
   \]
   glatt auf $I$ und genügt
-  \[
+\begin{align}
   \frac{\d}{\d[t]} T_z[g(z,t)] = T_z \left [ \frac{\partial
-      g(z,t)}{\partial t} \right ] \tag{$\ast$} \label{eq:dist-ableitung}
-  \]
+      g(z,t)}{\partial t} \right ] \label{eq:dist-ableitung}
+  \end{align}
   $T_z$ soll dabei nur verdeutlichen dass $T$ nur auf $g(z,t)$ als
   Variable von $z$ operiert; $t$ bleibt als Parameter unberührt.
 \end{lemma}
 
 \begin{proof}
   Es genügt die Formel \eqref{eq:dist-ableitung} zu zeigen, da dann
-  die Glattheit von $T_z[g(z,t)]$ aus der Glattheit von $g$ folgt. \\
-  Es gilt:
+  die Glattheit von $T_z[g(z,t)]$ aus der Glattheit von $g$ folgt. 
+  Es gilt
   \begin{align*}
     \frac{\d}{\d[t]} T_z[g(z,t)] & = \lim_{h \ra 0} \frac1h (
     T_z[g(z,t+h)] - T_z[g(z,t)] ) \\
-    & = \lim_{h \ra 0} T_z \left [ \frac1h (g(z,t+h) - g(z,t)) \right ]
+    & = \lim_{h \ra 0} T_z \left [ \frac1h (g(z,t+h) - g(z,t)) \right ].
   \end{align*}
   Für festes $t \in I$ und $h \in \R^\times$ klein genug, ist $f_h(z)
   := \frac1h ( g(z, t+h) - g(z,t))$ wohldefiniert und in
   $\dist(X)$. Weiterhin gitl $f_n \xrightarrow{\dist}
-  \frac{\partial g(\cdot, t)}{\partial t}$, da $g$ glatt ist. \\
+  \frac{\partial g(\cdot, t)}{\partial t}$, da $g$ glatt ist. 
   Aus der Stetigkeit von $T$ folgt damit
   \[
   \lim_{h\ra 0} T_z[f_h] = T_z[\lim_{h \ra 0} f_h] = T_z\left[
@@ -132,29 +141,30 @@
   \label{lemma:dist-int}
   Seien $X,Y \subset \C$ offen $K \subset X$ bzw. $L \subset Y$
   kompakt. Sei weiterhin $g: X \times Y \ra \C$ glatt mit $\Supp(g)
-  \subset K \times L$. \\
+  \subset K \times L$. 
   Dann gilt für beliebige $T \in \dist(X)'$
   \[
   T_w\left [ \iint_Y g(w,z) \d[x]\d[y] \right ] = \iint_Y T_w [
-  g(w,z)] \d[x]\d[y] \qquad z = x + iy
+  g(w,z)] \d[x]\d[y],
   \]
+  wobei die $z = x + iy$ gesetzt wurde.
 \end{lemma}
 
 \begin{proof}
   Nach Lemma \ref{lemma:dist-glatt} ist $T_w[g(w,z)]$ glatt und es
   gilt $\Supp(T_w[g(w,z)]) \subset L$, denn für $z \notin L$ ist
-  $g(\cdot, z) \equiv 0$ und damit $T_w[(g(w,z)] = 0$. \\
+  $g(\cdot, z) \equiv 0$ und damit $T_w[(g(w,z)] = 0$. 
   Also existiert das Integral $\iint_Y T_w[g(w,z)] \d[x]\d[y]$,
-  insbesondere lässt es sich durch Riemann-Summen approximieren. \\
+  insbesondere lässt es sich durch Riemann-Summen approximieren. 
   Dazu wählen wir ein Rechteck $R \subset \C$, so dass $L \subset R$
   und die Seiten von $R$ parallel zu den Koordinatenachsen
-  verlaufen. \\
+  verlaufen. 
   Wir können $g$ durch 0 auf $K \times R$ fortsetzen, d.h. wir können
-  si als Funktion auf $K \times R$ auffassen. \\
+  es als Funktion auf $K \times R$ auffassen. 
   Als nächstes unterteilen wir für jedes $n \in \N$ $R$ in $n^2$
   Teilrechtecke $R_{n\nu}$, $\nu = 1, \dots, n^2$. Diese Teilrechtecke
   werden dabei alle gleich groß gewählt. Sei weiterhin $z_{n\nu}
-  \in R_{n \nu}$ und $F = |R|$. \\
+  \in R_{n \nu}$ und $F = |R|$. 
   Dann konvergiert die Funktionenfolge
   \[
   G_n(w) := \frac{F}{n^2} \sum_{\nu=1}^{n^2} g(w, z_{n\nu})
@@ -198,12 +208,14 @@
 \label{sec:Glättung}
 
 \begin{defin}[Glättungskern]
-  $\rho \in \dist(\C)$ heißt \init{Glättungskern} falls
+  $\rho \in \dist(\C)$ heißt \init{Glättungskern}, falls die folgenden
+  Eigenschaften erfüllt sind:
   \begin{enumerate}
-  \item $\Supp(\rho) \subset \bar D$
-  \item $\rho$ ist rotationssymmetrisch zum Ursprung
-  \item $\rho \geq 0$ (insbesondere also reellwertig)
-  \item $\iint_\C \rho(z) \d[x]\d[y] = 1$ $z = x + iy$
+  \item Es gilt $\Supp(\rho) \subset \bar D$.
+  \item $\rho$ ist rotationssymmetrisch zum Ursprung.
+  \item Es gilt $\rho \geq 0$\footnote{Insbesondere ist $\rho$ also reellwertig.}.
+  \item Es gilt $\iint_\C \rho(z) \d[x]\d[y] = 1$, wobei $z = x + iy$
+    gesetzt wurde.
   \end{enumerate}
   Für $\epsilon > 0$ und $z \in \C$ definieren wir
   \[
@@ -224,20 +236,21 @@
     0 & \text{sonst}
   \end{cases}
   \]
+  dar.\todo{Referenz}
   Man kann zeigen, dass diese glatt ist. Weiterhin ist ihr Integral
   echt größer 0, weshalb sie auch so normiert werden kann, dass
   Bedingung 4 erfüllt ist.
 \end{bsp}
 
 \begin{defin}
-  Sei $U \subset \C$ offen und $\epsilon > 0$. Dann ist
+  Sei $U \subset \C$ offen und $\epsilon > 0$. Dann definieren wir
   $U^{(\epsilon)} := \{z \in U | \bar B_\epsilon(z) \subset U \}$ und
-  für $f \in C(U)$ definieren wir
+  für $f \in C(U)$ setzen wir
   \[
   \sm_\epsilon f : U^{(\epsilon)} \ra \C, \quad \sm_\epsilon f(w) :=
   \iint_U \rho_\epsilon(w- z) f(z) \d[x]\d[y] \qquad z = x + iy
   \]
-  $\sm_\epsilon f$ wird als \init{Glättung} von $f$ bezeichnet. \\
+  $\sm_\epsilon f$ wird als \init{Glättung} von $f$ bezeichnet. 
   Aus der Leibniz-Regel folgt, dass Integration und Differentiation
   vertauscht, also ist $\sm_\epsilon f \in \diff(U^{(\epsilon)})$, was
   auch den Namen "`Glättung"' erklärt.
@@ -264,7 +277,7 @@
 
 \begin{proof}
   \begin{enumerate}
-  \item
+  \item Wir berechnen
     \begin{align*}
       D^\alpha (\sm_\epsilon f)(w) & = D^\alpha \iint_U \rho_\epsilon(w
       - z) f(z) \d[x] \d[y] \\
@@ -275,12 +288,12 @@
       & \stackrel{\tag{3}}{=} \iint_U (-1)^{2|\alpha|}
       \rho_\epsilon(w-z) D^\alpha_z f(z)
       \d[x]\d[y] \label{eq:glättung-partiell}\\
-      & = (\sm_\epsilon D^\alpha f)(z)
+      & = (\sm_\epsilon D^\alpha f)(z).
     \end{align*}
     \eqref{eq:glättung-leibniz} folgt dabei aus der Leibnizregel,
     \eqref{eq:glättung-index} erhält man daraus, dass $D^\alpha$
     zunächst auf $w$ wirkt (deshalb auch der Index), wir wollen aber,
-    dass er auf $z$ wirkt um die Partielle Integration in
+    dass es auf $z$ wirkt um die Partielle Integration in
     \eqref{eq:glättung-partiell} anwenden zu können. Dies ist möglich
     in dem man das Vorzeichen, das durch die Kettenregel entsteht
     ausgleicht.
@@ -291,24 +304,25 @@
     \qquad \forall r \in ]0, \epsilon[
     \]
     Die folgende Rechnung liefert dann die Behauptung:
-    \begin{align*}
+    \begin{align}
       (\sm_\epsilon f)(w) & = \iint_u \rho_\epsilon(w- z) f(z)
-      \d[x]\d[y] \\
+      \d[x]\d[y] \nonumber\\
       & = \iint_{B_\epsilon(z)} \rho_\epsilon(z -w ) f(z) \d[x]\d[y]
-      \\
+      \nonumber \\
       & = \iint_{B_\epsilon(0)} \rho_\epsilon(z) f(z + w) \d[x]\d[y]
-      \\
+      \nonumber \\
       & = \int_0^{2\pi} \int_0^\epsilon \rho_\epsilon(re^{i\phi}) f(w +
-       re^{i\phi}) r \d[r] \d[\phi] \\
-      & = \int_0^\epsilon \tilde \rho_\epsilon(r) r\d[r] \cdot 2 \pi f(w) \\
-      & = f(z) \label{eq:glättung-norm} \tag{$\ast$}
-    \end{align*}
-    \eqref{eq:glättung-norm} gilt dabei, weil
+       re^{i\phi}) r \d[r] \d[\phi] \nonumber \\
+      & = \int_0^\epsilon \tilde \rho_\epsilon(r) r\d[r] \cdot 2 \pi
+      f(w) \nonumber \\
+      & = f(z) \label{eq:glättung-norm} 
+    \end{align}
+    \eqref{eq:glättung-norm} gilt dabei, aufgrund der Gleichung
     \begin{align*}
       1 & = \iint_{B_\epsilon(0)}\rho_\epsilon(z) \d[x]\d[y] \\
       & = \int_0^{2\pi}\int_0^{\epsilon} \tilde \rho_\epsilon(r) r
       \d[r] \d[\phi] \\
-      & = 2 \pi \int_0^\epsilon \tilde \rho_\epsilon(r) r \d[r]
+      & = 2 \pi \int_0^\epsilon \tilde \rho_\epsilon(r) r \d[r].
     \end{align*}
   \end{enumerate}
 \end{proof}
@@ -316,10 +330,11 @@
 \begin{thm}[Weyls Lemma]
   \label{thm:weyl}
   Sei $U \subset \C$ offen und $T \in \dist(U)'$ mit $\Delta T \equiv
-  0$. \\
-  Dann existiert ein $h \in \diff(U)$ mit $\delta h = 0$, so dass
+  0$. 
+  Dann existiert ein $h \in \diff(U)$ mit $\Delta h = 0$, so dass
   \[T[f] = \iint_{U^{(\epsilon)}} h(z) f(z) \d[x]\d[y] \qquad \forall f \in \dist(U)
   \]
+  gilt.
 \end{thm}
 
 \begin{proof}
@@ -330,14 +345,16 @@
   T_w[\rho_\epsilon(w - z)]
   \]
   wohldefiniert. Nach Lemma \ref{lemma:dist-glatt} ist $h_\epsilon \in
-  \diff(U^{(\epsilon)})$. \\
-  \\
+  \diff(U^{(\epsilon)})$. 
   Sei nun $f \in \dist(U)$ mit $\Supp(f) \subset U^{(\epsilon)}$. Dann
   hat $\sm_\epsilon f$ kompakten Träger in $U$, denn für $w \in U$ mit
-  $B_\epsilon(w) \cap U = \varnothing$ ist $f|_{B_\epsilon(w) \cap U}
-  \cong 0$ und es folgt $\sm_\epsilon f(w) = 0$. Also gilt $\Supp
-  \sm_\epsilon f \subset \{ z \in U | B_\epsilon(w) \cap U \neq
-  \varnothing\} =: M$. Nun ist $\Supp(f)$ kompakt und damit
+  $B_\epsilon(w) \cap U \neq \varnothing$ ist $f|_{B_\epsilon(w) \cap U}
+  \equiv 0$ und es folgt $\sm_\epsilon f(w) = 0$. Also gilt
+  \[
+  \Supp \sm_\epsilon f \subset \{ z \in U | B_\epsilon(w) \cap U \neq
+  \varnothing\} =: M.
+  \]
+  Nun ist $\Supp(f)$ kompakt und damit
   beschränkt. Sei $S$ das zugehörige Supremum. Für ein beliebiges $w
   \in M$, finden wir nun ein $z \in B_\epsilon(w) \cap U$ und wir
   erhalten
@@ -347,20 +364,20 @@
   Also ist $M$ und damit $\Supp \sm_\epsilon f$ beschränkt. Da $\Supp
   \sm_\epsilon f$ auch abgeschlossen ist, ist es sogar kompakt und wir können folgende
   Rechnung durchführen:
-  \begin{align*}
+  \begin{align}
     T[\sm_\epsilon f] & = T_w \left [ \iint_U \rho_\epsilon(w - z)
-      f(z) \d[x]\d[y] \right ] \\
+      f(z) \d[x]\d[y] \right ] \nonumber \\
     & = \iint_U T_w[\rho_\epsilon(w-z)] f(z)
-    \d[x]\d[y] \label{eq:weyl} \tag{$\ast$} \\
-    & = \iint_U h_\epsilon(z) f(z) \d[x]\d[y]
-  \end{align*}
+    \d[x]\d[y] \label{eq:weyl} \\
+    & = \iint_U h_\epsilon(z) f(z) \d[x]\d[y] \nonumber
+  \end{align}
   Als nächstes wollen wir zeigen, dass $T[f] = T[\sm_\epsilon f]$
   gilt. Nun können $f$ auch als Funktion auf $\C$ auffassen, in dem
   wir es durch 0 fortsetzen. Dann liefert uns \cite[Kor. 13.3]{For} die
-  Existenz von $\psi \in \diff(\C)$ mit $\Delta \psi = f$. \\
+  Existenz von $\psi \in \diff(\C)$ mit $\Delta \psi = f$. 
   Dann ist $\psi$ harmonisch auf $V:= \C \setminus \Supp(f)$. Also
   liefert uns Lemma \ref{lemma:glättung-eigenschaften} $\psi|_{V^{(\epsilon)}}
-  \equiv \sm_\epsilon \psi|_{V^{(\epsilon)}}$. Setze $\phi := \psi -
+  \equiv \sm_\epsilon \psi|_{V^{(\epsilon)}}$. Wir setzen $\phi := \psi -
   \sm_\epsilon\psi$. Dann folgt $\Supp(\phi) \subset V^c = \Supp(f)
   \subset U$, d.h. $\phi$ hat kompakten Träger in $U$ und es gilt
   \[
@@ -374,12 +391,12 @@
     & = T[\sm_\epsilon f] \\
     & = \iint_{U^{(\epsilon)}} h_\epsilon(z) f(z) \d[x]\d[y]
   \end{align*}
-  Nun gilt für beliebige $0 < \epsilon', \epsilon'' \leq \epsilon$:
+  Für beliebige $0 < \epsilon', \epsilon'' \leq \epsilon$ gilt
   $U^{(\epsilon)} \subset U^{(\epsilon')}, U^{(\epsilon'')}$ und es
   folgt
   \[
   T[f] = \iint_{U^{(\epsilon)}}h_{\epsilon'}(z) f(z) \d[x]\d[y] =
-  \iint_{U^{(\epsilon'')}}(z) f(z) \d[x] \d[y]
+  \iint_{U^{(\epsilon'')}}(z) f(z) \d[x] \d[y].
   \]
   Also folgt aus dem Fundamentallemma der Variationsrechnung
   $h_{\epsilon'} \equiv h_{\epsilon''}$ auf $U^{(\epsilon)}$,
@@ -390,8 +407,8 @@
 
 \begin{cor}
   \label{cor:hol-dist}
-  Sei $U \subset \C$ und $T \in \dist(U)'$ mit $\frac{\partial
-    T}{\partial \bar z} = 0$. \\
+  Sei $U \subset \C$ offen und $T \in \dist(U)'$ mit $\frac{\partial
+    T}{\partial \bar z} = 0$. 
   Dann existiert ein $h \in \hol(U)$, so dass
   \[
   T[f] = \iint_U h(z)f(z) \d[x]\d[y] \qquad \forall f \in \dist(U)'
@@ -412,6 +429,8 @@
   \]
   und damit $h \in \hol(U)$.
 \end{proof}
+
+
 
 %%% Local Variables: 
 %%% mode: latex

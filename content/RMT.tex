@@ -4,7 +4,7 @@
 In diesem Abschnitt wollen wir den zentralen Satz der Bachelor-Arbeit
 beweisen: den Riemannschen Abbildungssatz. Er charakterisiert alle
 einfach zusammenhängenden Riemannschen Flächen und besagt,
-dass es bis auf Biholomorphie nur drei verschiedene gibt: die
+dass es bis auf Biholomorphie nur drei verschiedene Arten gibt: die
 Riemannsche Zahlenkugel $\P^1$, die komplexe Ebene $\C$
 und die Einheitskreisscheibe $B$.
 Später werden wir dieses Resultat im Zusammenhang mit der
@@ -68,7 +68,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
     Also ist $fe^{-g} \equiv $ const und aus $f(a) e^{-g(a)} = 1$
     erhalten wir
     \[
-    f = e^g.
+    f \equiv e^g.
     \]
     Damit ist der erste Teil der Aussage gezeigt. Für den zweiten
     setzen wir nun einfach
@@ -96,17 +96,17 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 \begin{proof}
   Sei $a \in Y$. Nach Weierstrass \ref{thm:Lösung-Divisor} existiert ein $g \in
   \hol(X)$, das eine Nullstelle erster Ordnung bei $a$ besitzt und
-  ansonsten $g(x) \neq 0$ für alle $x \neq a$ gilt. \\
+  ansonsten $g(x) \neq 0$ für alle $x \neq a$ gilt. 
   Nach Satz \ref{thm:dirichlet} existiert ein stetiges $u: \bar Y \ra
   \R$, s.d. $u|_Y$ harmonisch ist und
   \[
   u(y) = \log(g(y)) \qquad \forall y \in \partial Y
   \]
-  erfüllt. \\
+  erfüllt. 
   Nach Lemma \ref{lemma:ex-log} existiert ein $h \in \hol(Y)$ mit $u =
-  \Re(h)$. \\
-  Wir setzen nun $f := e^{-h} g \in \hol(Y)$ und behaupten, $f: Y \ra
-  B$ sei biholomorph.
+  \Re(h)$. 
+  Wir setzen nun $f := e^{-h} g \in \hol(Y)$ und behaupten, dass $f: Y \ra
+  B$ biholomorph ist.
   \begin{itemize}
   \item $f(Y) \subset B$: Sei $y \in Y$ beliebig. Dann gilt:
     \begin{align*}
@@ -114,8 +114,8 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
       & = e^{-u(y)} e^{\log(|g(y)|)} \\
       & = \exp(\log|g(y)| - u(y))
     \end{align*}
-    Daran erkennen wir, dass $|f|$ auf $\bar Y$ fortgesetzt werden
-    kann und dort nach Konstruktion konstant den Wert 1 annimmt. Da
+    Daran erkennen wir, dass $|f|$ stetig auf ganz $\bar Y$ fortgesetzt werden
+    kann. Außerdem nimmt $|f|$ auf $\partial Y$ nach Konstruktion konstant den Wert 1 an. Da
     $f$ eine holomorphe Funktion ist werden Extrema auf dem Rand
     angenommen und da $f$ weiterhin nicht konstant ist ($f(a) = 0$)
     erhalten wir aus dem Maximum-Prinzip:
@@ -130,7 +130,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
     es sich um eine eigentlich Abbildung handelt. Weiterhin wird $0$
     genau einmal angenommen. Also ist $f: Y \ra B$ bijektiv und
     holomorph. Das genügt bereits, um zu zeigen, dass $f$ biholomorph
-    ist. 
+    ist.\todo{Referenz}
 
   \end{itemize}
 
@@ -178,7 +178,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \left | \frac{1}{z-a} \right |< \frac1d \qquad \forall z \in G
   \]
   Also sind die $f \in M$ gleichmäßig beschränkt und aus dem Satz von
-  Montel (vgl. \cite[Satz 4.9]{Frei}) erahlten wir die Kompakthreit von $M$.
+  Montel (vgl. \cite[Satz 4.9]{Frei}) erhalten wir die Kompaktheit von $M$.
 \end{proof}
 
 \begin{defin}
@@ -202,7 +202,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \]
   Also ist $r \leq 1$ und somit $M$ beschränkt. Setzen wir nun $\tilde
   r := \sup M$, so müssen wir noch zeigen, dass $B_{\tilde r}(0) \subseteq
-  f(B)$.\\
+  f(B)$.
   Sei $(r_n)_{n \in \N}\subseteq M$ mit $r_n \xrightarrow{n \ra
     \infty} \tilde r$ und $z \in B_{\tilde r}(0)$. Dann existiert ein $n \in \N$,
   so dass $z \in B_{r_n}(0)\subseteq f(B)$ und erhalten somit direkt
@@ -219,7 +219,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   Nach Lemma \ref{lemma:schlicht-max-rad}  finden wir zu jedem $n \in \N$
   ein maximales $r_n \geq 0$ mit $B_{r_n}(0) \subseteq f_n(B)$. Setzen wir
   wieder $\phi_n:=f_n^{-1} : B_{r_n}(0) \ra B$, so erhalten wir $1 =
-  |\phi_n'(0)| \leq \frac{1}{r_n}$ und damit $r_n \leq 1$. \\
+  |\phi_n'(0)| \leq \frac{1}{r_n}$ und damit $r_n \leq 1$. 
   Sei $a_n \in \partial B_{r_n}(0)$, so dass $a_n \notin f_n(B)$. Dies ist
   aufgrund der Maximalität von $r_n$ immer möglich. Damit definieren
   wir nun $g_n := \frac{f_n}{a_n}$. Wir erhalten $B \subseteq g_n(B)$
@@ -230,7 +230,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   Nun ist $g_n(B)$ über $g_n$ homöomorph zu $B$, also einfach
   zusammenhängend. Dies hat zur Folge, dass $Rh_\hol^1(g_n(B))$
   verschwindet. 
-  Nach Lemma \ref{lemma:ex-log} existiert ein $\psi: g_n(B) \ra \C^\ast$ mit
+  Nach Lemma \ref{lemma:ex-log} existiert ein $\psi: g_n(B) \ra \C^\times$ mit
   $\psi(0) = i$ und $\psi^2(z) = z - 1 \quad \forall z \in g_n(B)$.
   Definiere wir $h_n := \psi \circ g_n$, so erhalten wir zunächst
   $h_n^2 = g_n - 1$ und behaupten, dass $w \in h_n(B)$ impliziert,
@@ -302,21 +302,21 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   Aber das Integral ist stetig bzgl. gleichmäßiger Konvergenz,
   d.h. insbesondere, dass für jedes $f_{n_l}$ nahe genug an $f$ das
   Integral auch $k$ ergeben müsste. Dies ist ein Widerspruch zur
-  Injektivität der $f_{n_l}$, also ist $f$ auch injektiv. \\
+  Injektivität der $f_{n_l}$, also ist $f$ auch injektiv. 
   Dies vervollständigt den Beweis.
 \end{proof}
 
 \begin{lemma}
   \label{lemma:bihol-kreis}
   Sei $R \in ]0, \infty]$, $Y \subsetneq B_R(0)$ ein Gebiet, $0 \in Y$
-  und $Rh_\hol^1(Y) = 0$. \\
+  und $Rh_\hol^1(Y) = 0$. 
   Dann existiert ein $0< r <R$ und eine holomorphe Funktion $f: Y \ra B_r(0)$ mit $f(0) =
   0$ und $f'(0) = 1$.
 \end{lemma}
 
 \begin{proof}
   Sei zunächst $R < \infty$. Wir können ohne Einschränkung annehmen,
-  dass $Y \subsetneq B$, ansonsten betrachten wir $\tilde Y =
+  dass $Y \subsetneq B$ gilt, ansonsten betrachten wir $\tilde Y =
   \frac{Y}{R}$. Nach Voraussetzung existiert ein $a \in B \setminus
   Y$. Wir betrachten
   \[
@@ -339,7 +339,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \end{align*}
   Damit erhalten wir $|\gamma| > 1$.\footnote{Die Funktion $x \mapsto
     \frac12 \left ( \frac1x + x \right )$ nimmt bei $x = 1$ ihr
-    striktes Minimum an und ist für $x< 1$ echt größer als 1.} Setzen
+    striktes Minimum an und ist für $0 < x< 1$ echt größer als 1.} Setzen
   wir nun $r := \frac{1}{\gamma} < 1 = R$ und $f :=
   \frac{h}{\gamma}$ haben wir die gewünschte Funktion gefunden.
 
@@ -351,15 +351,15 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   Nun gilt aber $0 \notin \phi(Y)$. Nach Lemma \ref{lemma:ex-log}
   existiert ein $g \in \hol(Y)$ mit $g^2 = \phi|_Y$. Völlig analog
   zum Beweis von Satz \ref{thm:schlicht-kompakt} erhalten wir für $w
-  \in g(Y)$, dass $-w \notin g(Y)$. $g$ ist nicht konstant und damit
+  \in g(Y)$, dass $-w \notin g(Y)$ gilt. $g$ ist nicht konstant und damit
   eine offene Abbbildung. Sei $b \in g(Y)$. Dann existiert ein
-  $\epsilon > 0$, s.d. $B_{\epsilon}(b) \subseteq g(Y)$. Da nun für $w
-  \in g(Y)$ $-w \notin g(Y)$, gilt insbesondere $g \notin
-  B_\epsilon(b)$. Also gilt:
+  $\epsilon > 0$, s.d. $B_{\epsilon}(b) \subseteq g(Y)$. Da nun  $w
+  \in g(Y)$ impliziert, dass $-w \notin g(Y)$ gilt, folgt insbesondere $g \notin
+  B_\epsilon(b)$. Also erhalten wir
   \[
-  |-w - b| = |w + b| \geq r
+  |-w - b| = |w + b| \geq r.
   \]
-  D.h. wir können
+  Das bedeutet wir können
   \[
   \psi: g(Y) \ra \C, \quad \psi(w) = \frac{1}{w+b}
   \]
@@ -370,7 +370,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \[
   \eta: B \ra B, \quad \eta(z) = \frac{z-c}{1-\bar c z}
   \]
-  so können wir $\tilde f := \eta \circ \tilde \psi: Y \ra D$
+  so können wir $\tilde f := \eta \circ \tilde \psi: Y \ra B$
   definieren. $\tilde f$ erfüllt dabei die Eigenschaften $\tilde f(0)
   = 0$ und
   \begin{align*}
@@ -389,7 +389,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 
 \begin{lemma}
   \label{lemma:runge-keine-kohomo}
-  Sei $X$ eine nicht kompakte Riemannsche Fläche, $Rh_\hol^1(X) = 0$,
+  Sei $X$ eine nicht kompakte Riemannsche Fläche, $Rh_\hol^1(X) = 0$ und
   $Y \subseteq X$ ein Runge-Gebiet. Dann gilt $Rh_\hol^1(Y) = 0$.
 \end{lemma}
 
@@ -403,13 +403,13 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   auf $Y$ konvergiert.
   Sei nun $\alpha$ eine beliebige geschlossene Kurve in $Y$. 
   \todo{Kurven immer stetig.}
-  Dann gilt:
+  Dann gilt
   \[
   0 = \int_\alpha f_n \omega_0 \xrightarrow{n \ra \infty} \int_\alpha
-  \omega
+  \omega.
   \]
   Also verschwindet $\int_\alpha \omega$ für jede geschlossene
-  Kurve. Demnach besitzt $\omega$ nach (10.15) eine Stammfunktion und
+  Kurve. Demnach besitzt $\omega$ nach \cite[Satz 10.15]{For} eine Stammfunktion und
   damit verschwindet $Rh_\hol^1(Y)$.
 \end{proof}
 
@@ -417,7 +417,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 \begin{thm}[Der Riemannsche Abbildungssatz]
   \label{thm:rmt}
   Sei $X$ eine Riemannsche Fläche mit $Rh_\hol^1(X) = 0$. Dann ist $X$
-  entweder konform äquivalent
+  konform äquivalent
   \begin{enumerate}
   \item zur Riemannschen Zahlenkugel $\P^1$,
   \item zur Komplexen Ebene $\C$ oder
@@ -434,17 +434,20 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   und im kompakten Fall $H^1(X, \hol)$ ein endlich dimensionaler
   Vektorraum ist, erhalten wir
   \[
-  H^1(X, \hol) \cong H^1(X, \hol)^\ast = 0
+  H^1(X, \hol) \cong H^1(X, \hol)^\ast = 0.
   \]
   Also ist das Geschlecht unserer kompakten Riemanschen Fläche 0 und
   aus dem Satz von Riemann-Roch erhalten wir, dass $X$ konform
   äquivalent zu $\P^1$ ist.
 
   Ist nun $X$ nicht kompakt, so existiert nach Satz \ref{thm:Ausschöpfung-Runge}
-  eine Ausschöpfung $Y_0 \Subset Y_1 \Subset Y_2 \Subset \dots $ von
-  $X$, wobei die $Y_i$ Rungegebiete mit regulärem Rand. 
-  Nach Lemma \ref{lemma:runge-keine-kohomo} gilt für jedes $i \in \N$
-  $Rh_\hol^1(Y_i) = 0$.
+  eine Ausschöpfung
+  \[
+  Y_0 \Subset Y_1 \Subset Y_2 \Subset \dots
+  \]
+  von $X$, wobei die $Y_i$ Rungegebiete mit regulärem Rand. 
+  Nach Lemma \ref{lemma:runge-keine-kohomo} verschwindet
+  $Rh_{\hol}^1(Y_i)$ für jedes $i \in \N$.
   Aus Satz \ref{thm:Gebiet-Kreis} erhalten wir, dass die $Y_i$
   konform äquivalent zu $B$ sind. 
   Sei $a \in Y_0$ und $(U,z)$ eine Koordinatenumgebung von $a$. Dann
@@ -469,10 +472,10 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \[
   R := \lim_{n \ra \infty} r_n \in ]0, \infty]
   \]
-  Behauptung: $X$ wird biholomorph auf $B_R(0)$ abgebildet. Dazu
+  und behaupten, dass $X$ biholomorph auf $B_R(0)$ abgebildet wird. Dazu
   betrachten wir die Funktionenfolge $(f_n)_{n \in \N}$. Wir
   behaupten, dass eine Teilfolge $(f_{n_k})_{k \in \N}$ existiert,
-  so dass für beliebige $m \in \N$ $(f_{n_k}|_{Y_m})_{k \geq m}$
+  so dass $(f_{n_k}|_{Y_m})_{k \geq m}$ für beliebige $m \in \N$
   kompakt auf $Y_m$ konvergiert. 
   Dazu definieren wir $g_n(z) := \frac{1}{r_0} f_n(f_0^{-1}(r_0 z))$
   für alle $n \geq 0$. Damit sind die $g_n : B \ra \C$ injektive
@@ -482,8 +485,8 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   Diese Teilfolge gibt uns direkt eine konvergente Teilfolge
   $(f_{n_{0k}})_{k\in\N}$.
   Wenden wir die gleiche Konstruktion nun auf
-  $\frac{1}{r_1}f_{n_{0k}}(f_1^{-1}(r_1z))$ erahlten wir eine
-  Teilfolge $f_{n_{1k}}$. Induktiv erhalten wir so zu jedem $Y_m$
+  $\frac{1}{r_1}f_{n_{0k}}(f_1^{-1}(r_1z))$ erhalten wir eine
+  Teilfolge $(f_{n_{1k}})_k$. Induktiv erhalten wir so zu jedem $Y_m$
   eine konvergente Teilfolge $(f_{n_{mk}})$. 
   Setzen wir $f_{n_k} := f_{n_{kk}}$, so erhalten wir die gewünschte
   Teilfolge.
@@ -492,10 +495,10 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   zeigen, dass $f$ injektiv ist und $f(a) = 0$ und
   $\frac{\d[f(a)]}{\d[z]} = 1$ genügt. 
 
-  Wir zeigen nun, dass $f$ $X$ biholomorph auf $B_R(0)$ abbildet.
+  Wir zeigen nun, dass $X$ via $f$ konform äquivalent zu $B_R(0)$ ist.
   Zunächst folgt aus $|f_{n_k}(x)| < r_{n_k}$ für beliebige $x \in X$
   und $k \in \N$ groß genug, dass $|f(x)| \leq R$. Da $f$
-  holomorph und nicht-konstant, also eine offene Abbildung ist erhalten wir direkt,
+  holomorph und nicht-konstant, also eine offene Abbildung ist, erhalten wir direkt,
   dass $f(x) \subset B_R(0)$. Ansonsten gäbe es ein $z \in f(x)$ mit
   $z \in \partial B_R(0)$. Dieses $z$ kann aber kein innerer Punkt von
   $f(B)$ sein. Ein Widerspruch. 
@@ -510,12 +513,12 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \]
   $h(0)=0$, $h'(0) = 1$, aber $r < r_n$. Dies ist ein Widerspruch zu
   Proposition \ref{prop:kreis}. 
-  Also ist $X$ konform äquivalent zu $D_R(0)$. Für $R = \infty$ also
+  Also ist $X$ konform äquivalent zu $B_R(0)$. Für $R = \infty$ also
   zu $\C$ und für $R < \infty$ zu $B$.
 \end{proof}
 
 \begin{rem}
-  Wir wissen bereits, dass jede einfach zusammenhängende Riemannsche
+  Wir wissen bereits, dass jede einfach zusammenhängende\todo{Referenz} Riemannsche
   Fläche eine verschwindende deRham-Gruppe hat und dementsprechend
   konform äquivalent zu $\P^1$, $\C$ oder $B$ ist, andererseits zeigt
   der Riemannsche Abbildungssatz, dass jede Riemannsche Fläche mit

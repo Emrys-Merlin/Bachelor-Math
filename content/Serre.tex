@@ -2,6 +2,29 @@
 \section{Der Serresche Dualitätssatz}
 \label{sec:serre}
 
+In diesem Kapitel wollen wir $H^1(\hol, X)^\ast$ für eine kompakte
+Riemannsche Fläche $X$ in direkten Zusammenhang mit dem Raum der
+holomorphen 1-Formen $\Omega(X)$ stellen. Da es sich bei $H^1(\hol,
+X)$ um einen endlich-dimensionalen Vektorraum handelt, zieht dies das
+verblüffende Resultat nach sich, dass auch $\Omega(X)$
+endlich-dimensional ist, genauer ergibt sich
+\[
+\dim \Omega(X) = g,
+\]
+wobei $g$ das Geschlecht der Fläche $X$ bezeichnet.
+
+Dieses Resultat für sich ist bereits erstaunlich und wird eine
+zentrale Rolle in unserem Uniformisierungssatz spielen, wir können es
+jedoch zusätzlich direkt verwenden, um auf sehr elegante Art und Weise das
+Geschlecht des Torus zu bestimmen.
+
+Das gesamte Kapitel ist im Wesentlichen sehr technisch, da zunächst
+das Vokabular entwickelt werden muss, um unseren gewünschten
+Isomorphismus definieren zu können. Anschließend sind noch weitere
+technische Lemmata nötig, um die Injektivität und Surjektivität zu
+zeigen. Ein wichtiges Hilfsmittel wird das Residuum einer
+Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
+
 \begin{defin}
   \label{def:res}
   Sei $X$ eine kompakte Riemannsche Fläche. Nach \cite[Satz 15.14]{For} ist
@@ -40,7 +63,8 @@
   \]
   wobei $a \in U_i$. Falls $a \in U_i \cap U_j$, so gilt
   $\res_a(\omega_i) = \res_a(\omega_j)$, denn $\omega_j - \omega_i$
-  ist holomorph. Ist $X$ kompakt, so ist $\res_a(\mu) = 0$ für fast
+  ist holomorph. Damit ist $\res_a(\mu)$ wohldefiniert, denn ist ist
+  von der Wahl von $U_i$ unabhängig. Ist $X$ kompakt, so ist $\res_a(\mu) = 0$ für fast
   alle $a \in X$ und wir können
   \[
   \res(\mu) := \sum_{a \in X} \res_a(\mu)
@@ -70,16 +94,16 @@
   Nun ist jede holomorphe 1-Form geschlossen, d.h. $\d[(\omega_j -
   \omega_i)] = 0$ und wir erhalten $\d[\sigma_i] = \d[\sigma_j]$ auf
   $U_i \cap U_j$. Also finden wir ein $ \tau \in \diff^{(2)}(X)$ mit
-  $\tau|_{U_i} \cong \d[\sigma_i]$. Dieses $\tau$ ist der Repräsentant
+  $\tau|_{U_i} \equiv \d[\sigma_i]$. Dieses $\tau$ ist der Repräsentant
   von $[\delta \mu]$, also gilt
   \[
   \res([\delta \mu]) = \frac{1}{2\pi i} \iint_X \tau
   \]
   Seien nun $a_1, \dots, a_n \in X$ die endlich vielen Pole von $\mu$
-  und $X' = X \setminus \{a_1, \dots, a_n\}$. Auf $X' \cap U_i \cap
+  und $X' := X \setminus \{a_1, \dots, a_n\}$. Auf $X' \cap U_i \cap
   U_j$ gilt $\sigma_i - \omega_i \cong \sigma_j - \omega_j$. Erneut
   verwenden wir die Garbeneigenschaften und finden ein $\sigma \in
-  \diff^{1,0}(X')$ mit $\sigma|_{X' \cap U_i} \cong \sigma_i -
+  \diff^{1,0}(X')$ mit $\sigma|_{X' \cap U_i} \equiv \sigma_i -
   \omega_i$. Wir erhalten
   \[
   \d[\sigma] \equiv \d[\sigma_i] - \underbrace{\d[\omega_i]}_{= 0} \equiv \tau
@@ -94,12 +118,12 @@
   \item es ist $V_k \cap V_j = \varnothing$ für alle $k \neq j$ und
   \item $z_k(V_k) \subset \C$ ist eine Kreisscheibe.
   \end{enumerate}
-  Wählen wir $f_k \in \diff(X)$ mit $\Supp(f_k) \subset V_k$ und so
+  Wählen wir $f_k \in \diff(X)$ mit $\Supp(f_k) \subset V_k$, so
   dass eine offene Umgebung $V_k' \subset V_k$ von $a_k$ mit
-  $f_k|_{V_k'} \equiv 1$, so können wir $g:= 1 - (f_1 + \dots + f_k)$
+  $f_k|_{V_k'} \equiv 1$ existiert, so können wir $g:= 1 - (f_1 + \dots + f_k)$
   definieren. Dies erlaubt uns $g \cdot \sigma$ auf ganz $X$
   fortzusetzen, denn $g|_{V_k'} \equiv 0$. Also liegt $g \sigma \in
-  \diff^{1,0}(X)$. Nach (10.20) gilt
+  \diff^{1,0}(X)$. Nach \cite[Satz 10.20]{For} gilt
   \begin{align}
   \iint_X \d[(g \sigma)] = 0. \label{eq:g-sigma}
   \end{align}
@@ -121,7 +145,7 @@
   \iint_X \tau = \sum_{k=1}^n \iint_X \d[f_k \sigma] = \sum_{k=1}^n
   \iint_{V_k} \d[(f_k\sigma_{i(k)} - f_k \omega_{i(k)} )]
   \]
-  Erneut wegen (10.20) gilt $\iint_{V_k} \d[f_k \sigma_{i(k)}] = $ und
+  Erneut wegen \cite[Satz 10.20]{For} gilt $\iint_{V_k} \d[f_k \sigma_{i(k)}] = 0$ und
   analog zum Beweis von \cite[Satz 10.21]{For} folgt
   \[
   \iint_{V_k} \d[(f_k \omega_{i(k)})] = - 2\pi i
@@ -142,7 +166,7 @@
   \Omega_D(U) := \{ \omega \in \mer^{(1)}(U) | (\omega) \geq -D \}.
   \]
   $\Omega_D$ bildet die Garbe der meromorphen 1-Formen, deren
-  Divisoren Vielfache von $-D$ sind. Insbesondere $\Omega_0 = \Omega$.
+  Divisoren Vielfache von $-D$ sind. Insbesondere gilt $\Omega_0 = \Omega$.
 
   Wählen wir ein $\omega \in \mer^{(1)}(X)^\times$ und setzen $K =
   (\omega)$. Dann wird durch Multiplikation mit $\omega$ für jeden
@@ -185,7 +209,7 @@
   Diese ergibt sich aus er Tatsache, dass $H^0(X, \Omega_{-D}) \equiv
   \Omega_{-D}(X)$ gilt und dem Isomorphismus aus Definition
   \ref{def:garbe-div}. Durch die Verkettung mit $\res: H^1(X,
-  \Omega_D) \ra \C$ erhalten wir eine blinieare Abbildung
+  \Omega_D) \ra \C$ erhalten wir eine bilineare Abbildung
   \[
   \g{\cdot}{\cdot}: H^0(X, \Omega_{-D}) \times H^1(X, \hol_D) \ra \C,
   \quad \g{\omega}{\xi} := \res(\xi \omega)
@@ -196,7 +220,7 @@
   \]
 \end{defin}
 
-Den verbleibenden Teil des Kapitels wollen wir nun zeigen, dass die
+Den verbleibenden Teil des Kapitels wollen wir nun verwenden, um zu zeigen, dass die
 eben definierte lineare Abbildung $\iota_D$ ein Isomorphismus ist. Ein
 erster Schritt ist der nächste Satz.
 
@@ -215,14 +239,14 @@ erster Schritt ist der nächste Satz.
   dass $U_0$ klein genug gewählt wurde, so dass $f \neq 0$ auf $U_0
   \setminus \{a\}$. Wir setzen $U_1 := X \setminus \{a\}$ und $\fu :=
   (U_0, U_1)$. Sei weiterhin $\eta = (f_0, f_1) \in C^0(\fu, \mer)$,
-  wobei $f_0 = (z f)^{-1}$ und $f_1 0 0$. Dann gilt
+  wobei $f_0 = (z f)^{-1}$ und $f_1 = 0$. Dann gilt
   \[
   \omega \eta = \left ( \frac{\d[z]}{z}, 0 \right ) \in C^0(\fu,
-  \mer^(1))
+  \mer^{(1)})
   \]
   $\omega \eta$ ist eine Mittag-Leffler-Verteilung mit
   $\res(\omega\eta) = 1$. Nun liegt aber $\delta \eta$ in $Z^1(\fu,
-  \hol_D)$ und definieren wir $xi = [\delta \eta] \in H^1(X,
+  \hol_D)$ und definieren wir $\xi = [\delta \eta] \in H^1(X,
   \hol_D)$, so folgt
   \[
   \omega \xi = \omega [\delta \eta] = [ \delta( \omega \eta)].
@@ -237,7 +261,7 @@ erster Schritt ist der nächste Satz.
 
 \begin{lemma}
   \label{lemma:cd}
-  Seien $D, D' \in Div(X)$ mit $D' \leq D$. Dann kommutiert das
+  Seien $D, D' \in \Div(X)$ mit $D' \leq D$. Dann kommutiert das
   folgende Diagramm
   \begin{center}
     \begin{tikzpicture}[node distance=3cm, auto]
@@ -265,7 +289,7 @@ erster Schritt ist der nächste Satz.
   \label{lemma:urbilder}
   Sei die Notation wie in Lemma \ref{lemma:cd}. Seien weiterhin
   $\lambda \in H^1(X, \hol_D)^\ast$ und $\omega \in H^0(X,
-  \Omega_{-D})$ mit $i_{D'}^D(\lambda = \iota_{D'}(\omega)$. Dann
+  \Omega_{-D})$ mit $i_{D'}^D(\lambda) = \iota_{D'}(\omega)$. Dann
   liegt $\omega$ bereits in $H^0(X, \Omega_{-D})$ und $\lambda =
   \iota_D (\omega)$.
 \end{lemma}
@@ -294,11 +318,11 @@ erster Schritt ist der nächste Satz.
   Bezeichnen wir mit $\xi'$ die
   Kohomologieklasse von $\delta \eta$ in $H^1(X, \hol_{D'})$ und mit
   $\xi$ die Kohomologieklasse von $\delta \eta$ in $H^1(X, \hol_D)$,
-  so erhalten wir zunächst, weil $\eta \in C^0(\fu, \hol_D)$, dass
-  $\xi = 0$. Nach Voraussetzung gälte nun aber
+  so erhalten wir zunächst, weil $\eta \in C^0(\fu, \hol_D)$ ist, dass
+  $\xi = 0$ gilt. Nach Voraussetzung gälte nun aber
   \[
   \g{\omega}{\xi'} = \iota_{D'}(\omega)(\xi') =
-  \i_{D'}^D(\lambda)(\xi') = \lambda(\xi) = 0
+  i_{D'}^D(\lambda)(\xi') = \lambda(\xi) = 0
   \]
   Andererseits ist $\omega \eta = \left ( \frac{\d[z]}{z}, 0 \right )$
   und es folgt
@@ -306,7 +330,7 @@ erster Schritt ist der nächste Satz.
   \g{\omega}{\xi'} = \res(\omega \eta) = 1
   \]
   Ein Widerspruch. Also muss $\omega \in H^0(X, \Omega_{-D})$
-  gelten. Da dann $\i_{D'}^D(\lambda) = \iota_{D'}(\omega) =
+  gelten. Da dann $i_{D'}^D(\lambda) = \iota_{D'}(\omega) =
   i_{D'}^D(\iota_D(\omega))$ gelten muss, folgt $\lambda =
   \iota_D(\omega)$ aus der Injektivität von $i_{D'}^D$.
 \end{proof}
@@ -345,9 +369,9 @@ erster Schritt ist der nächste Satz.
 \end{lemma}
 
 \begin{proof}
-  Das Multiplikation mit $\psi$ ein Garbenhomomorphismus ist, ist klar
+  Dass Multiplikation mit $\psi$ ein Garbenhomomorphismus ist, ist klar
   und damit folgt die Existenz der linearen Abbildungen. Die
-  Kommutativität des Diagramss erhalten wir aus der Tatsache, dass für
+  Kommutativität des Diagramms erhalten wir aus der Tatsache, dass für
   beliebige $\omega \in H^0(X, \Omega_{-D})$ und $\xi \in H^1(X,
   \hol_{D-B})$ die folgende Rechnung durchführen können
   \begin{align*}
@@ -359,7 +383,7 @@ erster Schritt ist der nächste Satz.
 
 \begin{lemma}
   \label{lemma:psi-inj}
-  Falls $\psi \in H^0(X, \hol_B)$ mit $\psi \neq 0$. Dann ist $\psi:
+  Falls $\psi \in H^0(X, \hol_B)$ mit $\psi \neq 0$. gilt, so ist $\psi:
   H^1(X, \hol_D)^\ast \ra H^1(X, \hol_{D-B})^\ast$ injektiv.
 \end{lemma}
 
@@ -379,7 +403,7 @@ erster Schritt ist der nächste Satz.
   kommutiert. Weiterhin ist die Abbildung $\hol_{D+A} \ra \hol_D$ ein
   Isomorphismus, wobei die Umkehrung einfach durch Multiplikation mit
   $\psi^{-1}$ gegeben ist. Nun ist die Inklusion von $\hol_{D-B} \ra
-  \hol_{D+A}$ injektiv und deshalb nach (16.8) $H^1(X, \hol_{D-B}) \ra
+  \hol_{D+A}$ injektiv und deshalb nach \cite[Satz 16.8]{For} $H^1(X, \hol_{D-B}) \ra
   H^1(X, \hol_{D+A})$ ein Epimorphismus. Also ist auch $H^1(X,
   \hol_{D-B}) \xrightarrow{\psi} H^1(X, \hol_D)$ ein Epimorphismus und
   schlussendlich die duale Abbildung injektiv. Dies zeigt die Behauptung.
@@ -432,7 +456,7 @@ erster Schritt ist der nächste Satz.
   $\frac{1}{\psi} \in H^0(X, \hol_A)$. Zu guter Letzt erhalten wir aus
   $D' := D_n - A$, dass
   \begin{align*}
-    \i_{D'}^d(\lambda) = \frac{1}{\psi} (\psi \lambda) =
+    i_{D'}^d(\lambda) = \frac{1}{\psi} (\psi \lambda) =
     \frac{1}{\psi} \iota_{D_n}(\omega) = \iota_{D'} \left (
       \frac{1}{\psi} \omega \right )
   \end{align*}
@@ -442,6 +466,7 @@ erster Schritt ist der nächste Satz.
 \end{proof}
 
 \begin{cor}
+  \label{cor:dim-1-form}
   Sei $X$ eine kompakte Riemannsche Fläche und $D \in \Div(X)$. Dann
   gilt
   \[
@@ -457,11 +482,11 @@ erster Schritt ist der nächste Satz.
 \begin{thm}
   \label{thm:serre-umgekehrt}
   Sei $D \in \Div(X)$ und $X$ eine kompakte Riemannsche Fläche. Dann
-  gilt $H^0(X, \hol_{-D}) \cong H^1(X, \Omega_D)^\times$.
+  gilt $H^0(X, \hol_{-D}) \cong H^1(X, \Omega_D)^\ast$.
 \end{thm}
 
 \begin{proof}
-  Sei $0 \neq omega_0 \in \mer^{(1)}(X)$ und $K := (\omega_0)$. Wie
+  Sei $0 \neq \omega_0 \in \mer^{(1)}(X)$ und $K := (\omega_0)$. Wie
   aus Definition \ref{def:garbe-div} bekannt gelten $\Omega_D \cong
   \hol_{D+K}$ und $\hol_D \cong \Omega_{-D-K}$. Mit Satz
   \ref{thm:serre} folgt
@@ -473,7 +498,8 @@ erster Schritt ist der nächste Satz.
 
 \begin{cor}
   \label{cor:hol-form}
-  Es gilt $\dim H^1(X, \Omega) = 1$.
+  Sei $X$ eine kompakte Riemannsche Fläche. Es gilt $\dim H^1(X,
+  \Omega) = 1$.
 \end{cor}
 
 \begin{proof}
@@ -486,7 +512,7 @@ erster Schritt ist der nächste Satz.
 
 \begin{thm}
   \label{thm:deg-geschlecht}
-  $X$ eine kompakte Riemannsche Fläche mit Geschlecht $g$ und $\omega
+  Sei $X$ eine kompakte Riemannsche Fläche mit Geschlecht $g$ und $\omega
   \in \mer^{(1)}(X)$, wobei $\omega(x) \neq 0$ für jedes $x \in
   X$. Dann gilt
   \[
@@ -503,7 +529,7 @@ erster Schritt ist der nächste Satz.
   \hol_K$. Also erhalten wir weiter unter Ausnutzung von Satz
   \ref{thm:serre} und Korollar \ref{cor:hol-form} die folgende Gleichung
   \begin{align*}
-    1 - g+ \deg K = \dim H^0(X, \Omega) - \dim H^1(X, \Omega) \\
+    1 - g+ \deg K & = \dim H^0(X, \Omega) - \dim H^1(X, \Omega) \\
     & = \dim H^1(X, \hol) - 1 \\
     & = g - 1
   \end{align*}
@@ -512,7 +538,7 @@ erster Schritt ist der nächste Satz.
 
 \begin{cor}
   \label{cor:torus-geschlecht}
-  Sei $\Gamma \subset \C$ ein Gitter. Dann hat der Torus
+  Sei $\Gamma \subset \C$ ein Gitter\todo{Gitter definition richtig einfügen}. Dann hat der Torus
   $\quot{\C}{\Gamma}$ Geschlecht 1.
 \end{cor}
 
@@ -528,6 +554,13 @@ erster Schritt ist der nächste Satz.
   \ref{thm:deg-geschlecht} folgt dann $g = 1$.
 \end{proof}
 
+
+Korollar \ref{cor:dim-1-form} und \ref{cor:torus-geschlecht} finden
+direkt Anwendung im Beweis unseres Uniformisierungssatzes
+\ref{thm:uniformisierung}. Die folgenden Kapitel wenden sich nun aber
+hauptsächlich \emph{nicht} kompakten Riemannschen Flächen zu, so dass
+die Resultate dieses Kapitels zwar immer im Hinterkopf behalten werden
+sollten, aber in den nächsten Kapiteln keine Rolle spielen.
 
 %%% Local Variables: 
 %%% mode: latex

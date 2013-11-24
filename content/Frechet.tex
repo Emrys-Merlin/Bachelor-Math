@@ -2,14 +2,21 @@
 \section{Fr\'echet Räume}
 \label{sec:frechet}
 
+Dieses recht kurze Kapitel trägt rudimentäre Eigenschaften von
+Fr\'echet-Räumen zusammen, wie sie in Kapitel \ref{sec:Runge} benötigt
+werden. Der Satz von Hahn-Banach \ref{thm:hahn-banach} wird genannt
+und es wird auf eine Quelle für den Beweis verwiesen, der aufgrund
+seiner Umfänglichkeit leider nicht im Rahmen dieser Arbeit geführt
+werden konnte.
+
 \begin{defin}
   \label{def:frechet}
   Sei $E$ ein topologischer Vektorraum. $E$ heißt
   \init{Fr\'echet-Raum}, falls die folgenden Bedingungen erfüllt sind:
   \begin{enumerate}
   \item Es existiert eine abzählbare Familie von Seminormen $(p_n)_{n
-      \in \N}$, die die Topologie von $E$ erzeugen.
-  \item $E$ ist Hausdorffsch.
+      \in \N}$, die die Topologie von $E$ erzeugen,
+  \item $E$ ist Hausdorffsch und
   \item $E$ ist vollständig.
   \end{enumerate}
   Weiterhin definieren wir für $\epsilon > 0$ und $x \in E$ die Menge
@@ -33,9 +40,11 @@
     gilt.
   \item Aus der Bedingung, dass $E$ Hausdorffsch ist, folgt, dass $x =
     y$ dann und nur dann gilt, wenn $p_k(x-y) = 0$ für jedes $k \in
-    \N$ gilt. Dies folgt leicht aus der Tatsache, dass ansonsten $x
-    \in U(p_k, \epsilon, y)$ liegen müsste und damit $x$ in jeder
-    offenen Umgebung von $y$ enthalten wäre. Umgekehrt natürlich genau so.
+    \N$ gilt. Dies folgt leicht aus der Tatsache, dass falls $p_k(x-y)
+    = $ für beliebige $k \in \N$ gilt, $x \in U(p_k, \epsilon, y)$ für
+    alle $k \in \N$ und $\epsilon > 0$ gilt. Also ist $x$ in jeder
+    offenen Umgebung von $y$ enthalten. Da $E$ Hausdorffsch ist, ist
+    dies nur möglich für $x = y$. Die Umkehrung ist natürlich immer wahr.
   \end{enumerate}
 \end{rem}
 
@@ -57,7 +66,7 @@
   die durch $x \mapsto \frac{x}{1+x}$ gegeben ist, bildet das
   Intervall $[0, \infty[$ auf das Intervall $[0,1[$ ab. Der Rest folgt
   aus der Konvergenz der geometrischen Reihe. Wir bezeichnen
-  diese zweite Abbildung mit $f$.
+  diese  Abbildung mit $f$.
 
   Die Symmetrie der Metrik ist klar und für die Definitheit wählen wir
   $x\neq y \in E$. Dann existiert nach der dritten Bemerkung ein $k \in
@@ -69,14 +78,14 @@
   \frac{1}{(1+x)^2}$ ist positiv auf dem gesamten Intervall $[0,
   \infty[$. Nun folgt aus der Dreicksungleichung für die Halbnormen,
   dass $p_k(x+y) \leq p_k(x) + p_k(y)$ für alle $k \in \N$ gilt. Aus
-  der Monotonie von $f$ erhalten wir dann:
+  der Monotonie von $f$ erhalten wir dann
   \begin{align*}
     f(p_k(x+y)) & \leq f(p_k(x) + p_k(y)) \\
     & = \frac{ p_k(x) + p_k(y)}{1 + p_k(x) + p_k(y)}\\
     & = \frac{p_k(x)}{1+ p_k(x)+p_k(y)} + \frac{p_k(y)}{1+p_k(x) +
       p_k(y)} \\
     & \leq \frac{p_k(x)}{1+p_k(x)} + \frac{p_k(y)}{1+ p_k(y)} \\
-    & = f(p_k(x)) + f(p_k(y))
+    & = f(p_k(x)) + f(p_k(y)).
   \end{align*}
   Aus dieser Dreiecksungleichung für $f \circ p_k$ folgt direkt die
   Dreieckungleichung für $d$, da die Gleichung $d(x,y) = \sum_{k=1}^\infty
@@ -93,7 +102,7 @@
   Topologie von $E$ offen sind. Genauer reicht es uns sogar
   zu zeigen, dass $x$ ein innerer Punkt von $B_\epsilon(x)$ bezüglich
   der eigentlichen Topologie von $E$ ist, denn
-  für jeden andern Punkt $y \in B_\epsilon(x)$ finden wir ein
+  für jeden anderen Punkt $y \in B_\epsilon(x)$ finden wir ein
   $\delta >0$, so dass $B_\delta(y) \subset B_\epsilon(x)$ und dann
   brauchen wir nur eine (bzgl. $E$) offene Umgebung $U$ von $y$ mit $U
   \subset B_\delta(y)$ zu finden. Also zeigen wir auch hier, dass $y$
@@ -146,12 +155,12 @@
 \end{thm}
 
 \begin{proof}
-  Wir können $F$ mit der Teilraumtopologie ausstatten. Dann ist $F$
+  Wir statten $F$ mit der Teilraumtopologie aus. Dann ist $F$
   als abgeschlossener Teilraum automatisch vollständig. Weiterhin wird
   die Topologie wieder durch eine abzählbare Familie von Halbnormen
   erzeugt, denn wir können die Familie von $E$ auf $F$
   einschränken. Dass $F$ Hausdorffsch ist, ergibt sich daraus, dass
-  wir die Topolgie von $F$ auch dadurch erhalten, dass wir dei Metrik
+  wir die Topolgie von $F$ auch dadurch erhalten, dass wir die Metrik
   von $E$ auf $F$ einschränken. Dann ist $F$ aber auch ein metrischer
   Raum und damit insbesondere Hausdorffsch. Insgesamt ist $F$ also ein
   Fr\'echet-Raum.
@@ -189,13 +198,13 @@
 \begin{cor}
   \label{cor:frechet-dicht}
   Sei $E$ ein Fr\'echet-Raum. Seien weiterhin $A \subset B \subset E$
-  Untervektorräume. Falls für jedes $\phi \in E'$ mit $\phi|_A \cong
-  0$ auch $\phi|_B \cong 0$ ist, so liegt $A$ dicht in $B$.
+  Untervektorräume. Falls für jedes $\phi \in E'$ mit $\phi|_A \equiv
+  0$ auch $\phi|_B \equiv 0$ ist, so liegt $A$ dicht in $B$.
 \end{cor}
 
 \begin{proof}
-  Sei $A$ nicht dicht in $B$. Wir versuchen nun eine stetige lineares
-  Funktionalf auf $E$ zu konstruieren, dass zwar auf $A$ verschwindet,
+  Sei $A$ nicht dicht in $B$. Wir versuchen nun ein stetiges, lineares
+  Funktional auf $E$ zu konstruieren, dass zwar auf $A$ verschwindet,
   jedoch nicht auf $B$. Wir finden nun ein $b_0 \in B \setminus
   \bar A$. Setzen wir $E_0 := \bar A \oplus \C b_0$ und
   \[
@@ -205,7 +214,7 @@
   wäre es aufgrund der Linearität insbesondere nicht in $0$
   stetig. Also fänden wir eine Folge $(a_n + \lambda_n b_0)_{n \in
     \N} \subset E_0$ mit Grenzwert $0$, wobei aber $(\lambda_n)_{n \in
-    \N}$ nicht gegeon 0 konvergiert. Wir können nun ohne Einschränkung
+    \N}$ nicht gegen 0 konvergiert. Wir können nun ohne Einschränkung
   annehmen, dass $\lambda_n \geq 0$, denn wir finden auf jeden Fall
   eine Teilfolge mit $\lambda_n \geq 0$ oder eine Teilfolge mit
   $\lambda_n \leq 0$. Im zweiten Fall betrachten wir $(-\lambda_n)_{n
@@ -218,7 +227,7 @@
   \lambda_{n_l} \in [C, \infty]$.
 
   Wäre nun $\lambda = \infty$. Dann müsste bereits
-  $\lambda_{n_l} \ra \infty$ für $\l \ra \infty$ gelten. Nun
+  $\lambda_{n_l} \ra \infty$ für $l \ra \infty$ gelten. Nun
   konvergierte die Folge $(a_n + \lambda_n b_0)_{n \in \N}$ bezüglich
   jeder Halbnorm $p_k$ gegen 0, also fänden wir $K_k > 0$, so dass
   \[
@@ -232,7 +241,7 @@
   für jedes $k \in \N$ wäre. Damit wäre aber $b_0$ in $\bar A$ enthalten. Ein
   Widerspruch.
 
-  Für denn Fall, dass $\lambda < \infty$ wäre, fänden wir eine weitere
+  Für den Fall, dass $\lambda < \infty$ wäre, fänden wir eine weitere
   Teilfolge, die gegen $\lambda$ konvergierte. Wir gehen ohne
   Einschränkung davon aus, dass bereits $(\lambda_{n_l})_{l \in \N}$
   gegen $\lambda$ konvergierte. Dann erhielten wir aber aus der

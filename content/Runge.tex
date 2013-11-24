@@ -2,9 +2,25 @@
 \section{Der Rungesche Approximationssatz}
 \label{sec:Runge}
 
+Das große Ziel dieses Kapitels ist der oben genannte
+Approximationssatz. Dieser ist eine Verallgemeinerung des Satzes, dass
+auf jedem einfach zusammenhängenden Gebiet in $\C$ jede holomorphe
+Funktion durch Polynome, also durch ganze Funktionen, approximiert
+werden kann.
+
+Auf allgemeinen Riemannschen Flächen muss dazu jedoch "`einfach
+zusammenhängende Gebiete"' durch "`Runge-Gebiete"' ersetzt
+werden. Später werden wir dieses Resultat verwenden um spezielle
+Funktionenfolgen auf Riemannschen Flächen zu konstruieren, die wir
+beim Beweis des Riemannschen Abbildungssatzes \ref{thm:rmt} verwenden
+werden.
+
+In diesem Kapitel werden direkt die Methoden aus Kapitel
+\ref{sec:Weyl} und \ref{sec:frechet} zum Einsatz kommen.
+
 \begin{prop}
   \label{prop:diff-frechet}
-  Sei $X$ eine Riemannsche Fläche, $Y \subset X$ offen. \\
+  Sei $X$ eine Riemannsche Fläche, $Y \subset X$ offen. 
   Dann besitzen $\diff(Y)$ und $\diff^{0,1}(Y)$ Struktur eines Fr\'echet-Raums.
 \end{prop}
 
@@ -12,9 +28,9 @@
   Sei für jedes $j \in \N$ die Menge $K_j \subset Y$ kompakt mit $\bigcup_{j \in \N}
   \mathring{K_j} = Y$ und $K_j \subset U_j$, wobei $(U_j, z_j)$ Karten
   sind. Solche $K_j$ können konstruiert werden, da wir im Beweis zu
-  Korollar\ref{cor:ausschöpfung-kompakt} eine abzählbare Basis der
+  Korollar \ref{cor:ausschöpfung-kompakt} eine abzählbare Basis der
   Topologie mit relativ kompakten Teilmengen gefunden haben.
-  Für jedes $\nu = (\nu_1, \nu_2)^T \in \N^2$ eine Halbnorm
+  Für jedes $\nu = (\nu_1, \nu_2)^T \in \N^2$ existiert eine Halbnorm
   \[
   p_{j\nu}: \diff(Y) \ra \R, \quad p_{j\nu}(f) := \|D_j^\nu f\|_{K_j},
   \]
@@ -43,8 +59,11 @@
   \epsilon > 0$ und $f \in \diff(Y)$ offen bzgl. der Topologie von
   $(\tilde p_{m\nu})$ ist. Dies genügt bereits, da die Basis der
   Topologie von $(p_{j\nu})$ aus endlichen Schnitten dieser Mengen
-  besteht. Wir wissen nun, dass $K_j \subset \bigcup_{m=1}^M
-  \mathring{\tilde K_m} \subset \bigcup_{m=1}^M \tilde K_m$ gilt, da
+  besteht. Wir wissen nun, dass
+  \[
+  K_j \subset \bigcup_{m=1}^M \mathring{\tilde K}_m \subset \bigcup_{m=1}^M \tilde K_m
+  \]
+  gilt, da
   $K_j$ kompakt ist. Wir behaupten nun, dass
   \[
   \tilde U := \bigcap_{m=1}^M U(\tilde p_{m\nu}, \epsilon, f) \subset
@@ -72,7 +91,7 @@
 \begin{lemma}
   \label{lemma:kompakter-träger-funktional}
   Sei $Y \subset X$ offen, $X$ eine Riemannsche Fläche. Sei $T \in
-  \diff(Y)'$. \\
+  \diff(Y)'$. 
   Dann hat $T$ kompakten Träger, d.h. es existiert ein $K \subset Y$
   kompakt, so dass
   \[
@@ -91,9 +110,9 @@
   Nach Konstruktion der obigen Topologie finden wir ein $\epsilon > 0$
   und endlich viele $j_1, \dots, j_n \in \N$ und $\nu_1, \dots \nu_n
   \in \N^2$, so dass $U(p_{j_1\nu_1}, \epsilon, 0) \cap \dots \cap
-  U(p_{j_n\nu_n}, \epsilon, 0) \subset U$. \\
+  U(p_{j_n\nu_n}, \epsilon, 0) \subset U$. 
   Sei nun  $K := K_{j_1} \cup \dots \cup K_{j_n}$. Wir behaupten, dass
-  dies das gesuchte $K$ ist. \\
+  dies das gesuchte $K$ ist. 
   Dazu wählen wir $f \in \diff(Y)$ mit $\Supp(f) \subset Y \setminus
   K$. Dann gilt für beliebige
   $\lambda > 0$:
@@ -111,7 +130,7 @@
   \label{lemma:funktional-explizit}
   Sei $Z \subset X$ offen und $X$ eine Riemannsche Fläche. Sei $S \in
   \diff^{0,1}(X)'$ mit $S[\d[''g]] = 0$ für beliebige $g \in \diff(X)$
-  mit $\Supp(g) \Subset Z$. \\
+  mit $\Supp(g) \Subset Z$. 
   Dann existiert ein $\sigma \in \Omega(X)$ mit $S[\omega] = \iint_Z
   \sigma \wedge \omega$ für jedes $\omega \in \diff^{0,1}(X)$ mit
   $\Supp(\omega) \Subset Z$.
@@ -122,8 +141,8 @@
   Z$. Wir identifizieren $U$ mit $V$ und können deshalb vom Raum der
   Testfunktionen $\dist(U)$ auf $U$ sprechen. Sei also $\phi \in
   \dist(U)$. Wir bezeichnen mit $\tilde \phi$ jede 1-Form in
-  $\dist^{0,1}(X)$, für die $\tilde \phi|_U \cong \phi \d[\bar z]$ und
-  $\tilde \phi |_{U \setminus U} \cong 0$ gilt. \\
+  $\dist^{0,1}(X)$, für die $\tilde \phi|_U \equiv \phi \d[\bar z]$ und
+  $\tilde \phi |_{X \setminus U} \equiv 0$ gilt. 
   Damit können wir ein $S_U \in \dist(U)'$ definieren:
   \[
   S_U: \dist(U) \ra \C, \phi \mapsto S[\tilde \phi]
@@ -132,7 +151,7 @@
     g}{\partial \bar z}$, $g \in \dist(U)$, denn $S_U[\phi] = S[\tilde
   \phi] = S[ \frac{\partial g}{\partial \bar z} \d[\bar z]] =
   S[\d[''g]] = 0$ nach Voraussetzung. Das bedeutet aber, dass
-  $\frac{\partial S_U}{\partial \bar z} = 0$ und aus Korollar
+  $\frac{\partial S_U}{\partial \bar z} = 0$ gilt und aus Korollar
   \ref{cor:hol-dist} erhalten wir ein $h \in \hol(U)$:
   \[
   S[\tilde \phi] = \iint_U h(z) \phi(z) \d[z] \wedge \d[\bar z] \qquad
@@ -144,7 +163,7 @@
   \dist^{0,1}(U) \text{ und } \Supp(\omega) \Subset U
   \]
   Führen wir die gleiche Konstruktion auf einer zweiten Karte (z', U')
-  aus und gilt außerdem noch, dass $\Supp(\omega) \Subset U')$, so
+  durch und gilt außerdem noch, dass $\Supp(\omega) \Subset U'$, so
   erhalten wir
   \[
   \iint_U \sigma_U \wedge \omega = S[\omega] = \iint_{U'} \sigma_{U'}
@@ -158,44 +177,47 @@
   S[\omega] = \iint_Z \sigma \wedge \omega \qquad \forall \omega \in
   \diff^{0,1}(X) \text{ mit } \Supp(\omega) \Subset U,
   \]
-  wobei $U$ eine Koordinatenumgebung darstellt. \\
+  wobei $U$ eine Koordinatenumgebung darstellt. 
   Wählen wir nun ein beliebiges $\omega \in \diff^{0,1}(X)$ mit
   $\Supp(\omega) \Subset Z$, so können wir eine Partition der 1
   wählen, so dass $\omega = \sum_{j=1}^n \omega_J$ mit
   $\Supp(\omega_j) \Subset U_j$. Dabei sind die $U_j$
-  Koordinatenumgebungen. \\
-  Zu guter Letzt erhalten wir damit:
+  Koordinatenumgebungen. 
+  Zu guter Letzt erhalten wir damit
   \[
   S[\omega] = \sum_{j=1}^n S[\omega_j] = \sum_{j=1}^n \iint_Z \sigma
-  \wedge \omega_j = \iint_Z \sigma \wedge \omega
+  \wedge \omega_j = \iint_Z \sigma \wedge \omega.
   \]
 \end{proof}
 
 \begin{thm}
   \label{thm:runge-dicht}
   Sei $Y \Subset X$ eine offene Runge-Teilmenge und $X$ eine nicht
-  kompakte Riemannsche Fläche. \\
+  kompakte Riemannsche Fläche. 
   Dann liegt $\im( \hol(Y') \ra \hol(Y))$ für beliebige $Y' \Subset X$
   offen und $Y \subset Y'$ bzgl. kompakter Konvergenz dicht in $\hol(Y)$.
 \end{thm}
 
 \begin{proof}
   Sei $\beta: \diff(Y') \ra \diff(Y)$ die Einschränkungsabbildung. Wir
-  verwenden Korollar \ref{cor:frechet-dicht}. Dazu müssen wir zeigen, dass falls $T \in
+  verwenden Korollar \ref{cor:frechet-dicht}. Dazu müssen wir zeigen, dass für $T \in
   \diff(Y)'$ mit $T_{\beta(\hol(Y'))} \equiv 0$ auch $T|_{\hol(Y)}
-  \equiv 0$ gilt. \\
+  \equiv 0$ gilt. 
   Nach \cite[Kor. 14.16]{For} existiert zu jedem $\omega \in \diff^{0,1}(X)$ ein $f \in
-  \diff(Y')$ mit $\d[''f] = \omega|_{Y'}$. \\
+  \diff(Y')$ mit $\d[''f] = \omega|_{Y'}$. 
   Dies erlaubt uns die Definition von $S: \diff^{0,1}(X) \ra \C, \quad
   S[w] := T[f|_Y]$. Diese Definition ist unabhängig von $f$, denn für
   ein $g \in \diff(Y')$ mit $\d[''g] = \omega|_{Y'}$, dann ist $f-g
-  \in \hol(Y')$ und deshalt $T[(f-g)|_Y] = 0$ nach der Voraussetzung,
-  dass $T|_{\beta(\hol(Y'))} \equiv 0$. \\
-  Als nächstes wollen wir zeigen, dass $S$ stetig ist. \\
-  Dazu betrachten wir zunächst $V := \{ (\omega, f) \in \diff^{0,1}(X)
-  \times \diff(Y'): \quad \d[''f] = \omega|_{Y'} \}$. Nun haben wir
+  \in \hol(Y')$ und deshalb $T[(f-g)|_Y] = 0$ nach der Voraussetzung,
+  dass $T|_{\beta(\hol(Y'))} \equiv 0$. 
+  Als nächstes wollen wir zeigen, dass $S$ stetig ist. 
+  Dazu betrachten wir zunächst
+  \[
+  V := \{ (\omega, f) \in \diff^{0,1}(X) \times \diff(Y') \mid \d[''f] = \omega|_{Y'} \}.
+  \]
+  Nun haben wir
   sowohl $\diff(Y')$, als auch $\diff^{0,1}(Y')$ mit der Topologie
-  eines Fr\'echet-Raums ausgestattet. Wählen wir ine Überdeckung von
+  eines Fr\'echet-Raums ausgestattet. Wählen wir eine Überdeckung von
   $Y'$ durch Kompakta wie im Beweis von Proposition
   \ref{prop:diff-frechet} und eine Folge $(f_n)_{n\in \N} \subset
   \diff(Y')$, die bzgl. der Fr\'echet-Topologie gegen $f \in \diff(Y')$
@@ -203,11 +225,11 @@
   gegen $f$ konvergiert, d.h. heißt aber, dass bezüglich den Karten
   auch die Folge $\left(\frac{\partial f_n}{\partial \bar z} \right
   )_{n \in\N}$ glatt gegen $\frac{\partial f}{\partial \bar
-      z}$ konvergiert. In anderen Worten konvergiert
+      z}$ konvergiert. Mit anderen Worten konvergiert
     $(\d[''f_n])_{n\in \N}$ gegen $\d[''f]$. Also ist 
   $\d['']: \diff(Y') \ra \diff^{0,1}(Y')$ stetig und es folgt, dass $V
   \subset \diff^{0,1}(X) \times \diff(Y')$ abgeschlossen und somit
-  nach Satz \ref{thm:frechet-abgeschlossen} unf \ref{thm:frechet-summe} ein
+  nach den Sätzen \ref{thm:frechet-abgeschlossen} unf \ref{thm:frechet-summe} ein
   Fr\'echet-Raum ist.
   
   Nach \cite[Kor. 14.16]{For} ist $\pi_1: V \ra \diff^{0,1}(X)$
@@ -232,7 +254,7 @@
   Das Lemma \ref{lemma:kompakter-träger-funktional} liefert
   \begin{itemize}
   \item ein kompaktes $K \subset Y$ mit $T[f] = 0$ für jedes $f \in
-    \diff(Y)$ mit $\Supp(f9 \subset Y \setminus K$ und
+    \diff(Y)$ mit $\Supp(f) \subset Y \setminus K$ und
   \item ein kompaktes $L \subset X$ mit $S[\omega] = 0$ für jedes
     $\omega \in \diff^{0,1}(X)$ mit $\Supp(\omega) \subset X\setminus L$
   \end{itemize}
@@ -245,34 +267,34 @@
    \Subset X\setminus K
    \]
    Aufgrund des kompakten Trägers von $S$ muss $\sigma|_{X \setminus
-     (K \cup L)} \equiv 0$ gelten. \\
+     (K \cup L)} \equiv 0$ gelten. 
    Nun ist jede Zusammenhangskomponente von $X \setminus \runge(K)$
-   nicht relativ kompakt. \\
-   Behauptung: Jede Zusammenhangskomponente von $X \setminus
-   \runge(K)$ schneidet $X \setminus (K \cup L)$. \\
+   nicht relativ kompakt. 
+   Wir behaupten, dass jede Zusammenhangskomponente von $X \setminus
+   \runge(K)$ die Menge $X \setminus (K \cup L)$ schneidet.
    Angenommen es gäbe eine Zusammenhangskomponente $U \subset X
    \setminus \runge(K)$ mit $U \cap X \setminus ( K \cup L) =
-   \varnothing$. Dann gilt $U \subset K \cup L$, also ist $U$ relativ
-   kompakt. Ein Widerspruch. \\
-   Also schneiden alle Zusammenhangskomponenten $X \setminus (K \cup
-   L)$ und aus de Identitätssatz folgt:
-   \[
-   \sigma|_{X \setminus \runge(K)} \equiv 0 \label{eq:runge}\tag{$\ast$}
-   \]
+   \varnothing$. Dann gälte $U \subset K \cup L$, also wäre $U$ relativ
+   kompakt. Ein Widerspruch. Also schneiden alle
+   Zusammenhangskomponenten $X \setminus (K \cup L)$ und aus dem
+   Identitätssatz folgt:
+   \begin{align}
+   \sigma|_{X \setminus \runge(K)} \equiv 0 \label{eq:runge}
+   \end{align}
    Das bedeutet, dass $S[\omega] = 0$ für jedes $\omega \in
    \diff^{0,1}(X)$ mit $\Supp(\omega) \Subset X \setminus
-   \runge(K)$.\\
-   \\
+   \runge(K)$.
+
    Sei nun $f \in \hol(Y)$. Wir wollen zeigen, dass $T[f] = 0$. \\
    Zunächst gilt $\runge(K) \subset \runge(Y) = Y$. Durch Glättung
    \todo{genauer}
    können wir ein $g \in \diff(X)$ mit $f \equiv g$ in einer Umgebung
-   von $\runge(K)$ und $\Supp(g) \Subset Y$ finden. \\
-   Also liegt $\Supp(f - g|_Y) \subset Y \ K$, somit $T[f- g|_Y] = 0$
-   und schlussendlich $T[f] = T[g|_Y] = S[\d[''g]]$. \\
+   von $\runge(K)$ und $\Supp(g) \Subset Y$ finden. 
+   Also liegt $\Supp(f - g|_Y) \subset Y \setminus K$, somit gilt $T[f- g|_Y] = 0$
+   und schlussendlich $T[f] = T[g|_Y] = S[\d[''g]]$. 
    Nun ist aber $g$ in einer Umgebung von $\runge(K)$ holomorph, was
-   nichts anderes bedeutet als $\Supp(\d[''g]) \Subset X \setminus
-   \runge(K)$. \\
+   nichts anderes bedeutet als, dass $\Supp(\d[''g]) \Subset X \setminus
+   \runge(K)$ gilt.
    Mit \eqref{eq:runge} folgt
    \[
    T[f] = T[g|_f] = S[\d[''g]] = 0
@@ -281,7 +303,7 @@
 
 \begin{thm}[Rungescher Approximationssatz]
   Sei $X$ eine nicht kompakte Riemannsche Fläche, $Y \subset X$ eine
-  offene Runge-Teilmenge. \\
+  offene Runge-Teilmenge.
   Dann kann jede holomorphe Funktion auf $Y$ auf beliebigen Kompakta
   gleichmäßig durch holomorphe Funktionen auf ganz $X$ approximiert werden.
 \end{thm}
@@ -289,10 +311,10 @@
 \begin{proof}
   \begin{description}
   \item[Fall $Y \Subset X$:] Seien $f \in \hol(Y)$, $K \subset Y$
-    kompakt und $\epsilon > 0$ gegeben. \\
+    kompakt und $\epsilon > 0$ gegeben. 
     Aus dem Beweis von Satz \ref{thm:Ausschöpfung-Runge} erhalten wir
     eine Ausschöpfung$Y_1
-    \Subset Y_2 \Subset \dots$ von $X$ mit $Y_0 := Y \Subset Y_1$. \\
+    \Subset Y_2 \Subset \dots$ von $X$ mit $Y_0 := Y \Subset Y_1$. 
     Nach Satz \ref{thm:runge-dicht} existiert ein $f \in \hol(Y_1)$
     mit
     \[
@@ -307,28 +329,24 @@
     Nun gilt für beliebige $n \in \N$:
     \[
     \|f_{\nu + k} - f_{\nu} \|_{Y_n} \leq \epsilon 2^{-\nu} \sum_{\mu
-      = 0}^k 2^{-\mu} \leq 2 \epsilon 2^{-\nu} \xrightarrow{\nu \ra
+      = 0}^k 2^{-\mu} \leq  \epsilon 2^{-(\nu+1)} \xrightarrow{\nu \ra
       \infty} 0 \qquad \forall \nu > n
     \]
     Also konvergiert $(f_\nu)_{\nu > n}$ gleichmäßig auf $Y_n$ für
     jedes $n \in \N$ und damit existiert ein $F \in \hol(X)$, so dass
-    $f_\nu \rightrightarrows F$ auf jedem $Y_n$. \\
-    Eingesetzt folgt
+    $f_\nu \rightrightarrows F$ auf jedem $Y_n$. Eingesetzt folgt
     \begin{align*}
       \|F - f\|_K & \leq \|F - f_n\|_{Y_n} + \sum_{k=1}^n \|f_k -
       f_{k-1}\|_{\bar Y_{k-2}} \\
       & < \|F - f_n \|_{Y_n} + \epsilon \sum_{k=1}^n 2^{-k} \\
-      & \xrightarrow{n \ra \infty} \epsilon
+      & \xrightarrow{n \ra \infty} \epsilon.
     \end{align*}
   \item[Fall $Y \subset X$ nicht relativ kompakt:] Auch hier wählen
     wir $f \in \hol(Y)$, $K \subset Y$ kompakt und $\epsilon > 0$. \\
-    In diesem Fall können wir $L \subset Y$ kompakt finden mit $K \subset
-    \mathring L$. Dies ist möglich in dem wir $K$ durch endlich viele relativ
-    Kompakte Koordinatenumgebungen überdecken und L als deren
-    Abschluss definieren. \\
-    Dann folgt aus Lemma \ref{lemma:zwischen-runge} die Existenz einer
+    In diesem Fall können wir nach Lemma \ref{lemma:komp-enthalten}  $L \subset Y$ kompakt finden mit $K \subset
+    \mathring L$. Dann folgt aus Lemma \ref{lemma:zwischen-runge} die Existenz einer
     offenen Runge-Teilmenge
-    $\tilde Y \subset X$ mit $K \subset \tilde Y \subset L$. \\
+    $\tilde Y \subset X$ mit $K \subset \tilde Y \subset L$. 
     Damit ist $\tilde Y \Subset X$ und $f$ kann als Funktion von
     $\hol(\tilde Y)$ aufgefasst werden und schlussendlich können wir
     den obigen Fall anwenden und erhalten ein $F \in \hol(X)$ mit

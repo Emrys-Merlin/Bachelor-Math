@@ -2,24 +2,39 @@
 \section{Abelsche Fuchssche Gruppen}
 \label{sec:fuchs}
 
-\todo{Sl durch PSl geeignet ersetzen}
-\todo{$\id$ ausschließen}
+In diesem Kapitel wollen wir die diskreten, abelschen Untergruppen von
+$\Aut(\h)$ beschreiben. Das Resultat dieses Abschnitts wird sein, dass
+dies gerade die zyklischen Untergruppen sind. Dieses Resultat ist
+notwendig um zu zeigen, dass Riemannsche Flächen vom Geschlecht 1
+nicht von der oberen Halbebene $\h$ überlagert werden können.
+
+Zunächst charakterisieren wir die Elemente in $\Aut(\h) = \PSL(2, \R)$
+durch ihre Fixpunkteigenschaften und zeigen die eigentliche Aussage
+dann dadurch, dass wir alle abelschen diskreten Untergruppen durch
+topologische Gruppenisomorphismen\footnote{d.h. bistetige
+  Gruppenisomorphisme} auf abelsche, diskrete Untergruppen
+von $\R$ abbilden können. Diese haben wir jedoch im letzten Abschnitt
+als die zyklischen Untergruppen charakterisiert.
 
 \begin{defin}
-  Die diskreten Untergruppen von $PSl(2,\R)$ werden als Fuchssche
+  Die diskreten Untergruppen von $\PSL(2,\R)$ werden als Fuchssche
   Gruppen bezeichnet.
 \end{defin}
 
 \begin{rem}
-  Um über Diskretheit sprechen zu können, benötigt $Sl(2, \R)$
-    eine Topolgie. Hier verwenden wir einfach die Teilraumtopolgie,
-    die durch die Standardtopologie auf $\Mat_{4\times4}(\R) \cong
-    \R^4$ gegeben ist.
+  Um über Diskretheit sprechen zu können, benötigt $\PSL(2, \R)$
+  eine Topolgie. Hier verwenden wir die Quotiententopolgie von
+  \[
+  \PSL(2, \R) \cong \quot{\SL(2, \R)}{\{\pm \id\}}
+  \]
+  induziert wird. $\SL(2, \R)$ statten wir dabei mit der
+  Teilraumtopologie aus, die durch die Standardtopologie auf
+  $\Mat_{4\times4}(\R) \cong \R^4$ gegeben ist.
 \end{rem}
 
 \begin{thm}
   \label{thm:fixpkt}
-  Sei $S \in Sl(w, \R)$. Dann gelten
+  Sei $\id \neq S \in \PSL(2, \R)$. Dann gelten
   \begin{itemize}
   \item Für $|\tr S| < 2$ besitzt $S$ einen Fixpunkt in $\h$.
   \item Für $|\tr S| = 2$ besitzt $S$ einen Fixpunkt auf $\R \cup \{\infty\}$.
@@ -34,14 +49,14 @@
   \begin{pmatrix}
     a & b\\
     c & d
-  \end{pmatrix} \in Sl(2, \R)
+  \end{pmatrix} \in \PSL(2, \R)
   \]
   Für einen Fixpunkt $S \langle z \rangle = z$ muss die Gleichung
   \begin{align}
     \label{eq:fixpkt}
     c z^2 + (d-a)z - b = 0
   \end{align}
-  Falls $c \neq 0$ gilt erhalten wir unter Ausnutzung von $\det S = 0$
+  Falls $c \neq 0$ gilt erhalten wir unter Ausnutzung von $\det S = 1$
   \begin{align*}
     z_{1,2} & = \frac{a-d}{2c} \pm \sqrt{\frac{(d-a)^2}{4c^2} +
       \frac{b}{c}} \\
@@ -72,19 +87,19 @@
   Lösung der obigen Gleichung. Für $|\tr S| > 2$ ist $\infty$ auch
   eine Lösung, allerdings erhalten wir als zweite Lösung $z =
   \frac{ba}{1-a^2} \in \R$, da $a^2 \neq 1$ gelten muss. Dies zeigt
-  die verbleibenden Fälle.
+  den verbleibenden Fall.
 \end{proof}
 
 \begin{defin}
-  Die Elemente aus $Sl(2,\R)$ mit $|\tr S| < 2$ ($ = 2$ oder $ > 2$)
+  Die Elemente aus $\PSL(2,\R)$ mit $|\tr S| < 2$ ($ = 2$ oder $ > 2$)
   heißen elliptisch (parabolisch, hyperbolisch).
 \end{defin}
 
 \begin{lemma}
   \label{lemma:psl-trafo}
-  Sei $S \in Sl(2, \R)$. Dann gelten
+  Sei $S \in \PSL(2, \R)$. Dann gelten
   \begin{enumerate}
-  \item Ist $S$ elliptisch mit Fixpunkt $w \in \h$, so existiert ein $C \in Sl(2, \R)$, so
+  \item Ist $S$ elliptisch mit Fixpunkt $w \in \h$, so existiert ein $C \in \PSL(2, \R)$, so
     dass $C\langle w \rangle = i$ gilt. Weiterhin gilt dann für ein
     $\phi \in \R$ die Gleichung
     \[
@@ -95,8 +110,8 @@
     \end{pmatrix}.
     \]
   \item Ist $S$ parabolisch mit Fixpunkt $w \in \R \cup \{\infty\}$,
-    so existiert ein $C \in Sl(2, \R)$, so dass $C\langle w\rangle =
-    \infty$ erfüllt. Weiterhin gilt dann für ein $b \in \R$ die Gleichung
+    so existiert ein $C \in \PSL(2, \R)$, so dass $C\langle w\rangle =
+    \infty$ erfüllt ist. Weiterhin gilt dann für ein $b \in \R$ die Gleichung
     \[
     C S C^{-1} =
     \begin{pmatrix}
@@ -104,11 +119,11 @@
       0 & 1
     \end{pmatrix}.
     \]
-  \item Ist $S$ hyperbolisch mit Fixpunkte $w_1 \neq w_2 \in \R \cup
-    \{\infty\}$, so existiert ein $C \in Sl(2, \R)$, so dass $C\langle
+  \item Ist $S$ hyperbolisch mit Fixpunkten $w_1 \neq w_2 \in \R \cup
+    \{\infty\}$, so existiert ein $C \in \PSL(2, \R)$, so dass $C\langle
     w_1 \rangle = 0$ und $C\langle w_2 \rangle = \infty$ erfüllt
-    sind. Weiterhin folgt dann, dass ein $\lambda > 0$ existiert, das
-    die folgende Gleichung erfüllt
+    sind. Weiterhin folgt dann, dass ein $\lambda > 0$ existiert, so dass
+    die Gleichung
     \[
     C S C^{-1} = 
     \begin{pmatrix}
@@ -116,13 +131,14 @@
       0 & \lambda^{-1}
     \end{pmatrix}.
     \]
+    erfüllt ist.
   \end{enumerate}
 \end{lemma}
 
 \begin{proof}
-  \emph{Fall 1:} Sei $S \in Sl(2, \R)$ elliptisch und $w \in \h$ der
+  \emph{Fall 1:} Sei $S \in \PSL(2, \R)$ elliptisch und $w \in \h$ der
   Fixpunkt von $S$. Nun gilt nach Satz \ref{thm:aut}, dass ein $C \in
-  Sl(2,\R)$ existiert, so dass $C \langle w \rangle = i$ ist. Setzen
+  \PSL(2,\R)$ existiert, so dass $C \langle w \rangle = i$ ist. Setzen
   wir
   \[
   \tilde S = CSC^{-1}
@@ -155,9 +171,9 @@
   \end{pmatrix}.
   \]
   Falls nun $w = \infty$ gilt, muss $c =0$ sein. Dann folgt aber aus
-  $|\tr 2 = 1\|$ und $\det S = 1$, dass $a = b = \pm 1$ gelten
-  muss. Da wir uns aber in $PSl(2,\R)$ befinden, können wir ohne
-  Einschränkung $a = b = 1$ annehmen. Also ist $S$ bereits in der
+  $|\tr S| = 2$ und $\det S = 1$, dass $a = d = \pm 1$ gelten
+  muss. Da wir uns aber in $\PSL(2,\R)$ befinden, können wir ohne
+  Einschränkung $a = d = 1$ annehmen. Also ist $S$ bereits in der
   gewünschten Form. Falls $w \neq \infty$ gilt, so betrachten wir
   \[
   C =
@@ -165,21 +181,21 @@
     0 & 1 \\
     -1 & w
   \end{pmatrix}
-  \in PSl(2,\R)
-  \].
-  $C$ erfüllt die Gleichung $C \langle w \rangle > = \infty$. Also
+  \in \PSL(2,\R).
+  \]
+  $C$ erfüllt die Gleichung $C \langle w \rangle  = \infty$. Also
   erfüllt $\tilde S = C S C^{-1}$ die Gleichung $\tilde S\langle \infty
-  \rangle = \infty$. Nach dem Fall den wir bereits gezeigt haben, hat
-  dann $\tilde S$ die gewünschte Form.
-
-  \emph{Fall 3:} Sei $S \in PSl(2, \R)$ hyperbolisch und seien $w_1
+  \rangle = \infty$. Also haben wir diesen Fall auf den ersten Fall
+  zurückgeführt.
+  
+  \emph{Fall 3:} Sei $S \in \PSL(2, \R)$ hyperbolisch und seien $w_1
   \neq w_2 \in \R \cup \{\infty\}$ die Fixpunkte von $S$. Wir
   betrachten zunächst den Fall $w_1 = 0$ und $w_2 = \infty$ und wählen
   die obige Darstellung für $S$. Dann folgt aber aus $S\langle 0
   \rangle = 0$ und $S\langle \infty \rangle = \infty$, dass $b = c = 0$
   gelten muss. Aus $\det S = 1$ folgt dann, dass $a = \frac{1}{d}$
-  gilt. Da $S \in PSl(2,\R)$ liegt, können wir ohne Einschränkung
-  $\lambda a > 0$ annehmen, was die Behauptung in diesem Fall
+  gilt. Da $S \in \PSL(2,\R)$ liegt, können wir ohne Einschränkung
+  $\lambda = a > 0$ annehmen, was die Behauptung in diesem Fall
   zeigt. Als nächstes sei $w_1 = \infty$ oder $w_2 = \infty$. Wir
   nehmen ohne Einschränkunt $w_2 = \infty$ an. Dann ist $w_1 \neq
   \infty$ und wir setzen
@@ -189,7 +205,7 @@
     1 & - w_1\\
     0 & 1
   \end{pmatrix}
-  \in PSl(2, \R)
+  \in \PSL(2, \R)
   \]
   Dann erfüllt $C\langle \infty \rangle = \infty$ und $C\langle w_1
   \rangle = 0$ und wir erhalten für $\tilde S = C S C^{-1}$ die beiden
@@ -203,7 +219,7 @@
     (w_1 - w_2)^{-1} & - w_1(w_1-w_2)^{-1}\\
     1 & -w_2
   \end{pmatrix}
-  \in PSl(2, \R)
+  \in \PSL(2, \R)
   \]
   durch und erhalten auch hier, dass $\tilde S = C S C^{-1}$ die
   gewünschten Eigenschaften erfüllt.
@@ -214,7 +230,7 @@ beginnen mit der folgenden Proposition.
 
 \begin{prop}
   \label{prop:komm-fix}
-  Seien $T, S \in Sl(2, \R)$ mit $TS = ST$. Dann bildet $S$ die
+  Seien $T, S \in \PSL(2, \R)$ mit $TS = ST$. Dann bildet $S$ die
   Fixpunktmenge von $T$ injektiv auf sich selbst ab.
 \end{prop}
 
@@ -224,14 +240,14 @@ beginnen mit der folgenden Proposition.
   TS \langle p \rangle = ST\langle p \rangle = S\langle p \rangle.
   \]
   Also ist auch $S\langle p \rangle$ ein Fixpunkt von $T$. Da nun $S$
-  auch in $PSl(2, \C) = \Aut(\P^1)$ liegt, ist $S$ insbesondere auf
+  auch in $\PSL(2, \C) = \Aut(\P^1)$ liegt, ist $S$ insbesondere auf
   der gesamten Fixpunktmenge von $T$ injektiv. $S$ bildet also
   Fixpunkte von $T$ injektiv auf Fixpunkte von $T$ ab.
 \end{proof}
 
 \begin{thm}
   \label{thm:komm-fix}
-  Seien $T,S \in PSl(2, \R)\setminus \{\id\}$. Dann kommutieren $T$ und $S$ genau dann,
+  Seien $T,S \in \PSL(2, \R)\setminus \{\id\}$. Dann kommutieren $T$ und $S$ genau dann,
   wenn die Fixpunktmengen übereinstimmen.
 \end{thm}
 
@@ -248,9 +264,11 @@ beginnen mit der folgenden Proposition.
   nach Proposition \ref{prop:komm-fix} $T\langle p \rangle$ auch ein
   Fixpunkt von $S$ und da nur ein Fixpunkt existiert, gilt $ p = T
   \langle p \rangle$. Also ist $p$ auch der einzige Fixpunkt von $T$
-  und die Fixpunktmengen stimmen überein. Dann ist aber $T$ (und auch
+  und die Fixpunktmengen stimmen überein.
+
+  Lieben zwei Fixpunkte vor, so ist $T$ (und auch
   $S$) parabaolisch und nach Lemma \ref{lemma:psl-trafo} existiert ein
-  $C \in PSl(2,\R)$, so dass
+  $C \in \PSL(2,\R)$, so dass
   \[
   \tilde T = C T C^{-1} =
   \begin{pmatrix}
@@ -268,7 +286,7 @@ beginnen mit der folgenden Proposition.
   \]
   so folgt aus $ST = TS$ auch $\tilde S \tilde T = \tilde T \tilde
   S$. Diese Gleichung liefert uns $\lambda^{-1} c = \lambda c$ und
-  $\lambda^{-1} b = \lambda$. Da $T \neq \id$ ist $\lambda \neq 1$ und
+  $\lambda^{-1} b = \lambda b$. Da $T \neq \id$ ist, gilt $\lambda \neq 1$ und
   wir erhalten $b = c = 0$ und es folgt $a = d^{-1}$. Also
   erhalten wir
   \[
@@ -291,7 +309,7 @@ beginnen mit der folgenden Proposition.
 
 \begin{thm}
   \label{thm:abelsch-zyklisch}
-  Sei $G \subset PSl(2, \R)$ eine Fuchssche Gruppe. Dann ist $G$ genau
+  Sei $G \leq \PSL(2, \R)$ eine Fuchssche Gruppe. Dann ist $G$ genau
   dann abelsch, wenn $G$ zyklisch ist.
 \end{thm}
 
@@ -302,7 +320,7 @@ beginnen mit der folgenden Proposition.
   identisch. Sie haben also alle den gleichen Typ.
 
   Betrachten wir zunächst den elliptischen Fall. Dann können alle
-  Elemente von $G$ durch Konjugation mit einem festen $C \in PSl(2,\R)$ auf
+  Elemente von $G$ durch Konjugation mit einem festen $C \in \PSL(2,\R)$ auf
   die Form
   \[
   \begin{pmatrix}
@@ -315,8 +333,8 @@ beginnen mit der folgenden Proposition.
   mit $\C$ fest, dass es sich bei den Rotationen einfach nur um
   Multiplikation mit $e^{i\phi}$ handelt. Wir können also $G$ mit
   einer diskreten Untergruppe von $S^1$ identifizieren. Angenommen
-  diese Untergruppe wäre nicht diskret. Dann gäbe es $\phi \neq \psi
-  \in \R$, so dass $e^{in\phi} \neq e^{im\phi}$ für beliebige $n, m
+  diese Untergruppe wäre nicht zyklisch. Dann gäbe es $\phi \neq \psi
+  \in \R$, so dass $e^{in\phi} \neq e^{im\psi}$ für beliebige $n, m
   \in \Z$. Nun wissen wir aber nach Lemma \ref{lemma:gitter}, dass
   eine nichttriviale additive Untergruppe von $\R$ ein Gitter sein
   muss, d.h. die additive Untergruppe $L := \{ n \phi + m \psi \mid n,m \in
@@ -324,7 +342,7 @@ beginnen mit der folgenden Proposition.
   \[
   p: \R \ra S^1, \quad \phi \mapsto e^{i\phi}
   \]
-  stetig, also kann auch $p(L) \cong G$ nicht diskret sein. Ein
+  stetig, also kann auch $p(L) \leq G$ nicht diskret sein. Ein
   Widerspruch. Also muss ein $\phi \in \R$ existieren, so dass
   \[
   G \cong \left \{ e^{in\phi} \mid n \in \Z \right \}
@@ -332,7 +350,7 @@ beginnen mit der folgenden Proposition.
   gilt. Damit ist $G$ zyklisch.
 
   Gehen wir nun zum parabolischen Fall über, so können wir alle
-  Elemente von $G$ durch Konjugation mit einem festen $C \in PSl(w,
+  Elemente von $G$ durch Konjugation mit einem festen $C \in \PSL(2,
   \R)$ auf die Form
   \begin{align}
     \label{eq:parabolisch}
@@ -352,8 +370,8 @@ beginnen mit der folgenden Proposition.
   zyklisch.
 
   Wenden wir uns dem letzten Fall zu. Seien also alle Elemente von $G$
-  hyperbolisch. Dann finden wir erneut ein feste $C \in PSl(2, \R)$,
-  da alle Element von $G$ auf die Form
+  hyperbolisch. Dann finden wir erneut ein festes $C \in \PSL(2, \R)$,
+  das alle Element von $G$ auf die Form
   \begin{align}
     \label{eq:hyperbolisch}
   \begin{pmatrix}
@@ -362,14 +380,14 @@ beginnen mit der folgenden Proposition.
   \end{pmatrix}
   \end{align}
   bringt. Auch hier finden wir einen Homöomorphismus von den Matrizen
-  der Form \eqref{eq:hyperbolisch} und in diesem Fall $\R_{> 0}$, in
+  der Form \eqref{eq:hyperbolisch} nach $\R_{> 0}$, in
   dem wir die Matrizen auf $\lambda^2$ abbilden. Das es sich
   tatsächlich um einen Homöomorphismus handelt, folgt aus der
   Tatsache, dass wir das Vorzeichen von $\lambda$ nach Definition von
-  $PSl(2, \R)$ vernachlässigen können. Nun können wir aber $\R_{> 0}$
+  $\PSL(2, \R)$ vernachlässigen können. Nun können wir aber $\R_{> 0}$
   durch $\log$ homöomorph auf $\R$ abbilden. Also finden wir wieder
   eine abelsche, diskrete Untergruppe von $\R$. Diese ist wieder
-  zyklisch und da wir nur mit Homöomorphismen gearbeitet haben, folgt
+  zyklisch und da wir nur mit Gruppenisomorphismen gearbeitet haben, folgt
   direkt auch, dass $G$ zyklisch sein muss.
 \end{proof}
 
