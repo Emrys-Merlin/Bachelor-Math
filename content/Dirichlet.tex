@@ -112,7 +112,8 @@ existieren zu identifizieren.
   $\d[\Re(f)] = 0$ sein muss, also ist $\Re(f)$ konstant. Das wiederum
   hat aber zur Folge, dass die holomorphe Funktion $e^f$ ihr
   Betragsmaximum annimmt, denn $|e^f| = e^{\Re(f)}$ gilt. Dann ist
-  aber $|e^f|$ nach dem Maximumsprinzip\todo{Referenz} für holomorphe Funktionen
+  aber $|e^f|$ nach dem Maximumsprinzip für holomorphe Funktionen
+  (vgl. \cite[Kor. 2.6]{For})
   konstant. Also ist auch $f$ konstant und es gilt $\omega = \d[f] =
   0$. Da dies lokal um jeden Punkt gilt, ist somit $\omega = 0$ und
   damit ist unser $\omega$ eindeutig bestimmt.
@@ -176,7 +177,7 @@ existieren zu identifizieren.
   an. Allerdings gilt auch $|e^f| = e^u$, was nichts anderes
   bedeutet, als dass die holomorphe Funktion $e^f$ ein
   Betragsmaximum bei $y$ annimmt. 
-  Aus dem Maximumsprinzip\todo{Referenz} für holomorphe Funktionen folgt dann die
+  Aus dem Maximumsprinzip für holomorphe Funktionen (vgl. \cite[Kor. 2.6]{For}) folgt dann die
   Konstanz von $e^f$ und damit:
   \[
   u_U \equiv \text{const.}
@@ -635,11 +636,25 @@ existieren zu identifizieren.
   $\beta$ wird als \init{Barriere} von $x$ bezeichnet.
 \end{defin}
 
+\begin{lemma}
+  \label{lemma:zsh-komp}
+  Sei $X$ eine Riemannsche Fläche, $Y \subset X$ eine offene Menge und
+  $Z \subset Y$ eine Zusammenhangskomponente von $Y$. Dann ist $Z$ offen.
+\end{lemma}
+
+\begin{proof}
+  Sei $x \in Z$. Dann finden wir eine offene, zusammenhängende
+  Koordinatenumgebung $U \subset Y$ mit mit $x \in U$. Nun ist aber
+  $Z$ die maximale zusammenhängende Teilmenge, die $x$ enthält und da
+  $U$ auch zusammenhängend gewählt wurde, muss $U \subset Z$
+  gelten. Also ist $x$ ein innerer Punkt und damit $Z$ offen.
+\end{proof}
+
 \begin{cor}
   Sei $x \in \partial Y$ ein regulärer Randpunkt und $Z \subset Y$
   offen mit $x \in \partial Z$.\\
   Dann ist $x$ ein regulärer Randpunkt von $Z$. Insbesondere hat jede
-  Zusammenhangskomponente von $Y$ regulären Rand\todo{Zshkomp. offen}.
+  Zusammenhangskomponente von $Y$ regulären Rand.
 \end{cor}
 
 \begin{lemma}

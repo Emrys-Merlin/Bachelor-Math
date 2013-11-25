@@ -286,12 +286,20 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
    \runge(K)$.
 
    Sei nun $f \in \hol(Y)$. Wir wollen zeigen, dass $T[f] = 0$. \\
-   Zunächst gilt $\runge(K) \subset \runge(Y) = Y$. Durch Glättung
-   \todo{genauer}
-   können wir ein $g \in \diff(X)$ mit $f \equiv g$ in einer Umgebung
-   von $\runge(K)$ und $\Supp(g) \Subset Y$ finden. 
+   Zunächst gilt $\runge(K) \subset \runge(Y) = Y$. Nun können wir
+   eine offene Mengen $U, V$ finden, die $ \runge(K) \subset U
+   \subsetneq V \subset Y$ erfüllen. Nach dem Lemma von Urysohn
+   (vgl. \cite[Satz 12.2]{Jam}) finden
+   wir eine stetige Funktion $\phi: X \ra \R$, die $\phi|_U \equiv 1$
+   und $\phi|_{X \setminus \bar V} \equiv 0$ erfüllt. Durch eine geeignete Glättung
+   dieser Funktion $\phi$ erhalten wir ein glattes $\tilde \phi \in
+   \diff(X)$ und offene Mengen $\runge(K) \subset \tilde U \subset U$
+   und $U \subset \tilde V \subset V$, so dass $\tilde \phi|_{\tilde
+     U} \cong 1$ und $\tilde \phi|_{X \setminus \tilde {\bar V}} \cong
+   0$ gilt. Setzen wir $ g := f \cdot \tilde \phi$, so gilt
+   $f \equiv g$ in einer Umgebung von $\runge(K)$ und $\Supp(g) \Subset Y$.
    Also liegt $\Supp(f - g|_Y) \subset Y \setminus K$, somit gilt $T[f- g|_Y] = 0$
-   und schlussendlich $T[f] = T[g|_Y] = S[\d[''g]]$. 
+   und schlußendlich $T[f] = T[g|_Y] = S[\d[''g]]$. 
    Nun ist aber $g$ in einer Umgebung von $\runge(K)$ holomorph, was
    nichts anderes bedeutet als, dass $\Supp(\d[''g]) \Subset X \setminus
    \runge(K)$ gilt.
@@ -302,6 +310,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
 \end{proof}
 
 \begin{thm}[Rungescher Approximationssatz]
+  \label{thm:runge}
   Sei $X$ eine nicht kompakte Riemannsche Fläche, $Y \subset X$ eine
   offene Runge-Teilmenge.
   Dann kann jede holomorphe Funktion auf $Y$ auf beliebigen Kompakta
@@ -352,6 +361,80 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
     den obigen Fall anwenden und erhalten ein $F \in \hol(X)$ mit
     $\|f|_{\tilde Y} - F\|_K = \|f - F\|_K < \epsilon$.
   \end{description}
+\end{proof}
+
+\begin{thm}
+  \label{thm:h-hol}
+  Sei $X$ eine nicht kompakte Riemannsche Fläche und $\omega \in
+  \diff^{0,1}(X)$. Dann existiert ein $f \in \diff(X)$, so dass
+  \[
+  \d[''f] = \omega
+  \]
+  gilt.
+\end{thm}
+
+\begin{proof}
+  Sei
+  \[
+  Y_0 \subseteq Y_1 \subseteq \dots
+  \]
+  eine Ausschöpfung von $X$ durch Runge-Gebiete. Wir wollen nun eine
+  Folge von $f_n \in \diff(Y_n)$, so dass die Bedingungen
+  \begin{enumerate}
+  \item $\d[''f_n] = \omega|_{Y_n}$ und
+  \item $\|f_{n+1} - f_n \|_{Y_{n-1}} \leq 2^{-n}$
+  \end{enumerate}
+  erfüllt sind. Wir gehen dazu induktiv vor. Zunächst existiert nach
+  \cite[Kor. 14.16]{For} ein $f_0 \in \diff(Y_0)$, so dass $\d[''f_0]
+  = \omega|_{Y_0}$ gilt. Seien nun $f_0, \dots, f_n$ bereits
+  konstruiert. Erneut nach \cite[Kor. 14.16]{For} erhalten wir ein
+  $g_{n+1} \in \diff(Y_{n+1})$, so dass $\d[''g_{n+1}] =
+  \omega|_{Y_{n+1}}$ erfüllt. Dann gilt aber auf $Y_n$ die Gleichung
+  \[
+  \d['' g_{n+1}] = \d['' f_n],
+  \]
+  was nichts anderes bedeutet, als dass $g_{n+1} - f_n$ holomorph auf
+  $Y_n$ ist. Nach dem Rungeschen Approximationssatz \ref{thm:runge}
+  existiert ein $h \in \hol(Y_{n+1})$, so dass
+  \begin{align}
+  \|(g_{n+1} - f_n) - h\|_{Y_{n-1}} \leq 2^{-n} \label{eq:app}
+  \end{align}
+  gilt. Definieren wir $f_{n+1} := g_{n+1} - h$, so erfüllt $f_{n+1}$
+  immer noch die erste und dank \eqref{eq:app} auch die zweite
+  Bedingung.
+
+  Nun definieren wir
+  \[
+  f(z) := \lim_{n \ra \infty} f_n(z).
+  \]
+  Die Funktion $f$ ist wohldefiniert, da jedes $z \in X$ in fast allen
+  $Y_n$ enthalten ist. Weiterhin können wir auf $Y_{n-1}$ die Darstellung
+  \[
+  f = f_n + \sum_{k=n}^\infty (f_{k+1} - f_k) =: f_n + F_n
+  \]
+  wählen. Nun konvergiert $F_n$ gleichmäßig auf $Y_{n-1}$ und ist deshalb
+  dort holomorph. Also ist $f$ glatt auf $Y_n$ für beliebige $n \in
+  \N$, in anderen Worten ist $f \in \diff(X)$. Weiterhin gilt
+  \[
+  \d[''f] = \d['' f_n] = g
+  \]
+  auf $Y_{n-1}$ für beliebige $n \in \N$ und damit $\d[''f] = g$ auf $X$.
+\end{proof}
+
+\begin{cor}
+  \label{cor:h-hol}
+  Sei $X$ eine nicht kompakte Riemannsche Fläche. Dann ist $H^1(X,
+  \hol) = 0$.
+\end{cor}
+
+\begin{proof}
+  Aus dem Satz von Dolbeault (vgl. \cite[Satz 15.14]{For}) folgt die
+  Gleichung
+  \[
+  H^1(X, \hol) \cong \quot{\diff^{0,1}(X)}{\d['' \diff(X)]}.
+  \]
+  Satz \ref{thm:h-hol} besagt nun aber $\diff^{0,1}(X) =
+  \d[''\diff(X)]$, was die Behauptung zeigt.
 \end{proof}
 
 %%% Local Variables: 

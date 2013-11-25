@@ -129,8 +129,8 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \item $f$ ist biholomorph: $f$ nimmt jeden Wert gleichhäufig an, da
     es sich um eine eigentlich Abbildung handelt. Weiterhin wird $0$
     genau einmal angenommen. Also ist $f: Y \ra B$ bijektiv und
-    holomorph. Das genügt bereits, um zu zeigen, dass $f$ biholomorph
-    ist.\todo{Referenz}
+    holomorph. Das genügt nach \cite[Kor. 2.5]{For} bereits, um zu zeigen, dass $f$ biholomorph
+    ist.
 
   \end{itemize}
 
@@ -322,7 +322,6 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \[
   \phi: B \ra B, \quad \phi(z) := \frac{z-a}{1-\bar a z}
   \]
-  \todo{Wohldefiniertheit von phi?}
   Es folgt $0 \notin \phi(Y)$. Nach Lemma \ref{lemma:ex-log} existiert ein
   $g \in \hol(Y)$ mit $g^2 = \phi|_Y$. Also ist $g(Y) \subseteq
   B$. Wir definieren nun eine weitere Hilfsfunktion
@@ -402,7 +401,6 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
     \in \N} \subseteq \hol(X)$ existiert, so dass $f_n \ra f$ kompakt
   auf $Y$ konvergiert.
   Sei nun $\alpha$ eine beliebige geschlossene Kurve in $Y$. 
-  \todo{Kurven immer stetig.}
   Dann gilt
   \[
   0 = \int_\alpha f_n \omega_0 \xrightarrow{n \ra \infty} \int_\alpha
@@ -518,7 +516,8 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 \end{proof}
 
 \begin{rem}
-  Wir wissen bereits, dass jede einfach zusammenhängende\todo{Referenz} Riemannsche
+  Dank \cite[Kor.16]{For} und \cite[Kor.10.7]{For} wissen wir bereits,
+  dass jede einfach zusammenhängende Riemannsche
   Fläche eine verschwindende deRham-Gruppe hat und dementsprechend
   konform äquivalent zu $\P^1$, $\C$ oder $B$ ist, andererseits zeigt
   der Riemannsche Abbildungssatz, dass jede Riemannsche Fläche mit

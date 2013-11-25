@@ -154,7 +154,17 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
   \init{Runge-Teilmenge} falls $Y = \runge(Y)$. Es gilt:
   \begin{enumerate}
   \item $\runge(\runge(Y)) = \runge(Y) \quad \forall Y \subset X$ \todo{ausrechnen}
-  \item $Y_1 \subset Y_2$ impliziert $\runge(Y_1) \subset \runge(Y_2)$
+  \item $Y_1 \subset Y_2$ impliziert $\runge(Y_1) \subset
+    \runge(Y_2)$, denn entweder $x \in Y_1$ liegt bereits in $Y_2$
+    oder aber $x \in Z \subset X \setminus Y_1$ eine relativ kompakte
+    Zusammenhangskomponente. Da $x$ weiterhin nicht in $Y_2$ liegt,
+    liegt $X \in Z \setminus Y_2 \subset Z$. Sei $x \in \tilde Z
+    \subset Z \setminus Y_2$ eine Zusammenhangskomponente von $Z
+    \setminus Y_2$, dann ist $\tilde Z$ als Teilmenge von $Z$ relativ
+    kompakt und $\tilde Z$ ist eine Zusammenhangskomponente von $X
+    \setminus Y_2$, da alle Zusammenhangskomponenten von $X \setminus
+    Y_2$ in den Zusammenhangskomponenten von $X \setminus Y_1$
+    enthalten sein müssen. Damit liegt aber $x \in \tilde Z \subset \runge(Y_2)$.
   \end{enumerate}
 \end{defin}
 
@@ -344,19 +354,6 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
   Weiterhin sind nach Satz \ref{thm:reg-rand} alle Randpunkte von $Y$ regulär.
 \end{proof}
 
-\begin{lemma}
-  \label{lemma:zsh-komp}
-  Sei\todo{weiter nach vorne} $X$ eine Riemannsche Fläche, $Y \subset X$ eine offene Menge und
-  $Z \subset Y$ eine Zusammenhangskomponente von $Y$. Dann ist $Z$ offen.
-\end{lemma}
-
-\begin{proof}
-  Sei $x \in Z$. Dann finden wir eine offene, zusammenhängende
-  Koordinatenumgebung $U \subset Y$ mit mit $x \in U$. Nun ist aber
-  $Z$ die maximale zusammenhängende Teilmenge, die $x$ enthält und da
-  $U$ auch zusammenhängend gewählt wurde, muss $U \subset Z$
-  gelten. Also ist $x$ ein innerer Punkt und damit $Z$ offen.
-\end{proof}
 
 \begin{thm}
   \label{thm:runge-zshkomp}

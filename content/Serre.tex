@@ -282,7 +282,12 @@ erster Schritt ist der nächste Satz.
 \end{lemma}
 
 \begin{proof}
-  Nachrechnen.\todo{Beweis das.}
+  Wir wählen ein $\omega \in H^0(X, \Omega_{-D}) \subset H^0(X,
+  \Omega_{-D'})$ und $\xi \in H^1(X, \hol_{D'})$. Dann gilt
+  \[
+  i_{D'}^D \circ \iota_D(\omega)(\xi) = \g{\omega}{\xi} =
+  \iota_{D'}(\omega)(\xi).
+  \]
 \end{proof}
 
 \begin{lemma}
@@ -536,9 +541,19 @@ erster Schritt ist der nächste Satz.
   Aufgelöst nach $\deg K$ folgt die Behauptung.
 \end{proof}
 
+\begin{defin}
+  \label{defin:gitter}
+  Sei $B$ ein $n-$dimensionaler, reeller Vektorraum. Eine additive
+  Untergruppe $\Gamma \subset V$ heißt \init{Gitter}, falls $n$ linear
+  unabhängige $\gamma_1, \dots, \gamma_n \in V$ existieren, so dass
+  \[
+  \Gamma = \Z \gamma_1 + \dots + \Z \gamma_2
+  \]
+\end{defin}
+
 \begin{cor}
   \label{cor:torus-geschlecht}
-  Sei $\Gamma \subset \C$ ein Gitter\todo{Gitter definition richtig einfügen}. Dann hat der Torus
+  Sei $\Gamma \subset \C$ ein Gitter. Dann hat der Torus
   $\quot{\C}{\Gamma}$ Geschlecht 1.
 \end{cor}
 
