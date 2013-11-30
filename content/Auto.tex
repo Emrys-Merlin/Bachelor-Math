@@ -72,14 +72,49 @@ nächsten zwei Abschnitten bestimmt.
 \end{proof}
 
 \begin{rem}
-  Dass $\h$ und $B$ konform äquivalent sind, ist bereits eine
-  Konsequenz aus dem Riemannschen Abbildungssatz \ref{thm:rmt}, allerdings benötigen
-  wir für den nächsten Satz die Übergangsabbildung explizit.
+  Anhand des obigen Resultats erkennen wir, dass wir in der Formulierung
+  des Riemannschen Abbildungssatz \ref{thm:rmt} $B$ genau so gut durch
+  $\h$ hätten ersetzen können. Für den Beweis des Abbildungssatz war
+  jedoch $B$ die geeignetere Form. Im folgenden werden wir jedoch
+  hauptsächlich auf $\h$ zurückgreifen, da, wie wir gleich sehen
+  werden, die Automorphismengruppe von $\h$ eine schönere Form besitzt.
+\end{rem}
+
+\begin{defin}
+  Sei
+  \[
+  M =
+  \begin{pmatrix}
+    a & b \\
+    c & d
+  \end{pmatrix}
+  \]
+  Für $z \in \P^1$ definieren wir
+  \[
+  M \langle z \rangle = \frac{az+b}{cz+d}.
+  \]
+  Diese Notation ist auch für $z = \infty$ durch einfache
+  Grenzwertbetrachtungen wohldefiniert. Weiterhin erkennen wir, dass
+  für alle $\lambda \in \C^\times$ die Gleichung
+  \[
+  \lambda M \langle z \rangle = M \langle z \rangle
+  \]
+  gilt, deshalb werden wir uns meist auf $M \in \SL(2, \C)$ oder sogar auf
+  \[
+  M \in \PSL(2, \C) = \quot{\SL(2, \C)}{\{\pm \id\}}
+  \]
+  enschränken.
+\end{defin}
+
+\begin{rem}
+  Im Folgenden werden wir häufig Repräsentanten von Elementen aus
+  $\PSL(2, \C)$ mit Elementen aus $\PSL(2, \C)$ identifizieren. Dies
+  sollte jedoch kaum für Verwirrung sorgen.
 \end{rem}
 
 \begin{thm}
   \label{thm:aut}
-  Es gelten
+  Es gelten:
   \begin{enumerate}
   \item $\Aut(\C) = \{ f: \C \ra \C, \ z \mapsto az + b \mid a \in
     \C^\times, \ b \in \C \}$
@@ -110,7 +145,7 @@ nächsten zwei Abschnitten bestimmt.
   Casorati-Weierstraß (vgl. \cite[Satz 6.11]{Kas}) anwendbar und wir
   erhielten zu jedem $n \in \N$
   ein $z_n \in \dot B_{\frac{1}{n}}(0)$, so dass $|g(z_n) - f(0)| <
-  \frac{1}{n}$ gilt. Setzen wir $w_n := \frac{1}{z_n}$, so konvergierte
+  \frac{1}{n}$ gelten müsste. Setzen wir $w_n := \frac{1}{z_n}$, so konvergierte
   $(w_n)_{n \in \N}$ gegen $\infty$ und $f(w_n) \ra f(0)$ für $n \ra
   \infty$. Setzen wir nun weiterhin $\tilde z_n := f(w_n)$ und $\tilde
   z = f(0)$, so erhielten wir also $\lim_{n \ra \infty} \tilde z_n =
@@ -128,7 +163,7 @@ nächsten zwei Abschnitten bestimmt.
   \[
   \psi: \P^1 \ra \P^1, \quad \psi(z) = \frac{bz + c}{z - a}
   \]
-  definieren, wobei $c \in \C$ mit $c \neq a$. Weiterhin gilt
+  definieren, wobei $c \in \C$ mit $c \neq a$ gewählt wurde. Weiterhin gilt
   \[
   \psi^{-1}: \P^1 \ra \P^1, \quad \psi^{-1}(z) = \frac{az +c}{z -b}
   \]
@@ -157,7 +192,7 @@ nächsten zwei Abschnitten bestimmt.
   Weiterhin ist $\det M = d( a-c) \neq 0$. Wählen wir als $\gamma$
   eine Wurzel von $\det M$ und definieren $\tilde M := \gamma^{-1} M$,
   so gilt $f(z) = M\langle z \rangle = \tilde M \langle z \rangle$ und
-  $\det \tilde M = \gamma^{-2} \det M = 1$. Also liegt $\tilde M \in
+  $\det \tilde M = \gamma^{-2} \det M = 1$. Also $\tilde M \in
   \PSL(2, \C)$.
 
   Für den Fall, dass $a = \infty = b$, so brauchen wir die
@@ -177,7 +212,7 @@ nächsten zwei Abschnitten bestimmt.
   Damit ist das Lemma von Schwarz (vgl. \cite[Satz 5.10]{Kas})
   anwendbar und wir erhalten sowohl für $g$, als auch für $g^{-1}$
   \begin{align*}
-    |g(z)| & \leq |z|, \\
+    |g(z)| & \leq |z| && \text{ und } \\
     |g^{-1}(z)| & \leq |z|.
   \end{align*}
   Es ergibt sich, dass
@@ -195,7 +230,7 @@ nächsten zwei Abschnitten bestimmt.
     f(z) = c f_w(z) = \frac{i dz - i dw}{ - \overline{idw} z +
       \overline{i d}}
   \end{align*}
-  gilt, wobei $d^2 = c$. Setzen wir $\tilde \alpha = i d$ und $\tilde
+  gilt, wobei $d^2 = c$ gilt. Setzen wir $\tilde \alpha = i d$ und $\tilde
   \beta = - i d w$, so folgt $|\tilde \alpha| = 1$ und $|\tilde \beta|
   = |w| < 1$. Wir definieren
   \[
@@ -237,11 +272,14 @@ nächsten zwei Abschnitten bestimmt.
     & = \frac{ - ( \Re(\alpha) + \Re(\beta)) z +  (\Im(\beta) -
       \Im(\alpha))}{(\Im(\alpha) + \Im(\beta))z + ( \Re(\beta) -
       \Re(\alpha))} \\
-    & =: M\langle z \rangle.
+    & =: \tilde M\langle z \rangle.
   \end{align*}
-  Betrachten wir nun $\det M$, so erhalten wir $\det M = |\alpha| -
-  |\beta| = 1$. Außerdem hat $M$ nur reelle Einträge, also liegt $M
-  \in \PSL(2, \R)$.
+  Betrachten wir nun $\det \tilde M$, so erhalten wir $\det M = |\alpha|^2 -
+  |\beta|^2 = |\alpha| + |\beta| > 0$. Wählen wir nun eine (reelle)
+  Wurze $\gamma$ von $\det \tilde M$ und setzen $M := \gamma^{-1}
+  \tilde M$, so gelten $\det M = 1$ und $M \langle z \rangle = \tilde M
+  \langle z \rangle$. Außerdem hat $M$ nur reelle Einträge, liegt also
+  in $\PSL(2, \R)$.
 \end{proof}
 
 \subsection{Gitter}
@@ -258,8 +296,8 @@ $\C$ ist.
 
 \begin{lemma}
   \label{lemma:gitter}
-  Sei $\Gamma \subset v$ eine additive Untergruppe. $\Gamma$ ist ein
-  Gitter genau dann, wenn
+  Sei $\Gamma \subset V$ eine additive Untergruppe und $V$ ein reeller
+  Vektorraum. Dann ist $\Gamma$ genau dann ein Gitter, wenn
   \begin{enumerate}
   \item $\Gamma$ diskret ist und
   \item $\Gamma$ nicht in einem echten Untervektorraum von $V$
@@ -315,6 +353,23 @@ $\C$ ist.
   \[
   x = \sum_{j=1}^n n_j \gamma_j \in \Z \gamma_1 + \dots + \Z \gamma_n.
   \]
+\end{proof}
+
+\begin{cor}
+  \label{cor:gitter}
+  Jede abelsche diskrete Untergruppe $G$ von $\R$ ist zyklisch.
+\end{cor}
+
+\begin{proof}
+  Die einzige in einem Untervektorraum von $\R$ enthaltene abelsche
+  Untergruppe ist $\{0\}$. Diese ist zyklisch, also können wir
+  annehmen, dass die Untergruppe $G$ von $\{0\}$ verschieden ist. Dann
+  liefert uns aber Lemma \ref{lemma:gitter}, dass $G$ ein Gitter ist,
+  d.h. es existiert ein $\gamma \neq 0$, so dass
+  \[
+  G = \Z \gamma
+  \]
+  gilt. Mit anderen Worten: $G$ ist zyklisch.
 \end{proof}
 
 %%% Local Variables: 

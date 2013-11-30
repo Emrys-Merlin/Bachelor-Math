@@ -11,8 +11,8 @@ nicht von der oberen Halbebene $\h$ überlagert werden können.
 Zunächst charakterisieren wir die Elemente in $\Aut(\h) = \PSL(2, \R)$
 durch ihre Fixpunkteigenschaften und zeigen die eigentliche Aussage
 dann dadurch, dass wir alle abelschen diskreten Untergruppen durch
-topologische Gruppenisomorphismen\footnote{d.h. bistetige
-  Gruppenisomorphisme} auf abelsche, diskrete Untergruppen
+topologische Gruppenisomorphismen\footnote{d.h. durch bistetige
+  Gruppenisomorphismen} auf abelsche, diskrete Untergruppen
 von $\R$ abbilden können. Diese haben wir jedoch im letzten Abschnitt
 als die zyklischen Untergruppen charakterisiert.
 
@@ -56,7 +56,7 @@ als die zyklischen Untergruppen charakterisiert.
     \label{eq:fixpkt}
     c z^2 + (d-a)z - b = 0
   \end{align}
-  Falls $c \neq 0$ gilt erhalten wir unter Ausnutzung von $\det S = 1$
+  gelten. Falls $c \neq 0$ gilt, erhalten wir unter Ausnutzung von $\det S = 1$
   \begin{align*}
     z_{1,2} & = \frac{a-d}{2c} \pm \sqrt{\frac{(d-a)^2}{4c^2} +
       \frac{b}{c}} \\
@@ -137,9 +137,21 @@ als die zyklischen Untergruppen charakterisiert.
 
 \begin{proof}
   \emph{Fall 1:} Sei $S \in \PSL(2, \R)$ elliptisch und $w \in \h$ der
-  Fixpunkt von $S$. Nun gilt nach Satz \ref{thm:aut}, dass ein $C \in
-  \PSL(2,\R)$ existiert, so dass $C \langle w \rangle = i$ ist. Setzen
-  wir
+  Fixpunkt von $S$. Nun existiert nach Lemma \ref{lemma:kreis-halbebene}
+  eine biholomorphe Abbildung $\phi: \h \ra B$ mit $h(i) = 0$. Setzen
+  wir $v = h(w)$ und betrachten die selbstinverse, biholomorphe
+  Abbildung
+  \[
+  f_v : B \ra B, f_v(z) = \frac{z-v}{\bar v z - 1},
+  \]
+  so erhalten wir $f_v(v) = 0$. Das bedeutet aber, dass die Abbildung
+  $\phi^{-1} \circ f_v \circ \phi$ in $\Aut(\h)$ liegt und $\phi^{-1}
+  \circ f_v \circ \phi (w) = i$ erfüllt. Aus Satz \ref{thm:aut} folgt,
+  dass ein $C \in \PSL(2, \R)$ existiert, so dass
+  \[
+  \phi^{-1} \circ f_v \circ \phi(z) = C \langle z \rangle
+  \]
+  gilt, es folgt also insbesonder $C\langle w \rangle = i$. Setzen wir
   \[
   \tilde S = CSC^{-1}
   \begin{pmatrix}
@@ -185,7 +197,7 @@ als die zyklischen Untergruppen charakterisiert.
   \]
   $C$ erfüllt die Gleichung $C \langle w \rangle  = \infty$. Also
   erfüllt $\tilde S = C S C^{-1}$ die Gleichung $\tilde S\langle \infty
-  \rangle = \infty$. Also haben wir diesen Fall auf den ersten Fall
+  \rangle = \infty$. Damit haben wir diesen Fall auf den ersten Fall
   zurückgeführt.
   
   \emph{Fall 3:} Sei $S \in \PSL(2, \R)$ hyperbolisch und seien $w_1
@@ -266,7 +278,7 @@ beginnen mit der folgenden Proposition.
   \langle p \rangle$. Also ist $p$ auch der einzige Fixpunkt von $T$
   und die Fixpunktmengen stimmen überein.
 
-  Lieben zwei Fixpunkte vor, so ist $T$ (und auch
+  Liegen zwei Fixpunkte vor, so ist $T$ (und auch
   $S$) parabaolisch und nach Lemma \ref{lemma:psl-trafo} existiert ein
   $C \in \PSL(2,\R)$, so dass
   \[
@@ -296,11 +308,11 @@ beginnen mit der folgenden Proposition.
 
   Gelte nun $\Fix(S) = \Fix(T)$, so stimmen die Typen von $S$ und $T$
   überein weiterhin finden wir nach Lemma \ref{lemma:psl-trafo} ein $C
-  \in PSl(2, \R)$, so dass $C S C^{-1}$ und $C T C^{-1}$ gemeinsam
+  \in \PSL(2, \R)$, so dass $C S C^{-1}$ und $C T C^{-1}$ gemeinsam
   eine der Formen aus dem obigen Lemma annehmen. Nun haben wir aber im
   elliptischen Fall Rotationen und die Gruppe der Rotationen im $\R^2$
   ist kommutativ. Im parabolischen Fall handelt es sich um
-  Translationen und diese bilden auch eine kommutative Gruppe. Der
+  Translationen und diese bilden auch eine abelsche Gruppe. Der
   hyperbolische Fall liefert Diagonalmatrizen, diese kommutieren immer
   mit allen anderen Matrizen, kommutieren also insbesondere
   untereinander. Aus der Kommutativität von $C S C^{-1}$ und $C T
@@ -335,14 +347,14 @@ beginnen mit der folgenden Proposition.
   einer diskreten Untergruppe von $S^1$ identifizieren. Angenommen
   diese Untergruppe wäre nicht zyklisch. Dann gäbe es $\phi \neq \psi
   \in \R$, so dass $e^{in\phi} \neq e^{im\psi}$ für beliebige $n, m
-  \in \Z$. Nun wissen wir aber nach Lemma \ref{lemma:gitter}, dass
-  eine nichttriviale additive Untergruppe von $\R$ ein Gitter sein
-  muss, d.h. die additive Untergruppe $L := \{ n \phi + m \psi \mid n,m \in
+  \in \Z$. Nun wissen wir aber nach Korollar \ref{cor:gitter}, dass
+  eine diskrete additive Untergruppe von $\R$ zyklisch sein muss,
+  d.h. die additive Untergruppe $L := \{ n \phi + m \psi \mid n,m \in
   \Z\}$ kann nicht diskret sein. Weiterhin ist die Abbildung
   \[
   p: \R \ra S^1, \quad \phi \mapsto e^{i\phi}
   \]
-  stetig, also kann auch $p(L) \leq G$ nicht diskret sein. Ein
+  ein lokaler Homöomorphismus und ein Gruppenhomomorphismus, also kann auch $p(L) \leq G$ nicht diskret sein. Ein
   Widerspruch. Also muss ein $\phi \in \R$ existieren, so dass
   \[
   G \cong \left \{ e^{in\phi} \mid n \in \Z \right \}
@@ -360,14 +372,13 @@ beginnen mit der folgenden Proposition.
   \end{pmatrix}
   \end{align}
   bringen, wobei $b \in \R$ gilt. Hier erhalten wir direkt einen
-  Homöomorphismus von der Menge der Matrizen der Form
+  topologischen Gruppenisomorphismus von der Menge der Matrizen der Form
   \eqref{eq:parabolisch} nach $\R$, in dem wir einfach die Komponente
   $b$ auswählen. Es ist also das Bild von $G$ unter diesem
   Homöomorphismus eine diskrete, abelsche
-  Untergruppe von $\R$. Nun wissen wir aber nach Lemma \ref{lemma:gitter},
-  dass die nichttrivialen diskreten, abelschen Untergruppen von $\R$ Gitter und
-  damit (im eindimensionalen Fall) zyklisch sind. Also ist auch $G$
-  zyklisch.
+  Untergruppe von $\R$. Nun wissen wir aber nach Korollar \ref{cor:gitter},
+  dass die nichttrivialen diskreten, abelschen Untergruppen von $\R$
+  zyklisch sind. Also ist auch $G$ zyklisch.
 
   Wenden wir uns dem letzten Fall zu. Seien also alle Elemente von $G$
   hyperbolisch. Dann finden wir erneut ein festes $C \in \PSL(2, \R)$,
@@ -379,8 +390,9 @@ beginnen mit der folgenden Proposition.
     0 & \lambda^{-1}
   \end{pmatrix}
   \end{align}
-  bringt. Auch hier finden wir einen Homöomorphismus von den Matrizen
-  der Form \eqref{eq:hyperbolisch} nach $\R_{> 0}$, in
+  bringt. Auch hier finden wir einen topologischen
+  Gruppenisomorphismus von den Matrizen
+  der Form \eqref{eq:hyperbolisch} nach $(\R_{> 0}, \cdot)$, in
   dem wir die Matrizen auf $\lambda^2$ abbilden. Das es sich
   tatsächlich um einen Homöomorphismus handelt, folgt aus der
   Tatsache, dass wir das Vorzeichen von $\lambda$ nach Definition von

@@ -28,8 +28,8 @@ notwendigen Beweisen zurückspringen.
   Eine Folge $(f_\nu)_{\nu \in \N} \subset \dist(X)$ heißt konvergent
   gegen $f \in \dist(X)$, schreibe $f_\nu \xrightarrow{\dist} f$,
   falls ein kompaktes $K \subset X$ mit $\Supp(f), \Supp(f_\nu)
-  \subset K$ für jedes $\nu \in \N$ und für alle $\alpha = (\alpha_1,
-  \alpha_2)^T \in \N^2$ gilt:
+  \subset K$ für jedes $\nu \in \N$ existiert und für alle $\alpha = (\alpha_1,
+  \alpha_2)^T \in \N^2$ gilt
   \[
   D^\alpha_\nu \rightrightarrows D^\alpha f \qquad \text{ auf } K
   \]
@@ -74,7 +74,7 @@ notwendigen Beweisen zurückspringen.
     und damit die Stetigkeit von $T_h$.
     Weiterhin ist die Abbildung $C(X) \ra \dist(X)', \quad h \mapsto
     T_h$ sogar injektiv. Dies ist eine direkte Folge des 
-    Fundamentallemmas der Variationsrechnung.
+    Fundamentallemmas der Variationsrechnung (vgl. \cite[§10 HS3]{ForAna}).
   \item Nicht alle Distributionen sind von der obigen Form. Ein
     Gegenbeispiel stellt die Diracsche Delta Distribution dar. Für ein
     $a \in X$ ist sie durch
@@ -111,7 +111,7 @@ notwendigen Beweisen zurückspringen.
   glatt auf $I$ und genügt
 \begin{align}
   \frac{\d}{\d[t]} T_z[g(z,t)] = T_z \left [ \frac{\partial
-      g(z,t)}{\partial t} \right ] \label{eq:dist-ableitung}
+      g(z,t)}{\partial t} \right ]. \label{eq:dist-ableitung}
   \end{align}
   $T_z$ soll dabei nur verdeutlichen dass $T$ nur auf $g(z,t)$ als
   Variable von $z$ operiert; $t$ bleibt als Parameter unberührt.
@@ -128,12 +128,12 @@ notwendigen Beweisen zurückspringen.
   \end{align*}
   Für festes $t \in I$ und $h \in \R^\times$ klein genug, ist $f_h(z)
   := \frac1h ( g(z, t+h) - g(z,t))$ wohldefiniert und in
-  $\dist(X)$. Weiterhin gitl $f_n \xrightarrow{\dist}
+  $\dist(X)$. Weiterhin gilt $f_n \xrightarrow{\dist}
   \frac{\partial g(\cdot, t)}{\partial t}$, da $g$ glatt ist. 
   Aus der Stetigkeit von $T$ folgt damit
   \[
   \lim_{h\ra 0} T_z[f_h] = T_z[\lim_{h \ra 0} f_h] = T_z\left[
-    \frac{\partial g(z,t)}{\partial t} \right]
+    \frac{\partial g(z,t)}{\partial t} \right].
   \]
 \end{proof}
 
@@ -147,7 +147,7 @@ notwendigen Beweisen zurückspringen.
   T_w\left [ \iint_Y g(w,z) \d[x]\d[y] \right ] = \iint_Y T_w [
   g(w,z)] \d[x]\d[y],
   \]
-  wobei die $z = x + iy$ gesetzt wurde.
+  wobei $z = x + iy$ gesetzt wurde.
 \end{lemma}
 
 \begin{proof}
@@ -179,9 +179,9 @@ notwendigen Beweisen zurückspringen.
   alle $z \in R_{n_\nu}$ und für alle $n \geq N$. Insgesamt erhalten
   wir
   \begin{align*}
-    |G_n(w) - \iint_R g(w,z) \d[x]\d[y]| & = | \sum_{\nu = 1}^{n^2}
-    \left ( \frac{F}{n^2} g(w, z_{n_\nu}) - \iint_{R_{n_\nu}} g(w,z)
-      \d[x]\d[y] \right ) \\
+    |G_n(w) - \iint_R g(w,z) \d[x]\d[y]| & = \left | \sum_{\nu = 1}^{n^2}
+    \middle ( \frac{F}{n^2} g(w, z_{n_\nu}) - \iint_{R_{n_\nu}} g(w,z)
+      \d[x]\d[y] \middle ) \right | \\
     & \leq \sum_{\nu=1}^{n^2} \left | \iint_{R_{n_\nu}}
       (g(w,z_{n_\nu}) - g(w,z)) \d[x]\d[y] \right | \\
     & \leq \sum_{\nu=1}^{n^2} \iint_{R_{n_\nu}} |g(w, z_{n_\nu}) -
@@ -200,7 +200,7 @@ notwendigen Beweisen zurückspringen.
   gilt. Also folgt aus der Stetigkeit von $T$
   \[
   T_w \left [ \iint_Y g(w, z) \d[x]\d[y] \right ] = \lim_{n \ra
-    \infty} T[G_n] = \iint_Y T_w[g(w,z)] \d[x]\d[y]
+    \infty} T[G_n] = \iint_Y T_w[g(w,z)] \d[x]\d[y].
   \]
 \end{proof}
 
@@ -211,7 +211,7 @@ notwendigen Beweisen zurückspringen.
   $\rho \in \dist(\C)$ heißt \init{Glättungskern}, falls die folgenden
   Eigenschaften erfüllt sind:
   \begin{enumerate}
-  \item Es gilt $\Supp(\rho) \subset \bar D$.
+  \item Es gilt $\Supp(\rho) \subset \overline{B_1(0)}$.
   \item $\rho$ ist rotationssymmetrisch zum Ursprung.
   \item Es gilt $\rho \geq 0$\footnote{Insbesondere ist $\rho$ also reellwertig.}.
   \item Es gilt $\iint_\C \rho(z) \d[x]\d[y] = 1$, wobei $z = x + iy$
@@ -222,7 +222,7 @@ notwendigen Beweisen zurückspringen.
   \rho_\epsilon(z) = \frac{1}{\epsilon^2} \rho\left(
     \frac{z}{\epsilon} \right )
   \]
-  Dann ist $\Supp(\rho_\epsilon) \subset \bar D(\epsilon)$ und
+  Dann ist $\Supp(\rho_\epsilon) \subset \overline{B_\epsilon(0)}$ und
   $\iint_\C \rho_\epsilon(z) \d[x]\d[y] = 1$.
 \end{defin}
 
@@ -267,9 +267,9 @@ notwendigen Beweisen zurückspringen.
     \sm_\epsilon (D^\alpha f).
     \]
   \item Falls $z \in U^{(\epsilon)}$ und $f$ harmonisch auf
-    $B_\epsilon(z)$ ist, so gilt:
+    $B_\epsilon(z)$ ist, so gilt
     \[
-    \sm_\epsilon f(z) = f(z)
+    \sm_\epsilon f(z) = f(z).
     \]
   \end{enumerate}
 \end{lemma}
@@ -298,12 +298,12 @@ notwendigen Beweisen zurückspringen.
     in dem man das Vorzeichen, das durch die Kettenregel entsteht
     ausgleicht.
   \item Wenn $f$ harmonisch auf $B_\epsilon(z)$ ist, können wir die
-    Mittelwerteigenschaft anwenden und erhalten:
+    Mittelwerteigenschaft \ref{cor:harm-darstellung} anwenden und erhalten
     \[
     f(z) = \frac{1}{2\pi} \int_0^{2\pi}f(z + re^{i\phi}) \d[\phi]
-    \qquad \forall r \in ]0, \epsilon[
+    \qquad \forall r \in ]0, \epsilon[.
     \]
-    Die folgende Rechnung liefert dann die Behauptung:
+    Die folgende Rechnung liefert dann 
     \begin{align}
       (\sm_\epsilon f)(w) & = \iint_u \rho_\epsilon(w- z) f(z)
       \d[x]\d[y] \nonumber\\
@@ -315,7 +315,7 @@ notwendigen Beweisen zurückspringen.
        re^{i\phi}) r \d[r] \d[\phi] \nonumber \\
       & = \int_0^\epsilon \tilde \rho_\epsilon(r) r\d[r] \cdot 2 \pi
       f(w) \nonumber \\
-      & = f(z) \label{eq:glättung-norm} 
+      & = f(z). \label{eq:glättung-norm} 
     \end{align}
     \eqref{eq:glättung-norm} gilt dabei, aufgrund der Gleichung
     \begin{align*}
@@ -346,8 +346,9 @@ notwendigen Beweisen zurückspringen.
   \]
   wohldefiniert. Nach Lemma \ref{lemma:dist-glatt} ist $h_\epsilon \in
   \diff(U^{(\epsilon)})$. 
-  Sei nun $f \in \dist(U)$ mit $\Supp(f) \subset U^{(\epsilon)}$. Dann
-  hat $\sm_\epsilon f$ kompakten Träger in $U$, denn für $w \in U$ mit
+  Sei nun $f \in \dist(U)$ mit $\Supp(f) \subset U^{(\epsilon)}$. Wir
+  wollen zunächst zeigen, dass $\sm_\epsilon f$ kompakten Träger in
+  $U$ hat. Denn für $w \in U$ mit
   $B_\epsilon(w) \cap U \neq \varnothing$ ist $f|_{B_\epsilon(w) \cap U}
   \equiv 0$ und es folgt $\sm_\epsilon f(w) = 0$. Also gilt
   \[
@@ -359,17 +360,17 @@ notwendigen Beweisen zurückspringen.
   \in M$, finden wir nun ein $z \in B_\epsilon(w) \cap U$ und wir
   erhalten
   \[
-  |w| \leq |w-z| + |z| < S + \epsilon
+  |w| \leq |w-z| + |z| < S + \epsilon.
   \]
   Also ist $M$ und damit $\Supp \sm_\epsilon f$ beschränkt. Da $\Supp
   \sm_\epsilon f$ auch abgeschlossen ist, ist es sogar kompakt und wir können folgende
-  Rechnung durchführen:
+  Rechnung durchführen
   \begin{align}
     T[\sm_\epsilon f] & = T_w \left [ \iint_U \rho_\epsilon(w - z)
       f(z) \d[x]\d[y] \right ] \nonumber \\
     & = \iint_U T_w[\rho_\epsilon(w-z)] f(z)
     \d[x]\d[y] \label{eq:weyl} \\
-    & = \iint_U h_\epsilon(z) f(z) \d[x]\d[y] \nonumber
+    & = \iint_U h_\epsilon(z) f(z) \d[x]\d[y]. \nonumber
   \end{align}
   Als nächstes wollen wir zeigen, dass $T[f] = T[\sm_\epsilon f]$
   gilt. Nun können $f$ auch als Funktion auf $\C$ auffassen, in dem
@@ -385,11 +386,11 @@ notwendigen Beweisen zurückspringen.
   f
   \]
   Da nun aber $\Delta T = 0$, folgt $T[\Delta \phi] = 0$ und
-  schlussendlich
+  schlußendlich
   \begin{align*}
     T[f] & = T[\sm_\epsilon f + \Delta \phi] \\
     & = T[\sm_\epsilon f] \\
-    & = \iint_{U^{(\epsilon)}} h_\epsilon(z) f(z) \d[x]\d[y]
+    & = \iint_{U^{(\epsilon)}} h_\epsilon(z) f(z) \d[x]\d[y].
   \end{align*}
   Für beliebige $0 < \epsilon', \epsilon'' \leq \epsilon$ gilt
   $U^{(\epsilon)} \subset U^{(\epsilon')}, U^{(\epsilon'')}$ und es
@@ -413,6 +414,7 @@ notwendigen Beweisen zurückspringen.
   \[
   T[f] = \iint_U h(z)f(z) \d[x]\d[y] \qquad \forall f \in \dist(U)'
   \]
+  gilt.
 \end{cor}
 
 \begin{proof}

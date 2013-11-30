@@ -5,7 +5,7 @@
 Im Gegensatz zu reellen Mannigfaltigkeiten haben wir bei der
 Definition einer Riemannschen Fläche nicht gefordert, dass diese eine
 abzählbare Basis der Topologie besitzt. Dies ist tatsächlich nicht
-erforderlich, sondern ergibt sich als Konsequenz der komplexen
+erforderlich, sondern ergibt sich als Konsequenz aus der komplexen
 Struktur.
 
 Der erste Teil des Kapitels gibt uns verschiedene Kriterien, um die
@@ -38,8 +38,8 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
   müssen nun zeigen, dass ein $V \in \be$ existiert mit $y \in V
   \subset D$. Aus der Surjektivität von $f$ erhalten wir ein $x \in X$ mit $f(x) =
   y$. Weiterhin ist $f^{-1}(D)$ offen und eine Umgebung von $x$, da
-  $f$ stetig ist. Da $\fu$ eine Basis der Topologie von $X$ ist
-  existiert ein $U \in \fu$ mit $x \in U \subset f^{-1}(D)$. Also
+  $f$ stetig ist. Nun ist $\fu$ eine Basis der Topologie von
+  $X$. Demnach existiert ein $U \in \fu$ mit $x \in U \subset f^{-1}(D)$. Also
   genügt $V:=f(U)$ den geforderten Eigenschaften.
 \end{proof}
 
@@ -56,22 +56,20 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
   Wir bezeichnen mit $\be$ die Menge aller offenen Teilmengen $V \subset X$
   mit
   \begin{enumerate}
-  \item $V$ besitzt eine abzählbare Basis der Topologie
+  \item $V$ besitzt eine abzählbare Basis der Topologie und 
   \item $V$ ist eine Zusammenhangskomponente eines $f^{-1}(U)$ für ein
     $U \in \fu$.
   \end{enumerate}
-  Zunächst zeigen wir, dass $\be$ eine Basis der Topologie von $X$ der
-  Topologie ist.
+  Zunächst zeigen wir, dass $\be$ eine Basis der Topologie von $X$ ist.
   Sei $D \subset X$ offen mit $x \in D$. Zu zeigen ist, dass ein $V
-  \in \be$ existiert, so dass $x \in V \subset D$. 
-  Da $f$ diskret ist existiert ein $W \subset D$ offen und relativ
-  kompakt, $x \in W$ und
+  \in \be$ existiert, so dass $x \in V \subset D$ gilt.
+  Da $f$ diskret ist, existiert ein offenes $W \Subset D$  mit $x \in W$ und
   \[
   \partial W \cap f^{-1}(f(x)) = \varnothing.
   \]
   Dies lässt sich einfach auf einer Karte um $x$
   verifizieren. 
-  Nun ist $f(\partial w)$ kompakt, also abgeschlossen und $f(x)
+  Nun ist $f(\partial W)$ kompakt, also abgeschlossen und $f(x)
   \notin f(\partial W)$, d.h. $f(x)$ liegt in der offenen Menge $\C
   \setminus f(\partial W)$, also existiert ein $U \in \fu$, so dass
   $f(x) \in U$ und $U \cap f(\partial W) = \varnothing$. Sei  $V$
@@ -79,7 +77,7 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
   gilt $V \cap \partial W = \varnothing$ und da $V$ zusammenhängend
   ist folgt $V \subset W$. Also besitzt $V$ eine abzählbare Basis
   der Topologie als Teilmenge einer relativ kompakten Menge und
-  damit $V \in \be$.
+  damit folgt $V \in \be$.
   
   Als nächstes beweisen wir, dass jedes $V_0 \in \be$ höchstens abzählbar
   viele $V \in \be$ schneidet.
@@ -100,7 +98,7 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
   \in V^\ast$. Dann existiert eine Kurve $c: [0,1] \ra X$ mit $c(0)
   = x$ und $c(1) = y$. Weiterhin ist $c([0,1])$ kompakt und damit
   finden wir eine endliche offene Überdeckung $V_0, \dots, V_n$ von
-  $c([0,1])$, wobei $V_o = V^\ast$ und $V_n = V$ ist. Weiterhin
+  $c([0,1])$, wobei $V_0 = V^\ast$ und $V_n = V$ ist. Weiterhin
   können wir nach einer Umsordnung ohne Einschränkung annehmen,
   dass $V_{i-1} \cap V_{i} \neq \varnothing$ für alle $i= 1, \dots,
   n$ gilt. Also liegt $V \in \be_n$.
@@ -109,7 +107,7 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
   Klarerweise ist $\be_0 = \{V^\ast\}$ abzählbar. Angenommen $\be_n$
   ist abzählbar. $\be_{n+1}$ besteht dann aus allen $V \in \be$, so
   dass ein $\tilde V \in \be_n$ existiert mit $V \cap \tilde V \neq
-  \varnothing$. Nach 2. existieren zu jedem $\tilde V \in be_n$ nur
+  \varnothing$. Nach 2. existieren zu jedem $\tilde V \in \be_n$ nur
   abzählbar viele $V$, die nicht-leeren Schnitt damit besitzen. 
   Da $\be_n$ nun abzählbar ist und pro $\tilde V$ nur abzählbar
   viele $V$ existieren, ist auch $\be_{n+1}$ abzählbar.
@@ -136,24 +134,41 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
   Nach \cite[Kor. 10.6]{For} existiert eine holomorphe Stammfunktion
   $f$ von $p^\ast\omega$ auf der universellen Überlagerung $p: \tilde
   Y \ra Y$. Da $f$ nicht konstant ist, genügt $f$ den Voraussetzungen von
-  Lemma \ref{lemma:poincare-volterra}\footnote{denn $\C$ ist hausdorffsch
-  und besitzt eine abzählbare Basis der Topologie}. Also besitzt auch
-  $\tilde Y$ eine abzählbare Basis der Topologie und aus
-  Lemma \ref{lemma:surj-offen-top} folgt, dass $Y$ eine abzählbare
-  Basis der Topologie. Nun ist $X = Y \cup U$ und $U$ ist homöomorph
+  Lemma \ref{lemma:poincare-volterra}\footnote{Denn $\C$ ist hausdorffsch
+  und besitzt eine abzählbare Basis der Topologie.}. Also besitzt
+  $\tilde Y$ eine abzählbare Basis der Topologie und durch
+  Lemma \ref{lemma:surj-offen-top} überträgt sich dies direkt auf
+  $Y$. Nun ist $X = Y \cup U$ und $U$ ist homöomorph
   zu einer offenen Teilmenge in $\C$, besitzt also auch eine
   abzählbare Basis der Topologie. 
   Insgesamt ergibt sich also, dass auch $X$ eine abzählbare Basis der
   Topologie besitzt.
 \end{proof}
 
+\begin{lemma}
+  \label{lemma:komp-enthalten}
+  Sei $X$ eine Riemannsche Fläche und $K \subset X$ kompakt. Dann
+  existiert ein offenes $M \Subset X$ mit $K \subset M$.
+\end{lemma}
+
+\begin{proof}
+  Zu jedem $z \in K$ finden wir eine relativ kompakte
+  Koordinatenumgebung $U_z$. Dann ist aber $K \subset \bigcup_{z \in
+    K}U_z$ und aus der Kompaktheit von $K$ folgt, dass endlich viele
+  $z_1, \dots, z_n \in K$ existieren, so dass $K \subset
+  \bigcup_{i=1}^n U_{z_i}$. Setzen wir $M := \bigcup_{i=1}^n U_{z_i}$,
+  so ist $M$ offen und relativ kompakt, weiterhin gilt $K \subset M$,
+  was die Behauptung zeigt.
+\end{proof}
+
 \begin{defin}
   Sei $X$ eine Riemannsche Fläche. Für alle $Y \subset X$ definieren
   wir $\runge(Y)$ durch $Y$ vereinigt mit allen relativ kompakten
-  Zusammenhangskomponenten von $X \setminus Y$. $Y \subset X$ heißt
-  \init{Runge-Teilmenge} falls $Y = \runge(Y)$. Es gilt:
+  Zusammenhangskomponenten von $X \setminus Y$.
+
+  $Y \subset X$ heißt \init{Runge-Teilmenge} falls $Y = \runge(Y)$. Es gilt:
   \begin{enumerate}
-  \item $\runge(\runge(Y)) = \runge(Y) \quad \forall Y \subset X$ \todo{ausrechnen}
+  \item $\runge(\runge(Y)) = \runge(Y) \quad \forall Y \subset X$
   \item $Y_1 \subset Y_2$ impliziert $\runge(Y_1) \subset
     \runge(Y_2)$, denn entweder $x \in Y_1$ liegt bereits in $Y_2$
     oder aber $x \in Z \subset X \setminus Y_1$ eine relativ kompakte
@@ -179,10 +194,9 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
 \begin{proof}
   \begin{enumerate}
   \item Seien $C_j, j \in J$ die Zusammenhangskomponenten von $X
-    \setminus Y$ Da $X \setminus Y$ ist offen und $X$ ist eine
-    Mannigfaltigkeit, deshalb sind alle $C_j$ offen. Sei $J_0 \subset
-    J$, die Menge der $j \in J$, so dass $C_j$ relativ kompakt
-    ist. Dann erhalten wir
+    \setminus Y$. Nach Lemma \ref{lemma:zsh-komp} sind alle $C_j$ offen.
+    Sei $J_0 \subset J$, die Menge der $j \in J$, so dass $C_j$
+    relativ kompakt ist. Dann erhalten wir
     \[
     X \setminus \runge(Y) = \bigcup_{j \in J\setminus J_0} C_j
     \]
@@ -190,19 +204,17 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
     ist $\runge(Y)$ abgeschlossen.
   \item Wir können ohne Einschränkung $Y \neq \varnothing$
     annehmen. Sei $U$ eine offene, relativ kompakte Umgebung von
-    $Y$. Diese existiert, denn wir können $Y$ durch endlich viele
-    relativ kompakte Koordinatenumgebungen überdecken. Die Vereinigung
-    dieser Koordinatenumgebungen ergibt dann unser $U$. Sei weiterhin
-    $C_j, j\in J$ wie oben.
+    $Y$. Diese existiert nach Lemma \ref{lemma:komp-enthalten}.
+    Sei weiterhin $C_j, j\in J$ wie oben.
 
-    Nun trifft jedes $C_j$ trifft $\bar U$. Denn andernfalls wäre $C_j
+    Jedes $C_j$ trifft nun aber $\bar U$. Denn andernfalls wäre $C_j
     \subset X \setminus \bar U$, also $\bar C_j
     \subset X \setminus U \subset X \setminus Y$. Da $C_j$ eine
     Zusammenhangskomponente von $X \setminus Y$ ist, folgt $C_j =
     \bar C_j$. Also ist $C_j$ offen und abgeschlossen, also $C_j =
     \varnothing$ oder $C_j = X$. Beides führt zum Widerspruch.
 
-    Nun behaupten wir, dass ur endlich viele $C_j$ den Rand $\partial
+    Nun behaupten wir, dass nur endlich viele $C_j$ den Rand $\partial
     U$ treffen. 
     Dies folgt daraus, dass $\partial U$ kompakt ist und durch die
     disjunkten $C_j$ überdeckt wird.
@@ -216,7 +228,7 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
     \runge(Y) \subset U \cup C_{j_1} \cup \dots \cup C_{j_n}
     \]
     und damit ist $\runge(Y)$ relativ kompakt. Da $\runge(Y)$ nach 1. aber auch
-    abgeschlossen ist, ist es tatsächlich kompakt.
+    abgeschlossen ist, ist es bereits kompakt.
   \end{enumerate}
 \end{proof}
 
@@ -238,12 +250,12 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
   \fu := \{ B \in \be \mid \bar B \text{ ist kompakt}\}.
   \]
   Wir behaupten nun, dass bereits $\fu$ eine Basis der Topologie von
-  $X$ ist. Sei dazu $\varnothing \neq U \subset X$ und $x \in U$. Dann
+  $X$ ist. Sei dazu $\varnothing \neq U \subset X$ offen und $x \in U$. Dann
   können wir eine relativ kompakte Koordinatenumgebung $V \subset U$
   von $x$ finden. Da $\be$ eine Basis der Topologie ist, finden wir
   ein $B \in \be$, so dass $x \in B \subset V$. Also ist $\bar B
   \subset \bar V$ kompakt und damit liegt $B \in \fu$ und es gilt $x
-  \in B \subset U$. Also ist $\fu$ eine weiter abzählbare Basis der
+  \in B \subset U$. Also ist $\fu$ eine weitere abzählbare Basis der
   Topologie von $X$.
 
   Wir wählen nun eine Aufzählung für $\fu = \{B_i \mid i \in \N\}$ und
@@ -279,29 +291,13 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
   kompakt ist, existierte eine konvergente Teilfolge $(x_{n_k})_{k\in
     \N}$ mit Grenzwert $x \in K$. Nun existiert aber ein $n \in \N$,
   so dass $x \in \mathring K_n$ gilt. Damit wäre $\mathring K_n$ eine offene
-  Umgebung von $x$ und wir fänden ein $K \in \N$, so dass $x_{n_k} \in
-  K_n$ für jedes $k\geq K$ gälte. Das aber bedeutete, dass eine
-  zweites $\tilde K \in \N$ existieren müsste, so dass $x_{n_k} \in K_{n_k}$
-  für alle $k \geq \tilde K$ gälte. Dies ist aber ein Widerspruch dazu,
+  Umgebung von $x$ und wir fänden ein $L \in \N$, so dass $x_{n_k} \in
+  K_n$ für jedes $k\geq L$ gälte. Das aber bedeutete, dass eine
+  zweites $\tilde L \in \N$ existieren müsste, so dass $x_{n_k} \in K_{n_k}$
+  für alle $k \geq \tilde L$ gälte. Dies ist aber ein Widerspruch dazu,
   dass $x_n \in K \setminus K_n$ gilt.
 \end{proof}
 
-
-\begin{lemma}
-  \label{lemma:komp-enthalten}
-  Sei $X$ eine Riemannsche Fläche und $K \subset X$ kompakt. Dann
-  existiert ein offenes $M \Subset X$ mit $K \subset M$.
-\end{lemma}
-
-\begin{proof}
-  Zu jedem $z \in K$ finden wir eine relativ kompakte
-  Koordinatenumgebung $U_z$. Dann ist aber $K \subset \bigcup_{z \in
-    K}U_z$ und aus der Kompaktheit von $K$ folgt, dass endlich viele
-  $z_1, \dots, z_n \in K$ existieren, so dass $K \subset
-  \bigcup_{i=1}^n U_{z_i}$. Setzen wir $M := \bigcup_{i=1}^n U_{z_i}$,
-  so ist $M$ offen und relativ kompakt, weiterhin gilt $K \subset M$,
-  was die Behauptung zeigt.
-\end{proof}
 
 \begin{cor}
   \label{cor:ausschöpfung-kompakt}
@@ -323,7 +319,8 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
   $K_0, \dots, K_n$ bereits konstruiert. Dann existiert nach Lemma
   \ref{lemma:komp-enthalten} ein
   kompaktes $M \subset X$ mit $K_n' \cup K_n \subset \mathring
-  M$. 
+  M$. Wir setzen $K_{n+1} = \runge{M}$ und haben die gewünschte Folge
+  gefunden.
 \end{proof}
 
 \begin{lemma}
@@ -340,14 +337,15 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
 \begin{proof}
   Zu jedem $x \in \partial K_2$ existiert eine Koordinatenumgebung $U$
   von $x$, so dass $K_1 \cap U = \varnothing$ gilt. Wir wählen eine kompakte
-  Scheibe $D$, die $x$ im Inneren enthält. Da $\partial K_2$ auch
+  Kreisscheibe $D$\footnote{Das heißt $z(D)$ ist eine Kreisscheibe in
+    $\C$}, die $x$ im Inneren enthält. Da $\partial K_2$auch
   kompakt ist, wird es durch endlich viele $D_1, \dots, D_k$
-  überdeckt. Setze $Y := K_2 \setminus (D_1 \cup \dots \cup D_k)$. 
+  überdeckt. Wir setzen $Y := K_2 \setminus (D_1 \cup \dots \cup D_k)$. 
   Dann ist $Y$ offen und liegt zwischen $K_1$ und $K_2$. 
   Seien $c_j, j \in J$ die Zusammenhangskomponenten von $X \setminus
   K_2$. Nach Voraussetzund sind diese nicht relativ kompakt. Nun
   treffen alle $D_i$ mindestens ein $C_j$, da $D_i \cap (Y \setminus
-  K_2) \neq \varnothing$ sein muss. DA alle $D_i$ zusammenhängend
+  K_2) \neq \varnothing$ sein muss. Da alle $D_i$ zusammenhängend
   sind, sind die $D_i \cap C_j$ zusammenhängend un nicht relativ
   kompakt. Also existieren keine relativ kompakten
   Zusammenhangskomponenten in $X\setminus Y$. Also $Y = \runge(Y)$.
@@ -389,16 +387,15 @@ in Kapitel \ref{sec:Runge} ausführlich behandelt.
   
   Sei nun $C$ eine Zusammenhangskomponente von $X \setminus
   Y_i$. Dann trifft $C$ mindestens ein $A_k$. Also ist $A_k
-  \subset C$ und da $A_k$ nicht kompakt ist, ist $C$ auch nicht kompakt.
-  Damit ist $Y_i$ Runge-Teilmenge.
+  \subset C$ und da $A_k$ nicht kompakt ist, ist auch $C$ nicht kompakt.
+  Damit ist $Y_i$ eine Runge-Teilmenge.
 \end{proof}
 
 \begin{thm}
   \label{thm:Ausschöpfung-Runge}
-  Sei $X$ eine nicht kompakte Riemannsche Fläche. \\
-  Dann existiert eine Ausschöpfung $Y_0 \Subset Y_1 \Subset \dots$ von
-  $X$ durch relativ kompakte Runge-Gebiete. Weiterhin hat jedes $Y_i$
-  regulären Rand.
+  Sei $X$ eine nicht kompakte Riemannsche Fläche. Dann existiert eine
+  Ausschöpfung $Y_0 \Subset Y_1 \Subset \dots$ von $X$ durch relativ
+  kompakte Runge-Gebiete. Weiterhin hat jedes $Y_i$ regulären Rand.
 \end{thm}
 
 \begin{proof}

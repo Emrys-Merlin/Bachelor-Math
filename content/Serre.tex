@@ -1,4 +1,3 @@
-
 \section{Der Serresche Dualitätssatz}
 \label{sec:serre}
 
@@ -21,7 +20,7 @@ Geschlecht des Torus zu bestimmen.
 Das gesamte Kapitel ist im Wesentlichen sehr technisch, da zunächst
 das Vokabular entwickelt werden muss, um unseren gewünschten
 Isomorphismus definieren zu können. Anschließend sind noch weitere
-technische Lemmata nötig, um die Injektivität und Surjektivität zu
+Lemmata nötig, um die Injektivität und Surjektivität zu
 zeigen. Ein wichtiges Hilfsmittel wird das Residuum einer
 Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
 
@@ -63,7 +62,7 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   \]
   wobei $a \in U_i$. Falls $a \in U_i \cap U_j$, so gilt
   $\res_a(\omega_i) = \res_a(\omega_j)$, denn $\omega_j - \omega_i$
-  ist holomorph. Damit ist $\res_a(\mu)$ wohldefiniert, denn ist ist
+  ist holomorph. Damit ist $\res_a(\mu)$ wohldefiniert, denn es ist
   von der Wahl von $U_i$ unabhängig. Ist $X$ kompakt, so ist $\res_a(\mu) = 0$ für fast
   alle $a \in X$ und wir können
   \[
@@ -101,7 +100,7 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   \]
   Seien nun $a_1, \dots, a_n \in X$ die endlich vielen Pole von $\mu$
   und $X' := X \setminus \{a_1, \dots, a_n\}$. Auf $X' \cap U_i \cap
-  U_j$ gilt $\sigma_i - \omega_i \cong \sigma_j - \omega_j$. Erneut
+  U_j$ gilt $\sigma_i - \omega_i \equiv \sigma_j - \omega_j$. Erneut
   verwenden wir die Garbeneigenschaften und finden ein $\sigma \in
   \diff^{1,0}(X')$ mit $\sigma|_{X' \cap U_i} \equiv \sigma_i -
   \omega_i$. Wir erhalten
@@ -112,9 +111,9 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   Und damit gilt $\d[\sigma] \equiv \tau$ auf $X'$. Als nächstes
   wählen wir zu jedem $a_k$ ein $i(k) \in I$, so dass $a_k \in
   U_{i(k)}$ gilt. Weiterhin wählen wird Koordinatenumgebungen $(V_k,
-  z_k)$ mit folgenden Eigenschaften
+  z_k)$ mit den Eigenschaften
   \begin{enumerate}
-  \item Es gelten $V_k \subset U_{i(k)}$ und $z_k(a_k) = 0$,
+  \item ss gelten $V_k \subset U_{i(k)}$ und $z_k(a_k) = 0$,
   \item es ist $V_k \cap V_j = \varnothing$ für alle $k \neq j$ und
   \item $z_k(V_k) \subset \C$ ist eine Kreisscheibe.
   \end{enumerate}
@@ -186,12 +185,15 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
 
 \begin{proof}
   Sei $\omega \in \mer^{(1)}(X)^\times$, $K = (\omega)$ und $g$ das
-  Geschlecht von $X$. Setzen wir $k_0 := 1 - g + \deg K$, so gilt nach
-  dem Satz von Riemann-Roch
+  Geschlecht von $X$. Setzen wir
+  \[
+  k_0 := 1 - g + \deg K,
+  \]
+  so gilt nach dem Satz von Riemann-Roch
   \begin{align*}
     \dim H^0(X, \Omega_D) & = \dim H^0(X, \hol_{D+K}) \\
     & = \dim H^1(X, \hol_{D+K}) + 1 - g + \deg(D+K) \\
-    & \geq \deg D + k_0
+    & \geq \deg D + k_0.
   \end{align*}
 \end{proof}
 
@@ -214,7 +216,7 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   \g{\cdot}{\cdot}: H^0(X, \Omega_{-D}) \times H^1(X, \hol_D) \ra \C,
   \quad \g{\omega}{\xi} := \res(\xi \omega)
   \]
-  Diese lineare Abbildung liefert uns eine lineare Abbildung
+  Diese bilineare Abbildung liefert uns eine lineare Abbildung
   \[
   \iota_D : H^0(X, \Omega_{-D}) \ra H^1(X, \hol_D)^\ast
   \]
@@ -294,7 +296,7 @@ erster Schritt ist der nächste Satz.
   \label{lemma:urbilder}
   Sei die Notation wie in Lemma \ref{lemma:cd}. Seien weiterhin
   $\lambda \in H^1(X, \hol_D)^\ast$ und $\omega \in H^0(X,
-  \Omega_{-D})$ mit $i_{D'}^D(\lambda) = \iota_{D'}(\omega)$. Dann
+  \Omega_{-D'})$ mit $i_{D'}^D(\lambda) = \iota_{D'}(\omega)$. Dann
   liegt $\omega$ bereits in $H^0(X, \Omega_{-D})$ und $\lambda =
   \iota_D (\omega)$.
 \end{lemma}
@@ -320,19 +322,19 @@ erster Schritt ist der nächste Satz.
   \delta \eta \in Z^1(\fu, \hol) = Z^1(\fu, \hol_D) = Z^1(\fu,
   \hol_{D'})
   \]
-  Bezeichnen wir mit $\xi'$ die
+  gilt. Bezeichnen wir mit $\xi'$ die
   Kohomologieklasse von $\delta \eta$ in $H^1(X, \hol_{D'})$ und mit
   $\xi$ die Kohomologieklasse von $\delta \eta$ in $H^1(X, \hol_D)$,
   so erhalten wir zunächst, weil $\eta \in C^0(\fu, \hol_D)$ ist, dass
   $\xi = 0$ gilt. Nach Voraussetzung gälte nun aber
   \[
   \g{\omega}{\xi'} = \iota_{D'}(\omega)(\xi') =
-  i_{D'}^D(\lambda)(\xi') = \lambda(\xi) = 0
+  i_{D'}^D(\lambda)(\xi') = \lambda(\xi) = 0.
   \]
   Andererseits ist $\omega \eta = \left ( \frac{\d[z]}{z}, 0 \right )$
   und es folgt
   \[
-  \g{\omega}{\xi'} = \res(\omega \eta) = 1
+  \g{\omega}{\xi'} = \res(\omega \eta) = 1.
   \]
   Ein Widerspruch. Also muss $\omega \in H^0(X, \Omega_{-D})$
   gelten. Da dann $i_{D'}^D(\lambda) = \iota_{D'}(\omega) =
@@ -376,19 +378,19 @@ erster Schritt ist der nächste Satz.
 \begin{proof}
   Dass Multiplikation mit $\psi$ ein Garbenhomomorphismus ist, ist klar
   und damit folgt die Existenz der linearen Abbildungen. Die
-  Kommutativität des Diagramms erhalten wir aus der Tatsache, dass für
-  beliebige $\omega \in H^0(X, \Omega_{-D})$ und $\xi \in H^1(X,
+  Kommutativität des Diagramms erhalten wir aus der Tatsache, dass wir
+  für beliebige $\omega \in H^0(X, \Omega_{-D})$ und $\xi \in H^1(X,
   \hol_{D-B})$ die folgende Rechnung durchführen können
   \begin{align*}
     \iota_{D-B}(\psi \omega)(\xi) = \g{\psi \omega}{\xi} = \res((\psi
     \omega) \xi) = \res(\omega (\psi \xi)) = \g{\omega}{\psi \xi} =
-    \iota_D(\omega)(\psi \xi)
+    \iota_D(\omega)(\psi \xi).
   \end{align*}
 \end{proof}
 
 \begin{lemma}
   \label{lemma:psi-inj}
-  Falls $\psi \in H^0(X, \hol_B)$ mit $\psi \neq 0$. gilt, so ist $\psi:
+  Falls $\psi \in H^0(X, \hol_B)$ mit $\psi \neq 0$ gilt, so ist $\psi:
   H^1(X, \hol_D)^\ast \ra H^1(X, \hol_{D-B})^\ast$ injektiv.
 \end{lemma}
 
@@ -411,7 +413,7 @@ erster Schritt ist der nächste Satz.
   \hol_{D+A}$ injektiv und deshalb nach \cite[Satz 16.8]{For} $H^1(X, \hol_{D-B}) \ra
   H^1(X, \hol_{D+A})$ ein Epimorphismus. Also ist auch $H^1(X,
   \hol_{D-B}) \xrightarrow{\psi} H^1(X, \hol_D)$ ein Epimorphismus und
-  schlussendlich die duale Abbildung injektiv. Dies zeigt die Behauptung.
+  schlußendlich die duale Abbildung injektiv. Dies zeigt die Behauptung.
 \end{proof}
 
 \begin{thm}[Der Serresche Dualitätssatz]
@@ -437,10 +439,10 @@ erster Schritt ist der nächste Satz.
   erhalten wir
   \[
   \dim \im(\iota_{D_n}) = \dim H^0(X, \Omega_{-D_n}) \geq n + k_0 -
-  \deg D
+  \deg D.
   \]
   Wählen wir $n > \deg D$, so erhalten wir $\deg D_n < 0$ und damit
-  $H^0(X, \hol_{D_n}) = 0$. Aus dem Satz von Riemann-Roch folgt
+  $H^0(X, \hol_{D_n}) = 0$ nach \cite[Satz 16.5]{For}. Aus dem Satz von Riemann-Roch folgt
   \[
   \dim H^1(X, \hol_{D_n})^\ast = g - 1 - \deg D_n = n + ( g - 1 -
   \deg D).
@@ -461,7 +463,7 @@ erster Schritt ist der nächste Satz.
   $\frac{1}{\psi} \in H^0(X, \hol_A)$. Zu guter Letzt erhalten wir aus
   $D' := D_n - A$, dass
   \begin{align*}
-    i_{D'}^d(\lambda) = \frac{1}{\psi} (\psi \lambda) =
+    i_{D'}^D(\lambda) = \frac{1}{\psi} (\psi \lambda) =
     \frac{1}{\psi} \iota_{D_n}(\omega) = \iota_{D'} \left (
       \frac{1}{\psi} \omega \right )
   \end{align*}
@@ -475,7 +477,7 @@ erster Schritt ist der nächste Satz.
   Sei $X$ eine kompakte Riemannsche Fläche und $D \in \Div(X)$. Dann
   gilt
   \[
-  \dim H^1(X, \hol_D) = \dim H^0(X, \Omega_{-D})
+  \dim H^1(X, \hol_D) = \dim H^0(X, \Omega_{-D}).
   \]
   Insbesondere folgt für $D = 0$
   \[
@@ -487,7 +489,10 @@ erster Schritt ist der nächste Satz.
 \begin{thm}
   \label{thm:serre-umgekehrt}
   Sei $D \in \Div(X)$ und $X$ eine kompakte Riemannsche Fläche. Dann
-  gilt $H^0(X, \hol_{-D}) \cong H^1(X, \Omega_D)^\ast$.
+  gilt
+  \[
+  H^0(X, \hol_{-D}) \cong H^1(X, \Omega_D)^\ast.
+  \]
 \end{thm}
 
 \begin{proof}
@@ -503,7 +508,7 @@ erster Schritt ist der nächste Satz.
 
 \begin{cor}
   \label{cor:hol-form}
-  Sei $X$ eine kompakte Riemannsche Fläche. Es gilt $\dim H^1(X,
+  Sei $X$ eine kompakte Riemannsche Fläche. Dann gilt $\dim H^1(X,
   \Omega) = 1$.
 \end{cor}
 
@@ -536,19 +541,20 @@ erster Schritt ist der nächste Satz.
   \begin{align*}
     1 - g+ \deg K & = \dim H^0(X, \Omega) - \dim H^1(X, \Omega) \\
     & = \dim H^1(X, \hol) - 1 \\
-    & = g - 1
+    & = g - 1.
   \end{align*}
   Aufgelöst nach $\deg K$ folgt die Behauptung.
 \end{proof}
 
 \begin{defin}
   \label{defin:gitter}
-  Sei $B$ ein $n-$dimensionaler, reeller Vektorraum. Eine additive
+  Sei $V$ ein $n-$dimensionaler, reeller Vektorraum. Eine additive
   Untergruppe $\Gamma \subset V$ heißt \init{Gitter}, falls $n$ linear
   unabhängige $\gamma_1, \dots, \gamma_n \in V$ existieren, so dass
   \[
   \Gamma = \Z \gamma_1 + \dots + \Z \gamma_2
   \]
+  gilt.
 \end{defin}
 
 \begin{cor}

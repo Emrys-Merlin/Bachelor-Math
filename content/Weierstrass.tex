@@ -4,14 +4,14 @@
 
 Wie im letzten Kapitel handelt es sich auch hier um den Versuch ein
 wohlbekanntes, funktionentheoretisches Resultat auf Riemannsche
-Flächen zu verallgemeinern. Diesmal handelt es sich um den
+Flächen auszuweiten. Diesmal handelt es sich um den
 Weierstraßschen Produktsatz, der aussagt, dass es zu einer beliebigen
 diskreten Teilmenge $D \subset \C$ eine holomorphe Funktion gibt, die
 genau diese Menge als Nullstellenmenge aufweist. Es kann sogar die
 Ordnung der Nullstelle an jedem Punkt vorgegeben werden.
 
 Wir werden nun zeigen, dass sich dieses Resultat direkt auf (nicht
-kompakte) Riemannsche Flächen überträgt und sogar noch verschärft,
+kompakte) Riemannsche Flächen überträgt und es sogar noch verschärfen,
 denn es kann sogar eine Polstellenmenge mit zugehörigen Ordnungen
 angegeben werden und man findet immer eine meromorphe Funktion, die
 diese Vorgaben erfüllt. Die Sprache in der dieses Resultat auf
@@ -26,9 +26,12 @@ wollen wir hier noch einmal die Definition wiederholen.
   Wir bezeichnen mit $\Div(X)$ die Menge aller Divisoren.
   
   Für eine Funktion $f \in \mer(X)^\times$ definieren wir den zu $f$
-  gehörigen Divisor $(f): X \ra \Z, \quad x \mapsto \ord_x(f)$. Da die
-  Null- und Polstellen eine diskrete Teilmenge von $X$ bilden, ist
-  dies tatsächlich ein Divisor.
+  gehörigen Divisor
+  \[
+  (f): X \ra \Z, \quad x \mapsto \ord_x(f).
+  \]
+  Da die Null- und Polstellen eine diskrete Teilmenge von $X$ bilden,
+  ist dies tatsächlich ein Divisor.
 \end{defin}
 
 \begin{defin}
@@ -88,7 +91,7 @@ wollen wir hier noch einmal die Definition wiederholen.
   Auf $X_{D_1} \cap X_{D_2}$ ist klar, dass $f_1 \cdot f_2$ die
   gewünschten Eigenschaften erfüllt. Allerdings ist falls ein $a \in
   X$ mit $D(a) := D_1(a) +
-  D_2(a) \geq 0$, aber $D_1(a) < 0$ oder $D_2(a) < 0$ gilt, entweder $f_1(a)$ oder
+  D_2(a) \geq 0$, aber $D_1(a) < 0$ oder $D_2(a) < 0$ existiert, entweder $f_1(a)$ oder
   $f_2(a)$ nicht definiert. Nehmen wir ohne Einschränkung an, dass
   $D_1(a) < 0$ gilt, so können wir eine Karte $(z,U)$ um $a$ finden,
   so dass $\psi, \phi \in \diff(U)$ existieren, die der Definition
@@ -139,7 +142,7 @@ wollen wir hier noch einmal die Definition wiederholen.
   als Abbildung nach $\C^\times$ auffassen. Weiterhin ist $\P^1
   \setminus \bar B_r(0)$ einfach zusammenhängend. Dann können wir aber
   nach \cite[Beispiel 4.18]{For} die Abbildung $\phi$ entlang der
-  Überlagerung $\exp: \C \ra \C^\times$ liften. In anderen Worten ist
+  Überlagerung $\exp: \C \ra \C^\times$ liften. Mit anderen Worten ist
   die Abbildung
   \begin{align}
     \label{eq:log}
@@ -212,13 +215,13 @@ wollen wir hier noch einmal die Definition wiederholen.
   $K_{j+1}$ nicht kompakt.} und eine Kurve $c_0: I \ra U$ mit
   $c_0(0)=a_1$ und $c_0(1) = a_0$. 
   Nach Lemma \ref{lemma:schw-lsg-kurve} existiert eine schwache Lösung
-  $\phi_0$ des Divisors $\partial c_0$ mit $\phi_0|_{K_j} = 1$. 
+  $\phi_0$ des Divisors $\partial c_0$ mit $\phi_0|_{K_j} \equiv 1$. 
   Induktiv sind wir nun in der Lage eine Folge von Punkten $a_\nu \in
   X \setminus K_{j+ \nu}$, $\nu \in \N$, und Kurven in $X \setminus
   K_{j+\nu}$ von $a_{\nu+1}$ nach $a_\nu$ konstruieren. Analog zum
   obigen Verfahren erhalten wir dann wieder schwache Lösungen
   $\phi_\nu$ des Divisors $\partial c_\nu$ mit $\phi_\nu |_{K_{j+\nu}}
-  = 1$. 
+  \equiv 1$. 
   Nach Konstruktion gilt $\partial c_\nu = A_\nu - A_{\nu+1}$, wobei
   $A_\nu$ nur für $a_\nu$ nicht verschwindet und an dieser Stelle 1
   ergibt.
@@ -237,7 +240,7 @@ wollen wir hier noch einmal die Definition wiederholen.
   setzen wir
   \[
   D_\nu(x) := \begin{cases} D(x) & x \in K_{\nu+1}\setminus K_\nu\\ 0
-    & \text{sonst}\end{cases}
+    & \text{sonst}\end{cases}, 
   \]
   wobei $K_0$ als leere Menge definiert wird. Wir erhalten dann $D =
   \sum_{\nu = 0}^\infty D_\nu$. 
@@ -245,8 +248,8 @@ wollen wir hier noch einmal die Definition wiederholen.
   kann deshalb als endliche Summe von Divisoren der Form $A_\nu$
   dargestellt werden. Für diese wurde oben eine schwache Lösung
   konstruiert und das (endliche) Produkt dieser Lösungen liefert uns
-  eine Lösung $\psi_\nu$ von $D_\nu$ und wir erhalten sogar $\psi_\nu
-  |_{K_\nu} = 1$. 
+  eine Lösung $\psi_\nu$ von $D_\nu$ und wir erhalten zusätzlich $\psi_\nu
+  |_{K_\nu} \equiv 1$. 
   Setzen wir $\psi := \prod_{\nu=0}^\infty \psi_\nu$, so
   konvergiert das Produkt nach den gleichen Argumenten, wie oben und
   ist eine schwache Lösung von $D$.
@@ -268,7 +271,7 @@ wollen wir hier noch einmal die Definition wiederholen.
   Mit dieser Konstruktion haben $f_i$ und $f_j$ dies selben Pol- und
   Nullstellen auf $U_i \cap U_j$, also ist
   \[
-  \frac{f_i}{f_j} \in \hol(U_i \cap U_j)^\ast \qquad \forall i,j \in I
+  \frac{f_i}{f_j} \in \hol(U_i \cap U_j)^\times \qquad \forall i,j \in I
   \]
   Nach Lemma \ref{lemma:schwache-Lösung-Divisor} existiert eine
   schwache Lösung $\psi$ von $D$ und auf den $U_i$ finden wir $\psi_i

@@ -28,8 +28,9 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 
 
 \begin{defin}
+  Wir setzen
   \begin{align*}
-    B_\infty(0) & := \C \\
+    B_\infty(0) & := \C  && \text{und}
     B & := B_1(0)
   \end{align*}
 \end{defin}
@@ -59,11 +60,11 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 \begin{proof}
   \begin{enumerate}
   \item Es gilt $f^{-1}\d[f] \in \Omega(X)$, und wegen $Rh^1_\hol(X) = 0$
-    finden wir ein $g \in \hol(X)$ mit $\d[g] = f^{-1} \d[f]$.\\
+    finden wir ein $g \in \hol(X)$ mit $\d[g] = f^{-1} \d[f]$. 
     Wir können ohne Einschränkung annehmen, dass ein $a \in X$ existiert mit $ e^{g(a)} =
-    f(a)$, ansonsten betrachten wir $g + c$ für ein $c \in \C$. Weiterhin erhalten wir:
+    f(a)$, ansonsten betrachten wir $g + c$ für ein $c \in \C$. Weiterhin erhalten wir
     \begin{align*}
-      \d[(f e^{-g})] & = \d[(f)] e^{-g} + f e^{-g} (-1) f^{-1}\d[f] = 0
+      \d[(f e^{-g})] & = \d[(f)] e^{-g} + f e^{-g} (-1) f^{-1}\d[f] = 0.
     \end{align*}
     Also ist $fe^{-g} \equiv $ const und aus $f(a) e^{-g(a)} = 1$
     erhalten wir
@@ -96,7 +97,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 \begin{proof}
   Sei $a \in Y$. Nach Weierstrass \ref{thm:Lösung-Divisor} existiert ein $g \in
   \hol(X)$, das eine Nullstelle erster Ordnung bei $a$ besitzt und
-  ansonsten $g(x) \neq 0$ für alle $x \neq a$ gilt. 
+  ansonsten $g(x) \neq 0$ für alle $x \neq a$ erfüllt. 
   Nach Satz \ref{thm:dirichlet} existiert ein stetiges $u: \bar Y \ra
   \R$, s.d. $u|_Y$ harmonisch ist und
   \[
@@ -127,7 +128,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
     f^{-1}(\overline{B_r(0)})$. 
     Dann ist $Y_r$ kompakt als abgeschlossene Teilmenge von $\bar Y$.
   \item $f$ ist biholomorph: $f$ nimmt jeden Wert gleichhäufig an, da
-    es sich um eine eigentlich Abbildung handelt. Weiterhin wird $0$
+    es sich um eine eigentlich Abbildung handelt (vgl. \cite[Satz 4.24]{For}). Weiterhin wird $0$
     genau einmal angenommen. Also ist $f: Y \ra B$ bijektiv und
     holomorph. Das genügt nach \cite[Kor. 2.5]{For} bereits, um zu zeigen, dass $f$ biholomorph
     ist.
@@ -142,7 +143,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 \end{prop}
 
 \begin{proof}
-  Unter Ausnutzung der Cauchyschen Integralformel erhalten wir:
+  Unter Ausnutzung der Cauchyschen Integralformel erhalten wir
   \begin{align*}
     |f'(0)| & = \left | \frac{1}{2\pi i} \int_{|z| = r} \frac{f(z)}{z^2}
       \d[z] \right | \\
@@ -150,7 +151,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
         e^{4\pi i t}} r 2\pi i e^{2\pi i t} \d[t] \right | \\
     & \leq \int_0^1 \frac{|f(r e^{2\pi it})|}{r} \d[t] \\
     & \leq \frac{r'}{r} \int_0^1 \d[t] \\
-    & = \frac{r'}{r}
+    & = \frac{r'}{r}.
   \end{align*}
 \end{proof}
 
@@ -168,14 +169,17 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 
 \begin{proof}
   Sei $a  \in \mathring{(\C \setminus G)}$. Wir bezeichnen die
-  Menge in  \eqref{eq:menge} mit $M$ und behaupten, dass $z \mapsto
-  \frac{1}{z-a}$ $G$ biholomorph auf ein Teilgebiet eines
+  Menge in  \eqref{eq:menge} mit $M$ und behaupten, dass die Abbildung
+  \[
+  z \mapsto \frac{1}{z-a}
+  \]
+  das Gebiet $G$ biholomorph auf ein Teilgebiet eines
   $B_r(0)$ für ein $r < \infty$ abbildet. 
   Der Abstand $d:= \operatorname{dist}(\{a\},G)> 0$ existiert, da $a \notin \bar
   G$, denn $a$ ist ein innerer Punkt von $\C \setminus G$. Deshalb
-  folgt:
+  folgt
   \[
-  \left | \frac{1}{z-a} \right |< \frac1d \qquad \forall z \in G
+  \left | \frac{1}{z-a} \right |< \frac1d \qquad \forall z \in G.
   \]
   Also sind die $f \in M$ gleichmäßig beschränkt und aus dem Satz von
   Montel (vgl. \cite[Satz 4.9]{Frei}) erhalten wir die Kompaktheit von $M$.
@@ -225,7 +229,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   wir nun $g_n := \frac{f_n}{a_n}$. Wir erhalten $B \subseteq g_n(B)$
   und
   \begin{align}
-  1 \notin g_n(B) \label{nicht-1}
+  1 \notin g_n(B). \label{nicht-1}
   \end{align}
   Nun ist $g_n(B)$ über $g_n$ homöomorph zu $B$, also einfach
   zusammenhängend. Dies hat zur Folge, dass $Rh_\hol^1(g_n(B))$
@@ -248,8 +252,11 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   0$. Wir erhielten $g(z_1) = 1$, was einen Widerspruch zu Gleichung
   \eqref{nicht-1} darstellt. 
 
-  Desweiteren führt $B \subseteq g_n(B)$ zu $U:= \psi(B) \subseteq
-  \psi(g_n(B)) = h_n(B)$. Also ist $(-U) \cap h_n(B) = \varnothing$.
+  Desweiteren führt $B \subseteq g_n(B)$ zu
+  \[
+  U:= \psi(B) \subseteq \psi(g_n(B)) = h_n(B).
+  \]
+  Also ist $(-U) \cap h_n(B) = \varnothing$.
   Wir definieren $G := \bigcup_{n \in \N} h_n(B)$ und behaupten
   zunächst, dass $G$ ein Gebiet ist.
   Nach dem Satz über die Gebietstreue sind alle $h_n(B)$ offen und
@@ -275,7 +282,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   ist $G$ wegzusammenhängend, also ein Gebiet.
 
   Weiterhin gilt $G \cap -U = \varnothing$, da $h_n(B) \cap -U =
-  \varnothing$. Also besitzt das Komplement von $G$ innere Punkte.
+  \varnothing$ ist. Also besitzt das Komplement von $G$ einen inneren Punkt.
   Schlußendlich verwenden wir noch, dass $h_n(0) = i$ ist und
   erhalten, dass Lemma \ref{lemma:funktion-kompakt} anwendbar ist.
   $(h_n)_{n \in \N}$ besitzt demnach
@@ -283,7 +290,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   a_n(1 + h_n^2)$ mit $|a_n| \leq 1$ erhalten wir also eine
   konvergente Teilfolge
   \[
-  f_{n_k} \xrightarrow{k \ra \infty} f: B \ra \C
+  f_{n_k} \xrightarrow{k \ra \infty} f: B \ra \C.
   \]
   Dann ist $f$ klarerweise holomorph und es gilt $f(0) = 0$ und $f'(0)
   = 1$, also ist $f$ insbesondere nicht konstant.
@@ -295,9 +302,9 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   Nullstellen besäße und auf $\partial B_r(0)$ nicht
   verschwände. \footnote{Könnten wir kein solches $r$ finden, wäre $f-a$
   bereits konstant Null nach dem Identitätssatz.} Unter Verwendung des
-  Null- und Polstellenzählenden Integrals erhielten wir:
+  Null- und Polstellenzählenden Integrals erhielten wir
   \[
-  k = \frac1{2\pi i} \int_{z = |r|} \frac{f'(z)}{f(z) - a} \d[z]
+  k = \frac1{2\pi i} \int_{z = |r|} \frac{f'(z)}{f(z) - a} \d[z].
   \]
   Aber das Integral ist stetig bzgl. gleichmäßiger Konvergenz,
   d.h. insbesondere, dass für jedes $f_{n_l}$ nahe genug an $f$ das
@@ -320,21 +327,21 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \frac{Y}{R}$. Nach Voraussetzung existiert ein $a \in B \setminus
   Y$. Wir betrachten
   \[
-  \phi: B \ra B, \quad \phi(z) := \frac{z-a}{1-\bar a z}
+  \phi: B \ra B, \quad \phi(z) := \frac{z-a}{1-\bar a z}.
   \]
   Es folgt $0 \notin \phi(Y)$. Nach Lemma \ref{lemma:ex-log} existiert ein
   $g \in \hol(Y)$ mit $g^2 = \phi|_Y$. Also ist $g(Y) \subseteq
   B$. Wir definieren nun eine weitere Hilfsfunktion
   \[
-  \psi(z) := \frac{z-b}{1 - \bar b z}, \qquad b:= g(0)
+  \psi(z) := \frac{z-b}{1 - \bar b z}, \qquad b:= g(0).
   \]
   Zusammen mit $g$ ergibt dies unsere letzte Hilfsfunktion $h :=
-  \psi \circ g: Y \ra B$ mit $h(0) = 0$.
+  \psi \circ g: Y \ra B$ mit $h(0) = 0$. Wir setzen
   \begin{align*}
     \gamma := h'(0) & = \psi'(b) g'(0) \\
     & = \psi'(b) \cdot \frac{\phi'(0)}{2 g(0)} \\
     & = \frac{1}{1-|b|^2} \frac{1-|a|^2}{2b} \\
-    & = \frac{1 + |b|^2}{2b}
+    & = \frac{1 + |b|^2}{2b}.
   \end{align*}
   Damit erhalten wir $|\gamma| > 1$.\footnote{Die Funktion $x \mapsto
     \frac12 \left ( \frac1x + x \right )$ nimmt bei $x = 1$ ihr
@@ -345,7 +352,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   Wenden wir uns nun dem Fall $R = \infty$ zu. Nach Voraussetzung
   existiert ein $a \in \C \setminus Y$. Wir betrachten
   \[
-  \phi: \C \ra \C, \quad \phi(z) = z -a
+  \phi: \C \ra \C, \quad \phi(z) = z -a.
   \]
   Nun gilt aber $0 \notin \phi(Y)$. Nach Lemma \ref{lemma:ex-log}
   existiert ein $g \in \hol(Y)$ mit $g^2 = \phi|_Y$. Völlig analog
@@ -353,10 +360,10 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \in g(Y)$, dass $-w \notin g(Y)$ gilt. $g$ ist nicht konstant und damit
   eine offene Abbbildung. Sei $b \in g(Y)$. Dann existiert ein
   $\epsilon > 0$, s.d. $B_{\epsilon}(b) \subseteq g(Y)$. Da nun  $w
-  \in g(Y)$ impliziert, dass $-w \notin g(Y)$ gilt, folgt insbesondere $g \notin
+  \in g(Y)$ impliziert, dass $-w \notin g(Y)$ gilt, folgt insbesondere $-w \notin
   B_\epsilon(b)$. Also erhalten wir
   \[
-  |-w - b| = |w + b| \geq r.
+  |-w - b| = |w + b| \geq \epsilon.
   \]
   Das bedeutet wir können
   \[
@@ -367,7 +374,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   Damit können wir eine holomorphe Abbildung $\tilde \psi: Y \ra B$
   finden. Setzen wir nun noch $c:= \tilde \psi(0)$ und betrachten
   \[
-  \eta: B \ra B, \quad \eta(z) = \frac{z-c}{1-\bar c z}
+  \eta: B \ra B, \quad \eta(z) = \frac{z-c}{1-\bar c z},
   \]
   so können wir $\tilde f := \eta \circ \tilde \psi: Y \ra B$
   definieren. $\tilde f$ erfüllt dabei die Eigenschaften $\tilde f(0)
@@ -383,7 +390,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \end{align*}
   Das heißt nach dem gleichen Skalierungsargument, wie im ersten
   Fall erhalten wir eine holomorphe Abbildung $f: Y \ra B_r(0)$, wobei
-  $r < R = \infty$.
+  $r < R = \infty$ gilt.
 \end{proof}
 
 \begin{lemma}
@@ -426,9 +433,10 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 \begin{proof}
   Wir betrachten zunächst den Fall,
   dass $X$ kompakt ist. Dann wissen wir, dass $\d
-  \hol(X) = 0$ und damit auch $\Omega(X) = 0$. Nun liefert uns der
+  \hol(X) = 0$ und damit auch $\Omega(X) = 0$ ist. Nun liefert uns der
   Serresche Dualitätssatz, dass $H^0(X, \Omega) \cong H^1(X,
-  \hol)^\ast$. Da immer $\Omega(X) \cong H^0(X, \Omega)$ gilt
+  \hol)^\ast$ gilt . Da $\Omega(X) \cong H^0(X, \Omega)$ grundsätzlich
+  erfüllt ist
   und im kompakten Fall $H^1(X, \hol)$ ein endlich dimensionaler
   Vektorraum ist, erhalten wir
   \[
@@ -443,7 +451,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \[
   Y_0 \Subset Y_1 \Subset Y_2 \Subset \dots
   \]
-  von $X$, wobei die $Y_i$ Rungegebiete mit regulärem Rand. 
+  von $X$, wobei die $Y_i$ Rungegebiete mit regulärem Rand sind. 
   Nach Lemma \ref{lemma:runge-keine-kohomo} verschwindet
   $Rh_{\hol}^1(Y_i)$ für jedes $i \in \N$.
   Aus Satz \ref{thm:Gebiet-Kreis} erhalten wir, dass die $Y_i$
@@ -495,9 +503,9 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 
   Wir zeigen nun, dass $X$ via $f$ konform äquivalent zu $B_R(0)$ ist.
   Zunächst folgt aus $|f_{n_k}(x)| < r_{n_k}$ für beliebige $x \in X$
-  und $k \in \N$ groß genug, dass $|f(x)| \leq R$. Da $f$
+  und $k \in \N$ groß genug, dass $|f(x)| \leq R$ gilt. Da $f$
   holomorph und nicht-konstant, also eine offene Abbildung ist, erhalten wir direkt,
-  dass $f(x) \subset B_R(0)$. Ansonsten gäbe es ein $z \in f(x)$ mit
+  dass $f(x) \subset B_R(0)$ ist. Ansonsten gäbe es ein $z \in f(x)$ mit
   $z \in \partial B_R(0)$. Dieses $z$ kann aber kein innerer Punkt von
   $f(B)$ sein. Ein Widerspruch. 
 
