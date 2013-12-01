@@ -1,0 +1,155 @@
+
+\section{Einführung}
+\label{sec:einführung}
+
+\subsection{Notation}
+\label{sec:notation}
+
+In dieser Arbeit bezeichnet $\N = \{1, 2, 3, \dots\}$ die natürlichen
+Zahlen und $\N_0 = \{0 \} \cup \N$ die natürlichen Zahlen mit der
+0. Wir bezeichnen mit $\Z, \Q, \R$ und $\C$ die üblichen Mengen. Die 
+obere Halbebene ist definiert durch
+\[
+\h = \{ z \in \C \mid \Im(z) > 0 \}
+\]
+und die Riemannsche Zahlenkugel wird gegeben durch
+\[
+\P^1 = \C \cup \{\infty\}.
+\]
+
+Weiterhin bezeichnet für eine Riemannsche Fläche $\hol, \mer$ und $\diff$
+die Garben der holomorphen, meromorphen und glatten Funktionen und
+$\Omega, \mer^{(1)}$ und $\diff^{(1)}$ die Garben der holomorphen,
+meromorphen und glatten 1-Formen. Auf lokalen Karten $(z,U)$ haben die
+Elemente $\omega \in \diff^{(1)}$ die Form
+\[
+\omega|_U = f_z \d[z] + g_z\d[\bar z]
+\]
+für glatte Funktionen $f_z,g_z \in \diff(U)$. $\diff^{1,0}$ bezeichnet
+dann die Garbe der glatten 1-Formen, so dass $g_z$ auf jeder Karte
+verschwindet. $\diff^{0,1}$ wird analog definiert.
+
+Für jede Abbildung $f$ bezeichnen wir mit $\im(f)$ deren Bild und für
+jedes $z \in \C$ bezeichnen wirmit $\Im(z)$ seinen Imaginärteil. Diese
+Notationsphilosophie birgt die Gefahr einiger Verwechslungen,
+allerdings ist sie allgemein üblich, weshalb sie auch in diesem Text
+zum Einsatz kommt. Es sollte hoffentlich aus dem jeweiligen Kontext
+klar werden, welche der beiden Bedeutungen gemeint ist.
+
+Sei $X$ ein topologischer Raum, dann bedeutet $Y \Subset X$, dass $Y$
+eine Teilmenge von $X$ und zusätzlich relativ kompakt ist.
+
+\subsection{Einleitung}
+\label{sec:einleitung}
+
+Diese Bachelor-Arbeit wuchs aus einem Seminarvortrag im Wintersemester
+2012/2013 zum Thema "`Riemannsche Flächen"' betreut durch Herr Hendrik
+Kasten. Herr Kasten hat mir auch die Bearbeitung dieses Themas
+ermöglicht und dafür möchte ich ihm an dieser Stelle sehr herzlich
+danken. Genau so wie das Seminar ist auch dies Arbeit an Otto Forsters
+Buch "`Lectures on Riemann surfaces"' \cite{For} angelehnt. Da diese
+Arbeit direkt auf das Seminar aufbaut und um den Umfang derselben im
+Rahmen zu halten, wurden die ersten 15 Kapitel
+als bekannt vorausgesetzt. Jedoch sollten zumindest die grundlegenden
+Begriffe geklärt und etwas Motivation für die Fragestellung an
+die Hand gegeben werden.
+
+Riemannsche Flächen sind interessante Gebilde, die verschiedenen
+Bereichen der Mathematik ein Rolle spielen. In der Funktionentheorie
+selbst beschäftigt man sich mit der Frage unter welchen
+Voraussetzungen man eine eindeutige holomorphe Logarithmus- oder
+Wurzel-Funktion definieren kann, in der Theorie der algebraischen
+Kurven stellt man fest, dass normale projektive Kurven äquivalent zu
+kompakten Riemannschen Flächen sind und in der Differentialgeometrie
+stellt man fest, dass kompakte Riemannsche Flächen Beispiele für
+elliptische, euklidische und hyperbolische Geometrien liefern und es
+wird außerdem deutlich, dass es (in einem geeigneten Sinn) "`viel
+mehr"' kompakte hyperbolische Flächen gibt, also elliptische und euklidische.
+
+Zunächst wollen wir jedoch das zentrale Objekt dieser Arbeit
+definieren.
+
+\begin{defin}[Riemannsche Fläche]
+  \label{def:rf}
+  Sei $X$ ein zusammenhängender Hausdorffraum. Ein \init{Atlas}
+  ist eine Menge $\{(U_i, z_i) \mid i \in I\}$, bestehend aus
+  offenen Teilmengen $U_i$, die eine Überdeckung von $X$ bilden und
+  Homöomorphismen
+  \[
+  z_i: U_i \ra V_i \subset \C,
+  \]
+  wobei $V_i$ offene Teilmengen von $\C$ bezeichnen. Ein
+  \init{komplexer Atlas} ist ein Atlas, so dass alle
+  Kartenwechselabbildungen
+  \[
+  z_i \circ z_j^{-1} : z_j(U_i \cap U_j) \ra z_i(U_i \cap U_j)
+  \]
+  holomorph sind.
+
+  Eine Karte $(z,U)$ heißt verträglich mit eine
+  komplexen Atlas, falls sie zusammen mit dem bisherigen Atlas wieder
+  einen komplexen Atlas ergibt. Vereinigt man einen komplexen Atlas mit allen
+  verträglichen Karten, so erhält man einen maximalen komplexen
+  Atlas, der auch als \init{komplexe Struktur} bezeichnet wird.
+
+  Eine \init{Riemannsche Fläche} $X$ ist ein zusammenhängender
+  Hausdorffraum zusammen mit einer komplexen Struktur.
+\end{defin}
+
+Diese Definition erinnert stark an die Definition einer glatten
+zweidimensionalen reellen Mannigfaltigkeit. Ein Unterschied ist
+jedoch, dass wir hier nicht die Existenz einer abzählbaren Basis der
+Topologie fordern. Wie wir im Kapitel \ref{sec:Topologie}
+sehen werden, wäre diese Forderung im Falle von Riemannschen Flächen
+redundant, denn wir bekommen sie gratis aus der zusätzlichen Forderung
+der Komplexen Struktur.
+
+Das Ziel dieser Arbeit ist es nun Riemannsche Flächen zu
+klassifizieren. Dies für alle Riemannschen Flächen zu erreichen wäre
+ein sehr ambitioniertes Ziel, deshalb werden wir uns hier auf den Fall
+der kompakten Riemannschen Flächen beschränken\footnote{Immerhin
+  erhalten wir auf dem Weg dahin noch eine vollständige
+  Charakterisierung aller einfach zusammenhängenden Riemannschen
+  Flächen (vgl. Kapitel \ref{sec:RMT})}. Nun stellt sich nur noch die
+Frage, was Klassifikation im Fall von Riemannschen Flächen
+bedeutet. Dazu muss, um auf die Sprache der Kategorientheorie
+zurückzugreifen, gesagt werden, was die Morphismen und vor allem die
+Isomorphismen zwischen Riemannschen Flächen sind. Diese stellen sich
+dann als holomorphe bzw. biholomorphe Abbildungen heraus, die wir nun
+definieren wollen.
+
+\begin{defin}
+  Seien $X,Y$ Riemannsche Flächen und $f: X \ra Y$ eine Abbildung. $f$
+  heißt \init{holomorph}, falls für jede Karte $(U,z)$ von $X$ und
+  jede Karte $(V, w)$ von $Y$ mit $f(U) \subset W$ die Abbildung
+  \[
+  w \circ f \circ z^{-1} : z(U) \subset \C \ra w(V) \subset \C
+  \]
+  holomorph im Sinne der Funktionentheorie 1 ist. $f$ heißt
+  \init{biholomorph}, falls $f$ bijektiv und sowohl $f$ als auch $f^{-1}$
+  holomorph sind. Zwei Riemannsche Flächen $X$ und $Y$ heißen \init{konform
+  äquivalent}, falls es eine biholomorphe Abbildung zwischen ihnen gibt.
+\end{defin}
+
+Nun sind wir in der Lage das Ziel in der Arbeit sauber zu
+formlieren. Wir wollen alle kompakten Riemannschen Flächen bis auf
+Konforme Äquivalenz klassifizieren. Dieses Ziel werden wir mit Satz
+\ref{thm:uniformisierung} tatsächlich erreichen können. Betrachten wir
+nur kompakte, orientierbare topologische Flächen, so ist die Antwort
+auf die Frage der Klassifikation, dass alle Flächen bis auf
+Homöomorphismen durch ihr Geschlecht bestimmt sind. Also ist es nicht
+verwunderlich, dass auch in unserem Fall das Geschlecht eine zentrale
+Rolle spielt und letztendlich die kompakten Riemannschen Flächen in
+die drei Fälle Geschlecht 0, Geschlecht 1 und Geschlecht größer 1
+unterteilt werden.
+
+Die folgenden Kapitel werden nun aufbauend auf dem Wissen der
+Grundvorlesungen, der Funktionentheorie 1 und des Seminars die Sprache
+und das Handwerkszeug entwickeln, um den Uniformisierungssatz für
+kompakte Riemannsche Flächen beweisen zu können.
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../Bachelor"
+%%% End: 
