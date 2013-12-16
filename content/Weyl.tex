@@ -29,12 +29,9 @@ notwendigen Beweisen zurückspringen.
   gegen $f \in \dist(X)$, schreibe $f_\nu \xrightarrow{\dist} f$,
   falls ein kompaktes $K \subset X$ mit $\Supp(f), \Supp(f_\nu)
   \subset K$ für jedes $\nu \in \N$ existiert und für alle $\alpha = (\alpha_1,
-  \alpha_2)^T \in \N^2$ gilt
-  \[
-  D^\alpha_\nu \rightrightarrows D^\alpha f \qquad \text{ auf } K
-  \]
-  mit $D^\alpha = \frac{\partial^{|\alpha|}}{\partial
-    x^{\alpha_1} \partial y^{\alpha_2}}$.
+  \alpha_2)^T \in \N^2$ die zugehörige Folge $(D^\alpha f_\nu)$ auf
+  $K$ gleichmäßig gegen $D^\alpha f$ konvergiert, wobei $D^\alpha = \frac{\partial^{|\alpha|}}{\partial
+    x^{\alpha_1} \partial y^{\alpha_2}}$ bezeichnet.
 \end{defin}
 
 \begin{defin}[Distribution]
@@ -81,8 +78,9 @@ notwendigen Beweisen zurückspringen.
     \[
     \delta_a[f] := f(a) \qquad \forall f \in \dist(X)
     \]
-    definiert. Wir werden im weiteren Verlauf ausschließlich versuchen
-    zu zeigen, dass alle für uns interessanten Distributionen von der
+    definiert. Wir werden im weiteren Verlauf versuchen
+    zu zeigen, dass alle für uns interessanten Distributionen
+    ausschließlich von der
     ersten Form sind.
   \end{enumerate}
 \end{bsp}
@@ -139,7 +137,7 @@ notwendigen Beweisen zurückspringen.
 
 \begin{lemma}
   \label{lemma:dist-int}
-  Seien $X,Y \subset \C$ offen $K \subset X$ bzw. $L \subset Y$
+  Seien $X,Y \subset \C$ offen, $K \subset X$ bzw. $L \subset Y$
   kompakt. Sei weiterhin $g: X \times Y \ra \C$ glatt mit $\Supp(g)
   \subset K \times L$. 
   Dann gilt für beliebige $T \in \dist(X)'$
@@ -188,7 +186,7 @@ notwendigen Beweisen zurückspringen.
     g(w,z)| \d[x]\d[y] \\
     & \leq \sum_{\nu=1}^{n^2} \iint_{R_{n_\nu}} \frac{\epsilon}{F}
     \d[x] \d[y] \\
-    & = \epsilon
+    & = \epsilon.
   \end{align*}
   Also konvergiert $G_n$ gleichmäßig gegen $\iint_R g(\cdot, z)
   \d[x]\d[y]$. Die gleiche Argumentation kann für beliebiege
@@ -252,7 +250,7 @@ notwendigen Beweisen zurückspringen.
   \]
   $\sm_\epsilon f$ wird als \init{Glättung} von $f$ bezeichnet. 
   Aus der Leibniz-Regel folgt, dass Integration und Differentiation
-  vertauscht, also ist $\sm_\epsilon f \in \diff(U^{(\epsilon)})$, was
+  kommutiert, also ist $\sm_\epsilon f \in \diff(U^{(\epsilon)})$, was
   auch den Namen "`Glättung"' erklärt.
 \end{defin}
 
@@ -315,7 +313,7 @@ notwendigen Beweisen zurückspringen.
        re^{i\phi}) r \d[r] \d[\phi] \nonumber \\
       & = \int_0^\epsilon \tilde \rho_\epsilon(r) r\d[r] \cdot 2 \pi
       f(w) \nonumber \\
-      & = f(z). \label{eq:glättung-norm} 
+      & = f(w). \label{eq:glättung-norm} 
     \end{align}
     \eqref{eq:glättung-norm} gilt dabei, aufgrund der Gleichung
     \begin{align*}
@@ -373,17 +371,17 @@ notwendigen Beweisen zurückspringen.
     & = \iint_U h_\epsilon(z) f(z) \d[x]\d[y]. \nonumber
   \end{align}
   Als nächstes wollen wir zeigen, dass $T[f] = T[\sm_\epsilon f]$
-  gilt. Nun können $f$ auch als Funktion auf $\C$ auffassen, in dem
+  gilt. Wir können $f$ auch als Funktion auf $\C$ auffassen, in dem
   wir es durch 0 fortsetzen. Dann liefert uns \cite[Kor. 13.3]{For} die
-  Existenz von $\psi \in \diff(\C)$ mit $\Delta \psi = f$. 
-  Dann ist $\psi$ harmonisch auf $V:= \C \setminus \Supp(f)$. Also
+  Existenz von einem $\psi \in \diff(\C)$ mit $\Delta \psi = f$. 
+  Mit anderen Worten ist $\psi$ harmonisch auf $V:= \C \setminus \Supp(f)$. Also
   liefert uns Lemma \ref{lemma:glättung-eigenschaften} $\psi|_{V^{(\epsilon)}}
   \equiv \sm_\epsilon \psi|_{V^{(\epsilon)}}$. Wir setzen $\phi := \psi -
-  \sm_\epsilon\psi$. Dann folgt $\Supp(\phi) \subset V^c = \Supp(f)
+  \sm_\epsilon\psi$. Es folgt $\Supp(\phi) \subset V^c = \Supp(f)
   \subset U$, d.h. $\phi$ hat kompakten Träger in $U$ und es gilt
   \[
   \Delta \phi = \Delta \psi - \sm_\epsilon \Delta f = f - \sm_\epsilon
-  f
+  f.
   \]
   Da nun aber $\Delta T = 0$, folgt $T[\Delta \phi] = 0$ und
   schlußendlich

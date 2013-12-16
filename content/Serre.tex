@@ -62,9 +62,8 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   \]
   wobei $a \in U_i$. Falls $a \in U_i \cap U_j$, so gilt
   $\res_a(\omega_i) = \res_a(\omega_j)$, denn $\omega_j - \omega_i$
-  ist holomorph. Damit ist $\res_a(\mu)$ wohldefiniert, denn es ist
-  von der Wahl von $U_i$ unabhängig. Ist $X$ kompakt, so ist $\res_a(\mu) = 0$ für fast
-  alle $a \in X$ und wir können
+  ist holomorph. Damit ist $\res_a(\mu)$ wohldefiniert. Ist $X$
+  kompakt, so ist $\res_a(\mu) = 0$ für fast alle $a \in X$ und wir können
   \[
   \res(\mu) := \sum_{a \in X} \res_a(\mu)
   \]
@@ -81,13 +80,13 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
 
 \begin{proof}
   Um $\res([\delta \mu])$ zu berechnen, konstruieren wir $H^1(X,
-  \Omega) \equiv \quot{\diff^{(2)}(X)}{\d[\diff^{1,0}(X)]}$
+  \Omega) \cong \quot{\diff^{(2)}(X)}{\d[\diff^{1,0}(X)]}$
   explizit. Da $\delta \mu = (\omega_j - \omega_i) \in Z^1(\fu,
   \Omega) \subseteq Z^1(\fu, \diff^{1,0})$ und $H^1(X, \diff^{1,0}) =
   0$ (vgl. \cite[Satz 12.6]{For}) gilt, finden wir ein
   $(\sigma_i) \in C^0(\fu, \diff^{1,0})$ mit
   \[
-  \omega_j - \omega_i \cong \sigma_j - \sigma_i \qquad \text{auf } U_i
+  \omega_j - \omega_i \equiv \sigma_j - \sigma_i \qquad \text{auf } U_i
   \cap U_j.
   \]
   Nun ist jede holomorphe 1-Form geschlossen, d.h. $\d[(\omega_j -
@@ -108,12 +107,12 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   \d[\sigma] \equiv \d[\sigma_i] - \underbrace{\d[\omega_i]}_{= 0} \equiv \tau
   \qquad \text{ auf } X' \cap U_i.
   \]
-  Und damit gilt $\d[\sigma] \equiv \tau$ auf $X'$. Als nächstes
+  Und damit gilt $\d[\sigma] \equiv \tau$ auf $X'$. Als Nächstes
   wählen wir zu jedem $a_k$ ein $i(k) \in I$, so dass $a_k \in
-  U_{i(k)}$ gilt. Weiterhin wählen wird Koordinatenumgebungen $(V_k,
+  U_{i(k)}$ gilt. Weiterhin wählen wir Koordinatenumgebungen $(V_k,
   z_k)$ mit den Eigenschaften
   \begin{enumerate}
-  \item ss gelten $V_k \subset U_{i(k)}$ und $z_k(a_k) = 0$,
+  \item es gelten $V_k \subset U_{i(k)}$ und $z_k(a_k) = 0$,
   \item es ist $V_k \cap V_j = \varnothing$ für alle $k \neq j$ und
   \item $z_k(V_k) \subset \C$ ist eine Kreisscheibe.
   \end{enumerate}
@@ -121,8 +120,8 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   dass eine offene Umgebung $V_k' \subset V_k$ von $a_k$ mit
   $f_k|_{V_k'} \equiv 1$ existiert, so können wir $g:= 1 - (f_1 + \dots + f_k)$
   definieren. Dies erlaubt uns $g \cdot \sigma$ auf ganz $X$
-  fortzusetzen, denn $g|_{V_k'} \equiv 0$. Also liegt $g \sigma \in
-  \diff^{1,0}(X)$. Nach \cite[Satz 10.20]{For} gilt
+  fortzusetzen, denn $g|_{V_k'} \equiv 0$. Also liegt $g \sigma$ in
+  $\diff^{1,0}(X)$. Nach \cite[Satz 10.20]{For} gilt
   \begin{align}
   \iint_X \d[(g \sigma)] = 0. \label{eq:g-sigma}
   \end{align}
@@ -133,8 +132,9 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   \]
   Nun ist aber $\sigma_i \in \diff^{1,0}(U_i)$, also kann $\d[(f_k
   \sigma)]$ glatt auf $a_k$ fortgesetzt werden. Da $f_k\sigma$ auf $X'
-  \setminus \Supp(f_k)$ verschwindet, können wir $\d[(f_k \sigma)] \in
-  \diff^{(2)}(X)$ auffassen. Wir erhalten die folgende Gleichung
+  \setminus \Supp(f_k)$ verschwindet, können wir $\d[(f_k \sigma)]$
+  als Element von $\diff^{(2)}(X)$ auffassen. Wir erhalten die
+  folgende Gleichung
   \[
   \tau = \d[1 \cdot \sigma] = \d[(g\sigma)] + \sum_{k=1}^n \d[(f_k
   \sigma)]
@@ -150,7 +150,7 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   \iint_{V_k} \d[(f_k \omega_{i(k)})] = - 2\pi i
   \res_{a_k}(\omega_{i(k)})
   \]
-  Bauen wir alles zusammen, so erhalten wir
+  Fügen wir alles zusammen, so erhalten wir
   \[
   \res([\delta \mu]) = \frac{1}{2\pi i} \iint_X \tau = \sum_{k=1}^n
   \res_{a_k}(\omega_{i(k)}) = \res(\mu)
@@ -208,17 +208,17 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   \[
   H^0(X, \Omega_{-D}) \times H^1(X, \hol_D) \ra H^1(X, \Omega)
   \]
-  Diese ergibt sich aus er Tatsache, dass $H^0(X, \Omega_{-D}) \equiv
-  \Omega_{-D}(X)$ gilt und dem Isomorphismus aus Definition
+  Diese ergibt sich aus der Tatsache, dass $H^0(X, \Omega_{-D}) \cong
+  \Omega_{-D}(X)$ gilt und aus dem Isomorphismus aus Definition
   \ref{def:garbe-div}. Durch die Verkettung mit $\res: H^1(X,
   \Omega_D) \ra \C$ erhalten wir eine bilineare Abbildung
   \[
   \g{\cdot}{\cdot}: H^0(X, \Omega_{-D}) \times H^1(X, \hol_D) \ra \C,
-  \quad \g{\omega}{\xi} := \res(\xi \omega)
+  \quad \g{\omega}{\xi} := \res(\xi \omega).
   \]
   Diese bilineare Abbildung liefert uns eine lineare Abbildung
   \[
-  \iota_D : H^0(X, \Omega_{-D}) \ra H^1(X, \hol_D)^\ast
+  \iota_D : H^0(X, \Omega_{-D}) \ra H^1(X, \hol_D)^\ast.
   \]
 \end{defin}
 
@@ -235,7 +235,7 @@ erster Schritt ist der nächste Satz.
   Wir müssen zeigen, dass es zu jedem $\omega \in H^0(X, \Omega_{-D})$
   mit $\omega \neq 0$ ein $\xi \in H^1(X, \hol_D)$ gibt, so dass
   $\g{\omega}{\xi} \neq 0$ gilt. Wir wählen dazu ein $a \in X$ mit
-  $D(a) = 0$ und eine Koordinatenumgebunge $(U_0, z)$ mit $z(a) = 0$
+  $D(a) = 0$ und eine Koordinatenumgebung $(U_0, z)$ mit $z(a) = 0$
   und $D|_{U_0} \equiv 0$. Auf $U_0$ schreiben wir $\omega = f \d[z]$
   mit einem $f \in \hol(U_0)$. Wir können ohne Einschränkung annehmen,
   dass $U_0$ klein genug gewählt wurde, so dass $f \neq 0$ auf $U_0
@@ -304,7 +304,7 @@ erster Schritt ist der nächste Satz.
 \begin{proof}
   Angenommen es gelte $\omega \notin H^0(X, \Omega_{-D}) \cong
   \Omega_{-D}(X)$. Dann existierte ein $a \in X$, so dass
-  $\ord_a(\omega) < D(a)$. Sei $(U_0, z)$ eine Koordinatenumgmebung
+  $\ord_a(\omega) < D(a)$ gelten müsste. Sei $(U_0, z)$ eine Koordinatenumgebung
   von $a$ mit $z(a) = 0$. Auf dieser Koordinatenumgebung drücken wir
   $\omega$ durch $\omega = f \d[z]$ mit einem $f \in \mer(U_0)$
   aus. Wir können ohne Einschränkung annehmen, dass wir $U_0$ klein
@@ -322,7 +322,7 @@ erster Schritt ist der nächste Satz.
   \delta \eta \in Z^1(\fu, \hol) = Z^1(\fu, \hol_D) = Z^1(\fu,
   \hol_{D'})
   \]
-  gilt. Bezeichnen wir mit $\xi'$ die
+  gelten müsste. Bezeichnen wir mit $\xi'$ die
   Kohomologieklasse von $\delta \eta$ in $H^1(X, \hol_{D'})$ und mit
   $\xi$ die Kohomologieklasse von $\delta \eta$ in $H^1(X, \hol_D)$,
   so erhalten wir zunächst, weil $\eta \in C^0(\fu, \hol_D)$ ist, dass
@@ -460,7 +460,7 @@ erster Schritt ist der nächste Satz.
   \neq 0$ sein. Also existiert ein $\psi \in H^0(X, \hol_{nP})$ mit
   $\psi \neq 0$ und $\omega \in H^0(X, \Omega_{-D_n})$ mit $\psi
   \lambda = \iota_{D_n}(\omega)$. Setzen wir $A := (\psi)$, so liegt
-  $\frac{1}{\psi} \in H^0(X, \hol_A)$. Zu guter Letzt erhalten wir aus
+  $\frac{1}{\psi}$ in $H^0(X, \hol_A)$. Zu guter Letzt erhalten wir aus
   $D' := D_n - A$, dass
   \begin{align*}
     i_{D'}^D(\lambda) = \frac{1}{\psi} (\psi \lambda) =
@@ -497,7 +497,7 @@ erster Schritt ist der nächste Satz.
 
 \begin{proof}
   Sei $0 \neq \omega_0 \in \mer^{(1)}(X)$ und $K := (\omega_0)$. Wie
-  aus Definition \ref{def:garbe-div} bekannt gelten $\Omega_D \cong
+  aus Definition \ref{def:garbe-div} bekannt, gelten $\Omega_D \cong
   \hol_{D+K}$ und $\hol_D \cong \Omega_{-D-K}$. Mit Satz
   \ref{thm:serre} folgt
   \[
@@ -513,7 +513,7 @@ erster Schritt ist der nächste Satz.
 \end{cor}
 
 \begin{proof}
-  Satz \ref{thm:serre-umgekehrt} angewandt für den Fall $D = 0$
+  Satz \ref{thm:serre-umgekehrt} angewandt auf den Fall $D = 0$
   liefert uns
   \[
   \dim H^1(X, \Omega) = \dim H^0(X, \hol) = \dim \C = 1
@@ -566,7 +566,7 @@ erster Schritt ist der nächste Satz.
 \begin{proof}
   Wir betrachten die meromorphe 1-Form $\d[z]$ auf $\C$. Da $\C$ die
   Universelle Überlagerung von $\quot{\C}{\Gamma}$ darstellt und wir
-  deshlab die Projektion als Kartenabbildung von $\quot{\C}{\Gamma}$
+  deshalb die Projektion als Kartenabbildung von $\quot{\C}{\Gamma}$
   verwenden können, finden wir eine 1-Form $\omega \in
   \quot{\C}{\Gamma}$, die auf jeder dieser Karten mit $\d[z]$
   übereinstimmt. Dies folgt direkt daraus, dass $\mer^{(1)}(X)$ eine
@@ -577,7 +577,7 @@ erster Schritt ist der nächste Satz.
 
 
 Korollar \ref{cor:dim-1-form} und \ref{cor:torus-geschlecht} finden
-direkt Anwendung im Beweis unseres Uniformisierungssatzes
+direkt Anwendung im Beweis des Uniformisierungssatzes
 \ref{thm:uniformisierung}. Die folgenden Kapitel wenden sich nun aber
 hauptsächlich \emph{nicht} kompakten Riemannschen Flächen zu, so dass
 die Resultate dieses Kapitels zwar immer im Hinterkopf behalten werden

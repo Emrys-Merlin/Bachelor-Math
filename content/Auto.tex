@@ -42,33 +42,34 @@ nächsten zwei Abschnitten bestimmt.
 \end{lemma}
 
 \begin{proof}
-  Zunächst ist $\phi$ wohldefiniert, denn für $z \in \h$ erhalten wir,
-  dass $\Im(z) > 0$ gilt und daher folgt
-  \begin{align*}
-    |\phi(z)|^2 & = \frac{z-i}{z+i} \cdot \frac{\bar z + i}{\bar z -
-      i} \\
-    & = \frac{|z|^2 - \bar z i + i z + 1}{|z|^2 +i \bar z - i z + 1}
-    \\
-    & = \frac{|z|^2 - 2 \Re(iz) + 1}{|z|^2 - 2 \Re(iz) + 1} \\
-    & = \frac{|z|^2 +1 - 2 \Im(z)}{|z|^2 + 1 + 2\Im(z)} \\
-    & < 1.
-  \end{align*}
-  Betrachten wir nun
-  \[
-  \psi: B \ra \h, \quad \psi(z) := \frac{ -iz - i}{z-1},
-  \]
-  so ist diese Abbildung auch wohldefiniert, denn für $z \in \C$ mit
-  $|z| < 1$ erhalten wir
-  \begin{align*}
-    \Im(\psi(z)) & = \frac{1}{2i} ( \psi(z) - \bar \psi(z)) \\
-    & = \frac{1}{2i} \left ( \frac{-iz - i}{z -1 } - \frac{ i \bar z +
-        i}{\bar z - 1} \right ) \\
-    & = \frac{1}{2i} \cdot \frac{2i ( 1- |z|^2 )}{|z -1|^2} \\
-    & = \frac{1- |z|^2}{|z-1|^2} \\
-    & > 0.
-  \end{align*}
-  Weiterhin zeigt eine einfache Rechnung, dass $\psi \circ \phi =
-  \id_\h$ und $\phi \circ \psi = \id_B$ gelten.
+  Dies ist ein wohlbekanntes Resultat aus der Funktionentheorie 1.
+  % Zunächst ist $\phi$ wohldefiniert, denn für $z \in \h$ erhalten wir,
+  % dass $\Im(z) > 0$ gilt und daher folgt
+  % \begin{align*}
+  %   |\phi(z)|^2 & = \frac{z-i}{z+i} \cdot \frac{\bar z + i}{\bar z -
+  %     i} \\
+  %   & = \frac{|z|^2 - \bar z i + i z + 1}{|z|^2 +i \bar z - i z + 1}
+  %   \\
+  %   & = \frac{|z|^2 - 2 \Re(iz) + 1}{|z|^2 - 2 \Re(iz) + 1} \\
+  %   & = \frac{|z|^2 +1 - 2 \Im(z)}{|z|^2 + 1 + 2\Im(z)} \\
+  %   & < 1.
+  % \end{align*}
+  % Betrachten wir nun
+  % \[
+  % \psi: B \ra \h, \quad \psi(z) := \frac{ -iz - i}{z-1},
+  % \]
+  % so ist diese Abbildung auch wohldefiniert, denn für $z \in \C$ mit
+  % $|z| < 1$ erhalten wir
+  % \begin{align*}
+  %   \Im(\psi(z)) & = \frac{1}{2i} ( \psi(z) - \bar \psi(z)) \\
+  %   & = \frac{1}{2i} \left ( \frac{-iz - i}{z -1 } - \frac{ i \bar z +
+  %       i}{\bar z - 1} \right ) \\
+  %   & = \frac{1}{2i} \cdot \frac{2i ( 1- |z|^2 )}{|z -1|^2} \\
+  %   & = \frac{1- |z|^2}{|z-1|^2} \\
+  %   & > 0.
+  % \end{align*}
+  % Weiterhin zeigt eine einfache Rechnung, dass $\psi \circ \phi =
+  % \id_\h$ und $\phi \circ \psi = \id_B$ gelten.
 \end{proof}
 
 \begin{rem}
@@ -145,7 +146,7 @@ nächsten zwei Abschnitten bestimmt.
   Casorati-Weierstraß (vgl. \cite[Satz 6.11]{Kas}) anwendbar und wir
   erhielten zu jedem $n \in \N$
   ein $z_n \in \dot B_{\frac{1}{n}}(0)$, so dass $|g(z_n) - f(0)| <
-  \frac{1}{n}$ gelten müsste. Setzen wir $w_n := \frac{1}{z_n}$, so konvergierte
+  \frac{1}{n}$ gelten müsste. Setzten wir $w_n := \frac{1}{z_n}$, so konvergierte
   $(w_n)_{n \in \N}$ gegen $\infty$ und $f(w_n) \ra f(0)$ für $n \ra
   \infty$. Setzen wir nun weiterhin $\tilde z_n := f(w_n)$ und $\tilde
   z = f(0)$, so erhielten wir also $\lim_{n \ra \infty} \tilde z_n =
@@ -276,7 +277,7 @@ nächsten zwei Abschnitten bestimmt.
   \end{align*}
   Betrachten wir nun $\det \tilde M$, so erhalten wir $\det M = |\alpha|^2 -
   |\beta|^2 = |\alpha| + |\beta| > 0$. Wählen wir nun eine (reelle)
-  Wurze $\gamma$ von $\det \tilde M$ und setzen $M := \gamma^{-1}
+  Wurzel $\gamma$ von $\det \tilde M$ und setzen $M := \gamma^{-1}
   \tilde M$, so gelten $\det M = 1$ und $M \langle z \rangle = \tilde M
   \langle z \rangle$. Außerdem hat $M$ nur reelle Einträge, liegt also
   in $\PSL(2, \R)$.
@@ -296,8 +297,8 @@ $\C$ ist.
 
 \begin{lemma}
   \label{lemma:gitter}
-  Sei $\Gamma \subset V$ eine additive Untergruppe und $V$ ein reeller
-  Vektorraum. Dann ist $\Gamma$ genau dann ein Gitter, wenn
+  Sei $V$ ein reeller Vektorraum und $\Gamma \subset V$ eine additive
+  Untergruppe. Dann ist $\Gamma$ genau dann ein Gitter, wenn
   \begin{enumerate}
   \item $\Gamma$ diskret ist und
   \item $\Gamma$ nicht in einem echten Untervektorraum von $V$
@@ -308,7 +309,7 @@ $\C$ ist.
 \begin{proof}
   Falls $\Gamma$ ein Gitter ist, ist die Aussage aus der Definition
   klar. Erfülle also $\Gamma$ die beiden Bedingungen. Wir gehen nun
-  per Induktion vor. Für $n = 0$ ist die Aussage klar. Gelte also die
+  per Induktion über $n = \dim V$ vor. Für $n = 0$ ist die Aussage klar. Gelte also die
   Aussage für ein $n \in \N_0$. Da $\Gamma \subset V$ mit $\dim V =
   n+1$ in keinem echten
   Untervektorraum von $V$ enthalten ist, existieren linear unabhängige $x_1, \dots,

@@ -47,7 +47,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
   durch die beiden offenen Mengen $U(p_{j\nu}, \frac{\epsilon}{3}, 0)$
   und $U(p_{j\nu}, \frac{\epsilon}{3}, f)$ trennen. Weiterhin ist
   $\diff(Y)$ vollständig bezüglich Konvergenz in allen Halbnormen, da
-  alle Ableitung lokal gleichmäßig konvergieren. Damit erfüllt
+  alle Ableitungen lokal gleichmäßig konvergieren. Damit erfüllt
   $\diff(Y)$ alle Voraussetzungen von Definition \ref{def:frechet}.
   
   Zu guter Letzt behaupten wir nun noch, dass die oben gewählte
@@ -76,7 +76,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
   \]
   was die Behauptung zeigt. Für die Rückrichtung vertauschen wir in
   der Argumentation einfach $K_j$ und $\tilde K_j$ und erhalten, dass
-  die Topologie unabhängig, von der gewählten Überdeckung ist.
+  die Topologie unabhängig von der gewählten Überdeckung ist.
   
   Völlig analog kann die obige Konstruktion auch für $\diff^{0,1}(Y)$
   durchgeführt werden.
@@ -90,7 +90,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
 
 \begin{lemma}
   \label{lemma:kompakter-träger-funktional}
-  Sei $Y \subset X$ offen, $X$ eine Riemannsche Fläche. Sei $T \in
+  Sei $X$ eine Riemannsche Fläche und $Y \subset X$ offen. Sei $T \in
   \diff(Y)'$. 
   Dann hat $T$ kompakten Träger, d.h. es existiert eine kompakte
   Teilmenge $K \subset Y$, so dass
@@ -121,7 +121,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
   \[
   p_{j_1\nu_1}(\lambda f) = \dots = p_{j_n\nu_n}(\lambda f) = 0.
   \]
-  Damit liegt $\lambda f \in U$, es folgt
+  Damit liegt $\lambda f$ in $U$, es folgt
   \[
   |T[f]| < \frac1\lambda \qquad \forall \lambda >0
   \]
@@ -130,7 +130,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
 
 \begin{lemma}
   \label{lemma:funktional-explizit}
-  Sei $Z \subset X$ offen und $X$ eine Riemannsche Fläche. Sei $S \in
+  Sei $X$ eine Riemannsche Fläche und $Z \subset X$ offen. Sei $S \in
   \diff^{0,1}(X)'$ mit $S[\d[''g]] = 0$ für beliebige $g \in \diff(X)$
   mit $\Supp(g) \Subset Z$. 
   Dann existiert ein $\sigma \in \Omega(X)$ mit $S[\omega] = \iint_Z
@@ -145,14 +145,17 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
   \dist(U)$. Wir bezeichnen mit $\tilde \phi$ jede 1-Form in
   $\diff^{0,1}(X)$, für die $\tilde \phi|_U \equiv \phi \d[\bar z]$ und
   $\tilde \phi |_{X \setminus U} \equiv 0$ gilt. 
-  Damit können wir ein $S_U \in \dist(U)'$ definieren:
+  Damit können wir ein $S_U \in \dist(U)'$ definieren
+  \begin{align}
+  S_U: \dist(U) \ra \C, \phi \mapsto S[\tilde \phi]. \label{eq:su}
+  \end{align}
+  \eqref{eq:su} verschwindet auf allen Funktionen $\phi = \frac{\partial
+    g}{\partial \bar z}$, $g \in \dist(U)$, denn
   \[
-  S_U: \dist(U) \ra \C, \phi \mapsto S[\tilde \phi]
+  S_U[\phi] = S[\tilde \phi] = S[ \frac{\partial g}{\partial \bar z}
+  \d[\bar z]] = S[\d[''g]] = 0
   \]
-  Diese verschwindet auf allen Funktionen $\phi = \frac{\partial
-    g}{\partial \bar z}$, $g \in \dist(U)$, denn $S_U[\phi] = S[\tilde
-  \phi] = S[ \frac{\partial g}{\partial \bar z} \d[\bar z]] =
-  S[\d[''g]] = 0$ nach Voraussetzung. Das bedeutet aber, dass
+  nach Voraussetzung. Das bedeutet aber, dass
   $\frac{\partial S_U}{\partial \bar z} = 0$ gilt und aus Korollar
   \ref{cor:hol-dist} erhalten wir ein $h \in \hol(U)$, das die Gleichung
   \[
@@ -194,8 +197,8 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
 
 \begin{thm}
   \label{thm:runge-dicht}
-  Sei $Y \Subset X$ eine offene Runge-Teilmenge und $X$ eine nicht
-  kompakte Riemannsche Fläche. 
+  Sei $X$ eine nicht kompakte Riemannsche Fläche und $Y \Subset X$
+  eine offene Runge-Teilmenge. 
   Dann liegt $\im( \hol(Y') \ra \hol(Y))$ bzgl. kompakter Konvergenz dicht in $\hol(Y)$ für beliebige $Y' \Subset X$
   offen und $Y \subset Y'$.
 \end{thm}
@@ -227,7 +230,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
   \ref{prop:diff-frechet} und eine Folge $(f_n)_{n\in \N} \subset
   \diff(Y')$, die bzgl. der Fr\'echet-Topologie gegen $f \in \diff(Y')$
   konvergiert, so gilt auf den Kompakta, dass $(f_n)_{n\in \N}$ glatt
-  gegen $f$ konvergiert, d.h. heißt aber, dass bezüglich den Karten
+  gegen $f$ konvergiert, das heißt aber, dass bezüglich den Karten
   auch die Folge $\left(\frac{\partial f_n}{\partial \bar z} \right
   )_{n \in\N}$ glatt gegen $\frac{\partial f}{\partial \bar
       z}$ konvergiert. Mit anderen Worten konvergiert
@@ -261,7 +264,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
   \item ein kompaktes $K \subset Y$ mit $T[f] = 0$ für jedes $f \in
     \diff(Y)$ mit $\Supp(f) \subset Y \setminus K$ und
   \item ein kompaktes $L \subset X$ mit $S[\omega] = 0$ für jedes
-    $\omega \in \diff^{0,1}(X)$ mit $\Supp(\omega) \subset X\setminus L$
+    $\omega \in \diff^{0,1}(X)$ mit $\Supp(\omega) \subset X\setminus L$.
   \end{itemize}
    Sei $g \in \diff(X)$ mit $\Supp(g) \Subset X \setminus K$. Dann ist
    $S[\d[''g]] = T[g|_Y]  = 0$. Lemma \ref{lemma:funktional-explizit}
@@ -292,7 +295,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
 
    Sei nun $f \in \hol(Y)$. Wir wollen zeigen, dass $T[f] = 0$ ist. 
    Zunächst gilt $\runge(K) \subset \runge(Y) = Y$. Nun können wir
-   eine offene Mengen $U, V$ finden, die $ \runge(K) \subset U
+   offene Mengen $U, V$ finden, die $ \runge(K) \subset U
    \subsetneq V \subset Y$ erfüllen. Nach dem Lemma von Urysohn
    (vgl. \cite[Satz 12.2]{Jam}) finden
    wir eine stetige Funktion $\phi: X \ra \R$, die $\phi|_U \equiv 1$
@@ -300,10 +303,10 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
    dieser Funktion $\phi$ erhalten wir ein glattes $\tilde \phi \in
    \diff(X)$ und offene Mengen $\runge(K) \subset \tilde U \subset U$
    und $U \subset \tilde V \subset V$, so dass $\tilde \phi|_{\tilde
-     U} \cong 1$ und $\tilde \phi|_{X \setminus \tilde {\bar V}} \cong
+     U} \equiv 1$ und $\tilde \phi|_{X \setminus \tilde {\bar V}} \equiv
    0$ gilt. Setzen wir $ g := f \cdot \tilde \phi$, so gilt
    $f \equiv g$ in einer Umgebung von $\runge(K)$ und $\Supp(g) \Subset Y$.
-   Also liegt $\Supp(f - g|_Y) \subset Y \setminus K$, somit gilt $T[f- g|_Y] = 0$
+   Also ist $\Supp(f - g|_Y)$ in $Y \setminus K$ enthalten. Somit gilt $T[f- g|_Y] = 0$
    und schlußendlich $T[f] = T[g|_Y] = S[\d[''g]]$. 
    Nun ist aber $g$ in einer Umgebung von $\runge(K)$ holomorph, was
    nichts anderes bedeutet als, dass $\Supp(\d[''g]) \Subset X \setminus
@@ -324,7 +327,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
 
 \begin{proof}
   \begin{description}
-  \item[Fall $Y \Subset X$:] Seien $f \in \hol(Y)$, $K \subset Y$
+  \item[Fall $Y \Subset X$:] Seien $f_1 \in \hol(Y)$, $K \subset Y$
     kompakt und $\epsilon > 0$ gegeben. 
     Aus dem Beweis von Satz \ref{thm:Ausschöpfung-Runge} erhalten wir
     eine Ausschöpfung$Y_1
@@ -384,7 +387,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
   Y_0 \subseteq Y_1 \subseteq \dots
   \]
   eine Ausschöpfung von $X$ durch Runge-Gebiete. Wir wollen nun eine
-  Folge von $f_n \in \diff(Y_n)$, so dass die Bedingungen
+  Folge von $f_n \in \diff(Y_n)$ konstruieren, so dass die Bedingungen
   \begin{enumerate}
   \item $\d[''f_n] = \omega|_{Y_n}$ und
   \item $\|f_{n+1} - f_n \|_{Y_{n-1}} \leq 2^{-n}$
@@ -394,7 +397,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
   = \omega|_{Y_0}$ gilt. Seien nun $f_0, \dots, f_n$ bereits
   konstruiert. Erneut nach \cite[Kor. 14.16]{For} erhalten wir ein
   $g_{n+1} \in \diff(Y_{n+1})$, so dass $\d[''g_{n+1}] =
-  \omega|_{Y_{n+1}}$ erfüllt. Dann gilt aber auf $Y_n$ die Gleichung
+  \omega|_{Y_{n+1}}$ erfüllt ist. Dann gilt aber auf $Y_n$ die Gleichung
   \[
   \d['' g_{n+1}] = \d['' f_n],
   \]

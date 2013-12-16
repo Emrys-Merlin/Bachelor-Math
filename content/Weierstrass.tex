@@ -99,14 +99,14 @@ wollen wir hier noch einmal die Definition wiederholen.
   X_{D_1} \cap X_{D_2}$ die Gleichung $f_1 \cdot f_2 = \psi \cdot \phi
   z^{D_1(a) + D_2(a)}$. Da nun aber $D_1(a) + D_2(a) \geq 0$ gilt,
   lässt sich die rechte Seite der Gleichung glatt auf ganz $U$
-  fortsetzen. Also besitzt $f_1 \cdot f_2$ an dieser stelle eine
+  fortsetzen. Also besitzt $f_1 \cdot f_2$ an dieser Stelle eine
   hebbare Singularität und wir können das Produkt einfach fortsetzen.
 \end{proof}
 
 \begin{defin}
-  Sei $c: [0,1] \ra X$ eine glatte, nicht geschlossene Kurve und $X$
-  eine Riemannsche Fläche. Dann
-  bezeichnet $\partial c$ den Divisor, der durch
+  Sei $X$ eine Riemannsche Fläche und $c: [0,1] \ra X$ eine glatte,
+  nicht geschlossene Kurve. Dann bezeichnet $\partial c$ den Divisor,
+  der durch
   \[
   \partial c(x) :=
   \begin{cases}
@@ -205,10 +205,10 @@ wollen wir hier noch einmal die Definition wiederholen.
   \end{enumerate}
   Dies ist nach Korollar \ref{cor:ausschöpfung-kompakt} möglich.
   Sei $a_0 \in X \setminus K_j$ und $A_0 \in \Div(X)$
-  mit $A_0(a_0) = 1$ und $A_0(x) = 0$, falls $x \neq a_0$. Wir
+  mit $A_0(a_0) = 1$ und $A_0(x) = 0$, falls $x \neq a_0$ ist. Wir
   behaupten, dass dann eine schwache Lösung $\phi$ von $A_0$ mit $\phi |_{K_j}
-  = 1$ existiert. 
-  Denn $K_j$ ist eine Runge-Teilmenge, d.h. $K_j = \runge(K_j)$. Also
+  \equiv 1$ existiert. 
+  $K_j$ ist eine Runge-Teilmenge, d.h. $K_j = \runge(K_j)$. Also
   liegt $a_0$ in einer nicht relativ kompakten
   Zusammenhangskomponente $U \subset X \setminus K_j$.
   Nun existiert ein $a_1 \in U \setminus K_{j+1}$\footnote{Ansonsten wäre
@@ -218,12 +218,12 @@ wollen wir hier noch einmal die Definition wiederholen.
   $\phi_0$ des Divisors $\partial c_0$ mit $\phi_0|_{K_j} \equiv 1$. 
   Induktiv sind wir nun in der Lage eine Folge von Punkten $a_\nu \in
   X \setminus K_{j+ \nu}$, $\nu \in \N$, und Kurven in $X \setminus
-  K_{j+\nu}$ von $a_{\nu+1}$ nach $a_\nu$ konstruieren. Analog zum
+  K_{j+\nu}$ von $a_{\nu+1}$ nach $a_\nu$ zu konstruieren. Analog zum
   obigen Verfahren erhalten wir dann wieder schwache Lösungen
   $\phi_\nu$ des Divisors $\partial c_\nu$ mit $\phi_\nu |_{K_{j+\nu}}
   \equiv 1$. 
   Nach Konstruktion gilt $\partial c_\nu = A_\nu - A_{\nu+1}$, wobei
-  $A_\nu$ nur für $a_\nu$ nicht verschwindet und an dieser Stelle 1
+  $A_\nu$ nur in $a_\nu$ nicht verschwindet und an dieser Stelle 1
   ergibt.
   Weiterhin folgt aus Lemma \ref{lemma:lsg-produkt}, dass $\phi_0 \cdot \phi_1 \dots \phi_n$ eine
   schwache Lösung von $A_0 - A_{n+1}$ ist.
@@ -268,10 +268,10 @@ wollen wir hier noch einmal die Definition wiederholen.
   D|_{U_i}$. Dies ist möglich, da $D$ auf dem relativ kompakten $U_i$
   fast überall verschwindet und $f_i$ deshalb in lokalen Koordinaten
   einfach als rationale Funktion darstellbar ist. 
-  Mit dieser Konstruktion haben $f_i$ und $f_j$ dies selben Pol- und
+  Mit dieser Konstruktion haben $f_i$ und $f_j$ die selben Pol- und
   Nullstellen auf $U_i \cap U_j$, also ist
   \[
-  \frac{f_i}{f_j} \in \hol(U_i \cap U_j)^\times \qquad \forall i,j \in I
+  \frac{f_i}{f_j} \in \hol(U_i \cap U_j)^\times \qquad \forall i,j \in I.
   \]
   Nach Lemma \ref{lemma:schwache-Lösung-Divisor} existiert eine
   schwache Lösung $\psi$ von $D$ und auf den $U_i$ finden wir $\psi_i

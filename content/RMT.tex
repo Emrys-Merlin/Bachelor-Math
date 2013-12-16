@@ -30,7 +30,8 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 \begin{defin}
   Wir setzen
   \begin{align*}
-    B_\infty(0) & := \C  && \text{und}
+    B_\infty(0) & := \C \\
+    \intertext{und}
     B & := B_1(0)
   \end{align*}
 \end{defin}
@@ -124,11 +125,12 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
     |f(y)| < 1 \qquad \forall y \in Y
     \]
     und damit $f(Y) \subset B$.
-  \item $f$ ist eigentlich: Sei $0 < r < 1$ und $Y_r :=
-    f^{-1}(\overline{B_r(0)})$. 
+  \item $f$ ist eigentlich, d.h. Urbilder kompakter Mengen sind
+    kompakt: Es genügt die Aussage für abgeschlossenen Bälle zu
+    zeigen. Sei $0 < r < 1$ und $Y_r := f^{-1}(\overline{B_r(0)})$. 
     Dann ist $Y_r$ kompakt als abgeschlossene Teilmenge von $\bar Y$.
   \item $f$ ist biholomorph: $f$ nimmt jeden Wert gleichhäufig an, da
-    es sich um eine eigentlich Abbildung handelt (vgl. \cite[Satz 4.24]{For}). Weiterhin wird $0$
+    es sich um eine eigentliche Abbildung handelt (vgl. \cite[Satz 4.24]{For}). Weiterhin wird $0$
     genau einmal angenommen. Also ist $f: Y \ra B$ bijektiv und
     holomorph. Das genügt nach \cite[Kor. 2.5]{For} bereits, um zu zeigen, dass $f$ biholomorph
     ist.
@@ -139,7 +141,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 
 \begin{prop}
   \label{prop:kreis}
-  Sei $f: B_r(0) \ra B_{r'}(0)$ holomorph. Dann gilt: $|f'(0)| \leq \frac{r'}{r}$
+  Sei $f: B_r(0) \ra B_{r'}(0)$ holomorph. Dann gilt $|f'(0)| \leq \frac{r'}{r}$.
 \end{prop}
 
 \begin{proof}
@@ -168,7 +170,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 \end{lemma}
 
 \begin{proof}
-  Sei $a  \in \mathring{(\C \setminus G)}$. Wir bezeichnen die
+  Wir wählen einen Inneren Punkt $a$ von $(\C \setminus G)$. Wir bezeichnen die
   Menge in  \eqref{eq:menge} mit $M$ und behaupten, dass die Abbildung
   \[
   z \mapsto \frac{1}{z-a}
@@ -202,14 +204,14 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   B$ mit $f \circ \phi = \id_{B_r(0)}$ und $\phi'(0) = 1$. Damit wissen
   wir aber
   \[
-  1 = \phi'(0) \leq \frac{1}{r}
+  1 = \phi'(0) \leq \frac{1}{r}.
   \]
   Also ist $r \leq 1$ und somit $M$ beschränkt. Setzen wir nun $\tilde
   r := \sup M$, so müssen wir noch zeigen, dass $B_{\tilde r}(0) \subseteq
   f(B)$.
   Sei $(r_n)_{n \in \N}\subseteq M$ mit $r_n \xrightarrow{n \ra
     \infty} \tilde r$ und $z \in B_{\tilde r}(0)$. Dann existiert ein $n \in \N$,
-  so dass $z \in B_{r_n}(0)\subseteq f(B)$ und erhalten somit direkt
+  so dass $z \in B_{r_n}(0)\subseteq f(B)$ und wir erhalten somit direkt
   $B_{\tilde r}(0) \subseteq f(B)$.
 \end{proof}
 
@@ -246,7 +248,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
     & = w^2 +1 \\
     & = (-w)^2 +1 \\
     & = h_n^2(z_2) +1 \\
-    & = g(z_2)
+    & = g(z_2).
   \end{align*}
   Da nun $g$ aber injektiv ist, folgte $z_1 = z_2$ und damit $w =
   0$. Wir erhielten $g(z_1) = 1$, was einen Widerspruch zu Gleichung
@@ -261,7 +263,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   zunächst, dass $G$ ein Gebiet ist.
   Nach dem Satz über die Gebietstreue sind alle $h_n(B)$ offen und
   somit auch $G$. Es bleibt also zu zeigen, dass $G$ zusammenhängend
-  ist. Da wir uns in $\C$ befinden fallen die Begriffe des
+  ist. Da wir uns in $\C$ befinden, fallen die Begriffe des
   Zusammenhangs und des Wegzusammenhangs zusammen und wir zeigen, dass
   $G$ wegzusammenhängend ist.
   Seien dazu $z, w \in G$. Dann existieren $n, \tilde n \in \N$, so
@@ -276,7 +278,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \begin{cases}
     c_1(2t) & \text{für } 0 \leq t < \frac12\\
     c_2(2t-1) & \text{für } \frac12 \leq t \leq 1
-  \end{cases}
+  \end{cases},
   \]
   so finden wir eine Kurve in $G$ mit $c(0) = z$ und $c(1) = w$. Damit
   ist $G$ wegzusammenhängend, also ein Gebiet.
@@ -315,7 +317,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 
 \begin{lemma}
   \label{lemma:bihol-kreis}
-  Sei $R \in ]0, \infty]$, $Y \subsetneq B_R(0)$ ein Gebiet, $0 \in Y$
+  Sei $R \in ]0, \infty]$ und $Y \subsetneq B_R(0)$ ein Gebiet mit $0 \in Y$
   und $Rh_\hol^1(Y) = 0$. 
   Dann existiert ein $0< r <R$ und eine holomorphe Funktion $f: Y \ra B_r(0)$ mit $f(0) =
   0$ und $f'(0) = 1$.
@@ -358,7 +360,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   existiert ein $g \in \hol(Y)$ mit $g^2 = \phi|_Y$. Völlig analog
   zum Beweis von Satz \ref{thm:schlicht-kompakt} erhalten wir für $w
   \in g(Y)$, dass $-w \notin g(Y)$ gilt. $g$ ist nicht konstant und damit
-  eine offene Abbbildung. Sei $b \in g(Y)$. Dann existiert ein
+  eine offene Abbildung. Sei $b \in g(Y)$. Dann existiert ein
   $\epsilon > 0$, s.d. $B_{\epsilon}(b) \subseteq g(Y)$. Da nun  $w
   \in g(Y)$ impliziert, dass $-w \notin g(Y)$ gilt, folgt insbesondere $-w \notin
   B_\epsilon(b)$. Also erhalten wir
@@ -401,7 +403,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 
 \begin{proof}
   Sei $\omega \in \Omega(Y)$ nach Korollar
-  \ref{cor:nicht-verschwindende-1-form} existiert ein $w_0 \in
+  \ref{cor:nicht-verschwindende-1-form} existiert ein $\omega_0 \in
   \Omega(X)$ ohne Nullstellen. Daher
   existiert ein $f \in \hol(Y)$ mit $\omega = f \omega_0$. 
   Der Rungesche Approximationssatz besagt nun, dass eine Folge $(f_n)_{n
@@ -435,7 +437,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   dass $X$ kompakt ist. Dann wissen wir, dass $\d
   \hol(X) = 0$ und damit auch $\Omega(X) = 0$ ist. Nun liefert uns der
   Serresche Dualitätssatz, dass $H^0(X, \Omega) \cong H^1(X,
-  \hol)^\ast$ gilt . Da $\Omega(X) \cong H^0(X, \Omega)$ grundsätzlich
+  \hol)^\ast$ gilt. Da $\Omega(X) \cong H^0(X, \Omega)$ grundsätzlich
   erfüllt ist
   und im kompakten Fall $H^1(X, \hol)$ ein endlich dimensionaler
   Vektorraum ist, erhalten wir
@@ -459,13 +461,13 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   Sei $a \in Y_0$ und $(U,z)$ eine Koordinatenumgebung von $a$. Dann
   existieren $r_n <0$ und eine biholomorphe Abbildung $f_n: Y_n \ra
   B_{r_n}(0)$ mit $f_n(a) = 0$ und $\frac{\d[f_n]}{\d[z]}(a) = 1$, denn
-  betrachten wir die Abbildung $\tilde f_n : Y_n \ra B$ die nach
+  betrachten wir die Abbildung $\tilde f_n : Y_n \ra B$, die nach
   Satz \ref{thm:Gebiet-Kreis} existiert und die Abbildung
   \[
   \phi: B \ra B, \quad\phi_n(z) := \frac{z- \tilde f_n(a)}{1 - z \overline{\tilde
       f_n(a)}},
   \]
-  so erhalten wir zunächts $\bar f_n := \phi_n \circ \tilde
+  so erhalten wir zunächst $\bar f_n := \phi_n \circ \tilde
   f_n$. Diese erfüllt $\bar f_n : Y_n \ra B$ und $\bar f_n(a) =
   0$. Setzen wir nun $r_n^{-1} := \left | \frac{\d[\bar f(a)]}{\d[z]}
   \right |$ und $f_n := r_n \cdot \bar f_n : Y_n \ra B_{r_n}(0)$, so

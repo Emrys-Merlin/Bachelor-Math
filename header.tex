@@ -34,7 +34,7 @@
 
 
 \usepackage{fontspec}
-\setmainfont[ItalicFont={Linux Biolinum Italic}]{Linux Libertine O}
+\setmainfont[]{Linux Libertine O}
 \setsansfont{Linux Biolinum O}
 % \setmathfont{xits-math.otf}
 % \setmathfont{Asana-Math.otf}
@@ -132,15 +132,16 @@
 \usetikzlibrary{shadows}
 
 %amsthm
-\theoremstyle{plain}
+%\theoremstyle{plain}
+\theoremstyle{definition}
 \newtheorem{thm}{Satz}[section]
 \newtheorem{lemma}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem{cor}[thm]{Korollar}
-\theoremstyle{definition}
+%\theoremstyle{definition}
 \newtheorem{defin}[thm]{Definition}
 \newtheorem{bsp}[thm]{Beispiele}
-\theoremstyle{remark}
+%\theoremstyle{remark}
 \newtheorem{rem}[thm]{Bemerkung}
 
 \tikzset{node distance=3cm, auto}

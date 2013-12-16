@@ -23,7 +23,7 @@ als die zyklischen Untergruppen charakterisiert.
 
 \begin{rem}
   Um über Diskretheit sprechen zu können, benötigt $\PSL(2, \R)$
-  eine Topolgie. Hier verwenden wir die Quotiententopolgie von
+  eine Topolgie. Hier verwenden wir die Quotiententopolgie, die von
   \[
   \PSL(2, \R) \cong \quot{\SL(2, \R)}{\{\pm \id\}}
   \]
@@ -60,7 +60,7 @@ als die zyklischen Untergruppen charakterisiert.
   \begin{align*}
     z_{1,2} & = \frac{a-d}{2c} \pm \sqrt{\frac{(d-a)^2}{4c^2} +
       \frac{b}{c}} \\
-    & = \frac{a-d}{2c} \pm \frac{1}{2c} \sqrt{(\tr S)^2 - 4}
+    & = \frac{a-d}{2c} \pm \frac{1}{2c} \sqrt{(\tr S)^2 - 4}.
   \end{align*}
   Nun hängt die Anzahl und Art der Lösungen von der Diskriminante
   ab. Wir erhalten also die folgenden Fälle:
@@ -69,7 +69,7 @@ als die zyklischen Untergruppen charakterisiert.
     der Imaginärteil von Null verschieden ist. Aufgrund des
     Vorzeichens liegt nur eine dieser Lösungen in $\h$. Also finden
     wir einen Fixpunkt in $\h$.
-  \item Für $|\tr S| = 2$ erahlten wir eine Lösung in $\R$.
+  \item Für $|\tr S| = 2$ erhalten wir eine Lösung in $\R$.
   \item Für $|\tr S| > 2$ erhalten wir zwei Lösungen in $\R$.
   \end{itemize}
   Nun müssen wir noch den Fall $c = 0$ betrachten. Dann vereinfacht
@@ -97,7 +97,7 @@ als die zyklischen Untergruppen charakterisiert.
 
 \begin{lemma}
   \label{lemma:psl-trafo}
-  Sei $S \in \PSL(2, \R)$. Dann gelten
+  Sei $S \in \PSL(2, \R)$. Dann gelten:
   \begin{enumerate}
   \item Ist $S$ elliptisch mit Fixpunkt $w \in \h$, so existiert ein $C \in \PSL(2, \R)$, so
     dass $C\langle w \rangle = i$ gilt. Weiterhin gilt dann für ein
@@ -162,15 +162,15 @@ als die zyklischen Untergruppen charakterisiert.
   so gilt $\tilde S\langle i \rangle = i$ und wir erhalten die
   Gleichung
   \[
-  ai +b = -c + di
+  ai +b = -c + di.
   \]
   Nun sind die $a,b,c,d \in \R$ und wir erhalten, dass $a = d$ und $b
-  = - c$ gelten muss. Dann erhalten wir aber, dass
+  = - c$ gelten muss. Dann erhalten wir, dass
   \[
   1 = \det S = ad - bc = a^2 + b^2
   \]
   gelten muss. Damit finden wir aber geeignete $\phi \in \R$, so dass
-  $a = \cos(\phi)$ und $b = \sin(\phi)$ erfüllen und damit hat $\tilde
+  $a = \cos(\phi)$ und $b = \sin(\phi)$ ist und damit hat $\tilde
   S$ die gewünschte Form.
 
   \emph{Fall 2:} Sei $S \in Sl(2, \R)$ parabolisch und sei $w \in \R
@@ -182,9 +182,9 @@ als die zyklischen Untergruppen charakterisiert.
     c & d
   \end{pmatrix}.
   \]
-  Falls nun $w = \infty$ gilt, muss $c =0$ sein. Dann folgt aber aus
+  Falls nun $w = \infty$ gilt, muss $c =0$ sein. Dann folgt aus
   $|\tr S| = 2$ und $\det S = 1$, dass $a = d = \pm 1$ gelten
-  muss. Da wir uns aber in $\PSL(2,\R)$ befinden, können wir ohne
+  muss. Da wir uns in $\PSL(2,\R)$ befinden, können wir ohne
   Einschränkung $a = d = 1$ annehmen. Also ist $S$ bereits in der
   gewünschten Form. Falls $w \neq \infty$ gilt, so betrachten wir
   \[
@@ -209,7 +209,7 @@ als die zyklischen Untergruppen charakterisiert.
   gilt. Da $S \in \PSL(2,\R)$ liegt, können wir ohne Einschränkung
   $\lambda = a > 0$ annehmen, was die Behauptung in diesem Fall
   zeigt. Als nächstes sei $w_1 = \infty$ oder $w_2 = \infty$. Wir
-  nehmen ohne Einschränkunt $w_2 = \infty$ an. Dann ist $w_1 \neq
+  nehmen ohne Einschränkung $w_2 = \infty$ an. Dann ist $w_1 \neq
   \infty$ und wir setzen
   \[
   C =
@@ -217,7 +217,7 @@ als die zyklischen Untergruppen charakterisiert.
     1 & - w_1\\
     0 & 1
   \end{pmatrix}
-  \in \PSL(2, \R)
+  \in \PSL(2, \R).
   \]
   Dann erfüllt $C\langle \infty \rangle = \infty$ und $C\langle w_1
   \rangle = 0$ und wir erhalten für $\tilde S = C S C^{-1}$ die beiden
@@ -307,7 +307,7 @@ beginnen mit der folgenden Proposition.
   Nach Rücktransformation folgt die Aussage für $S$ und $T$.
 
   Gelte nun $\Fix(S) = \Fix(T)$, so stimmen die Typen von $S$ und $T$
-  überein weiterhin finden wir nach Lemma \ref{lemma:psl-trafo} ein $C
+  überein. Weiterhin finden wir nach Lemma \ref{lemma:psl-trafo} ein $C
   \in \PSL(2, \R)$, so dass $C S C^{-1}$ und $C T C^{-1}$ gemeinsam
   eine der Formen aus dem obigen Lemma annehmen. Nun haben wir aber im
   elliptischen Fall Rotationen und die Gruppe der Rotationen im $\R^2$
@@ -316,7 +316,7 @@ beginnen mit der folgenden Proposition.
   hyperbolische Fall liefert Diagonalmatrizen, diese kommutieren immer
   mit allen anderen Matrizen, kommutieren also insbesondere
   untereinander. Aus der Kommutativität von $C S C^{-1}$ und $C T
-  C^{-1}$ folgt dann dirket die Kommutativität von $S$ und $T$.
+  C^{-1}$ folgt dann direkt die Kommutativität von $S$ und $T$.
 \end{proof}
 
 \begin{thm}
@@ -347,14 +347,14 @@ beginnen mit der folgenden Proposition.
   einer diskreten Untergruppe von $S^1$ identifizieren. Angenommen
   diese Untergruppe wäre nicht zyklisch. Dann gäbe es $\phi \neq \psi
   \in \R$, so dass $e^{in\phi} \neq e^{im\psi}$ für beliebige $n, m
-  \in \Z$. Nun wissen wir aber nach Korollar \ref{cor:gitter}, dass
+  \in \Z$ gelten müsste. Wir wissen aber nach Korollar \ref{cor:gitter}, dass
   eine diskrete additive Untergruppe von $\R$ zyklisch sein muss,
   d.h. die additive Untergruppe $L := \{ n \phi + m \psi \mid n,m \in
-  \Z\}$ kann nicht diskret sein. Weiterhin ist die Abbildung
+  \Z\}$ könnte nicht diskret sein. Weiterhin ist die Abbildung
   \[
   p: \R \ra S^1, \quad \phi \mapsto e^{i\phi}
   \]
-  ein lokaler Homöomorphismus und ein Gruppenhomomorphismus, also kann auch $p(L) \leq G$ nicht diskret sein. Ein
+  ein lokaler Homöomorphismus und ein Gruppenhomomorphismus, also könnte auch $p(L) \leq G$ nicht diskret sein. Ein
   Widerspruch. Also muss ein $\phi \in \R$ existieren, so dass
   \[
   G \cong \left \{ e^{in\phi} \mid n \in \Z \right \}

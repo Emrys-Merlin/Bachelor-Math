@@ -31,7 +31,7 @@ werden konnte.
   \begin{enumerate}
   \item Konvergenz bezüglich der Topologie von $E$ bedeutet dann
     nichts anderes, als Konvergenz bezüglich aller Halbnormen $p_k$.
-  \item Die erste Bedingung bedeutet, dass $U\subset X$ genau dann
+  \item Die erste Bedingung bedeutet, dass $U\subset E$ genau dann
     offen ist, falls zu jedem $x \in U$ ein $K \in \N$ und ein
     $\epsilon > 0$ existiert, so dass
     \[
@@ -74,7 +74,7 @@ werden konnte.
   2^{-k}p_k(x-y) > 0$. Da für $x =y$ klarerweise $d(x,y) =0$ gilt,
   folgt die Definitheit von $d$.
 
-  Es bleibt also nur noch die die
+  Es bleibt also nur noch die
   Dreiecksungleichung zu zeigen. Dazu stellen wir zunächst fest, dass
   $f$ streng monoton wachsend ist, denn die Ableitung $f'(x) =
   \frac{1}{(1+x)^2}$ ist positiv auf dem gesamten Intervall $[0,
@@ -224,17 +224,17 @@ werden konnte.
   wäre es aufgrund der Linearität insbesondere nicht in der $0$
   stetig. Also fänden wir eine Folge $(a_n + \lambda_n b_0)_{n \in
     \N} \subset E_0$ mit Grenzwert $0$, wobei aber $(\lambda_n)_{n \in
-    \N}$ nicht gegen 0 konvergiert. Wir können nun ohne Einschränkung
-  annehmen, dass $\lambda_n \geq 0$, denn wir finden auf jeden Fall
+    \N}$ nicht gegen 0 konvergierte. Wir könnten ohne Einschränkung
+  annehmen, dass $\lambda_n \geq 0$ gälte, denn wir fänden auf jeden Fall
   eine Teilfolge mit $\lambda_n \geq 0$ oder eine Teilfolge mit
-  $\lambda_n \leq 0$. Im zweiten Fall betrachten wir $(-\lambda_n)_{n
+  $\lambda_n \leq 0$. Im zweiten Fall betrachteten wir $(-\lambda_n)_{n
     \in \N}$ und $(-(a_n + \lambda_n b_0))_{n \in \N}$, wobei dann auch
-  diese Folge gegen $0$ konvergiert. Dies folgt sofort durch die
-  Halbnormen. Unter der Voraussetzung, dass $(\lambda_n)_{n\in\N}$ nicht gegen $0$
-  konvergiert, fänden wir eine Teilfolge $(\lambda_{n_l})_{l\in \N}$
-  und ein $C > 0$, so dass $\lambda_{n_l} > C$ für beliebige $l \in
-  \N$ gelten würde. Dann setzten wir $\lambda := \liminf_{l \ra \infty}
-  \lambda_{n_l} \in [C, \infty]$.
+  diese Folge gegen $0$ konvergierte. Dies ergäbe sich sofort aus den
+  Halbnormen. Unter der Voraussetzung, dass $(\lambda_n)_{n\in\N}$
+  nicht gegen $0$ konvergiert, fänden wir eine Teilfolge
+  $(\lambda_{n_l})_{l\in \N}$ und ein $C > 0$, so dass $\lambda_{n_l}
+  > C$ für beliebige $l \in \N$ gelten würde. Dann setzten wir
+  $\lambda := \liminf_{l \ra \infty} \lambda_{n_l} \in [C, \infty]$.
 
   Wäre nun $\lambda = \infty$. Dann müsste bereits
   $\lambda_{n_l} \ra \infty$ für $l \ra \infty$ gelten. Nun
@@ -262,7 +262,7 @@ werden konnte.
   \]
   für $l \ra \infty$ und alle $k \in \N$. Damit würde aber $\lim_{l
     \ra \infty}(-a_{n_l}) = \lambda b_0$ gelten und es wäre wieder
-  $b_0 \in \bar A$. Ein Widrspruch. Also ist $\phi_0$ stetig.
+  $b_0 \in \bar A$. Ein Widerspruch. Also ist $\phi_0$ stetig.
   
   $\phi_0$ lässt sich nun nach Satz \ref{thm:hahn-banach}
   auf ganz $E$ fortsetzen. Also existiert ein $\phi \in E'$ mit
