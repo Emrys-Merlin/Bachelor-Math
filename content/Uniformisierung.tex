@@ -4,9 +4,9 @@
 Wir nähern uns dem eigentlichen Ziel dieser Arbeit. Am Ende dieses
 Kapitels wird der Uniformisierungssatz für kompakte Riemannsche
 Flächen stehen. Bevor es jedoch so weit ist, müssen wir noch einige
-Eigenschaften von Decktransformationen zusammentragen. Zum einen
+Eigenschaften von Decktransformationen zusammentragen. Zum Einen
 werden wir sehen, dass genau die Fuchsschen Gruppen die möglichen
-Decktransformationsgruppen der oberen Halbebene darstellen, weiterhin
+Decktransformationsgruppen der oberen Halbebene darstellen, zum Anderen
 wird klar werden, dass $\P^1$ nur sich selbst überlagert. Zu guter
 Letzt müssen wir auch noch die Fundamentalgruppe der Riemannschen
 Flächen mit Geschlecht 1 bestimmen, dazu müssen wir einen Satz zur
@@ -37,7 +37,8 @@ Uniformisierungssatz herzuleiten.
     Abbildunge (vgl. \cite[Satz 4.8]{For}). Das bedeutet aus
     $\sigma(x) = x$ für ein $x \in \tilde X$, folgt
     bereits $\sigma = \id$.
-  \item Nach \cite[Satz 5.6]{For} ist $\Deck(\tilde X/X)$ galoissch und
+  \item Nach \cite[Satz 5.6]{For} ist $\Deck(\tilde X/X)$ galoissch
+    (bzw. regulär) und
     es folgt $Gx = p^{-1}(p(x))$. Die Aussage folgt nun, da die Faser
     von $p(x)$ diskret ist.
   \end{enumerate}
@@ -73,12 +74,12 @@ Uniformisierungssatz herzuleiten.
     \]
     Falls $c \neq 0$ gilt, so erhalten wir als Fixpunkte
     \[
-    z_{1,2} = \frac{a}{2c} \pm \sqrt{\frac{a^2}{4 c^2} - \frac{d-b}{c}}
+    z_{1,2} = \frac{a}{2c} \pm \sqrt{\frac{a^2}{4 c^2} - \frac{d-b}{c}}.
     \]
-    Falls $c = 0$ gilt, so muss $a \neq 0$ gelten, ansonsten hätte $M$ nicht
-    vollen Rang und wir erhalten als Fixpunkt
+    Falls $c = 0$ gilt, so muss $a \neq d$ gelten, ansonsten wäre
+    $\det M = 0$ und wir erhalten als Fixpunkt
     \[
-    z = \frac{d-b}{a}.
+    z = \frac{b}{d-a}.
     \]
   \item Sei $f \in G \leq \Aut(\C)$. Nach Satz \ref{thm:aut}
     existieren $a \in \C^\times$ und $b \in \C$ mit $f(z) = az
@@ -163,7 +164,7 @@ zu beweisen.
   \item Ist $g = 0$, so ist $X$ konform äquivalent zu $\P^1$.
   \item Ist $g = 1$, so existiert ein Gitter $\Gamma \subset \C$, so
     dass $X$ konform äquivalent zu $\quot{\C}{\Gamma}$ ist.
-  \item Ist $g \geq 2$, so existiert eine Untergruppe $G \leq
+  \item Ist $g \geq 2$, so existiert eine Fuchssche Gruppe $G \leq
     \Aut(\h)$, so dass $X$ konform äquivalent zu $\quot{\h}{G}$ ist.
   \end{enumerate}
 \end{thm}
@@ -180,8 +181,8 @@ zu beweisen.
   \ref{lemma:deck-pc}, dass jeder Automorphismus von $\P^1$ einen
   Fixpunkt besitzt, d.h. es gibt keine fixpunktfrei-operierende
   Untergruppe von $\Aut(\P^1)$. Also überlagert $\P^1$ nur sich
-  selbst, also müsste $X \cong \tilde X \cong \P^1$ gelten. Dies ist
-  ein Widerspruch zu $g \neq 0$. Also ist die Universelle Überlagerung
+  selbst und es müsste $X \cong \tilde X \cong \P^1$ gelten. Dies ist
+  ein Widerspruch zu $g \neq 0$. Dementsprechend ist die Universelle Überlagerung
   von $X$ entweder $\C$ oder $\h$.
 
   Sei nun $g \geq 2$. Angenommen $\tilde X \cong \C$. In Lemma
@@ -192,7 +193,7 @@ zu beweisen.
   die ersten beiden Möglichkeiten nicht kompakt und die Dritte hat
   Geschlecht $g =1$. Ein Widerspruch. Also muss die Universelle
   Überlagerung von $X$ konform äquivalent zu $\h$ sein und damit ist
-  $X$ konform äquivalent zu $\quot{\h}{G}$ für eine Untergruppe $G
+  $X$ konform äquivalent zu $\quot{\h}{G}$ für eine Fuchssche Gruppe $G
   \leq \Aut(\h)$.
 
 
@@ -200,8 +201,7 @@ zu beweisen.
   wissen aus Satz \ref{thm:geschlecht-1-z}, dass
   \begin{align}
     \label{eq:g-z}
-  \Z \oplus \Z \cong G := \Deck \left( \C \setminus \quot{\C}{\Gamma}
-  \right ) \leq \Aut(\h)
+  \Z \oplus \Z \cong G := \Deck(\tilde X \setminus X) \leq \Aut(\h)
   \end{align}
   gelten müsste. Insbesondere müssten wir eine abelsche Fuchssche
   Gruppe finden, allerdings wissen wir nach Satz
@@ -218,6 +218,29 @@ zu beweisen.
   \subset \C$. Insgesamt erhalten wir, dass $X$ konform äquvialent zu
   $\quot{\C}{\Gamma}$ ist.
 \end{proof}
+
+Damit haben wir das Ziel der Arbeit erreicht. Wir haben alle kompakten
+Riemannschen Flächen vollständig charakterisiert. Die Reichweite
+dieses Resultats wird natürlich erst in der Anwendung spürbar. Diese
+würde jedoch den Rahmen dieser Arbeit endgültig sprengen und wir
+wollen an dieser Stelle nur noch auf mögliche Literatur verweisen.
+
+Für einen differentialgeometrischen Zugang zu kompakten Riemannschen
+Flächen und die Auswirkungen des Uniformisierungssatzes auf die
+Existenz verschiedener Geometrien auf den Flächen empfehlen wir
+\cite{Jos}. Hier findet sich auch ein alternativer Beweis des
+Uniformisierungssatzes, der deutlich analytischer geprägt
+ist. Weiterhin findet eine Einführung in die Theorie der
+Teichmüller-Räume statt, die in dieser Arbeit vollkommen ignoriert
+wurde.
+
+Für eine ausgiebige Diskussion algebraischer Kurven und deren
+Zusammenhang mit Riemannschen Flächen verweisen wir auf
+\cite{Mir}. In diesem Text wird viel Zeit mit der Konstruktion von
+Riemannschen Flächen aus algebraischen Kurven verbracht. Außerdem wird
+als Anwendung der Dualität von Flächen und Kurven gezeigt, wie
+mögliche Gruppenstrukturen von den Riemannschen Flächen auf die
+algebraischen Kurven übertragen werden können.
 
 %%% Local Variables: 
 %%% mode: latex

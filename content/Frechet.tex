@@ -21,7 +21,7 @@ werden konnte.
   \end{enumerate}
   Weiterhin definieren wir für $\epsilon > 0$ und $x \in E$ die Menge
   \[
-  U(p_k, \epsilon, x) := \{ y \in E \mid p_k(x-y) < \epsilon\}
+  U(p_k, \epsilon, x) := \{ y \in E \mid p_k(x-y) < \epsilon\}.
   \]
 \end{defin}
 
@@ -37,11 +37,11 @@ werden konnte.
     \[
     \cap_{k=1}^K U(p_k, \epsilon, x) \subset U
     \]
-    gilt, d.h. Die $U(p_k, \epsilon, x)$ bilden eine Subbasis der Topologie.
+    gilt, d.h. die $U(p_k, \epsilon, x)$ bilden eine Subbasis der Topologie.
   \item Aus der Bedingung, dass $E$ Hausdorffsch ist, folgt, dass $x =
     y$ dann und nur dann gilt, wenn $p_k(x-y) = 0$ für jedes $k \in
     \N$ gilt. Dies folgt leicht aus der Tatsache, dass falls $p_k(x-y)
-    = $ für beliebige $k \in \N$ gilt, $x \in U(p_k, \epsilon, y)$ für
+    = 0$ für beliebige $k \in \N$ gilt, $x \in U(p_k, \epsilon, y)$ für
     alle $k \in \N$ und $\epsilon > 0$ gilt. Also ist $x$ in jeder
     offenen Umgebung von $y$ enthalten. Da $E$ Hausdorffsch ist, ist
     dies nur möglich für $x = y$. Die Umkehrung ist natürlich immer wahr.
@@ -58,7 +58,7 @@ werden konnte.
   \]
   eine Metrik und die von $d$ induzierte Topologie stimmt mit der
   Topologie von $E$ überein. Also ist $E$ insbesondere
-  metrisierbar. $d$ wird auch als \init{Fr\'echet-Metrik} bezeichnet.
+  metrisierbar. $d$ wird als \init{Fr\'echet-Metrik} bezeichnet.
 \end{prop}
 
 \begin{proof}
@@ -134,20 +134,20 @@ werden konnte.
   mindestens so fein ist, wie die Topologie von $E$. Sei dazu $U \subset
   E$ offen. Wählen wir $x \in U$, so existiert ein $K \in \N$ und ein
   $\epsilon > 0$, so dass $\bigcap_{k=1}^K U(p_k, \epsilon, x) \subset
-  U$. Weiterhin können wir zu $f$ explizit eine Umkehrfunktion
+  U$ gilt. Weiterhin können wir zu $f$ explizit eine Umkehrfunktion
   angeben. Für diese gilt
   \[
-  f^{-1} := [0, 1[\ra [0, \infty[, \quad f^{-1}(x) := \frac{x}{1-x}
+  f^{-1} :[0, 1[\ra [0, \infty[, \quad f^{-1}(x) := \frac{x}{1-x}
   \]
   und damit ist $f^{-1}$ auch stetig und wir finden ein $\delta > 0$,
   so dass $0 \leq f^{-1}(x) < \epsilon$ für alle $0 \leq x <
-  \delta$. Setzen wir $\tilde \delta := 2^{-K} \delta$, so behaupten
+  \delta$ gilt. Setzen wir $\tilde \delta := 2^{-K} \delta$, so behaupten
   wir, dass
   \[
   B_{\tilde \delta}(x) \subset \cap_{j=1}^K U(p_j,
   \epsilon, x) \subset U
   \]
-  gilt. Sei dazu $y \in B_{\tilde
+  ist. Sei dazu $y \in B_{\tilde
       \delta}(x)$. Aus $d(x,y) < \tilde \delta$ folgt dann, dass
     $2^{-k} f(p_k(x-y)) < 2^{-K} \delta$ gilt. Insbesonder erhalten
     wir für alle $k \leq K$, dass $f(p_k(x-y)) < 2^{-(K-k)} \delta
@@ -198,18 +198,19 @@ werden konnte.
   \label{thm:hahn-banach}
   Sei $E$ ein Fr\'echet-Raum, $E_0 \subset E$ ein Untervektorraum und
   $\phi_0 \in E_0'$. Dann existiert ein $\phi \in E'$ mit $\phi|_{E_0}
-  \equiv \phi_0$
+  = \phi_0$.
 \end{thm}
 
 \begin{proof}
-  Wir verweisen auf die Standardliteratur zur Funktionalanalysis z.B. \cite[Satz3.6]{Rud}.
+  Wir verweisen auf die Standardliteratur zur Funktionalanalysis
+  z.B. \cite[Satz 3.6]{Rud}.
 \end{proof}
 
 \begin{cor}
   \label{cor:frechet-dicht}
   Sei $E$ ein Fr\'echet-Raum. Seien weiterhin $A \subset B \subset E$
-  Untervektorräume. Falls für jedes $\phi \in E'$ mit $\phi|_A \equiv
-  0$ auch $\phi|_B \equiv 0$ ist, so liegt $A$ dicht in $B$.
+  Untervektorräume. Falls für jedes $\phi \in E'$ mit $\phi|_A =
+  0$ auch $\phi|_B = 0$ ist, so liegt $A$ dicht in $B$.
 \end{cor}
 
 \begin{proof}
@@ -261,12 +262,12 @@ werden konnte.
   |\lambda - \lambda_{n_l}| p_k(b_0) \ra 0.
   \]
   für $l \ra \infty$ und alle $k \in \N$. Damit würde aber $\lim_{l
-    \ra \infty}(-a_{n_l}) = \lambda b_0$ gelten und es wäre wieder
+    \ra \infty}\left (-\frac{a_{n_l}}{\lambda} \right ) =  b_0$ gelten und es wäre wieder
   $b_0 \in \bar A$. Ein Widerspruch. Also ist $\phi_0$ stetig.
   
   $\phi_0$ lässt sich nun nach Satz \ref{thm:hahn-banach}
   auf ganz $E$ fortsetzen. Also existiert ein $\phi \in E'$ mit
-  $\phi|_{E_0} \equiv \phi$. Dann ist $\phi|_A$ konstant 0, aber
+  $\phi|_{E_0} = \phi$. Dann ist $\phi|_A$ konstant 0, aber
   dies gilt nicht für $\phi|_B$.
 \end{proof}
 

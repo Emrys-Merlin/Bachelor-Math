@@ -15,29 +15,12 @@ kompakte) Riemannsche Flächen überträgt und es sogar noch verschärfen,
 denn es kann sogar eine Polstellenmenge mit zugehörigen Ordnungen
 angegeben werden und man findet immer eine meromorphe Funktion, die
 diese Vorgaben erfüllt. Die Sprache in der dieses Resultat auf
-Riemannschen Flächen formuliert wird, ist die der Divisoren. Auch wenn
-wir in Kapitel \ref{sec:serre} bereits mit Divisoren gearbeitet haben,
-wollen wir hier noch einmal die Definition wiederholen.
-
-\begin{defin}{Divisor}
-  Sei $X$ eine Riemannsche Fläche. Ein \init{Divisor} ist eine
-  Abbildung $D: X \ra \Z$, so dass für jede kompakte Teilmenge $K
-  \subset X$ gilt: $D(x) = 0$ für fast alle $x \in K$. 
-  Wir bezeichnen mit $\Div(X)$ die Menge aller Divisoren.
-  
-  Für eine Funktion $f \in \mer(X)^\times$ definieren wir den zu $f$
-  gehörigen Divisor
-  \[
-  (f): X \ra \Z, \quad x \mapsto \ord_x(f).
-  \]
-  Da die Null- und Polstellen eine diskrete Teilmenge von $X$ bilden,
-  ist dies tatsächlich ein Divisor.
-\end{defin}
+Riemannschen Flächen formuliert wird, ist die der Divisoren.
 
 \begin{defin}
   \label{def:divisor-lsg}
   Sei $X$ eine Riemannsche Fläche und $D \in \Div(X)$. Dann heißt $f
-  \in \mer(X)$ eine \emph{Lösung} von $D$, falls $(f) = D$ gilt.
+  \in \mer(X)$ eine \emph{Lösung} von $D$, falls $(f) = D$ ist.
   
   Setzen wir $X_D := \{x \in X: D(x) \geq 0 \}$, so heißt $f \in
   \diff(X_D)$ \emph{schwache Lösung} von $D$, falls für alle $a \in X$
@@ -55,10 +38,10 @@ wollen wir hier noch einmal die Definition wiederholen.
 
 \begin{proof}
   Sie $a \in X$ und $(U_a, z_a)$ eine Karte um $a$ mit $z(a) = 0$, so
-  dass $f|_{U_a} \equiv \psi_a z^{k_a}$ und $g|_{U_a} \equiv \phi_a
+  dass $f|_{U_a} = \psi_a z^{k_a}$ und $g|_{U_a} = \phi_a
   z^{k_a}$ auf $X_D \cap U_a$ gilt, wobei $k_a := D(a)$. Weiterhin sei
   $U_a$ so klein gewählt, dass $\psi_a(x) \neq 0 \neq \phi_a(x)$ für
-  alle $x \in U_a$. Dann ist klarerweise $(U_a)_{a \in X}$ eine
+  alle $x \in U_a$ gilt. Dann ist klarerweise $(U_a)_{a \in X}$ eine
   Überdeckung von $X$. Nun definieren wir auf $U_a$ die Funktion
   \[
   h_a := \frac{\psi_a}{\phi_a} \in \diff(U)
@@ -77,7 +60,7 @@ wollen wir hier noch einmal die Definition wiederholen.
   ganz $U_a$ und wir erhalten, dass $h$ glatt auf ganz $X$ fortgesetzt
   werden kann. Weiterhin folgt aus $h_a(x) \neq 0$ für alle $x \in
   U_a$ und $a \in X$, dass auch $h(x) \neq 0$ für alle $x \in X$. Und
-  als letztes erahlten wir auch $f = h \cdot g$.
+  als letztes erhalten wir auch $f = h \cdot g$.
 \end{proof}
 
 \begin{lemma}
@@ -89,11 +72,11 @@ wollen wir hier noch einmal die Definition wiederholen.
 
 \begin{proof}
   Auf $X_{D_1} \cap X_{D_2}$ ist klar, dass $f_1 \cdot f_2$ die
-  gewünschten Eigenschaften erfüllt. Allerdings ist falls ein $a \in
+  gewünschten Eigenschaften hat. Allerdings ist falls ein $a \in
   X$ mit $D(a) := D_1(a) +
   D_2(a) \geq 0$, aber $D_1(a) < 0$ oder $D_2(a) < 0$ existiert, entweder $f_1(a)$ oder
   $f_2(a)$ nicht definiert. Nehmen wir ohne Einschränkung an, dass
-  $D_1(a) < 0$ gilt, so können wir eine Karte $(z,U)$ um $a$ finden,
+  $D_1(a) < 0$ gilt, so können wir eine Karte $(U,z)$ um $a$ finden,
   so dass $\psi, \phi \in \diff(U)$ existieren, die der Definition
   \ref{def:divisor-lsg} genügen. Dann gilt zunächst auf $U \cap
   X_{D_1} \cap X_{D_2}$ die Gleichung $f_1 \cdot f_2 = \psi \cdot \phi
@@ -124,7 +107,7 @@ wollen wir hier noch einmal die Definition wiederholen.
   nicht geschlossene
   Kurve. Sei weiterhin $U \subset X$ eine relativ kompakte, offene
   Umgebung von $c([0,1])$, so existiert eine schwache Lösung $f$ von
-  $\partial c$ mit $f|_{X \setminus U} \equiv 1$.
+  $\partial c$ mit $f|_{X \setminus U} = 1$.
 \end{lemma}
 
 \begin{proof}
@@ -154,8 +137,8 @@ wollen wir hier noch einmal die Definition wiederholen.
   einschränken.
 
   Als nächsten Schritt benötigen wir nun noch ein $\psi \in
-  \diff(B_1(0))$, das $\psi|_{\bar B_r(0)} \equiv 1$ und $\psi|_{B_1(0)
-    \setminus \bar B_{\tilde r}(0)} \equiv 0$ erfüllt, wobei $r <
+  \diff(B_1(0))$, das $\psi|_{\bar B_r(0)} = 1$ und $\psi|_{B_1(0)
+    \setminus \bar B_{\tilde r}(0)} = 0$ erfüllt, wobei $r <
   \tilde r <1$
   gewählt wurde. Eine stetige Funktion mit diesen Eigenschaften
   existiert auf jeden Fall. Glätten wir diese stetige Funktion, so
@@ -170,7 +153,7 @@ wollen wir hier noch einmal die Definition wiederholen.
   \end{cases}
   \]
   definieren. Dank $\psi$ wird $f_0$ zu einer glatten Abbildung, die
-  weiterhin $f_0|_{\partial U} \equiv 1$ erfüllt. Also können wir
+  weiterhin $f_0|_{\partial U} = 1$ erfüllt. Also können wir
   $f_0$ auf ganz $X \setminus \{a\}$ durch 1 fortsetzen. Nach
   Konstruktion ist $f_0$ aber auch eine schwache Lösung von
   $\partial c$, so dass wir die Behauptung in diesem Fall gezeigt
@@ -178,17 +161,18 @@ wollen wir hier noch einmal die Definition wiederholen.
 
   Betrachten wir nun den Fall, dass $U$ keine Koordinatenumgebung
   ist. Dann finden wir eine Unterteilung des Intervalls $0= t_0 <
-  t_1 \dots < t_n = 1$ und Karten $(z_j, U_j)$, wobei $j = 1, \dots,
+  t_1 \dots < t_n = 1$ und Karten $(U_j,z_j)$, wobei $j = 1, \dots,
   n$, so dass $c([t_{j-1}, t_j]) \subset U_j \subset U$ und
   $z_j(U_j) = B_1(0)$ gelten. Diese Überdeckung existiert aufgrund
   der Kompaktheit von $c([0,1])$. Es folgt nun aber, dass wir den
   ersten Teil des Beweises jeweils auf $\partial c|_{[t_{j-1},t_j]}$
-  anwenden können und erhalten somit schwache Lösungen $f_j$ mit $f_j|_{X
-    \setminus U} \equiv 1$.
+  anwenden können, wobei wir ohne Einschränkung $c|_{[t_{j-1},t_j]}$
+  als nicht geschlossen annehmen können, und erhalten somit schwache Lösungen $f_j$ mit $f_j|_{X
+    \setminus U} = 1$.
   Setzen wir $f = f_1 \dots f_n$, so ist $f$ nach Lemma
   \ref{lemma:lsg-produkt} eine schwache Lösung zu
-  $\sum_{j=1}^n \partial c|_{[t_{j-1},t_j]} = \partial c$ und sie
-  erfüllt $f|_{X \setminus U} \equiv 1$.
+  $\sum_{j=1}^n \partial c|_{[t_{j-1},t_j]} = \partial c$ und
+  erfüllt $f|_{X \setminus U} = 1$.
 \end{proof}
 
 \begin{lemma}
@@ -207,21 +191,21 @@ wollen wir hier noch einmal die Definition wiederholen.
   Sei $a_0 \in X \setminus K_j$ und $A_0 \in \Div(X)$
   mit $A_0(a_0) = 1$ und $A_0(x) = 0$, falls $x \neq a_0$ ist. Wir
   behaupten, dass dann eine schwache Lösung $\phi$ von $A_0$ mit $\phi |_{K_j}
-  \equiv 1$ existiert. 
+  = 1$ existiert. 
   $K_j$ ist eine Runge-Teilmenge, d.h. $K_j = \runge(K_j)$. Also
   liegt $a_0$ in einer nicht relativ kompakten
   Zusammenhangskomponente $U \subset X \setminus K_j$.
-  Nun existiert ein $a_1 \in U \setminus K_{j+1}$\footnote{Ansonsten wäre
+  Nun existiert ein $a_0 \neq a_1 \in U \setminus K_{j+1}$\footnote{Ansonsten wäre
   $K_{j+1}$ nicht kompakt.} und eine Kurve $c_0: I \ra U$ mit
   $c_0(0)=a_1$ und $c_0(1) = a_0$. 
   Nach Lemma \ref{lemma:schw-lsg-kurve} existiert eine schwache Lösung
-  $\phi_0$ des Divisors $\partial c_0$ mit $\phi_0|_{K_j} \equiv 1$. 
+  $\phi_0$ des Divisors $\partial c_0$ mit $\phi_0|_{K_j} = 1$. 
   Induktiv sind wir nun in der Lage eine Folge von Punkten $a_\nu \in
   X \setminus K_{j+ \nu}$, $\nu \in \N$, und Kurven in $X \setminus
   K_{j+\nu}$ von $a_{\nu+1}$ nach $a_\nu$ zu konstruieren. Analog zum
   obigen Verfahren erhalten wir dann wieder schwache Lösungen
   $\phi_\nu$ des Divisors $\partial c_\nu$ mit $\phi_\nu |_{K_{j+\nu}}
-  \equiv 1$. 
+  = 1$. 
   Nach Konstruktion gilt $\partial c_\nu = A_\nu - A_{\nu+1}$, wobei
   $A_\nu$ nur in $a_\nu$ nicht verschwindet und an dieser Stelle 1
   ergibt.
@@ -233,7 +217,7 @@ wollen wir hier noch einmal die Definition wiederholen.
   verschieden sind. Dies folgt aus Lemma
   \ref{lemma:kompakt-in-ausschöpfung}, denn zu jeder kompakten Menge
   $K$ existiert ein $n \in \N$, so dass $K \subset K_n$. Dann gilt
-  aber $\phi_j |_K \equiv 1$ für alle $j > n$.
+  aber $\phi_j |_K = 1$ für alle $j > n$.
   Damit ist $\phi$ eine schwache Lösung von $A_0$.
   
   Sei nun $D$ ein beliebiger Divisor auf $X$. Für $\nu \in \N$
@@ -244,12 +228,12 @@ wollen wir hier noch einmal die Definition wiederholen.
   \]
   wobei $K_0$ als leere Menge definiert wird. Wir erhalten dann $D =
   \sum_{\nu = 0}^\infty D_\nu$. 
-  Nun ist $D_\nu$ nur an endlich vielen stellen von 0 verschieden und
+  Nun ist $D_\nu$ nur an endlich vielen Stellen von 0 verschieden und
   kann deshalb als endliche Summe von Divisoren der Form $A_\nu$
   dargestellt werden. Für diese wurde oben eine schwache Lösung
   konstruiert und das (endliche) Produkt dieser Lösungen liefert uns
   eine Lösung $\psi_\nu$ von $D_\nu$ und wir erhalten zusätzlich $\psi_\nu
-  |_{K_\nu} \equiv 1$. 
+  |_{K_\nu} = 1$. 
   Setzen wir $\psi := \prod_{\nu=0}^\infty \psi_\nu$, so
   konvergiert das Produkt nach den gleichen Argumenten, wie oben und
   ist eine schwache Lösung von $D$.
@@ -265,7 +249,7 @@ wollen wir hier noch einmal die Definition wiederholen.
   Wir können $X$ mit relativ kompakten, einfach zusammenhängenden
   Koordinatenumgebungen $(U_i)_{i \in I}$ überdecken. Auf diesen
   finden wir $f_i \in \mer(U_i)^\times$, so dass $(f_i) =
-  D|_{U_i}$. Dies ist möglich, da $D$ auf dem relativ kompakten $U_i$
+  D|_{U_i}$ ist. Dies ist möglich, da $D$ auf dem relativ kompakten $U_i$
   fast überall verschwindet und $f_i$ deshalb in lokalen Koordinaten
   einfach als rationale Funktion darstellbar ist. 
   Mit dieser Konstruktion haben $f_i$ und $f_j$ die selben Pol- und
@@ -276,18 +260,15 @@ wollen wir hier noch einmal die Definition wiederholen.
   Nach Lemma \ref{lemma:schwache-Lösung-Divisor} existiert eine
   schwache Lösung $\psi$ von $D$ und auf den $U_i$ finden wir $\psi_i
   \in \diff(U_i)$, so dass $\psi = \psi_i \cdot f_i$ und $\psi_i(x)
-  \neq 0$ für alle $x \in U_i$. 
+  \neq 0$ für alle $x \in U_i$ gelten. 
   Da $U_i$ einfach zusammenhängend ist und $\psi_i$ nicht
   verschwindet, existiert ein $\phi_i \in \diff(U_i)$ mit $\psi_i =
-  e^{\phi_i}$. \\
-  Somit erhalten wir
-  \[
-  \psi = e^{\phi_i} f_i \qquad \text{auf } U_i
-  \]
-  und
-  \[
-  e^{\phi_j - \phi_i} = \frac{f_i}{f_j} \in \hol(U_i \cap U_j)^\times
-  \]
+  e^{\phi_i}$. Somit erhalten wir
+  \begin{align*}
+  \psi & = e^{\phi_i} f_i \qquad \text{auf } U_i \\
+  \intertext{und}
+  e^{\phi_j - \phi_i} & = \frac{f_i}{f_j} \in \hol(U_i \cap U_j)^\times.
+  \end{align*}
   Damit ist $\phi_{ij} := \phi_i - \phi_j \in \hol(U_i \cap U_j)$, da
   die $\exp$-Funktion lokal biholomorph ist. Aus der Definition folgt
   auch direkt $\phi_{ij} + \phi_{jk} = \phi_{ik}$ auf $U_i \cap U_j
@@ -296,7 +277,7 @@ wollen wir hier noch einmal die Definition wiederholen.
   $\phi_{ij} = \phi_j - \phi_i = g_j - g_i$ auf $U_i \cap U_j$.
   Eingesetzt folgt
   \[
-  e^{g_j} f_j = e^{g_i} f_i \qquad \text{auf } U_i \cap U_j
+  e^{g_j} f_j = e^{g_i} f_i \qquad \text{auf } U_i \cap U_j,
   \]
   also finden wir ein $f \in \mer(X)^\times$ mit $f = e^{f_j} f_j$ auf
   $U_j$. Damit ist $f$ die gesuchte Lösung von $D$.

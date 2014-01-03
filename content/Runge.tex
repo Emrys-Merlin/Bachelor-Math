@@ -15,12 +15,12 @@ Funktionenfolgen auf Riemannschen Flächen zu konstruieren, die wir
 beim Beweis des Riemannschen Abbildungssatzes \ref{thm:rmt} verwenden
 werden.
 
-In diesem Kapitel werden direkt die Methoden aus Kapitel
+In diesem Kapitel werden die Resultate aus Kapitel
 \ref{sec:Weyl} und \ref{sec:frechet} zum Einsatz kommen.
 
 \begin{prop}
   \label{prop:diff-frechet}
-  Sei $X$ eine Riemannsche Fläche, $Y \subset X$ offen. 
+  Sei $X$ eine Riemannsche Fläche und $Y \subset X$ offen. 
   Dann besitzen $\diff(Y)$ und $\diff^{0,1}(Y)$ die Struktur eines Fr\'echet-Raums.
 \end{prop}
 
@@ -36,14 +36,14 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
   \]
   wobei $D^\nu_j := \left ( \frac{\partial}{\partial x_j} \right
   )^{\nu_1} \left ( \frac{\partial}{\partial y_j} \right )^{\nu_2}$
-  mit $z_j = x_j + iy_j$ besetzt wurde. Dies ist eine abzählbare Familie von
+  mit $z_j = x_j + iy_j$ gesetzt wurde. Dies ist eine abzählbare Familie von
   Halbnormen und wir können sie verwenden, um eine Topologie auf
   $\diff(Y)$ zu definieren, in dem wir als Basis der Topologie
   endliche Schnitte der Mengen $U(p_{j\nu}, \epsilon, y)$ für
   beliebige $\epsilon > 0$ und $y \in Y$ verwenden (vgl. Definition
   \ref{def:frechet} und Bemerkung \ref{rem:frechet}). Diese Topologie
   ist hausdorffsch, denn falls $0 \neq f \in \diff(Y)$, finden wir
-  eine Halbnorm, so dass $\epsilon := p_{j\nu}(f) > 0$. Dann können wir $f$ und 0
+  eine Halbnorm, so dass $\epsilon := p_{j\nu}(f) > 0$ gilt. Dann können wir $f$ und 0
   durch die beiden offenen Mengen $U(p_{j\nu}, \frac{\epsilon}{3}, 0)$
   und $U(p_{j\nu}, \frac{\epsilon}{3}, f)$ trennen. Weiterhin ist
   $\diff(Y)$ vollständig bezüglich Konvergenz in allen Halbnormen, da
@@ -111,9 +111,16 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
   \]
   gilt. Nach Konstruktion der obigen Topologie finden wir ein $\epsilon > 0$
   und endlich viele $j_1, \dots, j_n \in \N$ und $\nu_1, \dots \nu_n
-  \in \N^2$, so dass $U(p_{j_1\nu_1}, \epsilon, 0) \cap \dots \cap
-  U(p_{j_n\nu_n}, \epsilon, 0) \subset U$ ist.
-  Sei nun  $K := K_{j_1} \cup \dots \cup K_{j_n}$. Wir behaupten, dass
+  \in \N^2$, so dass 
+  \[
+  U(p_{j_1\nu_1}, \epsilon, 0) \cap \dots \cap
+  U(p_{j_n\nu_n}, \epsilon, 0) \subset U
+  \]
+  ist. Sei nun
+  \[
+  K := K_{j_1} \cup \dots \cup K_{j_n}.
+  \]
+  Wir behaupten, dass
   dies das gesuchte $K$ ist. 
   Dazu wählen wir $f \in \diff(Y)$ mit $\Supp(f) \subset Y \setminus
   K$. Dann gilt für beliebige
@@ -143,12 +150,13 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
   Z$. Wir identifizieren $U$ mit $V$ und können deshalb vom Raum der
   Testfunktionen $\dist(U)$ auf $U$ sprechen. Sei also $\phi \in
   \dist(U)$. Wir bezeichnen mit $\tilde \phi$ jede 1-Form in
-  $\diff^{0,1}(X)$, für die $\tilde \phi|_U \equiv \phi \d[\bar z]$ und
-  $\tilde \phi |_{X \setminus U} \equiv 0$ gilt. 
-  Damit können wir ein $S_U \in \dist(U)'$ definieren
+  $\diff^{0,1}(X)$, für die $\tilde \phi|_U = \phi \d[\bar z]$ und
+  $\tilde \phi |_{X \setminus U} = 0$ gilt. 
+  Damit können wir 
   \begin{align}
-  S_U: \dist(U) \ra \C, \phi \mapsto S[\tilde \phi]. \label{eq:su}
+  S_U: \dist(U) \ra \C, \phi \mapsto S[\tilde \phi] \label{eq:su}
   \end{align}
+  definieren und es gilt $S_U \in \dist(U)'$.
   \eqref{eq:su} verschwindet auf allen Funktionen $\phi = \frac{\partial
     g}{\partial \bar z}$, $g \in \dist(U)$, denn
   \[
@@ -164,18 +172,18 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
   \]
   erfüllt. Setzen wir nun $\sigma_U := h \d[z]$, so folgt
   \[
-  S[\omega] = \iint_U \sigma_u \wedge \omega \qquad \forall \omega \in
-  \dist^{0,1}(U) \text{ und } \Supp(\omega) \Subset U.
+  S[\omega] = \iint_U \sigma_U \wedge \omega \qquad \forall \omega \in
+  \dist^{0,1}(U) \text{ mit } \Supp(\omega) \Subset U.
   \]
-  Führen wir die gleiche Konstruktion auf einer zweiten Karte (z', U')
+  Führen wir die gleiche Konstruktion auf einer zweiten Karte $(U', z')$
   durch und gilt außerdem $\Supp(\omega) \Subset U'$, so
   erhalten wir
   \[
   \iint_U \sigma_U \wedge \omega = S[\omega] = \iint_{U'} \sigma_{U'}
-  \wedge \omega \qquad \forall \omega \in \diff^{0,1}(X) \text{ und }
+  \wedge \omega \qquad \forall \omega \in \diff^{0,1}(X) \text{ mit }
   \Supp(\omega) \Subset U \cap U'
   \]
-  und damit $\sigma_U|_{U \cap U'} \equiv \sigma_{U'}|_{U \cap
+  und damit $\sigma_U|_{U \cap U'} = \sigma_{U'}|_{U \cap
     U'}$. Also können wir alle $\sigma_U$ zu einer globalen 1-Form
   $\sigma \in \Omega(Z)$ verkleben und es folgt
   \[
@@ -206,8 +214,8 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
 \begin{proof}
   Sei $\beta: \diff(Y') \ra \diff(Y)$ die Einschränkungsabbildung. Wir
   verwenden Korollar \ref{cor:frechet-dicht}. Dazu müssen wir zeigen, dass für $T \in
-  \diff(Y)'$ mit $T_{\beta(\hol(Y'))} \equiv 0$ auch $T|_{\hol(Y)}
-  \equiv 0$ ist. 
+  \diff(Y)'$ mit $T_{\beta(\hol(Y'))} = 0$ auch $T|_{\hol(Y)}
+  = 0$ ist. 
   Nach \cite[Kor. 14.16]{For} existiert zu jedem $\omega \in \diff^{0,1}(X)$ ein $f \in
   \diff(Y')$ mit $\d[''f] = \omega|_{Y'}$. 
   Dies erlaubt uns die Definition von
@@ -216,8 +224,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
   \]
   Diese Definition ist unabhängig von $f$, denn für
   ein $g \in \diff(Y')$ mit $\d[''g] = \omega|_{Y'}$ ist $f-g
-  \in \hol(Y')$ und deshalb $T[(f-g)|_Y] = 0$ nach der Voraussetzung,
-  dass $T|_{\beta(\hol(Y'))} \equiv 0$ gilt. 
+  \in \hol(Y')$ und deshalb $T[(f-g)|_Y] = 0$ nach der Voraussetzung.
   Als nächstes wollen wir zeigen, dass $S$ stetig ist. 
   Dazu betrachten wir zunächst
   \[
@@ -275,7 +282,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
    \Subset X\setminus K.
    \]
    Aufgrund des kompakten Trägers von $S$ muss $\sigma|_{X \setminus
-     (K \cup L)} \equiv 0$ gelten. 
+     (K \cup L)} = 0$ gelten. 
    Nun ist jede Zusammenhangskomponente von $X \setminus \runge(K)$
    nicht relativ kompakt. 
    Wir behaupten, dass jede Zusammenhangskomponente von $X \setminus
@@ -287,7 +294,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
    Zusammenhangskomponenten $X \setminus (K \cup L)$ und aus dem
    Identitätssatz folgt
    \begin{align}
-   \sigma|_{X \setminus \runge(K)} \equiv 0. \label{eq:runge}
+   \sigma|_{X \setminus \runge(K)} = 0. \label{eq:runge}
    \end{align}
    Das bedeutet, dass $S[\omega] = 0$ für jedes $\omega \in
    \diff^{0,1}(X)$ mit $\Supp(\omega) \Subset X \setminus
@@ -298,50 +305,50 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
    offene Mengen $U, V$ finden, die $ \runge(K) \subset U
    \subsetneq V \subset Y$ erfüllen. Nach dem Lemma von Urysohn
    (vgl. \cite[Satz 12.2]{Jam}) finden
-   wir eine stetige Funktion $\phi: X \ra \R$, die $\phi|_U \equiv 1$
-   und $\phi|_{X \setminus \bar V} \equiv 0$ erfüllt. Durch eine geeignete Glättung
+   wir eine stetige Funktion $\phi: X \ra \R$, die $\phi|_U = 1$
+   und $\phi|_{X \setminus \bar V} = 0$ erfüllt. Durch eine geeignete Glättung
    dieser Funktion $\phi$ erhalten wir ein glattes $\tilde \phi \in
    \diff(X)$ und offene Mengen $\runge(K) \subset \tilde U \subset U$
    und $U \subset \tilde V \subset V$, so dass $\tilde \phi|_{\tilde
-     U} \equiv 1$ und $\tilde \phi|_{X \setminus \tilde {\bar V}} \equiv
+     U} = 1$ und $\tilde \phi|_{X \setminus \tilde {\bar V}} =
    0$ gilt. Setzen wir $ g := f \cdot \tilde \phi$, so gilt
-   $f \equiv g$ in einer Umgebung von $\runge(K)$ und $\Supp(g) \Subset Y$.
+   $f = g$ in einer Umgebung von $\runge(K)$ und $\Supp(g) \Subset Y$.
    Also ist $\Supp(f - g|_Y)$ in $Y \setminus K$ enthalten. Somit gilt $T[f- g|_Y] = 0$
    und schlußendlich $T[f] = T[g|_Y] = S[\d[''g]]$. 
    Nun ist aber $g$ in einer Umgebung von $\runge(K)$ holomorph, was
    nichts anderes bedeutet als, dass $\Supp(\d[''g]) \Subset X \setminus
-   \runge(K)$ gilt.
+   \runge(K)$ ist.
    Mit \eqref{eq:runge} folgt
    \[
-   T[f] = T[g|_f] = S[\d[''g]] = 0
+   T[f] = T[g|_f] = S[\d[''g]] = 0.
    \]
 \end{proof}
 
 \begin{thm}[Rungescher Approximationssatz]
   \label{thm:runge}
-  Sei $X$ eine nicht kompakte Riemannsche Fläche, $Y \subset X$ eine
+  Sei $X$ eine nicht kompakte Riemannsche Fläche und $Y \subset X$ eine
   offene Runge-Teilmenge.
   Dann kann jede holomorphe Funktion auf $Y$ auf beliebigen Kompakta
-  gleichmäßig durch auf ganz $X$ holomorphen Funktionen approximiert werden.
+  gleichmäßig durch auf ganz $X$ holomorphe Funktionen approximiert werden.
 \end{thm}
 
 \begin{proof}
   \begin{description}
-  \item[Fall $Y \Subset X$:] Seien $f_1 \in \hol(Y)$, $K \subset Y$
+  \item[Fall $Y \Subset X$:] Seien $f \in \hol(Y)$, $K \subset Y$
     kompakt und $\epsilon > 0$ gegeben. 
     Aus dem Beweis von Satz \ref{thm:Ausschöpfung-Runge} erhalten wir
     eine Ausschöpfung$Y_1
     \Subset Y_2 \Subset \dots$ von $X$ mit $Y_0 := Y \Subset Y_1$. 
-    Nach Satz \ref{thm:runge-dicht} existiert ein $f \in \hol(Y_1)$
+    Nach Satz \ref{thm:runge-dicht} existiert ein $f_1 \in \hol(Y_1)$
     mit
     \[
-    \|f_1 - f\|_K < 2^{-1} \epsilon
+    \|f_1 - f\|_K < 2^{-1} \epsilon.
     \]
     Induktiv erhalten wir aus Satz \ref{thm:runge-dicht} eine Folge
     von Funktionen $f_n \in \hol(Y_n)$ mit
     \[
     \|f_n - f_{n-1}\|_{\bar Y_{n-2}} < 2^{-n} \epsilon \qquad \forall
-    n \geq 2
+    n \geq 2.
     \]
     Nun gilt für beliebige $n \in \N$
     \[
@@ -351,7 +358,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
     \]
     Also konvergiert $(f_\nu)_{\nu > n}$ gleichmäßig auf $Y_n$ für
     jedes $n \in \N$ und damit existiert ein $F \in \hol(X)$, so dass
-    $f_\nu \rightrightarrows F$ auf jedem $Y_n$. Eingesetzt folgt
+    $(f_\nu)_{\nu}$ auf jedem $Y_n$ gleichmäßig gegen $F$ konvergiert. Eingesetzt folgt
     \begin{align*}
       \|F - f\|_K & \leq \|F - f_n\|_{Y_n} + \sum_{k=1}^n \|f_k -
       f_{k-1}\|_{\bar Y_{k-2}} \\
@@ -359,8 +366,9 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
       & \xrightarrow{n \ra \infty} \epsilon.
     \end{align*}
   \item[Fall $Y \subset X$ nicht relativ kompakt:] Auch hier wählen
-    wir $f \in \hol(Y)$, $K \subset Y$ kompakt und $\epsilon > 0$. \\
-    In diesem Fall können wir nach Lemma \ref{lemma:komp-enthalten}  $L \subset Y$ kompakt finden mit $K \subset
+    wir $f \in \hol(Y)$, $K \subset Y$ kompakt und $\epsilon > 0$. In
+    diesem Fall können wir nach Lemma \ref{lemma:komp-enthalten}  $L
+    \subset Y$ kompakt finden mit $K \subset 
     \mathring L$. Dann folgt aus Lemma \ref{lemma:zwischen-runge} die Existenz einer
     offenen Runge-Teilmenge
     $\tilde Y \subset X$ mit $K \subset \tilde Y \subset L$. 
@@ -374,11 +382,10 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
 \begin{thm}
   \label{thm:h-hol}
   Sei $X$ eine nicht kompakte Riemannsche Fläche und $\omega \in
-  \diff^{0,1}(X)$. Dann existiert ein $f \in \diff(X)$, so dass
+  \diff^{0,1}(X)$. Dann existiert ein $f \in \diff(X)$ mit
   \[
-  \d[''f] = \omega
+  \d[''f] = \omega.
   \]
-  gilt.
 \end{thm}
 
 \begin{proof}
@@ -422,7 +429,7 @@ In diesem Kapitel werden direkt die Methoden aus Kapitel
   \]
   wählen. Nun konvergiert $F_n$ gleichmäßig auf $Y_{n-1}$ und ist deshalb
   dort holomorph. Also ist $f$ glatt auf $Y_n$ für beliebige $n \in
-  \N$, in anderen Worten ist $f \in \diff(X)$. Weiterhin gilt
+  \N$, mit anderen Worten ist $f \in \diff(X)$. Weiterhin gilt
   \[
   \d[''f] = \d['' f_n] = g
   \]

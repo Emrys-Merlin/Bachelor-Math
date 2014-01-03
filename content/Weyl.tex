@@ -31,7 +31,7 @@ notwendigen Beweisen zurückspringen.
   \subset K$ für jedes $\nu \in \N$ existiert und für alle $\alpha = (\alpha_1,
   \alpha_2)^T \in \N^2$ die zugehörige Folge $(D^\alpha f_\nu)$ auf
   $K$ gleichmäßig gegen $D^\alpha f$ konvergiert, wobei $D^\alpha = \frac{\partial^{|\alpha|}}{\partial
-    x^{\alpha_1} \partial y^{\alpha_2}}$ bezeichnet.
+    x^\alpha_1 \partial y^\alpha_2}$ bezeichnet.
 \end{defin}
 
 \begin{defin}[Distribution]
@@ -45,7 +45,7 @@ notwendigen Beweisen zurückspringen.
   \item Jedes $h \in C(X)$ definiert eine Distribution $T_h \in
     \dist(X)'$ durch
     \[
-    T_h[f] := \iint_X h(z) f(z) \d[x]\d[y] \qquad z = x+iy \qquad f
+    T_h[f] := \iint_X h(z) f(z) \d[x]\d[y], \qquad z = x+iy, \qquad f
     \in \dist(X).
     \]
     $T_h$ ist klarerweise linear und für die Stetigkeit wählen wir ein
@@ -57,7 +57,7 @@ notwendigen Beweisen zurückspringen.
     \[
     \|f_n -f\|_K < \frac{\epsilon}{\|h\|_K |K|} \qquad \forall n \geq N
     \]
-    $|K|$ bezeichnet dabei das Volumen von $K$. Dann erhalten wir für
+    gilt. $|K|$ bezeichnet dabei das Volumen von $K$. Dann erhalten wir für
     alle $n \geq N$
     \begin{align*}
       |T_h[f_n] - T_h[f]| & = | T_h[f_n -f]| \\
@@ -111,7 +111,7 @@ notwendigen Beweisen zurückspringen.
   \frac{\d}{\d[t]} T_z[g(z,t)] = T_z \left [ \frac{\partial
       g(z,t)}{\partial t} \right ]. \label{eq:dist-ableitung}
   \end{align}
-  $T_z$ soll dabei nur verdeutlichen dass $T$ nur auf $g(z,t)$ als
+  $T_z$ soll dabei nur verdeutlichen, dass $T$ nur auf $g(z,t)$ als
   Variable von $z$ operiert; $t$ bleibt als Parameter unberührt.
 \end{lemma}
 
@@ -126,7 +126,7 @@ notwendigen Beweisen zurückspringen.
   \end{align*}
   Für festes $t \in I$ und $h \in \R^\times$ klein genug, ist $f_h(z)
   := \frac1h ( g(z, t+h) - g(z,t))$ wohldefiniert und in
-  $\dist(X)$. Weiterhin gilt $f_n \xrightarrow{\dist}
+  $\dist(X)$. Weiterhin gilt $f_h \xrightarrow{\dist}
   \frac{\partial g(\cdot, t)}{\partial t}$, da $g$ glatt ist. 
   Aus der Stetigkeit von $T$ folgt damit
   \[
@@ -151,7 +151,7 @@ notwendigen Beweisen zurückspringen.
 \begin{proof}
   Nach Lemma \ref{lemma:dist-glatt} ist $T_w[g(w,z)]$ glatt und es
   gilt $\Supp(T_w[g(w,z)]) \subset L$, denn für $z \notin L$ ist
-  $g(\cdot, z) \equiv 0$ und damit $T_w[(g(w,z)] = 0$. 
+  $g(\cdot, z) = 0$ und damit $T_w[(g(w,z)] = 0$. 
   Also existiert das Integral $\iint_Y T_w[g(w,z)] \d[x]\d[y]$,
   insbesondere lässt es sich durch Riemann-Summen approximieren. 
   Dazu wählen wir ein Rechteck $R \subset \C$, so dass $L \subset R$
@@ -159,7 +159,7 @@ notwendigen Beweisen zurückspringen.
   verlaufen. 
   Wir können $g$ durch 0 auf $K \times R$ fortsetzen, d.h. wir können
   es als Funktion auf $K \times R$ auffassen. 
-  Als nächstes unterteilen wir für jedes $n \in \N$ $R$ in $n^2$
+  Als nächstes unterteilen wir für jedes $n \in \N$ das Rechteck $R$ in $n^2$
   Teilrechtecke $R_{n\nu}$, $\nu = 1, \dots, n^2$. Diese Teilrechtecke
   werden dabei alle gleich groß gewählt. Sei weiterhin $z_{n\nu}
   \in R_{n \nu}$ und $F = |R|$. 
@@ -172,7 +172,7 @@ notwendigen Beweisen zurückspringen.
   \[
   | g(w,z) - g(\tilde w, \tilde z) | < \frac{\epsilon}{F}
   \]
-  für beliebige $\| (w,z) - (\tilde w, \tilde z) \| < \delta$. Wir
+  für beliebige $\| (w,z) - (\tilde w, \tilde z) \| < \delta$ gilt. Wir
   finden also ein $N \in \N$, so dass $|z_{n_\nu} - z| < \delta$ für
   alle $z \in R_{n_\nu}$ und für alle $n \geq N$. Insgesamt erhalten
   wir
@@ -218,7 +218,7 @@ notwendigen Beweisen zurückspringen.
   Für $\epsilon > 0$ und $z \in \C$ definieren wir
   \[
   \rho_\epsilon(z) = \frac{1}{\epsilon^2} \rho\left(
-    \frac{z}{\epsilon} \right )
+    \frac{z}{\epsilon} \right ).
   \]
   Dann ist $\Supp(\rho_\epsilon) \subset \overline{B_\epsilon(0)}$ und
   $\iint_\C \rho_\epsilon(z) \d[x]\d[y] = 1$.
@@ -236,21 +236,21 @@ notwendigen Beweisen zurückspringen.
   \]
   dar. 
   Man kann zeigen, dass diese glatt ist. Weiterhin ist ihr Integral
-  echt größer 0, weshalb sie auch so normiert werden kann, dass
+  echt größer 0 und endlich, weshalb sie auch so normiert werden kann, dass
   Bedingung 4 erfüllt ist.
 \end{bsp}
 
 \begin{defin}
   Sei $U \subset \C$ offen und $\epsilon > 0$. Dann definieren wir
-  $U^{(\epsilon)} := \{z \in U | \bar B_\epsilon(z) \subset U \}$ und
+  $U^{(\epsilon)} := \{z \in U \mid \bar B_\epsilon(z) \subset U \}$ und
   für $f \in C(U)$ setzen wir
   \[
   \sm_\epsilon f : U^{(\epsilon)} \ra \C, \quad \sm_\epsilon f(w) :=
-  \iint_U \rho_\epsilon(w- z) f(z) \d[x]\d[y] \qquad z = x + iy
+  \iint_U \rho_\epsilon(w- z) f(z) \d[x]\d[y], \qquad z = x + iy.
   \]
   $\sm_\epsilon f$ wird als \init{Glättung} von $f$ bezeichnet. 
   Aus der Leibniz-Regel folgt, dass Integration und Differentiation
-  kommutiert, also ist $\sm_\epsilon f \in \diff(U^{(\epsilon)})$, was
+  kommutieren, also ist $\sm_\epsilon f \in \diff(U^{(\epsilon)})$, was
   auch den Namen "`Glättung"' erklärt.
 \end{defin}
 
@@ -315,7 +315,7 @@ notwendigen Beweisen zurückspringen.
       f(w) \nonumber \\
       & = f(w). \label{eq:glättung-norm} 
     \end{align}
-    \eqref{eq:glättung-norm} gilt dabei, aufgrund der Gleichung
+    \eqref{eq:glättung-norm} gilt dabei aufgrund der Gleichung
     \begin{align*}
       1 & = \iint_{B_\epsilon(0)}\rho_\epsilon(z) \d[x]\d[y] \\
       & = \int_0^{2\pi}\int_0^{\epsilon} \tilde \rho_\epsilon(r) r
@@ -327,7 +327,7 @@ notwendigen Beweisen zurückspringen.
 
 \begin{thm}[Weyls Lemma]
   \label{thm:weyl}
-  Sei $U \subset \C$ offen und $T \in \dist(U)'$ mit $\Delta T \equiv
+  Sei $U \subset \C$ offen und $T \in \dist(U)'$ mit $\Delta T =
   0$. 
   Dann existiert ein $h \in \diff(U)$ mit $\Delta h = 0$, so dass
   \[T[f] = \iint_{U^{(\epsilon)}} h(z) f(z) \d[x]\d[y] \qquad \forall f \in \dist(U)
@@ -346,11 +346,11 @@ notwendigen Beweisen zurückspringen.
   \diff(U^{(\epsilon)})$. 
   Sei nun $f \in \dist(U)$ mit $\Supp(f) \subset U^{(\epsilon)}$. Wir
   wollen zunächst zeigen, dass $\sm_\epsilon f$ kompakten Träger in
-  $U$ hat. Denn für $w \in U$ mit
+  $U$ hat. Für $w \in U$ mit
   $B_\epsilon(w) \cap U \neq \varnothing$ ist $f|_{B_\epsilon(w) \cap U}
-  \equiv 0$ und es folgt $\sm_\epsilon f(w) = 0$. Also gilt
+  = 0$ und es folgt $\sm_\epsilon f(w) = 0$. Also gilt
   \[
-  \Supp \sm_\epsilon f \subset \{ z \in U | B_\epsilon(w) \cap U \neq
+  \Supp \sm_\epsilon f \subset \{ z \in U \mid B_\epsilon(w) \cap U \neq
   \varnothing\} =: M.
   \]
   Nun ist $\Supp(f)$ kompakt und damit
@@ -361,8 +361,8 @@ notwendigen Beweisen zurückspringen.
   |w| \leq |w-z| + |z| < S + \epsilon.
   \]
   Also ist $M$ und damit $\Supp \sm_\epsilon f$ beschränkt. Da $\Supp
-  \sm_\epsilon f$ auch abgeschlossen ist, ist es sogar kompakt und wir können folgende
-  Rechnung durchführen
+  \sm_\epsilon f$ auch abgeschlossen ist, ist es kompakt, was wir
+  zeigen wollten. Wir können dann folgende Rechnung durchführen
   \begin{align}
     T[\sm_\epsilon f] & = T_w \left [ \iint_U \rho_\epsilon(w - z)
       f(z) \d[x]\d[y] \right ] \nonumber \\
@@ -373,10 +373,10 @@ notwendigen Beweisen zurückspringen.
   Als nächstes wollen wir zeigen, dass $T[f] = T[\sm_\epsilon f]$
   gilt. Wir können $f$ auch als Funktion auf $\C$ auffassen, in dem
   wir es durch 0 fortsetzen. Dann liefert uns \cite[Kor. 13.3]{For} die
-  Existenz von einem $\psi \in \diff(\C)$ mit $\Delta \psi = f$. 
+  Existenz eines $\psi \in \diff(\C)$ mit $\Delta \psi = f$. 
   Mit anderen Worten ist $\psi$ harmonisch auf $V:= \C \setminus \Supp(f)$. Also
   liefert uns Lemma \ref{lemma:glättung-eigenschaften} $\psi|_{V^{(\epsilon)}}
-  \equiv \sm_\epsilon \psi|_{V^{(\epsilon)}}$. Wir setzen $\phi := \psi -
+  = \sm_\epsilon \psi|_{V^{(\epsilon)}}$. Wir setzen $\phi := \psi -
   \sm_\epsilon\psi$. Es folgt $\Supp(\phi) \subset V^c = \Supp(f)
   \subset U$, d.h. $\phi$ hat kompakten Träger in $U$ und es gilt
   \[
@@ -395,10 +395,10 @@ notwendigen Beweisen zurückspringen.
   folgt
   \[
   T[f] = \iint_{U^{(\epsilon)}}h_{\epsilon'}(z) f(z) \d[x]\d[y] =
-  \iint_{U^{(\epsilon'')}}(z) f(z) \d[x] \d[y].
+  \iint_{U^{(\epsilon'')}}h_{\epsilon''}(z) f(z) \d[x] \d[y].
   \]
   Also folgt aus dem Fundamentallemma der Variationsrechnung
-  $h_{\epsilon'} \equiv h_{\epsilon''}$ auf $U^{(\epsilon)}$,
+  $h_{\epsilon'} = h_{\epsilon''}$ auf $U^{(\epsilon)}$,
   d.h. $h_{\epsilon'}$ wird für $\epsilon' < \epsilon$ konstant auf
   $U^{(\epsilon)}$ und da $\epsilon > 0$ beliebig gewählt war, finden
   wir ein $h \in \diff(U)$ mit den gewünschten Eigenschaften.
@@ -419,7 +419,7 @@ notwendigen Beweisen zurückspringen.
   Aus $\frac{\partial T}{\partial \bar z} = 0$ folgt
   \[
   \Delta T  = 4 \frac{\partial}{\partial z} \left (
-    \frac{\partial}{\partial \bar z} T \right ) = 0
+    \frac{\partial}{\partial \bar z} T \right ) = 0.
   \]
   Also existiert aufgrund von Satz \ref{thm:weyl} ein $h \in
   \diff(U)$, so dass $T = T_h$ und erneut aus dem Fundamentallemma der

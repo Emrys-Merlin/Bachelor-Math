@@ -16,7 +16,7 @@ auch die verschiedenen kompakten Riemannschen Flächen verstanden.
 Als ersten Schritt berechnen wir dazu in diesem Kapitel die
 Automorphismengruppen. Danach wenden wir uns der Charakterisierung von
 Gittern zu, da wir diese einmal benötigen, um den Torus zu beschreiben
-und diese andererseits zeigen, dass alle diskreten, abelschen
+und sie andererseits zeigen, dass alle diskreten, abelschen
 Untergruppen von $\R$ gerade Gitter und damit zyklisch sind. Die
 Untergruppen der Automorphismengruppen werden dann in den
 nächsten zwei Abschnitten bestimmt.
@@ -76,7 +76,7 @@ nächsten zwei Abschnitten bestimmt.
   Anhand des obigen Resultats erkennen wir, dass wir in der Formulierung
   des Riemannschen Abbildungssatz \ref{thm:rmt} $B$ genau so gut durch
   $\h$ hätten ersetzen können. Für den Beweis des Abbildungssatz war
-  jedoch $B$ die geeignetere Form. Im folgenden werden wir jedoch
+  jedoch $B$ die geeignetere Form. Im Folgenden werden wir jedoch
   hauptsächlich auf $\h$ zurückgreifen, da, wie wir gleich sehen
   werden, die Automorphismengruppe von $\h$ eine schönere Form besitzt.
 \end{rem}
@@ -89,22 +89,23 @@ nächsten zwei Abschnitten bestimmt.
     a & b \\
     c & d
   \end{pmatrix}
+  \in \GL(2, \C).
   \]
   Für $z \in \P^1$ definieren wir
   \[
-  M \langle z \rangle = \frac{az+b}{cz+d}.
+  M \langle z \rangle := \frac{az+b}{cz+d}.
   \]
   Diese Notation ist auch für $z = \infty$ durch einfache
   Grenzwertbetrachtungen wohldefiniert. Weiterhin erkennen wir, dass
   für alle $\lambda \in \C^\times$ die Gleichung
   \[
-  \lambda M \langle z \rangle = M \langle z \rangle
+  (\lambda M) \langle z \rangle = M \langle z \rangle
   \]
-  gilt, deshalb werden wir uns meist auf $M \in \SL(2, \C)$ oder sogar auf
+  gilt, deshalb werden wir uns meist auf
   \[
   M \in \PSL(2, \C) = \quot{\SL(2, \C)}{\{\pm \id\}}
   \]
-  enschränken.
+  einschränken.
 \end{defin}
 
 \begin{rem}
@@ -154,12 +155,12 @@ nächsten zwei Abschnitten bestimmt.
   \neq 0 = |f^{-1}(\tilde z)|$. Dies ist ein Widerspruch zur
   Stetigkeit von $f^{-1}$. Also ist $f$ ein Polynom. Dies hat aber
   direkt zur Folge, dass der Grad von $f$ eins sein muss, da wir
-  ansonsten nach dem Haupsatz der Algebra mehrere Nullstellen
+  ansonsten nach dem Haupsatz der Algebra mehrere bzw. mehrfache Nullstellen
   hätten. Damit haben wir bereits die gewünschte Form gefunden.
 
   Als nächstes wenden wir uns $\Aut(\P^1)$ zu. Sei dazu $f \in
   \Aut(\P^1)$. Wir setzen $a:= f(\infty)$ und $b :=
-  f^{-1}(\infty)$. Zunächst betrachten wir den fall $a \neq
+  f^{-1}(\infty)$. Zunächst betrachten wir den Fall $a \neq
   \infty$. Dann gilt auch $b \neq \infty$ und wir können
   \[
   \psi: \P^1 \ra \P^1, \quad \psi(z) = \frac{bz + c}{z - a}
@@ -168,7 +169,7 @@ nächsten zwei Abschnitten bestimmt.
   \[
   \psi^{-1}: \P^1 \ra \P^1, \quad \psi^{-1}(z) = \frac{az +c}{z -b}
   \]
-  und damit ist $\psi \in \Aut(\P^1)$. Setzen wir nun $g := f \circ
+  und damit liegt $\psi$ in $\Aut(\P^1)$. Setzen wir nun $g := f \circ
   \psi$, so erhalten wir
   \begin{align*}
     g(\infty) = f(\psi(\infty)) = f(b) = \infty.
@@ -226,12 +227,12 @@ nächsten zwei Abschnitten bestimmt.
   \[
   g(z) = cz
   \]
-  gilt. Es folgt, dass
+  gilt. Es folgt
   \begin{align*}
     f(z) = c f_w(z) = \frac{i dz - i dw}{ - \overline{idw} z +
       \overline{i d}}
   \end{align*}
-  gilt, wobei $d^2 = c$ gilt. Setzen wir $\tilde \alpha = i d$ und $\tilde
+  mit $d^2 = c$. Setzen wir $\tilde \alpha = i d$ und $\tilde
   \beta = - i d w$, so folgt $|\tilde \alpha| = 1$ und $|\tilde \beta|
   = |w| < 1$. Wir definieren
   \[
@@ -244,17 +245,17 @@ nächsten zwei Abschnitten bestimmt.
   \]
   was die Behauptung zeigt.
 
-  Als letztes interessieren wir uns nun für $\Aut(\h)$. Diesen Fall
+  Als Letztes interessieren wir uns nun für $\Aut(\h)$. Diesen Fall
   können wir aber auf $\Aut(B)$ zurückführen, denn Lemma
   \ref{lemma:kreis-halbebene} gibt uns eine Bijektion
   \[
   \Aut(\h) \ra \Aut(B), \quad f \mapsto \phi \circ f \circ \phi^{-1}.
   \]
   Sei also $f \in \Aut(\h)$, dann existieren $\alpha, \beta \in \C$
-  mit $|\alpha| - |\beta| = 1$, so dass
+  mit $|\alpha| - |\beta| = 1$ mit
   \[
   \phi( f( \phi^{-1}(z))) = \frac{\alpha z + \beta}{\bar \beta z +
-    \bar \alpha}
+    \bar \alpha}.
   \]
   Es gilt also
   \begin{align*}
@@ -288,7 +289,7 @@ nächsten zwei Abschnitten bestimmt.
 
 Als nächstes wenden wir uns Gittern zu und möchten deshalb zunächst an
 die Definition \ref{defin:gitter} auf Seite \pageref{defin:gitter}
-errinnern. Wir benötigen Gitter, um die
+erinnern. Wir benötigen Gitter, um die
 diskreten Untergruppen von $\C$ zu beschreiben. Später wird sich dann
 auch zeigen, dass wir diese diskreten Untergruppen benötigen, um die
 Riemannschen Flächen zu beschreiben, deren Universelle Überlagerung
@@ -320,7 +321,7 @@ $\C$ ist.
   verwenden und erhalten linear unabhängige $\gamma_1, \dots, \gamma_n
   \in \Gamma_1 \subset \Gamma$, so dass $\Gamma_1 = \Z \gamma_1 +
   \dots + \Z \gamma_n$ gilt. Nun bilden die $\gamma_i$ bereits eine
-  Basis von $V_1$ und fügen wir $x_{n+1}$ erhalten wir sogar eine Basis
+  Basis von $V_1$ und fügen wir $x_{n+1}$ hinzu, erhalten wir sogar eine Basis
   von $V$, das bedeutet aber, dass wir zu jedem $x \in \Gamma \subset
   V$, eindeutig bestimmte $c_i(x), c(x) \in \R$ finden, so dass
   \[
@@ -339,7 +340,7 @@ $\C$ ist.
   c(\gamma_{n+1}) = \min \{ c(x) \mid x \in ( \Gamma \cap P ) \setminus
   V_1 \} \in ]0, 1].
   \]
-  Wir behaupten nun, dass $\Gamma = \Gamma_1 + \Z \gamma_{n+1}$. Sei
+  Wir behaupten nun, dass $\Gamma = \Gamma_1 + \Z \gamma_{n+1}$ ist. Sei
   dazu $x \in \Gamma$. Dann existieren $n_j \in \Z$, so dass
   \[
   x' := x - \sum_{j=1}^{n+1} n_j \gamma_j = \sum_{j=1}^n \lambda_j
@@ -362,7 +363,7 @@ $\C$ ist.
 \end{cor}
 
 \begin{proof}
-  Die einzige in einem Untervektorraum von $\R$ enthaltene abelsche
+  Die einzige in einem echten Untervektorraum von $\R$ enthaltene abelsche
   Untergruppe ist $\{0\}$. Diese ist zyklisch, also können wir
   annehmen, dass die Untergruppe $G$ von $\{0\}$ verschieden ist. Dann
   liefert uns aber Lemma \ref{lemma:gitter}, dass $G$ ein Gitter ist,

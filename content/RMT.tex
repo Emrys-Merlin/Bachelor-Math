@@ -22,7 +22,7 @@ Riemannsche Flächen mit verschwindender holomorpher deRham Gruppe
 keine Einschränkung, allerdings müssen wir erst ein paar Eigenschaften
 für diese Riemannschen Flächen zusammentragen. Der restliche Teil
 dieses Kapitels besteht dann darin spezielle Funktionenfolgen
-zu konstruieren. Diese liefern uns schlussendlich bilholomorphe
+zu konstruieren. Diese liefern uns schlußendlich bilholomorphe
 Abbildungen zwischen unserer Riemannschen Fläche $X$ und $\P^1$, $\C$
 oder $B$, was den Riemannschen Abbildungssatz beweist.
 
@@ -32,7 +32,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \begin{align*}
     B_\infty(0) & := \C \\
     \intertext{und}
-    B & := B_1(0)
+    B & := B_1(0).
   \end{align*}
 \end{defin}
 
@@ -67,10 +67,10 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
     \begin{align*}
       \d[(f e^{-g})] & = \d[(f)] e^{-g} + f e^{-g} (-1) f^{-1}\d[f] = 0.
     \end{align*}
-    Also ist $fe^{-g} \equiv $ const und aus $f(a) e^{-g(a)} = 1$
+    Also ist $fe^{-g} = $ const und aus $f(a) e^{-g(a)} = 1$
     erhalten wir
     \[
-    f \equiv e^g.
+    f = e^g.
     \]
     Damit ist der erste Teil der Aussage gezeigt. Für den zweiten
     setzen wir nun einfach
@@ -110,17 +110,17 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   Wir setzen nun $f := e^{-h} g \in \hol(Y)$ und behaupten, dass $f: Y \ra
   B$ biholomorph ist.
   \begin{itemize}
-  \item $f(Y) \subset B$: Sei $y \in Y$ beliebig. Dann gilt:
+  \item $f(Y) \subset B$: Sei $y \in Y$ beliebig. Dann gilt
     \begin{align*}
       |f(y)| & = | e^{-h(y)} | \cdot | g(y)| \\
       & = e^{-u(y)} e^{\log(|g(y)|)} \\
-      & = \exp(\log|g(y)| - u(y))
+      & = \exp(\log|g(y)| - u(y)).
     \end{align*}
     Daran erkennen wir, dass $|f|$ stetig auf ganz $\bar Y$ fortgesetzt werden
     kann. Außerdem nimmt $|f|$ auf $\partial Y$ nach Konstruktion konstant den Wert 1 an. Da
     $f$ eine holomorphe Funktion ist werden Extrema auf dem Rand
     angenommen und da $f$ weiterhin nicht konstant ist ($f(a) = 0$)
-    erhalten wir aus dem Maximum-Prinzip:
+    erhalten wir aus dem Maximumprinzip
     \[
     |f(y)| < 1 \qquad \forall y \in Y
     \]
@@ -170,7 +170,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 \end{lemma}
 
 \begin{proof}
-  Wir wählen einen Inneren Punkt $a$ von $(\C \setminus G)$. Wir bezeichnen die
+  Wir wählen einen Inneren Punkt $a$ von $\C \setminus G$. Wir bezeichnen die
   Menge in  \eqref{eq:menge} mit $M$ und behaupten, dass die Abbildung
   \[
   z \mapsto \frac{1}{z-a}
@@ -178,8 +178,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   das Gebiet $G$ biholomorph auf ein Teilgebiet eines
   $B_r(0)$ für ein $r < \infty$ abbildet. 
   Der Abstand $d:= \operatorname{dist}(\{a\},G)> 0$ existiert, da $a \notin \bar
-  G$, denn $a$ ist ein innerer Punkt von $\C \setminus G$. Deshalb
-  folgt
+  G$ ist. Deshalb folgt
   \[
   \left | \frac{1}{z-a} \right |< \frac1d \qquad \forall z \in G.
   \]
@@ -267,7 +266,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   Zusammenhangs und des Wegzusammenhangs zusammen und wir zeigen, dass
   $G$ wegzusammenhängend ist.
   Seien dazu $z, w \in G$. Dann existieren $n, \tilde n \in \N$, so
-  dass $z \in h_n(B)$ und $w \in h_{\tilde n} (B)$. Weiterhin ist
+  dass $z \in h_n(B)$ und $w \in h_{\tilde n} (B)$ ist. Weiterhin ist
   $h_l(0) = i$ für beliebige $l \in \N$, d.h. $i \in h_l(B)$ für alle
   $l \in \N$. Nun sind die $h_l(B)$ Gebiete nach dem Satz über
   die Gebietstreue, also finden wir zwei stetige Kurven $c_1: I \ra
@@ -402,7 +401,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 \end{lemma}
 
 \begin{proof}
-  Sei $\omega \in \Omega(Y)$ nach Korollar
+  Sei $\omega \in \Omega(Y)$. Nach Korollar
   \ref{cor:nicht-verschwindende-1-form} existiert ein $\omega_0 \in
   \Omega(X)$ ohne Nullstellen. Daher
   existiert ein $f \in \hol(Y)$ mit $\omega = f \omega_0$. 
@@ -442,7 +441,8 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   und im kompakten Fall $H^1(X, \hol)$ ein endlich dimensionaler
   Vektorraum ist, erhalten wir
   \[
-  H^1(X, \hol) \cong H^1(X, \hol)^\ast = 0.
+  H^1(X, \hol) \cong H^1(X, \hol)^\ast \cong H^0(X, \Omega) \cong
+  \Omega(X) = 0.
   \]
   Also ist das Geschlecht unserer kompakten Riemanschen Fläche 0 und
   aus dem Satz von Riemann-Roch erhalten wir, dass $X$ konform
@@ -464,10 +464,10 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   betrachten wir die Abbildung $\tilde f_n : Y_n \ra B$, die nach
   Satz \ref{thm:Gebiet-Kreis} existiert und die Abbildung
   \[
-  \phi: B \ra B, \quad\phi_n(z) := \frac{z- \tilde f_n(a)}{1 - z \overline{\tilde
+  \phi: B \ra B, \quad\phi(z) := \frac{z- \tilde f_n(a)}{1 - z \overline{\tilde
       f_n(a)}},
   \]
-  so erhalten wir zunächst $\bar f_n := \phi_n \circ \tilde
+  so erhalten wir zunächst $\bar f_n := \phi \circ \tilde
   f_n$. Diese erfüllt $\bar f_n : Y_n \ra B$ und $\bar f_n(a) =
   0$. Setzen wir nun $r_n^{-1} := \left | \frac{\d[\bar f(a)]}{\d[z]}
   \right |$ und $f_n := r_n \cdot \bar f_n : Y_n \ra B_{r_n}(0)$, so
@@ -507,19 +507,19 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   Zunächst folgt aus $|f_{n_k}(x)| < r_{n_k}$ für beliebige $x \in X$
   und $k \in \N$ groß genug, dass $|f(x)| \leq R$ gilt. Da $f$
   holomorph und nicht-konstant, also eine offene Abbildung ist, erhalten wir direkt,
-  dass $f(x) \subset B_R(0)$ ist. Ansonsten gäbe es ein $z \in f(x)$ mit
+  dass $f(X) \subset B_R(0)$ ist. Ansonsten gäbe es ein $z \in f(X)$ mit
   $z \in \partial B_R(0)$. Dieses $z$ kann aber kein innerer Punkt von
-  $f(B)$ sein. Ein Widerspruch. 
+  $f(X)$ sein. Ein Widerspruch. 
 
   Es bleibt also nur noch die Surjektivität zu zeigen. 
   Angenommen $f$ wäre nicht surjektiv. Dann existierte nach Lemma
   \ref{lemma:bihol-kreis} ein $0 < r < R$ und eine holomorphe
   Abbildung $g: f(X) \ra B_r(0)$ mit $g(0) = 0$ und $g'(0) = 1$. 
-  Sei nun $n$ so groß gewählt, dass $r_n > r$. Dann gälte für
+  Sei nun $n$ so groß gewählt, dass $r_n > r$. Dann hätte die Funktion
   \[
   h:= g \circ f \circ f^{-1}_n : B_{r_n}(0) \ra B_r(0)
   \]
-  $h(0)=0$, $h'(0) = 1$, aber $r < r_n$. Dies ist ein Widerspruch zu
+  die Eigenschaften $h(0)=0$ und $h'(0) = 1$, aber es wäre $r < r_n$. Dies ist ein Widerspruch zu
   Proposition \ref{prop:kreis}. 
   Also ist $X$ konform äquivalent zu $B_R(0)$. Für $R = \infty$ also
   zu $\C$ und für $R < \infty$ zu $B$.

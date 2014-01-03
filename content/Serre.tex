@@ -30,7 +30,7 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   \[
   0 \ra \Omega \ra \diff^{1,0} \xrightarrow{\d} \diff^{(2)} \ra 0
   \]
-  exakt und es gilt
+  eine kurze exakte Folge von Garben und es gilt
   \[
   H^1(X, \Omega) \cong \quot{\diff^{(2)}(X)}{\d[\diff^{1,0}(X)]}.
   \]
@@ -53,14 +53,14 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   \]
   eine \init{Mittag-Leffler-Verteilung}, falls für beliebige $i,j \in
   I$ die 1-Form $\omega_j - \omega_i$ auf $U_i \cap U_j$ holomorph
-  ist, d.h. $ \delta \mu \in Z^1(\fu, \Omega)$.
+  ist, d.h. $ \delta \mu \in Z^1(\fu, \Omega)$ gilt.
 
   Wir bezeichnen mit $[\delta \mu] \in H^1(X, \Omega)$ die
   Kohomologieklasse von $\delta \mu$. Weiterhin definieren wir zu $a \in X$
   \[
   \res_a(\mu) := \res_a(\omega_i),
   \]
-  wobei $a \in U_i$. Falls $a \in U_i \cap U_j$, so gilt
+  falls $a$ in $U_i$ liegt. Falls $a \in U_i \cap U_j$ ist, so gilt
   $\res_a(\omega_i) = \res_a(\omega_j)$, denn $\omega_j - \omega_i$
   ist holomorph. Damit ist $\res_a(\mu)$ wohldefiniert. Ist $X$
   kompakt, so ist $\res_a(\mu) = 0$ für fast alle $a \in X$ und wir können
@@ -81,33 +81,37 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
 \begin{proof}
   Um $\res([\delta \mu])$ zu berechnen, konstruieren wir $H^1(X,
   \Omega) \cong \quot{\diff^{(2)}(X)}{\d[\diff^{1,0}(X)]}$
-  explizit. Da $\delta \mu = (\omega_j - \omega_i) \in Z^1(\fu,
-  \Omega) \subseteq Z^1(\fu, \diff^{1,0})$ und $H^1(X, \diff^{1,0}) =
+  explizit. Da
+  \[
+  \delta \mu = (\omega_j - \omega_i) \in Z^1(\fu,
+  \Omega) \subseteq Z^1(\fu, \diff^{1,0})
+  \]
+  und $H^1(X, \diff^{1,0}) =
   0$ (vgl. \cite[Satz 12.6]{For}) gilt, finden wir ein
   $(\sigma_i) \in C^0(\fu, \diff^{1,0})$ mit
   \[
-  \omega_j - \omega_i \equiv \sigma_j - \sigma_i \qquad \text{auf } U_i
+  \omega_j - \omega_i = \sigma_j - \sigma_i \qquad \text{auf } U_i
   \cap U_j.
   \]
   Nun ist jede holomorphe 1-Form geschlossen, d.h. $\d[(\omega_j -
   \omega_i)] = 0$ und wir erhalten $\d[\sigma_i] = \d[\sigma_j]$ auf
   $U_i \cap U_j$. Also finden wir ein $ \tau \in \diff^{(2)}(X)$ mit
-  $\tau|_{U_i} \equiv \d[\sigma_i]$. Dieses $\tau$ ist der Repräsentant
+  $\tau|_{U_i} = \d[\sigma_i]$. Dieses $\tau$ ist der Repräsentant
   von $[\delta \mu]$, also gilt
   \[
-  \res([\delta \mu]) = \frac{1}{2\pi i} \iint_X \tau
+  \res([\delta \mu]) = \frac{1}{2\pi i} \iint_X \tau.
   \]
   Seien nun $a_1, \dots, a_n \in X$ die endlich vielen Pole von $\mu$
   und $X' := X \setminus \{a_1, \dots, a_n\}$. Auf $X' \cap U_i \cap
-  U_j$ gilt $\sigma_i - \omega_i \equiv \sigma_j - \omega_j$. Erneut
+  U_j$ gilt $\sigma_i - \omega_i = \sigma_j - \omega_j$. Erneut
   verwenden wir die Garbeneigenschaften und finden ein $\sigma \in
-  \diff^{1,0}(X')$ mit $\sigma|_{X' \cap U_i} \equiv \sigma_i -
+  \diff^{1,0}(X')$ mit $\sigma|_{X' \cap U_i} = \sigma_i -
   \omega_i$. Wir erhalten
   \[
-  \d[\sigma] \equiv \d[\sigma_i] - \underbrace{\d[\omega_i]}_{= 0} \equiv \tau
+  \d[\sigma] = \d[\sigma_i] - \underbrace{\d[\omega_i]}_{= 0} = \tau
   \qquad \text{ auf } X' \cap U_i.
   \]
-  Und damit gilt $\d[\sigma] \equiv \tau$ auf $X'$. Als Nächstes
+  Und damit gilt $\d[\sigma] = \tau$ auf $X'$. Als Nächstes
   wählen wir zu jedem $a_k$ ein $i(k) \in I$, so dass $a_k \in
   U_{i(k)}$ gilt. Weiterhin wählen wir Koordinatenumgebungen $(V_k,
   z_k)$ mit den Eigenschaften
@@ -118,9 +122,9 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   \end{enumerate}
   Wählen wir $f_k \in \diff(X)$ mit $\Supp(f_k) \subset V_k$, so
   dass eine offene Umgebung $V_k' \subset V_k$ von $a_k$ mit
-  $f_k|_{V_k'} \equiv 1$ existiert, so können wir $g:= 1 - (f_1 + \dots + f_k)$
+  $f_k|_{V_k'} = 1$ existiert, so können wir $g:= 1 - (f_1 + \dots + f_k)$
   definieren. Dies erlaubt uns $g \cdot \sigma$ auf ganz $X$
-  fortzusetzen, denn $g|_{V_k'} \equiv 0$. Also liegt $g \sigma$ in
+  fortzusetzen, denn es ist $g|_{V_k'} = 0$. Also liegt $g \sigma$ in
   $\diff^{1,0}(X)$. Nach \cite[Satz 10.20]{For} gilt
   \begin{align}
   \iint_X \d[(g \sigma)] = 0. \label{eq:g-sigma}
@@ -128,32 +132,32 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   Auf $V_k' \setminus \{a_k\}$ erhalten wir
   \[
   \d[(f_k \sigma)] = \d[\sigma] = \d[\sigma_{i(k)} - \omega_{i(k)}] =
-  \d[\sigma_{i(k)}]
+  \d[\sigma_{i(k)}].
   \]
   Nun ist aber $\sigma_i \in \diff^{1,0}(U_i)$, also kann $\d[(f_k
   \sigma)]$ glatt auf $a_k$ fortgesetzt werden. Da $f_k\sigma$ auf $X'
   \setminus \Supp(f_k)$ verschwindet, können wir $\d[(f_k \sigma)]$
   als Element von $\diff^{(2)}(X)$ auffassen. Wir erhalten die
-  folgende Gleichung
+  Gleichung
   \[
   \tau = \d[1 \cdot \sigma] = \d[(g\sigma)] + \sum_{k=1}^n \d[(f_k
-  \sigma)]
+  \sigma)].
   \]
   Unter Ausnutzung von \eqref{eq:g-sigma} erhalten wir
   \[
   \iint_X \tau = \sum_{k=1}^n \iint_X \d[f_k \sigma] = \sum_{k=1}^n
-  \iint_{V_k} \d[(f_k\sigma_{i(k)} - f_k \omega_{i(k)} )]
+  \iint_{V_k} \d[(f_k\sigma_{i(k)} - f_k \omega_{i(k)} )].
   \]
   Erneut wegen \cite[Satz 10.20]{For} gilt $\iint_{V_k} \d[f_k \sigma_{i(k)}] = 0$ und
   analog zum Beweis von \cite[Satz 10.21]{For} folgt
   \[
   \iint_{V_k} \d[(f_k \omega_{i(k)})] = - 2\pi i
-  \res_{a_k}(\omega_{i(k)})
+  \res_{a_k}(\omega_{i(k)}).
   \]
   Fügen wir alles zusammen, so erhalten wir
   \[
   \res([\delta \mu]) = \frac{1}{2\pi i} \iint_X \tau = \sum_{k=1}^n
-  \res_{a_k}(\omega_{i(k)}) = \res(\mu)
+  \res_{a_k}(\omega_{i(k)}) = \res(\mu).
   \]
 \end{proof}
 
@@ -162,7 +166,7 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   Sei $X$ eine kompakte Riemannsche Fläche. Für ein beliebiges $D \in
   \Div(X)$ und $U \subset X$ offen definieren wir
   \[
-  \Omega_D(U) := \{ \omega \in \mer^{(1)}(U) | (\omega) \geq -D \}.
+  \Omega_D(U) := \{ \omega \in \mer^{(1)}(U) \mid (\omega) \geq -D \}.
   \]
   $\Omega_D$ bildet die Garbe der meromorphen 1-Formen, deren
   Divisoren Vielfache von $-D$ sind. Insbesondere gilt $\Omega_0 = \Omega$.
@@ -206,12 +210,12 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   \]
   induziert eine Abbildung
   \[
-  H^0(X, \Omega_{-D}) \times H^1(X, \hol_D) \ra H^1(X, \Omega)
+  H^0(X, \Omega_{-D}) \times H^1(X, \hol_D) \ra H^1(X, \Omega).
   \]
   Diese ergibt sich aus der Tatsache, dass $H^0(X, \Omega_{-D}) \cong
   \Omega_{-D}(X)$ gilt und aus dem Isomorphismus aus Definition
   \ref{def:garbe-div}. Durch die Verkettung mit $\res: H^1(X,
-  \Omega_D) \ra \C$ erhalten wir eine bilineare Abbildung
+  \Omega) \ra \C$ erhalten wir eine bilineare Abbildung
   \[
   \g{\cdot}{\cdot}: H^0(X, \Omega_{-D}) \times H^1(X, \hol_D) \ra \C,
   \quad \g{\omega}{\xi} := \res(\xi \omega).
@@ -236,19 +240,19 @@ erster Schritt ist der nächste Satz.
   mit $\omega \neq 0$ ein $\xi \in H^1(X, \hol_D)$ gibt, so dass
   $\g{\omega}{\xi} \neq 0$ gilt. Wir wählen dazu ein $a \in X$ mit
   $D(a) = 0$ und eine Koordinatenumgebung $(U_0, z)$ mit $z(a) = 0$
-  und $D|_{U_0} \equiv 0$. Auf $U_0$ schreiben wir $\omega = f \d[z]$
+  und $D|_{U_0} = 0$. Auf $U_0$ schreiben wir $\omega = f \d[z]$
   mit einem $f \in \hol(U_0)$. Wir können ohne Einschränkung annehmen,
   dass $U_0$ klein genug gewählt wurde, so dass $f \neq 0$ auf $U_0
-  \setminus \{a\}$. Wir setzen $U_1 := X \setminus \{a\}$ und $\fu :=
+  \setminus \{a\}$ ist. Wir setzen $U_1 := X \setminus \{a\}$ und $\fu :=
   (U_0, U_1)$. Sei weiterhin $\eta = (f_0, f_1) \in C^0(\fu, \mer)$,
   wobei $f_0 = (z f)^{-1}$ und $f_1 = 0$. Dann gilt
   \[
   \omega \eta = \left ( \frac{\d[z]}{z}, 0 \right ) \in C^0(\fu,
-  \mer^{(1)})
+  \mer^{(1)}).
   \]
   $\omega \eta$ ist eine Mittag-Leffler-Verteilung mit
   $\res(\omega\eta) = 1$. Nun liegt aber $\delta \eta$ in $Z^1(\fu,
-  \hol_D)$ und definieren wir $\xi = [\delta \eta] \in H^1(X,
+  \hol_D)$ und definieren wir $\xi := [\delta \eta] \in H^1(X,
   \hol_D)$, so folgt
   \[
   \omega \xi = \omega [\delta \eta] = [ \delta( \omega \eta)].
@@ -279,7 +283,7 @@ erster Schritt ist der nächste Satz.
       \draw[->] (H0D) to (H0D');
       \draw[->] (H0D) to node {$\iota_D$} (H1D);
       \draw[->] (H0D') to node {$\iota_{D'}$} (H1D');
-    \end{tikzpicture}
+    \end{tikzpicture}.
   \end{center}
 \end{lemma}
 
@@ -297,7 +301,7 @@ erster Schritt ist der nächste Satz.
   Sei die Notation wie in Lemma \ref{lemma:cd}. Seien weiterhin
   $\lambda \in H^1(X, \hol_D)^\ast$ und $\omega \in H^0(X,
   \Omega_{-D'})$ mit $i_{D'}^D(\lambda) = \iota_{D'}(\omega)$. Dann
-  liegt $\omega$ bereits in $H^0(X, \Omega_{-D})$ und $\lambda =
+  liegt $\omega$ bereits in $H^0(X, \Omega_{-D})$ und es ist $\lambda =
   \iota_D (\omega)$.
 \end{lemma}
 
@@ -310,14 +314,14 @@ erster Schritt ist der nächste Satz.
   aus. Wir können ohne Einschränkung annehmen, dass wir $U_0$ klein
   genug gewählt haben, so dass
   \begin{enumerate}
-  \item $D|_{U_0 \setminus \{a\}} \equiv 0 \equiv D'|_{U_0 \setminus
+  \item $D|_{U_0 \setminus \{a\}} = 0 = D'|_{U_0 \setminus
       \{a\}}$ gilt und
-  \item $f$ keine Null- und Polstellen auf $U_0 \setminus \{a\}$ besitzt.
+  \item $f$ keine Null- und Polstellen in $U_0 \setminus \{a\}$ besitzt.
   \end{enumerate}
   Nun setzen wir $U_1 := X \setminus \{a\}$, $\fu = (U_0, U_1)$ und
   $\eta = (f_0, f_1) \in C^0(\fu, \mer)$, wobei $f_0 := (zf)^{-1}$ und
   $f_1 := 0$ definiert wird. Aus $\ord_a(\omega) < D(a)$ folgte nun
-  sogar, dass $\eta \in C^0(\fu, \hol_D)$ und damit sogar, dass
+  sogar, dass $\eta \in C^0(\fu, \hol_D)$ und damit, dass
   \[
   \delta \eta \in Z^1(\fu, \hol) = Z^1(\fu, \hol_D) = Z^1(\fu,
   \hol_{D'})
@@ -343,8 +347,8 @@ erster Schritt ist der nächste Satz.
 \end{proof}
 
 \begin{lemma}
-  Seien $D,B \in \Div(X)$ und $X$ eine kompakte Riemannsche
-  Fläche. Sei $\psi \in H^0(X,\hol_B)$. Dann induziert der
+  Seien $X$ eine kompakte Riemannsche Fläche und $D,B \in \Div(X)$.
+  Sei $\psi \in H^0(X,\hol_B)$. Dann induziert der
   Garbenhomomorphismus
   \[
   \hol_{D-B} \xrightarrow{\psi} \hol_D, \quad f \mapsto \psi f
@@ -355,7 +359,7 @@ erster Schritt ist der nächste Satz.
   \]
   und damit auch eine lineare Abbildung
   \[
-  H^1(X, \hol_D)^\ast \ra H^1(X, \hol_{D-B})^\ast
+  H^1(X, \hol_D)^\ast \ra H^1(X, \hol_{D-B})^\ast.
   \]
   Diese bezeichnen wir auch mit $\psi$. Mit dieser Notation folgt
   $(\psi \lambda)(\xi) = \lambda(\psi \xi)$ für beliebige $\lambda \in
@@ -371,7 +375,7 @@ erster Schritt ist der nächste Satz.
       \draw[->] (H0D) to node {$\psi$} (H0B);
       \draw[->] (H0D) to node {$\iota_D$} (H1D);
       \draw[->] (H0B) to node {$\iota_{D-B}$} (H1B);
-    \end{tikzpicture}
+    \end{tikzpicture}.
   \end{center}
 \end{lemma}
 
@@ -411,9 +415,12 @@ erster Schritt ist der nächste Satz.
   Isomorphismus, wobei die Umkehrung einfach durch Multiplikation mit
   $\psi^{-1}$ gegeben ist. Nun ist die Inklusion von $\hol_{D-B} \ra
   \hol_{D+A}$ injektiv und deshalb nach \cite[Satz 16.8]{For} $H^1(X, \hol_{D-B}) \ra
-  H^1(X, \hol_{D+A})$ ein Epimorphismus. Also ist auch $H^1(X,
-  \hol_{D-B}) \xrightarrow{\psi} H^1(X, \hol_D)$ ein Epimorphismus und
-  schlußendlich die duale Abbildung injektiv. Dies zeigt die Behauptung.
+  H^1(X, \hol_{D+A})$ ein Epimorphismus. Also ist auch
+  \[
+  H^1(X,\hol_{D-B}) \xrightarrow{\psi} H^1(X, \hol_D)
+  \]
+  ein Epimorphismus und schlußendlich die duale Abbildung
+  injektiv. Dies zeigt die Behauptung.
 \end{proof}
 
 \begin{thm}[Der Serresche Dualitätssatz]
@@ -428,15 +435,14 @@ erster Schritt ist der nächste Satz.
   mit $\lambda \neq 0$ und $P \in \Div(X)$ mit $\deg P = 1$. Weiterhin
   setzen wir $D_n := D - n P$ für beliebige $n \in \N$. Als nächstes
   bezeichnen wir mit $\Lambda \subset H^1(X, \hol_{D_n})^\ast$ den
-  Untervektorraum aller Linearformen der Form $\psi \lambda$, wobei
-  $\psi \in H^0(X, \hol_{nP})$. Nach Lemma \ref{lemma:psi-inj} ist
+  Untervektorraum aller Linearformen der Form $\psi \lambda$ mit
+  $\psi \in H^0(X, \hol_{nP})$. Nach Lemma \ref{lemma:psi-inj} gilt
   $\Lambda \cong H^0(X, \hol_{nP})$. Aus dem Satz von Riemann-Roch
-  folgt damit, dass
+  folgt damit
   \[
-  \dim \Lambda \geq 1 - g + n
+  \dim \Lambda \geq 1 - g + n.
   \]
-  gilt. Aus Lemma \ref{lemma:k0} und da $\iota_{D_n}$ injektiv ist,
-  erhalten wir
+  Lemma \ref{lemma:k0} und die Injektivität von $\iota_{D_n}$ implizieren
   \[
   \dim \im(\iota_{D_n}) = \dim H^0(X, \Omega_{-D_n}) \geq n + k_0 -
   \deg D.
@@ -456,8 +462,11 @@ erster Schritt ist der nächste Satz.
     & = \dim H^1(X, \hol_{D_n})^\ast.
   \end{align*}
   Da sowohl $\Lambda$ als auch $\im(\iota_{D_n})$ Untervektorräume von
-  $H^1(X, \hol_{D_n})^\ast$ sind, muss $\Lambda \cap \im(\iota_{D_n})
-  \neq 0$ sein. Also existiert ein $\psi \in H^0(X, \hol_{nP})$ mit
+  $H^1(X, \hol_{D_n})^\ast$ sind, muss
+  \[
+  \Lambda \cap \im(\iota_{D_n}) \neq 0
+  \]
+  sein. Also existiert ein $\psi \in H^0(X, \hol_{nP})$ mit
   $\psi \neq 0$ und $\omega \in H^0(X, \Omega_{-D_n})$ mit $\psi
   \lambda = \iota_{D_n}(\omega)$. Setzen wir $A := (\psi)$, so liegt
   $\frac{1}{\psi}$ in $H^0(X, \hol_A)$. Zu guter Letzt erhalten wir aus
@@ -502,7 +511,7 @@ erster Schritt ist der nächste Satz.
   \ref{thm:serre} folgt
   \[
   H^0(X, \hol_{-D}) \cong H^0(X, \Omega_{-D-K}) \cong H^1(X,
-  \hol_{D+K})^\ast = H^1(X, \Omega_D)^\ast
+  \hol_{D+K})^\ast = H^1(X, \Omega_D)^\ast.
   \]
 \end{proof}
 
@@ -516,7 +525,7 @@ erster Schritt ist der nächste Satz.
   Satz \ref{thm:serre-umgekehrt} angewandt auf den Fall $D = 0$
   liefert uns
   \[
-  \dim H^1(X, \Omega) = \dim H^0(X, \hol) = \dim \C = 1
+  \dim H^1(X, \Omega) = \dim H^0(X, \hol) = \dim \C = 1.
   \]
 \end{proof}
 
@@ -526,14 +535,14 @@ erster Schritt ist der nächste Satz.
   \in \mer^{(1)}(X)$, wobei $\omega(x) \neq 0$ für jedes $x \in
   X$. Dann gilt
   \[
-  \deg(\omega) = 2g - 2
+  \deg(\omega) = 2g - 2.
   \]
 \end{thm}
 
 \begin{proof}
   Sei $K := (\omega)$. Aus dem Satz von Riemann-Roch erhalten wir
   \[
-  \dim H^0(X, \hol_K) - \dim H^1(X, \hol_K) = 1 - g + \deg K
+  \dim H^0(X, \hol_K) - \dim H^1(X, \hol_K) = 1 - g + \deg K.
   \]
   Wieder nach Definiton \ref{def:garbe-div} wissen wir $\Omega \cong
   \hol_K$. Also erhalten wir weiter unter Ausnutzung von Satz
@@ -569,8 +578,7 @@ erster Schritt ist der nächste Satz.
   deshalb die Projektion als Kartenabbildung von $\quot{\C}{\Gamma}$
   verwenden können, finden wir eine 1-Form $\omega \in
   \quot{\C}{\Gamma}$, die auf jeder dieser Karten mit $\d[z]$
-  übereinstimmt. Dies folgt direkt daraus, dass $\mer^{(1)}(X)$ eine
-  Garbe ist. Dann folgt aber sofort $\omega(x) \neq 0$ für jedes $x
+  übereinstimmt. Dann folgt aber sofort $\omega(x) \neq 0$ für jedes $x
   \in \quot{\C}{\Gamma}$ und damit $\deg(\omega) = 0$. Aus Satz
   \ref{thm:deg-geschlecht} folgt dann $g = 1$.
 \end{proof}

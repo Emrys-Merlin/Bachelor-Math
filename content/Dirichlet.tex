@@ -34,7 +34,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   Definition der Abbildung
   \[
   \ast : \diff^{(1)}(X) \ra \diff^{(1)}(X), \quad \omega_1 + \omega_2
-  \mapsto i(\bar \omega_1 + \bar \omega_2).
+  \mapsto i(\bar \omega_1 - \bar \omega_2).
   \]
 \end{defin}
 
@@ -76,21 +76,21 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   \begin{align}
     \d[''\omega_1] + \d['\omega_2] = 0 \label{eq:harm1}
   \end{align}
-  gilt und aus $\d[\ast \omega] = 0$, dass
+  und aus $\d[\ast \omega] = 0$, dass
   \begin{align}
   i(\d['\bar \omega_1] - \d[''\bar \omega_2]) = 0 \label{eq:harm2}
   \end{align}
-  gilt. Durch eine einfache
+  gelten. Durch eine einfache
   Rechnung auf Karten lässt sich \eqref{eq:harm2} zu
   \[
   0 = \overline{\d[''\omega_1]} - \overline{\d['\omega_2]}
   \]
   umformen. Dies liefert uns zunächst zusammen mit
   Gleichung\eqref{eq:harm1}, dass $\d[''\omega_1] = 0$ und $\d['\omega_2] = 0$
-  gelten. Daraus folgt aber direkt, dass $\omega_1 \in \Omega(X)$
-  gilt. Und unter Ausnutzung von $\overline{\d['\omega_2]} = \d[''
-  \bar \omega_2]$ erhalten wir, dass $\bar \omega_2 \in \Omega(X)$
-  gilt. Nun wissen wir aber, dass $\sigma$ reell ist und wir erhalten
+  gelten. Daraus folgt aber direkt, dass $\omega_1$ in $\Omega(X)$
+  und unter Ausnutzung von $\overline{\d['\omega_2]} = \d[''
+  \bar \omega_2]$ erhalten wir, dass $\bar \omega_2$ in $\Omega(X)$
+  liegt. Nun wissen wir aber, dass $\sigma$ reell ist und wir erhalten
   die Gleichung
   \[
   \omega_1 + \omega_2 = \sigma = \bar \sigma = \bar \omega_1 + \bar
@@ -106,7 +106,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   Um nun die Eindeutigkeit von $\omega$ zu beweisen, zeigen wir, dass
   $\sigma = 0$ bereits $\omega = 0$ impliziert. Dies genügt, da
   $\Re(x) = \Re(y)$ genau dann gilt, wenn $\Re(x-y) = 0$ ist. Dies
-  folgt aus der $\R$-Linearität von $\Re$ \footnote{Wobei $\Re$
+  folgt aus der $\R$-Linearität von $\Re$\footnote{Wobei $\Re$
   natürlich nicht $\C$ linear ist.}. Sei also $\omega \in \Omega(X)$
   mit $\Re(\omega) = 0$. Nun existiert lokal immer eine
   Stammfunktion für $\omega$, d.h. lokal existiert ein holomorphes
@@ -114,7 +114,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   $\d[\Re(f)] = 0$ sein muss, also ist $\Re(f)$ konstant. Das wiederum
   hat zur Folge, dass die holomorphe Funktion $e^f$ ihr
   Betragsmaximum annimmt, denn es gilt $|e^f| = e^{\Re(f)}$. Dann ist
-  aber $e^f$ nach dem Maximumsprinzip für holomorphe Funktionen
+  aber $e^f$ nach dem Maximumprinzip für holomorphe Funktionen
   (vgl. \cite[Kor. 2.6]{For})
   konstant. Also ist auch $f$ konstant und es gilt $\omega = \d[f] =
   0$. Da dies lokal um jeden Punkt gilt, ist somit $\omega = 0$ und
@@ -124,7 +124,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
 \begin{defin}
   Sei $X$ eine Riemannsche Fläche und $Y \subset X$ offen. Dann heißt
   $u \in \diff(Y)$ \init{harmonisch}, falls $\d['\d[''u]] = 0$ gilt.
-  In lokalen Koordinaten $(z,U)$ mit $z = x + iy$ bedeutet das
+  In lokalen Koordinaten $(U,z)$ mit $z = x + iy$ bedeutet das
   \begin{align*}
     \Delta u = \left ( \frac{\partial^2}{\partial x^2} +
       \frac{\partial^2}{\partial y^2} \right ) u = 4
@@ -143,12 +143,11 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
 \end{prop}
 
 \begin{proof}
-  Nach Satz \ref{thm:harm-form} gilt
-  \begin{align*}
-    \d[\d[u]] = 0 \quad \text{und} \quad \d[\ast\d[u]] = 0.
-  \end{align*}
-  Also existiert ein $\omega \in \Omega(G)$, so dass $\d[u] =
-  \Re(\omega)$. Nun ist aber $G$ einfach zusammenhängend, d.h. es gibt
+  Es gilt $\d[\d[u]] = 0$ und unter Ausnutzung von $0 = \d['\d['' u]]
+  = - \d[''\d['u]]$ lässt sich auf Karten $\d[\ast\d[u]] = 0$
+  verifizieren. Damit ist $\d[u]$ eine harmonische 1-Form und nach
+  Satz \ref{thm:harm-form} existiert ein $\omega \in \Omega(G)$, so dass $\d[u] =
+  \Re(\omega)$ ist. Nun ist aber $G$ einfach zusammenhängend, d.h. es gibt
   eine Funktion $g \in \hol(G)$, so dass $\omega = \d[g]$. Damit ist
   $\d[u] = \Re(\d[g])$ und es folgt $u = \Re(g) +$const.
 \end{proof}
@@ -158,23 +157,27 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   Funktion ist immer harmonisch.
 \end{rem}
 
-\begin{prop}[Maximumsprinzip für harmonische Funktionen]
+\begin{prop}[Maximumprinzip für harmonische Funktionen]
   \label{prop:max-prinzip-harm}
   Sei $Y \subset X$ ein Gebiet. Sei weiterhin $u: Y \ra \R$ harmonisch
-  und $x_0 \in Y$ mit $u(x_0) = \sup_{y \in Y} u(y)$. Dann ist $u$ konstant.
+  und $x_0 \in Y$ mit
+  \[
+  u(x_0) = \sup_{y \in Y} u(y).
+  \]
+  Dann ist $u$ konstant.
 \end{prop}
 
 \begin{proof}
   Wir verwenden für den Beweis ein
   "`Offen-Abgeschlossen"'-Argument. Sei dazu
   \[
-  M:= \{ y \in Y| u(y) = u(x_0)\} \neq \varnothing.
+  M:= \{ y \in Y\mid u(y) = u(x_0)\} \neq \varnothing.
   \]
   Wir behaupten zunächst, dass $M$ offen ist.
   Sei $y \in Y$. Dann existiert eine offene,
   einfachzusammenhängende Umgebung $U \subset Y$ von $y$. 
   Nach Proposition \ref{prop:harm-realteil-hol} folgt dann die
-  Existenz von $f \in \hol(U)$ mit $u|_U = \Re(f)$.
+  Existenz eines $f \in \hol(U)$ mit $u|_U = \Re(f)$.
   Weiterhin ist die reelle Exponentialfunktion streng monoton
   steigend und somit nimmt die Funktion $e^u$ bei $y$ ein Maximum
   an. Allerdings gilt auch $|e^f| = e^u$, was nichts anderes
@@ -183,7 +186,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   Aus dem Maximumsprinzip für holomorphe Funktionen (vgl. \cite[Kor. 2.6]{For}) folgt dann die
   Konstanz von $e^f$ und damit
   \[
-  u|_U \equiv \text{const.}
+  u|_U = \text{const.}
   \]
   Also gilt $y \in U \subset M$.
   
@@ -202,7 +205,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
     Randwertproblemes} (Dirichlet-RWP), falls
   \begin{enumerate}
   \item $u|_Y$ harmonisch ist und
-  \item $u|_{\partial Y} \equiv f$.
+  \item $u|_{\partial Y} = f$ gilt.
   \end{enumerate}
 \end{defin}
 
@@ -213,12 +216,12 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
 \end{prop}
 
 \begin{proof}
-  Seien $u_1, u_2$ zwei Lösungen des Dirichlet-Problems. Dann erfüllen
+  Seien $u_1$ und $u_2$ zwei Lösungen des Dirichlet-Problems. Dann erfüllen
   die Funktionen
   \[
-  (u_1 - u_2)|_{\partial Y} \equiv (u_2 - u_1)|_{\partial Y} \equiv 0
+  (u_1 - u_2)|_{\partial Y} = (u_2 - u_1)|_{\partial Y} = 0
   \]
-  und sind harmonisch. Aus dem Maximumsprinzip folgt sofort, die
+  und sind harmonisch. Aus dem Maximumprinzip folgt sofort, die
   Nicht-Positivität von sowohl $u_1 - u_2$ als auch von $u_2 - u_1$
   auf allen Zusammenhangskomponenten von $Y$, also folgt
   \[
@@ -226,7 +229,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   \]
   und damit
   \[
-  u_1 \equiv u_2.
+  u_1 = u_2.
   \]
 \end{proof}
 
@@ -249,7 +252,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   Für $z \neq \rho$ definieren wir
   \[
   P(z, \rho) := \frac{|\rho|^2 - |z|^2}{|\rho - z|^2}, \qquad
-  F(z,\rho) := \frac{\rho +z }{\rho - z}
+  F(z,\rho) := \frac{\rho +z }{\rho - z}.
   \]
   Dann gilt $P(z, \rho) = \Re(F(z, \rho))$ und für $u$ ergibt sich
   \begin{align*}
@@ -258,7 +261,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
     & = \Re \left ( \frac{1}{2\pi} \int_0^{2\pi} F(z, Re^{i\phi})
       f(Re^{i\phi}) \d[\phi] \right ).
   \end{align*}
-  Nun ist $F$ als Funktion von $z$ holomorph (falls $z \neq \rho$)
+  Nun ist $F$ als Funktion von $z$ holomorph (da $|z| < R$) 
   und damit erhalten wir aus der Leibnizregel, dass $u$ der Realteil
   einer holomorphen Funktion ist, also harmonisch.
   
@@ -301,7 +304,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   und $\beta := [0, 2\pi]\setminus \alpha$, so erhalten wir
   \begin{align*}
     |u(z) - f(\rho_0)| & \leq \frac{1}{2\pi} \int_\alpha
-    \underbrace{P(z, \rho)}_{\geq 0} \frac{\epsilon}{2} \d[\phi] +
+    P(z, \rho) \frac{\epsilon}{2} \d[\phi] +
     \frac{1}{2\pi} \int_\beta P(z, \rho) 2 M \d[\phi] \\
     & \leq \frac{\epsilon}{2} + \frac{M}{\pi} \int_\beta P(z,
     Re^{i\phi}) \d[\phi].
@@ -388,14 +391,14 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
       z|^2} \nonumber\\
     & \leq \frac{(r- |z|)(r + |z|)}{(r - |z|)^2} \nonumber\\
     & = \frac{r + |z|}{r - |z|} \nonumber\\
-    & \leq \frac{ r + \rho}{ r - \rho} \label{eq:P-absch} 
+    & \leq \frac{ r + \rho}{ r - \rho}. \label{eq:P-absch} 
   \end{align}
   Für beliebige $z \in K$ gilt nun die folgende Integralformel
   \begin{align*}
-    u_n(z) - u_m(z) & = \frac{1}{2\pi} \int_0^{2\pi} P(z, re^{i\phi}
+    u_n(z) - u_m(z) & = \frac{1}{2\pi} \int_0^{2\pi} P(z, re^{i\phi})
     (u_n(re^{i\phi}) - u_m(re^{i\phi})) \d[\phi] \\
     & \stackrel{\eqref{eq:P-absch}}{\leq} \frac{r + \rho}{r - \rho}
-    \frac{1}{2\pi} \int_0^{2\pi} (u_n(r e^{i\phi} u_m(re^{i\phi})
+    \frac{1}{2\pi} \int_0^{2\pi} (u_n(r e^{i\phi}) -  u_m(re^{i\phi})
     \d[\phi] \\
     & = \frac{r+\rho}{r - \rho} (u_n(0) - u_m(0)) \\
     & \leq \epsilon.
@@ -407,7 +410,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
 \begin{prop}
   \label{prop:harm-rf}
   Sei $X$ eine Riemannsche Fläche und $D \Subset U \subset X$, so dass
-  $(z, U)$ eine Karte und $z(D) \subset \C$ eine Kreisscheibe
+  $(U, z)$ eine Karte und $z(D) \subset \C$ eine Kreisscheibe
   ist. Dann ist das Dirichlet-Problem auf $D$ wohldefiniert und
   eindeutig lösbar.
 \end{prop}
@@ -426,7 +429,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   genügen.
   
   Für $u \in C(Y, \R)$ und $D \in \Reg(Y)$ definieren wir $P_D u: Y
-  \ra \R$ durch $P_D u |_{Y \setminus D} \equiv u_{Y \setminus D}$ und
+  \ra \R$ durch $P_D u |_{Y \setminus D} = u_{Y \setminus D}$ und
   $P_Du|_D$ ist die Lösung des Dirichlet-Problems mit Randwerten
   $u|_{\partial D}$.
 \end{defin}
@@ -443,18 +446,18 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
 \end{cor}
 
 \begin{proof}
-  Die ersten beiden Aussagen ergeben sich direkt aus der Eindeutigkeit
+  Die ersten beiden Aussagen ergeben sich aus der Eindeutigkeit
   harmonischer Funktionen und 3. ist eine Folge des Maximumprinzips.
 \end{proof}
 
 \begin{cor}
   $u \in C(Y, \R)$ ist genau dann harmonisch, wenn $P_Du = u $ für
-  jedes $D \in \Reg(Y)$
+  jedes $D \in \Reg(Y)$ gilt.
 \end{cor}
 
 \begin{proof}
   \begin{description}
-  \item[$\Ra$] Diese Richtung ergibt sich direkt aus der Definition.
+  \item[$\Ra$] Diese Richtung ergibt sich aus der Definition.
   \item[$\La$] Folgt aus der Tatsache, dass harmonisch zu sein eine
     lokale Eigenschaft ist und es zu jedem Punkt $x \in Y$ ein $D \in
     \Reg(Y)$ mit $x \in D$ existiert.
@@ -465,7 +468,8 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   Sei $Y \subset X$ offen und $X$ eine Riemannsche Fläche.
   Ein $u \in C(Y, \R)$ heißt
   \begin{enumerate}
-  \item \init{subharmonisch}, falls $P_D u \geq u$ für jedes $D \in \Reg(Y)$.
+  \item \init{subharmonisch}, falls $P_D u \geq u$ für jedes $D \in
+    \Reg(Y)$ gilt.
   \item \init{lokal subharmonisch}, falls es zu jedem Punkt in $Y$
     eine Umgebung gibt, auf der $u$ subharmonisch ist.
   \end{enumerate}
@@ -501,7 +505,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   \in C(Y, \R)$ lokal subharmonisch, so dass ein $x_0 \in Y$ existiert
   mit
   \[
-  u(x_0) = \sup_{y\in Y} u(y)
+  u(x_0) = \sup_{y\in Y} u(y).
   \]
   Dann ist $u$ konstant.
 \end{thm}
@@ -512,14 +516,14 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   von $u$ folgte $u(a) = u(x_0)$. Nun müsste in jeder Umgebung von $a$
   ein $x$ existieren, so dass $u(x) < u(x_0)$ wäre, d.h. wir könnten ein
   $D \in \Reg(y)$ finden mit $a \in D$ und $u|_{\partial D} \not
-  \equiv c$. Wenn wir nun $D$ klein genug wählten, könnten wir annehmen, dass $u$
+  = c$. Wenn wir nun $D$ klein genug wählten, könnten wir annehmen, dass $u$
   subharmonisch in einer Umgebung von $\bar D$ wäre. Also gälte $u \leq
-  P_D u =: v$. Damit wäre $v$ harmonisch auf $D$ und $v|_{\partial D} \equiv
+  P_D u =: v$. Damit wäre $v$ harmonisch auf $D$ und $v|_{\partial D} =
   u|_{\partial_D} \leq c$ und es folgte $v \leq c$ auf $\bar D$, aber
-  $c = u(a) \leq v(a)$. $v$ nähme also ihr Maximum im Inneren an und
-  ist nach Proposition \ref{prop:max-prinzip-harm} konstant,
-  insbesondere wäre $v \equiv c$ auf $\partial D$. Dies ist ein Widerspruch zu
-  $u|_{\partial D} \not \equiv c$. Also muss $M = Y$ gelten.
+  $c = u(a) \leq v(a)$. Die Funktion $v$ nähme also ihr Maximum im Inneren an und
+  wäre nach Proposition \ref{prop:max-prinzip-harm} konstant,
+  insbesondere wäre $v = c$ auf $\partial D$. Dies ist ein Widerspruch zu
+  $u|_{\partial D} \not = c$. Also muss $M = Y$ gelten.
 \end{proof}
 
 \begin{cor}
@@ -530,7 +534,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
 \begin{proof}
   Sei $D \in \Reg(Y)$ beliebig. Da $P_D u$ harmonisch auf $D$ ist, ist
   $v:= u- P_Du$ lokal subharmonisch auf $D$ und $v|_{\partial D}
-  \equiv 0$. Also folgt aus dem Maximumprinzip $v \leq0$ auf $D$ und
+  = 0$. Also folgt aus dem Maximumprinzip $v \leq0$ auf $D$ und
   damit $P_Du \geq u$.
 \end{proof}
 
@@ -541,10 +545,10 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
 
 \begin{proof}
   Wir setzen $v:= P_B u$ und wählen $D \in \Reg(Y)$ beliebig. Wir
-  zeigen dann die Abschätzung $P_D v \geq v$. Auf $Y \setminus D$ gilt $P_Dv \equiv v$
+  zeigen dann die Abschätzung $P_D v \geq v$. Auf $Y \setminus D$ gilt $P_Dv = v$
   und auf $Y\setminus B$ gilt
   \[
-  P_Dv \equiv P_DP_Bu = P_Du \geq u = P_Bu = v
+  P_Dv = P_DP_Bu = P_Du \geq u = P_Bu = v.
   \]
   Damit gilt $v - P_Dv \leq 0$ auf $Y \setminus (B \cap D)$,
   insbesondere $v- P_D v \leq 0$ auf $\partial (Y \setminus (B \cap
@@ -562,7 +566,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   \item $u \in M, D \in \Reg(Y) \Ra P_Du \in M$ und
   \item $\exists K \in \R: u \leq K \quad \forall u \in M$.
   \end{enumerate}
-  Dann ist die Funktion $u^\ast : Y \ra \R$ durch $u^\ast(x) :=
+  Dann ist die Funktion $u^\ast : Y \ra \R$ gegeben durch $u^\ast(x) :=
   \sup\{u(x) \mid u \in M \}$ harmonisch auf $Y$.
 \end{lemma}
 
@@ -574,21 +578,21 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   \begin{align}
     & u_n \leq v_n \leq u^\ast \label{eq:v-absch} \\
     \intertext{und}
-   & v_0 \leq v_1 \leq v_2 \leq \dots \nonumber
+   & v_0 \leq v_1 \leq v_2 \leq \dots \ . \nonumber
   \end{align}
   Nach dem Harnackschen Prinzip konvergiert $(v_n)_{n \in \N}$ auf $D$
   gegen eine harmonische Funktion $v: D \ra \R$ und aus
   \eqref{eq:v-absch} erhalten wir $v(a) = u^\ast(a)$ und $v \leq
   u^\ast$ auf $D$.
   
-  Wir zeigen zunächst, dass $v \equiv u^\ast|_D$ gilt. Sei dazu $x \in
+  Wir zeigen zunächst, dass $v = u^\ast|_D$ gilt. Sei dazu $x \in
   D$ beliebig und $(w_n)_{n\in \N}\subset M$ mit
   $\lim_{n \ra \infty}w_n(x) = u^\ast(x)$. Aufgrund von 1. und
   2. können wir $v_n \leq w_n = P_D w_n$ und $w_n
   \leq w_{n+1}$ annehmen. Also konvergiert $(w_n)_{n \in \N}$ auf $D$
   gleichmäßig gegen $w: D \ra \R$ mit $v \leq w \leq u^\ast$. Damit
   gilt aber $u^\ast(a) = v(a) \leq w(a) \leq u^\ast(a)$ und aus
-  dem Maximumprinzip angewandt auf $v-w$ ergibt sich $v \equiv w$ auf
+  dem Maximumprinzip angewandt auf $v-w$ ergibt sich $v = w$ auf
   $D$. Insbesondere $v(x) = w(x) = u^\ast(x)$. Also ist $u^\ast = v$
   harmonisch auf $D$ und, da $D$ beliebig gewählt
   war, auf ganz $Y$.
@@ -613,7 +617,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
 \end{cor}
 
 \begin{proof}
-  Wir wenden einfach Lemma \ref{lemma:perron} auf $M := \pe_f$ an.
+  Wir wenden Lemma \ref{lemma:perron} auf $M := \pe_f$ an.
 \end{proof}
 
 \begin{rem}
@@ -625,7 +629,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   \end{align}
   für jedes $x \in \partial Y$ gelten. Dies ist leider nicht immer der
   Fall. Im Folgenden wollen wir Kriterien für die Randpunkte angeben,
-  die sicherstellen, dass \eqref{eq:dirichlet-rand} erfüllt wird.
+  die sicherstellen, dass \eqref{eq:dirichlet-rand} erfüllt ist.
 \end{rem}
 
 \begin{defin}
@@ -666,11 +670,11 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   \label{lemma:regulär-trennen}
   Sei $x \in \partial Y$ ein regulärer Randpunkt und $V$ eine offene
   Umgebung von $x$ mit reellen Konstanten $m \leq c$. Dann existiert
-  ein $v \in C( \bar Y, \R)$, so dass die folgenden Eigenschaften
+  ein $v \in C( \bar Y, \R)$, so dass die Eigenschaften
   \begin{enumerate}
   \item $v|_Y$ ist subharmonisch,
   \item es gelten $v(x) = c$ und $v|_{\bar Y \cap V} \leq c$ und
-  \item $v|_{\bar Y\setminus V} \equiv m$
+  \item $v|_{\bar Y\setminus V} = m$
   \end{enumerate}
   erfüllt sind.
 \end{lemma}
@@ -680,10 +684,10 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   Y \cap U, \R)$. Wir können nun eine offene Umgebung $\tilde V \Subset U \cap V$
   von $x$ finden. Dort gilt
   \[
-  \sup\{\beta(y)| y \in \partial \tilde V \cap \bar Y \} < 0.
+  \sup\{\beta(y) \mid y \in \partial \tilde V \cap \bar Y \} < 0.
   \]
   Also existiert ein $k > 0$, so dass $k\beta|_{\partial \tilde V \cap
-    \bar Y} < m$.
+    \bar Y} < m$ ist.
   Schlußendlich definieren wir
   \[
   v :=
@@ -709,49 +713,50 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   Umgebung $V$ von $x$ mit
   \[
   f(x) - \epsilon \leq f(y) \leq f(x) + \epsilon \qquad \forall y
-  \in \partial Y \cap V
+  \in \partial Y \cap V.
   \]
   Seien $k, K \in \R$ mit $k \leq f(y) \leq K$ für jedes $y
   \in \partial Y$.
-  \begin{description}
-  \item[a)] Nach Lemma \ref{lemma:regulär-trennen} können wir eine
-    Funktion $v \in C(\bar Y, \R)$ finden, die subharmonisch auf $Y$ ist und
-    \begin{align*}
-      v(x) & = f(x) - \epsilon, \\
-      v|_{\bar Y \cap V} & \leq f(x) - \epsilon \quad \text{und} \\
-      v|_{\bar Y \setminus V} & = k - \epsilon
-    \end{align*}
-    erfüllt. Damit ist $v|_{\partial Y} \leq f$ und $v \leq K$. Also ist $v \in
-    \pe_f$ und es folgt $v \leq u^\ast$. Wir erhalten also
-    \[
-    \liminf_{\substack{y \ra x\\y \in Y}} u^\ast(y) \geq v(x) = f(x) - \epsilon.
-    \]
-  \item[b)] Erneut durch Lemma \ref{lemma:regulär-trennen} erhalten
-    wir ein $w \in C(\bar Y, \R)$, das subharmonisch auf $Y$ ist und
-    \begin{align*}
-      w(x) & = - f(x), \\
-      w|_{\bar Y \cap V} & \leq -f(x) \quad \text{und} \\
-      w|_{\bar Y \setminus V}  & = -K
-    \end{align*}
-    erfüllt. Also gilt für alle $u \in \pe_f$ und $y \in \partial Y \cap V$:
-    $u(y) \leq f(x) + \epsilon$ und wir erhalten
-    \[
-    u(y) + w(y) \leq \epsilon \qquad \forall y \in \partial Y \cap V
-    \]
-    Weiterhin erhalten wir für jedes $z \in \bar Y \cap \partial V$
-    \[
-    u(z) + w(z) \leq K + w(z) = K - K  = 0.
-    \]
-    Das Maximumprinzip angewandt auf die subharmonischen Funktion $u+w$
-    auf $Y \cap V$ ergibt $u + w \leq \epsilon $ auf $\bar Y \cap
-    V$. Also ist $u|_{\bar Y \cap V} \leq \epsilon - w|_{\bar Y \cap V}$
-    für jedes $u \in \pe_f$ und wir folgern
-    \[
-    \limsup_{\substack{y \ra x\\y \in Y}}u^\ast \leq \epsilon - u(x) = f(x)
-    + \epsilon.
-    \]
-  \end{description}
-  a) und b) zusammengesetzt ergibt dann die Behauptung.
+  \emph{Fall a)} Nach Lemma \ref{lemma:regulär-trennen} können wir eine
+  Funktion $v \in C(\bar Y, \R)$ finden, die subharmonisch auf $Y$ ist und
+  \begin{align*}
+    v(x) & = f(x) - \epsilon, \\
+    v|_{\bar Y \cap V} & \leq f(x) - \epsilon \quad \text{und} \\
+    v|_{\bar Y \setminus V} & = k - \epsilon
+  \end{align*}
+  erfüllt. Damit ist $v|_{\partial Y} \leq f$ und $v \leq K$. Also ist $v \in
+  \pe_f$ und es folgt $v \leq u^\ast$. Wir erhalten also
+  \[
+  \liminf_{\substack{y \ra x\\y \in Y}} u^\ast(y) \geq v(x) = f(x) - \epsilon.
+  \]
+  
+  \emph{Fall b)} Erneut durch Lemma \ref{lemma:regulär-trennen} erhalten
+  wir ein $w \in C(\bar Y, \R)$, das subharmonisch auf $Y$ ist und
+  \begin{align*}
+    w(x) & = - f(x), \\
+    w|_{\bar Y \cap V} & \leq -f(x) \quad \text{und} \\
+    w|_{\bar Y \setminus V}  & = -K
+  \end{align*}
+  erfüllt. Also gilt für alle $u \in \pe_f$ und $y \in \partial Y \cap
+  V$ die Abschätzung
+  $u(y) \leq f(x) + \epsilon$ und wir erhalten
+  \[
+  u(y) + w(y) \leq \epsilon \qquad \forall y \in \partial Y \cap V.
+  \]
+  Weiterhin erhalten wir für jedes $z \in \bar Y \cap \partial V$
+  \[
+  u(z) + w(z) \leq K + w(z) = K - K  = 0.
+  \]
+  Das Maximumprinzip angewandt auf die subharmonischen Funktion $u+w$
+  auf $Y \cap V$ ergibt $u + w \leq \epsilon $ auf $\bar Y \cap
+  V$. Also ist $u|_{\bar Y \cap V} \leq \epsilon - w|_{\bar Y \cap V}$
+  für jedes $u \in \pe_f$ und wir folgern
+  \[
+  \limsup_{\substack{y \ra x\\y \in Y}}u^\ast \leq \epsilon - u(x) = f(x)
+  + \epsilon.
+  \]
+  
+  Fall a) und b) zusammen ergeben dann die Behauptung.
 \end{proof}
 
 \begin{thm}
@@ -781,15 +786,14 @@ Nun geben wir noch ein hinreichendes Kriterium für reguläre Randpunkte an.
   $c = 0$ an und betrachten $\beta$ als Funktion von $x$ und $y$,
   wobei $z = x + iy$ gilt. Wir werden in den folgenden Gleichungen
   aber dennoch (inkonsistenter Weise) $z$ verwenden und fassen dieses
-  dann als "`Funktion"' von $x$ und $y$ auf. Wir erhalten für die
-  Ableitungen, wobei wir für $y$ direkt die zweite angeben, da $\beta$
-  symmetrisch in $x$ und $y$ ist, die Gleichungen 
+  dann als Funktion von $x$ und $y$ auf. Wir erhalten für die
+  Ableitungen die Gleichungen 
   \begin{align*}
-    \frac{\partial \beta(x,y)}{\partial x} & = - \frac{x}{|z|^2} \\
+    \frac{\partial \beta(x,y)}{\partial x} & = - \frac{x}{|z|^2}, \\
     \frac{\partial^2 \beta(x,y)}{\partial x^2} & = \frac{2x^2 -
-      |z|^2}{|z|^4} \\
+      |z|^2}{|z|^4}, \\
     \frac{\partial^2 \beta(x,y)}{\partial y^2} & = \frac{2y^2 -
-      |z|^2}{|z|^4} \\
+      |z|^2}{|z|^4} && \text{und} \\
     \Delta \beta(x,y) & = \frac{2 x^2 - |z|^2 + 2y^2 -|z|^2}{|z|^4} \\
     & = \frac{2 |z|^2 - 2|z|^2}{|z|^4} \\
     & = 0.

@@ -49,7 +49,7 @@ als die zyklischen Untergruppen charakterisiert.
   \begin{pmatrix}
     a & b\\
     c & d
-  \end{pmatrix} \in \PSL(2, \R)
+  \end{pmatrix} \in \PSL(2, \R).
   \]
   Für einen Fixpunkt $S \langle z \rangle = z$ muss die Gleichung
   \begin{align}
@@ -92,7 +92,7 @@ als die zyklischen Untergruppen charakterisiert.
 
 \begin{defin}
   Die Elemente aus $\PSL(2,\R)$ mit $|\tr S| < 2$ ($ = 2$ oder $ > 2$)
-  heißen elliptisch (parabolisch, hyperbolisch).
+  heißen elliptisch (parabolisch oder hyperbolisch).
 \end{defin}
 
 \begin{lemma}
@@ -138,8 +138,8 @@ als die zyklischen Untergruppen charakterisiert.
 \begin{proof}
   \emph{Fall 1:} Sei $S \in \PSL(2, \R)$ elliptisch und $w \in \h$ der
   Fixpunkt von $S$. Nun existiert nach Lemma \ref{lemma:kreis-halbebene}
-  eine biholomorphe Abbildung $\phi: \h \ra B$ mit $h(i) = 0$. Setzen
-  wir $v = h(w)$ und betrachten die selbstinverse, biholomorphe
+  eine biholomorphe Abbildung $\phi: \h \ra B$ mit $\phi(i) = 0$. Setzen
+  wir $v = \phi(w)$ und betrachten die selbstinverse, biholomorphe
   Abbildung
   \[
   f_v : B \ra B, f_v(z) = \frac{z-v}{\bar v z - 1},
@@ -165,15 +165,15 @@ als die zyklischen Untergruppen charakterisiert.
   ai +b = -c + di.
   \]
   Nun sind die $a,b,c,d \in \R$ und wir erhalten, dass $a = d$ und $b
-  = - c$ gelten muss. Dann erhalten wir, dass
+  = - c$ gelten muss. Dann erhalten wir
   \[
-  1 = \det S = ad - bc = a^2 + b^2
+  1 = \det S = ad - bc = a^2 + b^2.
   \]
-  gelten muss. Damit finden wir aber geeignete $\phi \in \R$, so dass
-  $a = \cos(\phi)$ und $b = \sin(\phi)$ ist und damit hat $\tilde
+  Damit finden wir aber ein geeignetes $\alpha \in \R$, so dass
+  $a = \cos(\alpha)$ und $b = \sin(\alpha)$ ist und damit hat $\tilde
   S$ die gewünschte Form.
 
-  \emph{Fall 2:} Sei $S \in Sl(2, \R)$ parabolisch und sei $w \in \R
+  \emph{Fall 2:} Sei $S \in \PSL(2, \R)$ parabolisch und sei $w \in \R
   \cup \{\infty\}$ der Fixpunkt von $S$. Wir setzen
   \[
   S =
@@ -186,7 +186,7 @@ als die zyklischen Untergruppen charakterisiert.
   $|\tr S| = 2$ und $\det S = 1$, dass $a = d = \pm 1$ gelten
   muss. Da wir uns in $\PSL(2,\R)$ befinden, können wir ohne
   Einschränkung $a = d = 1$ annehmen. Also ist $S$ bereits in der
-  gewünschten Form. Falls $w \neq \infty$ gilt, so betrachten wir
+  gewünschten Form und wir setzen $C = \id_\h$. Falls $w \neq \infty$ gilt, so betrachten wir
   \[
   C =
   \begin{pmatrix}
@@ -197,8 +197,7 @@ als die zyklischen Untergruppen charakterisiert.
   \]
   $C$ erfüllt die Gleichung $C \langle w \rangle  = \infty$. Also
   erfüllt $\tilde S = C S C^{-1}$ die Gleichung $\tilde S\langle \infty
-  \rangle = \infty$. Damit haben wir diesen Fall auf den ersten Fall
-  zurückgeführt.
+  \rangle = \infty$ und wir können den ersten Fall anwenden.
   
   \emph{Fall 3:} Sei $S \in \PSL(2, \R)$ hyperbolisch und seien $w_1
   \neq w_2 \in \R \cup \{\infty\}$ die Fixpunkte von $S$. Wir
@@ -207,8 +206,8 @@ als die zyklischen Untergruppen charakterisiert.
   \rangle = 0$ und $S\langle \infty \rangle = \infty$, dass $b = c = 0$
   gelten muss. Aus $\det S = 1$ folgt dann, dass $a = \frac{1}{d}$
   gilt. Da $S \in \PSL(2,\R)$ liegt, können wir ohne Einschränkung
-  $\lambda = a > 0$ annehmen, was die Behauptung in diesem Fall
-  zeigt. Als nächstes sei $w_1 = \infty$ oder $w_2 = \infty$. Wir
+  $\lambda = a > 0$ annehmen. Mit $C = \id_\h$ zeigt dies die
+  Behauptung in diesem Fall. Als nächstes sei $w_1 = \infty$ oder $w_2 = \infty$. Wir
   nehmen ohne Einschränkung $w_2 = \infty$ an. Dann ist $w_1 \neq
   \infty$ und wir setzen
   \[
@@ -279,7 +278,7 @@ beginnen mit der folgenden Proposition.
   und die Fixpunktmengen stimmen überein.
 
   Liegen zwei Fixpunkte vor, so ist $T$ (und auch
-  $S$) parabaolisch und nach Lemma \ref{lemma:psl-trafo} existiert ein
+  $S$) parabolisch und nach Lemma \ref{lemma:psl-trafo} existiert \emph{ein}
   $C \in \PSL(2,\R)$, so dass
   \[
   \tilde T = C T C^{-1} =
@@ -307,16 +306,16 @@ beginnen mit der folgenden Proposition.
   Nach Rücktransformation folgt die Aussage für $S$ und $T$.
 
   Gelte nun $\Fix(S) = \Fix(T)$, so stimmen die Typen von $S$ und $T$
-  überein. Weiterhin finden wir nach Lemma \ref{lemma:psl-trafo} ein $C
+  überein. Weiterhin finden wir nach Lemma \ref{lemma:psl-trafo} \emph{ein} $C
   \in \PSL(2, \R)$, so dass $C S C^{-1}$ und $C T C^{-1}$ gemeinsam
   eine der Formen aus dem obigen Lemma annehmen. Nun haben wir aber im
   elliptischen Fall Rotationen und die Gruppe der Rotationen im $\R^2$
   ist kommutativ. Im parabolischen Fall handelt es sich um
   Translationen und diese bilden auch eine abelsche Gruppe. Der
   hyperbolische Fall liefert Diagonalmatrizen, diese kommutieren immer
-  mit allen anderen Matrizen, kommutieren also insbesondere
+  mit allen anderen Matrizen, also insbesondere
   untereinander. Aus der Kommutativität von $C S C^{-1}$ und $C T
-  C^{-1}$ folgt dann direkt die Kommutativität von $S$ und $T$.
+  C^{-1}$ folgt dann die Kommutativität von $S$ und $T$.
 \end{proof}
 
 \begin{thm}
@@ -396,8 +395,9 @@ beginnen mit der folgenden Proposition.
   dem wir die Matrizen auf $\lambda^2$ abbilden. Das es sich
   tatsächlich um einen Homöomorphismus handelt, folgt aus der
   Tatsache, dass wir das Vorzeichen von $\lambda$ nach Definition von
-  $\PSL(2, \R)$ vernachlässigen können. Nun können wir aber $\R_{> 0}$
-  durch $\log$ homöomorph auf $\R$ abbilden. Also finden wir wieder
+  $\PSL(2, \R)$ vernachlässigen können. Nun können wir aber $(\R_{>
+    0}, \cdot)$
+  durch $\log$ homöomorph auf $(\R,+)$ abbilden. Also finden wir wieder
   eine abelsche, diskrete Untergruppe von $\R$. Diese ist wieder
   zyklisch und da wir nur mit Gruppenisomorphismen gearbeitet haben, folgt
   direkt auch, dass $G$ zyklisch sein muss.
