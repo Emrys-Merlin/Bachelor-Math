@@ -105,7 +105,7 @@ In diesem Kapitel werden die Resultate aus Kapitel
 
 \begin{proof}
   Aus der Stetigkeit von $T$ folgt die Existenz einer offenen
-  Nullumgebung $U \subset \diff(Y)$, so dass
+  Nullumgebung \break$U \subset \diff(Y)$, so dass
   \[
   |T[f]| < 1 \qquad \forall f \in U
   \]
@@ -122,7 +122,7 @@ In diesem Kapitel werden die Resultate aus Kapitel
   \]
   Wir behaupten, dass
   dies das gesuchte $K$ ist. 
-  Dazu wählen wir $f \in \diff(Y)$ mit $\Supp(f) \subset Y \setminus
+  Sei dazu $f \in \diff(Y)$ mit $\Supp(f) \subset Y \setminus
   K$. Dann gilt für beliebige
   $\lambda > 0$
   \[
@@ -158,7 +158,7 @@ In diesem Kapitel werden die Resultate aus Kapitel
   \end{align}
   definieren und es gilt $S_U \in \dist(U)'$.
   \eqref{eq:su} verschwindet auf allen Funktionen $\phi = \frac{\partial
-    g}{\partial \bar z}$, $g \in \dist(U)$, denn
+    g}{\partial \bar z}$ mit $g \in \dist(U)$, denn
   \[
   S_U[\phi] = S[\tilde \phi] = S[ \frac{\partial g}{\partial \bar z}
   \d[\bar z]] = S[\d[''g]] = 0
@@ -185,7 +185,7 @@ In diesem Kapitel werden die Resultate aus Kapitel
   \]
   und damit $\sigma_U|_{U \cap U'} = \sigma_{U'}|_{U \cap
     U'}$. Also können wir alle $\sigma_U$ zu einer globalen 1-Form
-  $\sigma \in \Omega(Z)$ verkleben und es folgt
+  \break$\sigma \in \Omega(Z)$ verkleben und es folgt
   \[
   S[\omega] = \iint_Z \sigma \wedge \omega \qquad \forall \omega \in
   \diff^{0,1}(X) \text{ mit } \Supp(\omega) \Subset U,
@@ -223,8 +223,8 @@ In diesem Kapitel werden die Resultate aus Kapitel
   S: \diff^{0,1}(X) \ra \C, \quad S[w] := T[f|_Y].
   \]
   Diese Definition ist unabhängig von $f$, denn für
-  ein $g \in \diff(Y')$ mit $\d[''g] = \omega|_{Y'}$ ist $f-g
-  \in \hol(Y')$ und deshalb $T[(f-g)|_Y] = 0$ nach der Voraussetzung.
+  ein $g \in \diff(Y')$ mit $\d[''g] = \omega|_{Y'}$ liegt $f-g$
+  in $\hol(Y')$ und deshalb $T[(f-g)|_Y] = 0$ nach der Voraussetzung.
   Als nächstes wollen wir zeigen, dass $S$ stetig ist. 
   Dazu betrachten wir zunächst
   \[
@@ -235,14 +235,17 @@ In diesem Kapitel werden die Resultate aus Kapitel
   eines Fr\'echet-Raums ausgestattet. Wählen wir eine Überdeckung von
   $Y'$ durch Kompakta wie im Beweis von Proposition
   \ref{prop:diff-frechet} und eine Folge $(f_n)_{n\in \N} \subset
-  \diff(Y')$, die bzgl. der Fr\'echet-Topologie gegen $f \in \diff(Y')$
+  \diff(Y')$, die bzgl. der Fr\'echet-Topologie gegen \break$f \in \diff(Y')$
   konvergiert, so gilt auf den Kompakta, dass $(f_n)_{n\in \N}$ glatt
   gegen $f$ konvergiert, das heißt aber, dass bezüglich den Karten
   auch die Folge $\left(\frac{\partial f_n}{\partial \bar z} \right
   )_{n \in\N}$ glatt gegen $\frac{\partial f}{\partial \bar
       z}$ konvergiert. Mit anderen Worten konvergiert
     $(\d[''f_n])_{n\in \N}$ gegen $\d[''f]$. Also ist 
-  $\d['']: \diff(Y') \ra \diff^{0,1}(Y')$ stetig und es folgt, dass $V
+    \[
+    \d['']: \diff(Y') \ra \diff^{0,1}(Y')
+    \]
+    stetig und es folgt, dass $V
   \subset \diff^{0,1}(X) \times \diff(Y')$ abgeschlossen und somit
   nach den Sätzen \ref{thm:frechet-abgeschlossen} unf \ref{thm:frechet-summe} ein
   Fr\'echet-Raum ist.
@@ -301,7 +304,7 @@ In diesem Kapitel werden die Resultate aus Kapitel
    \runge(K)$ gilt.
 
    Sei nun $f \in \hol(Y)$. Wir wollen zeigen, dass $T[f] = 0$ ist. 
-   Zunächst gilt $\runge(K) \subset \runge(Y) = Y$. Nun können wir
+   Es ist $\runge(K) \subset \runge(Y) = Y$. Nun können wir
    offene Mengen $U, V$ finden, die $ \runge(K) \subset U
    \subsetneq V \subset Y$ erfüllen. Nach dem Lemma von Urysohn
    (vgl. \cite[Satz 12.2]{Jam}) finden
@@ -315,9 +318,8 @@ In diesem Kapitel werden die Resultate aus Kapitel
    $f = g$ in einer Umgebung von $\runge(K)$ und $\Supp(g) \Subset Y$.
    Also ist $\Supp(f - g|_Y)$ in $Y \setminus K$ enthalten. Somit gilt $T[f- g|_Y] = 0$
    und schlußendlich $T[f] = T[g|_Y] = S[\d[''g]]$. 
-   Nun ist aber $g$ in einer Umgebung von $\runge(K)$ holomorph, was
-   nichts anderes bedeutet als, dass $\Supp(\d[''g]) \Subset X \setminus
-   \runge(K)$ ist.
+   Nun ist aber $g$ in einer Umgebung von $\runge(K)$ holomorph. Mit
+   anderen Worte ist $\Supp(\d[''g]) \Subset X \setminus \runge(K)$.
    Mit \eqref{eq:runge} folgt
    \[
    T[f] = T[g|_f] = S[\d[''g]] = 0.
@@ -394,7 +396,7 @@ In diesem Kapitel werden die Resultate aus Kapitel
   Y_0 \subseteq Y_1 \subseteq \dots
   \]
   eine Ausschöpfung von $X$ durch Runge-Gebiete. Wir wollen nun eine
-  Folge von $f_n \in \diff(Y_n)$ konstruieren, so dass die Bedingungen
+  Folge von \break$f_n \in \diff(Y_n)$ konstruieren, so dass die Bedingungen
   \begin{enumerate}
   \item $\d[''f_n] = \omega|_{Y_n}$ und
   \item $\|f_{n+1} - f_n \|_{Y_{n-1}} \leq 2^{-n}$

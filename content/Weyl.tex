@@ -69,8 +69,11 @@ notwendigen Beweisen zurückspringen.
       & = \epsilon
     \end{align*}
     und damit die Stetigkeit von $T_h$.
-    Weiterhin ist die Abbildung $C(X) \ra \dist(X)', \quad h \mapsto
-    T_h$ sogar injektiv. Dies ist eine direkte Folge des 
+    Weiterhin ist die Abbildung
+    \[
+    C(X) \ra \dist(X)', \quad h \mapsto T_h
+    \]
+    sogar injektiv. Dies ist eine direkte Folge des 
     Fundamentallemmas der Variationsrechnung (vgl. \cite[§10 HS3]{ForAna}).
   \item Nicht alle Distributionen sind von der obigen Form. Ein
     Gegenbeispiel stellt die Diracsche Delta Distribution dar. Für ein
@@ -102,7 +105,8 @@ notwendigen Beweisen zurückspringen.
   \label{lemma:dist-glatt}
   Sei $X \subset \C$ offen, $K \subset X$ kompakt und $I \subset \R$ ein
   offenes Intervall. Sei weiterhin $g: X \times I \ra \C$ glatt und
-  $\Supp(g) \subset K \times I$. Wählen wir nun ein $T \in \dist(X)'$, so ist die Abbildung
+  $\Supp(g) \subset K \times I$. Wählen wir nun ein $T \in \dist(X)'$,
+  so ist die Abbildung 
   \[
   t \mapsto T_z[g(z,t)]
   \]
@@ -138,7 +142,7 @@ notwendigen Beweisen zurückspringen.
 \begin{lemma}
   \label{lemma:dist-int}
   Seien $X,Y \subset \C$ offen, $K \subset X$ bzw. $L \subset Y$
-  kompakt. Sei weiterhin $g: X \times Y \ra \C$ glatt mit $\Supp(g)
+  kompakt. Sei weiterhin \break$g: X \times Y \ra \C$ glatt mit $\Supp(g)
   \subset K \times L$. 
   Dann gilt für beliebige $T \in \dist(X)'$
   \[
@@ -152,7 +156,10 @@ notwendigen Beweisen zurückspringen.
   Nach Lemma \ref{lemma:dist-glatt} ist $T_w[g(w,z)]$ glatt und es
   gilt $\Supp(T_w[g(w,z)]) \subset L$, denn für $z \notin L$ ist
   $g(\cdot, z) = 0$ und damit $T_w[(g(w,z)] = 0$. 
-  Also existiert das Integral $\iint_Y T_w[g(w,z)] \d[x]\d[y]$,
+  Also existiert das Integral
+  \[
+  \iint_Y T_w[g(w,z)] \d[x]\d[y],
+  \]
   insbesondere lässt es sich durch Riemann-Summen approximieren. 
   Dazu wählen wir ein Rechteck $R \subset \C$, so dass $L \subset R$
   und die Seiten von $R$ parallel zu den Koordinatenachsen
@@ -189,7 +196,7 @@ notwendigen Beweisen zurückspringen.
     & = \epsilon.
   \end{align*}
   Also konvergiert $G_n$ gleichmäßig gegen $\iint_R g(\cdot, z)
-  \d[x]\d[y]$. Die gleiche Argumentation kann für beliebiege
+  \d[x]\d[y]$. Die gleiche Argumentation \break kann für beliebiege
   Ableitungen $D^\alpha G_n$ durchgeführt werden und wir erhalten,
   dass
   \[
@@ -242,8 +249,10 @@ notwendigen Beweisen zurückspringen.
 
 \begin{defin}
   Sei $U \subset \C$ offen und $\epsilon > 0$. Dann definieren wir
-  $U^{(\epsilon)} := \{z \in U \mid \bar B_\epsilon(z) \subset U \}$ und
-  für $f \in C(U)$ setzen wir
+  \[
+  U^{(\epsilon)} := \{z \in U \mid \bar B_\epsilon(z) \subset U \}
+  \]
+  und für $f \in C(U)$ setzen wir
   \[
   \sm_\epsilon f : U^{(\epsilon)} \ra \C, \quad \sm_\epsilon f(w) :=
   \iint_U \rho_\epsilon(w- z) f(z) \d[x]\d[y], \qquad z = x + iy.
@@ -344,7 +353,7 @@ notwendigen Beweisen zurückspringen.
   \]
   wohldefiniert. Nach Lemma \ref{lemma:dist-glatt} ist $h_\epsilon \in
   \diff(U^{(\epsilon)})$. 
-  Sei nun $f \in \dist(U)$ mit $\Supp(f) \subset U^{(\epsilon)}$. Wir
+  Wir wählen nun ein $f \in \dist(U)$ mit $\Supp(f) \subset U^{(\epsilon)}$. Wir
   wollen zunächst zeigen, dass $\sm_\epsilon f$ kompakten Träger in
   $U$ hat. Für $w \in U$ mit
   $B_\epsilon(w) \cap U \neq \varnothing$ ist $f|_{B_\epsilon(w) \cap U}
@@ -374,9 +383,9 @@ notwendigen Beweisen zurückspringen.
   gilt. Wir können $f$ auch als Funktion auf $\C$ auffassen, in dem
   wir es durch 0 fortsetzen. Dann liefert uns \cite[Kor. 13.3]{For} die
   Existenz eines $\psi \in \diff(\C)$ mit $\Delta \psi = f$. 
-  Mit anderen Worten ist $\psi$ harmonisch auf $V:= \C \setminus \Supp(f)$. Also
+  Mit anderen Worten ist $\psi$ harmonisch auf \break$V:= \C \setminus \Supp(f)$. Also
   liefert uns Lemma \ref{lemma:glättung-eigenschaften} $\psi|_{V^{(\epsilon)}}
-  = \sm_\epsilon \psi|_{V^{(\epsilon)}}$. Wir setzen $\phi := \psi -
+  = \sm_\epsilon \psi|_{V^{(\epsilon)}}$. Wir setzen \break$\phi := \psi -
   \sm_\epsilon\psi$. Es folgt $\Supp(\phi) \subset V^c = \Supp(f)
   \subset U$, d.h. $\phi$ hat kompakten Träger in $U$ und es gilt
   \[

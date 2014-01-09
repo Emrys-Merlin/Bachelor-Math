@@ -107,7 +107,11 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   erfüllt. 
   Nach Lemma \ref{lemma:ex-log} existiert ein $h \in \hol(Y)$ mit $u =
   \Re(h)$. 
-  Wir setzen nun $f := e^{-h} g \in \hol(Y)$ und behaupten, dass $f: Y \ra
+  Wir setzen nun
+  \[
+  f := e^{-h} g \in \hol(Y)
+  \]
+  und behaupten, dass $f: Y \ra
   B$ biholomorph ist.
   \begin{itemize}
   \item $f(Y) \subset B$: Sei $y \in Y$ beliebig. Dann gilt
@@ -132,7 +136,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \item $f$ ist biholomorph: $f$ nimmt jeden Wert gleichhäufig an, da
     es sich um eine eigentliche Abbildung handelt (vgl. \cite[Satz 4.24]{For}). Weiterhin wird $0$
     genau einmal angenommen. Also ist $f: Y \ra B$ bijektiv und
-    holomorph. Das genügt nach \cite[Kor. 2.5]{For} bereits, um zu zeigen, dass $f$ biholomorph
+    holomorph. Das genügt nach \break\cite[Kor. 2.5]{For} bereits, um zu zeigen, dass $f$ biholomorph
     ist.
 
   \end{itemize}
@@ -183,7 +187,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \left | \frac{1}{z-a} \right |< \frac1d \qquad \forall z \in G.
   \]
   Also sind die $f \in M$ gleichmäßig beschränkt und aus dem Satz von
-  Montel (vgl. \cite[Satz 4.9]{Frei}) erhalten wir die Kompaktheit von $M$.
+  Montel (vgl. \break\cite[Satz 4.9]{Frei}) erhalten wir die Kompaktheit von $M$.
 \end{proof}
 
 \begin{defin}
@@ -331,7 +335,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \phi: B \ra B, \quad \phi(z) := \frac{z-a}{1-\bar a z}.
   \]
   Es folgt $0 \notin \phi(Y)$. Nach Lemma \ref{lemma:ex-log} existiert ein
-  $g \in \hol(Y)$ mit $g^2 = \phi|_Y$. Also ist $g(Y) \subseteq
+  $g \in \hol(Y)$ mit $g^2 = \phi|_Y$. Also ist \break$g(Y) \subseteq
   B$. Wir definieren nun eine weitere Hilfsfunktion
   \[
   \psi(z) := \frac{z-b}{1 - \bar b z}, \qquad b:= g(0).
@@ -415,14 +419,14 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   \omega.
   \]
   Also verschwindet $\int_\alpha \omega$ für jede geschlossene
-  Kurve. Demnach besitzt $\omega$ nach \cite[Satz 10.15]{For} eine Stammfunktion und
+  Kurve. Demnach besitzt $\omega$ nach \break\cite[Satz 10.15]{For} eine Stammfunktion und
   damit verschwindet $Rh_\hol^1(Y)$.
 \end{proof}
 
 
 \begin{thm}[Der Riemannsche Abbildungssatz]
   \label{thm:rmt}
-  Sei $X$ eine Riemannsche Fläche mit $Rh_\hol^1(X) = 0$. Dann ist $X$
+  Sei $X$ eine Riemannsche Fläche mit holomorpher deRham-Gruppe $Rh_\hol^1(X) = 0$. Dann ist $X$
   konform äquivalent
   \begin{enumerate}
   \item zur Riemannschen Zahlenkugel $\P^1$,
@@ -472,10 +476,11 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   0$. Setzen wir nun $r_n^{-1} := \left | \frac{\d[\bar f(a)]}{\d[z]}
   \right |$ und $f_n := r_n \cdot \bar f_n : Y_n \ra B_{r_n}(0)$, so
   haben wir die gewünschte Abbildung gefunden. 
-  Weiterhin gilt $r_n \leq r_{n+1}$ für jedes $n \in \N$, denn $h:
-  f_{n+1} \circ f_n^{-1} : B_{r_n}(0) \ra B_{r_{n+1}}(0)$ erfüllt $h(0)=0$
-  und $h'(0) = 1$, also $1 = |h'(0)| \leq \frac{r_{n+1}}{r_n}$ nach
-  Proposition \ref{prop:kreis}. 
+  Weiterhin gilt $r_n \leq r_{n+1}$ für jedes $n \in \N$, aus dem
+  einfachen Grund, dass $h:
+  f_{n+1} \circ f_n^{-1} : B_{r_n}(0) \ra B_{r_{n+1}}(0)$ die Bedingungen $h(0)=0$
+  und $h'(0) = 1$ erfüllt, also $1 = |h'(0)| \leq \frac{r_{n+1}}{r_n}$ nach
+  Proposition \ref{prop:kreis} gilt. 
   Wir setzen nun
   \[
   R := \lim_{n \ra \infty} r_n \in ]0, \infty]
@@ -514,7 +519,7 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
   Es bleibt also nur noch die Surjektivität zu zeigen. 
   Angenommen $f$ wäre nicht surjektiv. Dann existierte nach Lemma
   \ref{lemma:bihol-kreis} ein $0 < r < R$ und eine holomorphe
-  Abbildung $g: f(X) \ra B_r(0)$ mit $g(0) = 0$ und $g'(0) = 1$. 
+  Abbildung \break$g: f(X) \ra B_r(0)$ mit $g(0) = 0$ und $g'(0) = 1$. 
   Sei nun $n$ so groß gewählt, dass $r_n > r$. Dann hätte die Funktion
   \[
   h:= g \circ f \circ f^{-1}_n : B_{r_n}(0) \ra B_r(0)
@@ -527,8 +532,8 @@ oder $B$, was den Riemannschen Abbildungssatz beweist.
 
 \begin{rem}
   Dank \cite[Kor.16]{For} und \cite[Kor.10.7]{For} wissen wir bereits,
-  dass jede einfach zusammenhängende Riemannsche
-  Fläche eine verschwindende deRham-Gruppe hat und dementsprechend
+  dass die deRham"=Gruppe jeder einfach zusammenhängenden Riemannschen
+  Fläche verschwindet und die Fläche dementsprechend
   konform äquivalent zu $\P^1$, $\C$ oder $B$ ist, andererseits zeigt
   der Riemannsche Abbildungssatz, dass jede Riemannsche Fläche mit
   verschwindender deRham-Gruppe einfach zusammenhängend ist. Also

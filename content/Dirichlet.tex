@@ -45,7 +45,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
 
 \begin{proof}
   Die $\R$-Linearität von $\ast$ ist klar. Die Bijektivität folgt aus
-  der Tatsache, dass $\ast^{-1} = - \ast$ gilt. Sei nun weiterhin
+  der Tatsache, dass $\ast^{-1}$ durch $- \ast$ gegeben ist. Sei nun weiterhin
   $\omega \in \diff^{1,0}(X)$. Auf einer Karte $(z,U)$ nimmt $\omega$
   dann die Form $\omega = f \d[z]$ für ein $f \in \diff(U)$ an. Dann gilt
   aber $\ast \omega = i \bar \omega = i \bar f \d[\bar z] \in
@@ -429,9 +429,9 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
   genügen.
   
   Für $u \in C(Y, \R)$ und $D \in \Reg(Y)$ definieren wir $P_D u: Y
-  \ra \R$ durch $P_D u |_{Y \setminus D} = u_{Y \setminus D}$ und
-  $P_Du|_D$ ist die Lösung des Dirichlet-Problems mit Randwerten
-  $u|_{\partial D}$.
+  \ra \R$  auf $Y \setminus D$ durch $P_D u |_{Y \setminus D} = u|_{Y
+    \setminus D}$ und aud $D$ durch die Lösung des Dirichlet-Problems
+  mit Randwerten $u|_{\partial D}$.
 \end{defin}
 
 \begin{cor}
@@ -447,12 +447,12 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
 
 \begin{proof}
   Die ersten beiden Aussagen ergeben sich aus der Eindeutigkeit
-  harmonischer Funktionen und 3. ist eine Folge des Maximumprinzips.
+  harmonischer \break Funktionen und die dritte ist eine Folge des Maximumprinzips.
 \end{proof}
 
 \begin{cor}
   $u \in C(Y, \R)$ ist genau dann harmonisch, wenn $P_Du = u $ für
-  jedes $D \in \Reg(Y)$ gilt.
+  jedes \break$D \in \Reg(Y)$ gilt.
 \end{cor}
 
 \begin{proof}
@@ -476,7 +476,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
 \end{defin}
 \begin{cor}
   Sei $Y \subset X$ offen und $X$ eine Riemannsche Fläche. Seien
-  weiterhin $u,v \in C(Y, \R)$ subharmonisch und $\lambda \geq
+  weiterhin \break$u,v \in C(Y, \R)$ subharmonisch und $\lambda \geq
   0$. Dann sind $u+v$, $\lambda u$ und $\sup(u,v)$ subharmonisch.
 \end{cor}
 
@@ -572,7 +572,7 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
 
 \begin{proof}
   Sei $a \in Y$ und $D \in \Reg(Y)$ eine Umgebung von $a$. Sei
-  weiterhin $(u_n)_{n \in \N} \subset M$ mit $\lim_{n \ra \infty}
+  weiterhin \break$(u_n)_{n \in \N} \subset M$ mit $\lim_{n \ra \infty}
   u_n(a) = u^\ast(a)$. Aufgrund von 1. können wir ohne Einschränkung davon ausgehen, dass
   $u_0 \leq u_1 \leq u_2 \leq \dots$ ist. Setzen wir $v_n := P_D u_n$, so gelten
   \begin{align}
@@ -581,14 +581,14 @@ Im Weiteren bezeichne $X$ immer ein Riemannsche Fläche.
    & v_0 \leq v_1 \leq v_2 \leq \dots \ . \nonumber
   \end{align}
   Nach dem Harnackschen Prinzip konvergiert $(v_n)_{n \in \N}$ auf $D$
-  gegen eine harmonische Funktion $v: D \ra \R$ und aus
+  gegen eine harmonische \break Funktion $v: D \ra \R$ und aus
   \eqref{eq:v-absch} erhalten wir $v(a) = u^\ast(a)$ und $v \leq
   u^\ast$ auf $D$.
   
   Wir zeigen zunächst, dass $v = u^\ast|_D$ gilt. Sei dazu $x \in
   D$ beliebig und $(w_n)_{n\in \N}\subset M$ mit
   $\lim_{n \ra \infty}w_n(x) = u^\ast(x)$. Aufgrund von 1. und
-  2. können wir $v_n \leq w_n = P_D w_n$ und $w_n
+  2. können wir $v_n \leq w_n = P_D w_n$ und \break$w_n
   \leq w_{n+1}$ annehmen. Also konvergiert $(w_n)_{n \in \N}$ auf $D$
   gleichmäßig gegen $w: D \ra \R$ mit $v \leq w \leq u^\ast$. Damit
   gilt aber $u^\ast(a) = v(a) \leq w(a) \leq u^\ast(a)$ und aus

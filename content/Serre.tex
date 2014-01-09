@@ -94,7 +94,7 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   \cap U_j.
   \]
   Nun ist jede holomorphe 1-Form geschlossen, d.h. $\d[(\omega_j -
-  \omega_i)] = 0$ und wir erhalten $\d[\sigma_i] = \d[\sigma_j]$ auf
+  \omega_i)] = 0$ und wir erhalten \break$\d[\sigma_i] = \d[\sigma_j]$ auf
   $U_i \cap U_j$. Also finden wir ein $ \tau \in \diff^{(2)}(X)$ mit
   $\tau|_{U_i} = \d[\sigma_i]$. Dieses $\tau$ ist der Repräsentant
   von $[\delta \mu]$, also gilt
@@ -149,7 +149,7 @@ Kohomologieklasse darstellen und wir starten direkt mit dessen Definition.
   \iint_{V_k} \d[(f_k\sigma_{i(k)} - f_k \omega_{i(k)} )].
   \]
   Erneut wegen \cite[Satz 10.20]{For} gilt $\iint_{V_k} \d[f_k \sigma_{i(k)}] = 0$ und
-  analog zum Beweis von \cite[Satz 10.21]{For} folgt
+  analog zum Beweis von \break\cite[Satz 10.21]{For} folgt
   \[
   \iint_{V_k} \d[(f_k \omega_{i(k)})] = - 2\pi i
   \res_{a_k}(\omega_{i(k)}).
@@ -237,7 +237,7 @@ erster Schritt ist der nächste Satz.
 
 \begin{proof}
   Wir müssen zeigen, dass es zu jedem $\omega \in H^0(X, \Omega_{-D})$
-  mit $\omega \neq 0$ ein $\xi \in H^1(X, \hol_D)$ gibt, so dass
+  mit $\omega \neq 0$ ein \break$\xi \in H^1(X, \hol_D)$ gibt, so dass
   $\g{\omega}{\xi} \neq 0$ gilt. Wir wählen dazu ein $a \in X$ mit
   $D(a) = 0$ und eine Koordinatenumgebung $(U_0, z)$ mit $z(a) = 0$
   und $D|_{U_0} = 0$. Auf $U_0$ schreiben wir $\omega = f \d[z]$
@@ -329,7 +329,7 @@ erster Schritt ist der nächste Satz.
   gelten müsste. Bezeichnen wir mit $\xi'$ die
   Kohomologieklasse von $\delta \eta$ in $H^1(X, \hol_{D'})$ und mit
   $\xi$ die Kohomologieklasse von $\delta \eta$ in $H^1(X, \hol_D)$,
-  so erhalten wir zunächst, weil $\eta \in C^0(\fu, \hol_D)$ ist, dass
+  so erhalten wir zunächst, weil \break$\eta \in C^0(\fu, \hol_D)$ ist, dass
   $\xi = 0$ gilt. Nach Voraussetzung gälte nun aber
   \[
   \g{\omega}{\xi'} = \iota_{D'}(\omega)(\xi') =
@@ -341,14 +341,17 @@ erster Schritt ist der nächste Satz.
   \g{\omega}{\xi'} = \res(\omega \eta) = 1.
   \]
   Ein Widerspruch. Also muss $\omega \in H^0(X, \Omega_{-D})$
-  gelten. Da dann $i_{D'}^D(\lambda) = \iota_{D'}(\omega) =
-  i_{D'}^D(\iota_D(\omega))$ gelten muss, folgt $\lambda =
+  gelten. Da dann
+  \[
+  i_{D'}^D(\lambda) = \iota_{D'}(\omega) = i_{D'}^D(\iota_D(\omega))
+  \]
+  gelten muss, folgt $\lambda =
   \iota_D(\omega)$ aus der Injektivität von $i_{D'}^D$.
 \end{proof}
 
 \begin{lemma}
   Seien $X$ eine kompakte Riemannsche Fläche und $D,B \in \Div(X)$.
-  Sei $\psi \in H^0(X,\hol_B)$. Dann induziert der
+  Sei \break $\psi \in H^0(X,\hol_B)$. Dann induziert der
   Garbenhomomorphismus
   \[
   \hol_{D-B} \xrightarrow{\psi} \hol_D, \quad f \mapsto \psi f
@@ -394,8 +397,11 @@ erster Schritt ist der nächste Satz.
 
 \begin{lemma}
   \label{lemma:psi-inj}
-  Falls $\psi \in H^0(X, \hol_B)$ mit $\psi \neq 0$ gilt, so ist $\psi:
-  H^1(X, \hol_D)^\ast \ra H^1(X, \hol_{D-B})^\ast$ injektiv.
+  Falls $\psi \in H^0(X, \hol_B)$ mit $\psi \neq 0$ gilt, so ist
+  \[
+  \psi: H^1(X, \hol_D)^\ast \ra H^1(X, \hol_{D-B})^\ast
+  \]
+  injektiv.
 \end{lemma}
 
 \begin{proof}
@@ -414,8 +420,11 @@ erster Schritt ist der nächste Satz.
   kommutiert. Weiterhin ist die Abbildung $\hol_{D+A} \ra \hol_D$ ein
   Isomorphismus, wobei die Umkehrung einfach durch Multiplikation mit
   $\psi^{-1}$ gegeben ist. Nun ist die Inklusion von $\hol_{D-B} \ra
-  \hol_{D+A}$ injektiv und deshalb nach \cite[Satz 16.8]{For} $H^1(X, \hol_{D-B}) \ra
-  H^1(X, \hol_{D+A})$ ein Epimorphismus. Also ist auch
+  \hol_{D+A}$ injektiv und deshalb nach \cite[Satz 16.8]{For}
+  \[
+  H^1(X, \hol_{D-B}) \ra H^1(X, \hol_{D+A})
+  \]
+  ein Epimorphismus. Also ist auch
   \[
   H^1(X,\hol_{D-B}) \xrightarrow{\psi} H^1(X, \hol_D)
   \]
@@ -431,7 +440,7 @@ erster Schritt ist der nächste Satz.
 
 \begin{proof}
   Aufgrund von Satz \ref{thm:iota-inj} benötigen wir nur noch die
-  Surjektivität von $\iota_D$. Sei $\lambda \in H^1(X, \hol_D)^\ast$
+  Surjektivität von $\iota_D$. Sei \break$\lambda \in H^1(X, \hol_D)^\ast$
   mit $\lambda \neq 0$ und $P \in \Div(X)$ mit $\deg P = 1$. Weiterhin
   setzen wir $D_n := D - n P$ für beliebige $n \in \N$. Als nächstes
   bezeichnen wir mit $\Lambda \subset H^1(X, \hol_{D_n})^\ast$ den
@@ -467,7 +476,7 @@ erster Schritt ist der nächste Satz.
   \Lambda \cap \im(\iota_{D_n}) \neq 0
   \]
   sein. Also existiert ein $\psi \in H^0(X, \hol_{nP})$ mit
-  $\psi \neq 0$ und $\omega \in H^0(X, \Omega_{-D_n})$ mit $\psi
+  $\psi \neq 0$ und ein $\omega \in H^0(X, \Omega_{-D_n})$ mit $\psi
   \lambda = \iota_{D_n}(\omega)$. Setzen wir $A := (\psi)$, so liegt
   $\frac{1}{\psi}$ in $H^0(X, \hol_A)$. Zu guter Letzt erhalten wir aus
   $D' := D_n - A$, dass
