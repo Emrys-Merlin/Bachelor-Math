@@ -1,0 +1,391 @@
+\input{header}
+
+\title{Uniformisierung kompakter Riemannscher Flächen}
+\subtitle{Bachelor-Seminar}
+\author{Tim Adler}
+
+\begin{document}
+
+\maketitle
+
+Als erste müssen Begriffe geklärt werden. Was ist eine Riemannsche
+Fläche? Warum sind sie interessant?
+
+In Funktionentheorie betrachtet man die komplexe Ebene $\C$ und
+holomorphe bzw. meromorphe Funktionen auf ihr. Das Konzept soll
+verallgemeinert werden. Wir wollen gekrümmte Flächen betrachten und
+Funktionentheorie auf ihnen machen.
+
+\begin{defin}[Riemannsche Fläche]
+  \label{def:rf}
+  Eine \emph{Riemannsche Fläche} $X$ ist eine 2-dimensionale
+  zusammenhängende, glatte Mannigfaltigkeit, deren
+  Kartenwechselabbildungen aufgefasst als Abbildungen von $\C$ nach
+  $\C$ holomorph sind.
+\end{defin}
+
+Zeichne das Bild eines Torus mit Kartenabbildung.
+
+Wir wollen, dass unsere Räume $X$ lokal wie die Ebene $\C$ aussehen,
+global können sie jedoch sehr verschieden sein, was sich z.B. auf die
+Existenz holomorpher und meromorpher Funktionen auswirkt.
+
+Neue Struktur wurde definier $\Ra$ Klassifikation? 
+
+\emph{Ziel der Arbeit:} Klassifiziere zumindest alle \emph{kompakten}
+Riemannschen Flächen. Dazu muss noch kurz gesagt werden, was die
+strukturerhaltenden Abbildungen sind:
+
+\begin{defin}
+  Seien $X,Y$ Riemannsche Flächen und $f: X \ra Y$ eine Abbildung. $f$
+  heißt \init{holomorph}, falls für jede Karte $(U,z)$ von $X$ und
+  jede Karte $(V, w)$ von $Y$ mit $f(U) \subset W$ die Abbildung
+  \[
+  w \circ f \circ z^{-1} : z(U) \subset \C \ra w(V) \subset \C
+  \]
+  holomorph im Sinne der Funktionentheorie 1 ist. $f$ heißt
+  \init{biholomorph}, falls $f$ bijektiv und sowohl $f$ als auch $f^{-1}$
+  holomorph sind. Zwei Riemannsche Flächen $X$ und $Y$ heißen \init{konform
+  äquivalent}, falls es eine biholomorphe Abbildung zwischen ihnen gibt.
+\end{defin}
+
+Wir wollen also alle Riemannschen Flächen bis auf konforme Äquivalenz
+klassifizieren. Dieses Resultat lässt sich relativ einfach
+formulieren, allerdings brauchen wir noch einen Einschub über
+kompakte, orientierbare topologische Flächen. Diese sind letztendlich
+Riemannsche Flächen, wenn man die komplexe Struktur vergisst.
+
+Für diese ist das Geschlecht definiert:
+
+\begin{defin}
+  Das Geschlecht einer kompakten, orientierbaren Fläche ist die Anzahl
+  ihrer Löcher.
+\end{defin}
+
+Wie man sich leicht vorstellen kann, sind zwei topolgische Flächen
+genau dann äquivalent, d.h. homöomorph, wenn sie das gleiche
+Geschlecht haben. Denke an Tasse und Torus.
+
+Deshalb ist es kaum verwunderlich, dass das Geschlecht auch bei unserem
+Uniformisierungssatz eine wichtige Rolle spielt. 
+
+Ein weiteres wichtiges Hilfsmittel sind Gruppenwirkungen auf
+Riemannschen Flächen. Wir können jeder Fläche $X$ die Gruppe
+\[
+\Aut(X) = \{ f: X \ra X \mid f, f^{-1} \text{ holomorph}\}
+\]
+zuordnen. Sie wirkt klarerweise auf $X$ und es zeigt sich, dass
+Quotientenräume aus
+diskretoperierenden Untergruppen ohne Fixpunkte wieder Riemannsche
+Flächen erzeugen!
+
+\begin{thm}
+  Sei $X$ eine kompakte Riemannsche Fläche mit Geschlecht $g$. Dann gilt:
+  \begin{itemize}
+  \item $g = 0 \quad \Ra \quad X \cong \P^1 = \C \cup \{\infty\}$
+  \item $g = 1 \quad \Ra \quad X \cong \quot{\C}{\Gamma}$ mit $\Gamma
+    = \Z\gamma_1 + \Z \gamma_2$, $\gamma_i$ linear unabhängig über $\R$
+  \item $g \geq 2 \quad \Ra \quad X \cong \quot{\h}{G}$ und $G \leq
+    \Aut(\h)$ geeignet.
+  \end{itemize}
+\end{thm}
+
+Was ist die Herangehensweise an diesen Satz? Auffälligkeit: $\C, \h$
+und $\P^1$ sind einfach zusammenhängend (haben also keine Löcher).
+
+Können wir jeder kompakten Riemannschen Fläche eine andere nicht
+notwendigerweise kompkate Riemannsche Fläche
+ohne Löcher zuordnen? Antwort: Ja! und die Theorie heißt
+Überlagerungstheorie.
+
+\begin{thm}
+  Sei $X$ eine kompakte Riemannsche Fläche, dann existiert eine
+  einfachzusammenhängende Riemannsche Fläche $\tilde X$ und eine
+  diskret- und fixpunktfreioperierende Untergruppe $G \leq \Aut(\tilde
+  X)$, so dass
+  \[
+  X \cong \quot{\tilde X}{G}
+  \]
+  gilt. Außerdem ist $G \cong \pi_1(X)$.
+\end{thm}
+
+Bild für Fundamentalgruppe malen.
+
+Dieser Satz ist schon alles andere als trivial, aber wir müssen ihn
+für diesen Vortrag hinnehmen.
+
+Beweisidee: Wir charakterisieren einfachzusammenhängende Riemannsche
+Flächen und deren Automorphismengruppen. Dann haben wir alle kompakten
+verstanden.
+
+In der Funktionentheorie 1 wird der (kleine) Riemannsche
+Abbildungssatz bewiesen er besagt, dass jedes echte einfach zsh. Gebiet in $\C$
+konform äquivalent zum Einheitskreis und damit zu $\h$ ist. Wir
+verallgemeinern dieses Resultat auf Riemannsche Flächen. Dort lautet
+es:
+
+\begin{thm}
+  Sei $X$ eine Riemannsche Fläche $Y \subset X$ ein
+  einfachzusammenhängendes Gebiet. Dann ist $Y$ konform äquivalent zu
+  $\P^1, \C$ oder $\h$.
+\end{thm}
+
+Der Großteil der Arbeit beschäftigt sich mit diesem
+Resultat. Letztendlich gibt es viele Parallelen zum Beweis wie in der
+Funktionentheorie 1, aber es müssen eben erstmal viele der Sätze der
+Funktionentheorie auf Riemannsche Flächen ausgeweitet werden.
+
+
+\begin{tikzpicture}
+  \node (uni) {Uni};
+  \node (ül) [above of=uni]{Überlagerung};
+  \node (rmt) [above left of=ül]{RMT};
+  \node (auto) [right of=rmt]{Auto};
+  \node (weier) [above of=rmt]{Weierstraß};
+  \node (runge) [left of =weier]{Runge};
+  \node (diric) [right of=weier]{Dirchlet};
+  \node (roch) [above right of=uni]{RiRo};
+  \draw[->] (weier) to (rmt);
+  \draw[->] (runge) to (rmt);
+  \draw[->] (diric) to (rmt);
+  \draw[->] (rmt) to (ül);
+  \draw[->] (auto) to (ül);
+  \draw[->] (ül) to (uni);
+  \draw[->] (roch) to (uni);
+\end{tikzpicture}
+
+Für große Teile dies RMT ist wichtig, dass Funktionentheorie auf
+\emph{nicht-}kompakten Riemannschen Flächen quasi genau so
+funktioniert wie in $\C$. Dazu müssen wir aber erstmal genügend viele
+holomorphe Funktionen konstruieren können. Dazu nutzen wir die enge
+Verwandtschaft zwischen harmonischen und holomorphen Funktionen aus.
+
+Den Rest der Zeit wollen wir uns nun mit den Automorphismengruppen von
+$\C, \h$ und $\P^1$ auseinandersetzen. Wir erinnern uns an die
+Funktionentheorie 1:
+
+\begin{thm}
+  \begin{itemize}
+  \item $\Aut(\C) = \{z \mapsto az +b \mid a,b \in \C, a \neq 0 \}$
+  \item $\Aut(\P^1) = \PSL(2,\C)$
+  \item $\Aut(\h) = \PSL(2, \R)$
+  \end{itemize}
+\end{thm}
+
+$\Aut(\C)$ berechnet sich über den Satz von
+Casorati-Weierstraß. $\Aut(\P^1)$ lässt sich auf $\Aut(\C)$
+zurückführen. $\Aut(\h)$ ist etwas involvierter und wird am
+einfachsten mit $\Aut(B)$ geführt.
+
+Wir versuchen die Automorphismengruppen besser zu verstehen und
+beginnen mit $\P^1$.
+
+\begin{prop}
+  Jedes Element $M \in \Aut(\P^1)$ besitzt einen Fixpunkt.
+\end{prop}
+
+\begin{proof}
+  Sei
+  \[
+  M =
+  \begin{pmatrix}
+    a & b\\
+    c & d
+  \end{pmatrix}.
+  \]
+  Dann muss ein Fixpunkt $M\langle z \rangle = z$ die Gleichung
+  \[
+  cz^2 + (d-a)z - b = 0
+  \]
+  erfüllen. 
+  Falls $c \neq 0$ gilt, so erhalten wir als Fixpunkte
+  \[
+  z_{1,2} = \frac{a}{2c} \pm \sqrt{\frac{a^2}{4 c^2} - \frac{d-b}{c}}.
+  \]
+  Falls $c = 0$ gilt, so muss $a \neq d$ gelten, ansonsten wäre
+  $\det M = 0$ und wir erhalten als Fixpunkt
+  \[
+  z = \frac{b}{d-a}.
+  \]
+\end{proof}
+
+Das bedeutet $\P^1$ kann nur sich selbst überlagern und nichts
+anderes!
+
+Nun wollen wir $\Aut(\C)$ etwas besser verstehen. Dazu wenden wir uns
+kurz dem $\R^n$ und Gittern zu:
+
+\begin{defin}
+  \label{defin:gitter}
+  Sei $V$ ein $n-$dimensionaler, reeller Vektorraum. Eine additive
+  Untergruppe $\Gamma \subset V$ heißt \init{Gitter}, falls $n$ linear
+  unabhängige $\gamma_1, \dots, \gamma_n \in V$ existieren, so dass
+  \[
+  \Gamma = \Z \gamma_1 + \dots + \Z \gamma_2
+  \]
+  gilt.
+\end{defin}
+
+
+\begin{lemma}
+  \label{lemma:gitter}
+  Sei $V$ ein reeller Vektorraum und $\Gamma \subset V$ eine additive
+  Untergruppe. Dann ist $\Gamma$ genau dann ein Gitter, wenn
+  \begin{enumerate}
+  \item $\Gamma$ diskret ist und
+  \item $\Gamma$ nicht in einem echten Untervektorraum von $V$
+    enthalten ist.
+  \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+  Falls $\Gamma$ ein Gitter ist, ist die Aussage aus der Definition
+  klar. Erfülle also $\Gamma$ die beiden Bedingungen. Wir gehen nun
+  per Induktion über $n = \dim V$ vor. Für $n = 0$ ist die Aussage klar. Gelte also die
+  Aussage für ein $n \in \N_0$. Da $\Gamma \subset V$ mit $\dim V =
+  n+1$ in keinem echten
+  Untervektorraum von $V$ enthalten ist, existieren linear unabhängige $x_1, \dots,
+  x_{n+1} \in \Gamma$. Sei $V_1 := \langle x_1, \dots, x_n \rangle$
+  und $\Gamma_1 := \Gamma \cap V_1$. Nun ist $\Gamma_1$ wieder diskret
+  und in keinem echten Untervektorraum von $V_1$ enthalten. Weiterhin
+  ist $\dim V_1 = n$, also können wir die Induktionsvoraussetzung
+  verwenden und erhalten linear unabhängige $\gamma_1, \dots, \gamma_n
+  \in \Gamma_1 \subset \Gamma$, so dass $\Gamma_1 = \Z \gamma_1 +
+  \dots + \Z \gamma_n$ gilt. Nun bilden die $\gamma_i$ bereits eine
+  Basis von $V_1$ und fügen wir $x_{n+1}$ hinzu, erhalten wir sogar eine Basis
+  von $V$, das bedeutet aber, dass wir zu jedem $x \in \Gamma \subset
+  V$, eindeutig bestimmte $c_i(x), c(x) \in \R$ finden, so dass
+  \[
+  x = c_1(x) \gamma_1 + \dots + c_n(x) \gamma_n + c(x) x_{n+1}
+  \]
+  gilt. Wir betrachten nun
+  \[
+  P := \{ \lambda_1 \gamma_1 + \dots + \lambda_n \gamma_n + \lambda
+  x_{n+1} \mid \lambda_i, \lambda \in [0,1] \}.
+  \]
+  Dieses $P$ ist kompakt und da $\Gamma$ diskret ist, folgt dass $P
+  \cap \Gamma$ endlich ist. Weiterhin ist $( \Gamma \cap P) \setminus
+  V_1$ nicht leer, da $x_{n+1}$ enthalten ist. Damit existiert ein
+  $\gamma_{n+1} \in ( \Gamma \cap P) \setminus V_1$ mit
+  \[
+  c(\gamma_{n+1}) = \min \{ c(x) \mid x \in ( \Gamma \cap P ) \setminus
+  V_1 \} \in ]0, 1].
+  \]
+  Wir behaupten nun, dass $\Gamma = \Gamma_1 + \Z \gamma_{n+1}$ ist. Sei
+  dazu $x \in \Gamma$. Dann existieren $n_j \in \Z$, so dass
+  \[
+  x' := x - \sum_{j=1}^{n+1} n_j \gamma_j = \sum_{j=1}^n \lambda_j
+  \gamma_j + \lambda x_{n+1}
+  \]
+  mit $0 \leq \lambda_j < 1$ und $0 \leq \lambda < c(\gamma_{n+1})$
+  gilt. Da $x' \in \Gamma \cap P$ liegt und $c(\gamma_{n+1})$ minimal
+  von 0 verschieden gewählt wurde, muss $\lambda = 0$ sein. Also liegt
+  $x' \in \Gamma \cap V_1 = \Gamma_1$. Damit sind die $\lambda_i$
+  ganzzahlig und die einzig verbleibende Möglichkeit ist $\lambda_i =
+  0$. Dann ist aber $x'$ bereits 0 und wir erhalten 
+  \[
+  x = \sum_{j=1}^n n_j \gamma_j \in \Z \gamma_1 + \dots + \Z \gamma_n.
+  \]
+\end{proof}
+
+\begin{prop}
+  Sei $\Gamma \subset \Aut(\C)$ eine fixpunktfrei- und
+  diskretoperrierende Untergruppe dann ist $\Gamma$ eine der folgenden
+  Gruppen:
+  \begin{itemize}
+  \item $\Gamma = \{\id\}$
+  \item $\Gamma = \{z \mapsto z + n\gamma \mid n \in \Z\}$ mit $\gamma \in \C^\ast$.
+  \item $\Gamma = \{z \mapsto z + n\gamma_1 + m \gamma_2 \mid m,n \in
+    \Z\}$ mit $\gamma_1, \gamma_2 \in \C$ linear unabhängig über $\R$.
+  \end{itemize}
+\end{prop}
+
+\begin{proof}
+  Sei $f \in \Gamma$. Dann existieren $a \in \C^\ast$ und $b \in
+  \C$, so dass $f(z) = az +b$ für beliebige $z \in \C$
+  gilt. Angenommen $a \neq 1$. Dann ist
+  \[
+  z = \frac{b}{1-a}
+  \]
+  ein Fixpunkt. Also ist $f(z) = z + b$ für alle $z \in \C$. Wir
+  definieren
+  \[
+  \tilde \Gamma = \{f(0) \mid f \in \Gamma\} \leq \C.
+  \]
+  Dann ist
+  \[
+  \Gamma = \{z \mapsto z + \gamma \mid \gamma \in \tilde \Gamma \}
+  \]
+  Da $\Gamma$ diskret operiert ist $\tilde \Gamma$ eine diskrete
+  Untergruppe. Die haben wir aber charakterisiert und damit ist
+  $\tilde \Gamma$ entweder ein 0, 1 oder 2 dimensionales Gitter. Das
+  entspricht aber gerade den obigen drei Fällen.
+\end{proof}
+
+Nun sollten wir $\Aut(\h)$ als nächste verstehen. Das ist jedoch eine
+sehr schwierige Aufgabe und füllt ganze Bücher. Wir begnügen uns an
+dieser Stelle mit der Aussage, dass eine fixpunktfrei- und
+diskretoperierende Untergruppe die abelsch ist, automatisch zyklisch
+sein muss.
+
+\begin{thm}
+  \label{thm:abelsch-zyklisch}
+  Sei $G \leq \PSL(2, \R)$ eine Fuchssche Gruppe. Dann ist $G$ genau
+  dann abelsch, wenn $G$ zyklisch ist.
+\end{thm}
+
+Jetzt können wir versuchen den Uniformisierungssatz zu beweisen.
+
+\begin{proof}
+  Der erste Fall ergibt sich direkt aus dem Satz von Riemann-Roch
+  \cite[Kor. 16.13]{For} und müssen wir leider als gegeben annehmen.
+
+  Sei
+  nun also $g \geq 1$ und bezeichne $\tilde X$ die Universelle
+  Überlagerung von $X$. Dann ist $\tilde X$ einfach zusammenhängend
+  und aus dem Riemannschen Abbildungssatz \ref{thm:rmt} folgt, dass
+  $\tilde X$ konform äquivalent zu $\P^1$, $\C$ oder $B$ ist. Da wir
+  wissen, dass $B$ konform äquivalent zu $\h$ ist, können wir in der
+  Betrachtung genau so gut $\h$ verwenden. Nun wissen wir nach Lemma
+  \ref{lemma:deck-pc}, dass jeder Automorphismus von $\P^1$ einen
+  Fixpunkt besitzt, d.h. es gibt keine fixpunktfrei-operierende
+  Untergruppe von $\Aut(\P^1)$. Also überlagert $\P^1$ nur sich
+  selbst und es müsste $X \cong \tilde X \cong \P^1$ gelten. Dies ist
+  ein Widerspruch zu $g \neq 0$. Dementsprechend ist die Universelle Überlagerung
+  von $X$ entweder $\C$ oder $\h$.
+
+  Sei nun $g \geq 2$. Angenommen $\tilde X \cong \C$. In Lemma
+  \ref{lemma:deck-pc} wurden alle diskreten, fixpunkfreioperierenden
+  Untergruppen von $\Aut(\C)$ bestimmt. Die zugehörigen Riemannschen
+  Flächen sind dann $X \cong \C$, $X \cong \C^\times$ oder $X \cong
+  \quot{\C}{\Gamma}$ für ein Gitter $\Gamma \subset \C$. Nun sind aber
+  die ersten beiden Möglichkeiten nicht kompakt und die Dritte hat
+  Geschlecht $g =1$. Ein Widerspruch. Also muss die Universelle
+  Überlagerung von $X$ konform äquivalent zu $\h$ sein und damit ist
+  $X$ konform äquivalent zu $\quot{\h}{G}$ für eine Fuchssche Gruppe $G
+  \leq \Aut(\h)$.
+
+  Nun fehlt noch der Fall $g = 1$. Angenommen $\tilde X \cong \h$. Wir
+  wissen aus Satz \ref{thm:geschlecht-1-z}, dass
+  \begin{align}
+    \label{eq:g-z}
+  \Z \oplus \Z \cong G := \Deck(\tilde X \setminus X) \leq \Aut(\h)
+  \end{align}
+  gelten müsste. Insbesondere müssten wir eine abelsche Fuchssche
+  Gruppe finden, allerdings wissen wir nach Satz
+  \ref{thm:abelsch-zyklisch}, dass diese alle zyklisch sind. Damit ist
+  $G$ also isomorph zu $\Z$ oder zu $\quot{\Z}{n\Z}$ für ein $n \in
+  \N$. Dies ist ein Widerspruch dazu, dass Gleichung \eqref{eq:g-z}
+  gelten soll. Also ist die Universelle Überlagrung von $X$ konform
+  äquivalent zu $\C$. Die Gruppe der Decktransformation ist also eine
+  diskrete abelsche Untergruppe von $\C$ und muss isomorph zu $\Z
+  \oplus \Z$ sein. In Lemma \ref{lemma:deck-pc} sind die möglichen diskreten
+  Untergruppen von $\Aut(\C)$ charakterisiert und die einzige Möglichkeit, die
+  isomorph zu $\Z \oplus \Z$ ist, ist die des Gitters. Also ist die
+  $\Deck(\tilde X \setminus X)$ isomorph zu einem Gitter $\Gamma
+  \subset \C$. Insgesamt erhalten wir, dass $X$ konform äquvialent zu
+  $\quot{\C}{\Gamma}$ ist.
+\end{proof}
+
+
+\end{document}
