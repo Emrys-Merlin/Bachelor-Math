@@ -40,7 +40,6 @@
      "scrartcl10"
      "scrartcl"
      "ngerman"
-     "fleqn"
      "twoside"
      "headsepline")))
 

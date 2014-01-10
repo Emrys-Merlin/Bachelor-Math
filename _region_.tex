@@ -1,5 +1,29 @@
 \message{ !name(../Bachelor.tex)}\input{header}
 
+% Schmutztitel
+\extratitle{
+  ~
+  \begin{center}
+    \huge \textbf{Fakultät für Mathematik \& Informatik}
+  \end{center}
+  ~
+  \begin{center}
+    \Large \textbf{Ruprecht-Karls-Universität Heidelberg}
+  \end{center}
+  \vfill
+  \begin{center}
+    \Large \textbf{Bachelor-Arbeit}\\[1ex]
+    im Studiengang Mathematik\\
+    vorgelegt von \\[1ex]
+    \Large \textbf{Tim Adler}\\[1ex]
+    geboren in Sinsheim
+  \end{center}
+  ~
+  \begin{center}
+    \huge \textbf{2013}
+  \end{center}
+}
+
 \titlehead{Universität Heidelberg \\
   Fakultät für Mathematik \& Informatik\\
   Im Neuenheimer Feld 288\\
@@ -9,374 +33,331 @@
 \author{Tim Adler}
 \date{Abgabe-Datum}
 \publishers{Betreut durch AR Dr. Hendrik Kasten}
+\uppertitleback{Tim Adler\\Im Neuenheimer Feld 680\\69120
+  Heidelberg\\tim \{at\} emrys-merlin.de}
+\lowertitleback{
+\textbf{Uniformisierung kompakter Riemannscher Fläche}\\
+Bachelor-Arbeit im Fach Mathematik\\[\baselineskip]
+Ruprecht-Karls-Universität Heidelberg\\
+Fakultät für Mathematik \& Informatik\\
+Mathematisches Institut\\[\baselineskip]
+\begin{tabular}[htbp]{l l}
+Betreut durch & AR Dr. Hendrik Kasten\\
+Beginn der Arbeit & 15. Oktober 2013 \\
+Datum der Abgabe & \today\\
+\end{tabular}
+\\[\baselineskip]
+Diese Arbeit wurde mit Hilfe von {\LaTeX} und
+  {\KOMAScript} gesetzt.}
 
 
 \begin{document}
 
-\message{ !name(content/Auto.tex) !offset(-16) }
+\message{ !name(content/Weierstrass.tex) !offset(-56) }
 
-\section{Automorphismengruppen \& Gitter}
-\label{sec:auto}
+\section{Der Weierstraßsche Produktsatz}
+\label{sec:Weierstrass}
 
-Im letzten Kapitel haben wir alle einfach zusammenhängenden
-Riemannschen Flächen und damit alle möglichen universellen
-Überlagerungen kompakter Riemannscher Flächen bestimmt. In diesem
-Kapitel wollen wir nun die Automorphismengruppen von $\C, \P^1$ und $B$
-bzw. $\h$ bestimmen, denn die Überlagerungstheorie liefert uns, dass
-sich unsere kompakten Riemannschen Flächen jeweils aus $X \in \{ \C,
-\P^1, \h\}$ modulo der Wirkung einer Untergruppe der
-Automorphismengruppe ergeben. Das bedeutet, wenn wir die
-Untergruppen der Automorphismengruppen verstanden haben, haben wir
-auch die verschiedenen kompakten Riemannschen Flächen verstanden.
+Wie im letzten Kapitel handelt es sich auch hier um den Versuch ein
+wohlbekanntes, funktionentheoretisches Resultat auf Riemannsche
+Flächen auszuweiten. Diesmal handelt es sich um den
+Weierstraßschen Produktsatz, der aussagt, dass es zu einer beliebigen
+diskreten Teilmenge $D \subset \C$ eine holomorphe Funktion gibt, die
+genau diese Menge als Nullstellenmenge aufweist. Es kann sogar die
+Ordnung der Nullstelle an jedem Punkt vorgegeben werden.
 
-Als ersten Schritt berechnen wir dazu in diesem Kapitel die
-Automorphismengruppen. Danach wenden wir uns der Charakterisierung von
-Gittern zu, da wir diese einmal benötigen, um den Torus zu beschreiben
-und diese andererseits zeigen, dass alle diskreten, abelschen
-Untergruppen von $\R$ gerade Gitter und damit zyklisch sind. Die
-Untergruppen der Automorphismengruppen werden dann in den
-nächsten zwei Abschnitten bestimmt.
-
-\subsection{Automorphismengruppen}
+Wir werden nun zeigen, dass sich dieses Resultat direkt auf (nicht
+kompakte) Riemannsche Flächen überträgt und es sogar noch verschärfen,
+denn es kann sogar eine Polstellenmenge mit zugehörigen Ordnungen
+angegeben werden und man findet immer eine meromorphe Funktion, die
+diese Vorgaben erfüllt. Die Sprache in der dieses Resultat auf
+Riemannschen Flächen formuliert wird, ist die der Divisoren.
 
 \begin{defin}
-  Sei $X$ eine Riemannsche Fläche. Unter der
-  \init{Automorphismengruppe} von $X$ verstehen wir
-  \[
-  \Aut(X) := \{ f: X \ra X \mid f,f^{-1} \text{ holomorph} \}.
-  \]
-  Diese ist mit der Verkettung von Abbildungen tatsächlich eine Gruppe.
+  \label{def:divisor-lsg}
+  Sei $X$ eine Riemannsche Fläche und $D \in \Div(X)$. Dann heißt $f
+  \in \mer(X)$ eine \emph{Lösung} von $D$, falls $(f) = D$ ist.
+  
+  Setzen wir $X_D := \{x \in X: D(x) \geq 0 \}$, so heißt $f \in
+  \diff(X_D)$ \emph{schwache Lösung} von $D$, falls für alle $a \in X$
+  eine Koordinatenumgebung $(U,z)$ mit $z(a) = 0$ und ein $\psi \in
+  \diff(U)$ mit $\psi(a) \neq 0$ existieren, so dass $f = \psi z^k$
+  auf $ U \cap X_D$ gilt, wobei $k := D(a)$.
 \end{defin}
 
 \begin{lemma}
-  \label{lemma:kreis-halbebene}
-  Die Abbildung
-  \[
-  \phi: \h \ra B, \quad \phi(z) := \frac{z-i}{z+i}
-  \]
-  ist biholomorph.
+  Sei $X$ eine Riemannsche Fläche und $D \in \Div(X)$. Seien weiterhin
+  $f,g \in \diff(X_D)$ schwache Lösungen von $D$. Dann existiert ein
+  $h \in \diff(X)$ mit $h(x) \neq 0$ für alle $x \in X$ und $ f
+  = h\cdot g$.
 \end{lemma}
 
 \begin{proof}
-  Zunächst ist $\phi$ wohldefiniert, denn für $z \in \h$ erhalten wir,
-  dass $\Im(z) > 0$ gilt und daher folgt
-  \begin{align*}
-    |\phi(z)|^2 & = \frac{z-i}{z+i} \cdot \frac{\bar z + i}{\bar z -
-      i} \\
-    & = \frac{|z|^2 - \bar z i + i z + 1}{|z|^2 +i \bar z - i z + 1}
-    \\
-    & = \frac{|z|^2 - 2 \Re(iz) + 1}{|z|^2 - 2 \Re(iz) + 1} \\
-    & = \frac{|z|^2 +1 - 2 \Im(z)}{|z|^2 + 1 + 2\Im(z)} \\
-    & < 1.
-  \end{align*}
-  Betrachten wir nun
+  Sie $a \in X$ und $(U_a, z_a)$ eine Karte um $a$ mit $z(a) = 0$, so
+  dass $f|_{U_a} = \psi_a z^{k_a}$ und $g|_{U_a} = \phi_a
+  z^{k_a}$ auf $X_D \cap U_a$ gilt, wobei $k_a := D(a)$. Weiterhin sei
+  $U_a$ so klein gewählt, dass $\psi_a(x) \neq 0 \neq \phi_a(x)$ für
+  alle $x \in U_a$ gilt. Dann ist klarerweise $(U_a)_{a \in X}$ eine
+  Überdeckung von $X$. Nun definieren wir auf $U_a$ die Funktion
   \[
-  \psi: B \ra \h, \quad \psi(z) := \frac{ -iz - i}{z-1},
+  h_a := \frac{\psi_a}{\phi_a} \in \diff(U)
   \]
-  so ist diese Abbildung auch wohldefiniert, denn für $z \in \C$ mit
-  $|z| < 1$ erhalten wir
-  \begin{align*}
-    \Im(\psi(z)) & = \frac{1}{2i} ( \psi(z) - \bar \psi(z)) \\
-    & = \frac{1}{2i} \left ( \frac{-iz - i}{z -1 } - \frac{ i \bar z +
-        i}{\bar z - 1} \right ) \\
-    & = \frac{1}{2i} \cdot \frac{2i ( 1- |z|^2 )}{|z -1|^2} \\
-    & = \frac{1- |z|^2}{|z-1|^2} \\
-    & > 0.
-  \end{align*}
-  Weiterhin zeigt eine einfache Rechnung, dass $\psi \circ \phi =
-  \id_\h$ und $\phi \circ \psi = \id_B$ gelten.
+  und es gilt $f|_{U_a} = h_a g|_{U_a}$. Setzen wir $S := \{ a \in X
+  \mid D(a) \neq 0\}$, so ist $S$ diskret und setzen wir weiterhin
+  $\tilde X = X \setminus S$, so ist $\tilde X$ offen und es gilt auf $U_a \cap U_b \cap
+  \tilde X$
+  \[
+  h_a|_{U_a \cap U_b \cap \tilde X} = \frac{f|_{U_a \cap U_b \cap
+      \tilde X}}{g|_{U_a \cap U_b \cap \tilde X}} = h_b|_{U_a \cap U_b
+    \cap \tilde X}.
+  \]
+  Also finden wir ein $h \in \diff(\tilde X)$ mit $h|_{U_a \cap \tilde
+    X} = h_a|_{\tilde X}$. Nun ist aber $h_a$ glatt fortsetzbar auf
+  ganz $U_a$ und wir erhalten, dass $h$ glatt auf ganz $X$ fortgesetzt
+  werden kann. Weiterhin folgt aus $h_a(x) \neq 0$ für alle $x \in
+  U_a$ und $a \in X$, dass auch $h(x) \neq 0$ für alle $x \in X$. Und
+  als letztes erhalten wir auch $f = h \cdot g$.
 \end{proof}
 
-\begin{rem}
-  Anhand des obigen Resultats erkennen wir, dass wir in der Formulierung
-  des Riemannschen Abbildungssatz \ref{thm:rmt} $B$ genau so gut durch
-  $\h$ hätten ersetzen können. Für den Beweis des Abbildungssatz war
-  jedoch $B$ die geeignetere Form. Im folgenden werden wir jedoch
-  hauptsächlich auf $\h$ zurückgreifen, da, wie wir gleich sehen
-  werden, die Automorphismengruppe von $\h$ eine schönere Form besitzt.
-\end{rem}
+\begin{lemma}
+  \label{lemma:lsg-produkt}
+  Sei $X$ eine Riemannsche Fläche. Sei weiterhin $f_i$ 
+  eine schwache Lösung des Divisors $D_i$, wobei $i \in \{1,2\}$ gilt. Dann ist
+  $f_1 \cdot f_2$ eine schwache Lösung von $D_1 + D_2$.
+\end{lemma}
+
+\begin{proof}
+  Auf $X_{D_1} \cap X_{D_2}$ ist klar, dass $f_1 \cdot f_2$ die
+  gewünschten Eigenschaften hat. Allerdings ist falls ein $a \in
+  X$ mit $D(a) := D_1(a) +
+  D_2(a) \geq 0$, aber $D_1(a) < 0$ oder $D_2(a) < 0$ existiert, entweder $f_1(a)$ oder
+  $f_2(a)$ nicht definiert. Nehmen wir ohne Einschränkung an, dass
+  $D_1(a) < 0$ gilt, so können wir eine Karte $(U,z)$ um $a$ finden,
+  so dass $\psi, \phi \in \diff(U)$ existieren, die der Definition
+  \ref{def:divisor-lsg} genügen. Dann gilt zunächst auf $U \cap
+  X_{D_1} \cap X_{D_2}$ die Gleichung $f_1 \cdot f_2 = \psi \cdot \phi
+  z^{D_1(a) + D_2(a)}$. Da nun aber $D_1(a) + D_2(a) \geq 0$ gilt,
+  lässt sich die rechte Seite der Gleichung glatt auf ganz $U$
+  fortsetzen. Also besitzt $f_1 \cdot f_2$ an dieser Stelle eine
+  hebbare Singularität und wir können das Produkt einfach fortsetzen.
+\end{proof}
 
 \begin{defin}
-  Sei
+  Sei $X$ eine Riemannsche Fläche und $c: [0,1] \ra X$ eine glatte,
+  nicht geschlossene Kurve. Dann bezeichnet $\partial c$ den Divisor,
+  der durch
   \[
-  M =
-  \begin{pmatrix}
-    a & b \\
-    c & d
-  \end{pmatrix}
+  \partial c(x) :=
+  \begin{cases}
+    1 & \text{für } x = c(1) \\
+    -1 & \text{für } x = c(0) \\
+    0 & \text{sonst}
+  \end{cases}
   \]
-  Für $z \in \P^1$ definieren wir
-  \[
-  M \langle z \rangle = \frac{az+b}{cz+d}.
-  \]
-  Diese Notation ist auch für $z = \infty$ durch einfache
-  Grenzwertbetrachtungen wohldefiniert. Weiterhin erkennen wir, dass
-  für alle $\lambda \in \C^\times$ die Gleichung
-  \[
-  \lambda M \langle z \rangle = M \langle z \rangle
-  \]
-  gilt, deshalb werden wir uns meist auf $M \in \SL(2, \C)$ oder sogar auf
-  \[
-  M \in \PSL(2, \C) = \quot{\SL(2, \C)}{\{\pm \id\}}
-  \]
-  enschränken.
+  gegeben ist.
 \end{defin}
 
-\begin{rem}
-  Im Folgenden werden wir häufig Repräsentanten von Elementen aus
-  $\PSL(2, \C)$ mit Elementen aus $\PSL(2, \C)$ identifizieren. Dies
-  sollte jedoch kaum für Verwirrung sorgen.
-\end{rem}
+\begin{lemma}
+  \label{lemma:schw-lsg-kurve}
+  Sei $X$ eine Riemannsche Fläche und $c: [0,1] \ra X$ eine glatte,
+  nicht geschlossene
+  Kurve. Sei weiterhin $U \subset X$ eine relativ kompakte, offene
+  Umgebung von $c([0,1])$, so existiert eine schwache Lösung $f$ von
+  $\partial c$ mit $f|_{X \setminus U} = 1$.
+\end{lemma}
+
+\begin{proof}
+  Wir gehen zunächst davon aus, dass $U$ eine Kartenumgebung ist und
+  bezeichnen mit $z$ die zugehöriger Kartenabbildung. Nun können wir
+  ohne Einschränkung annehmen, dass $z(U) = B_1(0)$ gilt. Weiterhin
+  identifizieren wir $U$ mit $B_1(0)$. Sei $a := c(0)$ und $b :=
+  c(1)$. Dann existiert ein $0 < r < 1$, so dass $a, b \in B_r(0)$
+  gilt. Wir definieren
+  \[
+  \phi: \P^1 \ra \P^1, \quad z \mapsto \frac{z-b}{z-a}.
+  \]
+  Dann ist $\phi(a) = \infty$ und $\phi(b) = 0$. Wenn wir also $\phi$
+  auf $\P^1 \setminus \bar B_r(0)$ einschränken, so können wir $\phi$
+  als Abbildung nach $\C^\times$ auffassen. Weiterhin ist $\P^1
+  \setminus \bar B_r(0)$ einfach zusammenhängend. Dann können wir aber
+  nach \cite[Beispiel 4.18]{For} die Abbildung $\phi$ entlang der
+  Überlagerung $\exp: \C \ra \C^\times$ liften. Mit anderen Worten ist
+  die Abbildung
+  \begin{align}
+    \label{eq:log}
+  \P^1\setminus \bar B_r(0) \ra \C, z \mapsto \log \left (
+    \frac{z-b}{z-a} \right )
+  \end{align}
+  wohldefiniert und holomorph. Nun können wir die Abbildung aus
+  \eqref{eq:log} noch weiter auf $B_1(0) \setminus \bar B_r(0)$
+  einschränken.
+
+  Als nächsten Schritt benötigen wir nun noch ein $\psi \in
+  \diff(B_1(0))$, das $\psi|_{\bar B_r(0)} = 1$ und $\psi|_{B_1(0)
+    \setminus \bar B_{\tilde r}(0)} = 0$ erfüllt, wobei $r <
+  \tilde r <1$
+  gewählt wurde. Eine stetige Funktion mit diesen Eigenschaften
+  existiert auf jeden Fall. Glätten wir diese stetige Funktion, so
+  erhalten wir unser $\psi$. Nun können wir ein $f_0 \in \diff(U
+  \setminus \{a\})$ durch
+  \[
+  f_0(z) :=
+  \begin{cases}
+    \exp \left (\psi \log \middle ( \frac{z-b}{z-a} \middle ) \right
+    ) & r < |z| <1 \\
+    \frac{z-b}{z-a} & |z| \leq r
+  \end{cases}
+  \]
+  definieren. Dank $\psi$ wird $f_0$ zu einer glatten Abbildung, die
+  weiterhin $f_0|_{\partial U} = 1$ erfüllt. Also können wir
+  $f_0$ auf ganz $X \setminus \{a\}$ durch 1 fortsetzen. Nach
+  Konstruktion ist $f_0$ aber auch eine schwache Lösung von
+  $\partial c$, so dass wir die Behauptung in diesem Fall gezeigt
+  haben.
+
+  Betrachten wir nun den Fall, dass $U$ keine Koordinatenumgebung
+  ist. Dann finden wir eine Unterteilung des Intervalls $0= t_0 <
+  t_1 \dots < t_n = 1$ und Karten $(U_j,z_j)$, wobei $j = 1, \dots,
+  n$, so dass $c([t_{j-1}, t_j]) \subset U_j \subset U$ und
+  $z_j(U_j) = B_1(0)$ gelten. Diese Überdeckung existiert aufgrund
+  der Kompaktheit von $c([0,1])$. Es folgt nun aber, dass wir den
+  ersten Teil des Beweises jeweils auf $\partial c|_{[t_{j-1},t_j]}$
+  anwenden können, wobei wir ohne Einschränkung $c|_{[t_{j-1},t_j]}$
+  als nicht geschlossen annehmen können, und erhalten somit schwache Lösungen $f_j$ mit $f_j|_{X
+    \setminus U} = 1$.
+  Setzen wir $f = f_1 \dots f_n$, so ist $f$ nach Lemma
+  \ref{lemma:lsg-produkt} eine schwache Lösung zu
+  $\sum_{j=1}^n \partial c|_{[t_{j-1},t_j]} = \partial c$ und
+  erfüllt $f|_{X \setminus U} = 1$.
+\end{proof}
+
+\begin{lemma}
+  \label{lemma:schwache-Lösung-Divisor}
+  Jeder Divisor $D$ auf einer nicht kompakten Riemannschen Fläche $X$ hat eine
+  schwache Lösung.
+\end{lemma}
+
+\begin{proof}
+  Wir wählen $K_1, K_2, \dots$ kompakte Runge-Teilmengen von $X$ mit
+  \begin{enumerate}
+  \item $K_j \subset \mathring{K}_{j+1}$ $\forall j \geq 1$ und
+  \item $\bigcup_{j \in \N} K_j = X$.
+  \end{enumerate}
+  Dies ist nach Korollar \ref{cor:ausschöpfung-kompakt} möglich.
+  Sei $a_0 \in X \setminus K_j$ und $A_0 \in \Div(X)$
+  mit $A_0(a_0) = 1$ und $A_0(x) = 0$, falls $x \neq a_0$ ist. Wir
+  behaupten, dass dann eine schwache Lösung $\phi$ von $A_0$ mit $\phi |_{K_j}
+  = 1$ existiert. 
+  $K_j$ ist eine Runge-Teilmenge, d.h. $K_j = \runge(K_j)$. Also
+  liegt $a_0$ in einer nicht relativ kompakten
+  Zusammenhangskomponente $U \subset X \setminus K_j$.
+  Nun existiert ein $a_0 \neq a_1 \in U \setminus K_{j+1}$\footnote{Ansonsten wäre
+  $K_{j+1}$ nicht kompakt.} und eine Kurve $c_0: I \ra U$ mit
+  $c_0(0)=a_1$ und $c_0(1) = a_0$. 
+  Nach Lemma \ref{lemma:schw-lsg-kurve} existiert eine schwache Lösung
+  $\phi_0$ des Divisors $\partial c_0$ mit $\phi_0|_{K_j} = 1$. 
+  Induktiv sind wir nun in der Lage eine Folge von Punkten $a_\nu \in
+  X \setminus K_{j+ \nu}$, $\nu \in \N$, und Kurven in $X \setminus
+  K_{j+\nu}$ von $a_{\nu+1}$ nach $a_\nu$ zu konstruieren. Analog zum
+  obigen Verfahren erhalten wir dann wieder schwache Lösungen
+  $\phi_\nu$ des Divisors $\partial c_\nu$ mit $\phi_\nu |_{K_{j+\nu}}
+  = 1$. 
+  Nach Konstruktion gilt $\partial c_\nu = A_\nu - A_{\nu+1}$, wobei
+  $A_\nu$ nur in $a_\nu$ nicht verschwindet und an dieser Stelle 1
+  ergibt.
+  Weiterhin folgt aus Lemma \ref{lemma:lsg-produkt}, dass $\phi_0 \cdot \phi_1 \dots \phi_n$ eine
+  schwache Lösung von $A_0 - A_{n+1}$ ist.
+  Lassen wir $n$ gegen unendlich gehen, so erhalten wir $\phi :=
+  \prod_{\nu = 0}^\infty \phi_\nu$. Dieses Produkt konvergiert, da
+  auf jeder kompakten Teilmenge nur endlich viele Faktoren von 1
+  verschieden sind. Dies folgt aus Lemma
+  \ref{lemma:kompakt-in-ausschöpfung}, denn zu jeder kompakten Menge
+  $K$ existiert ein $n \in \N$, so dass $K \subset K_n$. Dann gilt
+  aber $\phi_j |_K = 1$ für alle $j > n$.
+  Damit ist $\phi$ eine schwache Lösung von $A_0$.
+  
+  Sei nun $D$ ein beliebiger Divisor auf $X$. Für $\nu \in \N$
+  setzen wir
+  \[
+  D_\nu(x) := \begin{cases} D(x) & x \in K_{\nu+1}\setminus K_\nu\\ 0
+    & \text{sonst}\end{cases}, 
+  \]
+  wobei $K_0$ als leere Menge definiert wird. Wir erhalten dann $D =
+  \sum_{\nu = 0}^\infty D_\nu$. 
+  Nun ist $D_\nu$ nur an endlich vielen Stellen von 0 verschieden und
+  kann deshalb als endliche Summe von Divisoren der Form $A_\nu$
+  dargestellt werden. Für diese wurde oben eine schwache Lösung
+  konstruiert und das (endliche) Produkt dieser Lösungen liefert uns
+  eine Lösung $\psi_\nu$ von $D_\nu$ und wir erhalten zusätzlich $\psi_\nu
+  |_{K_\nu} = 1$. 
+  Setzen wir $\psi := \prod_{\nu=0}^\infty \psi_\nu$, so
+  konvergiert das Produkt nach den gleichen Argumenten, wie oben und
+  ist eine schwache Lösung von $D$.
+\end{proof}
 
 \begin{thm}
-  \label{thm:aut}
-  Es gelten:
-  \begin{enumerate}
-  \item $\Aut(\C) = \{ f: \C \ra \C, \ z \mapsto az + b \mid a \in
-    \C^\times, \ b \in \C \}$
-  \item $\Aut(\P^1) = \{ f: \P^1 \ra \P^1,\ f(z) = M\langle z \rangle \mid
-    M \in \PSL(2, \C) \}$
-  \item $\Aut(B) = \{ f: B \ra B,\ z \mapsto \frac{\alpha z +
-      \beta}{\bar \beta z + \bar \alpha} \mid \alpha, \beta \in \C, \
-    |\alpha |- |\beta| = 1\}$
-  \item $\Aut(\h) = \{f: \h \ra \h,\ f(z) = M\langle z \rangle 
-    \mid M \in \PSL(2, \R) \}$
-  \end{enumerate}
+  \label{thm:Lösung-Divisor}
+  Sei $X$ eine nicht kompakte Riemannsche Fläche und $D \in
+  \Div(X)$. Dann existiert ein $f \in \mer(X)^\times$ mit $(f) = D$.
 \end{thm}
 
 \begin{proof}
-  Wir zeigen jeweils nur $\subseteq$, denn die andere Inklusion ergibt
-  sich sofort, da alle Umkehrfunktionen explizit ausgedrückt werden
-  können.
-
-  Sei also $f \in \Aut(\C)$, dann ist $f$ eine ganze Funktion, also
-  existieren $a_k \in \C$, so dass
+  Wir können $X$ mit relativ kompakten, einfach zusammenhängenden
+  Koordinatenumgebungen $(U_i)_{i \in I}$ überdecken. Auf diesen
+  finden wir $f_i \in \mer(U_i)^\times$, so dass $(f_i) =
+  D|_{U_i}$ ist. Dies ist möglich, da $D$ auf dem relativ kompakten $U_i$
+  fast überall verschwindet und $f_i$ deshalb in lokalen Koordinaten
+  einfach als rationale Funktion darstellbar ist. 
+  Mit dieser Konstruktion haben $f_i$ und $f_j$ die selben Pol- und
+  Nullstellen auf $U_i \cap U_j$, also ist
   \[
-  f(z) = \sum_{k=0}^\infty a_k z^k
+  \frac{f_i}{f_j} \in \hol(U_i \cap U_j)^\times \qquad \forall i,j \in I.
   \]
-  gilt. Wir behaupten nun, dass $a_k = 0$ für fast alle $k \in \N_0$
-  gelten muss. Angenommen dies wäre nicht der Fall, dann hätte die
-  Funktion $g: \C^\times \ra \C$ mit $g(z) := f(\frac{1}{z})$ eine
-  wesentliche Singularität bei $0$. Dann wäre aber der Satz von
-  Casorati-Weierstraß (vgl. \cite[Satz 6.11]{Kas}) anwendbar und wir
-  erhielten zu jedem $n \in \N$
-  ein $z_n \in \dot B_{\frac{1}{n}}(0)$, so dass $|g(z_n) - f(0)| <
-  \frac{1}{n}$ gelten müsste. Setzen wir $w_n := \frac{1}{z_n}$, so konvergierte
-  $(w_n)_{n \in \N}$ gegen $\infty$ und $f(w_n) \ra f(0)$ für $n \ra
-  \infty$. Setzen wir nun weiterhin $\tilde z_n := f(w_n)$ und $\tilde
-  z = f(0)$, so erhielten wir also $\lim_{n \ra \infty} \tilde z_n =
-  \tilde z$, allerdings gälte $|f^{-1}(\tilde z_n)| = |w_n| \ra \infty
-  \neq 0 = |f^{-1}(\tilde z)|$. Dies ist ein Widerspruch zur
-  Stetigkeit von $f^{-1}$. Also ist $f$ ein Polynom. Dies hat aber
-  direkt zur Folge, dass der Grad von $f$ eins sein muss, da wir
-  ansonsten nach dem Haupsatz der Algebra mehrere Nullstellen
-  hätten. Damit haben wir bereits die gewünschte Form gefunden.
-
-  Als nächstes wenden wir uns $\Aut(\P^1)$ zu. Sei dazu $f \in
-  \Aut(\P^1)$. Wir setzen $a:= f(\infty)$ und $b :=
-  f^{-1}(\infty)$. Zunächst betrachten wir den fall $a \neq
-  \infty$. Dann gilt auch $b \neq \infty$ und wir können
-  \[
-  \psi: \P^1 \ra \P^1, \quad \psi(z) = \frac{bz + c}{z - a}
-  \]
-  definieren, wobei $c \in \C$ mit $c \neq a$ gewählt wurde. Weiterhin gilt
-  \[
-  \psi^{-1}: \P^1 \ra \P^1, \quad \psi^{-1}(z) = \frac{az +c}{z -b}
-  \]
-  und damit ist $\psi \in \Aut(\P^1)$. Setzen wir nun $g := f \circ
-  \psi$, so erhalten wir
+  Nach Lemma \ref{lemma:schwache-Lösung-Divisor} existiert eine
+  schwache Lösung $\psi$ von $D$ und auf den $U_i$ finden wir $\psi_i
+  \in \diff(U_i)$, so dass $\psi = \psi_i \cdot f_i$ und $\psi_i(x)
+  \neq 0$ für alle $x \in U_i$ gelten. 
+  Da $U_i$ einfach zusammenhängend ist und $\psi_i$ nicht
+  verschwindet, existiert ein $\phi_i \in \diff(U_i)$ mit $\psi_i =
+  e^{\phi_i}$. Somit erhalten wir
   \begin{align*}
-    g(\infty) = f(\psi(\infty)) = f(b) = \infty.
+  \psi & = e^{\phi_i} f_i \qquad \text{auf } U_i \\
+  \intertext{und}
+  e^{\phi_j - \phi_i} & = \frac{f_i}{f_j} \in \hol(U_i \cap U_j)^\times.
   \end{align*}
-  Also ist $g|_\C \in \Aut(\C)$ und wie wir oben gesehen haben,
-  existieren $d,e \in \C$ mit $d \neq 0$, so dass $g|_\C(z) = dz +
-  e$. Nun gilt $|dz + e| \ra \infty$ für $z \ra \infty$. Also können
-  wir die Notation $g(z) = dz+e$ auf ganz $\P^1$ fortsetzen. Insgesamt
-  erhalten wir
-  \begin{align*}
-    f(z) & = g(\psi^{-1}(z)) \\
-    & = d\psi^{-1}(z) + e \\
-    & = d \cdot \frac{az + c}{z - b} + e \\
-    & = \frac{(da + e) z + (dc - eb)}{z - b} \\
-    & =
-    \begin{pmatrix}
-      (da + e) & (dc - eb) \\
-      1 & -b
-    \end{pmatrix}\langle z \rangle \\
-    & =: M\langle z \rangle.
-  \end{align*}
-  Weiterhin ist $\det M = d( a-c) \neq 0$. Wählen wir als $\gamma$
-  eine Wurzel von $\det M$ und definieren $\tilde M := \gamma^{-1} M$,
-  so gilt $f(z) = M\langle z \rangle = \tilde M \langle z \rangle$ und
-  $\det \tilde M = \gamma^{-2} \det M = 1$. Also $\tilde M \in
-  \PSL(2, \C)$.
-
-  Für den Fall, dass $a = \infty = b$, so brauchen wir die
-  Hilfsfunktion $\psi$ nicht und wir können direkt unser Wissen über
-  $\Aut(\C)$ anwenden. Eine analoge Rechnung liefert dann das
-  Resultat.
-
-  Sei nun $f \in \Aut(B)$ und $w := f^{-1}(0)$. Dann definieren wir
+  Damit ist $\phi_{ij} := \phi_i - \phi_j \in \hol(U_i \cap U_j)$, da
+  die $\exp$-Funktion lokal biholomorph ist. Aus der Definition folgt
+  auch direkt $\phi_{ij} + \phi_{jk} = \phi_{ik}$ auf $U_i \cap U_j
+  \cap U_k$ und damit ist $(\phi_{ij}) \in Z^1(\fu, \hol)$. 
+  Nun gilt nach Korollar \ref{cor:h-hol} $H^1(X, \hol) = 0$, also existieren $g_i \in \hol(U_i)$ mit
+  $\phi_{ij} = \phi_j - \phi_i = g_j - g_i$ auf $U_i \cap U_j$.
+  Eingesetzt folgt
   \[
-  f_w : B \ra B, \quad f_w(z) = \frac{z -w}{\bar w z - 1}.
+  e^{g_j} f_j = e^{g_i} f_i \qquad \text{auf } U_i \cap U_j,
   \]
-  Es zeigt sich, dass $f_w$ selbstinvers ist und damit in $\Aut(B)$
-  liegt. Setzen wir $g := f\circ f_w$, so erhalten wir
-  \begin{align*}
-    g(0) = f( f_w(0)) = f(w) = 0.
-  \end{align*}
-  Damit ist das Lemma von Schwarz (vgl. \cite[Satz 5.10]{Kas})
-  anwendbar und wir erhalten sowohl für $g$, als auch für $g^{-1}$
-  \begin{align*}
-    |g(z)| & \leq |z| && \text{ und } \\
-    |g^{-1}(z)| & \leq |z|.
-  \end{align*}
-  Es ergibt sich, dass
-  \begin{align*}
-    |w| = |g^{-1}(g(w))| \leq |g(w)| \leq |w|
-  \end{align*}
-  gilt. Also ist $|g(w)| = |w|$ und als weitere Folgerung aus dem Lemma
-  von Schwarz erhalten wir die Existenz eines $c \in \C$ mit $|c| =
-  1$, so dass
-  \[
-  g(z) = cz
-  \]
-  gilt. Es folgt, dass
-  \begin{align*}
-    f(z) = c f_w(z) = \frac{i dz - i dw}{ - \overline{idw} z +
-      \overline{i d}}
-  \end{align*}
-  gilt, wobei $d^2 = c$ gilt. Setzen wir $\tilde \alpha = i d$ und $\tilde
-  \beta = - i d w$, so folgt $|\tilde \alpha| = 1$ und $|\tilde \beta|
-  = |w| < 1$. Wir definieren
-  \[
-  \lambda = |\tilde \alpha| - |\tilde \beta|
-  \]
-  und setzen $\alpha := \lambda^{-1} \tilde \alpha$ und $\beta :=
-  \lambda^{-1} \tilde \beta$. Es gilt $|\alpha| - |\beta| = 1$ und
-  \[
-  f(z) = \frac{\alpha z - \beta}{\bar \beta z  + \bar \alpha},
-  \]
-  was die Behauptung zeigt.
-
-  Als letztes interessieren wir uns nun für $\Aut(\h)$. Diesen Fall
-  können wir aber auf $\Aut(B)$ zurückführen, denn Lemma
-  \ref{lemma:kreis-halbebene} gibt uns eine Bijektion
-  \[
-  \Aut(\h) \ra \Aut(B), \quad f \mapsto \phi \circ f \circ \phi^{-1}.
-  \]
-  Sei also $f \in \Aut(\h)$, dann existieren $\alpha, \beta \in \C$
-  mit $|\alpha| - |\beta| = 1$, so dass
-  \[
-  \phi( f( \phi^{-1}(z))) = \frac{\alpha z + \beta}{\bar \beta z +
-    \bar \alpha}
-  \]
-  Es gilt also
-  \begin{align*}
-    f(z) & = \phi^{-1} \left ( \frac{\alpha \phi(z) + \beta}{\bar
-        \beta \phi(z) + \bar \alpha} \right ) \\
-    & = \frac{-i \alpha \phi(z) - i \beta - i \bar \beta \phi(z) - i
-      \bar \alpha}{\alpha \phi(z) + \beta - \bar \beta \phi(z) - \bar
-      \alpha} \\
-    & = \frac{-i (\alpha + \bar \beta)(z-i) -i (\beta + \bar
-      \alpha)(z+i)}{(\alpha - \bar \beta)(z -i) + (\beta - \bar
-      \alpha)(z+i)} \\
-    & = \frac{-i ( \alpha + \bar \beta + \beta + \bar \alpha) z + (
-      \bar \alpha - \bar \beta + \beta + \bar \alpha)}{(\alpha - \bar
-      \beta + \beta - \bar \alpha)z + i (- \alpha + \bar \beta + \beta
-      - \bar \alpha)} \\
-    & = \frac{ - ( \Re(\alpha) + \Re(\beta)) z +  (\Im(\beta) -
-      \Im(\alpha))}{(\Im(\alpha) + \Im(\beta))z + ( \Re(\beta) -
-      \Re(\alpha))} \\
-    & =: \tilde M\langle z \rangle.
-  \end{align*}
-  Betrachten wir nun $\det \tilde M$, so erhalten wir $\det M = |\alpha|^2 -
-  |\beta|^2 = |\alpha| + |\beta| > 0$. Wählen wir nun eine (reelle)
-  Wurze $\gamma$ von $\det \tilde M$ und setzen $M := \gamma^{-1}
-  \tilde M$, so gelten $\det M = 1$ und $M \langle z \rangle = \tilde M
-  \langle z \rangle$. Außerdem hat $M$ nur reelle Einträge, liegt also
-  in $\PSL(2, \R)$.
+  also finden wir ein $f \in \mer(X)^\times$ mit $f = e^{f_j} f_j$ auf
+  $U_j$. Damit ist $f$ die gesuchte Lösung von $D$.
 \end{proof}
 
-\subsection{Gitter}
-\label{sec:gitter}
-
-Als nächstes wenden wir uns Gittern zu und möchten deshalb zunächst an
-die Definition \ref{defin:gitter} auf Seite \pageref{defin:gitter}
-errinnern. Wir benötigen Gitter, um die
-diskreten Untergruppen von $\C$ zu beschreiben. Später wird sich dann
-auch zeigen, dass wir diese diskreten Untergruppen benötigen, um die
-Riemannschen Flächen zu beschreiben, deren Universelle Überlagerung
-$\C$ ist.
-
-
-\begin{lemma}
-  \label{lemma:gitter}
-  Sei $\Gamma \subset v$ eine additive Untergruppe. $\Gamma$ ist ein
-  Gitter genau dann, wenn
-  \begin{enumerate}
-  \item $\Gamma$ diskret ist und
-  \item $\Gamma$ nicht in einem echten Untervektorraum von $V$
-    enthalten ist.
-  \end{enumerate}
-\end{lemma}
+\begin{cor}
+  \label{cor:nicht-verschwindende-1-form}
+  Sei $X$ eine nicht kompakte Riemannsche Fläche. 
+  Dann existiert ein nicht-verschwindendes $\omega \in \Omega(X)$.
+\end{cor}
 
 \begin{proof}
-  Falls $\Gamma$ ein Gitter ist, ist die Aussage aus der Definition
-  klar. Erfülle also $\Gamma$ die beiden Bedingungen. Wir gehen nun
-  per Induktion vor. Für $n = 0$ ist die Aussage klar. Gelte also die
-  Aussage für ein $n \in \N_0$. Da $\Gamma \subset V$ mit $\dim V =
-  n+1$ in keinem echten
-  Untervektorraum von $V$ enthalten ist, existieren linear unabhängige $x_1, \dots,
-  x_{n+1} \in \Gamma$. Sei $V_1 := \langle x_1, \dots, x_n \rangle$
-  und $\Gamma_1 := \Gamma \cap V_1$. Nun ist $\Gamma_1$ wieder diskret
-  und in keinem echten Untervektorraum von $V_1$ enthalten. Weiterhin
-  ist $\dim V_1 = n$, also können wir die Induktionsvoraussetzung
-  verwenden und erhalten linear unabhängige $\gamma_1, \dots, \gamma_n
-  \in \Gamma_1 \subset \Gamma$, so dass $\Gamma_1 = \Z \gamma_1 +
-  \dots + \Z \gamma_n$ gilt. Nun bilden die $\gamma_i$ bereits eine
-  Basis von $V_1$ und fügen wir $x_{n+1}$ erhalten wir sogar eine Basis
-  von $V$, das bedeutet aber, dass wir zu jedem $x \in \Gamma \subset
-  V$, eindeutig bestimmte $c_i(x), c(x) \in \R$ finden, so dass
-  \[
-  x = c_1(x) \gamma_1 + \dots + c_n(x) \gamma_n + c(x) x_{n+1}
-  \]
-  gilt. Wir betrachten nun
-  \[
-  P := \{ \lambda_1 \gamma_1 + \dots + \lambda_n \gamma_n + \lambda
-  x_{n+1} \mid \lambda_i, \lambda \in [0,1] \}.
-  \]
-  Dieses $P$ ist kompakt und da $\Gamma$ diskret ist, folgt dass $P
-  \cap \Gamma$ endlich ist. Weiterhin ist $( \Gamma \cap P) \setminus
-  V_1$ nicht leer, da $x_{n+1}$ enthalten ist. Damit existiert ein
-  $\gamma_{n+1} \in ( \Gamma \cap P) \setminus V_1$ mit
-  \[
-  c(\gamma_{n+1}) = \min \{ c(x) \mid x \in ( \Gamma \cap P ) \setminus
-  V_1 \} \in ]0, 1].
-  \]
-  Wir behaupten nun, dass $\Gamma = \Gamma_1 + \Z \gamma_{n+1}$. Sei
-  dazu $x \in \Gamma$. Dann existieren $n_j \in \Z$, so dass
-  \[
-  x' := x - \sum_{j=1}^{n+1} n_j \gamma_j = \sum_{j=1}^n \lambda_j
-  \gamma_j + \lambda x_{n+1}
-  \]
-  mit $0 \leq \lambda_j < 1$ und $0 \leq \lambda < c(\gamma_{n+1})$
-  gilt. Da $x' \in \Gamma \cap P$ liegt und $c(\gamma_{n+1})$ minimal
-  von 0 verschieden gewählt wurde, muss $\lambda = 0$ sein. Also liegt
-  $x' \in \Gamma \cap V_1 = \Gamma_1$. Damit sind die $\lambda_i$
-  ganzzahlig und die einzig verbleibende Möglichkeit ist $\lambda_i =
-  0$. Dann ist aber $x'$ bereits 0 und wir erhalten 
-  \[
-  x = \sum_{j=1}^n n_j \gamma_j \in \Z \gamma_1 + \dots + \Z \gamma_n.
-  \]
+  Sei $g$ eine nicht-konstante meromorphe Funktion auf $X$ und $f \in
+  \mer(X)^\ast$ mit $(f) = -(\d[g])$. Diese existiert nach Satz
+  \ref{thm:Lösung-Divisor}. Dann ist $\omega := f \d[g]$ die gesuchte 1-Form.
 \end{proof}
+
 
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "../Bachelor"
 %%% End: 
 
-\message{ !name(../Bachelor.tex) !offset(-337) }
+\message{ !name(../Bachelor.tex) !offset(-266) }
 
 \end{document}
 

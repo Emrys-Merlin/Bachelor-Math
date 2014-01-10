@@ -2,8 +2,12 @@
  (lambda ()
     (LaTeX-add-labels
      "sec:Dirichlet"
+     "thm:harm-form"
+     "eq:harm1"
+     "eq:harm2"
      "prop:harm-realteil-hol"
      "prop:max-prinzip-harm"
+     "defin:rwp"
      "prop:dirichlet-eindeutig"
      "thm:poisson"
      "eq:residuensatz"
@@ -15,8 +19,11 @@
      "cor:pd-rechenregeln"
      "lemma:perron"
      "eq:v-absch"
+     "def:perron"
      "eq:dirichlet-rand"
+     "lemma:zsh-komp"
      "lemma:regulär-trennen"
      "thm:dirichlet"
-     "thm:reg-rand")))
+     "thm:reg-rand"
+     "rem:reg-rand")))
 
