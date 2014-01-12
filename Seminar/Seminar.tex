@@ -46,7 +46,11 @@ strukturerhaltenden Abbildungen sind:
   holomorph im Sinne der Funktionentheorie 1 ist. $f$ heißt
   \init{biholomorph}, falls $f$ bijektiv und sowohl $f$ als auch $f^{-1}$
   holomorph sind. Zwei Riemannsche Flächen $X$ und $Y$ heißen \init{konform
-  äquivalent}, falls es eine biholomorphe Abbildung zwischen ihnen gibt.
+    äquivalent}, falls es eine biholomorphe Abbildung zwischen ihnen
+  gibt.
+  \[
+  \Aut(X) = \{ f: X \ra X \mid f, f^{-1} \text{ holomorph}\}
+  \]
 \end{defin}
 
 Wir wollen also alle Riemannschen Flächen bis auf konforme Äquivalenz
@@ -68,16 +72,6 @@ Geschlecht haben. Denke an Tasse und Torus.
 
 Deshalb ist es kaum verwunderlich, dass das Geschlecht auch bei unserem
 Uniformisierungssatz eine wichtige Rolle spielt. 
-
-Ein weiteres wichtiges Hilfsmittel sind Gruppenwirkungen auf
-Riemannschen Flächen. Wir können jeder Fläche $X$ die Gruppe
-\[
-\Aut(X) = \{ f: X \ra X \mid f, f^{-1} \text{ holomorph}\}
-\]
-zuordnen. Sie wirkt klarerweise auf $X$ und es zeigt sich, dass
-Quotientenräume aus
-diskretoperierenden Untergruppen ohne Fixpunkte wieder Riemannsche
-Flächen erzeugen!
 
 \begin{thm}
   Sei $X$ eine kompakte Riemannsche Fläche mit Geschlecht $g$. Dann gilt:
@@ -180,34 +174,23 @@ einfachsten mit $\Aut(B)$ geführt.
 Wir versuchen die Automorphismengruppen besser zu verstehen und
 beginnen mit $\P^1$.
 
-\begin{prop}
-  Jedes Element $M \in \Aut(\P^1)$ besitzt einen Fixpunkt.
-\end{prop}
+\begin{lemma}
+  \begin{enumerate}
+  \item   Jedes Element $M \in \Aut(\P^1)$ besitzt einen Fixpunkt.
+  \item   Sei $\Gamma \subset \Aut(\C)$ eine fixpunktfrei- und
+    diskretoperrierende Untergruppe dann ist $\Gamma$ eine der folgenden
+    Gruppen:
+    \begin{itemize}
+    \item $\Gamma = \{\id\}$
+    \item $\Gamma = \{z \mapsto z + n\gamma \mid n \in \Z\}$ mit $\gamma \in \C^\ast$.
+    \item $\Gamma = \{z \mapsto z + n\gamma_1 + m \gamma_2 \mid m,n \in
+      \Z\}$ mit $\gamma_1, \gamma_2 \in \C$ linear unabhängig über $\R$.
+    \end{itemize} 
+  \item Sei $G \leq \PSL(2, \R)$ eine Fuchssche Gruppe. Dann ist $G$ genau
+    dann abelsch, wenn $G$ zyklisch ist.
+  \end{enumerate}
+\end{lemma}
 
-\begin{proof}
-  Sei
-  \[
-  M =
-  \begin{pmatrix}
-    a & b\\
-    c & d
-  \end{pmatrix}.
-  \]
-  Dann muss ein Fixpunkt $M\langle z \rangle = z$ die Gleichung
-  \[
-  cz^2 + (d-a)z - b = 0
-  \]
-  erfüllen. 
-  Falls $c \neq 0$ gilt, so erhalten wir als Fixpunkte
-  \[
-  z_{1,2} = \frac{a}{2c} \pm \sqrt{\frac{a^2}{4 c^2} - \frac{d-b}{c}}.
-  \]
-  Falls $c = 0$ gilt, so muss $a \neq d$ gelten, ansonsten wäre
-  $\det M = 0$ und wir erhalten als Fixpunkt
-  \[
-  z = \frac{b}{d-a}.
-  \]
-\end{proof}
 
 Das bedeutet $\P^1$ kann nur sich selbst überlagern und nichts
 anderes!
@@ -215,124 +198,11 @@ anderes!
 Nun wollen wir $\Aut(\C)$ etwas besser verstehen. Dazu wenden wir uns
 kurz dem $\R^n$ und Gittern zu:
 
-\begin{defin}
-  \label{defin:gitter}
-  Sei $V$ ein $n-$dimensionaler, reeller Vektorraum. Eine additive
-  Untergruppe $\Gamma \subset V$ heißt \init{Gitter}, falls $n$ linear
-  unabhängige $\gamma_1, \dots, \gamma_n \in V$ existieren, so dass
-  \[
-  \Gamma = \Z \gamma_1 + \dots + \Z \gamma_2
-  \]
-  gilt.
-\end{defin}
-
-
-\begin{lemma}
-  \label{lemma:gitter}
-  Sei $V$ ein reeller Vektorraum und $\Gamma \subset V$ eine additive
-  Untergruppe. Dann ist $\Gamma$ genau dann ein Gitter, wenn
-  \begin{enumerate}
-  \item $\Gamma$ diskret ist und
-  \item $\Gamma$ nicht in einem echten Untervektorraum von $V$
-    enthalten ist.
-  \end{enumerate}
-\end{lemma}
-
-\begin{proof}
-  Falls $\Gamma$ ein Gitter ist, ist die Aussage aus der Definition
-  klar. Erfülle also $\Gamma$ die beiden Bedingungen. Wir gehen nun
-  per Induktion über $n = \dim V$ vor. Für $n = 0$ ist die Aussage klar. Gelte also die
-  Aussage für ein $n \in \N_0$. Da $\Gamma \subset V$ mit $\dim V =
-  n+1$ in keinem echten
-  Untervektorraum von $V$ enthalten ist, existieren linear unabhängige $x_1, \dots,
-  x_{n+1} \in \Gamma$. Sei $V_1 := \langle x_1, \dots, x_n \rangle$
-  und $\Gamma_1 := \Gamma \cap V_1$. Nun ist $\Gamma_1$ wieder diskret
-  und in keinem echten Untervektorraum von $V_1$ enthalten. Weiterhin
-  ist $\dim V_1 = n$, also können wir die Induktionsvoraussetzung
-  verwenden und erhalten linear unabhängige $\gamma_1, \dots, \gamma_n
-  \in \Gamma_1 \subset \Gamma$, so dass $\Gamma_1 = \Z \gamma_1 +
-  \dots + \Z \gamma_n$ gilt. Nun bilden die $\gamma_i$ bereits eine
-  Basis von $V_1$ und fügen wir $x_{n+1}$ hinzu, erhalten wir sogar eine Basis
-  von $V$, das bedeutet aber, dass wir zu jedem $x \in \Gamma \subset
-  V$, eindeutig bestimmte $c_i(x), c(x) \in \R$ finden, so dass
-  \[
-  x = c_1(x) \gamma_1 + \dots + c_n(x) \gamma_n + c(x) x_{n+1}
-  \]
-  gilt. Wir betrachten nun
-  \[
-  P := \{ \lambda_1 \gamma_1 + \dots + \lambda_n \gamma_n + \lambda
-  x_{n+1} \mid \lambda_i, \lambda \in [0,1] \}.
-  \]
-  Dieses $P$ ist kompakt und da $\Gamma$ diskret ist, folgt dass $P
-  \cap \Gamma$ endlich ist. Weiterhin ist $( \Gamma \cap P) \setminus
-  V_1$ nicht leer, da $x_{n+1}$ enthalten ist. Damit existiert ein
-  $\gamma_{n+1} \in ( \Gamma \cap P) \setminus V_1$ mit
-  \[
-  c(\gamma_{n+1}) = \min \{ c(x) \mid x \in ( \Gamma \cap P ) \setminus
-  V_1 \} \in ]0, 1].
-  \]
-  Wir behaupten nun, dass $\Gamma = \Gamma_1 + \Z \gamma_{n+1}$ ist. Sei
-  dazu $x \in \Gamma$. Dann existieren $n_j \in \Z$, so dass
-  \[
-  x' := x - \sum_{j=1}^{n+1} n_j \gamma_j = \sum_{j=1}^n \lambda_j
-  \gamma_j + \lambda x_{n+1}
-  \]
-  mit $0 \leq \lambda_j < 1$ und $0 \leq \lambda < c(\gamma_{n+1})$
-  gilt. Da $x' \in \Gamma \cap P$ liegt und $c(\gamma_{n+1})$ minimal
-  von 0 verschieden gewählt wurde, muss $\lambda = 0$ sein. Also liegt
-  $x' \in \Gamma \cap V_1 = \Gamma_1$. Damit sind die $\lambda_i$
-  ganzzahlig und die einzig verbleibende Möglichkeit ist $\lambda_i =
-  0$. Dann ist aber $x'$ bereits 0 und wir erhalten 
-  \[
-  x = \sum_{j=1}^n n_j \gamma_j \in \Z \gamma_1 + \dots + \Z \gamma_n.
-  \]
-\end{proof}
-
-\begin{prop}
-  Sei $\Gamma \subset \Aut(\C)$ eine fixpunktfrei- und
-  diskretoperrierende Untergruppe dann ist $\Gamma$ eine der folgenden
-  Gruppen:
-  \begin{itemize}
-  \item $\Gamma = \{\id\}$
-  \item $\Gamma = \{z \mapsto z + n\gamma \mid n \in \Z\}$ mit $\gamma \in \C^\ast$.
-  \item $\Gamma = \{z \mapsto z + n\gamma_1 + m \gamma_2 \mid m,n \in
-    \Z\}$ mit $\gamma_1, \gamma_2 \in \C$ linear unabhängig über $\R$.
-  \end{itemize}
-\end{prop}
-
-\begin{proof}
-  Sei $f \in \Gamma$. Dann existieren $a \in \C^\ast$ und $b \in
-  \C$, so dass $f(z) = az +b$ für beliebige $z \in \C$
-  gilt. Angenommen $a \neq 1$. Dann ist
-  \[
-  z = \frac{b}{1-a}
-  \]
-  ein Fixpunkt. Also ist $f(z) = z + b$ für alle $z \in \C$. Wir
-  definieren
-  \[
-  \tilde \Gamma = \{f(0) \mid f \in \Gamma\} \leq \C.
-  \]
-  Dann ist
-  \[
-  \Gamma = \{z \mapsto z + \gamma \mid \gamma \in \tilde \Gamma \}
-  \]
-  Da $\Gamma$ diskret operiert ist $\tilde \Gamma$ eine diskrete
-  Untergruppe. Die haben wir aber charakterisiert und damit ist
-  $\tilde \Gamma$ entweder ein 0, 1 oder 2 dimensionales Gitter. Das
-  entspricht aber gerade den obigen drei Fällen.
-\end{proof}
-
 Nun sollten wir $\Aut(\h)$ als nächste verstehen. Das ist jedoch eine
 sehr schwierige Aufgabe und füllt ganze Bücher. Wir begnügen uns an
 dieser Stelle mit der Aussage, dass eine fixpunktfrei- und
 diskretoperierende Untergruppe die abelsch ist, automatisch zyklisch
 sein muss.
-
-\begin{thm}
-  \label{thm:abelsch-zyklisch}
-  Sei $G \leq \PSL(2, \R)$ eine Fuchssche Gruppe. Dann ist $G$ genau
-  dann abelsch, wenn $G$ zyklisch ist.
-\end{thm}
 
 Jetzt können wir versuchen den Uniformisierungssatz zu beweisen.
 
@@ -369,7 +239,7 @@ Jetzt können wir versuchen den Uniformisierungssatz zu beweisen.
   wissen aus Satz \ref{thm:geschlecht-1-z}, dass
   \begin{align}
     \label{eq:g-z}
-  \Z \oplus \Z \cong G := \Deck(\tilde X \setminus X) \leq \Aut(\h)
+    \Z \oplus \Z \cong G := \Deck(\tilde X \setminus X) \leq \Aut(\h)
   \end{align}
   gelten müsste. Insbesondere müssten wir eine abelsche Fuchssche
   Gruppe finden, allerdings wissen wir nach Satz
@@ -386,6 +256,5 @@ Jetzt können wir versuchen den Uniformisierungssatz zu beweisen.
   \subset \C$. Insgesamt erhalten wir, dass $X$ konform äquvialent zu
   $\quot{\C}{\Gamma}$ ist.
 \end{proof}
-
 
 \end{document}

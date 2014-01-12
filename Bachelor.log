@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2013.10.13)  10 JAN 2014 14:19
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2013.10.13)  11 JAN 2014 14:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2054,9 +2054,9 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 136.
  [6]
-Missing character: There is no ٘ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ຬ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ዺ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ᫥ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 188.
@@ -2138,13 +2138,13 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 2.
-Missing character: There is no ⤚ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ⟥ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ⯹ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ⛚ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ▝ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ೥ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ᓆ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ၏ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 82.
@@ -2159,19 +2159,21 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 ]
-Missing character: There is no ⺽ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ⳸ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no Ⳙ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ൎ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ⍚ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ގ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no Ꮶ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ᓸ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ⮋ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ᑊ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no Ⳏ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ⟇ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ⮄ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ▸ in font Linux Libertine O/OT:script=latn;langu
+age=DFLT;!
+Missing character: There is no ▎ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 153.
@@ -2201,13 +2203,13 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 279.
 
 [18]
-Missing character: There is no ᥡ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ೤ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ᢲ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ↹ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ய in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ࣝ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ୼ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ࢪ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 331.
@@ -2245,9 +2247,6 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 509.
  [22]
-Missing character: There is no ᮫ in font Linux Libertine O/OT:script=latn;langu
-age=DFLT;!
-
 Underfull \hbox (badness 1953) in paragraph at lines 574--578
 []\EU1/LinuxLibertineO(0)/m/n/10.95 Sei $\OML/cmm/m/it/10.95 a \OMS/cmsy/m/n/10
 .95 2 \OML/cmm/m/it/10.95 Y$ \EU1/LinuxLibertineO(0)/m/n/10.95 und $\OML/cmm/m/
@@ -2266,9 +2265,9 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 578.
 [23]
-Missing character: There is no ׷ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ⼇ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ┏ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ⁠ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 644.
@@ -2279,7 +2278,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 644.
  [24]
-Missing character: There is no ๟ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ⍆ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 714.
@@ -2506,8 +2505,6 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 181.
  [45]
-Missing character: There is no ᛝ in font Linux Libertine O/OT:script=latn;langu
-age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 255.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2517,7 +2514,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 255.
  [46]
-Missing character: There is no ᫏ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ⚈ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 )
 Package babel Info: Redefining ngerman shorthand "|
@@ -2566,6 +2563,8 @@ Underfull \hbox (badness 1521) in paragraph at lines 107--109
 bung 
  []
 
+Missing character: There is no ㌚ in font Linux Libertine O/OT:script=latn;langu
+age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 146.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2575,7 +2574,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 146.
 [50]
-Missing character: There is no ५ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ١ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 212.
@@ -2586,17 +2585,15 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 212.
  [51]
-Missing character: There is no ޒ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ⮶ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ᑕ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ଧ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ⳷ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ᪃ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no 㒔 in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ⃏ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no 㐒 in font Linux Libertine O/OT:script=latn;langu
-age=DFLT;!
-Missing character: There is no ⨛ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ⁍ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 278.
@@ -2607,13 +2604,13 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 278.
  [52]
-Missing character: There is no サ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no Ⲕ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ᐈ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ੟ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ▙ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ୍ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ㉦ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ௭ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 360.
@@ -2624,7 +2621,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 360.
  [53]
-Missing character: There is no ޫ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ⡖ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 
 Underfull \hbox (badness 1107) in paragraph at lines 397--400
@@ -2633,15 +2630,11 @@ Underfull \hbox (badness 1107) in paragraph at lines 397--400
 ge von 
  []
 
-Missing character: There is no ⊀ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no Ꮉ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ⼡ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ਇ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ᝗ in font Linux Libertine O/OT:script=latn;langu
-age=DFLT;!
-Missing character: There is no ᅓ in font Linux Libertine O/OT:script=latn;langu
-age=DFLT;!
-Missing character: There is no ᄡ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ል in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 412.
@@ -2652,13 +2645,15 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 412.
 [54]
-Missing character: There is no ૂ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ㇈ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ޖ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ㆢ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ၄ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ち in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
-Missing character: There is no ┿ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ᰣ in font Linux Libertine O/OT:script=latn;langu
+age=DFLT;!
+Missing character: There is no ⛴ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 )
 Package babel Info: Redefining ngerman shorthand "|
@@ -2785,7 +2780,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 188.
  [65]
-Missing character: There is no ໝ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ῔ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 255.
@@ -2877,7 +2872,7 @@ Package babel Info: Redefining ngerman shorthand "~
  [73
 
 ]
-Missing character: There is no ᔔ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ՗ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 167.
@@ -2932,7 +2927,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 2.
-Missing character: There is no ㎟ in font Linux Libertine O/OT:script=latn;langu
+Missing character: There is no ⸳ in font Linux Libertine O/OT:script=latn;langu
 age=DFLT;!
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 72.
