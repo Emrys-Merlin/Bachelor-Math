@@ -4,3 +4,14 @@
 *.xml
 _region_.prv/
 auto/T
+/auto
+/content/_region_.pdf
+*.bcf
+*.blg
+*.tdo
+*.tox
+/Seminar/auto/header.el
+*.tex~
+/content/auto/
+/Seminar/auto/
+/Bachelor.toc
